@@ -1,0 +1,31 @@
+{
+ "market": "AT",
+ "proposed_from": "2026-11-14",
+ "urls": {
+  "at-produkte": {
+   "post": {
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "other:6sc.co": [],
+    "other:6sense.com": [],
+    "other:adnxs.com": [],
+    "other:contentsquare.net": [],
+    "other:siteimproveanalytics.io": [],
+    "other:speedcurve.com": [],
+    "other:zi-scripts.com": [],
+    "sixsense": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  }
+ },
+ "journeys": {},
+ "conversion": {
+  "ecom_try": [],
+  "ecom_buy": [],
+  "gated_trial": [],
+  "gated_contact": []
+ }
+}

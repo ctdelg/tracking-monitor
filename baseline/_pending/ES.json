@@ -1,0 +1,67 @@
+{
+ "market": "ES",
+ "proposed_from": "2026-11-14",
+ "urls": {
+  "es-sage-50": {
+   "post": {
+    "floodlight": [
+     "5201701"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "956094480"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "other:6sc.co": [],
+    "other:6sense.com": [],
+    "other:adnxs.com": [],
+    "other:contentsquare.net": [],
+    "other:doubleclick.net": [],
+    "other:entfabric-sage.com": [],
+    "other:mypurecloud.ie": [],
+    "other:on.aws": [],
+    "other:openai.com": [],
+    "other:optimizely.com": [],
+    "other:pxf.io": [],
+    "other:quantserve.com": [],
+    "other:siteimproveanalytics.io": [],
+    "other:speedcurve.com": [],
+    "other:zi-scripts.com": [],
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
+    ],
+    "sixsense": [],
+    "tealium_collect": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  }
+ },
+ "journeys": {},
+ "conversion": {
+  "ecom_try": [
+   "203"
+  ],
+  "ecom_buy": [
+   "203"
+  ],
+  "gated_trial": [
+   "36",
+   "203",
+   "398"
+  ],
+  "gated_contact": [
+   "36",
+   "203",
+   "399"
+  ]
+ }
+}

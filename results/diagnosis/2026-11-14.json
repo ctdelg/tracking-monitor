@@ -1,0 +1,27 @@
+{
+ "day": "2026-11-14",
+ "written_by": "Claude (first run, interim mode)",
+ "summary": "DE is red: the Floodlight form-submit tag (98, sageg0/dynam00) no longer fires for the ecom trial and buy checkout. Since the Tealium publish of 2026-08-24 it requires ga4_customer_lead_type, which Tealium only derives from gate_content_name - and the checkout never sends that. Gated Sitecore forms still fire tag 98.\nAT, FR, ES and PT are yellow only because their tag baselines are still waiting for confirmation. Consent works in all five markets: no marketing tags or cookies before consent, all tags and click IDs (gclid, msclkid, fbclid) after 'Accept all'.\nCoverage today: one marked sample page per market, checked in the Claude browser. The automated daily run will cover all configured pages once sage.com allowlists the monitor.",
+ "markets": {
+  "DE": {
+   "summary": "Paid traffic is measured correctly on the page level (Floodlight DC-5195550, Google Ads AW-970123043, GA4, Microsoft UET 12002546; gclid and msclkid stored). The problem is conversions: ecom trial and buy submits do not load Floodlight tag 98.",
+   "findings": {
+    "CONV-01:ecom_try|market": "Tag 98's load rule is (action = form_submit_success OR sitecore form) AND rule 274 (ga4_customer_lead_type is set). ga4_customer_lead_type is derived only from gate_content_name codes (_TRL_, _CON_ ...); the Next.js checkout sends customer_lead_type=ecom_try without gate_content_name. Before the publish of 2026-08-24 the tag fired (verified against the archived utag.js from 2026-07-13). Owner: MarTech (Tealium). Fix: remove rule 274 from tag 98, or derive ga4_customer_lead_type from customer_lead_type for ecom events.",
+    "CONV-01:ecom_buy|market": "Same cause as ecom_try: rule 274 on tag 98 blocks ecom purchase submits."
+   }
+  },
+  "AT": {
+   "summary": "Consent, GA4 and the Conversion Linker work. Note for review: on the sample page no Floodlight, Google Ads, UET, Meta or LinkedIn hits fired after consent, and the AT Tealium profile limits its Floodlight (352, 353) and Google Ads (201) tags to en-ZA style profiles/languages. If AT runs paid search, check with MarTech how conversions are tracked."
+  },
+  "FR": {
+   "summary": "All page-level tags fire (Floodlight DC-5201003, Google Ads AW-990362824, GA4, LinkedIn, Meta, TikTok, Reddit). Gated forms fire Floodlight 129. Note: tag 129 has the same ga4_customer_lead_type condition as DE tag 98, so an ecom checkout in FR would not fire it either - confirm whether FR uses the ecom checkout."
+  },
+  "ES": {
+   "summary": "All page-level tags fire (Floodlight DC-5201701, Google Ads AW-956094480, GA4, LinkedIn). Gated forms fire Floodlight 36; ecom submits only fire Google Ads tag 203."
+  },
+  "PT": {
+   "summary": "Page-level tags fire (Google Ads AW-956094480, GA4, LinkedIn, Meta config). No Floodlight pageview was seen within 8 seconds on the sample page - recheck once full runs are possible. Gated forms fire Floodlight 402; ecom submits only fire tag 223."
+  }
+ },
+ "publish": {}
+}

@@ -1,0 +1,405 @@
+<title>EU Tracking Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: control-room board - status strip on top, market tiles, then one market's findings, publish diff and history. */
+:root {
+  --bg: #f4f6f8; --surface: #ffffff; --fg: #17212b; --muted: #5a6673; --line: #dbe1e7; --accent: #1d5fa8;
+  --ok: #1f7f4a; --ok-bg: #e5f3ea; --warn: #9a6512; --warn-bg: #fbf0dc; --crit: #b8322a; --crit-bg: #fbe6e3;
+  --down: #5b4bc4; --down-bg: #ece9fb; --sys: #5f6b78; --sys-bg: #eceff2;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1319; --surface: #151c24; --fg: #e4e9ee; --muted: #93a0ad; --line: #26313d; --accent: #6aa8ea;
+  --ok: #4cc283; --ok-bg: #12291d; --warn: #e2a640; --warn-bg: #2d2412; --crit: #f0675b; --crit-bg: #33171a;
+  --down: #a196f3; --down-bg: #211d3a; --sys: #9aa6b3; --sys-bg: #1d252e; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0e1319; --surface: #151c24; --fg: #e4e9ee; --muted: #93a0ad; --line: #26313d; --accent: #6aa8ea;
+  --ok: #4cc283; --ok-bg: #12291d; --warn: #e2a640; --warn-bg: #2d2412; --crit: #f0675b; --crit-bg: #33171a;
+  --down: #a196f3; --down-bg: #211d3a; --sys: #9aa6b3; --sys-bg: #1d252e; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 14px/1.5 var(--f-body); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.wrap > * { min-width: 0; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 26px; letter-spacing: .01em; }
+h2 { font-size: 19px; }
+h3 { font-size: 15px; }
+.muted { color: var(--muted); }
+.mono { font-family: var(--f-mono); font-size: 12.5px; }
+.eyebrow { font: 600 11px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+a { color: var(--accent); }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, .tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
+header.top .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 13px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font: 600 12px/1.4 var(--f-body); letter-spacing: .04em; text-transform: uppercase; }
+.pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.s-green { color: var(--ok); background: var(--ok-bg); }
+.s-yellow { color: var(--warn); background: var(--warn-bg); }
+.s-red { color: var(--crit); background: var(--crit-bg); }
+.s-down { color: var(--down); background: var(--down-bg); }
+.s-sys { color: var(--sys); background: var(--sys-bg); }
+.big-pill { font-size: 14px; padding: 6px 14px; }
+
+.notice { border: 1px solid var(--line); border-left: 4px solid var(--sys); background: var(--surface); padding: 10px 14px; border-radius: 6px; }
+.notice.crit { border-left-color: var(--crit); }
+.notice p { margin: 4px 0 0; }
+.summary { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; }
+.summary p { margin: 0; max-width: 78ch; }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.tile { text-align: left; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--sys); border-radius: 8px; padding: 12px 14px; display: grid; gap: 6px; color: var(--fg); min-width: 0; }
+.tile.green { border-top-color: var(--ok); } .tile.yellow { border-top-color: var(--warn); } .tile.red { border-top-color: var(--crit); }
+.tile[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent) inset; }
+.tile .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.tile .code { font: 600 22px/1 var(--f-display); }
+.tile .counts { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tile .counts b { color: var(--fg); font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag { font-size: 11.5px; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); }
+
+section.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+
+.findings { display: grid; gap: 8px; }
+.finding { border: 1px solid var(--line); border-left: 4px solid var(--sys); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; min-width: 0; }
+.finding.red { border-left-color: var(--crit); } .finding.yellow { border-left-color: var(--warn); }
+.finding.site_down { border-left-color: var(--down); } .finding.info { border-left-color: var(--accent); }
+.finding.acked { opacity: .62; }
+.finding .line1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.finding .title { font-weight: 600; }
+.finding .detail { margin: 0; overflow-wrap: anywhere; }
+.diag { margin: 0; padding: 8px 10px; background: var(--bg); border-radius: 4px; font-size: 13.5px; }
+.diag::before { content: "Diagnosis  "; font: 600 11px var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+details summary { cursor: pointer; color: var(--muted); font-size: 12.5px; }
+pre.ev { margin: 6px 0 0; padding: 8px; background: var(--bg); border-radius: 4px; overflow-x: auto; font: 12px/1.45 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 280px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 6px; padding: 4px 10px; font-size: 13px; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.ackform { display: grid; gap: 8px; padding: 10px; border: 1px dashed var(--line); border-radius: 6px; }
+.ackform label { display: grid; gap: 4px; font-size: 12.5px; color: var(--muted); }
+.ackform input, .ackform select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 600 11px var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+td.cell { text-align: center; }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--line); }
+.dot.pass { background: var(--ok); } .dot.fail-red { background: var(--crit); } .dot.fail-yellow, .dot.warn { background: var(--warn); }
+.dot.fail-site_down { background: var(--down); } .dot.blocked { background: var(--sys); } .dot.acked { background: var(--muted); }
+
+.hist { display: grid; gap: 6px; }
+.hrow { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; }
+.hcells { display: flex; gap: 2px; overflow-x: auto; padding-bottom: 2px; }
+.hc { flex: 0 0 auto; width: 12px; height: 20px; border-radius: 2px; background: var(--line); }
+.hc.green { background: var(--ok); } .hc.yellow { background: var(--warn); } .hc.red { background: var(--crit); }
+.hc.tealium_only, .hc.partial { opacity: .55; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); }
+.legend span { display: inline-flex; gap: 5px; align-items: center; }
+.diffitem { border-bottom: 1px solid var(--line); padding: 8px 0; display: grid; gap: 4px; min-width: 0; }
+.diffitem code { font: 12px var(--f-mono); overflow-wrap: anywhere; }
+footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap" id="app">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Paid media tracking · DE AT FR ES PT</div>
+      <h1>EU Tracking Monitor</h1>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+  <div id="notices"></div>
+  <div id="summary"></div>
+  <div class="tiles" id="tiles" role="group" aria-label="Markets"></div>
+  <section class="panel" id="market"></section>
+  <section class="panel" id="publish"></section>
+  <section class="panel" id="history"></section>
+  <footer>
+    <div><b>Red</b>: conversion tags, click IDs or consent compliance broken. <b>Yellow</b>: secondary pixels, data layer or a conversion-relevant Tealium publish. <b>Site down</b>: page or utag.js unreachable (shown separately). <b>Global</b>: the same check fails in 3+ markets.</div>
+    <div>Checks run Mon–Fri around 06:00 CET from outside, like a visitor. No forms are submitted and tracking hits are blocked, except on one marked sample page per market.</div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  const MODE = "__MODE__";
+  const P = __DATA__;
+  const R = P.results, D = P.diagnosis || {}, H = P.history || {days: {}};
+  const MARKETS = Object.keys(R.markets);
+  const ORDER = {green: 0, yellow: 1, red: 2};
+  let liveAcks = [];          // from the artifact database
+  let db = null, user = null, myId = null, names = {}, canWrite = false;
+  let selected = (location.hash || "").replace("#", "").toUpperCase();
+  if (!MARKETS.includes(selected)) selected = MARKETS.slice().sort((a, b) => ORDER[R.markets[b].status] - ORDER[R.markets[a].status])[0];
+  let openAckFor = null;
+
+  const el = (tag, attrs, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (v === null || v === undefined || v === false) continue;
+      if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+      else if (k === "text") n.textContent = v; else n.setAttribute(k, v === true ? "" : v);
+    }
+    for (const kid of kids.flat()) if (kid !== null && kid !== undefined && kid !== false) n.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+    return n;
+  };
+  const fmtDay = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {weekday: "short", day: "numeric", month: "short", year: "numeric"});
+  const baseId = id => id.split(":")[0];
+  const keyOf = (m, c) => m + "|" + c.id + "|" + c.target;
+
+  // --- acknowledgements --------------------------------------------------------------
+  function allAcks() {
+    return (P.acks_file || []).map(a => Object.assign({source: "file"}, a)).concat(liveAcks);
+  }
+  function ackFor(market, c) {
+    const today = R.day;
+    return allAcks().find(a =>
+      (!a.expires || a.expires >= today) &&
+      (a.market === market || a.market === "*") &&
+      (a.check === c.id || a.check === baseId(c.id) || a.check === "*") &&
+      (!a.target || a.target === "*" || a.target === c.target || a.target === c.target.split("#")[0]));
+  }
+  function rate(market) {
+    const m = R.markets[market];
+    const active = m.checks.filter(c => (c.result === "fail" || c.result === "warn") && !ackFor(market, c));
+    const red = active.filter(c => c.severity === "red" && c.result === "fail");
+    const yellow = active.filter(c => c.severity === "yellow" || (c.severity === "red" && c.result === "warn"));
+    const down = new Set(active.filter(c => c.severity === "site_down" && c.result === "fail").map(c => c.target));
+    return {status: red.length ? "red" : yellow.length ? "yellow" : "green", red: red.length, yellow: yellow.length,
+            down: down.size, coverage: m.rating.coverage, blocked: m.rating.blocked_pages.length};
+  }
+  function globalStatus() {
+    const failing = {};
+    for (const code of MARKETS) for (const c of R.markets[code].checks) {
+      if (c.result !== "fail" || !["red", "site_down"].includes(c.severity) || ackFor(code, c)) continue;
+      const k = c.id.startsWith("TAG:") ? c.id : baseId(c.id);
+      (failing[k] = failing[k] || new Set()).add(code);
+    }
+    const incidents = Object.entries(failing).filter(([, s]) => s.size >= 3).map(([k, s]) => ({check: k, markets: [...s].sort()}));
+    const worst = MARKETS.map(rate).reduce((w, r) => ORDER[r.status] > ORDER[w] ? r.status : w, "green");
+    return {status: incidents.length ? "red" : worst, incidents};
+  }
+
+  // --- rendering -----------------------------------------------------------------------
+  function pill(status, label, big) {
+    const cls = {green: "s-green", yellow: "s-yellow", red: "s-red"}[status] || "s-sys";
+    return el("span", {class: "pill " + cls + (big ? " big-pill" : "")}, label || status);
+  }
+
+  function renderHeader() {
+    const g = globalStatus();
+    const meta = document.getElementById("meta");
+    meta.replaceChildren(
+      el("span", {}, "Run ", el("b", {}, fmtDay(R.day))),
+      el("span", {}, "Generated " + R.generated_at.replace("T", " ").replace("Z", " UTC")),
+      pill(g.status, "Overall " + g.status, true));
+    const notes = document.getElementById("notices");
+    notes.replaceChildren();
+    for (const inc of g.incidents) {
+      notes.append(el("div", {class: "notice crit"}, el("b", {}, "Global incident: " + inc.check + " fails in " + inc.markets.join(", ")),
+        el("p", {}, "The same check fails in several markets at once. Look for a shared cause first: shared Tealium extension or template, OneTrust configuration, or a vendor outage.")));
+    }
+    if (R.global.system_notice) notes.append(el("div", {class: "notice"}, el("b", {}, "Coverage"), el("p", {}, R.global.system_notice)));
+    if (MODE === "artifact" && db === null && window.__dbTried) notes.append(el("div", {class: "notice"}, el("p", {}, "Acknowledgements are read-only in this view.")));
+    const sum = document.getElementById("summary");
+    sum.replaceChildren();
+    if (D.summary) sum.append(el("div", {class: "summary"}, el("div", {class: "eyebrow"}, "Today in brief"), ...D.summary.split(/\n+/).map(t => el("p", {}, t))));
+  }
+
+  function renderTiles() {
+    const box = document.getElementById("tiles");
+    box.replaceChildren(...MARKETS.map(code => {
+      const m = R.markets[code], r = rate(code);
+      const tags = [];
+      if (r.down) tags.push(el("span", {class: "tag"}, r.down + " site down"));
+      if (r.coverage === "tealium_only") tags.push(el("span", {class: "tag"}, "Tealium checks only"));
+      else if (r.coverage === "partial") tags.push(el("span", {class: "tag"}, m.rating.pages_checked + "/" + m.rating.pages_configured + " pages checked"));
+      if (m.utag.changed) tags.push(el("span", {class: "tag"}, "new publish"));
+      if (!m.baseline_confirmed) tags.push(el("span", {class: "tag"}, "baseline pending"));
+      return el("button", {class: "tile " + r.status, "aria-pressed": String(code === selected), onclick: () => { selected = code; history.replaceState(null, "", "#" + code); renderAll(); }},
+        el("div", {class: "row"}, el("span", {class: "code"}, code), pill(r.status)),
+        el("div", {class: "muted"}, m.name + " · " + m.tealium_profile + (m.utag.publish_version ? " · publish " + m.utag.publish_version : "")),
+        el("div", {class: "counts"}, el("span", {}, el("b", {}, r.red), " red"), el("span", {}, el("b", {}, r.yellow), " yellow"),
+          m.red_since ? el("span", {}, "red since ", el("b", {}, m.red_since)) : null),
+        tags.length ? el("div", {class: "tags"}, tags) : null);
+    }));
+  }
+
+  function findingNode(code, c) {
+    const ack = ackFor(code, c);
+    const sev = c.severity;
+    const sevLabel = {red: "red", yellow: "yellow", site_down: "site down", info: "info", system: "system"}[sev] || sev;
+    const diag = ((D.markets || {})[code] || {}).findings || {};
+    const dtext = diag[c.id + "|" + c.target] || diag[c.id];
+    const node = el("div", {class: "finding " + sev + (ack ? " acked" : "")},
+      el("div", {class: "line1"},
+        pill(sev === "site_down" ? "down" : sev === "system" || sev === "info" ? "sys" : sev, sevLabel),
+        el("span", {class: "title"}, c.title),
+        el("span", {class: "mono muted"}, c.id + " · " + c.target)),
+      el("p", {class: "detail"}, c.detail),
+      dtext ? el("p", {class: "diag"}, dtext) : null);
+    if (c.evidence && Object.keys(c.evidence).length) {
+      node.append(el("details", {}, el("summary", {}, "Evidence"), el("pre", {class: "ev"}, JSON.stringify(c.evidence, null, 1))));
+    }
+    const actions = el("div", {class: "actions"});
+    if (ack) {
+      const who = ack.by ? (names[ack.by] || (ack.source === "file" ? ack.by : "Someone")) : "Someone";
+      actions.append(el("span", {class: "muted"}, "Acknowledged by " + who + (ack.note ? ": " + ack.note : "") + (ack.expires ? " (until " + ack.expires + ")" : " (until fixed)")));
+      if (db && canWrite && ack._id) actions.append(el("button", {class: "btn", onclick: () => withdraw(ack._id)}, "Withdraw"));
+    } else if (db && canWrite && c.result !== "pass") {
+      actions.append(el("button", {class: "btn", onclick: () => { openAckFor = keyOf(code, c); renderMarket(); }}, "Acknowledge"));
+    }
+    if (actions.childNodes.length) node.append(actions);
+    if (openAckFor === keyOf(code, c) && !ack) node.append(ackForm(code, c));
+    return node;
+  }
+
+  function ackForm(code, c) {
+    const id = "ack-" + code + "-" + c.id.replace(/[^a-z0-9]/gi, "_") + "-" + c.target.replace(/[^a-z0-9]/gi, "_");
+    const note = el("input", {id: id + "-note", type: "text", maxlength: "200", placeholder: "e.g. MarTech ticket raised"});
+    const exp = el("select", {id: id + "-exp"}, el("option", {value: ""}, "Until fixed"), el("option", {value: "7"}, "7 days"), el("option", {value: "30"}, "30 days"));
+    const scope = el("select", {id: id + "-scope"}, el("option", {value: "one"}, "This page only (" + c.target + ")"), el("option", {value: "all"}, "All pages in " + code));
+    const status = el("span", {class: "muted", role: "status"});
+    const form = el("form", {class: "ackform", onsubmit: async e => {
+      e.preventDefault();
+      const days = exp.value ? parseInt(exp.value, 10) : null;
+      const expires = days ? new Date(Date.now() + days * 864e5).toISOString().slice(0, 10) : null;
+      status.textContent = "Saving…";
+      try {
+        await db.collection("acks").add({market: code, check: c.id, target: scope.value === "all" ? "*" : c.target,
+          note: note.value.trim(), expires, created: new Date().toISOString(), by: myId || null, day: R.day});
+        openAckFor = null;
+      } catch (err) { status.textContent = "Could not save: " + (err && err.message || "unknown error"); }
+    }},
+      el("label", {for: note.id}, "Note (who is on it, ticket number)", note),
+      el("label", {for: exp.id}, "Mute for", exp),
+      el("label", {for: scope.id}, "Applies to", scope),
+      el("div", {class: "actions"}, el("button", {class: "btn primary", type: "submit"}, "Acknowledge"),
+        el("button", {class: "btn", type: "button", onclick: () => { openAckFor = null; renderMarket(); }}, "Cancel"), status));
+    return form;
+  }
+
+  async function withdraw(docId) {
+    try { await db.collection("acks").doc(docId).delete(); } catch (e) { /* the snapshot keeps the true state */ }
+  }
+
+  function renderMarket() {
+    const code = selected, m = R.markets[code], r = rate(code);
+    const box = document.getElementById("market");
+    const issues = m.checks.filter(c => c.result === "fail" || (c.result === "warn" && c.severity !== "info"));
+    const infos = m.checks.filter(c => c.result === "warn" && c.severity === "info");
+    const prio = {red: 0, site_down: 1, system: 2, yellow: 3, info: 4};
+    issues.sort((a, b) => (!!ackFor(code, a) - !!ackFor(code, b)) || (prio[a.severity] - prio[b.severity]));
+    const passed = m.checks.filter(c => c.result === "pass").length;
+    const mdiag = ((D.markets || {})[code] || {}).summary;
+    box.replaceChildren(...[
+      el("div", {class: "panel-head"}, el("h2", {}, m.name + " (" + code + ")"), pill(r.status, r.status, true)),
+      mdiag ? el("p", {class: "diag"}, mdiag) : null,
+      el("div", {class: "muted"}, issues.length + " finding(s) · " + passed + " checks passed · source: " +
+        ({playwright: "automated browser", "claude-browser": "Claude browser run", none: "Tealium CDN only"}[m.source] || m.source)),
+      issues.length ? el("div", {class: "findings"}, issues.map(c => findingNode(code, c))) : el("p", {}, "No findings. Everything checked is working."),
+      infos.length ? el("details", {}, el("summary", {}, infos.length + " informational note(s)"), el("div", {class: "findings"}, infos.map(c => findingNode(code, c)))) : null,
+      pagesMatrix(code)].filter(Boolean));
+  }
+
+  function pagesMatrix(code) {
+    const m = R.markets[code];
+    const groups = [["PAGE", "Page"], ["TEAL", "Tealium"], ["CONS", "Consent"], ["TAG", "Tags"], ["CLID", "Click IDs"]];
+    const byTarget = {};
+    for (const c of m.checks) (byTarget[c.target] = byTarget[c.target] || []).push(c);
+    const rows = m.pages.filter(p => byTarget[p.id]).map(p => {
+      const cs = byTarget[p.id];
+      const blocked = cs.some(c => c.id === "BOT-01");
+      return el("tr", {}, el("td", {}, el("div", {class: "mono"}, p.id), el("a", {href: p.url, target: "_blank", rel: "noopener", class: "muted"}, p.url.replace("https://www.sage.com", ""))),
+        groups.map(([g, label]) => {
+          const mine = cs.filter(c => baseId(c.id) === g || baseId(c.id).startsWith(g + "-") || (g === "TAG" && c.id.startsWith("TAG")));
+          let cls = "", tip = label + ": not run";
+          if (blocked) { cls = "blocked"; tip = "Blocked by bot protection"; }
+          else if (mine.length) {
+            const bad = mine.filter(c => c.result === "fail" || (c.result === "warn" && c.severity !== "info"));
+            const open = bad.filter(c => !ackFor(code, c));
+            if (!bad.length) { cls = "pass"; tip = label + ": all passed"; }
+            else if (!open.length) { cls = "acked"; tip = label + ": acknowledged"; }
+            else { const w = open.find(c => c.severity === "red") || open.find(c => c.severity === "site_down") || open[0];
+                   cls = w.result === "warn" ? "warn" : "fail-" + w.severity; tip = label + ": " + w.detail; }
+          }
+          return el("td", {class: "cell"}, el("span", {class: "dot " + cls, title: tip, "aria-label": tip}));
+        }));
+    });
+    if (!rows.length) return el("p", {class: "muted"}, "No page-level results for this run (only Tealium CDN and load-rule checks).");
+    return el("div", {}, el("h3", {}, "Pages"),
+      el("div", {class: "scroll"}, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "Page"), groups.map(([, l]) => el("th", {}, l)))), el("tbody", {}, rows))),
+      el("div", {class: "legend"}, ...[["pass", "passed"], ["fail-red", "red"], ["warn", "yellow"], ["fail-site_down", "site down"], ["blocked", "blocked"], ["acked", "acknowledged"]]
+        .map(([c, l]) => el("span", {}, el("i", {class: "dot " + c}), l))));
+  }
+
+  function renderPublish() {
+    const box = document.getElementById("publish");
+    const changed = MARKETS.filter(c => R.markets[c].utag.changed);
+    const head = el("div", {class: "panel-head"}, el("h2", {}, "Tealium publishes"), el("span", {class: "muted"}, changed.length ? changed.length + " profile(s) changed since the last run" : "No publish since the last run"));
+    const parts = [head];
+    for (const code of changed) {
+      const d = R.markets[code].utag.diff || {};
+      const ai = ((D.publish || {})[code]) || null;
+      parts.push(el("div", {}, el("h3", {}, code + " · " + R.markets[code].tealium_profile + " · " + (d.from_version || "?") + " → " + (d.to_version || "?")),
+        ai ? el("p", {class: "diag"}, (ai.risk ? "Risk " + ai.risk + ". " : "") + ai.summary) : null,
+        el("details", {}, el("summary", {}, (d.items || []).length + " change(s), " + (d.items || []).filter(i => i.conversion_relevant).length + " conversion-relevant"),
+          ...(d.items || []).map(i => el("div", {class: "diffitem"},
+            el("div", {}, el("b", {}, i.kind.replace(/_/g, " ")), " ", el("span", {class: "mono"}, i.tag ? "tag " + i.tag + (i.template ? " (template " + i.template + ")" : "") : "rule " + i.rule),
+              i.conversion_relevant ? el("span", {class: "pill s-yellow", style: "margin-left:8px"}, "conversion") : null),
+            i.before ? el("code", {}, "before: " + (typeof i.before === "string" ? i.before : JSON.stringify(i.before))) : null,
+            i.after ? el("code", {}, "after: " + (typeof i.after === "string" ? i.after : JSON.stringify(i.after))) : null)))));
+    }
+    box.replaceChildren(...parts);
+  }
+
+  function renderHistory() {
+    const box = document.getElementById("history");
+    const days = Object.keys(H.days || {}).sort();
+    const last = days.slice(-120);
+    box.replaceChildren(el("div", {class: "panel-head"}, el("h2", {}, "History"), el("span", {class: "muted"}, days.length + " run day(s) recorded" + (days.length > 120 ? ", last 120 shown" : ""))),
+      el("div", {class: "hist"}, ["_global"].concat(MARKETS).map(code => el("div", {class: "hrow"},
+        el("span", {class: "mono"}, code === "_global" ? "ALL" : code),
+        el("div", {class: "hcells"}, last.map(d => {
+          const v = (H.days[d] || {})[code];
+          const t = v ? d + ": " + v.status + (v.coverage && v.coverage !== "full" ? " (" + v.coverage.replace("_", " ") + ")" : "") + (v.publish ? ", publish" : "") : d + ": no data";
+          return el("span", {class: "hc " + (v ? v.status + " " + (v.coverage || "") : ""), title: t, "aria-label": t});
+        }))))),
+      el("div", {class: "legend"}, el("span", {}, el("i", {class: "hc green"}), "green"), el("span", {}, el("i", {class: "hc yellow"}), "yellow"),
+        el("span", {}, el("i", {class: "hc red"}), "red"), el("span", {}, el("i", {class: "hc green tealium_only"}), "faded: not all pages checked")));
+  }
+
+  function renderAll() { renderHeader(); renderTiles(); renderMarket(); renderPublish(); renderHistory(); }
+  renderAll();
+
+  // --- live acknowledgements (artifact only) ------------------------------------------
+  if (MODE === "artifact" && window.claude && claude.use) {
+    (async () => {
+      try {
+        user = await claude.use("user");
+        if (user) { try { myId = await user.id(); } catch (e) { myId = null; } }
+        db = await claude.use("db");
+        window.__dbTried = true;
+        if (!db) { renderHeader(); return; }
+        canWrite = true;
+        if (user && user.can) { try { const w = await user.can("data.write"); if (w === false) canWrite = false; } catch (e) {} }
+        db.collection("acks").onSnapshot(async snap => {
+          liveAcks = snap.docs.map(d => Object.assign({_id: d.id, source: "live"}, d.data()));
+          const ids = [...new Set(liveAcks.map(a => a.by).filter(Boolean))];
+          if (user && ids.length) { try { const ps = await user.profiles(ids); for (const id of ids) names[id] = (ps[id] && ps[id].name) || "Someone"; } catch (e) {} }
+          renderAll();
+        }, () => { renderAll(); });
+      } catch (e) { window.__dbTried = true; renderHeader(); }
+    })();
+  }
+})();
+</script>

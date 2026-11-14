@@ -1,0 +1,75 @@
+{
+ "market": "FR",
+ "proposed_from": "2026-11-14",
+ "urls": {
+  "fr-sage-50": {
+   "post": {
+    "floodlight": [
+     "5201003"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "990362824"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "other:6sc.co": [],
+    "other:6sense.com": [],
+    "other:adnxs.com": [],
+    "other:capterra.com": [],
+    "other:contentsquare.net": [],
+    "other:doubleclick.net": [],
+    "other:mypurecloud.ie": [],
+    "other:on.aws": [],
+    "other:openai.com": [],
+    "other:optimizely.com": [],
+    "other:presage.io": [],
+    "other:pxf.io": [],
+    "other:quantserve.com": [],
+    "other:reddit.com": [],
+    "other:segment.com": [],
+    "other:segmentapis.com": [],
+    "other:siteimproveanalytics.io": [],
+    "other:smilewanted.com": [],
+    "other:speedcurve.com": [],
+    "other:zi-scripts.com": [],
+    "outbrain": [
+     "63878"
+    ],
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
+    ],
+    "reddit": [
+     "a2_jcwvn8khk1j0"
+    ],
+    "sixsense": [],
+    "tealium_collect": [],
+    "tiktok": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  }
+ },
+ "journeys": {},
+ "conversion": {
+  "ecom_try": [],
+  "ecom_buy": [],
+  "gated_trial": [
+   "129",
+   "595",
+   "608"
+  ],
+  "gated_contact": [
+   "129",
+   "595",
+   "609"
+  ]
+ }
+}

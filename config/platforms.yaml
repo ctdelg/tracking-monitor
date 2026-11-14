@@ -1,0 +1,155 @@
+# Vendor catalogue: how to recognise each tracking vendor's "hit" requests.
+#
+# - hit_patterns: regexes matched against the full request URL. Only real data hits are
+#   listed (not library downloads), so blocking them never stops a tag from executing.
+# - id_pattern: optional regex with one group that extracts the account / container ID.
+# - severity: "red" if a missing hit should turn a market red, "yellow" otherwise.
+# - marketing: true if the vendor must NOT fire before consent (CONS-02).
+#
+# Vendors that appear on a page but are not listed here are still recorded under
+# "other:<hostname>" in the baseline (auto-discovery), with yellow severity.
+
+vendors:
+  ga4:
+    name: Google Analytics 4
+    severity: red
+    marketing: false        # runs under Consent Mode; consent state is checked via gcs (CONS-03)
+    hit_patterns:
+      - "^https://([a-z0-9-]+\\.)?(google-analytics\\.com|analytics\\.google\\.com)/g/collect"
+      - "^https://stats\\.g\\.doubleclick\\.net/g/collect"
+      - "^https://www\\.google\\.[a-z.]+/ads/ga-audiences"
+    id_pattern: "[?&]tid=(G-[A-Z0-9]+)"
+
+  floodlight:
+    name: Floodlight (Campaign Manager 360)
+    severity: red
+    marketing: true
+    hit_patterns:
+      - "^https://ad\\.doubleclick\\.net/activity;"
+      - "^https://\\d+\\.fls\\.doubleclick\\.net/activityi?;"
+      - "^https://www\\.google\\.com/ccm/collect\\?.*tid=DC-"
+    id_pattern: "(?:src=|tid=DC-)(\\d+)"
+
+  google_ads:
+    name: Google Ads (remarketing / conversion)
+    severity: red
+    marketing: true
+    hit_patterns:
+      - "^https://googleads\\.g\\.doubleclick\\.net/pagead/(viewthroughconversion|conversion)/"
+      - "^https://www\\.google\\.[a-z.]+/(rmkt/collect|pagead/1p-user-list|pagead/1p-conversion)/"
+      - "^https://www\\.google\\.com/ccm/collect\\?.*tid=AW-"
+    id_pattern: "(?:/(?:viewthroughconversion|conversion|collect|1p-user-list|1p-conversion)/|tid=AW-)(\\d+)"
+
+  microsoft_uet:
+    name: Microsoft Advertising UET
+    severity: red
+    marketing: true
+    hit_patterns:
+      - "^https://bat\\.bing\\.(com|net)/action/"
+    id_pattern: "[?&]ti=(\\d+)"
+
+  meta:
+    name: Meta Pixel
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://(www\\.)?facebook\\.com/(tr|privacy_sandbox/pixel)"
+      - "^https://connect\\.facebook\\.net/signals/config/"
+    id_pattern: "(?:[?&]id=|/config/)(\\d+)"
+
+  linkedin:
+    name: LinkedIn Insight Tag
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://px\\.ads\\.linkedin\\.com/(collect|wa)"
+    id_pattern: "[?&]pid=(\\d+)"
+
+  tiktok:
+    name: TikTok Pixel
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://analytics\\.tiktok\\.com/api/v2/pixel"
+    id_pattern: null
+
+  reddit:
+    name: Reddit Pixel
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://alb\\.reddit\\.com/rp"
+    id_pattern: "[?&]id=([a-z0-9_]+)"
+
+  xing:
+    name: XING Pixel
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://([a-z0-9-]+\\.)?xing-analytics\\.com/"
+      - "^https://([a-z0-9-]+\\.)?xing\\.com/.*(pixel|tracking)"
+    id_pattern: null
+
+  quantcast:
+    name: Quantcast
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://pixel\\.quantserve\\.com/pixel"
+    id_pattern: "a=(p-[A-Za-z0-9]+)"
+
+  outbrain:
+    name: Outbrain
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://(p1|tr)\\.outbrain\\.com/"
+    id_pattern: "/p/js/(\\d+)/"
+
+  sixsense:
+    name: 6sense
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://b\\.6sc\\.co/v1/beacon"
+    id_pattern: null
+
+  zoominfo:
+    name: ZoomInfo
+    severity: yellow
+    marketing: true
+    hit_patterns:
+      - "^https://ws\\.zoominfo\\.com/pixel/"
+    id_pattern: "/pixel/([a-f0-9]+)"
+
+  tealium_collect:
+    name: Tealium Collect (AudienceStream)
+    severity: yellow
+    marketing: false
+    hit_patterns:
+      - "^https://collect(-[a-z0-9-]+)?\\.tealiumiq\\.com/"
+    id_pattern: null
+
+# Hosts that are never counted as tracking hits (site assets, consent tooling, fonts …).
+ignore_hosts:
+  - "(^|\\.)sage\\.com$"
+  - "(^|\\.)cookielaw\\.org$"
+  - "(^|\\.)onetrust\\.com$"
+  - "^tags\\.tiqcdn\\.com$"
+  - "(^|\\.)gstatic\\.com$"
+  - "(^|\\.)vimeo\\.com$"
+  - "(^|\\.)youtube\\.com$"
+  - "(^|\\.)ytimg\\.com$"
+  - "^cdnjs\\.cloudflare\\.com$"
+
+# Request types that count as "hits" for auto-discovered (unlisted) vendors.
+discovery_resource_types: [image, ping, beacon, xhr, fetch]
+
+# Cookies that prove click-ID persistence (CLID checks).
+click_id_cookies:
+  gclid:   { cookie: "_gcl_aw",      severity: red }
+  msclkid: { cookie: "_uetmsclkid",  severity: red }
+  fbclid:  { cookie: "_fbc",         severity: yellow }
+
+# Cookies that must not exist before consent (CONS-02), regardless of vendor.
+marketing_cookies: ["_gcl_aw", "_gcl_au", "_fbp", "_fbc", "_uetmsclkid", "_uetsid", "_uetvid", "li_fat_id", "_ttp", "_rdt_uuid"]

@@ -1,0 +1,59 @@
+{
+ "market": "PT",
+ "proposed_from": "2026-11-14",
+ "urls": {
+  "pt-sage-50": {
+   "post": {
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "956094480"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "other:6sc.co": [],
+    "other:6sense.com": [],
+    "other:adnxs.com": [],
+    "other:contentsquare.net": [],
+    "other:doubleclick.net": [],
+    "other:entfabric-sage.com": [],
+    "other:on.aws": [],
+    "other:optimizely.com": [],
+    "other:pxf.io": [],
+    "other:quantserve.com": [],
+    "other:siteimproveanalytics.io": [],
+    "other:speedcurve.com": [],
+    "other:zi-scripts.com": [],
+    "sixsense": [],
+    "tealium_collect": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  }
+ },
+ "journeys": {},
+ "conversion": {
+  "ecom_try": [
+   "223"
+  ],
+  "ecom_buy": [
+   "223"
+  ],
+  "gated_trial": [
+   "223",
+   "402",
+   "589"
+  ],
+  "gated_contact": [
+   "223",
+   "402",
+   "590"
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "days": {
+  "2026-11-14": {
+   "_global": {
+    "status": "red",
+    "incidents": 0
+   },
+   "DE": {
+    "status": "red",
+    "red": 2,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "AT": {
+    "status": "yellow",
+    "red": 0,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "FR": {
+    "status": "yellow",
+    "red": 0,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "ES": {
+    "status": "yellow",
+    "red": 0,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "PT": {
+    "status": "yellow",
+    "red": 0,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   }
+  }
+ }
+}

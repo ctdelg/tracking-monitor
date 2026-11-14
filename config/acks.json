@@ -1,0 +1,4 @@
+{
+ "_comment": "Mirror of the dashboard acknowledgements, written by the Claude routine. Each: {id, market, check, target ('*' = all pages), note, expires (YYYY-MM-DD or null), by, created}.",
+ "acks": []
+}

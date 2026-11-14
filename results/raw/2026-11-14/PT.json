@@ -1,0 +1,612 @@
+{
+ "market": "PT",
+ "day": "2026-11-14",
+ "tealium": {
+  "fetch": {
+   "url": "https://tags.tiqcdn.com/utag/sage/pt-pt/prod/utag.js",
+   "status": 200,
+   "last_modified": "Thu, 05 Nov 2026 09:58:19 GMT",
+   "error": null
+  },
+  "parsed": {
+   "publish_version": "202611050958",
+   "sha256": "999243649acbb37b0389ba7c19276980901b2a122dc4215166b4dc43cc159692",
+   "tags": {
+    "445": {
+     "load": "4",
+     "send": "1",
+     "v": "202402271350",
+     "tid": "7143"
+    },
+    "492": {
+     "load": "1",
+     "send": "1",
+     "v": "202507231507",
+     "tid": "20067"
+    },
+    "458": {
+     "load": "(((utag.cond[188]||utag.cond[201]||utag.cond[202]||utag.cond[189]||utag.cond[200]||utag.cond[228]||utag.cond[164]||utag.cond[214]||utag.cond[215]||utag.cond[187]||utag.cond[224]||utag.cond[227]||utag.cond[80])&&(utag.cond[14]||utag.cond[163]||utag.cond[213]||utag.cond[225])))",
+     "send": "1",
+     "v": "202604091215",
+     "tid": "12047"
+    },
+    "618": {
+     "load": "((utag.cond[14]||utag.cond[163]||utag.cond[225]))",
+     "send": "1",
+     "v": "202611050958",
+     "tid": "12047"
+    },
+    "151": {
+     "load": "((utag.cond[160]))",
+     "send": "1",
+     "v": "202610191552",
+     "tid": "4049"
+    },
+    "5": {
+     "load": "utag.cond[2]",
+     "send": "1",
+     "v": "202106211124",
+     "tid": "19116"
+    },
+    "190": {
+     "load": "(((utag.cond[30])&&!(utag.cond[229])))",
+     "send": "1",
+     "v": "202508060907",
+     "tid": "20010"
+    },
+    "196": {
+     "load": "utag.cond[19]",
+     "send": "1",
+     "v": "202207181056",
+     "tid": "7132"
+    },
+    "222": {
+     "load": "utag.cond[10]",
+     "send": "1",
+     "v": "202512101428",
+     "tid": "7132"
+    },
+    "223": {
+     "load": "(((utag.cond[163])&&(utag.cond[27])))",
+     "send": "1",
+     "v": "202512101440",
+     "tid": "7132"
+    },
+    "324": {
+     "load": "(((utag.cond[155]||utag.cond[53])&&!(utag.cond[161]||utag.cond[170])))",
+     "send": "1",
+     "v": "202610121339",
+     "tid": "7142"
+    },
+    "402": {
+     "load": "((((utag.cond[210]||utag.cond[225])&&(utag.cond[220]))&&!(utag.cond[169])))",
+     "send": "1",
+     "v": "202610191528",
+     "tid": "4049"
+    },
+    "589": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[243])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "590": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[239])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "591": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[240]||utag.cond[241])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "429": {
+     "load": "((utag.cond[200]||utag.cond[201]||utag.cond[202]||utag.cond[80]||utag.cond[188]||utag.cond[164]))",
+     "send": "1",
+     "v": "202407301118",
+     "tid": "14037"
+    },
+    "448": {
+     "load": "(((utag.cond[201]||utag.cond[202]||utag.cond[188]||utag.cond[189]||utag.cond[190]||utag.cond[191]||utag.cond[164]||utag.cond[187]||utag.cond[214]||utag.cond[215]||utag.cond[80])&&(utag.cond[209])))",
+     "send": "1",
+     "v": "202601191537",
+     "tid": "20067"
+    },
+    "455": {
+     "load": "(((utag.cond[188]||utag.cond[164]||utag.cond[228])&&(utag.cond[213])))",
+     "send": "1",
+     "v": "202501201450",
+     "tid": "14037"
+    },
+    "472": {
+     "load": "((utag.cond[164]||utag.cond[228]||utag.cond[200]||utag.cond[187]||utag.cond[80]||utag.cond[189]||utag.cond[188]||utag.cond[231]))",
+     "send": "1",
+     "v": "202606091454",
+     "tid": "20119"
+    },
+    "485": {
+     "load": "(((utag.cond[14])&&(utag.cond[218])))",
+     "send": "1",
+     "v": "202603051509",
+     "tid": "4049"
+    },
+    "486": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[218])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "489": {
+     "load": "1",
+     "send": "1",
+     "v": "202409051532",
+     "tid": "20010"
+    },
+    "496": {
+     "load": "(((utag.cond[163])&&(utag.cond[224])))",
+     "send": "1",
+     "v": "202410020931",
+     "tid": "12047"
+    },
+    "502": {
+     "load": "(((utag.cond[80]||utag.cond[215]||utag.cond[214]||utag.cond[228]||utag.cond[188]||utag.cond[189]||utag.cond[201]||utag.cond[202]||utag.cond[200]||utag.cond[164]||utag.cond[187])&&(utag.cond[14]||utag.cond[226]||utag.cond[213]||utag.cond[163]||utag.cond[225])))",
+     "send": "1",
+     "v": "202606091454",
+     "tid": "6037"
+    },
+    "516": {
+     "load": "1",
+     "send": "1",
+     "v": "202503041311",
+     "tid": "3131"
+    },
+    "544": {
+     "load": "(((utag.cond[14])&&(utag.cond[164]||utag.cond[228]||utag.cond[200]||utag.cond[231]||utag.cond[201]||utag.cond[202]||utag.cond[227]||utag.cond[188]||utag.cond[189]||utag.cond[232])))",
+     "send": "1",
+     "v": "202503061731",
+     "tid": "17001"
+    },
+    "545": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[223])&&(utag.cond[164]||utag.cond[228]||utag.cond[200]||utag.cond[231]||utag.cond[201]||utag.cond[202]||utag.cond[227]||utag.cond[188]||utag.cond[189]||utag.cond[232])))",
+     "send": "1",
+     "v": "202503061731",
+     "tid": "17001"
+    },
+    "546": {
+     "load": "(((utag.cond[213])&&(utag.cond[164]||utag.cond[228]||utag.cond[230]||utag.cond[200]||utag.cond[231]||utag.cond[201]||utag.cond[202]||utag.cond[227]||utag.cond[188]||utag.cond[189]||utag.cond[232])))",
+     "send": "1",
+     "v": "202503061731",
+     "tid": "17001"
+    },
+    "588": {
+     "load": "1",
+     "send": "1",
+     "v": "202508271005",
+     "tid": "20067"
+    },
+    "610": {
+     "load": "((utag.cond[164]||utag.cond[215]||utag.cond[214]||utag.cond[189]||utag.cond[80]))",
+     "send": "1",
+     "v": "202610211201",
+     "tid": "18048"
+    },
+    "613": {
+     "load": "1",
+     "send": "1",
+     "v": "202607230933",
+     "tid": "9043"
+    },
+    "614": {
+     "load": "(((utag.cond[210]||utag.cond[225])&&(utag.cond[211])))",
+     "send": "1",
+     "v": "202607230933",
+     "tid": "9043"
+    },
+    "615": {
+     "load": "((utag.cond[213]))",
+     "send": "1",
+     "v": "202607230933",
+     "tid": "9043"
+    },
+    "616": {
+     "load": "(((utag.cond[163]||utag.cond[244])&&(utag.cond[245])))",
+     "send": "1",
+     "v": "202611050958",
+     "tid": "7132"
+    },
+    "617": {
+     "load": "((utag.cond[247]))",
+     "send": "1",
+     "v": "202608260918",
+     "tid": "7132"
+    },
+    "621": {
+     "load": "((utag.cond[248]||utag.cond[14]||utag.cond[249]||utag.cond[163]))",
+     "send": "1",
+     "v": "202610211201",
+     "tid": "20064"
+    },
+    "627": {
+     "load": "(((utag.cond[14]||utag.cond[163]||utag.cond[213])&&(utag.cond[215]||utag.cond[164]||utag.cond[80]||utag.cond[189]||utag.cond[202]||utag.cond[188])))",
+     "send": "1",
+     "v": "202610211201",
+     "tid": "15038"
+    },
+    "628": {
+     "load": "(!(utag.cond[251]))",
+     "send": "1",
+     "v": "202610211201",
+     "tid": "20067"
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "first_snapshot": true,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion": {
+   "ok": true,
+   "results": [
+    {
+     "name": "ecom_try",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "588",
+      "613",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "223"
+     ]
+    },
+    {
+     "name": "ecom_buy",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "588",
+      "613",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "223"
+     ]
+    },
+    {
+     "name": "gated_trial",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "589",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210",
+      "211",
+      "220",
+      "223",
+      "225",
+      "243",
+      "244"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "trial_demo",
+      "facebook_form_submission_type": "StartTrial"
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "589"
+     ]
+    },
+    {
+     "name": "gated_contact",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210",
+      "211",
+      "220",
+      "223",
+      "225",
+      "239",
+      "244"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "contact",
+      "facebook_form_submission_type": "Contact"
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ]
+    }
+   ]
+  }
+ },
+ "browser": {
+  "source": "claude-browser",
+  "collected_at": "2026-11-14T22:15:04Z",
+  "visits": [
+   {
+    "id": "pt-sage-50",
+    "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/",
+    "status": 200,
+    "final_url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/",
+    "click_ids": {
+     "gclid": "TEST_MON_20261114",
+     "msclkid": "TEST_MON_20261114",
+     "fbclid": "TEST_MON_20261114"
+    },
+    "live_sample": true,
+    "pre": {
+     "title": "Sage 50 | Sage PT",
+     "requests": [],
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "banner": true,
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "utag": {
+      "present": true,
+      "utid": "sage/pt-pt/202611050958",
+      "version": "ut4.53.202611050958",
+      "path": "//tags.tiqcdn.com/utag/sage/pt-pt/prod/",
+      "data_keys": 141,
+      "page_type": "artigo",
+      "language": "pt-pt",
+      "country": "pt"
+     }
+    },
+    "post": {
+     "title": "Sage 50 | Sage PT",
+     "accepted": true,
+     "banner": false,
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "_fbc": "fb.2.1794694400231.TEST_MON_20261114",
+      "_gcl_au": "",
+      "_fbp": "",
+      "_gcl_aw": "GCL.1794694407.TEST_MON_20261114"
+     },
+     "utag": {
+      "present": true,
+      "utid": "sage/pt-pt/202611050958",
+      "version": "ut4.53.202611050958",
+      "path": "//tags.tiqcdn.com/utag/sage/pt-pt/prod/",
+      "data_keys": 143,
+      "page_type": "artigo",
+      "language": "pt-pt",
+      "country": "pt"
+     },
+     "requests": [
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://c.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/pt-pt/produtos/sage-50cloud/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://js.zi-scripts.com/unified/v1/master/getSubscriptions",
+       "type": "fetch"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
+       "type": "img"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/image.aspx",
+       "type": "img"
+      },
+      {
+       "url": "https://epsilon.6sense.com/v3/company/details",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://lux.speedcurve.com/lux/?id=4328391745",
+       "type": "img"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261114",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261114&gclaw=TEST_MON_20261114&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261114",
+       "type": "fetch"
+      },
+      {
+       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/events",
+       "type": "fetch"
+      },
+      {
+       "url": "https://logx.optimizely.com/v1/events",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://sageportugal.pxf.io/xur/55271",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://collect-eu-west-1.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://c.contentsquare.net/pageview?pid=3608",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      }
+     ]
+    },
+    "blocked": false
+   }
+  ],
+  "journeys": []
+ }
+}

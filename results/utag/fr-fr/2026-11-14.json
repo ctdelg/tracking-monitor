@@ -1,0 +1,376 @@
+{
+ "publish_version": "202611051052",
+ "sha256": "96652085a793578a57a38166a28c1a87d3bcc2e6d52afddf386673f7da8e1dfe",
+ "size": 151712,
+ "tags": {
+  "467": {
+   "load": "4",
+   "send": "((utag.cond[344]))",
+   "v": "202403181015",
+   "tid": "7143"
+  },
+  "527": {
+   "load": "1",
+   "send": "1",
+   "v": "202507231442",
+   "tid": "20067"
+  },
+  "500": {
+   "load": "(((utag.cond[322]||utag.cond[338]||utag.cond[339]||utag.cond[323]||utag.cond[337]||utag.cond[376]||utag.cond[285]||utag.cond[353]||utag.cond[354]||utag.cond[317]||utag.cond[364]||utag.cond[372]||utag.cond[253])&&(utag.cond[55]||utag.cond[284]||utag.cond[349]||utag.cond[366])))",
+   "send": "1",
+   "v": "202604091134",
+   "tid": "12047"
+  },
+  "648": {
+   "load": "((utag.cond[55]||utag.cond[284]||utag.cond[366]))",
+   "send": "1",
+   "v": "202611051052",
+   "tid": "12047"
+  },
+  "61": {
+   "load": "utag.cond[121]",
+   "send": "1",
+   "v": "202106211219",
+   "tid": "19116"
+  },
+  "131": {
+   "load": "((utag.cond[55]))",
+   "send": "1",
+   "v": "202512101547",
+   "tid": "7132"
+  },
+  "128": {
+   "load": "((utag.cond[55]))",
+   "send": "1",
+   "v": "202602181050",
+   "tid": "4049"
+  },
+  "129": {
+   "load": "(((utag.cond[347]||utag.cond[392])&&(utag.cond[359])))",
+   "send": "1",
+   "v": "202601121214",
+   "tid": "4049"
+  },
+  "201": {
+   "load": "(((utag.cond[121])&&!(utag.cond[379])))",
+   "send": "1",
+   "v": "202508060847",
+   "tid": "20010"
+  },
+  "246": {
+   "load": "utag.cond[64]",
+   "send": "1",
+   "v": "202207271053",
+   "tid": "7132"
+  },
+  "339": {
+   "load": "(((utag.cond[267]||utag.cond[196])&&!(utag.cond[277]||utag.cond[294])))",
+   "send": "1",
+   "v": "202610121252",
+   "tid": "7142"
+  },
+  "402": {
+   "load": "1",
+   "send": "1",
+   "v": "202211221619",
+   "tid": "20067"
+  },
+  "405": {
+   "load": "((utag.cond[278]))",
+   "send": "1",
+   "v": "202402270939",
+   "tid": "20011"
+  },
+  "424": {
+   "load": "(((utag.cond[267]||utag.cond[196])&&(utag.cond[292]||utag.cond[293])))",
+   "send": "1",
+   "v": "202307250945",
+   "tid": "7142"
+  },
+  "433": {
+   "load": "1",
+   "send": "1",
+   "v": "202409091420",
+   "tid": "23013"
+  },
+  "436": {
+   "load": "1",
+   "send": "1",
+   "v": "202310021423",
+   "tid": "20067"
+  },
+  "449": {
+   "load": "((utag.cond[337]||utag.cond[338]||utag.cond[339]||utag.cond[253]||utag.cond[322]||utag.cond[285]))",
+   "send": "1",
+   "v": "202407301008",
+   "tid": "14037"
+  },
+  "464": {
+   "load": "((utag.cond[349]))",
+   "send": "1",
+   "v": "202611051052",
+   "tid": "4049"
+  },
+  "470": {
+   "load": "(((utag.cond[338]||utag.cond[339]||utag.cond[322]||utag.cond[323]||utag.cond[324]||utag.cond[325]||utag.cond[285]||utag.cond[317]||utag.cond[353]||utag.cond[354]||utag.cond[253])&&(utag.cond[345])))",
+   "send": "1",
+   "v": "202601191556",
+   "tid": "20067"
+  },
+  "471": {
+   "load": "(((utag.cond[347])&&(utag.cond[348])))",
+   "send": "1",
+   "v": "202409091420",
+   "tid": "23013"
+  },
+  "475": {
+   "load": "1",
+   "send": "1",
+   "v": "202403280832",
+   "tid": "20010"
+  },
+  "476": {
+   "load": "1",
+   "send": "1",
+   "v": "202604091134",
+   "tid": "9043"
+  },
+  "477": {
+   "load": "(((utag.cond[347]||utag.cond[392])&&(utag.cond[348])))",
+   "send": "1",
+   "v": "202604091134",
+   "tid": "9043"
+  },
+  "478": {
+   "load": "((utag.cond[343]))",
+   "send": "1",
+   "v": "202604091134",
+   "tid": "9043"
+  },
+  "489": {
+   "load": "(((utag.cond[322]||utag.cond[285]||utag.cond[376])&&(utag.cond[349])))",
+   "send": "1",
+   "v": "202501201423",
+   "tid": "14037"
+  },
+  "507": {
+   "load": "((utag.cond[285]||utag.cond[376]||utag.cond[337]||utag.cond[317]||utag.cond[253]||utag.cond[323]||utag.cond[322]||utag.cond[390]))",
+   "send": "1",
+   "v": "202606091435",
+   "tid": "20119"
+  },
+  "517": {
+   "load": "(((utag.cond[55])&&(utag.cond[357])))",
+   "send": "1",
+   "v": "202603051526",
+   "tid": "4049"
+  },
+  "518": {
+   "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[357])))",
+   "send": "1",
+   "v": "202601121138",
+   "tid": "4049"
+  },
+  "520": {
+   "load": "1",
+   "send": "1",
+   "v": "202409051436",
+   "tid": "20010"
+  },
+  "523": {
+   "load": "((utag.cond[349]))",
+   "send": "1",
+   "v": "202409091420",
+   "tid": "23013"
+  },
+  "540": {
+   "load": "(((utag.cond[284])&&(utag.cond[364])))",
+   "send": "1",
+   "v": "202410141422",
+   "tid": "12047"
+  },
+  "550": {
+   "load": "(((utag.cond[253]||utag.cond[354]||utag.cond[353]||utag.cond[376]||utag.cond[322]||utag.cond[323]||utag.cond[338]||utag.cond[339]||utag.cond[337]||utag.cond[285]||utag.cond[317])&&(utag.cond[55]||utag.cond[369]||utag.cond[349]||utag.cond[284]||utag.cond[366])))",
+   "send": "1",
+   "v": "202606091435",
+   "tid": "6037"
+  },
+  "557": {
+   "load": "1",
+   "send": "1",
+   "v": "202503041257",
+   "tid": "3131"
+  },
+  "578": {
+   "load": "(((utag.cond[55])&&(utag.cond[285]||utag.cond[376]||utag.cond[337]||utag.cond[390]||utag.cond[338]||utag.cond[339]||utag.cond[372]||utag.cond[322]||utag.cond[323]||utag.cond[391])))",
+   "send": "1",
+   "v": "202503061721",
+   "tid": "17001"
+  },
+  "579": {
+   "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[360])&&(utag.cond[285]||utag.cond[376]||utag.cond[337]||utag.cond[390]||utag.cond[338]||utag.cond[339]||utag.cond[372]||utag.cond[322]||utag.cond[323]||utag.cond[391])))",
+   "send": "1",
+   "v": "202503061721",
+   "tid": "17001"
+  },
+  "580": {
+   "load": "(((utag.cond[349])&&(utag.cond[285]||utag.cond[376]||utag.cond[389]||utag.cond[337]||utag.cond[390]||utag.cond[338]||utag.cond[339]||utag.cond[372]||utag.cond[322]||utag.cond[323]||utag.cond[391])))",
+   "send": "1",
+   "v": "202503061721",
+   "tid": "17001"
+  },
+  "581": {
+   "load": "(((utag.cond[347])&&(utag.cond[348])))",
+   "send": "1",
+   "v": "202503061957",
+   "tid": "20119"
+  },
+  "582": {
+   "load": "((utag.cond[349]))",
+   "send": "1",
+   "v": "202503061957",
+   "tid": "20119"
+  },
+  "583": {
+   "load": "((utag.cond[393]||utag.cond[394]||utag.cond[55]||utag.cond[395]||utag.cond[396]||utag.cond[284]))",
+   "send": "1",
+   "v": "202506181452",
+   "tid": "20064"
+  },
+  "595": {
+   "load": "(((utag.cond[284])&&(utag.cond[402])&&(utag.cond[403])))",
+   "send": "1",
+   "v": "202604091134",
+   "tid": "4049"
+  },
+  "608": {
+   "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[407])))",
+   "send": "1",
+   "v": "202601131605",
+   "tid": "4049"
+  },
+  "609": {
+   "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[408])))",
+   "send": "1",
+   "v": "202601131605",
+   "tid": "4049"
+  },
+  "610": {
+   "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[409]||utag.cond[410])))",
+   "send": "1",
+   "v": "202601131605",
+   "tid": "4049"
+  },
+  "607": {
+   "load": "1",
+   "send": "1",
+   "v": "202508270927",
+   "tid": "20067"
+  },
+  "633": {
+   "load": "((utag.cond[285]||utag.cond[354]||utag.cond[353]||utag.cond[323]||utag.cond[253]))",
+   "send": "1",
+   "v": "202610211129",
+   "tid": "18048"
+  },
+  "635": {
+   "load": "((utag.cond[55]))",
+   "send": "1",
+   "v": "202603091538",
+   "tid": "20010"
+  },
+  "645": {
+   "load": "1",
+   "send": "1",
+   "v": "202607230915",
+   "tid": "3095"
+  },
+  "646": {
+   "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[359])))",
+   "send": "1",
+   "v": "202608271333",
+   "tid": "18048"
+  },
+  "647": {
+   "load": "((utag.cond[349]))",
+   "send": "1",
+   "v": "202608271333",
+   "tid": "18048"
+  },
+  "656": {
+   "load": "(((utag.cond[55]||utag.cond[284]||utag.cond[349])&&(utag.cond[354]||utag.cond[285]||utag.cond[253]||utag.cond[323]||utag.cond[339]||utag.cond[322])))",
+   "send": "1",
+   "v": "202610211129",
+   "tid": "15038"
+  },
+  "657": {
+   "load": "(!(utag.cond[411]))",
+   "send": "1",
+   "v": "202610211129",
+   "tid": "20067"
+  },
+  "658": {
+   "load": "((utag.cond[55]||utag.cond[284]||utag.cond[349]))",
+   "send": "1",
+   "v": "202611051052",
+   "tid": "15038"
+  }
+ },
+ "load_rules": {
+  "121": "c[121]|=(d['dom.domain'].toString().toLowerCase().indexOf('ciel.com'.toLowerCase())<0&&d['dom.domain'].toString().toLowerCase().indexOf('sage.co.za'.toLowerCase())<0)",
+  "196": "c[196]|=(d['ut.event'].toString().toLowerCase()=='link'.toLowerCase())",
+  "253": "c[253]|=(/fr-ca|en-ca/.test(d['ut.profile']))",
+  "267": "c[267]|=(d['page_id'].toString().toLowerCase().indexOf('purchase_complete'.toLowerCase())>-1&&typeof d['order_id']=='undefined')||(d['page_id'].toString().toLowerCase().indexOf('checkout_spa'.toLowerCase())<0&&d['page_id'].toString().toLowerCase().indexOf('account details'.toLowerCase())<0&&d['page_id'].toString().toLowerCase().indexOf('order confirmation'.toLowerCase())<0&&d['page_id'].toString().toLowerCase().indexOf('purchase_checkout2'.toLowerCase())<0&&d['page_id'].toString().toLowerCase().indexOf('purchase_complete'.toLowerCase())<0)",
+  "277": "c[277]|=(d['dom.domain'].toString().toLowerCase().indexOf('sage.co.za'.toLowerCase())>-1)",
+  "278": "c[278]|=(d['dom.pathname'].toString().toLowerCase().indexOf('/fr-fr/cp/logiciels-comptabilite-pour-faciliter-votre-quotidien/'.toLowerCase())>-1)||(d['dom.pathname'].toString().indexOf('/fr-fr/cp/logiciels-gestion-commerciale-facturation/')>-1)||(d['dom.pathname'].toString().indexOf('/fr-fr/cp/logiciels-paie-pour-payer-vos-employes-a-temps/')>-1)||(d['dom.pathname'].toString().indexOf('/fr-fr/logiciel-hr-et-paie/')>-1)",
+  "284": "c[284]|=(typeof d['action']!='undefined'&&d['action']=='form_submit_success')",
+  "285": "c[285]|=(d['ut.profile'].toString().toLowerCase()=='en-gb'.toLowerCase())",
+  "292": "c[292]|=(/^\\/fr-fr\\/boutique\\//i.test(d['dom.pathname']))",
+  "293": "c[293]|=(/^\\/fr-fr\\/sage-business-cloud\\/logiciels\\/boutique\\//i.test(d['dom.pathname']))",
+  "294": "c[294]|=(/^\\/fr-fr\\/boutique\\//i.test(d['dom.pathname']))||(/^\\/fr-fr\\/sage-business-cloud\\/logiciels\\/boutique\\//i.test(d['dom.pathname']))",
+  "317": "c[317]|=(d['ut.profile'].toString().toLowerCase()=='en-ie'.toLowerCase())",
+  "322": "c[322]|=(d['ut.profile'].toString().toLowerCase()=='de-de'.toLowerCase())",
+  "323": "c[323]|=(d['ut.profile'].toString().toLowerCase()=='fr-fr'.toLowerCase())",
+  "324": "c[324]|=(d['ut.profile'].toString().toLowerCase()=='fr-be'.toLowerCase())",
+  "325": "c[325]|=(d['ut.profile'].toString().toLowerCase()=='nl-be'.toLowerCase())",
+  "337": "c[337]|=(d['ut.profile'].toString().toLowerCase()=='en-za'.toLowerCase())",
+  "338": "c[338]|=(d['ut.profile'].toString().toLowerCase()=='pt-pt'.toLowerCase())",
+  "339": "c[339]|=(d['ut.profile'].toString().toLowerCase()=='es-es'.toLowerCase())",
+  "343": "c[343]|=(typeof d['transaction_id']!='undefined'&&typeof d['transaction_id']!='undefined'&&d['transaction_id']!='')",
+  "344": "c[344]|=(d['dom.pathname'].toString().indexOf('zuoracallback')<0)",
+  "345": "c[345]|=(d['ut.env']!='Pre-prod')",
+  "347": "c[347]|=(typeof d['action']!='undefined'&&d['action'].toString().toLowerCase()=='form_submit_success'.toLowerCase())",
+  "348": "c[348]|=(typeof d['gate_content_name']!='undefined'&&typeof d['gate_content_name']!='undefined'&&d['gate_content_name']!='')",
+  "349": "c[349]|=(typeof d['transaction_id']!='undefined'&&typeof d['transaction_id']!='undefined'&&d['transaction_id']!='')",
+  "353": "c[353]|=(d['ut.profile']=='us')",
+  "354": "c[354]|=(d['ut.profile']=='en-us')",
+  "357": "c[357]|=(d['ut.profile'].toString().toLowerCase()=='en-za'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='en-zw'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='en-ke'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='fr-ma'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='en-ng'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='en-tv'.toLowerCase())",
+  "359": "c[359]|=(typeof d['ga4_customer_lead_type']!='undefined'&&typeof d['ga4_customer_lead_type']!='undefined'&&d['ga4_customer_lead_type']!='')",
+  "360": "c[360]|=(typeof d['ga4_customer_lead_type']!='undefined'&&typeof d['ga4_customer_lead_type']!='undefined'&&d['ga4_customer_lead_type']!='')",
+  "364": "c[364]|=(d['ut.profile'].toString().toLowerCase()=='th-th'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='en-hk'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='id-id'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='en-my'.toLowerCase())||(d['ut.profile'].toString().toLowerCase()=='en-sg'.toLowerCase())",
+  "366": "c[366]|=(d['event_name'].toString().toLowerCase()=='form_submit_success'.toLowerCase()&&d['triggered_by']=='sitecore'&&typeof d['release_date']!='undefined'&&typeof d['release_date']!='undefined'&&d['release_date']!='')",
+  "369": "c[369]|=(d['element_text'].toString().toLowerCase().indexOf('add to cart'.toLowerCase())>-1)||(d['event'].toString().toLowerCase().indexOf('add_to_cart'.toLowerCase())>-1)",
+  "372": "c[372]|=(d['ut.profile']=='en-au')",
+  "376": "c[376]|=(d['tms_environment'].toString().toLowerCase()=='gb'.toLowerCase())",
+  "379": "c[379]|=(d['dom.url']=='https://web.pp-sageimagine.com/en-gb/sage-business-cloud/intacct/resources/ebooks/10-reasons-saas-companies-choose-sage-intacct/')",
+  "389": "c[389]|=(d['ut.profile'].toString().toLowerCase()=='investors'.toLowerCase())",
+  "390": "c[390]|=(d['ut.profile'].toString().toLowerCase()=='shop-za'.toLowerCase())",
+  "391": "c[391]|=(d['ut.profile'].toString().toLowerCase()=='ciel'.toLowerCase())",
+  "392": "c[392]|=(d['triggered_by']=='sitecore'&&typeof d['release_date']!='undefined'&&typeof d['release_date']!='undefined'&&d['release_date']!=''&&d['event_name']=='form_submit_success')",
+  "393": "c[393]|=(d['event_name'].toString().toLowerCase().indexOf('add_to_cart'.toLowerCase())>-1)||(d['event_name'].toString().toLowerCase().indexOf('remove_from_cart'.toLowerCase())>-1)",
+  "394": "c[394]|=(d['collect_tag_inclusion'].toString().toLowerCase()=='true'.toLowerCase()&&d['ut.event'].toString().toLowerCase().indexOf('link'.toLowerCase())>-1)",
+  "395": "c[395]|=(d['event']=='ee_user_info')",
+  "396": "c[396]|=(d['event'].toString().toLowerCase().indexOf('ee_purchase'.toLowerCase())>-1)||(d['event_name'].toString().toLowerCase().indexOf('ee_purchase'.toLowerCase())>-1)",
+  "397": "c[397]|=(d['dom.pathname']=='/de-de/')||(d['dom.pathname']=='/en-gb/')||(d['dom.pathname']=='/en-us/')||(d['dom.pathname']=='/en-ke/')||(d['dom.pathname']=='/fr-fr/')||(d['dom.pathname']=='/fr-ca/')",
+  "398": "c[398]|=(/.*(\\/sage-business-cloud\\/|\\/cp\\/|\\/products\\/|\\/produkte\\/|\\/productos\\/|\\/produits\\/|\\/hr-software\\/|\\/accounting-software\\/|\\/size\\/|\\/sage-copilot\\/|\\/sage-50\\/|\\/accountants\\/).*/.test(d['dom.url']))",
+  "402": "c[402]|=(/^([A-Z]+)_(INT|BMS|SX3|XRT)_([A-Z]+)_([A-Z]+)_(TOO|CON|DEM|QUO|TRL)_.+$/.test(d['gate_content_name']))||(d['gate_content_name']=='CL_INT_FR_MED_PDF_BOFU_PDF_Guide_Intacct')",
+  "403": "c[403]|=(typeof d['number_of_employees']!='undefined'&&d['number_of_employees']!=''&&d['number_of_employees']!='(not set)'&&d['number_of_employees']!='0 Employees'&&d['number_of_employees']!='1-4 Employees'&&d['number_of_employees']!='5-9 Employees')",
+  "407": "c[407]|=(d['customer_lead_type'].toString().toLowerCase().indexOf('Trial_Demo'.toLowerCase())>-1)",
+  "408": "c[408]|=(d['customer_lead_type'].toString().toLowerCase().indexOf('Contact'.toLowerCase())>-1)",
+  "409": "c[409]|=(d['customer_lead_type'].toString().toLowerCase().indexOf('Application'.toLowerCase())>-1)",
+  "410": "c[410]|=(d['customer_lead_type'].toString().toLowerCase().indexOf('Download'.toLowerCase())>-1)",
+  "411": "c[411]|=(d['dom.pathname'].toString().indexOf('/blog/')>-1)",
+  "55": "c[55]|=(d['ut.event'].toString().indexOf('view')>-1)",
+  "64": "c[64]|=(d['language'].toString().toLowerCase()=='en-za'.toLowerCase()&&d['ut.event'].toString().indexOf('view')>-1)||(d['language'].toString().toLowerCase()=='en-ae'.toLowerCase()&&d['ut.event'].toString().indexOf('view')>-1)||(d['language'].toString().toLowerCase()=='en-ke'.toLowerCase()&&d['ut.event'].toString().indexOf('view')>-1)||(d['language'].toString().toLowerCase()=='en-ng'.toLowerCase()&&d['ut.event'].toString().indexOf('view')>-1)||(d['language'].toString().toLowerCase()=='en-zw'.toLowerCase()&&d['ut.event'].toString().indexOf('view')>-1)||(d['language'].toString().toLowerCase()=='en-tv'.toLowerCase()&&d['ut.event'].toString().indexOf('view')>-1)"
+ }
+}

@@ -1,0 +1,221 @@
+# Markets, pages and journeys checked by the monitor.
+#
+# Maintained via the Claude skill "tracking-monitor" (e.g. "Add URL ... to FR as landing page").
+# You can also edit this file directly - keep the indentation.
+#
+# URL fields:
+#   id           unique, short, lowercase (used in reports and baselines)
+#   url          full URL without tracking parameters (the monitor adds gclid/msclkid/fbclid + utm)
+#   type         landing_page | product | pricing | form | trial | checkout | content
+#   live_sample  true on ONE page per market: tracking hits are let through (marked with
+#                utm_source=tracking-monitor) to verify real vendor responses. All other pages
+#                block hits so no data is created.
+#
+# STATUS 2026-11-14: URL lists are a first PROPOSAL derived from the sitemaps. Paid-only landing
+# pages (noindex, not in sitemaps) still need to be added by the market owners.
+
+settings:
+  # Tealium tag templates that carry conversions (used for CONV-01/03 and the publish diff).
+  conversion_templates:
+    "4049": Floodlight
+    "7132": Google Ads
+
+# Conversion events replayed through the load rules (CONV-01). Never sent anywhere.
+# - ecom_*: the Next.js trial/buy checkout (sends action + customer_lead_type, no gate_content_name)
+# - gated_*: Sitecore lead forms. Tealium derives ga4_customer_lead_type from the code inside
+#   gate_content_name (_TRL_/_DEM_ -> trial_demo, _CON_ -> contact, _PDF_ -> download ...).
+default_conversion_events:
+  - name: ecom_try
+    payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+  - name: ecom_buy
+    payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+  - name: gated_trial
+    payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+              gate_content_name: XX_INT_XX_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
+  - name: gated_contact
+    payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+              gate_content_name: XX_INT_XX_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
+
+markets:
+  DE:
+    name: Germany
+    tealium_profile: de-de
+    locale: de-DE
+    conversion_events:
+      - name: ecom_try
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+        expected_tags: [98]        # Floodlight form_submit_success (sageg0/dynam00)
+      - name: ecom_buy
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+        expected_tags: [98]
+      - name: gated_trial
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: DE_INT_DE_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
+        expected_tags: [98]
+      - name: gated_contact
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: DE_INT_DE_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
+        expected_tags: [98]
+    urls:
+      - {id: de-home, url: "https://www.sage.com/de-de/", type: content}
+      - {id: de-produkte, url: "https://www.sage.com/de-de/produkte/", type: product}
+      - {id: de-preise, url: "https://www.sage.com/de-de/preise/", type: pricing, live_sample: true}
+      - {id: de-sage-50, url: "https://www.sage.com/de-de/produkte/sage-50connected/", type: product}
+      - {id: de-sage-50-handwerk, url: "https://www.sage.com/de-de/produkte/sage-50-handwerk/", type: product}
+      - {id: de-sage-active, url: "https://www.sage.com/de-de/produkte/sage-active/", type: product}
+      - {id: de-sage-100, url: "https://www.sage.com/de-de/produkte/sage-100/", type: product}
+      - {id: de-sage-100-cloud, url: "https://www.sage.com/de-de/produkte/sage-100/cloud/", type: product}
+      - {id: de-intacct, url: "https://www.sage.com/de-de/sage-business-cloud/intacct/", type: product}
+      - {id: de-x3, url: "https://www.sage.com/de-de/sage-business-cloud/sage-x3/", type: product}
+      - {id: de-operations, url: "https://www.sage.com/de-de/sage-business-cloud/sage-operations/", type: product}
+      - {id: de-payroll, url: "https://www.sage.com/de-de/sage-business-cloud/lohnabrechnung/", type: product}
+      - {id: de-payroll-free, url: "https://www.sage.com/de-de/sage-business-cloud/lohnabrechnung/kostenlos/", type: trial}
+      - {id: de-hr-suite, url: "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/", type: product}
+      - {id: de-hr-cloud, url: "https://www.sage.com/de-de/sage-business-cloud/hr/", type: product}
+      - {id: de-buchhaltung, url: "https://www.sage.com/de-de/buchhaltung-software/", type: landing_page}
+      - {id: de-buchhaltung-online, url: "https://www.sage.com/de-de/buchhaltung-software/online/", type: landing_page}
+      - {id: de-rechnungsprogramm, url: "https://www.sage.com/de-de/buchhaltung-software/rechnungsprogramm/", type: landing_page}
+      - {id: de-lohnabrechnung, url: "https://www.sage.com/de-de/lohnabrechnung-software/", type: landing_page}
+      - {id: de-erp, url: "https://www.sage.com/de-de/erp-software/", type: landing_page}
+      - {id: de-hr-software, url: "https://www.sage.com/de-de/hr-software/", type: landing_page}
+      - {id: de-warenwirtschaft, url: "https://www.sage.com/de-de/warenwirtschaft/", type: landing_page}
+      - {id: de-kontakt, url: "https://www.sage.com/de-de/ueber-uns/kontakt/", type: form}
+    journeys:
+      - id: de-j-active-trial
+        name: Sage Active -> trial/buy checkout entry (no submit)
+        steps:
+          - goto: "https://www.sage.com/de-de/produkte/sage-active/"
+          - click: "a[href*='/cart/']"
+            expect_url: "/de-de/cart/"
+
+  AT:
+    name: Austria
+    tealium_profile: de-at
+    locale: de-AT
+    urls:
+      - {id: at-home, url: "https://www.sage.com/de-at/", type: content}
+      - {id: at-produkte, url: "https://www.sage.com/de-at/produkte/", type: product, live_sample: true}
+      - {id: at-buchhaltung, url: "https://www.sage.com/de-at/buchhaltung-software/", type: landing_page}
+      - {id: at-fakturierung, url: "https://www.sage.com/de-at/buchhaltung-software/fakturierung/", type: landing_page}
+      - {id: at-rechnungen, url: "https://www.sage.com/de-at/buchhaltung-software/rechnungen/", type: landing_page}
+      - {id: at-erp, url: "https://www.sage.com/de-at/erp/", type: landing_page}
+      - {id: at-erp-cloud, url: "https://www.sage.com/de-at/erp/cloud/", type: landing_page}
+      - {id: at-erp-klein, url: "https://www.sage.com/de-at/erp/kleinunternehmen/", type: landing_page}
+      - {id: at-bms, url: "https://www.sage.com/de-at/erp/business-management-software/", type: landing_page}
+      - {id: at-hr-software, url: "https://www.sage.com/de-at/hr-software/", type: landing_page}
+      - {id: at-zeiterfassung, url: "https://www.sage.com/de-at/hr-software/zeiterfassung/", type: landing_page}
+      - {id: at-lohnverrechnung, url: "https://www.sage.com/de-at/lohnverrechnungssoftware/", type: landing_page}
+      - {id: at-lager, url: "https://www.sage.com/de-at/lagerverwaltung/", type: landing_page}
+      - {id: at-crm, url: "https://www.sage.com/de-at/crm-software/", type: landing_page}
+      - {id: at-produktion, url: "https://www.sage.com/de-at/branchen/produktion/", type: landing_page}
+      - {id: at-handel, url: "https://www.sage.com/de-at/branchen/handel/", type: landing_page}
+      - {id: at-kmu, url: "https://www.sage.com/de-at/unternehmensgroessen/mittlere-unternehmen/", type: landing_page}
+      - {id: at-kontakt, url: "https://www.sage.com/de-at/ueber-uns/kontakt/", type: form}
+    journeys:
+      - id: at-j-erp-contact
+        name: ERP landing page -> contact page
+        steps:
+          - goto: "https://www.sage.com/de-at/erp/"
+          - goto: "https://www.sage.com/de-at/ueber-uns/kontakt/"
+
+  FR:
+    name: France
+    tealium_profile: fr-fr
+    locale: fr-FR
+    urls:
+      - {id: fr-home, url: "https://www.sage.com/fr-fr/", type: content}
+      - {id: fr-produits, url: "https://www.sage.com/fr-fr/produits/", type: product}
+      - {id: fr-sage-50, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/", type: product, live_sample: true}
+      - {id: fr-sage-50-test, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/", type: trial}
+      - {id: fr-sage-50-compta, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-compta/", type: product}
+      - {id: fr-sage-50-gescom, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-gestion-commerciale/", type: product}
+      - {id: fr-sage-active, url: "https://www.sage.com/fr-fr/produits/sage-active/", type: product}
+      - {id: fr-sage-100, url: "https://www.sage.com/fr-fr/produits/sage-100/", type: product}
+      - {id: fr-sage-100-compta, url: "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/", type: product}
+      - {id: fr-sage-100-paie, url: "https://www.sage.com/fr-fr/produits/sage-100-paie-rh/", type: product}
+      - {id: fr-frp-1000, url: "https://www.sage.com/fr-fr/produits/sage-frp-1000/", type: product}
+      - {id: fr-intacct, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/", type: product}
+      - {id: fr-x3, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/", type: product}
+      - {id: fr-x3-demo, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/demander-demonstration/", type: form}
+      - {id: fr-compta-facturation, url: "https://www.sage.com/fr-fr/sage-business-cloud/compta-facturation/", type: product}
+      - {id: fr-comptabilite, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/", type: landing_page}
+      - {id: fr-compta-test, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/version-test-gratuit/", type: trial}
+      - {id: fr-compta-tpe, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/tpe-petite-entreprise/", type: landing_page}
+      - {id: fr-facturation, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/facturation/", type: landing_page}
+      - {id: fr-facture-electronique, url: "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/api-plateforme-agreee/", type: landing_page}
+      - {id: fr-paie, url: "https://www.sage.com/fr-fr/paie-logiciels-gestion/", type: landing_page}
+      - {id: fr-erp, url: "https://www.sage.com/fr-fr/erp-logiciels/", type: landing_page}
+      - {id: fr-experts-comptables, url: "https://www.sage.com/fr-fr/experts-comptables/", type: landing_page}
+      - {id: fr-contact, url: "https://www.sage.com/fr-fr/a-propos/contact/", type: form}
+    journeys:
+      - id: fr-j-sage50-trial
+        name: Sage 50 product page -> free trial page
+        steps:
+          - goto: "https://www.sage.com/fr-fr/produits/sage-50cloud/"
+          - goto: "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/"
+
+  ES:
+    name: Spain
+    tealium_profile: es-es
+    locale: es-ES
+    urls:
+      - {id: es-home, url: "https://www.sage.com/es-es/", type: content}
+      - {id: es-productos, url: "https://www.sage.com/es-es/productos/", type: product}
+      - {id: es-sage-50, url: "https://www.sage.com/es-es/productos/sage-50cloud/", type: product, live_sample: true}
+      - {id: es-sage-50-precios, url: "https://www.sage.com/es-es/productos/sage-50cloud/precios/", type: pricing}
+      - {id: es-sage-200, url: "https://www.sage.com/es-es/productos/sage-200/", type: product}
+      - {id: es-sage-200-laboral, url: "https://www.sage.com/es-es/productos/sage-200-cloud-laboral/", type: product}
+      - {id: es-contaplus, url: "https://www.sage.com/es-es/productos/sage-contaplus/", type: product}
+      - {id: es-nominaplus, url: "https://www.sage.com/es-es/productos/sage-nominaplus/", type: product}
+      - {id: es-control-horario, url: "https://www.sage.com/es-es/productos/sage-control-horario/", type: product}
+      - {id: es-sales-mgmt, url: "https://www.sage.com/es-es/productos/sage-sales-management/", type: product}
+      - {id: es-sales-mgmt-precios, url: "https://www.sage.com/es-es/productos/sage-sales-management/precios/", type: pricing}
+      - {id: es-tpv-online, url: "https://www.sage.com/es-es/productos/sage-tpv-online/", type: product}
+      - {id: es-x3, url: "https://www.sage.com/es-es/sage-business-cloud/sage-x3/", type: product}
+      - {id: es-hr, url: "https://www.sage.com/es-es/sage-business-cloud/hr/", type: product}
+      - {id: es-contabilidad, url: "https://www.sage.com/es-es/software-contabilidad/", type: landing_page}
+      - {id: es-contabilidad-online, url: "https://www.sage.com/es-es/software-contabilidad/online/", type: landing_page}
+      - {id: es-factura-electronica, url: "https://www.sage.com/es-es/software-contabilidad/factura-electronica/", type: landing_page}
+      - {id: es-verifactu, url: "https://www.sage.com/es-es/certificacion-software/sistema-verifactu/", type: landing_page}
+      - {id: es-nominas, url: "https://www.sage.com/es-es/nominas-software/", type: landing_page}
+      - {id: es-erp, url: "https://www.sage.com/es-es/erp/", type: landing_page}
+      - {id: es-asesorias, url: "https://www.sage.com/es-es/asesorias-y-despachos/", type: landing_page}
+      - {id: es-contacto, url: "https://www.sage.com/es-es/sobre-sage/contacto/", type: form}
+    journeys:
+      - id: es-j-sage50-pricing
+        name: Sage 50 product page -> pricing
+        steps:
+          - goto: "https://www.sage.com/es-es/productos/sage-50cloud/"
+          - goto: "https://www.sage.com/es-es/productos/sage-50cloud/precios/"
+
+  PT:
+    name: Portugal
+    tealium_profile: pt-pt
+    locale: pt-PT
+    urls:
+      - {id: pt-home, url: "https://www.sage.com/pt-pt/", type: content}
+      - {id: pt-produtos, url: "https://www.sage.com/pt-pt/produtos/", type: product}
+      - {id: pt-sage-50, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud/", type: product, live_sample: true}
+      - {id: pt-sage-50-preco, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud/preco/", type: pricing}
+      - {id: pt-sage-50-contab, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud-contabilidade/", type: product}
+      - {id: pt-sage-50-salarios, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud-salarios/", type: product}
+      - {id: pt-sage-100, url: "https://www.sage.com/pt-pt/produtos/sage-100cloud/", type: product}
+      - {id: pt-sage-one, url: "https://www.sage.com/pt-pt/produtos/sage-one/", type: product}
+      - {id: pt-sage-one-fat, url: "https://www.sage.com/pt-pt/produtos/sage-one/software-de-facturacao-online/", type: product}
+      - {id: pt-sage-for-accountants, url: "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/", type: product}
+      - {id: pt-sfa-preco, url: "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/preco/", type: pricing}
+      - {id: pt-x3, url: "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/", type: product}
+      - {id: pt-hr, url: "https://www.sage.com/pt-pt/sage-business-cloud/hr/", type: product}
+      - {id: pt-faturacao, url: "https://www.sage.com/pt-pt/software-faturacao/", type: landing_page}
+      - {id: pt-faturacao-cloud, url: "https://www.sage.com/pt-pt/software-faturacao/cloud/", type: landing_page}
+      - {id: pt-faturacao-pme, url: "https://www.sage.com/pt-pt/software-faturacao/pequenas-empresas/", type: landing_page}
+      - {id: pt-erp, url: "https://www.sage.com/pt-pt/erp/", type: landing_page}
+      - {id: pt-tesouraria, url: "https://www.sage.com/pt-pt/software-tesouraria/", type: landing_page}
+      - {id: pt-contabilistas, url: "https://www.sage.com/pt-pt/contabilistas/", type: landing_page}
+      - {id: pt-contactos, url: "https://www.sage.com/pt-pt/sobre-nos/contactos/", type: form}
+    journeys:
+      - id: pt-j-sage50-pricing
+        name: Sage 50 product page -> pricing
+        steps:
+          - goto: "https://www.sage.com/pt-pt/produtos/sage-50cloud/"
+          - goto: "https://www.sage.com/pt-pt/produtos/sage-50cloud/preco/"

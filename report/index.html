@@ -1,0 +1,406 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><title>EU Tracking Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: control-room board - status strip on top, market tiles, then one market's findings, publish diff and history. */
+:root {
+  --bg: #f4f6f8; --surface: #ffffff; --fg: #17212b; --muted: #5a6673; --line: #dbe1e7; --accent: #1d5fa8;
+  --ok: #1f7f4a; --ok-bg: #e5f3ea; --warn: #9a6512; --warn-bg: #fbf0dc; --crit: #b8322a; --crit-bg: #fbe6e3;
+  --down: #5b4bc4; --down-bg: #ece9fb; --sys: #5f6b78; --sys-bg: #eceff2;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1319; --surface: #151c24; --fg: #e4e9ee; --muted: #93a0ad; --line: #26313d; --accent: #6aa8ea;
+  --ok: #4cc283; --ok-bg: #12291d; --warn: #e2a640; --warn-bg: #2d2412; --crit: #f0675b; --crit-bg: #33171a;
+  --down: #a196f3; --down-bg: #211d3a; --sys: #9aa6b3; --sys-bg: #1d252e; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0e1319; --surface: #151c24; --fg: #e4e9ee; --muted: #93a0ad; --line: #26313d; --accent: #6aa8ea;
+  --ok: #4cc283; --ok-bg: #12291d; --warn: #e2a640; --warn-bg: #2d2412; --crit: #f0675b; --crit-bg: #33171a;
+  --down: #a196f3; --down-bg: #211d3a; --sys: #9aa6b3; --sys-bg: #1d252e; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 14px/1.5 var(--f-body); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.wrap > * { min-width: 0; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 26px; letter-spacing: .01em; }
+h2 { font-size: 19px; }
+h3 { font-size: 15px; }
+.muted { color: var(--muted); }
+.mono { font-family: var(--f-mono); font-size: 12.5px; }
+.eyebrow { font: 600 11px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+a { color: var(--accent); }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, .tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
+header.top .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 13px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font: 600 12px/1.4 var(--f-body); letter-spacing: .04em; text-transform: uppercase; }
+.pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.s-green { color: var(--ok); background: var(--ok-bg); }
+.s-yellow { color: var(--warn); background: var(--warn-bg); }
+.s-red { color: var(--crit); background: var(--crit-bg); }
+.s-down { color: var(--down); background: var(--down-bg); }
+.s-sys { color: var(--sys); background: var(--sys-bg); }
+.big-pill { font-size: 14px; padding: 6px 14px; }
+
+.notice { border: 1px solid var(--line); border-left: 4px solid var(--sys); background: var(--surface); padding: 10px 14px; border-radius: 6px; }
+.notice.crit { border-left-color: var(--crit); }
+.notice p { margin: 4px 0 0; }
+.summary { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; }
+.summary p { margin: 0; max-width: 78ch; }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.tile { text-align: left; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--sys); border-radius: 8px; padding: 12px 14px; display: grid; gap: 6px; color: var(--fg); min-width: 0; }
+.tile.green { border-top-color: var(--ok); } .tile.yellow { border-top-color: var(--warn); } .tile.red { border-top-color: var(--crit); }
+.tile[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent) inset; }
+.tile .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.tile .code { font: 600 22px/1 var(--f-display); }
+.tile .counts { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tile .counts b { color: var(--fg); font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag { font-size: 11.5px; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); }
+
+section.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+
+.findings { display: grid; gap: 8px; }
+.finding { border: 1px solid var(--line); border-left: 4px solid var(--sys); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; min-width: 0; }
+.finding.red { border-left-color: var(--crit); } .finding.yellow { border-left-color: var(--warn); }
+.finding.site_down { border-left-color: var(--down); } .finding.info { border-left-color: var(--accent); }
+.finding.acked { opacity: .62; }
+.finding .line1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.finding .title { font-weight: 600; }
+.finding .detail { margin: 0; overflow-wrap: anywhere; }
+.diag { margin: 0; padding: 8px 10px; background: var(--bg); border-radius: 4px; font-size: 13.5px; }
+.diag::before { content: "Diagnosis  "; font: 600 11px var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+details summary { cursor: pointer; color: var(--muted); font-size: 12.5px; }
+pre.ev { margin: 6px 0 0; padding: 8px; background: var(--bg); border-radius: 4px; overflow-x: auto; font: 12px/1.45 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 280px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 6px; padding: 4px 10px; font-size: 13px; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.ackform { display: grid; gap: 8px; padding: 10px; border: 1px dashed var(--line); border-radius: 6px; }
+.ackform label { display: grid; gap: 4px; font-size: 12.5px; color: var(--muted); }
+.ackform input, .ackform select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 600 11px var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+td.cell { text-align: center; }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--line); }
+.dot.pass { background: var(--ok); } .dot.fail-red { background: var(--crit); } .dot.fail-yellow, .dot.warn { background: var(--warn); }
+.dot.fail-site_down { background: var(--down); } .dot.blocked { background: var(--sys); } .dot.acked { background: var(--muted); }
+
+.hist { display: grid; gap: 6px; }
+.hrow { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; }
+.hcells { display: flex; gap: 2px; overflow-x: auto; padding-bottom: 2px; }
+.hc { flex: 0 0 auto; width: 12px; height: 20px; border-radius: 2px; background: var(--line); }
+.hc.green { background: var(--ok); } .hc.yellow { background: var(--warn); } .hc.red { background: var(--crit); }
+.hc.tealium_only, .hc.partial { opacity: .55; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); }
+.legend span { display: inline-flex; gap: 5px; align-items: center; }
+.diffitem { border-bottom: 1px solid var(--line); padding: 8px 0; display: grid; gap: 4px; min-width: 0; }
+.diffitem code { font: 12px var(--f-mono); overflow-wrap: anywhere; }
+footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap" id="app">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Paid media tracking · DE AT FR ES PT</div>
+      <h1>EU Tracking Monitor</h1>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+  <div id="notices"></div>
+  <div id="summary"></div>
+  <div class="tiles" id="tiles" role="group" aria-label="Markets"></div>
+  <section class="panel" id="market"></section>
+  <section class="panel" id="publish"></section>
+  <section class="panel" id="history"></section>
+  <footer>
+    <div><b>Red</b>: conversion tags, click IDs or consent compliance broken. <b>Yellow</b>: secondary pixels, data layer or a conversion-relevant Tealium publish. <b>Site down</b>: page or utag.js unreachable (shown separately). <b>Global</b>: the same check fails in 3+ markets.</div>
+    <div>Checks run Mon–Fri around 06:00 CET from outside, like a visitor. No forms are submitted and tracking hits are blocked, except on one marked sample page per market.</div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  const MODE = "static";
+  const P = {"results": {"schema_version": 1, "monitor_version": "1.0.0", "day": "2026-11-14", "generated_at": "2026-11-14T22:19:07Z", "global": {"status": "red", "incidents": [], "system_notice": null}, "markets": {"DE": {"name": "Germany", "tealium_profile": "de-de", "rating": {"status": "red", "red_count": 2, "yellow_count": 1, "site_down": [], "blocked_pages": [], "coverage": "partial", "acknowledged_count": 0, "pages_checked": 1, "pages_configured": 23}, "status": "red", "source": "claude-browser", "baseline_confirmed": null, "utag": {"publish_version": "202611051049", "changed": false, "diff": {"changed": false, "first_snapshot": true, "items": [], "conversion_relevant": false}}, "pages": [{"id": "de-home", "url": "https://www.sage.com/de-de/", "type": "content"}, {"id": "de-produkte", "url": "https://www.sage.com/de-de/produkte/", "type": "product"}, {"id": "de-preise", "url": "https://www.sage.com/de-de/preise/", "type": "pricing"}, {"id": "de-sage-50", "url": "https://www.sage.com/de-de/produkte/sage-50connected/", "type": "product"}, {"id": "de-sage-50-handwerk", "url": "https://www.sage.com/de-de/produkte/sage-50-handwerk/", "type": "product"}, {"id": "de-sage-active", "url": "https://www.sage.com/de-de/produkte/sage-active/", "type": "product"}, {"id": "de-sage-100", "url": "https://www.sage.com/de-de/produkte/sage-100/", "type": "product"}, {"id": "de-sage-100-cloud", "url": "https://www.sage.com/de-de/produkte/sage-100/cloud/", "type": "product"}, {"id": "de-intacct", "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/", "type": "product"}, {"id": "de-x3", "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/", "type": "product"}, {"id": "de-operations", "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/", "type": "product"}, {"id": "de-payroll", "url": "https://www.sage.com/de-de/sage-business-cloud/lohnabrechnung/", "type": "product"}, {"id": "de-payroll-free", "url": "https://www.sage.com/de-de/sage-business-cloud/lohnabrechnung/kostenlos/", "type": "trial"}, {"id": "de-hr-suite", "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/", "type": "product"}, {"id": "de-hr-cloud", "url": "https://www.sage.com/de-de/sage-business-cloud/hr/", "type": "product"}, {"id": "de-buchhaltung", "url": "https://www.sage.com/de-de/buchhaltung-software/", "type": "landing_page"}, {"id": "de-buchhaltung-online", "url": "https://www.sage.com/de-de/buchhaltung-software/online/", "type": "landing_page"}, {"id": "de-rechnungsprogramm", "url": "https://www.sage.com/de-de/buchhaltung-software/rechnungsprogramm/", "type": "landing_page"}, {"id": "de-lohnabrechnung", "url": "https://www.sage.com/de-de/lohnabrechnung-software/", "type": "landing_page"}, {"id": "de-erp", "url": "https://www.sage.com/de-de/erp-software/", "type": "landing_page"}, {"id": "de-hr-software", "url": "https://www.sage.com/de-de/hr-software/", "type": "landing_page"}, {"id": "de-warenwirtschaft", "url": "https://www.sage.com/de-de/warenwirtschaft/", "type": "landing_page"}, {"id": "de-kontakt", "url": "https://www.sage.com/de-de/ueber-uns/kontakt/", "type": "form"}], "checks": [{"id": "TEAL-05", "title": "utag.js reachable on the Tealium CDN", "severity": "site_down", "result": "pass", "target": "market", "detail": "Publish 202611051049 (44 tags)", "evidence": {}}, {"id": "TEAL-04", "title": "Tealium publish detected (utag.js changed)", "severity": "info", "result": "pass", "target": "market", "detail": "No publish since the last run", "evidence": {}}, {"id": "CONV-01:ecom_try", "title": "Conversion tags fire for 'ecom_try' (load rules)", "severity": "red", "result": "fail", "target": "market", "detail": "Event 'ecom_try': tag(s) 98 would NOT fire.", "evidence": {"fired": ["9", "143", "145", "202", "273", "287", "296", "311", "322", "329", "336", "349", "352", "361", "379", "402", "413", "417", "423", "424", "425"], "true_rules": ["86", "150", "222", "236", "251", "264", "265", "266"], "errors": []}}, {"id": "CONV-01:ecom_buy", "title": "Conversion tags fire for 'ecom_buy' (load rules)", "severity": "red", "result": "fail", "target": "market", "detail": "Event 'ecom_buy': tag(s) 98 would NOT fire.", "evidence": {"fired": ["9", "143", "145", "202", "273", "287", "296", "311", "322", "329", "336", "349", "352", "361", "379", "402", "413", "417", "423", "424", "425"], "true_rules": ["86", "150", "222", "236", "251", "264", "265", "266"], "errors": []}}, {"id": "CONV-01:gated_trial", "title": "Conversion tags fire for 'gated_trial' (load rules)", "severity": "red", "result": "pass", "target": "market", "detail": "Event 'gated_trial': tag(s) 98 fire.", "evidence": {}}, {"id": "CONV-01:gated_contact", "title": "Conversion tags fire for 'gated_contact' (load rules)", "severity": "red", "result": "pass", "target": "market", "detail": "Event 'gated_contact': tag(s) 98 fire.", "evidence": {}}, {"id": "PAGE-01", "title": "Page reachable (HTTP 2xx, no unexpected redirect)", "severity": "site_down", "result": "pass", "target": "de-preise", "detail": "HTTP 200", "evidence": {}}, {"id": "PAGE-02", "title": "Page renders", "severity": "site_down", "result": "pass", "target": "de-preise", "detail": "Sage Preise und Pläne für Ihr Unternehmen | Sage DE", "evidence": {}}, {"id": "TEAL-01", "title": "Tealium utag.js loads", "severity": "site_down", "result": "pass", "target": "de-preise", "detail": "ut4.53.202611051049", "evidence": {}}, {"id": "TEAL-02", "title": "Correct Tealium profile / environment", "severity": "red", "result": "pass", "target": "de-preise", "detail": "sage/de-de/202611051049", "evidence": {}}, {"id": "TEAL-03", "title": "Tealium data layer populated", "severity": "yellow", "result": "pass", "target": "de-preise", "detail": "136 data layer values", "evidence": {}}, {"id": "CONS-01", "title": "Consent banner shown on first visit", "severity": "red", "result": "pass", "target": "de-preise", "detail": "Banner visible", "evidence": {}}, {"id": "CONS-02", "title": "No marketing tags or cookies before consent", "severity": "red", "result": "pass", "target": "de-preise", "detail": "No marketing tags or cookies before consent", "evidence": {}}, {"id": "CONS-03", "title": "Google Consent Mode defaults to denied", "severity": "red", "result": "pass", "target": "de-preise", "detail": "Consent Mode default denied (or no Google hits before consent)", "evidence": {}}, {"id": "CONS-04", "title": "Consent stored after 'Accept all'", "severity": "red", "result": "pass", "target": "de-preise", "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1", "evidence": {}}, {"id": "TAG-BASELINE", "title": "Tag baseline for this page", "severity": "yellow", "result": "warn", "target": "de-preise", "detail": "No confirmed baseline yet - tags recorded but not compared.", "evidence": {"seen": {"floodlight": ["5195550"], "ga4": ["G-PE4Z9JJWVN"], "google_ads": ["970123043"], "linkedin": ["58294"], "meta": ["499565794547363"], "microsoft_uet": ["12002546"], "other:6sc.co": [], "other:6sense.com": [], "other:adnxs.com": [], "other:bing.com": [], "other:contentsquare.net": [], "other:doubleclick.net": [], "other:entfabric-sage.com": [], "other:on.aws": [], "other:openai.com": [], "other:optimizely.com": [], "other:quantserve.com": [], "other:segment.com": [], "other:segmentapis.com": [], "other:siteimproveanalytics.io": [], "other:sjv.io": [], "other:speedcurve.com": [], "other:zi-scripts.com": [], "quantcast": ["p-E6KY6asqFcmVm"], "sixsense": [], "tealium_collect": [], "tiktok": [], "zoominfo": ["654e77cd8ec2360c5a6693e1"]}}}, {"id": "CLID-01", "title": "gclid stored in _gcl_aw", "severity": "red", "result": "pass", "target": "de-preise", "detail": "_gcl_aw contains the test gclid", "evidence": {}}, {"id": "CLID-02", "title": "msclkid stored in _uetmsclkid", "severity": "red", "result": "pass", "target": "de-preise", "detail": "_uetmsclkid contains the test msclkid", "evidence": {}}, {"id": "CLID-03", "title": "fbclid stored in _fbc", "severity": "yellow", "result": "pass", "target": "de-preise", "detail": "_fbc contains the test fbclid", "evidence": {}}, {"id": "CLID-04", "title": "gclid passed on Floodlight / Google Ads hits", "severity": "red", "result": "pass", "target": "de-preise", "detail": "4/5 Google Ads/Floodlight hits carry the gclid", "evidence": {}}], "acks_applied": [], "red_since": "2026-11-14", "new_failures": ["CONV-01:ecom_buy|market", "CONV-01:ecom_try|market"]}, "AT": {"name": "Austria", "tealium_profile": "de-at", "rating": {"status": "yellow", "red_count": 0, "yellow_count": 1, "site_down": [], "blocked_pages": [], "coverage": "partial", "acknowledged_count": 0, "pages_checked": 1, "pages_configured": 18}, "status": "yellow", "source": "claude-browser", "baseline_confirmed": null, "utag": {"publish_version": "202610211149", "changed": false, "diff": {"changed": false, "first_snapshot": true, "items": [], "conversion_relevant": false}}, "pages": [{"id": "at-home", "url": "https://www.sage.com/de-at/", "type": "content"}, {"id": "at-produkte", "url": "https://www.sage.com/de-at/produkte/", "type": "product"}, {"id": "at-buchhaltung", "url": "https://www.sage.com/de-at/buchhaltung-software/", "type": "landing_page"}, {"id": "at-fakturierung", "url": "https://www.sage.com/de-at/buchhaltung-software/fakturierung/", "type": "landing_page"}, {"id": "at-rechnungen", "url": "https://www.sage.com/de-at/buchhaltung-software/rechnungen/", "type": "landing_page"}, {"id": "at-erp", "url": "https://www.sage.com/de-at/erp/", "type": "landing_page"}, {"id": "at-erp-cloud", "url": "https://www.sage.com/de-at/erp/cloud/", "type": "landing_page"}, {"id": "at-erp-klein", "url": "https://www.sage.com/de-at/erp/kleinunternehmen/", "type": "landing_page"}, {"id": "at-bms", "url": "https://www.sage.com/de-at/erp/business-management-software/", "type": "landing_page"}, {"id": "at-hr-software", "url": "https://www.sage.com/de-at/hr-software/", "type": "landing_page"}, {"id": "at-zeiterfassung", "url": "https://www.sage.com/de-at/hr-software/zeiterfassung/", "type": "landing_page"}, {"id": "at-lohnverrechnung", "url": "https://www.sage.com/de-at/lohnverrechnungssoftware/", "type": "landing_page"}, {"id": "at-lager", "url": "https://www.sage.com/de-at/lagerverwaltung/", "type": "landing_page"}, {"id": "at-crm", "url": "https://www.sage.com/de-at/crm-software/", "type": "landing_page"}, {"id": "at-produktion", "url": "https://www.sage.com/de-at/branchen/produktion/", "type": "landing_page"}, {"id": "at-handel", "url": "https://www.sage.com/de-at/branchen/handel/", "type": "landing_page"}, {"id": "at-kmu", "url": "https://www.sage.com/de-at/unternehmensgroessen/mittlere-unternehmen/", "type": "landing_page"}, {"id": "at-kontakt", "url": "https://www.sage.com/de-at/ueber-uns/kontakt/", "type": "form"}], "checks": [{"id": "TEAL-05", "title": "utag.js reachable on the Tealium CDN", "severity": "site_down", "result": "pass", "target": "market", "detail": "Publish 202610211149 (24 tags)", "evidence": {}}, {"id": "TEAL-04", "title": "Tealium publish detected (utag.js changed)", "severity": "info", "result": "pass", "target": "market", "detail": "No publish since the last run", "evidence": {}}, {"id": "PAGE-01", "title": "Page reachable (HTTP 2xx, no unexpected redirect)", "severity": "site_down", "result": "pass", "target": "at-produkte", "detail": "HTTP 200", "evidence": {}}, {"id": "PAGE-02", "title": "Page renders", "severity": "site_down", "result": "pass", "target": "at-produkte", "detail": "Software für kleine und mittlere Unternehmen | Sage Österreich", "evidence": {}}, {"id": "TEAL-01", "title": "Tealium utag.js loads", "severity": "site_down", "result": "pass", "target": "at-produkte", "detail": "ut4.53.202610211149", "evidence": {}}, {"id": "TEAL-02", "title": "Correct Tealium profile / environment", "severity": "red", "result": "pass", "target": "at-produkte", "detail": "sage/de-at/202610211149", "evidence": {}}, {"id": "TEAL-03", "title": "Tealium data layer populated", "severity": "yellow", "result": "pass", "target": "at-produkte", "detail": "133 data layer values", "evidence": {}}, {"id": "CONS-01", "title": "Consent banner shown on first visit", "severity": "red", "result": "pass", "target": "at-produkte", "detail": "Banner visible", "evidence": {}}, {"id": "CONS-02", "title": "No marketing tags or cookies before consent", "severity": "red", "result": "pass", "target": "at-produkte", "detail": "No marketing tags or cookies before consent", "evidence": {}}, {"id": "CONS-03", "title": "Google Consent Mode defaults to denied", "severity": "red", "result": "pass", "target": "at-produkte", "detail": "Consent Mode default denied (or no Google hits before consent)", "evidence": {}}, {"id": "CONS-04", "title": "Consent stored after 'Accept all'", "severity": "red", "result": "pass", "target": "at-produkte", "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1", "evidence": {}}, {"id": "TAG-BASELINE", "title": "Tag baseline for this page", "severity": "yellow", "result": "warn", "target": "at-produkte", "detail": "No confirmed baseline yet - tags recorded but not compared.", "evidence": {"seen": {"ga4": ["G-PE4Z9JJWVN"], "other:6sc.co": [], "other:6sense.com": [], "other:adnxs.com": [], "other:contentsquare.net": [], "other:siteimproveanalytics.io": [], "other:speedcurve.com": [], "other:zi-scripts.com": [], "sixsense": [], "zoominfo": ["654e77cd8ec2360c5a6693e1"]}}}], "acks_applied": [], "red_since": null, "new_failures": []}, "FR": {"name": "France", "tealium_profile": "fr-fr", "rating": {"status": "yellow", "red_count": 0, "yellow_count": 1, "site_down": [], "blocked_pages": [], "coverage": "partial", "acknowledged_count": 0, "pages_checked": 1, "pages_configured": 24}, "status": "yellow", "source": "claude-browser", "baseline_confirmed": null, "utag": {"publish_version": "202611051052", "changed": false, "diff": {"changed": false, "first_snapshot": true, "items": [], "conversion_relevant": false}}, "pages": [{"id": "fr-home", "url": "https://www.sage.com/fr-fr/", "type": "content"}, {"id": "fr-produits", "url": "https://www.sage.com/fr-fr/produits/", "type": "product"}, {"id": "fr-sage-50", "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/", "type": "product"}, {"id": "fr-sage-50-test", "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/", "type": "trial"}, {"id": "fr-sage-50-compta", "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-compta/", "type": "product"}, {"id": "fr-sage-50-gescom", "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-gestion-commerciale/", "type": "product"}, {"id": "fr-sage-active", "url": "https://www.sage.com/fr-fr/produits/sage-active/", "type": "product"}, {"id": "fr-sage-100", "url": "https://www.sage.com/fr-fr/produits/sage-100/", "type": "product"}, {"id": "fr-sage-100-compta", "url": "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/", "type": "product"}, {"id": "fr-sage-100-paie", "url": "https://www.sage.com/fr-fr/produits/sage-100-paie-rh/", "type": "product"}, {"id": "fr-frp-1000", "url": "https://www.sage.com/fr-fr/produits/sage-frp-1000/", "type": "product"}, {"id": "fr-intacct", "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/", "type": "product"}, {"id": "fr-x3", "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/", "type": "product"}, {"id": "fr-x3-demo", "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/demander-demonstration/", "type": "form"}, {"id": "fr-compta-facturation", "url": "https://www.sage.com/fr-fr/sage-business-cloud/compta-facturation/", "type": "product"}, {"id": "fr-comptabilite", "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/", "type": "landing_page"}, {"id": "fr-compta-test", "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/version-test-gratuit/", "type": "trial"}, {"id": "fr-compta-tpe", "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/tpe-petite-entreprise/", "type": "landing_page"}, {"id": "fr-facturation", "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/facturation/", "type": "landing_page"}, {"id": "fr-facture-electronique", "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/api-plateforme-agreee/", "type": "landing_page"}, {"id": "fr-paie", "url": "https://www.sage.com/fr-fr/paie-logiciels-gestion/", "type": "landing_page"}, {"id": "fr-erp", "url": "https://www.sage.com/fr-fr/erp-logiciels/", "type": "landing_page"}, {"id": "fr-experts-comptables", "url": "https://www.sage.com/fr-fr/experts-comptables/", "type": "landing_page"}, {"id": "fr-contact", "url": "https://www.sage.com/fr-fr/a-propos/contact/", "type": "form"}], "checks": [{"id": "TEAL-05", "title": "utag.js reachable on the Tealium CDN", "severity": "site_down", "result": "pass", "target": "market", "detail": "Publish 202611051052 (52 tags)", "evidence": {}}, {"id": "TEAL-04", "title": "Tealium publish detected (utag.js changed)", "severity": "info", "result": "pass", "target": "market", "detail": "No publish since the last run", "evidence": {}}, {"id": "PAGE-01", "title": "Page reachable (HTTP 2xx, no unexpected redirect)", "severity": "site_down", "result": "pass", "target": "fr-sage-50", "detail": "HTTP 200", "evidence": {}}, {"id": "PAGE-02", "title": "Page renders", "severity": "site_down", "result": "pass", "target": "fr-sage-50", "detail": "Sage 50 - Comptabilité et Gestion commerciale | Sage France", "evidence": {}}, {"id": "TEAL-01", "title": "Tealium utag.js loads", "severity": "site_down", "result": "pass", "target": "fr-sage-50", "detail": "ut4.53.202611051052", "evidence": {}}, {"id": "TEAL-02", "title": "Correct Tealium profile / environment", "severity": "red", "result": "pass", "target": "fr-sage-50", "detail": "sage/fr-fr/202611051052", "evidence": {}}, {"id": "TEAL-03", "title": "Tealium data layer populated", "severity": "yellow", "result": "pass", "target": "fr-sage-50", "detail": "136 data layer values", "evidence": {}}, {"id": "CONS-01", "title": "Consent banner shown on first visit", "severity": "red", "result": "pass", "target": "fr-sage-50", "detail": "Banner visible", "evidence": {}}, {"id": "CONS-02", "title": "No marketing tags or cookies before consent", "severity": "red", "result": "pass", "target": "fr-sage-50", "detail": "No marketing tags or cookies before consent", "evidence": {}}, {"id": "CONS-03", "title": "Google Consent Mode defaults to denied", "severity": "red", "result": "pass", "target": "fr-sage-50", "detail": "Consent Mode default denied (or no Google hits before consent)", "evidence": {}}, {"id": "CONS-04", "title": "Consent stored after 'Accept all'", "severity": "red", "result": "pass", "target": "fr-sage-50", "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1", "evidence": {}}, {"id": "TAG-BASELINE", "title": "Tag baseline for this page", "severity": "yellow", "result": "warn", "target": "fr-sage-50", "detail": "No confirmed baseline yet - tags recorded but not compared.", "evidence": {"seen": {"floodlight": ["5201003"], "ga4": ["G-PE4Z9JJWVN"], "google_ads": ["990362824"], "linkedin": ["58294"], "meta": ["499565794547363"], "other:6sc.co": [], "other:6sense.com": [], "other:adnxs.com": [], "other:capterra.com": [], "other:contentsquare.net": [], "other:doubleclick.net": [], "other:mypurecloud.ie": [], "other:on.aws": [], "other:openai.com": [], "other:optimizely.com": [], "other:presage.io": [], "other:pxf.io": [], "other:quantserve.com": [], "other:reddit.com": [], "other:segment.com": [], "other:segmentapis.com": [], "other:siteimproveanalytics.io": [], "other:smilewanted.com": [], "other:speedcurve.com": [], "other:zi-scripts.com": [], "outbrain": ["63878"], "quantcast": ["p-E6KY6asqFcmVm"], "reddit": ["a2_jcwvn8khk1j0"], "sixsense": [], "tealium_collect": [], "tiktok": [], "zoominfo": ["654e77cd8ec2360c5a6693e1"]}}}, {"id": "CLID-01", "title": "gclid stored in _gcl_aw", "severity": "red", "result": "pass", "target": "fr-sage-50", "detail": "_gcl_aw contains the test gclid", "evidence": {}}, {"id": "CLID-03", "title": "fbclid stored in _fbc", "severity": "yellow", "result": "pass", "target": "fr-sage-50", "detail": "_fbc contains the test fbclid", "evidence": {}}, {"id": "CLID-04", "title": "gclid passed on Floodlight / Google Ads hits", "severity": "red", "result": "pass", "target": "fr-sage-50", "detail": "4/5 Google Ads/Floodlight hits carry the gclid", "evidence": {}}], "acks_applied": [], "red_since": null, "new_failures": []}, "ES": {"name": "Spain", "tealium_profile": "es-es", "rating": {"status": "yellow", "red_count": 0, "yellow_count": 1, "site_down": [], "blocked_pages": [], "coverage": "partial", "acknowledged_count": 0, "pages_checked": 1, "pages_configured": 22}, "status": "yellow", "source": "claude-browser", "baseline_confirmed": null, "utag": {"publish_version": "202611051016", "changed": false, "diff": {"changed": false, "first_snapshot": true, "items": [], "conversion_relevant": false}}, "pages": [{"id": "es-home", "url": "https://www.sage.com/es-es/", "type": "content"}, {"id": "es-productos", "url": "https://www.sage.com/es-es/productos/", "type": "product"}, {"id": "es-sage-50", "url": "https://www.sage.com/es-es/productos/sage-50cloud/", "type": "product"}, {"id": "es-sage-50-precios", "url": "https://www.sage.com/es-es/productos/sage-50cloud/precios/", "type": "pricing"}, {"id": "es-sage-200", "url": "https://www.sage.com/es-es/productos/sage-200/", "type": "product"}, {"id": "es-sage-200-laboral", "url": "https://www.sage.com/es-es/productos/sage-200-cloud-laboral/", "type": "product"}, {"id": "es-contaplus", "url": "https://www.sage.com/es-es/productos/sage-contaplus/", "type": "product"}, {"id": "es-nominaplus", "url": "https://www.sage.com/es-es/productos/sage-nominaplus/", "type": "product"}, {"id": "es-control-horario", "url": "https://www.sage.com/es-es/productos/sage-control-horario/", "type": "product"}, {"id": "es-sales-mgmt", "url": "https://www.sage.com/es-es/productos/sage-sales-management/", "type": "product"}, {"id": "es-sales-mgmt-precios", "url": "https://www.sage.com/es-es/productos/sage-sales-management/precios/", "type": "pricing"}, {"id": "es-tpv-online", "url": "https://www.sage.com/es-es/productos/sage-tpv-online/", "type": "product"}, {"id": "es-x3", "url": "https://www.sage.com/es-es/sage-business-cloud/sage-x3/", "type": "product"}, {"id": "es-hr", "url": "https://www.sage.com/es-es/sage-business-cloud/hr/", "type": "product"}, {"id": "es-contabilidad", "url": "https://www.sage.com/es-es/software-contabilidad/", "type": "landing_page"}, {"id": "es-contabilidad-online", "url": "https://www.sage.com/es-es/software-contabilidad/online/", "type": "landing_page"}, {"id": "es-factura-electronica", "url": "https://www.sage.com/es-es/software-contabilidad/factura-electronica/", "type": "landing_page"}, {"id": "es-verifactu", "url": "https://www.sage.com/es-es/certificacion-software/sistema-verifactu/", "type": "landing_page"}, {"id": "es-nominas", "url": "https://www.sage.com/es-es/nominas-software/", "type": "landing_page"}, {"id": "es-erp", "url": "https://www.sage.com/es-es/erp/", "type": "landing_page"}, {"id": "es-asesorias", "url": "https://www.sage.com/es-es/asesorias-y-despachos/", "type": "landing_page"}, {"id": "es-contacto", "url": "https://www.sage.com/es-es/sobre-sage/contacto/", "type": "form"}], "checks": [{"id": "TEAL-05", "title": "utag.js reachable on the Tealium CDN", "severity": "site_down", "result": "pass", "target": "market", "detail": "Publish 202611051016 (42 tags)", "evidence": {}}, {"id": "TEAL-04", "title": "Tealium publish detected (utag.js changed)", "severity": "info", "result": "pass", "target": "market", "detail": "No publish since the last run", "evidence": {}}, {"id": "PAGE-01", "title": "Page reachable (HTTP 2xx, no unexpected redirect)", "severity": "site_down", "result": "pass", "target": "es-sage-50", "detail": "HTTP 200", "evidence": {}}, {"id": "PAGE-02", "title": "Page renders", "severity": "site_down", "result": "pass", "target": "es-sage-50", "detail": "Sage 50 - Contabilidad y gestión para negocios | Sage España", "evidence": {}}, {"id": "TEAL-01", "title": "Tealium utag.js loads", "severity": "site_down", "result": "pass", "target": "es-sage-50", "detail": "ut4.53.202611051016", "evidence": {}}, {"id": "TEAL-02", "title": "Correct Tealium profile / environment", "severity": "red", "result": "pass", "target": "es-sage-50", "detail": "sage/es-es/202611051016", "evidence": {}}, {"id": "TEAL-03", "title": "Tealium data layer populated", "severity": "yellow", "result": "pass", "target": "es-sage-50", "detail": "145 data layer values", "evidence": {}}, {"id": "CONS-01", "title": "Consent banner shown on first visit", "severity": "red", "result": "pass", "target": "es-sage-50", "detail": "Banner visible", "evidence": {}}, {"id": "CONS-02", "title": "No marketing tags or cookies before consent", "severity": "red", "result": "pass", "target": "es-sage-50", "detail": "No marketing tags or cookies before consent", "evidence": {}}, {"id": "CONS-03", "title": "Google Consent Mode defaults to denied", "severity": "red", "result": "pass", "target": "es-sage-50", "detail": "Consent Mode default denied (or no Google hits before consent)", "evidence": {}}, {"id": "CONS-04", "title": "Consent stored after 'Accept all'", "severity": "red", "result": "pass", "target": "es-sage-50", "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1", "evidence": {}}, {"id": "TAG-BASELINE", "title": "Tag baseline for this page", "severity": "yellow", "result": "warn", "target": "es-sage-50", "detail": "No confirmed baseline yet - tags recorded but not compared.", "evidence": {"seen": {"floodlight": ["5201701"], "ga4": ["G-PE4Z9JJWVN"], "google_ads": ["956094480"], "linkedin": ["58294"], "meta": ["499565794547363"], "other:6sc.co": [], "other:6sense.com": [], "other:adnxs.com": [], "other:contentsquare.net": [], "other:doubleclick.net": [], "other:entfabric-sage.com": [], "other:mypurecloud.ie": [], "other:on.aws": [], "other:openai.com": [], "other:optimizely.com": [], "other:pxf.io": [], "other:quantserve.com": [], "other:siteimproveanalytics.io": [], "other:speedcurve.com": [], "other:zi-scripts.com": [], "quantcast": ["p-E6KY6asqFcmVm"], "sixsense": [], "tealium_collect": [], "zoominfo": ["654e77cd8ec2360c5a6693e1"]}}}, {"id": "CLID-01", "title": "gclid stored in _gcl_aw", "severity": "red", "result": "pass", "target": "es-sage-50", "detail": "_gcl_aw contains the test gclid", "evidence": {}}, {"id": "CLID-03", "title": "fbclid stored in _fbc", "severity": "yellow", "result": "pass", "target": "es-sage-50", "detail": "_fbc contains the test fbclid", "evidence": {}}, {"id": "CLID-04", "title": "gclid passed on Floodlight / Google Ads hits", "severity": "red", "result": "pass", "target": "es-sage-50", "detail": "4/5 Google Ads/Floodlight hits carry the gclid", "evidence": {}}], "acks_applied": [], "red_since": null, "new_failures": []}, "PT": {"name": "Portugal", "tealium_profile": "pt-pt", "rating": {"status": "yellow", "red_count": 0, "yellow_count": 1, "site_down": [], "blocked_pages": [], "coverage": "partial", "acknowledged_count": 0, "pages_checked": 1, "pages_configured": 20}, "status": "yellow", "source": "claude-browser", "baseline_confirmed": null, "utag": {"publish_version": "202611050958", "changed": false, "diff": {"changed": false, "first_snapshot": true, "items": [], "conversion_relevant": false}}, "pages": [{"id": "pt-home", "url": "https://www.sage.com/pt-pt/", "type": "content"}, {"id": "pt-produtos", "url": "https://www.sage.com/pt-pt/produtos/", "type": "product"}, {"id": "pt-sage-50", "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/", "type": "product"}, {"id": "pt-sage-50-preco", "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/preco/", "type": "pricing"}, {"id": "pt-sage-50-contab", "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud-contabilidade/", "type": "product"}, {"id": "pt-sage-50-salarios", "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud-salarios/", "type": "product"}, {"id": "pt-sage-100", "url": "https://www.sage.com/pt-pt/produtos/sage-100cloud/", "type": "product"}, {"id": "pt-sage-one", "url": "https://www.sage.com/pt-pt/produtos/sage-one/", "type": "product"}, {"id": "pt-sage-one-fat", "url": "https://www.sage.com/pt-pt/produtos/sage-one/software-de-facturacao-online/", "type": "product"}, {"id": "pt-sage-for-accountants", "url": "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/", "type": "product"}, {"id": "pt-sfa-preco", "url": "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/preco/", "type": "pricing"}, {"id": "pt-x3", "url": "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/", "type": "product"}, {"id": "pt-hr", "url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/", "type": "product"}, {"id": "pt-faturacao", "url": "https://www.sage.com/pt-pt/software-faturacao/", "type": "landing_page"}, {"id": "pt-faturacao-cloud", "url": "https://www.sage.com/pt-pt/software-faturacao/cloud/", "type": "landing_page"}, {"id": "pt-faturacao-pme", "url": "https://www.sage.com/pt-pt/software-faturacao/pequenas-empresas/", "type": "landing_page"}, {"id": "pt-erp", "url": "https://www.sage.com/pt-pt/erp/", "type": "landing_page"}, {"id": "pt-tesouraria", "url": "https://www.sage.com/pt-pt/software-tesouraria/", "type": "landing_page"}, {"id": "pt-contabilistas", "url": "https://www.sage.com/pt-pt/contabilistas/", "type": "landing_page"}, {"id": "pt-contactos", "url": "https://www.sage.com/pt-pt/sobre-nos/contactos/", "type": "form"}], "checks": [{"id": "TEAL-05", "title": "utag.js reachable on the Tealium CDN", "severity": "site_down", "result": "pass", "target": "market", "detail": "Publish 202611050958 (38 tags)", "evidence": {}}, {"id": "TEAL-04", "title": "Tealium publish detected (utag.js changed)", "severity": "info", "result": "pass", "target": "market", "detail": "No publish since the last run", "evidence": {}}, {"id": "PAGE-01", "title": "Page reachable (HTTP 2xx, no unexpected redirect)", "severity": "site_down", "result": "pass", "target": "pt-sage-50", "detail": "HTTP 200", "evidence": {}}, {"id": "PAGE-02", "title": "Page renders", "severity": "site_down", "result": "pass", "target": "pt-sage-50", "detail": "Sage 50 | Sage PT", "evidence": {}}, {"id": "TEAL-01", "title": "Tealium utag.js loads", "severity": "site_down", "result": "pass", "target": "pt-sage-50", "detail": "ut4.53.202611050958", "evidence": {}}, {"id": "TEAL-02", "title": "Correct Tealium profile / environment", "severity": "red", "result": "pass", "target": "pt-sage-50", "detail": "sage/pt-pt/202611050958", "evidence": {}}, {"id": "TEAL-03", "title": "Tealium data layer populated", "severity": "yellow", "result": "pass", "target": "pt-sage-50", "detail": "141 data layer values", "evidence": {}}, {"id": "CONS-01", "title": "Consent banner shown on first visit", "severity": "red", "result": "pass", "target": "pt-sage-50", "detail": "Banner visible", "evidence": {}}, {"id": "CONS-02", "title": "No marketing tags or cookies before consent", "severity": "red", "result": "pass", "target": "pt-sage-50", "detail": "No marketing tags or cookies before consent", "evidence": {}}, {"id": "CONS-03", "title": "Google Consent Mode defaults to denied", "severity": "red", "result": "pass", "target": "pt-sage-50", "detail": "Consent Mode default denied (or no Google hits before consent)", "evidence": {}}, {"id": "CONS-04", "title": "Consent stored after 'Accept all'", "severity": "red", "result": "pass", "target": "pt-sage-50", "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1", "evidence": {}}, {"id": "TAG-BASELINE", "title": "Tag baseline for this page", "severity": "yellow", "result": "warn", "target": "pt-sage-50", "detail": "No confirmed baseline yet - tags recorded but not compared.", "evidence": {"seen": {"ga4": ["G-PE4Z9JJWVN"], "google_ads": ["956094480"], "linkedin": ["58294"], "meta": ["499565794547363"], "other:6sc.co": [], "other:6sense.com": [], "other:adnxs.com": [], "other:contentsquare.net": [], "other:doubleclick.net": [], "other:entfabric-sage.com": [], "other:on.aws": [], "other:optimizely.com": [], "other:pxf.io": [], "other:quantserve.com": [], "other:siteimproveanalytics.io": [], "other:speedcurve.com": [], "other:zi-scripts.com": [], "sixsense": [], "tealium_collect": [], "zoominfo": ["654e77cd8ec2360c5a6693e1"]}}}, {"id": "CLID-01", "title": "gclid stored in _gcl_aw", "severity": "red", "result": "pass", "target": "pt-sage-50", "detail": "_gcl_aw contains the test gclid", "evidence": {}}, {"id": "CLID-03", "title": "fbclid stored in _fbc", "severity": "yellow", "result": "pass", "target": "pt-sage-50", "detail": "_fbc contains the test fbclid", "evidence": {}}, {"id": "CLID-04", "title": "gclid passed on Floodlight / Google Ads hits", "severity": "red", "result": "pass", "target": "pt-sage-50", "detail": "2/2 Google Ads/Floodlight hits carry the gclid", "evidence": {}}], "acks_applied": [], "red_since": null, "new_failures": []}}}, "diagnosis": {"day": "2026-11-14", "written_by": "Claude (first run, interim mode)", "summary": "DE is red: the Floodlight form-submit tag (98, sageg0/dynam00) no longer fires for the ecom trial and buy checkout. Since the Tealium publish of 2026-08-24 it requires ga4_customer_lead_type, which Tealium only derives from gate_content_name - and the checkout never sends that. Gated Sitecore forms still fire tag 98.\nAT, FR, ES and PT are yellow only because their tag baselines are still waiting for confirmation. Consent works in all five markets: no marketing tags or cookies before consent, all tags and click IDs (gclid, msclkid, fbclid) after 'Accept all'.\nCoverage today: one marked sample page per market, checked in the Claude browser. The automated daily run will cover all configured pages once sage.com allowlists the monitor.", "markets": {"DE": {"summary": "Paid traffic is measured correctly on the page level (Floodlight DC-5195550, Google Ads AW-970123043, GA4, Microsoft UET 12002546; gclid and msclkid stored). The problem is conversions: ecom trial and buy submits do not load Floodlight tag 98.", "findings": {"CONV-01:ecom_try|market": "Tag 98's load rule is (action = form_submit_success OR sitecore form) AND rule 274 (ga4_customer_lead_type is set). ga4_customer_lead_type is derived only from gate_content_name codes (_TRL_, _CON_ ...); the Next.js checkout sends customer_lead_type=ecom_try without gate_content_name. Before the publish of 2026-08-24 the tag fired (verified against the archived utag.js from 2026-07-13). Owner: MarTech (Tealium). Fix: remove rule 274 from tag 98, or derive ga4_customer_lead_type from customer_lead_type for ecom events.", "CONV-01:ecom_buy|market": "Same cause as ecom_try: rule 274 on tag 98 blocks ecom purchase submits."}}, "AT": {"summary": "Consent, GA4 and the Conversion Linker work. Note for review: on the sample page no Floodlight, Google Ads, UET, Meta or LinkedIn hits fired after consent, and the AT Tealium profile limits its Floodlight (352, 353) and Google Ads (201) tags to en-ZA style profiles/languages. If AT runs paid search, check with MarTech how conversions are tracked."}, "FR": {"summary": "All page-level tags fire (Floodlight DC-5201003, Google Ads AW-990362824, GA4, LinkedIn, Meta, TikTok, Reddit). Gated forms fire Floodlight 129. Note: tag 129 has the same ga4_customer_lead_type condition as DE tag 98, so an ecom checkout in FR would not fire it either - confirm whether FR uses the ecom checkout."}, "ES": {"summary": "All page-level tags fire (Floodlight DC-5201701, Google Ads AW-956094480, GA4, LinkedIn). Gated forms fire Floodlight 36; ecom submits only fire Google Ads tag 203."}, "PT": {"summary": "Page-level tags fire (Google Ads AW-956094480, GA4, LinkedIn, Meta config). No Floodlight pageview was seen within 8 seconds on the sample page - recheck once full runs are possible. Gated forms fire Floodlight 402; ecom submits only fire tag 223."}}, "publish": {}}, "history": {"days": {"2026-11-14": {"_global": {"status": "red", "incidents": 0}, "DE": {"status": "red", "red": 2, "yellow": 1, "site_down": 0, "coverage": "partial", "publish": false}, "AT": {"status": "yellow", "red": 0, "yellow": 1, "site_down": 0, "coverage": "partial", "publish": false}, "FR": {"status": "yellow", "red": 0, "yellow": 1, "site_down": 0, "coverage": "partial", "publish": false}, "ES": {"status": "yellow", "red": 0, "yellow": 1, "site_down": 0, "coverage": "partial", "publish": false}, "PT": {"status": "yellow", "red": 0, "yellow": 1, "site_down": 0, "coverage": "partial", "publish": false}}}}, "acks_file": []};
+  const R = P.results, D = P.diagnosis || {}, H = P.history || {days: {}};
+  const MARKETS = Object.keys(R.markets);
+  const ORDER = {green: 0, yellow: 1, red: 2};
+  let liveAcks = [];          // from the artifact database
+  let db = null, user = null, myId = null, names = {}, canWrite = false;
+  let selected = (location.hash || "").replace("#", "").toUpperCase();
+  if (!MARKETS.includes(selected)) selected = MARKETS.slice().sort((a, b) => ORDER[R.markets[b].status] - ORDER[R.markets[a].status])[0];
+  let openAckFor = null;
+
+  const el = (tag, attrs, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (v === null || v === undefined || v === false) continue;
+      if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+      else if (k === "text") n.textContent = v; else n.setAttribute(k, v === true ? "" : v);
+    }
+    for (const kid of kids.flat()) if (kid !== null && kid !== undefined && kid !== false) n.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+    return n;
+  };
+  const fmtDay = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {weekday: "short", day: "numeric", month: "short", year: "numeric"});
+  const baseId = id => id.split(":")[0];
+  const keyOf = (m, c) => m + "|" + c.id + "|" + c.target;
+
+  // --- acknowledgements --------------------------------------------------------------
+  function allAcks() {
+    return (P.acks_file || []).map(a => Object.assign({source: "file"}, a)).concat(liveAcks);
+  }
+  function ackFor(market, c) {
+    const today = R.day;
+    return allAcks().find(a =>
+      (!a.expires || a.expires >= today) &&
+      (a.market === market || a.market === "*") &&
+      (a.check === c.id || a.check === baseId(c.id) || a.check === "*") &&
+      (!a.target || a.target === "*" || a.target === c.target || a.target === c.target.split("#")[0]));
+  }
+  function rate(market) {
+    const m = R.markets[market];
+    const active = m.checks.filter(c => (c.result === "fail" || c.result === "warn") && !ackFor(market, c));
+    const red = active.filter(c => c.severity === "red" && c.result === "fail");
+    const yellow = active.filter(c => c.severity === "yellow" || (c.severity === "red" && c.result === "warn"));
+    const down = new Set(active.filter(c => c.severity === "site_down" && c.result === "fail").map(c => c.target));
+    return {status: red.length ? "red" : yellow.length ? "yellow" : "green", red: red.length, yellow: yellow.length,
+            down: down.size, coverage: m.rating.coverage, blocked: m.rating.blocked_pages.length};
+  }
+  function globalStatus() {
+    const failing = {};
+    for (const code of MARKETS) for (const c of R.markets[code].checks) {
+      if (c.result !== "fail" || !["red", "site_down"].includes(c.severity) || ackFor(code, c)) continue;
+      const k = c.id.startsWith("TAG:") ? c.id : baseId(c.id);
+      (failing[k] = failing[k] || new Set()).add(code);
+    }
+    const incidents = Object.entries(failing).filter(([, s]) => s.size >= 3).map(([k, s]) => ({check: k, markets: [...s].sort()}));
+    const worst = MARKETS.map(rate).reduce((w, r) => ORDER[r.status] > ORDER[w] ? r.status : w, "green");
+    return {status: incidents.length ? "red" : worst, incidents};
+  }
+
+  // --- rendering -----------------------------------------------------------------------
+  function pill(status, label, big) {
+    const cls = {green: "s-green", yellow: "s-yellow", red: "s-red"}[status] || "s-sys";
+    return el("span", {class: "pill " + cls + (big ? " big-pill" : "")}, label || status);
+  }
+
+  function renderHeader() {
+    const g = globalStatus();
+    const meta = document.getElementById("meta");
+    meta.replaceChildren(
+      el("span", {}, "Run ", el("b", {}, fmtDay(R.day))),
+      el("span", {}, "Generated " + R.generated_at.replace("T", " ").replace("Z", " UTC")),
+      pill(g.status, "Overall " + g.status, true));
+    const notes = document.getElementById("notices");
+    notes.replaceChildren();
+    for (const inc of g.incidents) {
+      notes.append(el("div", {class: "notice crit"}, el("b", {}, "Global incident: " + inc.check + " fails in " + inc.markets.join(", ")),
+        el("p", {}, "The same check fails in several markets at once. Look for a shared cause first: shared Tealium extension or template, OneTrust configuration, or a vendor outage.")));
+    }
+    if (R.global.system_notice) notes.append(el("div", {class: "notice"}, el("b", {}, "Coverage"), el("p", {}, R.global.system_notice)));
+    if (MODE === "artifact" && db === null && window.__dbTried) notes.append(el("div", {class: "notice"}, el("p", {}, "Acknowledgements are read-only in this view.")));
+    const sum = document.getElementById("summary");
+    sum.replaceChildren();
+    if (D.summary) sum.append(el("div", {class: "summary"}, el("div", {class: "eyebrow"}, "Today in brief"), ...D.summary.split(/\n+/).map(t => el("p", {}, t))));
+  }
+
+  function renderTiles() {
+    const box = document.getElementById("tiles");
+    box.replaceChildren(...MARKETS.map(code => {
+      const m = R.markets[code], r = rate(code);
+      const tags = [];
+      if (r.down) tags.push(el("span", {class: "tag"}, r.down + " site down"));
+      if (r.coverage === "tealium_only") tags.push(el("span", {class: "tag"}, "Tealium checks only"));
+      else if (r.coverage === "partial") tags.push(el("span", {class: "tag"}, m.rating.pages_checked + "/" + m.rating.pages_configured + " pages checked"));
+      if (m.utag.changed) tags.push(el("span", {class: "tag"}, "new publish"));
+      if (!m.baseline_confirmed) tags.push(el("span", {class: "tag"}, "baseline pending"));
+      return el("button", {class: "tile " + r.status, "aria-pressed": String(code === selected), onclick: () => { selected = code; history.replaceState(null, "", "#" + code); renderAll(); }},
+        el("div", {class: "row"}, el("span", {class: "code"}, code), pill(r.status)),
+        el("div", {class: "muted"}, m.name + " · " + m.tealium_profile + (m.utag.publish_version ? " · publish " + m.utag.publish_version : "")),
+        el("div", {class: "counts"}, el("span", {}, el("b", {}, r.red), " red"), el("span", {}, el("b", {}, r.yellow), " yellow"),
+          m.red_since ? el("span", {}, "red since ", el("b", {}, m.red_since)) : null),
+        tags.length ? el("div", {class: "tags"}, tags) : null);
+    }));
+  }
+
+  function findingNode(code, c) {
+    const ack = ackFor(code, c);
+    const sev = c.severity;
+    const sevLabel = {red: "red", yellow: "yellow", site_down: "site down", info: "info", system: "system"}[sev] || sev;
+    const diag = ((D.markets || {})[code] || {}).findings || {};
+    const dtext = diag[c.id + "|" + c.target] || diag[c.id];
+    const node = el("div", {class: "finding " + sev + (ack ? " acked" : "")},
+      el("div", {class: "line1"},
+        pill(sev === "site_down" ? "down" : sev === "system" || sev === "info" ? "sys" : sev, sevLabel),
+        el("span", {class: "title"}, c.title),
+        el("span", {class: "mono muted"}, c.id + " · " + c.target)),
+      el("p", {class: "detail"}, c.detail),
+      dtext ? el("p", {class: "diag"}, dtext) : null);
+    if (c.evidence && Object.keys(c.evidence).length) {
+      node.append(el("details", {}, el("summary", {}, "Evidence"), el("pre", {class: "ev"}, JSON.stringify(c.evidence, null, 1))));
+    }
+    const actions = el("div", {class: "actions"});
+    if (ack) {
+      const who = ack.by ? (names[ack.by] || (ack.source === "file" ? ack.by : "Someone")) : "Someone";
+      actions.append(el("span", {class: "muted"}, "Acknowledged by " + who + (ack.note ? ": " + ack.note : "") + (ack.expires ? " (until " + ack.expires + ")" : " (until fixed)")));
+      if (db && canWrite && ack._id) actions.append(el("button", {class: "btn", onclick: () => withdraw(ack._id)}, "Withdraw"));
+    } else if (db && canWrite && c.result !== "pass") {
+      actions.append(el("button", {class: "btn", onclick: () => { openAckFor = keyOf(code, c); renderMarket(); }}, "Acknowledge"));
+    }
+    if (actions.childNodes.length) node.append(actions);
+    if (openAckFor === keyOf(code, c) && !ack) node.append(ackForm(code, c));
+    return node;
+  }
+
+  function ackForm(code, c) {
+    const id = "ack-" + code + "-" + c.id.replace(/[^a-z0-9]/gi, "_") + "-" + c.target.replace(/[^a-z0-9]/gi, "_");
+    const note = el("input", {id: id + "-note", type: "text", maxlength: "200", placeholder: "e.g. MarTech ticket raised"});
+    const exp = el("select", {id: id + "-exp"}, el("option", {value: ""}, "Until fixed"), el("option", {value: "7"}, "7 days"), el("option", {value: "30"}, "30 days"));
+    const scope = el("select", {id: id + "-scope"}, el("option", {value: "one"}, "This page only (" + c.target + ")"), el("option", {value: "all"}, "All pages in " + code));
+    const status = el("span", {class: "muted", role: "status"});
+    const form = el("form", {class: "ackform", onsubmit: async e => {
+      e.preventDefault();
+      const days = exp.value ? parseInt(exp.value, 10) : null;
+      const expires = days ? new Date(Date.now() + days * 864e5).toISOString().slice(0, 10) : null;
+      status.textContent = "Saving…";
+      try {
+        await db.collection("acks").add({market: code, check: c.id, target: scope.value === "all" ? "*" : c.target,
+          note: note.value.trim(), expires, created: new Date().toISOString(), by: myId || null, day: R.day});
+        openAckFor = null;
+      } catch (err) { status.textContent = "Could not save: " + (err && err.message || "unknown error"); }
+    }},
+      el("label", {for: note.id}, "Note (who is on it, ticket number)", note),
+      el("label", {for: exp.id}, "Mute for", exp),
+      el("label", {for: scope.id}, "Applies to", scope),
+      el("div", {class: "actions"}, el("button", {class: "btn primary", type: "submit"}, "Acknowledge"),
+        el("button", {class: "btn", type: "button", onclick: () => { openAckFor = null; renderMarket(); }}, "Cancel"), status));
+    return form;
+  }
+
+  async function withdraw(docId) {
+    try { await db.collection("acks").doc(docId).delete(); } catch (e) { /* the snapshot keeps the true state */ }
+  }
+
+  function renderMarket() {
+    const code = selected, m = R.markets[code], r = rate(code);
+    const box = document.getElementById("market");
+    const issues = m.checks.filter(c => c.result === "fail" || (c.result === "warn" && c.severity !== "info"));
+    const infos = m.checks.filter(c => c.result === "warn" && c.severity === "info");
+    const prio = {red: 0, site_down: 1, system: 2, yellow: 3, info: 4};
+    issues.sort((a, b) => (!!ackFor(code, a) - !!ackFor(code, b)) || (prio[a.severity] - prio[b.severity]));
+    const passed = m.checks.filter(c => c.result === "pass").length;
+    const mdiag = ((D.markets || {})[code] || {}).summary;
+    box.replaceChildren(...[
+      el("div", {class: "panel-head"}, el("h2", {}, m.name + " (" + code + ")"), pill(r.status, r.status, true)),
+      mdiag ? el("p", {class: "diag"}, mdiag) : null,
+      el("div", {class: "muted"}, issues.length + " finding(s) · " + passed + " checks passed · source: " +
+        ({playwright: "automated browser", "claude-browser": "Claude browser run", none: "Tealium CDN only"}[m.source] || m.source)),
+      issues.length ? el("div", {class: "findings"}, issues.map(c => findingNode(code, c))) : el("p", {}, "No findings. Everything checked is working."),
+      infos.length ? el("details", {}, el("summary", {}, infos.length + " informational note(s)"), el("div", {class: "findings"}, infos.map(c => findingNode(code, c)))) : null,
+      pagesMatrix(code)].filter(Boolean));
+  }
+
+  function pagesMatrix(code) {
+    const m = R.markets[code];
+    const groups = [["PAGE", "Page"], ["TEAL", "Tealium"], ["CONS", "Consent"], ["TAG", "Tags"], ["CLID", "Click IDs"]];
+    const byTarget = {};
+    for (const c of m.checks) (byTarget[c.target] = byTarget[c.target] || []).push(c);
+    const rows = m.pages.filter(p => byTarget[p.id]).map(p => {
+      const cs = byTarget[p.id];
+      const blocked = cs.some(c => c.id === "BOT-01");
+      return el("tr", {}, el("td", {}, el("div", {class: "mono"}, p.id), el("a", {href: p.url, target: "_blank", rel: "noopener", class: "muted"}, p.url.replace("https://www.sage.com", ""))),
+        groups.map(([g, label]) => {
+          const mine = cs.filter(c => baseId(c.id) === g || baseId(c.id).startsWith(g + "-") || (g === "TAG" && c.id.startsWith("TAG")));
+          let cls = "", tip = label + ": not run";
+          if (blocked) { cls = "blocked"; tip = "Blocked by bot protection"; }
+          else if (mine.length) {
+            const bad = mine.filter(c => c.result === "fail" || (c.result === "warn" && c.severity !== "info"));
+            const open = bad.filter(c => !ackFor(code, c));
+            if (!bad.length) { cls = "pass"; tip = label + ": all passed"; }
+            else if (!open.length) { cls = "acked"; tip = label + ": acknowledged"; }
+            else { const w = open.find(c => c.severity === "red") || open.find(c => c.severity === "site_down") || open[0];
+                   cls = w.result === "warn" ? "warn" : "fail-" + w.severity; tip = label + ": " + w.detail; }
+          }
+          return el("td", {class: "cell"}, el("span", {class: "dot " + cls, title: tip, "aria-label": tip}));
+        }));
+    });
+    if (!rows.length) return el("p", {class: "muted"}, "No page-level results for this run (only Tealium CDN and load-rule checks).");
+    return el("div", {}, el("h3", {}, "Pages"),
+      el("div", {class: "scroll"}, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "Page"), groups.map(([, l]) => el("th", {}, l)))), el("tbody", {}, rows))),
+      el("div", {class: "legend"}, ...[["pass", "passed"], ["fail-red", "red"], ["warn", "yellow"], ["fail-site_down", "site down"], ["blocked", "blocked"], ["acked", "acknowledged"]]
+        .map(([c, l]) => el("span", {}, el("i", {class: "dot " + c}), l))));
+  }
+
+  function renderPublish() {
+    const box = document.getElementById("publish");
+    const changed = MARKETS.filter(c => R.markets[c].utag.changed);
+    const head = el("div", {class: "panel-head"}, el("h2", {}, "Tealium publishes"), el("span", {class: "muted"}, changed.length ? changed.length + " profile(s) changed since the last run" : "No publish since the last run"));
+    const parts = [head];
+    for (const code of changed) {
+      const d = R.markets[code].utag.diff || {};
+      const ai = ((D.publish || {})[code]) || null;
+      parts.push(el("div", {}, el("h3", {}, code + " · " + R.markets[code].tealium_profile + " · " + (d.from_version || "?") + " → " + (d.to_version || "?")),
+        ai ? el("p", {class: "diag"}, (ai.risk ? "Risk " + ai.risk + ". " : "") + ai.summary) : null,
+        el("details", {}, el("summary", {}, (d.items || []).length + " change(s), " + (d.items || []).filter(i => i.conversion_relevant).length + " conversion-relevant"),
+          ...(d.items || []).map(i => el("div", {class: "diffitem"},
+            el("div", {}, el("b", {}, i.kind.replace(/_/g, " ")), " ", el("span", {class: "mono"}, i.tag ? "tag " + i.tag + (i.template ? " (template " + i.template + ")" : "") : "rule " + i.rule),
+              i.conversion_relevant ? el("span", {class: "pill s-yellow", style: "margin-left:8px"}, "conversion") : null),
+            i.before ? el("code", {}, "before: " + (typeof i.before === "string" ? i.before : JSON.stringify(i.before))) : null,
+            i.after ? el("code", {}, "after: " + (typeof i.after === "string" ? i.after : JSON.stringify(i.after))) : null)))));
+    }
+    box.replaceChildren(...parts);
+  }
+
+  function renderHistory() {
+    const box = document.getElementById("history");
+    const days = Object.keys(H.days || {}).sort();
+    const last = days.slice(-120);
+    box.replaceChildren(el("div", {class: "panel-head"}, el("h2", {}, "History"), el("span", {class: "muted"}, days.length + " run day(s) recorded" + (days.length > 120 ? ", last 120 shown" : ""))),
+      el("div", {class: "hist"}, ["_global"].concat(MARKETS).map(code => el("div", {class: "hrow"},
+        el("span", {class: "mono"}, code === "_global" ? "ALL" : code),
+        el("div", {class: "hcells"}, last.map(d => {
+          const v = (H.days[d] || {})[code];
+          const t = v ? d + ": " + v.status + (v.coverage && v.coverage !== "full" ? " (" + v.coverage.replace("_", " ") + ")" : "") + (v.publish ? ", publish" : "") : d + ": no data";
+          return el("span", {class: "hc " + (v ? v.status + " " + (v.coverage || "") : ""), title: t, "aria-label": t});
+        }))))),
+      el("div", {class: "legend"}, el("span", {}, el("i", {class: "hc green"}), "green"), el("span", {}, el("i", {class: "hc yellow"}), "yellow"),
+        el("span", {}, el("i", {class: "hc red"}), "red"), el("span", {}, el("i", {class: "hc green tealium_only"}), "faded: not all pages checked")));
+  }
+
+  function renderAll() { renderHeader(); renderTiles(); renderMarket(); renderPublish(); renderHistory(); }
+  renderAll();
+
+  // --- live acknowledgements (artifact only) ------------------------------------------
+  if (MODE === "artifact" && window.claude && claude.use) {
+    (async () => {
+      try {
+        user = await claude.use("user");
+        if (user) { try { myId = await user.id(); } catch (e) { myId = null; } }
+        db = await claude.use("db");
+        window.__dbTried = true;
+        if (!db) { renderHeader(); return; }
+        canWrite = true;
+        if (user && user.can) { try { const w = await user.can("data.write"); if (w === false) canWrite = false; } catch (e) {} }
+        db.collection("acks").onSnapshot(async snap => {
+          liveAcks = snap.docs.map(d => Object.assign({_id: d.id, source: "live"}, d.data()));
+          const ids = [...new Set(liveAcks.map(a => a.by).filter(Boolean))];
+          if (user && ids.length) { try { const ps = await user.profiles(ids); for (const id of ids) names[id] = (ps[id] && ps[id].name) || "Someone"; } catch (e) {} }
+          renderAll();
+        }, () => { renderAll(); });
+      } catch (e) { window.__dbTried = true; renderHeader(); }
+    })();
+  }
+})();
+</script>
+</body></html>

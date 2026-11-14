@@ -1,0 +1,79 @@
+name: Daily tracking check
+
+on:
+  schedule:
+    # 05:00 UTC Mon-Fri = 06:00 CET (07:00 CEST in summer)
+    - cron: "0 5 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      market:
+        description: "Market codes, space separated (empty = all)"
+        required: false
+        default: ""
+      url:
+        description: "Only these URL ids, space separated (empty = all)"
+        required: false
+        default: ""
+      no_browser:
+        description: "Only Tealium CDN + load-rule checks"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # commit results back to the repo
+
+concurrency:
+  group: tracking-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Regression tests
+        run: python -m unittest discover tests
+
+      - name: Run checks
+        env:
+          # Allowlist header agreed with the sage.com web team, format "Header-Name: secret".
+          # Leave the secret unset until the allowlist exists: pages are then reported as
+          # "blocked" and only Tealium CDN + load-rule checks count.
+          MONITOR_AUTH_HEADER: ${{ secrets.MONITOR_AUTH_HEADER }}
+          IN_MARKET: ${{ github.event.inputs.market }}
+          IN_URL: ${{ github.event.inputs.url }}
+          IN_NO_BROWSER: ${{ github.event.inputs.no_browser }}
+        run: |
+          ARGS=()
+          if [ -n "$IN_MARKET" ]; then read -ra M <<< "$IN_MARKET"; ARGS+=(--market "${M[@]}"); fi
+          if [ -n "$IN_URL" ]; then read -ra U <<< "$IN_URL"; ARGS+=(--url "${U[@]}"); fi
+          if [ "$IN_NO_BROWSER" = "true" ]; then ARGS+=(--no-browser); fi
+          python -m monitor run "${ARGS[@]}"
+
+      - name: Commit results
+        run: |
+          git config user.name "tracking-monitor[bot]"
+          git config user.email "tracking-monitor@users.noreply.github.com"
+          git add results report
+          git commit -m "Results $(date -u +%F)" || echo "No changes"
+          git pull --rebase
+          git push
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-${{ github.run_id }}
+          path: report/index.html
+          retention-days: 90

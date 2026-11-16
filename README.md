@@ -89,10 +89,10 @@ web app.
   network). Until there is an exception, these pages show as "blocked". That is a system status, not a
   tracking error. Page checks are collected by hand in the Claude desktop browser for a few sample pages.
 - **The exception still has to be requested.** The request is drafted in `docs/allowlist-request.md` and
-  **has not been sent yet**. Next step: send it to the sage.com web / security team (cc MarTech).
+  **has not been sent yet**. Next step: Carolina Torres, who will run the monitor, sends it to the sage.com IT / web security team (cc MarTech).
 
 **Other open items**
-- [ ] Send the allowlist request (`docs/allowlist-request.md`). Once granted, add the agreed header as the GitHub
+- [ ] Carolina Torres sends the allowlist request (`docs/allowlist-request.md`). Once granted, add the agreed header as the GitHub
       secret `MONITOR_AUTH_HEADER`.
 - [ ] Confirm the tag baselines for DE and AT, then for FR, ES and PT. Until a baseline is confirmed, that
       market shows yellow.

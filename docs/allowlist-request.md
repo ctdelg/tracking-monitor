@@ -4,7 +4,7 @@
 |---|---|
 | **Status** | DRAFT – not sent yet |
 | **To** | Sage IT / web security team responsible for the bot protection on www.sage.com (cc: MarTech) |
-| **From** | Marius Kübler, Paid Media DE |
+| **From** | Carolina Torres – operator of the EU Tracking Monitor |
 | **Priority** | Medium – needed to switch on the daily page checks for DE, FR, ES and PT |
 
 ---
@@ -63,7 +63,7 @@ login areas or the shop backend.
 3. Are there time windows or a request rate we should keep to?
 
 ## Contact
-Marius Kübler – Paid Media DE (<your Sage email>). After handover the monitor will be run by
-[UK colleague – name to be added].
+Carolina Torres (<Carolina's Sage email>) runs the monitor and its daily job, and owns the secret on our side.
+The monitor was built by Marius Kübler, Paid Media DE, who can answer questions about how it works.
 
 Thank you!

@@ -13,10 +13,58 @@
     "CONS-05|de-cp-hr-zeiterfassung": "The embedded Brightcove video player sends player and impression metrics to metrics.brightcove.com before consent. This is not an ad tag, but it is third-party tracking before consent. Ask the privacy / web team whether the player should wait for consent or run in privacy mode."
    }
   },
-  "AT": {"summary": "No page checks today (Tealium and load-rule checks only). Reminder: the AT profile has no active Floodlight or Google Ads conversion tags."},
-  "FR": {"summary": "No page checks today (Tealium and load-rule checks only)."},
-  "ES": {"summary": "No page checks today (Tealium and load-rule checks only)."},
-  "PT": {"summary": "No page checks today (Tealium and load-rule checks only)."}
+  "AT": {
+   "summary": "No page checks today (Tealium and load-rule checks only). Reminder: the AT profile has no active Floodlight or Google Ads conversion tags."
+  },
+  "FR": {
+   "summary": "No page checks today (Tealium and load-rule checks only)."
+  },
+  "ES": {
+   "summary": "No page checks today (Tealium and load-rule checks only)."
+  },
+  "PT": {
+   "summary": "No page checks today (Tealium and load-rule checks only)."
+  }
  },
- "publish": {}
+ "publish": {},
+ "brief": [
+  {
+   "tone": "red",
+   "title": "Why Germany is red",
+   "items": [
+    "Floodlight tag 98 does not fire for web-shop trial and purchase submits.",
+    "Cause: load rule 274, since the Tealium publish of 24 Aug 2026.",
+    "Lead forms with a gate_content_name still fire it."
+   ]
+  },
+  {
+   "tone": "yellow",
+   "title": "New today in DE (5 of 116 pages)",
+   "items": [
+    {
+     "text": "/cp/webinar-sage-x3/ redirects to the DE homepage.",
+     "action": "Pause or update the campaign."
+    },
+    "/cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.",
+    "Microsoft UET did not fire on the HR and payroll pages, so msclkid was not stored.",
+    "A Brightcove video player sends metrics before consent."
+   ]
+  },
+  {
+   "tone": "green",
+   "title": "Working",
+   "items": [
+    "Consent, Floodlight, Google Ads, GA4, LinkedIn, Meta and TikTok on all five pages.",
+    "The gclid is stored on every page."
+   ]
+  },
+  {
+   "tone": "",
+   "title": "Coverage",
+   "items": [
+    "AT, FR, ES and PT: Tealium and load-rule checks only.",
+    "No page was opened there today."
+   ]
+  }
+ ]
 }

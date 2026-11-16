@@ -32,10 +32,14 @@ Steps:
    ```json
    {"day": "<today>", "written_by": "Claude routine",
     "summary": "2-4 short paragraphs separated by \n: overall picture first, then what changed since yesterday, then coverage notes",
+    "brief": [{"tone": "red|yellow|green|", "title": "short label, e.g. Why Germany is red / New today / Working / Coverage",
+               "items": ["one fact per bullet, max ~15 words", {"text": "a fact", "action": "what to do"}]}],
     "markets": {"<CODE>": {"summary": "1-2 sentences",
                            "findings": {"<check id>|<target>": "likely cause, evidence, who should act (MarTech / web team / agency) and the fix"}}},
     "publish": {"<CODE>": {"risk": "low|medium|high", "summary": "what the Tealium publish changed and what it means for paid media"}}}
    ```
+   - `brief` is what the dashboard shows at the top: 2-4 blocks in this order (problem, new today,
+     working, coverage), each with 1-4 short bullets. Leave out empty blocks.
    - Explain every failing check with result `fail` in severity `red` or `site_down`, and any new `yellow`.
    - For `CONV-*` findings read the load rules in `results/utag/<profile>/` (latest `.json`) and
      name the condition that blocks the tag. Compare with the previous snapshot when a publish happened.

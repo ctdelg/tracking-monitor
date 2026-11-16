@@ -82,10 +82,18 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* verdict */
 .meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
 .meta b { color: var(--fg); font-weight: 500; }
-.verdict h1 { font-size: clamp(24px, 2.6vw, 34px); line-height: 1.18; max-width: 30ch; }
+.verdict h1 { font-size: clamp(24px, 2.6vw, 34px); line-height: 1.18; max-width: 46ch; }
 .verdict h1 .rest { color: var(--faint); }
-.brief { display: grid; gap: 6px; padding: 12px 14px; background: var(--sunk); border-radius: 12px; font-size: 13.5px; max-width: 90ch; }
-.brief b { font-size: 12px; color: var(--muted); font-weight: 500; }
+.brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.bt { background: var(--sunk); border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.bt h3 { font-size: 13px; display: flex; align-items: center; gap: 8px; }
+.bt ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 13.5px; }
+.bt li { position: relative; padding-left: 14px; overflow-wrap: anywhere; }
+.bt li::before { content: ""; position: absolute; left: 0; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--faint); }
+.bt.red li::before { background: var(--crit-fill); } .bt.yellow li::before { background: var(--warn-fill); }
+.bt.green li::before { background: var(--ok-fill); }
+.bt .act { color: var(--muted); }
+.bt p { font-size: 13.5px; }
 
 /* state cards */
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
@@ -379,7 +387,27 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     if (MODE === "artifact" && db === null && window.__dbTried) notes.append(el("div", {class: "notice"}, el("p", {}, "Acknowledgements are read-only in this view.")));
     const sum = document.getElementById("summary");
     sum.replaceChildren();
-    if (D.summary) sum.append(el("div", {class: "brief"}, el("b", {}, "Today in brief"), ...D.summary.split(/\n+/).map(t => el("p", {}, t))));
+    const blocks = briefBlocks();
+    if (blocks.length) sum.append(el("div", {class: "brief", role: "group", "aria-label": "Today in brief"}, blocks.map(b =>
+      el("div", {class: "bt " + (b.tone || "")},
+        el("h3", {}, el("i", {class: "sd " + ({red: "red", yellow: "yellow", green: "green"}[b.tone] || ""), "aria-hidden": "true"}), b.title),
+        b.items.length ? el("ul", {}, b.items.map(it => el("li", {}, typeof it === "string" ? it : [it.text, it.action ? el("span", {class: "act"}, " " + it.action) : null]))) : null,
+        b.text ? el("p", {}, b.text) : null))));
+  }
+
+  // Structured brief from the diagnosis ("brief": [{tone, title, items}]); falls back to the plain
+  // summary, where "Header:" lines start a block and "- " lines become its bullets.
+  function briefBlocks() {
+    if (Array.isArray(D.brief) && D.brief.length) return D.brief.map(b => ({tone: b.tone, title: b.title, items: b.items || [], text: b.text}));
+    if (!D.summary) return [];
+    const out = []; let cur = null;
+    for (const raw of D.summary.split(/\n+/)) {
+      const t = raw.trim(); if (!t) continue;
+      if (/^[-•*]\s+/.test(t)) { if (!cur) out.push(cur = {title: "Today in brief", items: []}); cur.items.push(t.replace(/^[-•*]\s+/, "")); }
+      else if (/:$/.test(t)) out.push(cur = {title: t.slice(0, -1), items: []});
+      else { out.push({title: out.length ? "Also" : "Today in brief", items: [], text: t}); cur = null; }
+    }
+    return out;
   }
 
   function statCard(label, iconPath, big, small, visual, sub) {

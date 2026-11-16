@@ -161,7 +161,8 @@ tbody tr.sel[aria-selected="true"] td:first-child { box-shadow: inset 3px 0 0 va
 .q.yellow.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--warn-fill); }
 button.q { border: 0; padding: 0; cursor: pointer; transition: transform .12s; }
 button.q:hover { transform: translateY(-2px); }
-.q.on { outline: 2px solid var(--fg); outline-offset: 2px; }
+.q.on { transform: scaleY(1.22); }
+button.q.on:hover { transform: scaleY(1.22) translateY(-1px); }
 .notice.past { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; box-shadow: 0 0 0 1px var(--accent), 0 2px 4px var(--ring); }
 .q.pub::before { content: ""; position: absolute; left: 50%; top: -7px; transform: translateX(-50%); border: 4px solid transparent; border-top: 5px solid var(--accent); border-bottom: 0; }
 .saxis { display: grid; grid-template-columns: 34px 1fr 1fr; font-size: 12px; color: var(--faint); }

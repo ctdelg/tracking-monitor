@@ -106,6 +106,52 @@ def diff_utag(old: dict | None, new: dict, conversion_templates: set[str]) -> di
     }
 
 
+# Which vendor a Tealium tag belongs to, recognised from its utag.<id>.js file (first match wins).
+TAG_SIGNATURES = [
+    ("floodlight", r"fls\.doubleclick|['\"]DC-\d|floodlight"),
+    ("google_ads", r"googleadservices|['\"]AW-\d|conversion_async"),
+    ("microsoft_uet", r"bat\.bing|uetq"),
+    ("linkedin", r"snap\.licdn|_linkedin_|lintrk"),
+    ("meta", r"fbq\(|connect\.facebook\.net"),
+    ("tiktok", r"ttq\.|analytics\.tiktok"),
+    ("reddit", r"rdt\(|redditstatic"),
+    ("quantcast", r"quantserve"),
+    ("sixsense", r"6sc\.co"),
+    ("openai", r"oaiq|openai"),
+    ("eloqua", r"\belq|eloqua"),
+    ("segment", r"segment\.com|analytics\.track"),
+    ("ga4", r"['\"]G-[A-Z0-9]{6,}|gtag\("),
+]
+TAG_URL = "https://tags.tiqcdn.com/utag/sage/{profile}/{env}/utag.{tag}.js"
+
+
+def tag_vendors(profile: str, tags: dict, wanted: set[str], cache_dir: Path, env: str = "prod") -> dict:
+    """{tag id: vendor} for the wanted tag ids. utag.<id>.js is only downloaded when its version changed."""
+    cache_file = cache_dir / "tag_vendors.json"
+    cache = json.loads(cache_file.read_text(encoding="utf-8")) if cache_file.exists() else {}
+    out, dirty = {}, False
+    for tag in wanted:
+        v = (tags.get(tag) or {}).get("v")
+        hit = cache.get(tag)
+        if not hit or hit.get("v") != v:
+            vendor = "unknown"
+            try:
+                req = urllib.request.Request(TAG_URL.format(profile=profile, env=env, tag=tag),
+                                             headers={"User-Agent": "SageTrackingMonitor/1.0"})
+                js = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", "replace")
+                vendor = next((name for name, rx in TAG_SIGNATURES if re.search(rx, js)), "other")
+            except Exception:  # noqa: BLE001 - keep "unknown", retry next run
+                pass
+            hit = {"v": v, "vendor": vendor}
+            if vendor != "unknown":
+                cache[tag], dirty = hit, True
+        out[tag] = hit["vendor"]
+    if dirty:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        cache_file.write_text(json.dumps(cache, indent=1, sort_keys=True), encoding="utf-8")
+    return out
+
+
 def save_snapshot(directory: Path, day: str, body: str, parsed: dict) -> None:
     directory.mkdir(parents=True, exist_ok=True)
     (directory / f"{day}.js").write_text(body, encoding="utf-8")

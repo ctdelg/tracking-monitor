@@ -1,0 +1,64 @@
+{
+ "version": "13",
+ "sha256": "fcd7405200463a8ae1cbe83d3a950a1e51524982ec462eeaaa497ae41d0cf7be",
+ "tags": {
+  "1": {
+   "function": "__paused:ua",
+   "ids": {}
+  },
+  "2": {
+   "function": "__flc",
+   "ids": {
+    "advertiserId": "5195550",
+    "groupTag": "sageg0",
+    "activityTag": "sage_013"
+   }
+  },
+  "3": {
+   "function": "__flc",
+   "ids": {
+    "advertiserId": "5195550",
+    "groupTag": "sageg0",
+    "activityTag": "sage_012"
+   }
+  },
+  "25": {
+   "function": "__googtag",
+   "ids": {
+    "tagId": "G-M4HF0CKEGQ"
+   }
+  },
+  "26": {
+   "function": "__cl",
+   "ids": {}
+  },
+  "27": {
+   "function": "__cl",
+   "ids": {}
+  },
+  "28": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "29": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "31": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "32": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "33": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "35": {
+   "function": "__tg",
+   "ids": {}
+  }
+ }
+}

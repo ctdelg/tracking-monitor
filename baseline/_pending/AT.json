@@ -1,31 +1,133 @@
 {
  "market": "AT",
- "proposed_from": "2026-11-14",
+ "proposed_from": "2026-11-16",
  "urls": {
-  "at-produkte": {
+  "at-dpw-sage-dpw": {
    "post": {
-    "ga4": [
-     "G-PE4Z9JJWVN"
+    "floodlight": [
+     "5195550"
     ],
-    "other:6sc.co": [],
-    "other:6sense.com": [],
-    "other:adnxs.com": [],
-    "other:contentsquare.net": [],
-    "other:siteimproveanalytics.io": [],
-    "other:speedcurve.com": [],
-    "other:zi-scripts.com": [],
-    "sixsense": [],
-    "zoominfo": [
-     "654e77cd8ec2360c5a6693e1"
-    ]
+    "ga4": [
+     "G-M4HF0CKEGQ"
+    ],
+    "other:doubleclick.net": [],
+    "other:googleadservices.com": []
+   }
+  },
+  "at-dpw-zeiterfassung": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-M4HF0CKEGQ"
+    ],
+    "other:doubleclick.net": [],
+    "other:googleadservices.com": []
+   }
+  },
+  "at-dpw-lohn-outsourcing": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-M4HF0CKEGQ"
+    ],
+    "other:doubleclick.net": [],
+    "other:googleadservices.com": [],
+    "other:googletagmanager.com": []
+   }
+  },
+  "at-dpw-lohnverrechnung": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-M4HF0CKEGQ"
+    ],
+    "other:doubleclick.net": [],
+    "other:googleadservices.com": []
+   }
+  },
+  "at-dpw-reisekostenabrechnung": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-M4HF0CKEGQ"
+    ],
+    "other:doubleclick.net": [],
+    "other:googleadservices.com": []
+   }
+  },
+  "at-dpw-fairpay": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-M4HF0CKEGQ"
+    ],
+    "other:doubleclick.net": [],
+    "other:googleadservices.com": []
    }
   }
  },
- "journeys": {},
- "conversion": {
-  "ecom_try": [],
-  "ecom_buy": [],
-  "gated_trial": [],
-  "gated_contact": []
- }
+ "journeys": {
+  "at-j-infopaket": {
+   "steps": [
+    {
+     "floodlight": [
+      "5195550"
+     ],
+     "ga4": [
+      "G-M4HF0CKEGQ"
+     ],
+     "other:doubleclick.net": [],
+     "other:googleadservices.com": []
+    },
+    {
+     "floodlight": [
+      "5195550"
+     ],
+     "ga4": [
+      "G-M4HF0CKEGQ"
+     ]
+    }
+   ]
+  },
+  "at-j-kontakt": {
+   "steps": [
+    {
+     "floodlight": [
+      "5195550"
+     ],
+     "ga4": [
+      "G-M4HF0CKEGQ"
+     ],
+     "other:doubleclick.net": [],
+     "other:googleadservices.com": []
+    },
+    {
+     "floodlight": [
+      "5195550"
+     ],
+     "ga4": [
+      "G-M4HF0CKEGQ"
+     ]
+    }
+   ]
+  }
+ },
+ "conversion": {},
+ "gtm_conversion_tags": {
+  "2": "Floodlight counter 5195550/sageg0/sage_013",
+  "3": "Floodlight counter 5195550/sageg0/sage_012",
+  "26": "Conversion Linker",
+  "27": "Conversion Linker"
+ },
+ "forms": {}
 }

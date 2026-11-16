@@ -142,8 +142,9 @@ def check_page(visit: dict, market: dict, platforms: Platforms, baseline: dict |
                           {"status": status, "final_url": visit.get("final_url")}))
         return out
     final = visit.get("final_url") or visit["url"]
-    prefix = f"/{market['tealium_profile']}/"
-    if prefix not in urlparse(final).path:
+    site = urlparse(market_site(market))
+    prefix = site.path or "/"
+    if urlparse(final).hostname != site.hostname or not urlparse(final).path.startswith(prefix):
         out.append(result("PAGE-01", "site_down", "fail", tid,
                           f"Redirected away from the market ({final}).", {"final_url": final}))
         return out
@@ -164,7 +165,34 @@ def check_page(visit: dict, market: dict, platforms: Platforms, baseline: dict |
     out.append(result("PAGE-02", "site_down", "pass" if pre.get("title") else "warn", tid,
                       pre.get("title") or "Empty page title"))
 
-    # Tealium -----------------------------------------------------------------------------
+    if not market.get("tealium_profile"):
+        out.extend(_gtm_page_checks(tid, market, pre, visit.get("post")))
+    else:
+        r = _tealium_page_checks(tid, market, pre)
+        out.extend(r)
+        if any(c["id"] == "TEAL-01" and c["result"] == "fail" for c in r):
+            return out
+    return out + _consent_and_tag_checks(visit, market, platforms, baseline, tid, pre)
+
+
+def market_site(market: dict) -> str:
+    """Base URL of a market's site: sage.com/<profile>/ by default, or `site` in markets.yaml."""
+    return market.get("site") or f"https://www.sage.com/{market['tealium_profile']}/"
+
+
+def _gtm_page_checks(tid: str, market: dict, pre: dict, post: dict | None) -> list[dict]:
+    """Sites run by Google Tag Manager instead of Tealium (e.g. sagedpw.at)."""
+    want = (market.get("tag_manager") or {}).get("container")
+    loaded = sorted(set((pre.get("gtm") or {}).get("containers", []) + ((post or {}).get("gtm") or {}).get("containers", [])))
+    if want and want in loaded:
+        return [result("GTM-01", "site_down", "pass", tid, f"{want} loaded", title="Google Tag Manager container loads")]
+    return [result("GTM-01", "site_down", "fail", tid,
+                   f"Expected GTM container {want} did not load after consent (loaded: {', '.join(loaded) or 'none'}).",
+                   {"loaded": loaded}, title="Google Tag Manager container loads")]
+
+
+def _tealium_page_checks(tid: str, market: dict, pre: dict) -> list[dict]:
+    out = []
     utag = pre.get("utag") or {}
     if not utag.get("present"):
         out.append(result("TEAL-01", "site_down", "fail", tid,
@@ -183,10 +211,16 @@ def check_page(visit: dict, market: dict, platforms: Platforms, baseline: dict |
     out.append(result("TEAL-03", "yellow", "warn" if missing else "pass", tid,
                       f"Missing data layer values: {', '.join(missing)}" if missing else
                       f"{utag.get('data_keys')} data layer values"))
+    return out
 
+
+def _consent_and_tag_checks(visit, market, platforms, baseline, tid, pre) -> list[dict]:
+    out = []
+    post = visit.get("post")
+    tool = {"usercentrics": "Usercentrics", "onetrust": "OneTrust"}.get(pre.get("consent_tool") or "", "Consent")
     # Consent ---------------------------------------------------------------------------------
     out.append(result("CONS-01", "red", "pass" if pre.get("banner") else "fail", tid,
-                      "Banner visible" if pre.get("banner") else "OneTrust banner not visible on first visit."))
+                      f"{tool} banner visible" if pre.get("banner") else f"{tool} banner not visible on first visit."))
 
     pre_hits = classify(pre.get("requests", []), platforms)
     violations = [h for h in pre_hits
@@ -405,17 +439,35 @@ def check_forms(market: dict, forms_part: dict, baseline: dict | None) -> list[d
                               title="Conversion tags fire on submit"))
         else:
             fired = conv.get("conversion_tags_fired") or []
+            vend = conv.get("vendors_fired") or []
             if fired:
                 out.append(result("FORM-03", "red", "pass", target,
-                                  f"On submit these conversion tags would fire: {', '.join(fired)}",
-                                  {**ev, "fired": fired}, title="Conversion tags fire on submit"))
+                                  f"On submit these conversion tags would fire: {', '.join(fired)}"
+                                  + (f" (platforms: {', '.join(vend)})" if vend else ""),
+                                  {**ev, "fired": fired, "vendors": vend}, title="Conversion tags fire on submit"))
             else:
                 out.append(result("FORM-03", "red" if required else "yellow", "fail", target,
                                   "On submit no Floodlight / Google Ads conversion tag would fire "
                                   f"(gate_content_name {name or '(empty)'}).",
                                   {**ev, "fired_all": conv.get("fired")}, title="Conversion tags fire on submit"))
+            bf = base_forms.get(gid)
+            if isinstance(bf, dict) and bf.get("vendors") is not None:
+                lost_v = sorted(set(bf["vendors"]) - set(vend))
+                if lost_v:
+                    from .config import load_platforms
+                    p = load_platforms()
+                    sev = "red" if any(p.severity(v) == "red" for v in lost_v) else "yellow"
+                    out.append(result("FORM-07", sev, "fail", target,
+                                      "On submit these platforms no longer receive the event: "
+                                      + ", ".join(p.display_name(v) for v in lost_v),
+                                      {"baseline": bf["vendors"], "now": vend},
+                                      title="Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)"))
+                else:
+                    out.append(result("FORM-07", "yellow", "pass", target, ", ".join(vend),
+                                      title="Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)"))
             if gid in base_forms:
-                base, now = set(base_forms[gid]), set(fired)
+                base = set(bf["tags"] if isinstance(bf, dict) else bf)
+                now = set(fired)
                 lost, gained = sorted(base - now, key=int), sorted(now - base, key=int)
                 if lost or gained:
                     out.append(result("FORM-06", "red" if lost else "yellow", "fail" if lost else "warn", target,
@@ -433,6 +485,48 @@ def check_forms(market: dict, forms_part: dict, baseline: dict | None) -> list[d
                               f"{what} {url} answers HTTP {status}" if 200 <= int(status) < 400 else
                               f"{what} {url} is broken (HTTP {status}). Leads get no content after submitting.",
                               {"url": url, "status": status}, title="Content behind the form is reachable"))
+    return out
+
+
+def check_gtm(market: dict, part: dict, baseline: dict | None) -> list[dict]:
+    """Google Tag Manager container checks for non-Tealium sites (AT: sagedpw.at)."""
+    out, t = [], "market"
+    c = part.get("container")
+    f = part.get("fetch") or {}
+    if not part.get("parsed"):
+        return [result("GTM-05", "site_down", "fail", t,
+                       f"GTM container {c} not readable ({f.get('status')}: {f.get('error')}).",
+                       title="GTM container published and readable")]
+    out.append(result("GTM-05", "site_down", "pass", t,
+                      f"{c} version {part['parsed']['version']} ({len(part['parsed']['tags'])} tags)",
+                      title="GTM container published and readable"))
+    d = part.get("diff") or {}
+    if d.get("changed"):
+        n_conv = sum(1 for i in d["items"] if i["conversion_relevant"])
+        out.append(result("GTM-04", "yellow" if d.get("conversion_relevant") else "info", "warn", t,
+                          f"New GTM publish v{d.get('from_version')} -> v{d.get('to_version')}: "
+                          f"{len(d['items'])} tag change(s), {n_conv} conversion-relevant.",
+                          {"items": d["items"][:50]}, title="GTM publish detected"))
+    else:
+        out.append(result("GTM-04", "info", "pass", t, "No publish since the last run", title="GTM publish detected"))
+    now = part.get("conversion_tags") or {}
+    if not any(v.startswith("Floodlight") or v.startswith("Google Ads conversion") for v in now.values()):
+        out.append(result("GTM-06", "red", "fail", t,
+                          "The container has no live Floodlight or Google Ads conversion tag.",
+                          {"conversion_tags": now}, title="Conversion tags live in the container"))
+    base = (baseline or {}).get("gtm_conversion_tags")
+    if base is not None:
+        lost = {k: v for k, v in base.items() if k not in now}
+        if lost:
+            out.append(result("GTM-06", "red", "fail", t,
+                              "Conversion tags removed or paused since the baseline: " + "; ".join(lost.values()),
+                              {"baseline": base, "now": now}, title="Conversion tags live in the container"))
+        else:
+            out.append(result("GTM-06", "red", "pass", t, "; ".join(now.values()),
+                              title="Conversion tags live in the container"))
+    elif now:
+        out.append(result("GTM-06", "red", "pass", t, "; ".join(now.values()),
+                          title="Conversion tags live in the container"))
     return out
 
 

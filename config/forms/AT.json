@@ -1,0 +1,29 @@
+{
+ "market": "AT",
+ "pages": {
+  "at-dpw-sage-dpw": {
+   "discovered": "2026-11-16",
+   "gates": []
+  },
+  "at-dpw-zeiterfassung": {
+   "discovered": "2026-11-16",
+   "gates": []
+  },
+  "at-dpw-lohn-outsourcing": {
+   "discovered": "2026-11-16",
+   "gates": []
+  },
+  "at-dpw-lohnverrechnung": {
+   "discovered": "2026-11-16",
+   "gates": []
+  },
+  "at-dpw-reisekostenabrechnung": {
+   "discovered": "2026-11-16",
+   "gates": []
+  },
+  "at-dpw-fairpay": {
+   "discovered": "2026-11-16",
+   "gates": []
+  }
+ }
+}

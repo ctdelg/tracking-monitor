@@ -1,7 +1,7 @@
 {
  "day": "2026-11-16",
  "written_by": "Claude (interim run, DE sample of 5 paid landing pages)",
- "summary": "DE stays red for one reason: Floodlight tag 98 does not fire for ecom trial and buy submits (load rule 274, since the Tealium publish of 2026-08-24). Lead forms with a gate_content_name still fire it.\nNew from today's DE sample (5 of 116 paid landing pages):\n- /cp/webinar-sage-x3/ redirects to the DE homepage, so paid clicks to it land on the homepage. Pause or update the campaign.\n- /cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.\n- On the two HR and payroll pages Microsoft UET did not fire, so msclkid was not stored.\n- A Brightcove video player sends player metrics before consent.\nConsent, Floodlight, Google Ads, GA4, LinkedIn, Meta and TikTok work on all five pages, and the gclid is stored everywhere.\nAT, FR, ES and PT show green on Tealium and load-rule checks only: no page checks ran for them today.\nLead forms (new check): all 136 demo, product tour, download, quote and contact forms on the 116 DE landing pages are active, and replaying their submit event fires Floodlight tag 98 plus the matching lead-type tag (405 trial/demo, 406 contact, 407 download/application). Two forms have an irregular form code; one starts with a space, so Floodlight tag 389 cannot fire for it.\nThe form inventory also found 12 more paid landing pages that redirect: 8 Sage 100cloud URLs go to /sage-100/..., 3 X3 industry pages go to the industry overview.",
+ "summary": "DE stays red for one reason: Floodlight tag 98 does not fire for ecom trial and buy submits (load rule 274, since the Tealium publish of 2026-08-24). Lead forms with a gate_content_name still fire it.\nNew from today's DE sample (5 of 116 paid landing pages):\n- /cp/webinar-sage-x3/ redirects to the DE homepage, so paid clicks to it land on the homepage. Pause or update the campaign.\n- /cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.\n- On the two HR and payroll pages Microsoft UET did not fire, so msclkid was not stored.\n- A Brightcove video player sends player metrics before consent.\nConsent, Floodlight, Google Ads, GA4, LinkedIn, Meta and TikTok work on all five pages, and the gclid is stored everywhere.\nAT now checks www.sagedpw.at (Sage DPW, Google Tag Manager, Usercentrics) and runs fully automated: all 6 paid landing pages and both form journeys pass. AT is yellow only because its tag baseline still needs confirming.\nFR, ES and PT show green on Tealium and load-rule checks only: no page checks ran for them today.\nLead forms (new check): all 136 demo, product tour, download, quote and contact forms on the 116 DE landing pages are active, and replaying their submit event fires Floodlight tag 98 plus the matching lead-type tag (405 trial/demo, 406 contact, 407 download/application). Two forms have an irregular form code; one starts with a space, so Floodlight tag 389 cannot fire for it.\nThe form inventory also found 12 more paid landing pages that redirect: 8 Sage 100cloud URLs go to /sage-100/..., 3 X3 industry pages go to the industry overview.\nLead form submits on sage.com DE now also show which platforms receive the event: Floodlight, Microsoft UET, LinkedIn, Meta and TikTok (plus Quantcast, 6sense, OpenAI, Eloqua) for all 136 forms.",
  "markets": {
   "DE": {
    "summary": "5 of 116 landing pages checked in the Claude browser. Floodlight DC-5195550, Google Ads AW-970123043, GA4, LinkedIn and Meta fire on every page. The red status comes from the conversion load rule for ecom (tag 98), not from the landing pages.",
@@ -69,7 +69,35 @@
    ]
   },
   "AT": {
-   "summary": "No page checks today (Tealium and load-rule checks only). Reminder: the AT profile has no active Floodlight or Google Ads conversion tags."
+   "summary": "Sage DPW site (www.sagedpw.at): 6 paid landing pages and 2 form journeys checked automatically - no bot protection there.",
+   "brief": [
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Usercentrics banner shows; nothing fires before consent.",
+      "After consent: GTM-PS6MXC, Floodlight DC-5195550 and GA4 G-M4HF0CKEGQ on all 6 pages.",
+      "gclid is stored and still present on the Infopaket and contact form pages.",
+      "GTM v13 has 2 live Floodlight tags (sageg0/sage_012, sage_013) and the Conversion Linker."
+     ]
+    },
+    {
+     "tone": "yellow",
+     "title": "To confirm",
+     "items": [
+      "Tag baseline pending: confirm it once.",
+      "No Google Ads, Microsoft UET, LinkedIn or Meta tags on the site - check this is intended."
+     ]
+    },
+    {
+     "tone": "",
+     "title": "Coverage",
+     "items": [
+      "All 6 paid landing pages and both form journeys."
+     ]
+    }
+   ],
+   "findings": {}
   },
   "FR": {
    "summary": "No page checks today (Tealium and load-rule checks only)."

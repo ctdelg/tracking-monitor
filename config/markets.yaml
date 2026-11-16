@@ -185,33 +185,34 @@ markets:
 
   AT:
     name: Austria
-    tealium_profile: de-at
+    # Paid media in AT only promotes HR software (Sage DPW) and links to www.sagedpw.at, a separate
+    # WordPress site with Google Tag Manager and Usercentrics (not sage.com / Tealium / OneTrust).
+    site: "https://www.sagedpw.at/"
+    tag_manager: {type: gtm, container: GTM-PS6MXC}
     locale: de-AT
     urls:
-      - {id: at-home, url: "https://www.sage.com/de-at/", type: content}
-      - {id: at-produkte, url: "https://www.sage.com/de-at/produkte/", type: product, live_sample: true}
-      - {id: at-buchhaltung, url: "https://www.sage.com/de-at/buchhaltung-software/", type: landing_page}
-      - {id: at-fakturierung, url: "https://www.sage.com/de-at/buchhaltung-software/fakturierung/", type: landing_page}
-      - {id: at-rechnungen, url: "https://www.sage.com/de-at/buchhaltung-software/rechnungen/", type: landing_page}
-      - {id: at-erp, url: "https://www.sage.com/de-at/erp/", type: landing_page}
-      - {id: at-erp-cloud, url: "https://www.sage.com/de-at/erp/cloud/", type: landing_page}
-      - {id: at-erp-klein, url: "https://www.sage.com/de-at/erp/kleinunternehmen/", type: landing_page}
-      - {id: at-bms, url: "https://www.sage.com/de-at/erp/business-management-software/", type: landing_page}
-      - {id: at-hr-software, url: "https://www.sage.com/de-at/hr-software/", type: landing_page}
-      - {id: at-zeiterfassung, url: "https://www.sage.com/de-at/hr-software/zeiterfassung/", type: landing_page}
-      - {id: at-lohnverrechnung, url: "https://www.sage.com/de-at/lohnverrechnungssoftware/", type: landing_page}
-      - {id: at-lager, url: "https://www.sage.com/de-at/lagerverwaltung/", type: landing_page}
-      - {id: at-crm, url: "https://www.sage.com/de-at/crm-software/", type: landing_page}
-      - {id: at-produktion, url: "https://www.sage.com/de-at/branchen/produktion/", type: landing_page}
-      - {id: at-handel, url: "https://www.sage.com/de-at/branchen/handel/", type: landing_page}
-      - {id: at-kmu, url: "https://www.sage.com/de-at/unternehmensgroessen/mittlere-unternehmen/", type: landing_page}
-      - {id: at-kontakt, url: "https://www.sage.com/de-at/ueber-uns/kontakt/", type: form}
+      # Source: paid search landing page report, 2026-11-16 - tracking parameters removed, 6 URLs.
+      - {id: at-dpw-sage-dpw, url: "https://www.sagedpw.at/loesungen/sage-dpw/", type: product, live_sample: true}
+      - {id: at-dpw-zeiterfassung, url: "https://www.sagedpw.at/hr-software/zeiterfassung/", type: landing_page}
+      - {id: at-dpw-lohn-outsourcing, url: "https://www.sagedpw.at/loesungen/sage-dpw-lohn-outsourcing/", type: product}
+      - {id: at-dpw-lohnverrechnung, url: "https://www.sagedpw.at/hr-software/lohnverrechnung/", type: landing_page}
+      - {id: at-dpw-reisekostenabrechnung, url: "https://www.sagedpw.at/hr-software/reisekostenabrechnung/", type: landing_page}
+      - {id: at-dpw-fairpay, url: "https://www.sagedpw.at/hr-software/fairpay/", type: landing_page}
     journeys:
-      - id: at-j-erp-contact
-        name: ERP landing page -> contact page
+      # The CTAs lead to separate form pages; the journeys check that the click ID and the tags survive
+      # into the form. Nothing is submitted.
+      - id: at-j-infopaket
+        name: Zeiterfassung -> Infopaket download form
         steps:
-          - goto: "https://www.sage.com/de-at/erp/"
-          - goto: "https://www.sage.com/de-at/ueber-uns/kontakt/"
+          - goto: "https://www.sagedpw.at/hr-software/zeiterfassung/"
+          - click: "a[href*='/kostenloses-infopaket/']"
+            expect_url: "/kostenloses-infopaket/"
+      - id: at-j-kontakt
+        name: Zeiterfassung -> contact form
+        steps:
+          - goto: "https://www.sagedpw.at/hr-software/zeiterfassung/"
+          - click: "a[href*='/kontaktformular/']"
+            expect_url: "/kontaktformular/"
 
   FR:
     name: France

@@ -62,12 +62,37 @@
     return Object.keys(byId).map(function (k) { return byId[k]; });
   }
 
-  function bannerVisible() {
-    const b = document.querySelector('#onetrust-banner-sdk');
-    if (!b) return false;
-    // OneTrust animates the banner in, so size/opacity are unreliable; display:none means hidden.
-    return window.getComputedStyle(b).display !== 'none';
+  function gtmInfo() {
+    const g = window.google_tag_manager;
+    return {
+      containers: g ? Object.keys(g).filter(function (k) { return /^GTM-/.test(k); }) : [],
+      data_layer_events: (window.dataLayer || []).map(function (e) { return e && e.event; }).filter(Boolean).slice(0, 40)
+    };
   }
+
+  // Consent state, independent of the consent tool (OneTrust on sage.com, Usercentrics on sagedpw.at).
+  // groups: "<group or service>:1|0, ..." so the checks can treat both tools the same way.
+  function consentInfo() {
+    if (window.UC_UI || document.querySelector('#usercentrics-root, #usercentrics-cmp-ui')) {
+      let services = [];
+      try { services = window.UC_UI && UC_UI.getServicesBaseInfo ? UC_UI.getServicesBaseInfo() : []; } catch (e) {}
+      let required = null;
+      try { required = window.UC_UI && UC_UI.isConsentRequired ? UC_UI.isConsentRequired() : null; } catch (e) {}
+      const groups = services.map(function (sv) { return sv.name.replace(/[:,]/g, ' ') + ':' + (sv.consent && sv.consent.status ? 1 : 0); }).join(',');
+      return { tool: 'usercentrics', banner: required === null ? !!document.querySelector('#usercentrics-root') : !!required, groups: groups || null };
+    }
+    const c = cookies();
+    const consent = c.OptanonConsent ? decodeURIComponent(c.OptanonConsent) : '';
+    const b = document.querySelector('#onetrust-banner-sdk');
+    // OneTrust animates the banner in, so size/opacity are unreliable; display:none means hidden.
+    return {
+      tool: b || c.OptanonConsent ? 'onetrust' : null,
+      banner: !!b && window.getComputedStyle(b).display !== 'none',
+      groups: (consent.match(/groups=([^&]*)/) || [])[1] || null
+    };
+  }
+
+  function bannerVisible() { return consentInfo().banner; }
 
   const tm = {
     version: 1,
@@ -97,16 +122,17 @@
     snapshot: function () {
       const entries = performance.getEntriesByType('resource').slice(tm._mark);
       const c = cookies();
-      const consent = c.OptanonConsent ? decodeURIComponent(c.OptanonConsent) : '';
-      const groups = (consent.match(/groups=([^&]*)/) || [])[1] || null;
+      const ci = consentInfo();
       return {
         url: location.href,
         title: document.title,
         requests: entries.map(function (e) { return { url: e.name, type: e.initiatorType }; }),
         cookies: c,
-        banner: bannerVisible(),
-        consent_groups: groups,
+        banner: ci.banner,
+        consent_tool: ci.tool,
+        consent_groups: ci.groups,
         utag: utagInfo(),
+        gtm: gtmInfo(),
         has_form: !!document.querySelector('form input[type=email], form input[name*=mail i]'),
         gates: gates(),
         collected_at: new Date().toISOString()
@@ -173,11 +199,16 @@
       }
       return list;
     },
+    // "Accept all" in whichever consent tool the page uses. Returns true if it could accept.
+    accept: function () {
+      const btn = document.querySelector('#onetrust-accept-btn-handler');
+      if (btn) { btn.click(); return true; }
+      try { if (window.UC_UI && UC_UI.acceptAllConsents) { UC_UI.acceptAllConsents(); return true; } } catch (e) {}
+      return false;
+    },
     acceptAndSnapshot: async function (waitMs) {
       tm.mark();
-      const btn = document.querySelector('#onetrust-accept-btn-handler');
-      const accepted = !!btn;
-      if (btn) btn.click();
+      const accepted = tm.accept();
       await new Promise(function (r) { setTimeout(r, waitMs || 8000); });
       const s = tm.snapshot();
       s.accepted = accepted;

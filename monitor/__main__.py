@@ -34,12 +34,19 @@ def cmd_collect(args) -> None:
         browser = p.chromium.launch()
         try:
             for code, m in markets.items():
-                print(f"[{code}] Tealium CDN + load rules ...", flush=True)
-                teal = pipeline.collect_tealium(browser, m, args.day)
-                pipeline.store_raw(args.day, code, tealium_part=teal)
-                print(f"[{code}] lead forms ...", flush=True)
-                forms_part = pipeline.collect_forms(browser, m, teal.get("_body"))
-                pipeline.store_raw(args.day, code, forms_part=forms_part)
+                forms_part = None
+                if m.get("tealium_profile"):
+                    print(f"[{code}] Tealium CDN + load rules ...", flush=True)
+                    teal = pipeline.collect_tealium(browser, m, args.day)
+                    pipeline.store_raw(args.day, code, tealium_part=teal)
+                    print(f"[{code}] lead forms ...", flush=True)
+                    forms_part = pipeline.collect_forms(browser, m, teal.get("_body"))
+                    pipeline.store_raw(args.day, code, forms_part=forms_part)
+                else:
+                    print(f"[{code}] Google Tag Manager container ...", flush=True)
+                    # tealium/forms parts are cleared so nothing from an earlier sage.com setup lingers
+                    pipeline.store_raw(args.day, code, gtm_part=pipeline.collect_gtm(m, args.day),
+                                       tealium_part={}, forms_part={})
                 if not args.no_browser:
                     print(f"[{code}] browser checks ({len(m['urls'])} URLs, {len(m['journeys'])} journeys) ...",
                           flush=True)

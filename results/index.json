@@ -60,11 +60,11 @@
     "publish": false
    },
    "AT": {
-    "status": "green",
+    "status": "yellow",
     "red": 0,
-    "yellow": 0,
+    "yellow": 10,
     "site_down": 0,
-    "coverage": "tealium_only",
+    "coverage": "full",
     "publish": false
    },
    "FR": {

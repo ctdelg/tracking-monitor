@@ -17,7 +17,7 @@ from __future__ import annotations
 import os
 import time
 from pathlib import Path
-from urllib.parse import urlencode, urlparse, urlsplit, urlunsplit
+from urllib.parse import urlencode, urljoin, urlparse, urlsplit, urlunsplit
 
 from playwright.sync_api import Browser, BrowserContext, Page
 
@@ -119,6 +119,21 @@ def _is_blocked(status: int | None, page: Page) -> bool:
     return any(k in title for k in ("access denied", "attention required", "just a moment"))
 
 
+def accept_consent(page: Page) -> bool:
+    """'Accept all' in OneTrust (sage.com) or Usercentrics (sagedpw.at). Both load asynchronously."""
+    try:
+        page.wait_for_function(
+            "() => document.querySelector('#onetrust-accept-btn-handler') || "
+            "(window.UC_UI && UC_UI.isInitialized && UC_UI.isInitialized())", timeout=15_000)
+    except Exception:  # noqa: BLE001 - no consent tool found -> CONS-04 reports it
+        pass
+    try:
+        page.evaluate(COLLECTOR_JS)
+        return bool(page.evaluate("() => window.__tm.accept()"))
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def visit_url(browser: Browser, market: dict, entry: dict, platforms: Platforms, day: str,
               locale: str) -> dict:
     ids = click_ids(day)
@@ -144,14 +159,7 @@ def visit_url(browser: Browser, market: dict, entry: dict, platforms: Platforms,
             visit["pre"]["gates"] = page.evaluate("async () => window.__tm.gateTargets()")
         except Exception:  # noqa: BLE001
             pass
-        btn = page.locator("#onetrust-accept-btn-handler")
-        accepted = False
-        if btn.count():
-            try:
-                btn.first.click(timeout=5000)
-                accepted = True
-            except Exception:  # noqa: BLE001
-                accepted = False
+        accepted = accept_consent(page)
         page.wait_for_timeout(POST_CONSENT_MS)
         visit["post"] = _snapshot(page, rec.take())
         visit["post"]["accepted"] = accepted
@@ -189,19 +197,26 @@ def run_journey(browser: Browser, market: dict, journey: dict, platforms: Platfo
                         break
                     if first:
                         page.wait_for_timeout(SETTLE_MS)
-                        btn = page.locator("#onetrust-accept-btn-handler")
-                        if btn.count():
-                            btn.first.click(timeout=5000)
+                        accept_consent(page)
                     first = False
                 elif "click" in step:
-                    page.locator(step["click"]).first.click(timeout=15_000)
+                    # first VISIBLE match: menus often contain hidden copies of the same link
+                    link = page.locator(step["click"]).locator("visible=true").first
+                    try:
+                        link.click(timeout=8_000)
+                    except Exception:  # noqa: BLE001 - overlay intercepts the click: follow the link instead
+                        href = link.get_attribute("href", timeout=3_000)
+                        if not href:
+                            raise
+                        entry["note"] = "click intercepted by an overlay; followed the link"
+                        page.goto(urljoin(page.url, href), wait_until="load")
                     page.wait_for_load_state("load")
                 if "expect_url" in step and step["expect_url"] not in page.url:
                     raise RuntimeError(f"expected URL containing {step['expect_url']}, got {page.url}")
                 page.wait_for_timeout(POST_CONSENT_MS)
                 entry["snapshot"] = _snapshot(page, rec.take())
             except Exception as e:  # noqa: BLE001
-                entry["error"] = str(e)[:300]
+                entry["error"] = str(e)[:600]
                 out["steps"].append(entry)
                 break
             out["steps"].append(entry)

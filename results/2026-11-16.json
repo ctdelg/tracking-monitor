@@ -2,7 +2,7 @@
  "schema_version": 1,
  "monitor_version": "1.0.0",
  "day": "2026-11-16",
- "generated_at": "2026-11-16T12:38:31Z",
+ "generated_at": "2026-11-16T13:02:50Z",
  "global": {
   "status": "red",
   "incidents": [],
@@ -887,7 +887,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:ACG_16Q4_NCM_DE_DGAD_AC0220_S50DefaultTrialDBTest24",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "64a193c0-c2cc-428b-9e3b-da08fdfba5c3",
       "pages": [
@@ -901,6 +901,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -938,7 +949,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_18Q4_NCM_DE_DGWW_ER0460_demo",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "88023c89-c2e2-4561-97b1-628455a3a118",
       "pages": [
@@ -952,6 +963,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -998,7 +1020,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2412_NCA_DE_Sage Operations",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "520733ab-67ba-4881-b5f8-a4f2fcf8a5aa",
       "pages": [
@@ -1021,6 +1043,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1058,7 +1091,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_ActiveProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "43eb0a43-73df-45f5-aed2-16f6136394e4",
       "pages": [
@@ -1072,6 +1105,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1109,7 +1153,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_CPKreislaufWirtschaftIDGStudieS100",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "585cf5ef-cbf3-4a64-af40-ef217987bb95",
       "pages": [
@@ -1123,6 +1167,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1161,7 +1216,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_ERPSoftwareInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "a245505e-fd60-4b30-8dfc-eb0affca1047",
       "pages": [
@@ -1176,6 +1231,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1213,7 +1279,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_HandelEBkHerausforderungDistributionS100",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "a9e77bb1-e10f-4515-ab3f-7ddffd97c6ea",
       "pages": [
@@ -1227,6 +1293,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1264,7 +1341,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_HandelIDCStudieHandelS100",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "9d01d471-db22-4ef5-8807-85c387d29894",
       "pages": [
@@ -1278,6 +1355,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1315,7 +1403,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_HandelPraxisleitfadenS100",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "9639c9c0-4dde-414d-a166-f1734001e8d8",
       "pages": [
@@ -1329,6 +1417,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1367,7 +1466,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100Angebot",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "ff0f4cbf-d099-4fb0-bc49-a3bcc82cea97",
       "pages": [
@@ -1382,6 +1481,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1419,7 +1529,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100CRMAngebot",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "db352172-af98-4288-b2fb-d7797e28d2b3",
       "pages": [
@@ -1433,6 +1543,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1470,7 +1591,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100CloudBeratung",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "92da510a-f648-42cb-8262-9a0b0d2ef625",
       "pages": [
@@ -1484,6 +1605,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1525,7 +1657,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100Infopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "f23199f8-5909-4867-b9bf-0332df1c8260",
       "pages": [
@@ -1543,6 +1675,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1581,7 +1724,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100OnlineShopInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e83662c9-f96c-45a8-8335-f8f62dd015f8",
       "pages": [
@@ -1596,6 +1739,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1634,7 +1788,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100OnlineShopProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "4c7c6d8d-81e6-47e7-a1bc-6b0a7fe7dc45",
       "pages": [
@@ -1649,6 +1803,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1686,7 +1851,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100ProdBeratung",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "67fd60b7-a335-40ae-9a19-8b001be2f42c",
       "pages": [
@@ -1700,6 +1865,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1738,7 +1914,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100ProdInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "29d76a84-3b26-4b84-a953-919295305e45",
       "pages": [
@@ -1753,6 +1929,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1791,7 +1978,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100ProdProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "f3bd2e6d-d2d0-40b1-ad3f-b29ca394807e",
       "pages": [
@@ -1806,6 +1993,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1854,7 +2052,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100Produkttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "d352870d-94fd-4c7e-9171-b04d7e742324",
       "pages": [
@@ -1879,6 +2077,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1918,7 +2127,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100ReweBeratung",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "4c6c1c25-400f-478d-93a5-e30492a6d3f8",
       "pages": [
@@ -1934,6 +2143,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -1973,7 +2193,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100ReweInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "d04a161e-853f-45e2-bdd7-8684a692122c",
       "pages": [
@@ -1989,6 +2209,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2028,7 +2259,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100ReweProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "93e7f073-24a6-4cf0-85da-e30fd600009f",
       "pages": [
@@ -2044,6 +2275,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2084,7 +2326,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100WawiBeratung",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e9333f04-a9e6-4f3d-8a27-02aab94ddae6",
       "pages": [
@@ -2101,6 +2343,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2140,7 +2393,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100WawiInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "f8e3456d-d6ea-4a3a-8e69-723f0b80785f",
       "pages": [
@@ -2156,6 +2409,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2195,7 +2459,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100WawiProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "bd9ea7c0-dbe4-4142-b75f-303d5a2e2800",
       "pages": [
@@ -2211,6 +2475,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2248,7 +2523,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100XRMAngebot",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "f7388a4d-f856-494d-805a-23f3055c43e1",
       "pages": [
@@ -2262,6 +2537,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2300,7 +2586,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100XRMInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "5175a953-811e-41b9-9807-df3f5136ba50",
       "pages": [
@@ -2315,6 +2601,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2352,7 +2649,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_S100XRMProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "cf1fd894-49ce-4e7d-844f-43d049837e89",
       "pages": [
@@ -2366,6 +2663,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2403,7 +2711,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_24Q1_NCA_DE_SDMO",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "101d52d8-ba42-4404-a32b-6d39cae7f292",
       "pages": [
@@ -2417,6 +2725,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2455,7 +2774,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2508_NCA_DE_ActiveMobile",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e6c7b01e-2344-4660-84a6-31b9e8395bab",
       "pages": [
@@ -2470,6 +2789,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2507,7 +2837,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2605_NCA_DE_SageOperationsQuote",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "49c11ae4-5456-4d29-9cdf-b243e7ba588e",
       "pages": [
@@ -2521,6 +2851,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2558,7 +2899,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2605_NCA_DE_SageOperationsSparkAdsDemo_Form02",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "9d1f4618-a389-4e68-85d3-b4e417445173",
       "pages": [
@@ -2572,6 +2913,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2616,7 +2968,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SODemoRequestUnterseiten",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "eae94977-88c9-4922-ba39-7c841f8d3925",
       "pages": [
@@ -2637,6 +2989,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2682,7 +3045,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form01",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "00dc7de3-edf3-440f-878d-be4989193ea1",
       "pages": [
@@ -2704,6 +3067,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2742,7 +3116,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form03",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "eff8d672-d4a9-468e-9687-1829fa1b6014",
       "pages": [
@@ -2757,6 +3131,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2795,7 +3180,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form04",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "5ac6ee8e-d8ea-44fb-9b88-c44490445f91",
       "pages": [
@@ -2810,6 +3195,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2848,7 +3244,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form05",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "1a0b11bb-648e-407a-9eff-bd2fb7051833",
       "pages": [
@@ -2863,6 +3259,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2901,7 +3308,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form06",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "1a1920b3-6deb-4db0-b9ac-7175d40859a2",
       "pages": [
@@ -2916,6 +3323,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -2953,7 +3371,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SageOperationsProdukttourMobile",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "c8a088ad-8e72-4ad2-9648-095a97924ae1",
       "pages": [
@@ -2967,6 +3385,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3006,7 +3435,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2610_NCA_DE_SageOperationsProdukttour_Form01",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e2ecab28-e651-48dc-a214-a694abeacc09",
       "pages": [
@@ -3022,6 +3451,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3060,7 +3500,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2611_NCA_DE_SOProdukttourECommerce",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "f1c90824-6a5a-4fbd-b0dd-a9999bc59d3a",
       "pages": [
@@ -3075,6 +3515,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3113,7 +3564,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2612_NCA_DE_ECommWachstumWeb",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "89afcfe7-19d3-46ca-9952-0ec9fccf2f66",
       "pages": [
@@ -3128,6 +3579,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3165,7 +3627,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2612_NCA_DE_HORIZAgenticAI",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "71c11c4f-16eb-4ab7-8f1d-a9e44b9018ca",
       "pages": [
@@ -3179,6 +3641,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3217,7 +3690,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:BMS_2612_NCA_DE_SOProdukttourTechnischerGrosshandel",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "ca5c00d7-4eab-49ed-933a-90d259692a18",
       "pages": [
@@ -3232,6 +3705,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3269,7 +3753,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:CRM_2511_NCA_DE_SSMBeratung",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e65cad50-022f-456b-887a-72450db9f4a2",
       "pages": [
@@ -3283,6 +3767,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3320,7 +3815,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:CRM_2602_NCA_DE_Infopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "c2af9d29-4bcc-49f8-87b2-094731bf5ad2",
       "pages": [
@@ -3334,6 +3829,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3371,7 +3877,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:CRM_2602_NCA_DE_SSMDemoRequest",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e63497be-9b5e-4dd2-bb70-4999aa8f6b59",
       "pages": [
@@ -3385,6 +3891,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3422,7 +3939,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_23Q3_NCA_DE_HRTrendsEBooks_Form3",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b81c0873-ebbf-41f7-83dc-53ad54751dab",
       "pages": [
@@ -3436,6 +3953,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3479,7 +4007,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteAngebot",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "5ba837be-77cc-47bf-ac61-d78cb7e78cc5",
       "pages": [
@@ -3499,6 +4027,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3536,7 +4075,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteBedarfsanalyse",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "7567190a-1507-46b3-a1ec-1f17b36b4f5d",
       "pages": [
@@ -3550,6 +4089,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3586,7 +4136,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteEBkMAGespraech",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "237b0a48-453f-4208-910f-0f5015d9143b",
       "pages": [
@@ -3599,6 +4149,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3642,7 +4203,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "7627744e-9900-487b-8b5f-0c1eff5c90b5",
       "pages": [
@@ -3662,6 +4223,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3699,7 +4271,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteInfopaketEmail",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "018b974b-d5ff-4e4e-ade6-25000711cde5",
       "pages": [
@@ -3713,6 +4285,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3750,7 +4333,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteInfopaketPKP",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "accc568a-4611-4032-8c53-7469fd831064",
       "pages": [
@@ -3764,6 +4347,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3801,7 +4395,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuitePersAbrInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b645e14d-3075-43fd-b726-e6a68780aa20",
       "pages": [
@@ -3815,6 +4409,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3852,7 +4457,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuitePersAbrProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "ff6d4026-4307-4193-b67b-c7073af4b8f2",
       "pages": [
@@ -3866,6 +4471,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3904,7 +4520,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuitePersMgtInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "8b9c54e4-324a-4cb3-88f2-057cf2e8016a",
       "pages": [
@@ -3919,6 +4535,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -3957,7 +4584,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuitePersMgtProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "970fc5c2-1f4f-4352-a0b0-4a3802f0cabf",
       "pages": [
@@ -3972,6 +4599,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4016,7 +4654,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "7baa2f3b-f1a3-42aa-a064-d78fcb064a37",
       "pages": [
@@ -4037,6 +4675,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4074,7 +4723,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteRKInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "aaf78e22-620f-4db7-893a-bb7a202fdc93",
       "pages": [
@@ -4088,6 +4737,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4126,7 +4786,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteRKProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "d2347581-94f0-43e4-865a-256ec233e4f6",
       "pages": [
@@ -4141,6 +4801,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4180,7 +4851,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteZeitMgtInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "049b108b-5f6e-46a1-9910-6ceb3da40434",
       "pages": [
@@ -4196,6 +4867,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4233,7 +4915,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_HRSuiteZeitMgtProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b39d5963-6857-4d64-918f-63f35f1feb5f",
       "pages": [
@@ -4247,6 +4929,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4290,7 +4983,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_PeopleDemo",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "13e08eab-2767-4d84-aa2c-18eeba6d52bd",
       "pages": [
@@ -4310,6 +5003,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4347,7 +5051,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_PeopleInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "648a98d4-1b96-430b-bf16-eb1301fc5957",
       "pages": [
@@ -4361,6 +5065,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4404,7 +5119,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_PeopleProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "a9a49eb6-6a8d-4b7e-9760-cec8719d119f",
       "pages": [
@@ -4424,6 +5139,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4463,7 +5189,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_SageHRDemo",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "4bb47099-259f-40fd-af62-cfaa38fc0205",
       "pages": [
@@ -4479,6 +5205,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4516,7 +5253,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_SageHRProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "6774111a-130e-46e4-b9a6-9b647c3e3dde",
       "pages": [
@@ -4530,6 +5267,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4567,7 +5315,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_24Q1_NCA_DE_SageHRTestzugang",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b3391dfd-688b-4ed6-ad05-d379a9bd815d",
       "pages": [
@@ -4581,6 +5329,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4622,7 +5381,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2501_NCA_DE_SageHRProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e161b03f-8ca1-4bc3-98ee-e0325ec025ed",
       "pages": [
@@ -4640,6 +5399,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4677,7 +5447,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2503_NCA_DE_PeopleWebPeopleAnalytics",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "226d4eb4-862e-48b1-ac44-f3465f3e169d",
       "pages": [
@@ -4691,6 +5461,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4732,7 +5513,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2504_NCA_DE_SageHRPayrollWebdemo",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "ab6160bc-0630-4a09-9f42-6e4e99da0c20",
       "pages": [
@@ -4750,6 +5531,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4787,7 +5579,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2507_NCA_DE_PeopleEbookPeopleAnalytics",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "c0f85ef6-7a16-44ae-a98d-cabe5ca4048e",
       "pages": [
@@ -4801,6 +5593,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4839,7 +5642,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2508_NCA_DE_SageHRPayrollProduktbroschuere",
-     "detail": "On submit these conversion tags would fire: 98",
+     "detail": "On submit these conversion tags would fire: 98 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "57c69df8-cff7-4093-a146-ebaf1b0663b3",
       "pages": [
@@ -4853,6 +5656,17 @@
       "gate_content_name": "CL_HCM_DE_MED_BRO_MOFU_HRPayrollProduktbroschuere",
       "fired": [
        "98"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4891,7 +5705,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2510_NCA_DE_SageHRSuiteBMSmartInfopaket",
-     "detail": "On submit these conversion tags would fire: 98",
+     "detail": "On submit these conversion tags would fire: 98 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "c1715bc6-f1ac-470c-a4b1-8fea4b82d471",
       "pages": [
@@ -4905,6 +5719,17 @@
       "gate_content_name": "CL_HCM_DE_MED_BRO_MOFU_BMSmartInfopaket",
       "fired": [
        "98"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4942,7 +5767,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2512_NCA_DE_SageHRPayrollWebdemoEssentials",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e0392794-6d65-4d52-93e8-c405762c6711",
       "pages": [
@@ -4956,6 +5781,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -4994,7 +5830,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form01",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e47b6c99-c3f5-4d2d-ac33-1f7caa0f0a52",
       "pages": [
@@ -5009,6 +5845,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5047,7 +5894,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form02",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "7f13f0d0-3a2c-4f42-8fb3-ef46aad957d6",
       "pages": [
@@ -5062,6 +5909,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5100,7 +5958,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form03",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "db706995-91e6-41fc-bc83-7f241fb9e58b",
       "pages": [
@@ -5115,6 +5973,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5153,7 +6022,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form04",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "832d386c-78b7-4bf0-99a0-73ec8c888567",
       "pages": [
@@ -5168,6 +6037,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5206,7 +6086,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form05",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "63c435cc-78a0-439c-8a30-0a91b068fdb0",
       "pages": [
@@ -5221,6 +6101,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5260,7 +6151,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form06",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "ae3b2afe-6408-4d5c-b7af-487a3e46b6b4",
       "pages": [
@@ -5276,6 +6167,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5314,7 +6216,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form01",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "7e3084ab-c2bc-4030-a12d-9776edbba44d",
       "pages": [
@@ -5329,6 +6231,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5367,7 +6280,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form02",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "72e1c07d-0094-4359-b24d-423e5ecdc7a5",
       "pages": [
@@ -5382,6 +6295,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5420,7 +6344,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form03",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "1d8a9f46-b62a-4d8a-b96a-1ac587e37550",
       "pages": [
@@ -5435,6 +6359,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5473,7 +6408,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form04",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "94029ced-2b95-460d-addc-fdb34c17cdb8",
       "pages": [
@@ -5488,6 +6423,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5526,7 +6472,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form05",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "c90c4b68-a809-4a6d-bdad-dce5c099d170",
       "pages": [
@@ -5541,6 +6487,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5579,7 +6536,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2604_NCA_DE_DPAPraxisGuide",
-     "detail": "On submit these conversion tags would fire: 98",
+     "detail": "On submit these conversion tags would fire: 98 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b6ba5886-c451-4e78-83d4-bcc1694d982e",
       "pages": [
@@ -5593,6 +6550,17 @@
       "gate_content_name": "CL_HCM_DE_NSS_DSH_MOFU_DPAPraxisGuide",
       "fired": [
        "98"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5631,7 +6599,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2608_NCA_DE_EntgTranspGPraxisGuide_Form01",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "6f2c1dbb-624e-40f9-8fc1-944a173b1043",
       "pages": [
@@ -5646,6 +6614,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5685,7 +6664,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2609_NCA_DE_ZeiterfSoftwareProduktagnostischDemo",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "483ff00b-5153-4257-b4ea-438225ca7df9",
       "pages": [
@@ -5701,6 +6680,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5739,7 +6729,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form1",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "eb33b81c-f33e-4b77-bb2f-d34b69e8b090",
       "pages": [
@@ -5754,6 +6744,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5792,7 +6793,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form2",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "5021f97e-989b-4b13-99a2-91a4f48988d9",
       "pages": [
@@ -5807,6 +6808,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5845,7 +6857,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form3",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "ec9402c3-8bc3-418f-9aa2-a379a495ca65",
       "pages": [
@@ -5860,6 +6872,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5898,7 +6921,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form4",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "9b6ac938-2ea7-4d45-b03c-63fc02d00791",
       "pages": [
@@ -5913,6 +6936,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -5951,7 +6985,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form6",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "51c63a01-5934-4b5d-a9f5-02b6c39191ff",
       "pages": [
@@ -5966,6 +7000,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6004,7 +7049,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2701_NCA_DE_AgnosticLiveDemoPersonalabrechnung",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b5292568-e9b2-4ff8-81cb-b776b42a5b6a",
       "pages": [
@@ -6019,6 +7064,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6056,7 +7112,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2701_NCA_DE_HRReadyNCABeratung",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "fa151f71-bf7a-443b-8b9d-e7007b3a8356",
       "pages": [
@@ -6070,6 +7126,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6107,7 +7174,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2702_NCA_DE_HRReadinessScorecard",
-     "detail": "On submit these conversion tags would fire: 98",
+     "detail": "On submit these conversion tags would fire: 98 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "0aa9bbac-40c5-4b27-b3c1-b0cf6ede6919",
       "pages": [
@@ -6120,6 +7187,17 @@
       "gate_content_name": "CL_HCM_DE_MED_CHK_TOFU_HRReadinessScorecard",
       "fired": [
        "98"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6157,7 +7235,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2702_NCA_DE_HRReadinessScorecard_Form02",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "06275950-46bc-4e89-b68f-4eccdfe7bd8a",
       "pages": [
@@ -6171,6 +7249,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6208,7 +7297,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2702_NCA_DE_HRSoftwareNCABeratung",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "cca0b947-a6e5-4fe6-ac3d-431293058138",
       "pages": [
@@ -6222,6 +7311,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6259,7 +7359,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:HCM_2702_NCA_DE_WebinaraufzeichnungHRReadyNCA",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "84289664-1246-49f5-aab8-2e5cb0d9a59f",
       "pages": [
@@ -6273,6 +7373,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6310,7 +7421,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_23Q1_NCA_US_0009SageBusinessCloudProductTour",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "602810ef-b68d-4f93-a406-df25cac92453",
       "pages": [
@@ -6325,6 +7436,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6370,7 +7492,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2408_NCA_DE_IntacctProdukttour",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "ac703bd8-2fd5-4b77-b555-8bc5aa347dfd",
       "pages": [
@@ -6393,6 +7515,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6432,7 +7565,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_24Q2_NCA_DE_IntacctAngebot",
-     "detail": "On submit these conversion tags would fire: 98, 389, 406",
+     "detail": "On submit these conversion tags would fire: 98, 389, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "4e97fbef-ce99-4ac4-829e-d79423efda88",
       "pages": [
@@ -6449,6 +7582,17 @@
        "98",
        "389",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6490,7 +7634,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_24Q2_NCA_DE_IntacctDemo",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "8d99223a-fa85-4a97-9ad8-6e869d985b7b",
       "pages": [
@@ -6509,6 +7653,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6546,7 +7701,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2502_NCA_DE_SDMOWebinarBasic",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b78aaeaa-f618-4281-9abf-846b925e23a3",
       "pages": [
@@ -6560,6 +7715,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6595,7 +7761,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2507_NCA_US_0009SageBusinessCloudProductTour_Form02",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "0284b04b-c31b-43c7-9e44-62cb43fccec2",
       "pages": [
@@ -6608,6 +7774,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6645,7 +7822,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2601_NCA_DE_AgnosticFinanzmanagementloesung_form02",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "d1bdc037-7d61-4885-a931-5b128feef9a4",
       "pages": [
@@ -6660,6 +7837,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6699,7 +7887,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2601_NCA_DE_IntacctProduktbroschuere_form1",
-     "detail": "On submit these conversion tags would fire: 98",
+     "detail": "On submit these conversion tags would fire: 98 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "e48c1d7c-1337-486a-855a-988204cbde34",
       "pages": [
@@ -6714,6 +7902,17 @@
       "gate_content_name": "CL_INT_DE_MED_BRO_MOFU_Produktbroschuere",
       "fired": [
        "98"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6759,7 +7958,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2602_NCA_DE_AgnosticPagesNextLevelFinance",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "4fee8520-5364-439f-96dd-16a8e8fa8e67",
       "pages": [
@@ -6781,6 +7980,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6818,7 +8028,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2603_NCA_DE_Intacct2026StudieErfolgscode_Form1",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "c94231cf-f33d-4da7-9960-a19f98c4b571",
       "pages": [
@@ -6832,6 +8042,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6869,7 +8090,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2605_NCA_DE_IntacctProdukttour_Form02",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "8224a722-c1cb-4ebc-8dc7-de62b91bda75",
       "pages": [
@@ -6884,6 +8105,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6921,7 +8153,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form01",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "753cbdfe-5a9f-4156-bb07-ed7f9fb2227f",
       "pages": [
@@ -6936,6 +8168,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -6973,7 +8216,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form02",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "a92e20bf-b1d8-4a04-9ab7-6d998d0e540b",
       "pages": [
@@ -6988,6 +8231,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7025,7 +8279,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form03",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "19130846-6edc-439a-9b61-dcb60033880c",
       "pages": [
@@ -7040,6 +8294,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7078,7 +8343,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form04",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "679f9450-f33e-4ef4-80c8-3e3a65ff9fdb",
       "pages": [
@@ -7094,6 +8359,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7131,7 +8407,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form05",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "c43b5822-1897-4f97-8e54-065deb732686",
       "pages": [
@@ -7146,6 +8422,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7183,7 +8470,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form06",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "9dd742bc-851d-4407-880e-3f58bde3f734",
       "pages": [
@@ -7198,6 +8485,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7237,7 +8535,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_2606_NCA_DE_IntacctAngebot",
-     "detail": "On submit these conversion tags would fire: 98, 389, 406",
+     "detail": "On submit these conversion tags would fire: 98, 389, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "8aad00d2-dc41-4c21-a0de-c10b3b35c359",
       "pages": [
@@ -7254,6 +8552,17 @@
        "98",
        "389",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7291,7 +8600,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:INT_CON_NCA_US_EngagewareBookingReqPricing",
-     "detail": "On submit these conversion tags would fire: 98, 389, 406",
+     "detail": "On submit these conversion tags would fire: 98, 389, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "04b3d937-2c5a-4031-9ed1-22c4d9c7b90b",
       "pages": [
@@ -7306,6 +8615,17 @@
        "98",
        "389",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7350,7 +8670,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:NPS_24Q1_NCA_DE_AllgemeinesKontaktformular",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "da009dcd-dad5-451d-9f42-ccccf715587b",
       "pages": [
@@ -7371,6 +8691,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7408,7 +8739,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:OTH_2610_NCA_DE_SageBeratungAnfordern",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "90827784-3adf-46e8-8663-915ce0c46f0e",
       "pages": [
@@ -7422,6 +8753,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7460,7 +8802,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:S50_CON_NCA_DE_S50ConnectedBeratung",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "5edeeedd-b843-4cff-af51-37cb2a358e54",
       "pages": [
@@ -7475,6 +8817,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7523,7 +8876,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:S50_PDF_NCA_DE_S50HWInfopaket",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "a09b7209-46a5-488b-b239-552899c3b81c",
       "pages": [
@@ -7548,6 +8901,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7594,7 +8958,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:S50_QUO_NCA_DE_S50HWAngebot",
-     "detail": "On submit these conversion tags would fire: 98, 406",
+     "detail": "On submit these conversion tags would fire: 98, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "d6a4cb33-c42d-4627-b9c4-5d7e7c7a3f6d",
       "pages": [
@@ -7617,6 +8981,17 @@
       "fired": [
        "98",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7655,7 +9030,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:S50_TRL_NCA_DE_TrialS50ConnectedComfort",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b408beff-1958-41f9-9d02-4c0a90c99734",
       "pages": [
@@ -7670,6 +9045,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7708,7 +9094,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:S50_TRL_NCA_DE_TrialS50ConnectedProfessional",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "7d5d4444-fb00-4487-90fc-fb50af2b2fa5",
       "pages": [
@@ -7723,6 +9109,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7762,7 +9159,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:S50_TRL_NCA_DE_TrialS50ConnectedStandard",
-     "detail": "On submit these conversion tags would fire: 98, 405",
+     "detail": "On submit these conversion tags would fire: 98, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "6e8abcd5-bfe5-4ee4-8ef4-f9e9fc48527c",
       "pages": [
@@ -7778,6 +9175,17 @@
       "fired": [
        "98",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7816,7 +9224,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_2408_NCA_DE_X3SwitcherCampaign_Callback",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "2e32c3c1-ac6e-4f63-9eb7-fcdf1001b378",
       "pages": [
@@ -7832,6 +9240,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7870,7 +9289,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_2408_NCA_DE_X3SwitcherCampaign_Producttour",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "b66ef8d2-3dc5-499f-a2b1-9ba4053f4d4c",
       "pages": [
@@ -7886,6 +9305,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7928,7 +9358,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_24Q1_NCA_DE_X3EBkEnterpriseBusinessMgt",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "7258c76e-c1a8-4ac4-970e-1c09106b54a7",
       "pages": [
@@ -7947,6 +9377,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -7989,7 +9430,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_24Q1_NCA_DE_X3EBkMehrAlsERP",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "5c90b822-0746-4835-8918-a3d9390811aa",
       "pages": [
@@ -8008,6 +9449,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -8050,7 +9502,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_24Q1_NCA_DE_X3EBkProjektmanagement",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "47d67b3a-2bdd-4fc7-8b09-085bcd357e6d",
       "pages": [
@@ -8069,6 +9521,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -8114,7 +9577,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_24Q1_NCA_DE_X3InfopaketDigitalisierung",
-     "detail": "On submit these conversion tags would fire: 98, 407",
+     "detail": "On submit these conversion tags would fire: 98, 407 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "3df2c3de-9adb-40f3-9ad6-03065c57bae7",
       "pages": [
@@ -8136,6 +9599,17 @@
       "fired": [
        "98",
        "407"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -8179,7 +9653,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_24Q1_NCA_DE_X3Produkttour",
-     "detail": "On submit these conversion tags would fire: 98, 389, 405",
+     "detail": "On submit these conversion tags would fire: 98, 389, 405 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "5fd03345-2340-4aa0-a0ae-8887809e9c00",
       "pages": [
@@ -8200,6 +9674,17 @@
        "98",
        "389",
        "405"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -8245,7 +9730,7 @@
      "severity": "red",
      "result": "pass",
      "target": "form:SX3_24Q1_NCA_DE_X3ProdukttourRueckruf",
-     "detail": "On submit these conversion tags would fire: 98, 389, 406",
+     "detail": "On submit these conversion tags would fire: 98, 389, 406 (platforms: eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok)",
      "evidence": {
       "gate_id": "af87415a-8d9f-48f9-9fa9-a3d0115e91ef",
       "pages": [
@@ -8268,6 +9753,17 @@
        "98",
        "389",
        "406"
+      ],
+      "vendors": [
+       "eloqua",
+       "floodlight",
+       "linkedin",
+       "meta",
+       "microsoft_uet",
+       "openai",
+       "quantcast",
+       "sixsense",
+       "tiktok"
       ]
      }
     },
@@ -8324,7 +9820,7 @@
      "severity": "red",
      "result": "pass",
      "target": "de-cp-payroll-standard-shopping",
-     "detail": "Banner visible",
+     "detail": "Consent banner visible",
      "evidence": {}
     },
     {
@@ -8504,7 +10000,7 @@
      "severity": "red",
      "result": "pass",
      "target": "de-cp-hr-zeiterfassung",
-     "detail": "Banner visible",
+     "detail": "Consent banner visible",
      "evidence": {}
     },
     {
@@ -8674,7 +10170,7 @@
      "severity": "red",
      "result": "pass",
      "target": "de-cp-sage-intacct",
-     "detail": "Banner visible",
+     "detail": "Consent banner visible",
      "evidence": {}
     },
     {
@@ -8861,7 +10357,7 @@
      "severity": "red",
      "result": "pass",
      "target": "de-produkte-sage-active",
-     "detail": "Banner visible",
+     "detail": "Consent banner visible",
      "evidence": {}
     },
     {
@@ -9060,7 +10556,7 @@
      "severity": "red",
      "result": "pass",
      "target": "de-cp-webinar-sage-x3",
-     "detail": "Banner visible",
+     "detail": "Consent banner visible",
      "evidence": {}
     },
     {
@@ -9201,140 +10697,929 @@
   },
   "AT": {
    "name": "Austria",
-   "tealium_profile": "de-at",
+   "tealium_profile": "GTM-PS6MXC",
    "rating": {
-    "status": "green",
+    "status": "yellow",
     "red_count": 0,
-    "yellow_count": 0,
+    "yellow_count": 10,
     "site_down": [],
     "blocked_pages": [],
-    "coverage": "tealium_only",
+    "coverage": "full",
     "acknowledged_count": 0,
-    "pages_checked": 0,
-    "pages_configured": 18
+    "pages_checked": 6,
+    "pages_configured": 6
    },
-   "status": "green",
-   "source": "none",
+   "status": "yellow",
+   "source": "playwright",
    "baseline_confirmed": null,
    "utag": {
-    "publish_version": "202610211149",
+    "publish_version": "GTM-PS6MXC v13",
     "changed": false,
     "diff": {
      "changed": false,
+     "first_snapshot": true,
      "items": [],
      "conversion_relevant": false
     }
    },
    "pages": [
     {
-     "id": "at-home",
-     "url": "https://www.sage.com/de-at/",
-     "type": "content"
-    },
-    {
-     "id": "at-produkte",
-     "url": "https://www.sage.com/de-at/produkte/",
+     "id": "at-dpw-sage-dpw",
+     "url": "https://www.sagedpw.at/loesungen/sage-dpw/",
      "type": "product"
     },
     {
-     "id": "at-buchhaltung",
-     "url": "https://www.sage.com/de-at/buchhaltung-software/",
+     "id": "at-dpw-zeiterfassung",
+     "url": "https://www.sagedpw.at/hr-software/zeiterfassung/",
      "type": "landing_page"
     },
     {
-     "id": "at-fakturierung",
-     "url": "https://www.sage.com/de-at/buchhaltung-software/fakturierung/",
+     "id": "at-dpw-lohn-outsourcing",
+     "url": "https://www.sagedpw.at/loesungen/sage-dpw-lohn-outsourcing/",
+     "type": "product"
+    },
+    {
+     "id": "at-dpw-lohnverrechnung",
+     "url": "https://www.sagedpw.at/hr-software/lohnverrechnung/",
      "type": "landing_page"
     },
     {
-     "id": "at-rechnungen",
-     "url": "https://www.sage.com/de-at/buchhaltung-software/rechnungen/",
+     "id": "at-dpw-reisekostenabrechnung",
+     "url": "https://www.sagedpw.at/hr-software/reisekostenabrechnung/",
      "type": "landing_page"
     },
     {
-     "id": "at-erp",
-     "url": "https://www.sage.com/de-at/erp/",
+     "id": "at-dpw-fairpay",
+     "url": "https://www.sagedpw.at/hr-software/fairpay/",
      "type": "landing_page"
-    },
-    {
-     "id": "at-erp-cloud",
-     "url": "https://www.sage.com/de-at/erp/cloud/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-erp-klein",
-     "url": "https://www.sage.com/de-at/erp/kleinunternehmen/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-bms",
-     "url": "https://www.sage.com/de-at/erp/business-management-software/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-hr-software",
-     "url": "https://www.sage.com/de-at/hr-software/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-zeiterfassung",
-     "url": "https://www.sage.com/de-at/hr-software/zeiterfassung/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-lohnverrechnung",
-     "url": "https://www.sage.com/de-at/lohnverrechnungssoftware/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-lager",
-     "url": "https://www.sage.com/de-at/lagerverwaltung/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-crm",
-     "url": "https://www.sage.com/de-at/crm-software/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-produktion",
-     "url": "https://www.sage.com/de-at/branchen/produktion/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-handel",
-     "url": "https://www.sage.com/de-at/branchen/handel/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-kmu",
-     "url": "https://www.sage.com/de-at/unternehmensgroessen/mittlere-unternehmen/",
-     "type": "landing_page"
-    },
-    {
-     "id": "at-kontakt",
-     "url": "https://www.sage.com/de-at/ueber-uns/kontakt/",
-     "type": "form"
     }
    ],
    "checks": [
     {
-     "id": "TEAL-05",
-     "title": "utag.js reachable on the Tealium CDN",
+     "id": "GTM-05",
+     "title": "GTM container published and readable",
      "severity": "site_down",
      "result": "pass",
      "target": "market",
-     "detail": "Publish 202610211149 (24 tags)",
+     "detail": "GTM-PS6MXC version 13 (12 tags)",
      "evidence": {}
     },
     {
-     "id": "TEAL-04",
-     "title": "Tealium publish detected (utag.js changed)",
+     "id": "GTM-04",
+     "title": "GTM publish detected",
      "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "GTM-06",
+     "title": "Conversion tags live in the container",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Floodlight counter 5195550/sageg0/sage_013; Floodlight counter 5195550/sageg0/sage_012; Conversion Linker; Conversion Linker",
+     "evidence": {}
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sagedpw.at/loesungen/sage-dpw/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "Sage DPW Cloud – die effiziente Software für alle HR-Themen",
+     "evidence": {}
+    },
+    {
+     "id": "GTM-01",
+     "title": "Google Tag Manager container loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "GTM-PS6MXC loaded",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "Usercentrics banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "Consent groups: DoubleClick Floodlight:1,Google Tag Manager:1,Google Analytics:1,Usercentrics Consent Management Platform:1,Cloudflare:1,Infopaket:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-dpw-sage-dpw",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": []
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794833951.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "1/1 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=1501332365.1794833950&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sagedpw.at/hr-software/zeiterfassung/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "Zeiterfassungssoftware: So flexibel wie die Arbeitszeit | Sage DPW",
+     "evidence": {}
+    },
+    {
+     "id": "GTM-01",
+     "title": "Google Tag Manager container loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "GTM-PS6MXC loaded",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "Usercentrics banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "Consent groups: DoubleClick Floodlight:1,Google Tag Manager:1,Google Analytics:1,Usercentrics Consent Management Platform:1,Cloudflare:1,Infopaket:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": []
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794833966.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&auid=1885441593.1794833966&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DT"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sagedpw.at/loesungen/sage-dpw-lohn-outsourcing/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "Sage DPW Lohn-Outsourcing | Sage DPW",
+     "evidence": {}
+    },
+    {
+     "id": "GTM-01",
+     "title": "Google Tag Manager container loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "GTM-PS6MXC loaded",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "Usercentrics banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "Consent groups: DoubleClick Floodlight:1,Google Tag Manager:1,Google Analytics:1,Usercentrics Consent Management Platform:1,Cloudflare:1,Infopaket:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": [],
+       "other:googletagmanager.com": []
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794833982.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=1&auid=202275831.1794833982&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261116%26msclkid%3DT"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sagedpw.at/hr-software/lohnverrechnung/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "Lohnverrechnungsprogramm Österreich | Sage DPW",
+     "evidence": {}
+    },
+    {
+     "id": "GTM-01",
+     "title": "Google Tag Manager container loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "GTM-PS6MXC loaded",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "Usercentrics banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "Consent groups: DoubleClick Floodlight:1,Google Tag Manager:1,Google Analytics:1,Usercentrics Consent Management Platform:1,Cloudflare:1,Infopaket:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": []
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794833998.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=2085857726.1794833998&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261116%26msclk"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sagedpw.at/hr-software/reisekostenabrechnung/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "Reisekostenabrechnung einfach per Software abwickeln | Sage DPW",
+     "evidence": {}
+    },
+    {
+     "id": "GTM-01",
+     "title": "Google Tag Manager container loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "GTM-PS6MXC loaded",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "Usercentrics banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "Consent groups: DoubleClick Floodlight:1,Google Tag Manager:1,Google Analytics:1,Usercentrics Consent Management Platform:1,Cloudflare:1,Infopaket:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": []
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794834014.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&auid=73565944.1794834014&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTES"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sagedpw.at/hr-software/fairpay/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "Sage DPW | FairPay",
+     "evidence": {}
+    },
+    {
+     "id": "GTM-01",
+     "title": "Google Tag Manager container loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "GTM-PS6MXC loaded",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "Usercentrics banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "Consent groups: DoubleClick Floodlight:1,Google Tag Manager:1,Google Analytics:1,Usercentrics Consent Management Platform:1,Cloudflare:1,Infopaket:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-dpw-fairpay",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": []
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794834030.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&auid=1804403432.1794834030&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261116%26msclkid%3DTEST_MON_20261116%26fbclid%3DTEST_MON"
+     }
+    },
+    {
+     "id": "JRNY-01",
+     "title": "Journey step reachable",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-j-infopaket#1",
+     "detail": "https://www.sagedpw.at/hr-software/zeiterfassung/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-j-infopaket#1",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": []
+      }
+     }
+    },
+    {
+     "id": "JRNY-01",
+     "title": "Journey step reachable",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-j-infopaket#2",
+     "detail": "https://www.sagedpw.at/kostenloses-infopaket/?file=Sage-DPW-Zeiterfassung.zip&product=zeiterfassung",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-j-infopaket#2",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ]
+      }
+     }
+    },
+    {
+     "id": "JRNY-01",
+     "title": "Journey step reachable",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-j-kontakt#1",
+     "detail": "https://www.sagedpw.at/hr-software/zeiterfassung/?gclid=TEST_MON_20261116&msclkid=TEST_MON_20261116&fbclid=TEST_MON_20261116&utm_source=tracking-monitor&utm_medium=monitoring",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-j-kontakt#1",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ],
+       "other:doubleclick.net": [],
+       "other:googleadservices.com": []
+      }
+     }
+    },
+    {
+     "id": "JRNY-01",
+     "title": "Journey step reachable",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "at-j-kontakt#2",
+     "detail": "https://www.sagedpw.at/kontaktformular/",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "at-j-kontakt#2",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-M4HF0CKEGQ"
+       ]
+      }
+     }
     }
    ],
    "acks_applied": [],

@@ -133,6 +133,11 @@ vendors:
 # Hosts that are never counted as tracking hits (site assets, consent tooling, fonts …).
 ignore_hosts:
   - "(^|\\.)sage\\.com$"
+  - "(^|\\.)sageimagine\\.com$"      # Sage's own ecommerce/pricing API (product cards)
+  - "(^|\\.)boltdns\\.net$"          # Brightcove video delivery (content, not tracking)
+  - "(^|\\.)brightcovecdn\\.com$"
+  - "^edge\\.api\\.brightcove\\.com$"
+  - "(^|\\.)mypurecloud\\.ie$"       # Genesys chat widget
   - "(^|\\.)cookielaw\\.org$"
   - "(^|\\.)onetrust\\.com$"
   - "^tags\\.tiqcdn\\.com$"

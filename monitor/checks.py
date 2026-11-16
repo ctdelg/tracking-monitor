@@ -28,6 +28,8 @@ TITLES = {
     "CONS-02": "No marketing tags or cookies before consent",
     "CONS-03": "Google Consent Mode defaults to denied",
     "CONS-04": "Consent stored after 'Accept all'",
+    "CONS-05": "No other third-party requests before consent",
+    "PAGE-03": "Landing page loads without redirect",
     "TAG": "Expected tag fires after consent",
     "TAG-ID": "Tag fires with the expected account ID",
     "TAG-NEW": "New tag not in baseline",
@@ -146,6 +148,14 @@ def check_page(visit: dict, market: dict, platforms: Platforms, baseline: dict |
                           f"Redirected away from the market ({final}).", {"final_url": final}))
         return out
     out.append(result("PAGE-01", "site_down", "pass", tid, f"HTTP {status}", {"final_url": final}))
+    want_path, got_path = urlparse(visit["url"]).path.rstrip("/"), urlparse(final).path.rstrip("/")
+    if want_path != got_path:
+        to_home = got_path in (prefix.rstrip("/"), "")
+        out.append(result("PAGE-03", "yellow" if to_home else "info", "warn", tid,
+                          (f"Paid landing page redirects to the market homepage ({final}) - the campaign "
+                           "probably points to an expired page." if to_home else
+                           f"Redirects to {final}. Update the campaign final URL to avoid the extra hop."),
+                          {"requested": visit["url"], "final_url": final}))
 
     pre, post = visit.get("pre"), visit.get("post")
     if not pre:
@@ -180,7 +190,13 @@ def check_page(visit: dict, market: dict, platforms: Platforms, baseline: dict |
 
     pre_hits = classify(pre.get("requests", []), platforms)
     violations = [h for h in pre_hits
-                  if platforms.is_marketing(h["vendor"]) and not _is_denied_google_ping(h)]
+                  if h["vendor"] in platforms.vendors and platforms.is_marketing(h["vendor"])
+                  and not _is_denied_google_ping(h)]
+    unknown_pre = sorted({h["vendor"].split(":", 1)[1] for h in pre_hits if h["vendor"].startswith("other:")})
+    out.append(result("CONS-05", "yellow", "warn" if unknown_pre else "pass", tid,
+                      "Third-party requests before consent (not an ad tag, review with the privacy team): "
+                      + ", ".join(unknown_pre) if unknown_pre else "No other third-party requests before consent",
+                      {"hosts": unknown_pre}))
     bad_cookies = sorted(set(pre.get("cookies", {})) & platforms.marketing_cookies)
     if violations or bad_cookies:
         names = sorted({platforms.display_name(h["vendor"]) for h in violations})

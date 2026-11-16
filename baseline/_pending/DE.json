@@ -1,8 +1,66 @@
 {
  "market": "DE",
- "proposed_from": "2026-11-14",
+ "proposed_from": "2026-11-16",
  "urls": {
-  "de-preise": {
+  "de-cp-payroll-standard-shopping": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "970123043"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "other:adnxs.com": [],
+    "other:doubleclick.net": [],
+    "other:ojrq.net": [],
+    "other:openai.com": [],
+    "other:sjv.io": [],
+    "tealium_collect": [],
+    "tiktok": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  },
+  "de-cp-hr-zeiterfassung": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "970123043"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "other:adnxs.com": [],
+    "other:brightcove.com": [],
+    "other:doubleclick.net": [],
+    "other:openai.com": [],
+    "other:sjv.io": [],
+    "tealium_collect": [],
+    "tiktok": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  },
+  "de-cp-sage-intacct": {
    "post": {
     "floodlight": [
      "5195550"
@@ -22,27 +80,87 @@
     "microsoft_uet": [
      "12002546"
     ],
-    "other:6sc.co": [],
-    "other:6sense.com": [],
     "other:adnxs.com": [],
     "other:bing.com": [],
-    "other:contentsquare.net": [],
     "other:doubleclick.net": [],
-    "other:entfabric-sage.com": [],
-    "other:on.aws": [],
     "other:openai.com": [],
-    "other:optimizely.com": [],
     "other:quantserve.com": [],
-    "other:segment.com": [],
-    "other:segmentapis.com": [],
-    "other:siteimproveanalytics.io": [],
     "other:sjv.io": [],
-    "other:speedcurve.com": [],
-    "other:zi-scripts.com": [],
     "quantcast": [
      "p-E6KY6asqFcmVm"
     ],
-    "sixsense": [],
+    "tealium_collect": [],
+    "tiktok": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  },
+  "de-produkte-sage-active": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "970123043"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "microsoft_uet": [
+     "12002546"
+    ],
+    "other:adnxs.com": [],
+    "other:bing.com": [],
+    "other:doubleclick.net": [],
+    "other:openai.com": [],
+    "other:quantserve.com": [],
+    "other:sjv.io": [],
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
+    ],
+    "tealium_collect": [],
+    "tiktok": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   }
+  },
+  "de-cp-webinar-sage-x3": {
+   "post": {
+    "floodlight": [
+     "5195550"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "970123043"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "microsoft_uet": [
+     "12002546"
+    ],
+    "other:adnxs.com": [],
+    "other:bing.com": [],
+    "other:doubleclick.net": [],
+    "other:openai.com": [],
+    "other:quantserve.com": [],
+    "other:sjv.io": [],
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
+    ],
     "tealium_collect": [],
     "tiktok": [],
     "zoominfo": [

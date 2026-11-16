@@ -1,0 +1,22 @@
+{
+ "day": "2026-11-16",
+ "written_by": "Claude (interim run, DE sample of 5 paid landing pages)",
+ "summary": "DE stays red for one reason: Floodlight tag 98 does not fire for ecom trial and buy submits (load rule 274, since the Tealium publish of 2026-08-24). Lead forms with a gate_content_name still fire it.\nNew from today's DE sample (5 of 116 paid landing pages):\n- /cp/webinar-sage-x3/ redirects to the DE homepage, so paid clicks to it land on the homepage. Pause or update the campaign.\n- /cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.\n- On the two HR and payroll pages Microsoft UET did not fire, so msclkid was not stored.\n- A Brightcove video player sends player metrics before consent.\nConsent, Floodlight, Google Ads, GA4, LinkedIn, Meta and TikTok work on all five pages, and the gclid is stored everywhere.\nAT, FR, ES and PT show green on Tealium and load-rule checks only: no page checks ran for them today.",
+ "markets": {
+  "DE": {
+   "summary": "5 of 116 landing pages checked in the Claude browser. Floodlight DC-5195550, Google Ads AW-970123043, GA4, LinkedIn and Meta fire on every page. The red status comes from the conversion load rule for ecom (tag 98), not from the landing pages.",
+   "findings": {
+    "CONV-01:ecom_try|market": "Tag 98's load rule requires rule 274 (ga4_customer_lead_type set). Tealium derives that value only from gate_content_name codes (_TRL_, _CON_ ...), and the Next.js checkout sends customer_lead_type=ecom_try without a gate_content_name. Before the publish of 2026-08-24 the tag fired (verified against the archived utag.js of 2026-07-13). Owner: MarTech (Tealium). Fix: drop rule 274 from tag 98, or map customer_lead_type to ga4_customer_lead_type for ecom events.",
+    "CONV-01:ecom_buy|market": "Same cause as ecom_try: rule 274 on tag 98 blocks ecom purchase submits.",
+    "PAGE-03|de-cp-webinar-sage-x3": "The page /de-de/cp/webinar-sage-x3/ no longer exists and redirects to https://www.sage.com/de-de/. Paid clicks land on the homepage instead of a webinar registration. Owner: paid media / agency: pause the ads or point them to a current X3 page.",
+    "PAGE-03|de-cp-hr-zeiterfassung": "Redirects to /cp/hr/zeiterfassungv2/. Tracking still works, but the click ID survives one more hop. Update the final URL in the campaigns to the v2 page.",
+    "CONS-05|de-cp-hr-zeiterfassung": "The embedded Brightcove video player sends player and impression metrics to metrics.brightcove.com before consent. This is not an ad tag, but it is third-party tracking before consent. Ask the privacy / web team whether the player should wait for consent or run in privacy mode."
+   }
+  },
+  "AT": {"summary": "No page checks today (Tealium and load-rule checks only). Reminder: the AT profile has no active Floodlight or Google Ads conversion tags."},
+  "FR": {"summary": "No page checks today (Tealium and load-rule checks only)."},
+  "ES": {"summary": "No page checks today (Tealium and load-rule checks only)."},
+  "PT": {"summary": "No page checks today (Tealium and load-rule checks only)."}
+ },
+ "publish": {}
+}

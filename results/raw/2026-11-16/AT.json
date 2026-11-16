@@ -1,0 +1,302 @@
+{
+ "market": "AT",
+ "day": "2026-11-16",
+ "tealium": {
+  "fetch": {
+   "url": "https://tags.tiqcdn.com/utag/sage/de-at/prod/utag.js",
+   "status": 200,
+   "last_modified": "Wed, 21 Oct 2026 11:50:13 GMT",
+   "error": null
+  },
+  "parsed": {
+   "publish_version": "202610211149",
+   "sha256": "b265354ebe9301667d36589e849e76defd3f44544bec27a00d1038c94d06b971",
+   "tags": {
+    "314": {
+     "load": "4",
+     "send": "1",
+     "v": "202402271342",
+     "tid": "7143"
+    },
+    "357": {
+     "load": "1",
+     "send": "1",
+     "v": "202507231449",
+     "tid": "20067"
+    },
+    "334": {
+     "load": "(((utag.cond[157]||utag.cond[163]||utag.cond[164]||utag.cond[158]||utag.cond[162]||utag.cond[193]||utag.cond[147]||utag.cond[181]||utag.cond[182]||utag.cond[156]||utag.cond[188]||utag.cond[192]||utag.cond[119])&&(utag.cond[19]||utag.cond[146]||utag.cond[180]||utag.cond[190])))",
+     "send": "1",
+     "v": "202604091210",
+     "tid": "12047"
+    },
+    "5": {
+     "load": "utag.cond[2]",
+     "send": "1",
+     "v": "202107210820",
+     "tid": "19116"
+    },
+    "188": {
+     "load": "(((utag.cond[36])&&!(utag.cond[196])))",
+     "send": "1",
+     "v": "202508060901",
+     "tid": "20010"
+    },
+    "201": {
+     "load": "utag.cond[24]",
+     "send": "1",
+     "v": "202209071304",
+     "tid": "7132"
+    },
+    "242": {
+     "load": "(((utag.cond[132]||utag.cond[67])&&!(utag.cond[144]||utag.cond[151])))",
+     "send": "1",
+     "v": "202610121324",
+     "tid": "7142"
+    },
+    "290": {
+     "load": "((utag.cond[162]||utag.cond[163]||utag.cond[164]||utag.cond[119]||utag.cond[157]||utag.cond[147]))",
+     "send": "1",
+     "v": "202407301021",
+     "tid": "14037"
+    },
+    "323": {
+     "load": "(((utag.cond[163]||utag.cond[164]||utag.cond[157]||utag.cond[158]||utag.cond[159]||utag.cond[160]||utag.cond[147]||utag.cond[156]||utag.cond[181]||utag.cond[182]||utag.cond[119])&&(utag.cond[179])))",
+     "send": "1",
+     "v": "202601191522",
+     "tid": "20067"
+    },
+    "324": {
+     "load": "(((utag.cond[157]||utag.cond[147]||utag.cond[193])&&(utag.cond[180])))",
+     "send": "1",
+     "v": "202501201432",
+     "tid": "14037"
+    },
+    "348": {
+     "load": "((utag.cond[147]||utag.cond[193]||utag.cond[162]||utag.cond[156]||utag.cond[119]||utag.cond[158]||utag.cond[157]||utag.cond[198]))",
+     "send": "1",
+     "v": "202606091451",
+     "tid": "20119"
+    },
+    "352": {
+     "load": "(((utag.cond[19])&&(utag.cond[185])))",
+     "send": "1",
+     "v": "202603051504",
+     "tid": "4049"
+    },
+    "353": {
+     "load": "(((utag.cond[146]||utag.cond[190])&&(utag.cond[185])))",
+     "send": "1",
+     "v": "202601191522",
+     "tid": "4049"
+    },
+    "355": {
+     "load": "1",
+     "send": "1",
+     "v": "202409051449",
+     "tid": "20010"
+    },
+    "362": {
+     "load": "(((utag.cond[146])&&(utag.cond[188])))",
+     "send": "1",
+     "v": "202410020938",
+     "tid": "12047"
+    },
+    "368": {
+     "load": "(((utag.cond[119]||utag.cond[182]||utag.cond[181]||utag.cond[193]||utag.cond[157]||utag.cond[158]||utag.cond[163]||utag.cond[164]||utag.cond[162]||utag.cond[147]||utag.cond[156])&&(utag.cond[19]||utag.cond[191]||utag.cond[180]||utag.cond[146]||utag.cond[190])))",
+     "send": "1",
+     "v": "202606091451",
+     "tid": "6037"
+    },
+    "377": {
+     "load": "1",
+     "send": "1",
+     "v": "202503041305",
+     "tid": "3131"
+    },
+    "381": {
+     "load": "(((utag.cond[19])&&(utag.cond[147]||utag.cond[193]||utag.cond[162]||utag.cond[198]||utag.cond[163]||utag.cond[164]||utag.cond[192]||utag.cond[157]||utag.cond[158]||utag.cond[199])))",
+     "send": "1",
+     "v": "202503061725",
+     "tid": "17001"
+    },
+    "382": {
+     "load": "(((utag.cond[146]||utag.cond[190])&&(utag.cond[187])&&(utag.cond[147]||utag.cond[193]||utag.cond[162]||utag.cond[198]||utag.cond[163]||utag.cond[164]||utag.cond[192]||utag.cond[157]||utag.cond[158]||utag.cond[199])))",
+     "send": "1",
+     "v": "202503061725",
+     "tid": "17001"
+    },
+    "383": {
+     "load": "(((utag.cond[180])&&(utag.cond[147]||utag.cond[193]||utag.cond[197]||utag.cond[162]||utag.cond[198]||utag.cond[163]||utag.cond[164]||utag.cond[192]||utag.cond[157]||utag.cond[158]||utag.cond[199])))",
+     "send": "1",
+     "v": "202503061725",
+     "tid": "17001"
+    },
+    "416": {
+     "load": "1",
+     "send": "1",
+     "v": "202508270952",
+     "tid": "20067"
+    },
+    "435": {
+     "load": "((utag.cond[147]||utag.cond[182]||utag.cond[181]||utag.cond[158]||utag.cond[119]))",
+     "send": "1",
+     "v": "202610211149",
+     "tid": "18048"
+    },
+    "446": {
+     "load": "(((utag.cond[19]||utag.cond[146]||utag.cond[180])&&(utag.cond[182]||utag.cond[147]||utag.cond[119]||utag.cond[158]||utag.cond[164]||utag.cond[157])))",
+     "send": "1",
+     "v": "202610211149",
+     "tid": "15038"
+    },
+    "447": {
+     "load": "(!(utag.cond[206]))",
+     "send": "1",
+     "v": "202610211149",
+     "tid": "20067"
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion": {
+   "ok": true,
+   "results": [
+    {
+     "name": "ecom_try",
+     "fired": [
+      "5",
+      "188",
+      "242",
+      "314",
+      "355",
+      "357",
+      "377",
+      "416",
+      "447"
+     ],
+     "true_rules": [
+      "2",
+      "36",
+      "67",
+      "132",
+      "146",
+      "179"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": []
+    },
+    {
+     "name": "ecom_buy",
+     "fired": [
+      "5",
+      "188",
+      "242",
+      "314",
+      "355",
+      "357",
+      "377",
+      "416",
+      "447"
+     ],
+     "true_rules": [
+      "2",
+      "36",
+      "67",
+      "132",
+      "146",
+      "179"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": []
+    },
+    {
+     "name": "gated_trial",
+     "fired": [
+      "5",
+      "188",
+      "242",
+      "314",
+      "355",
+      "357",
+      "377",
+      "416",
+      "447"
+     ],
+     "true_rules": [
+      "2",
+      "36",
+      "67",
+      "132",
+      "146",
+      "179",
+      "187",
+      "190"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "trial_demo",
+      "facebook_form_submission_type": "StartTrial"
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": []
+    },
+    {
+     "name": "gated_contact",
+     "fired": [
+      "5",
+      "188",
+      "242",
+      "314",
+      "355",
+      "357",
+      "377",
+      "416",
+      "447"
+     ],
+     "true_rules": [
+      "2",
+      "36",
+      "67",
+      "132",
+      "146",
+      "179",
+      "187",
+      "190"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "contact",
+      "facebook_form_submission_type": "Contact"
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": []
+    }
+   ]
+  }
+ }
+}

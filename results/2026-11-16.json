@@ -1,0 +1,2404 @@
+{
+ "schema_version": 1,
+ "monitor_version": "1.0.0",
+ "day": "2026-11-16",
+ "generated_at": "2026-11-16T08:46:55Z",
+ "global": {
+  "status": "red",
+  "incidents": [],
+  "system_notice": null
+ },
+ "markets": {
+  "DE": {
+   "name": "Germany",
+   "tealium_profile": "de-de",
+   "rating": {
+    "status": "red",
+    "red_count": 2,
+    "yellow_count": 7,
+    "site_down": [],
+    "blocked_pages": [],
+    "coverage": "partial",
+    "acknowledged_count": 0,
+    "pages_checked": 5,
+    "pages_configured": 116
+   },
+   "status": "red",
+   "source": "claude-browser",
+   "baseline_confirmed": null,
+   "utag": {
+    "publish_version": "202611051049",
+    "changed": false,
+    "diff": {
+     "changed": false,
+     "items": [],
+     "conversion_relevant": false
+    }
+   },
+   "pages": [
+    {
+     "id": "de-cp-payroll-standard-shopping",
+     "url": "https://www.sage.com/de-de/cp/payroll-standard-shopping/",
+     "type": "pricing"
+    },
+    {
+     "id": "de-cp-lohnabrechnung-mobile",
+     "url": "https://www.sage.com/de-de/cp/lohnabrechnung-mobile/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-payroll-essentials-shopping",
+     "url": "https://www.sage.com/de-de/cp/payroll-essentials-shopping/",
+     "type": "pricing"
+    },
+    {
+     "id": "de-cp-lohnabrechnungv6",
+     "url": "https://www.sage.com/de-de/cp/lohnabrechnungv6/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-payroll-premium-shopping",
+     "url": "https://www.sage.com/de-de/cp/payroll-premium-shopping/",
+     "type": "pricing"
+    },
+    {
+     "id": "de-unternehmen-ueber-sage",
+     "url": "https://www.sage.com/de-de/unternehmen/ueber-sage/",
+     "type": "content"
+    },
+    {
+     "id": "de-cp-hr-recruiting",
+     "url": "https://www.sage.com/de-de/cp/hr/recruiting/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-dienstplanung",
+     "url": "https://www.sage.com/de-de/cp/hr/dienstplanung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-zeiterfassung",
+     "url": "https://www.sage.com/de-de/cp/hr/zeiterfassung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-produkte-sage-hr-payroll",
+     "url": "https://www.sage.com/de-de/produkte/sage-hr-payroll/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-hr-people-analytics",
+     "url": "https://www.sage.com/de-de/cp/hr/people-analytics/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-produkte-sage-hr-suite-personal-software-persona",
+     "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/personalabrechnung/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-hr-ausgabenmanagement",
+     "url": "https://www.sage.com/de-de/cp/hr/ausgabenmanagement/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-performance-management",
+     "url": "https://www.sage.com/de-de/cp/hr/performance-management/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-hr-software-personalkostenplanung",
+     "url": "https://www.sage.com/de-de/hr-software/personalkostenplanung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-personalmanagement",
+     "url": "https://www.sage.com/de-de/cp/hr/personalmanagement/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-digitale-personalakte",
+     "url": "https://www.sage.com/de-de/cp/hr/digitale-personalakte/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-abwesenheitsmanagement",
+     "url": "https://www.sage.com/de-de/cp/hr/abwesenheitsmanagement/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-personalabrechnung",
+     "url": "https://www.sage.com/de-de/cp/hr/personalabrechnung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-hr-software-entgelttransparenzgesetz",
+     "url": "https://www.sage.com/de-de/hr-software/entgelttransparenzgesetz/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-hr-software-personaleinsatzplanung-software",
+     "url": "https://www.sage.com/de-de/hr-software/personaleinsatzplanung-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sbc-hr-funktionen-mitarbeiter-app",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/hr/funktionen/mitarbeiter-app/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-hr-suite-personal-software",
+     "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-hr-suite-personal-software-zeitwir",
+     "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/zeitwirtschaft/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-hr-suite-personal-software-reiseko",
+     "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/reisekosten/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-hr-suite-personal-software-bewerbe",
+     "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/bewerbermanagement-software/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-hr-suite-personal-software-persona-2",
+     "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/personalmanagement/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-people-talent-management",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/talent-management/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-people-personaldaten-analyse",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/personaldaten-analyse/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-people",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/people/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-people-mitarbeitererfahrung-management",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/mitarbeitererfahrung-management/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-people-personal-management",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/personal-management/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-people-lohngestaltung",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/lohngestaltung/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-hr",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/hr/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-hr-zeiterfassungv2",
+     "url": "https://www.sage.com/de-de/cp/hr/zeiterfassungv2/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-hr-hr-software",
+     "url": "https://www.sage.com/de-de/cp/hr/hr-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-vertrauen-sicherheit",
+     "url": "https://www.sage.com/de-de/vertrauen-sicherheit/",
+     "type": "content"
+    },
+    {
+     "id": "de-hr-software-mitarbeiterportal",
+     "url": "https://www.sage.com/de-de/hr-software/mitarbeiterportal/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-hr-software-zeiterfassung",
+     "url": "https://www.sage.com/de-de/hr-software/zeiterfassung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-hr-software",
+     "url": "https://www.sage.com/de-de/hr-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sbc-intacct",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-erp-cashflow",
+     "url": "https://www.sage.com/de-de/cp/erp/cashflow/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sbc-intacct-produktfunktionen",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/produktfunktionen/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-intacct-pf-kernfunktionen",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/produktfunktionen/kernfunktionen/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-intacct-pricing",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/pricing/",
+     "type": "pricing"
+    },
+    {
+     "id": "de-cp-erp-finanzmanagement-loesung",
+     "url": "https://www.sage.com/de-de/cp/erp/finanzmanagement-loesung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-sage-intacct",
+     "url": "https://www.sage.com/de-de/cp/sage-intacct/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sbc-intacct-pf-plattform",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/produktfunktionen/plattform/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-erp-controlling-planung",
+     "url": "https://www.sage.com/de-de/cp/erp/controlling-planung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-erp-billing-debitoren-kreditoren",
+     "url": "https://www.sage.com/de-de/cp/erp/billing-debitoren-kreditoren/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-erp-globales-finanzmanagement",
+     "url": "https://www.sage.com/de-de/cp/erp/globales-finanzmanagement/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-erp-buchhaltung",
+     "url": "https://www.sage.com/de-de/cp/erp/buchhaltung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-branchen-handwerk-metallbauer-und-schlosser",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/metallbauer-und-schlosser/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-buchhaltung-software-online",
+     "url": "https://www.sage.com/de-de/buchhaltung-software/online/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-produkte-sage-active",
+     "url": "https://www.sage.com/de-de/produkte/sage-active/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-50-handwerk",
+     "url": "https://www.sage.com/de-de/produkte/sage-50-handwerk/",
+     "type": "product"
+    },
+    {
+     "id": "de-branchen-handwerk-hoch-und-tiefbau",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/hoch-und-tiefbau/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-active-essentials-shoppingv2",
+     "url": "https://www.sage.com/de-de/cp/active-essentials-shoppingv2/",
+     "type": "pricing"
+    },
+    {
+     "id": "de-cp-active-starter-shopping",
+     "url": "https://www.sage.com/de-de/cp/active-starter-shopping/",
+     "type": "pricing"
+    },
+    {
+     "id": "de-buchhaltung-software",
+     "url": "https://www.sage.com/de-de/buchhaltung-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-branchen-handwerk-tischler-und-schreiner",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/tischler-und-schreiner/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-branchen-handwerk-dachdecker-und-zimmerer",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/dachdecker-und-zimmerer/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-branchen-handwerk-maler-lackierer-und-trockenbau",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/maler-lackierer-und-trockenbau/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-produkte-sage-50connected",
+     "url": "https://www.sage.com/de-de/produkte/sage-50connected/",
+     "type": "product"
+    },
+    {
+     "id": "de-branchen-handwerk-elektriker",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/elektriker/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-branchen-handwerk-raumausstatter",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/raumausstatter/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-unternehmensgroessen-kleinunternehmen",
+     "url": "https://www.sage.com/de-de/unternehmensgroessen/kleinunternehmen/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-produkte-sage-50-handwerk-gewerke",
+     "url": "https://www.sage.com/de-de/produkte/sage-50-handwerk/gewerke/",
+     "type": "product"
+    },
+    {
+     "id": "de-branchen-handwerk-boden-und-fliesenleger",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/boden-und-fliesenleger/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-produkte-sage-50connected-v2",
+     "url": "https://www.sage.com/de-de/produkte/sage-50connected-v2/",
+     "type": "product"
+    },
+    {
+     "id": "de-branchen-handwerk-garten-und-landschaftsbau",
+     "url": "https://www.sage.com/de-de/branchen/handwerk/garten-und-landschaftsbau/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-cp-sage-active-mobile",
+     "url": "https://www.sage.com/de-de/cp/sage-active-mobile/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-buchhaltung-software-mac",
+     "url": "https://www.sage.com/de-de/buchhaltung-software/mac/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-ecommerce",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/ecommerce/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100-crm",
+     "url": "https://www.sage.com/de-de/produkte/sage-100-crm/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-fertigung",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/fertigung/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100cloud",
+     "url": "https://www.sage.com/de-de/produkte/sage-100cloud/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100-erp",
+     "url": "https://www.sage.com/de-de/produkte/sage-100-erp/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-handel",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/handel/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-warenwirtsch",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/warenwirtschaft/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-sales-management",
+     "url": "https://www.sage.com/de-de/produkte/sage-sales-management/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100cloud-online-shop",
+     "url": "https://www.sage.com/de-de/produkte/sage-100cloud/online-shop/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100-warenwirtschaft",
+     "url": "https://www.sage.com/de-de/produkte/sage-100/warenwirtschaft/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100-rechnungswesen",
+     "url": "https://www.sage.com/de-de/produkte/sage-100/rechnungswesen/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-beschaffung",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/beschaffung/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100cloud-produktion",
+     "url": "https://www.sage.com/de-de/produkte/sage-100cloud/produktion/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-technischer",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/technischer-grosshandel/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-kmu",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/kmu/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100cloud-cloud",
+     "url": "https://www.sage.com/de-de/produkte/sage-100cloud/cloud/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100cloud-xrm",
+     "url": "https://www.sage.com/de-de/produkte/sage-100cloud/xrm/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100cloud-rechnungswesen",
+     "url": "https://www.sage.com/de-de/produkte/sage-100cloud/rechnungswesen/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-operations-einsatzbereiche-lagerverwalt",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/lagerverwaltung/",
+     "type": "product"
+    },
+    {
+     "id": "de-produkte-sage-100cloud-warenwirtschaft",
+     "url": "https://www.sage.com/de-de/produkte/sage-100cloud/warenwirtschaft/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-sage-operations-mobile",
+     "url": "https://www.sage.com/de-de/cp/sage-operations-mobile/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sbc-sage-x3",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-x3-produkttour",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/produkttour/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-webinar-sage-x3",
+     "url": "https://www.sage.com/de-de/cp/webinar-sage-x3/",
+     "type": "form"
+    },
+    {
+     "id": "de-sbc-sage-x3-industrie-chemikalien",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/chemikalien/",
+     "type": "product"
+    },
+    {
+     "id": "de-erp-software-produktionsplanung",
+     "url": "https://www.sage.com/de-de/erp-software/produktionsplanung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sbc-sage-x3-industrie-lebensmittel",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/lebensmittel/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-x3-industrie-produktion",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/produktion/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-x3-industrie-distribution",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/distribution/",
+     "type": "product"
+    },
+    {
+     "id": "de-sbc-sage-x3-industrie",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/",
+     "type": "product"
+    },
+    {
+     "id": "de-branchen-dienstleistungsbranche",
+     "url": "https://www.sage.com/de-de/branchen/dienstleistungsbranche/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-erfolgsgeschichten",
+     "url": "https://www.sage.com/de-de/erfolgsgeschichten/",
+     "type": "content"
+    },
+    {
+     "id": "de-sbc-sage-x3-industrie-prozessfertigung",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/prozessfertigung/",
+     "type": "product"
+    },
+    {
+     "id": "de-cp-wechsel-zu-sage-x3",
+     "url": "https://www.sage.com/de-de/cp/wechsel-zu-sage-x3/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-branchen-handel",
+     "url": "https://www.sage.com/de-de/branchen/handel/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-produkte",
+     "url": "https://www.sage.com/de-de/produkte/",
+     "type": "product"
+    },
+    {
+     "id": "de-home",
+     "url": "https://www.sage.com/de-de/",
+     "type": "content"
+    },
+    {
+     "id": "de-unternehmensgroessen-mittlere-unternehmen",
+     "url": "https://www.sage.com/de-de/unternehmensgroessen/mittlere-unternehmen/",
+     "type": "landing_page"
+    },
+    {
+     "id": "de-sage-ai",
+     "url": "https://www.sage.com/de-de/sage-ai/",
+     "type": "content"
+    },
+    {
+     "id": "de-warum-sich-kunden-fuer-sage-entscheiden",
+     "url": "https://www.sage.com/de-de/warum-sich-kunden-fuer-sage-entscheiden/",
+     "type": "content"
+    },
+    {
+     "id": "de-sbc-intacct-resources-white-papers-erfolgscode",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/resources/white-papers/erfolgscode/",
+     "type": "form"
+    },
+    {
+     "id": "de-sbc-intacct-resources-die-neue-oekonomie-der-ki",
+     "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/resources/die-neue-oekonomie-der-ki-im-finanzwesen/",
+     "type": "form"
+    }
+   ],
+   "checks": [
+    {
+     "id": "TEAL-05",
+     "title": "utag.js reachable on the Tealium CDN",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "market",
+     "detail": "Publish 202611051049 (44 tags)",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-04",
+     "title": "Tealium publish detected (utag.js changed)",
+     "severity": "info",
+     "result": "pass",
+     "target": "market",
+     "detail": "No publish since the last run",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:ecom_try",
+     "title": "Conversion tags fire for 'ecom_try' (load rules)",
+     "severity": "red",
+     "result": "fail",
+     "target": "market",
+     "detail": "Event 'ecom_try': tag(s) 98 would NOT fire.",
+     "evidence": {
+      "fired": [
+       "9",
+       "143",
+       "145",
+       "202",
+       "273",
+       "287",
+       "296",
+       "311",
+       "322",
+       "329",
+       "336",
+       "349",
+       "352",
+       "361",
+       "379",
+       "402",
+       "413",
+       "417",
+       "423",
+       "424",
+       "425"
+      ],
+      "true_rules": [
+       "86",
+       "150",
+       "222",
+       "236",
+       "251",
+       "264",
+       "265",
+       "266"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:ecom_buy",
+     "title": "Conversion tags fire for 'ecom_buy' (load rules)",
+     "severity": "red",
+     "result": "fail",
+     "target": "market",
+     "detail": "Event 'ecom_buy': tag(s) 98 would NOT fire.",
+     "evidence": {
+      "fired": [
+       "9",
+       "143",
+       "145",
+       "202",
+       "273",
+       "287",
+       "296",
+       "311",
+       "322",
+       "329",
+       "336",
+       "349",
+       "352",
+       "361",
+       "379",
+       "402",
+       "413",
+       "417",
+       "423",
+       "424",
+       "425"
+      ],
+      "true_rules": [
+       "86",
+       "150",
+       "222",
+       "236",
+       "251",
+       "264",
+       "265",
+       "266"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:gated_trial",
+     "title": "Conversion tags fire for 'gated_trial' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_trial': tag(s) 98 fire.",
+     "evidence": {
+      "fired": [
+       "9",
+       "98",
+       "143",
+       "145",
+       "202",
+       "273",
+       "287",
+       "296",
+       "311",
+       "322",
+       "329",
+       "336",
+       "349",
+       "352",
+       "355",
+       "361",
+       "374",
+       "379",
+       "380",
+       "389",
+       "402",
+       "403",
+       "405",
+       "413",
+       "417",
+       "423",
+       "424",
+       "425"
+      ],
+      "true_rules": [
+       "86",
+       "150",
+       "222",
+       "236",
+       "251",
+       "264",
+       "265",
+       "266",
+       "274",
+       "275",
+       "283",
+       "285",
+       "319",
+       "331",
+       "332",
+       "335",
+       "341"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:gated_contact",
+     "title": "Conversion tags fire for 'gated_contact' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_contact': tag(s) 98 fire.",
+     "evidence": {
+      "fired": [
+       "9",
+       "98",
+       "143",
+       "145",
+       "202",
+       "273",
+       "287",
+       "296",
+       "311",
+       "322",
+       "329",
+       "336",
+       "349",
+       "352",
+       "355",
+       "361",
+       "374",
+       "379",
+       "380",
+       "389",
+       "402",
+       "403",
+       "406",
+       "413",
+       "417",
+       "423",
+       "424",
+       "425"
+      ],
+      "true_rules": [
+       "86",
+       "150",
+       "222",
+       "236",
+       "251",
+       "264",
+       "265",
+       "266",
+       "274",
+       "275",
+       "283",
+       "285",
+       "319",
+       "331",
+       "332",
+       "336",
+       "341"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/de-de/cp/payroll-standard-shopping/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "Sage Payroll: Spart, was wichtig ist – Ihre Zeit.",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "ut4.53.202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "sage/de-de/202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "136 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "Banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-PE4Z9JJWVN"
+       ],
+       "google_ads": [
+        "970123043"
+       ],
+       "linkedin": [
+        "58294"
+       ],
+       "meta": [
+        "499565794547363"
+       ],
+       "other:adnxs.com": [],
+       "other:doubleclick.net": [],
+       "other:ojrq.net": [],
+       "other:openai.com": [],
+       "other:sjv.io": [],
+       "tealium_collect": [],
+       "tiktok": [],
+       "zoominfo": [
+        "654e77cd8ec2360c5a6693e1"
+       ]
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794818517.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1794818516121.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/de-de/cp/hr/zeiterfassungv2/"
+     }
+    },
+    {
+     "id": "PAGE-03",
+     "title": "Landing page loads without redirect",
+     "severity": "info",
+     "result": "warn",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Redirects to https://www.sage.com/de-de/cp/hr/zeiterfassungv2/. Update the campaign final URL to avoid the extra hop.",
+     "evidence": {
+      "requested": "https://www.sage.com/de-de/cp/hr/zeiterfassung/",
+      "final_url": "https://www.sage.com/de-de/cp/hr/zeiterfassungv2/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Zeiterfassung, die Fehler vermeidet und Aufwand reduziert",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "ut4.53.202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "sage/de-de/202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "137 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Third-party requests before consent (not an ad tag, review with the privacy team): brightcove.com",
+     "evidence": {
+      "hosts": [
+       "brightcove.com"
+      ]
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-PE4Z9JJWVN"
+       ],
+       "google_ads": [
+        "970123043"
+       ],
+       "linkedin": [
+        "58294"
+       ],
+       "meta": [
+        "499565794547363"
+       ],
+       "other:adnxs.com": [],
+       "other:brightcove.com": [],
+       "other:doubleclick.net": [],
+       "other:openai.com": [],
+       "other:sjv.io": [],
+       "tealium_collect": [],
+       "tiktok": [],
+       "zoominfo": [
+        "654e77cd8ec2360c5a6693e1"
+       ]
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794818553.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1794818552620.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/de-de/cp/sage-intacct/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "Sage Intacct Finanzmanagement-Software | Sage Intacct DE",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "ut4.53.202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "sage/de-de/202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "137 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "Banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "de-cp-sage-intacct",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-PE4Z9JJWVN"
+       ],
+       "google_ads": [
+        "970123043"
+       ],
+       "linkedin": [
+        "58294"
+       ],
+       "meta": [
+        "499565794547363"
+       ],
+       "microsoft_uet": [
+        "12002546"
+       ],
+       "other:adnxs.com": [],
+       "other:bing.com": [],
+       "other:doubleclick.net": [],
+       "other:openai.com": [],
+       "other:quantserve.com": [],
+       "other:sjv.io": [],
+       "quantcast": [
+        "p-E6KY6asqFcmVm"
+       ],
+       "tealium_collect": [],
+       "tiktok": [],
+       "zoominfo": [
+        "654e77cd8ec2360c5a6693e1"
+       ]
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794818592.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-02",
+     "title": "msclkid stored in _uetmsclkid",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "_uetmsclkid contains the test msclkid",
+     "evidence": {
+      "cookie": "_uetmsclkid",
+      "value": "_uetTEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1794818591604.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/de-de/produkte/sage-active/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "Sage Active - Online Buchhaltung | Sage Deutschland",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "ut4.53.202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "sage/de-de/202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "134 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "Banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "de-produkte-sage-active",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-PE4Z9JJWVN"
+       ],
+       "google_ads": [
+        "970123043"
+       ],
+       "linkedin": [
+        "58294"
+       ],
+       "meta": [
+        "499565794547363"
+       ],
+       "microsoft_uet": [
+        "12002546"
+       ],
+       "other:adnxs.com": [],
+       "other:bing.com": [],
+       "other:doubleclick.net": [],
+       "other:openai.com": [],
+       "other:quantserve.com": [],
+       "other:sjv.io": [],
+       "quantcast": [
+        "p-E6KY6asqFcmVm"
+       ],
+       "tealium_collect": [],
+       "tiktok": [],
+       "zoominfo": [
+        "654e77cd8ec2360c5a6693e1"
+       ]
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794818624.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-02",
+     "title": "msclkid stored in _uetmsclkid",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "_uetmsclkid contains the test msclkid",
+     "evidence": {
+      "cookie": "_uetmsclkid",
+      "value": "_uetTEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1794818624199.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111"
+     }
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/de-de/"
+     }
+    },
+    {
+     "id": "PAGE-03",
+     "title": "Landing page loads without redirect",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "Paid landing page redirects to the market homepage (https://www.sage.com/de-de/) - the campaign probably points to an expired page.",
+     "evidence": {
+      "requested": "https://www.sage.com/de-de/cp/webinar-sage-x3/",
+      "final_url": "https://www.sage.com/de-de/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "Software von Sage für kleine & mittlere Unternehmen",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "ut4.53.202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "sage/de-de/202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "135 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "Banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "yellow",
+     "result": "warn",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5195550"
+       ],
+       "ga4": [
+        "G-PE4Z9JJWVN"
+       ],
+       "google_ads": [
+        "970123043"
+       ],
+       "linkedin": [
+        "58294"
+       ],
+       "meta": [
+        "499565794547363"
+       ],
+       "microsoft_uet": [
+        "12002546"
+       ],
+       "other:adnxs.com": [],
+       "other:bing.com": [],
+       "other:doubleclick.net": [],
+       "other:openai.com": [],
+       "other:quantserve.com": [],
+       "other:sjv.io": [],
+       "quantcast": [
+        "p-E6KY6asqFcmVm"
+       ],
+       "tealium_collect": [],
+       "tiktok": [],
+       "zoominfo": [
+        "654e77cd8ec2360c5a6693e1"
+       ]
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1794818656.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-02",
+     "title": "msclkid stored in _uetmsclkid",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "_uetmsclkid contains the test msclkid",
+     "evidence": {
+      "cookie": "_uetmsclkid",
+      "value": "_uetTEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1794818656047.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111"
+     }
+    }
+   ],
+   "acks_applied": [],
+   "red_since": "2026-11-14",
+   "new_failures": []
+  },
+  "AT": {
+   "name": "Austria",
+   "tealium_profile": "de-at",
+   "rating": {
+    "status": "green",
+    "red_count": 0,
+    "yellow_count": 0,
+    "site_down": [],
+    "blocked_pages": [],
+    "coverage": "tealium_only",
+    "acknowledged_count": 0,
+    "pages_checked": 0,
+    "pages_configured": 18
+   },
+   "status": "green",
+   "source": "none",
+   "baseline_confirmed": null,
+   "utag": {
+    "publish_version": "202610211149",
+    "changed": false,
+    "diff": {
+     "changed": false,
+     "items": [],
+     "conversion_relevant": false
+    }
+   },
+   "pages": [
+    {
+     "id": "at-home",
+     "url": "https://www.sage.com/de-at/",
+     "type": "content"
+    },
+    {
+     "id": "at-produkte",
+     "url": "https://www.sage.com/de-at/produkte/",
+     "type": "product"
+    },
+    {
+     "id": "at-buchhaltung",
+     "url": "https://www.sage.com/de-at/buchhaltung-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-fakturierung",
+     "url": "https://www.sage.com/de-at/buchhaltung-software/fakturierung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-rechnungen",
+     "url": "https://www.sage.com/de-at/buchhaltung-software/rechnungen/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-erp",
+     "url": "https://www.sage.com/de-at/erp/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-erp-cloud",
+     "url": "https://www.sage.com/de-at/erp/cloud/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-erp-klein",
+     "url": "https://www.sage.com/de-at/erp/kleinunternehmen/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-bms",
+     "url": "https://www.sage.com/de-at/erp/business-management-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-hr-software",
+     "url": "https://www.sage.com/de-at/hr-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-zeiterfassung",
+     "url": "https://www.sage.com/de-at/hr-software/zeiterfassung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-lohnverrechnung",
+     "url": "https://www.sage.com/de-at/lohnverrechnungssoftware/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-lager",
+     "url": "https://www.sage.com/de-at/lagerverwaltung/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-crm",
+     "url": "https://www.sage.com/de-at/crm-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-produktion",
+     "url": "https://www.sage.com/de-at/branchen/produktion/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-handel",
+     "url": "https://www.sage.com/de-at/branchen/handel/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-kmu",
+     "url": "https://www.sage.com/de-at/unternehmensgroessen/mittlere-unternehmen/",
+     "type": "landing_page"
+    },
+    {
+     "id": "at-kontakt",
+     "url": "https://www.sage.com/de-at/ueber-uns/kontakt/",
+     "type": "form"
+    }
+   ],
+   "checks": [
+    {
+     "id": "TEAL-05",
+     "title": "utag.js reachable on the Tealium CDN",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "market",
+     "detail": "Publish 202610211149 (24 tags)",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-04",
+     "title": "Tealium publish detected (utag.js changed)",
+     "severity": "info",
+     "result": "pass",
+     "target": "market",
+     "detail": "No publish since the last run",
+     "evidence": {}
+    }
+   ],
+   "acks_applied": [],
+   "red_since": null,
+   "new_failures": []
+  },
+  "FR": {
+   "name": "France",
+   "tealium_profile": "fr-fr",
+   "rating": {
+    "status": "green",
+    "red_count": 0,
+    "yellow_count": 0,
+    "site_down": [],
+    "blocked_pages": [],
+    "coverage": "tealium_only",
+    "acknowledged_count": 0,
+    "pages_checked": 0,
+    "pages_configured": 24
+   },
+   "status": "green",
+   "source": "none",
+   "baseline_confirmed": null,
+   "utag": {
+    "publish_version": "202611051052",
+    "changed": false,
+    "diff": {
+     "changed": false,
+     "items": [],
+     "conversion_relevant": false
+    }
+   },
+   "pages": [
+    {
+     "id": "fr-home",
+     "url": "https://www.sage.com/fr-fr/",
+     "type": "content"
+    },
+    {
+     "id": "fr-produits",
+     "url": "https://www.sage.com/fr-fr/produits/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sage-50",
+     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sage-50-test",
+     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/",
+     "type": "trial"
+    },
+    {
+     "id": "fr-sage-50-compta",
+     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-compta/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sage-50-gescom",
+     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-gestion-commerciale/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sage-active",
+     "url": "https://www.sage.com/fr-fr/produits/sage-active/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sage-100",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sage-100-compta",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sage-100-paie",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100-paie-rh/",
+     "type": "product"
+    },
+    {
+     "id": "fr-frp-1000",
+     "url": "https://www.sage.com/fr-fr/produits/sage-frp-1000/",
+     "type": "product"
+    },
+    {
+     "id": "fr-intacct",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
+     "type": "product"
+    },
+    {
+     "id": "fr-x3",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/",
+     "type": "product"
+    },
+    {
+     "id": "fr-x3-demo",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/demander-demonstration/",
+     "type": "form"
+    },
+    {
+     "id": "fr-compta-facturation",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/compta-facturation/",
+     "type": "product"
+    },
+    {
+     "id": "fr-comptabilite",
+     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-compta-test",
+     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/version-test-gratuit/",
+     "type": "trial"
+    },
+    {
+     "id": "fr-compta-tpe",
+     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/tpe-petite-entreprise/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-facturation",
+     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/facturation/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-facture-electronique",
+     "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/api-plateforme-agreee/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-paie",
+     "url": "https://www.sage.com/fr-fr/paie-logiciels-gestion/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-erp",
+     "url": "https://www.sage.com/fr-fr/erp-logiciels/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-experts-comptables",
+     "url": "https://www.sage.com/fr-fr/experts-comptables/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-contact",
+     "url": "https://www.sage.com/fr-fr/a-propos/contact/",
+     "type": "form"
+    }
+   ],
+   "checks": [
+    {
+     "id": "TEAL-05",
+     "title": "utag.js reachable on the Tealium CDN",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "market",
+     "detail": "Publish 202611051052 (52 tags)",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-04",
+     "title": "Tealium publish detected (utag.js changed)",
+     "severity": "info",
+     "result": "pass",
+     "target": "market",
+     "detail": "No publish since the last run",
+     "evidence": {}
+    }
+   ],
+   "acks_applied": [],
+   "red_since": null,
+   "new_failures": []
+  },
+  "ES": {
+   "name": "Spain",
+   "tealium_profile": "es-es",
+   "rating": {
+    "status": "green",
+    "red_count": 0,
+    "yellow_count": 0,
+    "site_down": [],
+    "blocked_pages": [],
+    "coverage": "tealium_only",
+    "acknowledged_count": 0,
+    "pages_checked": 0,
+    "pages_configured": 22
+   },
+   "status": "green",
+   "source": "none",
+   "baseline_confirmed": null,
+   "utag": {
+    "publish_version": "202611051016",
+    "changed": false,
+    "diff": {
+     "changed": false,
+     "items": [],
+     "conversion_relevant": false
+    }
+   },
+   "pages": [
+    {
+     "id": "es-home",
+     "url": "https://www.sage.com/es-es/",
+     "type": "content"
+    },
+    {
+     "id": "es-productos",
+     "url": "https://www.sage.com/es-es/productos/",
+     "type": "product"
+    },
+    {
+     "id": "es-sage-50",
+     "url": "https://www.sage.com/es-es/productos/sage-50cloud/",
+     "type": "product"
+    },
+    {
+     "id": "es-sage-50-precios",
+     "url": "https://www.sage.com/es-es/productos/sage-50cloud/precios/",
+     "type": "pricing"
+    },
+    {
+     "id": "es-sage-200",
+     "url": "https://www.sage.com/es-es/productos/sage-200/",
+     "type": "product"
+    },
+    {
+     "id": "es-sage-200-laboral",
+     "url": "https://www.sage.com/es-es/productos/sage-200-cloud-laboral/",
+     "type": "product"
+    },
+    {
+     "id": "es-contaplus",
+     "url": "https://www.sage.com/es-es/productos/sage-contaplus/",
+     "type": "product"
+    },
+    {
+     "id": "es-nominaplus",
+     "url": "https://www.sage.com/es-es/productos/sage-nominaplus/",
+     "type": "product"
+    },
+    {
+     "id": "es-control-horario",
+     "url": "https://www.sage.com/es-es/productos/sage-control-horario/",
+     "type": "product"
+    },
+    {
+     "id": "es-sales-mgmt",
+     "url": "https://www.sage.com/es-es/productos/sage-sales-management/",
+     "type": "product"
+    },
+    {
+     "id": "es-sales-mgmt-precios",
+     "url": "https://www.sage.com/es-es/productos/sage-sales-management/precios/",
+     "type": "pricing"
+    },
+    {
+     "id": "es-tpv-online",
+     "url": "https://www.sage.com/es-es/productos/sage-tpv-online/",
+     "type": "product"
+    },
+    {
+     "id": "es-x3",
+     "url": "https://www.sage.com/es-es/sage-business-cloud/sage-x3/",
+     "type": "product"
+    },
+    {
+     "id": "es-hr",
+     "url": "https://www.sage.com/es-es/sage-business-cloud/hr/",
+     "type": "product"
+    },
+    {
+     "id": "es-contabilidad",
+     "url": "https://www.sage.com/es-es/software-contabilidad/",
+     "type": "landing_page"
+    },
+    {
+     "id": "es-contabilidad-online",
+     "url": "https://www.sage.com/es-es/software-contabilidad/online/",
+     "type": "landing_page"
+    },
+    {
+     "id": "es-factura-electronica",
+     "url": "https://www.sage.com/es-es/software-contabilidad/factura-electronica/",
+     "type": "landing_page"
+    },
+    {
+     "id": "es-verifactu",
+     "url": "https://www.sage.com/es-es/certificacion-software/sistema-verifactu/",
+     "type": "landing_page"
+    },
+    {
+     "id": "es-nominas",
+     "url": "https://www.sage.com/es-es/nominas-software/",
+     "type": "landing_page"
+    },
+    {
+     "id": "es-erp",
+     "url": "https://www.sage.com/es-es/erp/",
+     "type": "landing_page"
+    },
+    {
+     "id": "es-asesorias",
+     "url": "https://www.sage.com/es-es/asesorias-y-despachos/",
+     "type": "landing_page"
+    },
+    {
+     "id": "es-contacto",
+     "url": "https://www.sage.com/es-es/sobre-sage/contacto/",
+     "type": "form"
+    }
+   ],
+   "checks": [
+    {
+     "id": "TEAL-05",
+     "title": "utag.js reachable on the Tealium CDN",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "market",
+     "detail": "Publish 202611051016 (42 tags)",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-04",
+     "title": "Tealium publish detected (utag.js changed)",
+     "severity": "info",
+     "result": "pass",
+     "target": "market",
+     "detail": "No publish since the last run",
+     "evidence": {}
+    }
+   ],
+   "acks_applied": [],
+   "red_since": null,
+   "new_failures": []
+  },
+  "PT": {
+   "name": "Portugal",
+   "tealium_profile": "pt-pt",
+   "rating": {
+    "status": "green",
+    "red_count": 0,
+    "yellow_count": 0,
+    "site_down": [],
+    "blocked_pages": [],
+    "coverage": "tealium_only",
+    "acknowledged_count": 0,
+    "pages_checked": 0,
+    "pages_configured": 20
+   },
+   "status": "green",
+   "source": "none",
+   "baseline_confirmed": null,
+   "utag": {
+    "publish_version": "202611050958",
+    "changed": false,
+    "diff": {
+     "changed": false,
+     "items": [],
+     "conversion_relevant": false
+    }
+   },
+   "pages": [
+    {
+     "id": "pt-home",
+     "url": "https://www.sage.com/pt-pt/",
+     "type": "content"
+    },
+    {
+     "id": "pt-produtos",
+     "url": "https://www.sage.com/pt-pt/produtos/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sage-50",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sage-50-preco",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/preco/",
+     "type": "pricing"
+    },
+    {
+     "id": "pt-sage-50-contab",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud-contabilidade/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sage-50-salarios",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud-salarios/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sage-100",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-100cloud/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sage-one",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-one/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sage-one-fat",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-one/software-de-facturacao-online/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sage-for-accountants",
+     "url": "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/",
+     "type": "product"
+    },
+    {
+     "id": "pt-sfa-preco",
+     "url": "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/preco/",
+     "type": "pricing"
+    },
+    {
+     "id": "pt-x3",
+     "url": "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/",
+     "type": "product"
+    },
+    {
+     "id": "pt-hr",
+     "url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/",
+     "type": "product"
+    },
+    {
+     "id": "pt-faturacao",
+     "url": "https://www.sage.com/pt-pt/software-faturacao/",
+     "type": "landing_page"
+    },
+    {
+     "id": "pt-faturacao-cloud",
+     "url": "https://www.sage.com/pt-pt/software-faturacao/cloud/",
+     "type": "landing_page"
+    },
+    {
+     "id": "pt-faturacao-pme",
+     "url": "https://www.sage.com/pt-pt/software-faturacao/pequenas-empresas/",
+     "type": "landing_page"
+    },
+    {
+     "id": "pt-erp",
+     "url": "https://www.sage.com/pt-pt/erp/",
+     "type": "landing_page"
+    },
+    {
+     "id": "pt-tesouraria",
+     "url": "https://www.sage.com/pt-pt/software-tesouraria/",
+     "type": "landing_page"
+    },
+    {
+     "id": "pt-contabilistas",
+     "url": "https://www.sage.com/pt-pt/contabilistas/",
+     "type": "landing_page"
+    },
+    {
+     "id": "pt-contactos",
+     "url": "https://www.sage.com/pt-pt/sobre-nos/contactos/",
+     "type": "form"
+    }
+   ],
+   "checks": [
+    {
+     "id": "TEAL-05",
+     "title": "utag.js reachable on the Tealium CDN",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "market",
+     "detail": "Publish 202611050958 (38 tags)",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-04",
+     "title": "Tealium publish detected (utag.js changed)",
+     "severity": "info",
+     "result": "pass",
+     "target": "market",
+     "detail": "No publish since the last run",
+     "evidence": {}
+    }
+   ],
+   "acks_applied": [],
+   "red_since": null,
+   "new_failures": []
+  }
+ }
+}

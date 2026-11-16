@@ -1,0 +1,1274 @@
+{
+ "market": "DE",
+ "day": "2026-11-16",
+ "tealium": {
+  "fetch": {
+   "url": "https://tags.tiqcdn.com/utag/sage/de-de/prod/utag.js",
+   "status": 200,
+   "last_modified": "Thu, 05 Nov 2026 10:49:53 GMT",
+   "error": null
+  },
+  "parsed": {
+   "publish_version": "202611051049",
+   "sha256": "75b9fe427f8195bd4e5c2c9832d7d63667083137a94100bcf2d6df861da5d341",
+   "tags": {
+    "287": {
+     "load": "4",
+     "send": "((utag.cond[264]))",
+     "v": "202403181034",
+     "tid": "7143"
+    },
+    "336": {
+     "load": "1",
+     "send": "1",
+     "v": "202507231428",
+     "tid": "20067"
+    },
+    "311": {
+     "load": "(((utag.cond[251]||utag.cond[260]||utag.cond[261]||utag.cond[252]||utag.cond[259]||utag.cond[309]||utag.cond[237]||utag.cond[268]||utag.cond[269]||utag.cond[250]||utag.cond[282]||utag.cond[289]||utag.cond[210])&&(utag.cond[63]||utag.cond[236]||utag.cond[267]||utag.cond[283])))",
+     "send": "1",
+     "v": "202604091143",
+     "tid": "12047"
+    },
+    "417": {
+     "load": "((utag.cond[63]||utag.cond[236]||utag.cond[283]))",
+     "send": "1",
+     "v": "202611051049",
+     "tid": "12047"
+    },
+    "89": {
+     "load": "((utag.cond[33]))",
+     "send": "1",
+     "v": "202608241128",
+     "tid": "4049"
+    },
+    "9": {
+     "load": "1",
+     "send": "1",
+     "v": "202106211203",
+     "tid": "19116"
+    },
+    "98": {
+     "load": "(((utag.cond[236]||utag.cond[319])&&(utag.cond[274])))",
+     "send": "1",
+     "v": "202608241128",
+     "tid": "4049"
+    },
+    "107": {
+     "load": "(utag.cond[36]||utag.cond[35])",
+     "send": "1",
+     "v": "202106211203",
+     "tid": "12040"
+    },
+    "143": {
+     "load": "1",
+     "send": "1",
+     "v": "202505200758",
+     "tid": "2063"
+    },
+    "145": {
+     "load": "(((utag.cond[86])&&!(utag.cond[312])))",
+     "send": "1",
+     "v": "202508060840",
+     "tid": "20010"
+    },
+    "163": {
+     "load": "utag.cond[72]",
+     "send": "1",
+     "v": "202207271056",
+     "tid": "7132"
+    },
+    "173": {
+     "load": "((utag.cond[63]))",
+     "send": "1",
+     "v": "202512101447",
+     "tid": "7132"
+    },
+    "202": {
+     "load": "(((utag.cond[222]||utag.cond[150])&&!(utag.cond[230]||utag.cond[245])))",
+     "send": "1",
+     "v": "202610121246",
+     "tid": "7142"
+    },
+    "273": {
+     "load": "((utag.cond[259]||utag.cond[260]||utag.cond[261]||utag.cond[210]||utag.cond[251]||utag.cond[237]))",
+     "send": "1",
+     "v": "202407300951",
+     "tid": "14037"
+    },
+    "284": {
+     "load": "((utag.cond[262]))",
+     "send": "1",
+     "v": "202611051049",
+     "tid": "4049"
+    },
+    "296": {
+     "load": "(((utag.cond[260]||utag.cond[261]||utag.cond[251]||utag.cond[252]||utag.cond[253]||utag.cond[254]||utag.cond[237]||utag.cond[250]||utag.cond[268]||utag.cond[269]||utag.cond[210])&&(utag.cond[265])))",
+     "send": "1",
+     "v": "202601191446",
+     "tid": "20067"
+    },
+    "301": {
+     "load": "(((utag.cond[251]||utag.cond[237]||utag.cond[309])&&(utag.cond[267])))",
+     "send": "1",
+     "v": "202501201402",
+     "tid": "14037"
+    },
+    "322": {
+     "load": "((utag.cond[237]||utag.cond[309]||utag.cond[259]||utag.cond[250]||utag.cond[210]||utag.cond[252]||utag.cond[251]||utag.cond[317]))",
+     "send": "1",
+     "v": "202606091438",
+     "tid": "20119"
+    },
+    "325": {
+     "load": "(((utag.cond[63])&&(utag.cond[272])))",
+     "send": "1",
+     "v": "202603051420",
+     "tid": "4049"
+    },
+    "326": {
+     "load": "(((utag.cond[236]||utag.cond[283])&&(utag.cond[272])))",
+     "send": "1",
+     "v": "202601131601",
+     "tid": "4049"
+    },
+    "329": {
+     "load": "1",
+     "send": "1",
+     "v": "202409041325",
+     "tid": "20010"
+    },
+    "345": {
+     "load": "(((utag.cond[236])&&(utag.cond[282])))",
+     "send": "1",
+     "v": "202410100713",
+     "tid": "12047"
+    },
+    "349": {
+     "load": "(((utag.cond[210]||utag.cond[269]||utag.cond[268]||utag.cond[309]||utag.cond[251]||utag.cond[252]||utag.cond[260]||utag.cond[261]||utag.cond[259]||utag.cond[237]||utag.cond[250])&&(utag.cond[63]||utag.cond[284]||utag.cond[267]||utag.cond[236]||utag.cond[283])))",
+     "send": "1",
+     "v": "202606091438",
+     "tid": "6037"
+    },
+    "352": {
+     "load": "1",
+     "send": "1",
+     "v": "202604091143",
+     "tid": "9043"
+    },
+    "355": {
+     "load": "(((utag.cond[266]||utag.cond[319])&&(utag.cond[285])))",
+     "send": "1",
+     "v": "202604091143",
+     "tid": "9043"
+    },
+    "356": {
+     "load": "((utag.cond[262]))",
+     "send": "1",
+     "v": "202604091143",
+     "tid": "9043"
+    },
+    "361": {
+     "load": "1",
+     "send": "1",
+     "v": "202503041133",
+     "tid": "3131"
+    },
+    "373": {
+     "load": "(((utag.cond[63])&&(utag.cond[237]||utag.cond[309]||utag.cond[259]||utag.cond[317]||utag.cond[260]||utag.cond[261]||utag.cond[289]||utag.cond[251]||utag.cond[252]||utag.cond[318])))",
+     "send": "1",
+     "v": "202503061655",
+     "tid": "17001"
+    },
+    "374": {
+     "load": "(((utag.cond[236]||utag.cond[283])&&(utag.cond[275])&&(utag.cond[237]||utag.cond[309]||utag.cond[259]||utag.cond[317]||utag.cond[260]||utag.cond[261]||utag.cond[289]||utag.cond[251]||utag.cond[252]||utag.cond[318])))",
+     "send": "1",
+     "v": "202503061655",
+     "tid": "17001"
+    },
+    "375": {
+     "load": "(((utag.cond[267])&&(utag.cond[237]||utag.cond[309]||utag.cond[316]||utag.cond[259]||utag.cond[317]||utag.cond[260]||utag.cond[261]||utag.cond[289]||utag.cond[251]||utag.cond[252]||utag.cond[318])))",
+     "send": "1",
+     "v": "202503061655",
+     "tid": "17001"
+    },
+    "379": {
+     "load": "1",
+     "send": "1",
+     "v": "202505200920",
+     "tid": "1215"
+    },
+    "380": {
+     "load": "(((utag.cond[266]||utag.cond[319])&&(utag.cond[285])))",
+     "send": "1",
+     "v": "202506111017",
+     "tid": "1215"
+    },
+    "389": {
+     "load": "(((utag.cond[236])&&(utag.cond[331])&&(utag.cond[332])))",
+     "send": "1",
+     "v": "202602051613",
+     "tid": "4049"
+    },
+    "405": {
+     "load": "(((utag.cond[236]||utag.cond[283])&&(utag.cond[335])))",
+     "send": "1",
+     "v": "202601131601",
+     "tid": "4049"
+    },
+    "406": {
+     "load": "(((utag.cond[236]||utag.cond[283])&&(utag.cond[336])))",
+     "send": "1",
+     "v": "202601131601",
+     "tid": "4049"
+    },
+    "407": {
+     "load": "(((utag.cond[236]||utag.cond[283])&&(utag.cond[337]||utag.cond[338])))",
+     "send": "1",
+     "v": "202601131601",
+     "tid": "4049"
+    },
+    "402": {
+     "load": "1",
+     "send": "1",
+     "v": "202508270929",
+     "tid": "20067"
+    },
+    "403": {
+     "load": "(((utag.cond[266])&&(utag.cond[285])))",
+     "send": "1",
+     "v": "202510150932",
+     "tid": "20119"
+    },
+    "409": {
+     "load": "((utag.cond[237]||utag.cond[269]||utag.cond[268]||utag.cond[252]||utag.cond[210]))",
+     "send": "1",
+     "v": "202610211122",
+     "tid": "18048"
+    },
+    "412": {
+     "load": "((utag.cond[63]))",
+     "send": "1",
+     "v": "202606100833",
+     "tid": "20010"
+    },
+    "413": {
+     "load": "((utag.cond[63]||utag.cond[284]||utag.cond[236]||utag.cond[339]||utag.cond[340]||utag.cond[341]))",
+     "send": "1",
+     "v": "202607080922",
+     "tid": "20064"
+    },
+    "423": {
+     "load": "(((utag.cond[63]||utag.cond[236]||utag.cond[267])&&(utag.cond[269]||utag.cond[237]||utag.cond[210]||utag.cond[252]||utag.cond[261]||utag.cond[251])))",
+     "send": "1",
+     "v": "202610211122",
+     "tid": "15038"
+    },
+    "424": {
+     "load": "(!(utag.cond[343]))",
+     "send": "1",
+     "v": "202610211122",
+     "tid": "20067"
+    },
+    "425": {
+     "load": "((utag.cond[63]||utag.cond[236]||utag.cond[267]))",
+     "send": "1",
+     "v": "202611051049",
+     "tid": "15038"
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion": {
+   "ok": true,
+   "results": [
+    {
+     "name": "ecom_try",
+     "fired": [
+      "9",
+      "143",
+      "145",
+      "202",
+      "273",
+      "287",
+      "296",
+      "311",
+      "322",
+      "329",
+      "336",
+      "349",
+      "352",
+      "361",
+      "379",
+      "402",
+      "413",
+      "417",
+      "423",
+      "424",
+      "425"
+     ],
+     "true_rules": [
+      "86",
+      "150",
+      "222",
+      "236",
+      "251",
+      "264",
+      "265",
+      "266"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "98"
+     ],
+     "conversion_tags_fired": []
+    },
+    {
+     "name": "ecom_buy",
+     "fired": [
+      "9",
+      "143",
+      "145",
+      "202",
+      "273",
+      "287",
+      "296",
+      "311",
+      "322",
+      "329",
+      "336",
+      "349",
+      "352",
+      "361",
+      "379",
+      "402",
+      "413",
+      "417",
+      "423",
+      "424",
+      "425"
+     ],
+     "true_rules": [
+      "86",
+      "150",
+      "222",
+      "236",
+      "251",
+      "264",
+      "265",
+      "266"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "98"
+     ],
+     "conversion_tags_fired": []
+    },
+    {
+     "name": "gated_trial",
+     "fired": [
+      "9",
+      "98",
+      "143",
+      "145",
+      "202",
+      "273",
+      "287",
+      "296",
+      "311",
+      "322",
+      "329",
+      "336",
+      "349",
+      "352",
+      "355",
+      "361",
+      "374",
+      "379",
+      "380",
+      "389",
+      "402",
+      "403",
+      "405",
+      "413",
+      "417",
+      "423",
+      "424",
+      "425"
+     ],
+     "true_rules": [
+      "86",
+      "150",
+      "222",
+      "236",
+      "251",
+      "264",
+      "265",
+      "266",
+      "274",
+      "275",
+      "283",
+      "285",
+      "319",
+      "331",
+      "332",
+      "335",
+      "341"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "trial_demo",
+      "facebook_form_submission_type": "StartTrial"
+     },
+     "errors": [],
+     "expected_tags": [
+      "98"
+     ],
+     "conversion_tags_fired": [
+      "98",
+      "389",
+      "405"
+     ]
+    },
+    {
+     "name": "gated_contact",
+     "fired": [
+      "9",
+      "98",
+      "143",
+      "145",
+      "202",
+      "273",
+      "287",
+      "296",
+      "311",
+      "322",
+      "329",
+      "336",
+      "349",
+      "352",
+      "355",
+      "361",
+      "374",
+      "379",
+      "380",
+      "389",
+      "402",
+      "403",
+      "406",
+      "413",
+      "417",
+      "423",
+      "424",
+      "425"
+     ],
+     "true_rules": [
+      "86",
+      "150",
+      "222",
+      "236",
+      "251",
+      "264",
+      "265",
+      "266",
+      "274",
+      "275",
+      "283",
+      "285",
+      "319",
+      "331",
+      "332",
+      "336",
+      "341"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "contact",
+      "facebook_form_submission_type": "Contact"
+     },
+     "errors": [],
+     "expected_tags": [
+      "98"
+     ],
+     "conversion_tags_fired": [
+      "98",
+      "389",
+      "406"
+     ]
+    }
+   ]
+  }
+ },
+ "browser": {
+  "source": "claude-browser",
+  "collected_at": "2026-11-16T08:46:29Z",
+  "visits": [
+   {
+    "id": "de-cp-payroll-standard-shopping",
+    "url": "https://www.sage.com/de-de/cp/payroll-standard-shopping/",
+    "status": 200,
+    "final_url": "https://www.sage.com/de-de/cp/payroll-standard-shopping/",
+    "click_ids": {
+     "gclid": "TEST_MON_20261116",
+     "msclkid": "TEST_MON_20261116",
+     "fbclid": "TEST_MON_20261116"
+    },
+    "pre": {
+     "title": "Sage Payroll: Spart, was wichtig ist – Ihre Zeit.",
+     "banner": true,
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "requests": [
+      {
+       "url": "https://api.sageimagine.com/ecommerce/v1/product/S1DEPAY02B/card",
+       "type": "xmlhttprequest"
+      }
+     ],
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 136,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     }
+    },
+    "post": {
+     "title": "Sage Payroll: Spart, was wichtig ist – Ihre Zeit.",
+     "accepted": true,
+     "banner": false,
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "_fbc": "fb.2.1794818516121.TEST_MON_20261116",
+      "_gcl_au": "",
+      "_gcl_aw": "GCL.1794818517.TEST_MON_20261116",
+      "OptanonConsent": "",
+      "_fbp": "",
+      "_ttp": ""
+     },
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 138,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     },
+     "requests": [
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261116;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygvhSH91QA6V.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://sagegmbh.sjv.io/xur/27498",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.ojrq.net/p/",
+       "type": "img"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://bzr.openai.com/v1/sdk/events?pid=KKEia5xXwqygvhSH91QA6V",
+       "type": "fetch"
+      },
+      {
+       "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/970123043/?en=gtag.config",
+       "type": "img"
+      }
+     ]
+    },
+    "blocked": false
+   },
+   {
+    "id": "de-cp-hr-zeiterfassung",
+    "url": "https://www.sage.com/de-de/cp/hr/zeiterfassung/",
+    "status": 200,
+    "final_url": "https://www.sage.com/de-de/cp/hr/zeiterfassungv2/",
+    "click_ids": {
+     "gclid": "TEST_MON_20261116",
+     "msclkid": "TEST_MON_20261116",
+     "fbclid": "TEST_MON_20261116"
+    },
+    "pre": {
+     "title": "Zeiterfassung, die Fehler vermeidet und Aufwand reduziert",
+     "banner": true,
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "requests": [
+      {
+       "url": "https://metrics.brightcove.com/v2/tracker?event=player_init",
+       "type": "img"
+      },
+      {
+       "url": "https://metrics.brightcove.com/v2/tracker?event=player_load",
+       "type": "img"
+      },
+      {
+       "url": "https://metrics.brightcove.com/v2/tracker?event=video_impression",
+       "type": "img"
+      },
+      {
+       "url": "https://metrics.brightcove.com/v2/tracker?event=video_view",
+       "type": "img"
+      }
+     ],
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 137,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     }
+    },
+    "post": {
+     "title": "Zeiterfassung, die Fehler vermeidet und Aufwand reduziert",
+     "accepted": true,
+     "banner": false,
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "_fbc": "fb.2.1794818552620.TEST_MON_20261116",
+      "_gcl_au": "",
+      "_gcl_aw": "GCL.1794818553.TEST_MON_20261116",
+      "_fbp": "",
+      "_ttp": ""
+     },
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 139,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     },
+     "requests": [
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://sagegmbh.sjv.io/xur/27498",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261116;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygvhSH91QA6V.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel",
+       "type": "beacon"
+      },
+      {
+       "url": "https://bzr.openai.com/v1/sdk/events?pid=KKEia5xXwqygvhSH91QA6V",
+       "type": "fetch"
+      },
+      {
+       "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/970123043/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://metrics.brightcove.com/v2/tracker?event=video_engagement",
+       "type": "img"
+      }
+     ]
+    },
+    "blocked": false
+   },
+   {
+    "id": "de-cp-sage-intacct",
+    "url": "https://www.sage.com/de-de/cp/sage-intacct/",
+    "status": 200,
+    "final_url": "https://www.sage.com/de-de/cp/sage-intacct/",
+    "click_ids": {
+     "gclid": "TEST_MON_20261116",
+     "msclkid": "TEST_MON_20261116",
+     "fbclid": "TEST_MON_20261116"
+    },
+    "pre": {
+     "title": "Sage Intacct Finanzmanagement-Software | Sage Intacct DE",
+     "banner": true,
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "requests": [],
+     "has_form": true,
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 137,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     }
+    },
+    "post": {
+     "title": "Sage Intacct Finanzmanagement-Software | Sage Intacct DE",
+     "accepted": true,
+     "banner": false,
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "_fbc": "fb.2.1794818591604.TEST_MON_20261116",
+      "_gcl_au": "",
+      "_gcl_aw": "GCL.1794818592.TEST_MON_20261116",
+      "_fbp": "",
+      "_ttp": "",
+      "_uetsid": "",
+      "_uetvid": "",
+      "_uetmsclkid": "_uetTEST_MON_20261116"
+     },
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 139,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     },
+     "requests": [
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261116;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygvhSH91QA6V.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://sagegmbh.sjv.io/xur/27498",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://www.google.com/pagead/1p-user-list/970123043/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel",
+       "type": "beacon"
+      },
+      {
+       "url": "https://bat.bing.com/actionp/0?ti=12002546&evt=consent&src=update",
+       "type": "beacon"
+      },
+      {
+       "url": "https://bat.bing.com/action/0?ti=12002546&msclkid=TEST_MON_20261116-1&evt=pageLoad",
+       "type": "img"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
+       "type": "img"
+      },
+      {
+       "url": "https://bzr.openai.com/v1/sdk/events?pid=KKEia5xXwqygvhSH91QA6V",
+       "type": "fetch"
+      }
+     ]
+    },
+    "blocked": false
+   },
+   {
+    "id": "de-produkte-sage-active",
+    "url": "https://www.sage.com/de-de/produkte/sage-active/",
+    "status": 200,
+    "live_sample": true,
+    "final_url": "https://www.sage.com/de-de/produkte/sage-active/",
+    "click_ids": {
+     "gclid": "TEST_MON_20261116",
+     "msclkid": "TEST_MON_20261116",
+     "fbclid": "TEST_MON_20261116"
+    },
+    "pre": {
+     "title": "Sage Active - Online Buchhaltung | Sage Deutschland",
+     "banner": true,
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "requests": [],
+     "has_form": true,
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 134,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     }
+    },
+    "post": {
+     "title": "Sage Active - Online Buchhaltung | Sage Deutschland",
+     "accepted": true,
+     "banner": false,
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "_gcl_aw": "GCL.1794818624.TEST_MON_20261116",
+      "_uetsid": "",
+      "_uetvid": "",
+      "_uetmsclkid": "_uetTEST_MON_20261116",
+      "_fbc": "fb.2.1794818624199.TEST_MON_20261116",
+      "_gcl_au": "",
+      "_ttp": "",
+      "_fbp": ""
+     },
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 136,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     },
+     "requests": [
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://bat.bing.com/actionp/0?ti=12002546&evt=consent&src=update",
+       "type": "beacon"
+      },
+      {
+       "url": "https://bat.bing.com/action/0?ti=12002546&msclkid=TEST_MON_20261116-1&evt=pageLoad",
+       "type": "img"
+      },
+      {
+       "url": "https://sagegmbh.sjv.io/xur/27498",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261116;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygvhSH91QA6V.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel",
+       "type": "beacon"
+      },
+      {
+       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.com/pagead/1p-user-list/970123043/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://bzr.openai.com/v1/sdk/events?pid=KKEia5xXwqygvhSH91QA6V",
+       "type": "fetch"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=view_item",
+       "type": "fetch"
+      }
+     ]
+    },
+    "blocked": false
+   },
+   {
+    "id": "de-cp-webinar-sage-x3",
+    "url": "https://www.sage.com/de-de/cp/webinar-sage-x3/",
+    "status": 200,
+    "final_url": "https://www.sage.com/de-de/",
+    "click_ids": {
+     "gclid": "TEST_MON_20261116",
+     "msclkid": "TEST_MON_20261116",
+     "fbclid": "TEST_MON_20261116"
+    },
+    "pre": {
+     "title": "Software von Sage für kleine & mittlere Unternehmen",
+     "banner": true,
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "requests": [],
+     "has_form": true,
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 135,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     }
+    },
+    "post": {
+     "title": "Software von Sage für kleine & mittlere Unternehmen",
+     "accepted": true,
+     "banner": false,
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "_uetsid": "",
+      "_uetvid": "",
+      "_uetmsclkid": "_uetTEST_MON_20261116",
+      "_gcl_aw": "GCL.1794818656.TEST_MON_20261116",
+      "OptanonConsent": "",
+      "_fbc": "fb.2.1794818656047.TEST_MON_20261116",
+      "_gcl_au": "",
+      "_fbp": "",
+      "_ttp": ""
+     },
+     "utag": {
+      "present": true,
+      "utid": "sage/de-de/202611051049",
+      "version": "ut4.53.202611051049",
+      "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+      "data_keys": 137,
+      "page_type": "article",
+      "language": "de-de",
+      "country": "de"
+     },
+     "requests": [
+      {
+       "url": "https://bat.bing.com/actionp/0?ti=12002546&evt=consent&src=update",
+       "type": "beacon"
+      },
+      {
+       "url": "https://bat.bing.com/action/0?ti=12002546&msclkid=TEST_MON_20261116-1&evt=pageLoad",
+       "type": "img"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygvhSH91QA6V.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://sagegmbh.sjv.io/xur/27498",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261116;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261116",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261116&gclaw=TEST_MON_20261116&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel",
+       "type": "beacon"
+      },
+      {
+       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
+       "type": "img"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/pagead/1p-user-list/970123043/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://bzr.openai.com/v1/sdk/events?pid=KKEia5xXwqygvhSH91QA6V",
+       "type": "fetch"
+      }
+     ]
+    },
+    "blocked": false
+   }
+  ],
+  "journeys": []
+ }
+}

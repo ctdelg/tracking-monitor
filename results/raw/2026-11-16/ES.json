@@ -1,0 +1,504 @@
+{
+ "market": "ES",
+ "day": "2026-11-16",
+ "tealium": {
+  "fetch": {
+   "url": "https://tags.tiqcdn.com/utag/sage/es-es/prod/utag.js",
+   "status": 200,
+   "last_modified": "Thu, 05 Nov 2026 10:16:27 GMT",
+   "error": null
+  },
+  "parsed": {
+   "publish_version": "202611051016",
+   "sha256": "16bc8a7bc75aee136a2f0774d1ef7c2e2f66ca4685172ba24aef978a32a9784a",
+   "tags": {
+    "285": {
+     "load": "4",
+     "send": "((utag.cond[196]))",
+     "v": "202403181045",
+     "tid": "7143"
+    },
+    "340": {
+     "load": "1",
+     "send": "1",
+     "v": "202507231437",
+     "tid": "20067"
+    },
+    "318": {
+     "load": "(((utag.cond[186]||utag.cond[193]||utag.cond[194]||utag.cond[187]||utag.cond[192]||utag.cond[222]||utag.cond[152]||utag.cond[201]||utag.cond[202]||utag.cond[177]||utag.cond[214]||utag.cond[220]||utag.cond[110])&&(utag.cond[20]||utag.cond[151]||utag.cond[200]||utag.cond[215])))",
+     "send": "1",
+     "v": "202604091209",
+     "tid": "12047"
+    },
+    "418": {
+     "load": "((utag.cond[20]||utag.cond[151]||utag.cond[215]))",
+     "send": "1",
+     "v": "202611051016",
+     "tid": "12047"
+    },
+    "3": {
+     "load": "utag.cond[2]",
+     "send": "1",
+     "v": "202106211036",
+     "tid": "20010"
+    },
+    "4": {
+     "load": "utag.cond[2]",
+     "send": "1",
+     "v": "202106211036",
+     "tid": "20010"
+    },
+    "8": {
+     "load": "1",
+     "send": "1",
+     "v": "202106211036",
+     "tid": "19116"
+    },
+    "31": {
+     "load": "((utag.cond[20]))",
+     "send": "1",
+     "v": "202610191456",
+     "tid": "4049"
+    },
+    "36": {
+     "load": "((((utag.cond[198]||utag.cond[227])&&(utag.cond[211]))&&!(utag.cond[165])))",
+     "send": "1",
+     "v": "202610191456",
+     "tid": "4049"
+    },
+    "75": {
+     "load": "(((utag.cond[45])&&!(utag.cond[223])))",
+     "send": "1",
+     "v": "202508060845",
+     "tid": "20010"
+    },
+    "100": {
+     "load": "utag.cond[28]",
+     "send": "1",
+     "v": "202207111524",
+     "tid": "7132"
+    },
+    "180": {
+     "load": "(((utag.cond[140]||utag.cond[81])&&!(utag.cond[146]||utag.cond[169])))",
+     "send": "1",
+     "v": "202610121250",
+     "tid": "7142"
+    },
+    "202": {
+     "load": "((utag.cond[20]))",
+     "send": "1",
+     "v": "202512101439",
+     "tid": "7132"
+    },
+    "203": {
+     "load": "(((utag.cond[151]||utag.cond[227])&&(utag.cond[43])))",
+     "send": "1",
+     "v": "202512101439",
+     "tid": "7132"
+    },
+    "273": {
+     "load": "((utag.cond[192]||utag.cond[193]||utag.cond[194]||utag.cond[110]||utag.cond[186]||utag.cond[152]))",
+     "send": "1",
+     "v": "202407300959",
+     "tid": "14037"
+    },
+    "283": {
+     "load": "((utag.cond[200]))",
+     "send": "1",
+     "v": "202611051016",
+     "tid": "4049"
+    },
+    "398": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[233])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "399": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[234])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "400": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[235]||utag.cond[236])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "293": {
+     "load": "(((utag.cond[193]||utag.cond[194]||utag.cond[186]||utag.cond[187]||utag.cond[188]||utag.cond[189]||utag.cond[152]||utag.cond[177]||utag.cond[201]||utag.cond[202]||utag.cond[110])&&(utag.cond[197])))",
+     "send": "1",
+     "v": "202601191508",
+     "tid": "20067"
+    },
+    "309": {
+     "load": "(((utag.cond[186]||utag.cond[152]||utag.cond[222])&&(utag.cond[200])))",
+     "send": "1",
+     "v": "202501201412",
+     "tid": "14037"
+    },
+    "326": {
+     "load": "((utag.cond[152]||utag.cond[222]||utag.cond[192]||utag.cond[177]||utag.cond[110]||utag.cond[187]||utag.cond[186]||utag.cond[225]))",
+     "send": "1",
+     "v": "202606091449",
+     "tid": "20119"
+    },
+    "335": {
+     "load": "(((utag.cond[20])&&(utag.cond[205])))",
+     "send": "1",
+     "v": "202603051159",
+     "tid": "4049"
+    },
+    "336": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[205])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "338": {
+     "load": "1",
+     "send": "1",
+     "v": "202409051434",
+     "tid": "20010"
+    },
+    "350": {
+     "load": "(((utag.cond[151])&&(utag.cond[214])))",
+     "send": "1",
+     "v": "202410141416",
+     "tid": "12047"
+    },
+    "352": {
+     "load": "(((utag.cond[110]||utag.cond[202]||utag.cond[201]||utag.cond[222]||utag.cond[186]||utag.cond[187]||utag.cond[193]||utag.cond[194]||utag.cond[192]||utag.cond[152]||utag.cond[177])&&(utag.cond[20]||utag.cond[216]||utag.cond[200]||utag.cond[151]||utag.cond[215])))",
+     "send": "1",
+     "v": "202606091449",
+     "tid": "6037"
+    },
+    "362": {
+     "load": "1",
+     "send": "1",
+     "v": "202503041251",
+     "tid": "3131"
+    },
+    "371": {
+     "load": "(((utag.cond[20])&&(utag.cond[152]||utag.cond[222]||utag.cond[192]||utag.cond[225]||utag.cond[193]||utag.cond[194]||utag.cond[220]||utag.cond[186]||utag.cond[187]||utag.cond[226])))",
+     "send": "1",
+     "v": "202503061722",
+     "tid": "17001"
+    },
+    "372": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[212])&&(utag.cond[152]||utag.cond[222]||utag.cond[192]||utag.cond[225]||utag.cond[193]||utag.cond[194]||utag.cond[220]||utag.cond[186]||utag.cond[187]||utag.cond[226])))",
+     "send": "1",
+     "v": "202503061722",
+     "tid": "17001"
+    },
+    "373": {
+     "load": "(((utag.cond[200])&&(utag.cond[152]||utag.cond[222]||utag.cond[224]||utag.cond[192]||utag.cond[225]||utag.cond[193]||utag.cond[194]||utag.cond[220]||utag.cond[186]||utag.cond[187]||utag.cond[226])))",
+     "send": "1",
+     "v": "202503061722",
+     "tid": "17001"
+    },
+    "397": {
+     "load": "1",
+     "send": "1",
+     "v": "202508270938",
+     "tid": "20067"
+    },
+    "411": {
+     "load": "((utag.cond[152]||utag.cond[202]||utag.cond[201]||utag.cond[187]||utag.cond[110]))",
+     "send": "1",
+     "v": "202610211127",
+     "tid": "18048"
+    },
+    "412": {
+     "load": "1",
+     "send": "1",
+     "v": "202607230936",
+     "tid": "9043"
+    },
+    "413": {
+     "load": "(((utag.cond[198]||utag.cond[227])&&(utag.cond[199])))",
+     "send": "1",
+     "v": "202607230936",
+     "tid": "9043"
+    },
+    "414": {
+     "load": "((utag.cond[195]))",
+     "send": "1",
+     "v": "202607230936",
+     "tid": "9043"
+    },
+    "415": {
+     "load": "(((utag.cond[151]||utag.cond[227])&&(utag.cond[237])))",
+     "send": "1",
+     "v": "202611051016",
+     "tid": "7132"
+    },
+    "417": {
+     "load": "((utag.cond[238]))",
+     "send": "1",
+     "v": "202608260913",
+     "tid": "7132"
+    },
+    "420": {
+     "load": "(((utag.cond[119]||utag.cond[20]||utag.cond[151]||utag.cond[200]||utag.cond[240])&&!(utag.cond[204])))",
+     "send": "1",
+     "v": "202610121250",
+     "tid": "20064"
+    },
+    "426": {
+     "load": "(((utag.cond[20]||utag.cond[151]||utag.cond[200])&&(utag.cond[202]||utag.cond[152]||utag.cond[110]||utag.cond[187]||utag.cond[194]||utag.cond[186])))",
+     "send": "1",
+     "v": "202610211127",
+     "tid": "15038"
+    },
+    "427": {
+     "load": "(!(utag.cond[242]))",
+     "send": "1",
+     "v": "202610211127",
+     "tid": "20067"
+    },
+    "430": {
+     "load": "((utag.cond[20]||utag.cond[151]||utag.cond[200]))",
+     "send": "1",
+     "v": "202611051016",
+     "tid": "15038"
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion": {
+   "ok": true,
+   "results": [
+    {
+     "name": "ecom_try",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "397",
+      "412",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "203"
+     ]
+    },
+    {
+     "name": "ecom_buy",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "397",
+      "412",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "203"
+     ]
+    },
+    {
+     "name": "gated_trial",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198",
+      "199",
+      "211",
+      "212",
+      "215",
+      "227",
+      "233"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "trial_demo",
+      "facebook_form_submission_type": "StartTrial",
+      "chatgpt_form_submission_type_local": ""
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ]
+    },
+    {
+     "name": "gated_contact",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198",
+      "199",
+      "211",
+      "212",
+      "215",
+      "227",
+      "234"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "contact",
+      "facebook_form_submission_type": "Contact",
+      "chatgpt_form_submission_type_local": ""
+     },
+     "errors": [],
+     "expected_tags": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -54,7 +54,7 @@
    "DE": {
     "status": "red",
     "red": 2,
-    "yellow": 7,
+    "yellow": 9,
     "site_down": 0,
     "coverage": "partial",
     "publish": false

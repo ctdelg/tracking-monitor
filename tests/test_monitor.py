@@ -10,7 +10,7 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
-from monitor import checks, loadrules, rules, tealium
+from monitor import checks, forms, loadrules, rules, tealium
 from monitor.config import load_platforms
 
 FIX = Path(__file__).parent / "fixtures"
@@ -48,6 +48,15 @@ class Tag98Replay(unittest.TestCase):
 
     def test_gated_forms_still_fire(self):
         self.assertIn("98", self.fired(self.after, GATED))
+
+    def test_product_tour_form_submit_fires_floodlight(self):
+        # Real gate config of the Intacct "Produkttour starten" CTA (2026-11-16).
+        gate = {"gate_id": "ac703bd8-2fd5-4b77-b555-8bc5aa347dfd", "last_content_name": "CL_INT_DE_MED_TOO_MOFU_IntacctProdukttour",
+                "campaign_id": "701Of000008YI2mIAG", "score": "High Score", "product": "Sage Intacct"}
+        self.assertEqual(forms.lead_type(gate["last_content_name"]), "trial_demo")
+        fired = self.fired(self.after, [{"name": "tour", "payload": forms.submit_payload(gate)}])
+        self.assertIn("98", fired)
+        self.assertIn("405", fired)   # Floodlight Trial_Demo tag
 
     def test_diff_flags_tag98_as_conversion_relevant(self):
         d = tealium.diff_utag(tealium.parse_utag(self.before), tealium.parse_utag(self.after), {"4049", "7132"})

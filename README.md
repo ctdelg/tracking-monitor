@@ -23,6 +23,7 @@ GitHub Actions (Mon–Fri 05:00 UTC)                         Claude routine (06:
   python -m monitor run                                       reads results + acknowledgements
    ├─ Tealium CDN: utag.js per market, diff vs. last publish   writes plain-English diagnosis
    ├─ Load rules: replays conversion events in a sandbox       publishes the dashboard artifact
+   ├─ Lead forms: every demo/tour/download form's submit event replayed through Tealium
    ├─ Browser: each URL before/after consent, click IDs        (Phase 2: email on new red/yellow)
    └─ Rules engine → results/<day>.json + report/index.html
 ```
@@ -62,6 +63,7 @@ Results: `results/<day>.json`. Readable report: `report/index.html`.
 | `config/markets.yaml` | Markets, URLs, journeys, conversion events. Edit this to change what is checked. |
 | `config/platforms.yaml` | How each vendor's hits are recognised, and how severe a missing hit is |
 | `config/acks.json` | Acknowledged findings (mirrored from the dashboard) |
+| `config/forms/<MKT>.json` | Which lead forms (demo, product tour, download …) sit on which page |
 | `baseline/` | Confirmed expected tags per page and conversion event |
 | `monitor/` | The checker (see `monitor/checks.py` for the check catalogue) |
 | `results/` | Daily results, history index, utag.js snapshots, Claude diagnoses |

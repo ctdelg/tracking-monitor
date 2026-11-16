@@ -140,6 +140,10 @@ def visit_url(browser: Browser, market: dict, entry: dict, platforms: Platforms,
             return visit
         page.wait_for_timeout(SETTLE_MS)
         visit["pre"] = _snapshot(page, rec.take())
+        try:  # lead forms on the page + reachability of the content behind them (no submit)
+            visit["pre"]["gates"] = page.evaluate("async () => window.__tm.gateTargets()")
+        except Exception:  # noqa: BLE001
+            pass
         btn = page.locator("#onetrust-accept-btn-handler")
         accepted = False
         if btn.count():

@@ -1,7 +1,7 @@
 {
  "day": "2026-11-16",
  "written_by": "Claude (interim run, DE sample of 5 paid landing pages)",
- "summary": "DE stays red for one reason: Floodlight tag 98 does not fire for ecom trial and buy submits (load rule 274, since the Tealium publish of 2026-08-24). Lead forms with a gate_content_name still fire it.\nNew from today's DE sample (5 of 116 paid landing pages):\n- /cp/webinar-sage-x3/ redirects to the DE homepage, so paid clicks to it land on the homepage. Pause or update the campaign.\n- /cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.\n- On the two HR and payroll pages Microsoft UET did not fire, so msclkid was not stored.\n- A Brightcove video player sends player metrics before consent.\nConsent, Floodlight, Google Ads, GA4, LinkedIn, Meta and TikTok work on all five pages, and the gclid is stored everywhere.\nAT, FR, ES and PT show green on Tealium and load-rule checks only: no page checks ran for them today.",
+ "summary": "DE stays red for one reason: Floodlight tag 98 does not fire for ecom trial and buy submits (load rule 274, since the Tealium publish of 2026-08-24). Lead forms with a gate_content_name still fire it.\nNew from today's DE sample (5 of 116 paid landing pages):\n- /cp/webinar-sage-x3/ redirects to the DE homepage, so paid clicks to it land on the homepage. Pause or update the campaign.\n- /cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.\n- On the two HR and payroll pages Microsoft UET did not fire, so msclkid was not stored.\n- A Brightcove video player sends player metrics before consent.\nConsent, Floodlight, Google Ads, GA4, LinkedIn, Meta and TikTok work on all five pages, and the gclid is stored everywhere.\nAT, FR, ES and PT show green on Tealium and load-rule checks only: no page checks ran for them today.\nLead forms (new check): all 136 demo, product tour, download, quote and contact forms on the 116 DE landing pages are active, and replaying their submit event fires Floodlight tag 98 plus the matching lead-type tag (405 trial/demo, 406 contact, 407 download/application). Two forms have an irregular form code; one starts with a space, so Floodlight tag 389 cannot fire for it.\nThe form inventory also found 12 more paid landing pages that redirect: 8 Sage 100cloud URLs go to /sage-100/..., 3 X3 industry pages go to the industry overview.",
  "markets": {
   "DE": {
    "summary": "5 of 116 landing pages checked in the Claude browser. Floodlight DC-5195550, Google Ads AW-970123043, GA4, LinkedIn and Meta fire on every page. The red status comes from the conversion load rule for ecom (tag 98), not from the landing pages.",
@@ -10,7 +10,9 @@
     "CONV-01:ecom_buy|market": "Same cause as ecom_try: rule 274 on tag 98 blocks ecom purchase submits.",
     "PAGE-03|de-cp-webinar-sage-x3": "The page /de-de/cp/webinar-sage-x3/ no longer exists and redirects to https://www.sage.com/de-de/. Paid clicks land on the homepage instead of a webinar registration. Owner: paid media / agency: pause the ads or point them to a current X3 page.",
     "PAGE-03|de-cp-hr-zeiterfassung": "Redirects to /cp/hr/zeiterfassungv2/. Tracking still works, but the click ID survives one more hop. Update the final URL in the campaigns to the v2 page.",
-    "CONS-05|de-cp-hr-zeiterfassung": "The embedded Brightcove video player sends player and impression metrics to metrics.brightcove.com before consent. This is not an ad tag, but it is third-party tracking before consent. Ask the privacy / web team whether the player should wait for consent or run in privacy mode."
+    "CONS-05|de-cp-hr-zeiterfassung": "The embedded Brightcove video player sends player and impression metrics to metrics.brightcove.com before consent. This is not an ad tag, but it is third-party tracking before consent. Ask the privacy / web team whether the player should wait for consent or run in privacy mode.",
+    "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung": "The form's gate_content_name starts with a space (' CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung'). Tealium's lead-type mapping still reads it as contact, but load rule 331 requires the name to start with a letter, so Floodlight tag 389 never fires for this form. Owner: web/marketing automation team - remove the leading space in the Gated Content gate 'lastContentName'.",
+    "FORM-02|form:BMS_18Q4_NCM_DE_DGWW_ER0460_demo": "gate_content_name 'CL_VAS_DE_DEM_S100Hosting_COM|TOP|GNRC' does not follow the CL_<product>_<country>_<segment>_<code>_ pattern. It still maps to trial_demo, so the main conversion tags fire. Low priority clean-up."
    },
    "brief": [
     {
@@ -32,7 +34,20 @@
       },
       "/cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.",
       "Microsoft UET did not fire on the HR and payroll pages, so msclkid was not stored.",
-      "A Brightcove video player sends metrics before consent."
+      "A Brightcove video player sends metrics before consent.",
+      "12 more landing pages redirect (8x Sage 100cloud, 3x X3 industries)."
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Lead forms",
+     "items": [
+      "136 forms on 99 pages: all active.",
+      "Every submit would fire Floodlight 98 and its lead-type tag.",
+      {
+       "text": "One form code starts with a space, so tag 389 cannot fire.",
+       "action": "Fix the gate's lastContentName."
+      }
      ]
     },
     {

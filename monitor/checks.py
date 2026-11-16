@@ -343,6 +343,99 @@ def check_journey(journey: dict, platforms: Platforms, baseline: dict | None) ->
 # Tealium / conversion (market level)
 # --------------------------------------------------------------------------------------
 
+def check_forms(market: dict, forms_part: dict, baseline: dict | None) -> list[dict]:
+    """Lead form checks (see monitor/forms.py). forms_part = raw["forms"]."""
+    from .forms import NAME_CONVENTION, lead_type
+
+    out = []
+    script = forms_part.get("event_script") or {}
+    if not script.get("ok"):
+        out.append(result("FORM-00", "red", "warn", "market",
+                          f"Form tracking script could not be read: {script.get('error')}"))
+    elif script.get("missing"):
+        out.append(result("FORM-00", "red", "fail", "market",
+                          "The Gated Content submit script no longer sends: " + ", ".join(script["missing"])
+                          + ". No lead form on the site would fire its conversion tags.",
+                          {"missing": script["missing"]}))
+    else:
+        out.append(result("FORM-00", "red", "pass", "market",
+                          "Submit script sends utag.link with action and gate_content_name"))
+
+    required = market.get("form_conversion_required", True)
+    base_forms = (baseline or {}).get("forms") or {}
+    for gid, g in sorted((forms_part.get("gates") or {}).items(), key=lambda kv: kv[1].get("gate_name") or kv[0]):
+        target = f"form:{g.get('gate_name') or gid[:8]}"
+        ev = {"gate_id": gid, "pages": g.get("pages"), "ctas": g.get("ctas"), "gate_type": g.get("gate_type"),
+              "gate_content_name": g.get("last_content_name")}
+        if not g.get("ok"):
+            out.append(result("FORM-01", "red", "fail", target,
+                              f"Form configuration not available ({g.get('error')}). The CTA opens nothing.", ev))
+            continue
+        if g.get("inactive"):
+            out.append(result("FORM-01", "red", "fail", target,
+                              "The form is switched off (gateInactive) but CTAs still point to it.", ev))
+            continue
+        out.append(result("FORM-01", "red", "pass", target,
+                          f"{g.get('gate_type')} form, used on {len(g.get('pages') or [])} page(s)", ev))
+
+        missing_on = g.get("missing_on") or []
+        if missing_on:
+            out.append(result("FORM-05", "red", "fail", target,
+                              f"CTA '{(g.get('ctas') or ['?'])[0]}' links to this form, but the form is not on "
+                              f"the page: {', '.join(missing_on)}. Clicking it does nothing.", ev,
+                              title="CTA opens its form"))
+
+        name = g.get("last_content_name") or ""
+        lt = lead_type(name)
+        if not name or not lt:
+            out.append(result("FORM-02", "yellow", "fail", target,
+                              f"gate_content_name '{name or '(empty)'}' has no lead type code (_DEM_, _TOO_, _CON_, "
+                              "_PDF_ ...). Tealium cannot classify the lead, so lead-type based tags will not fire.", ev,
+                              title="Lead type can be derived from the form name"))
+        else:
+            ok_conv = bool(NAME_CONVENTION.match(name))
+            out.append(result("FORM-02", "yellow", "pass" if ok_conv else "warn", target,
+                              f"{name} -> {lt}" + ("" if ok_conv else " (name does not follow the usual pattern)"),
+                              title="Lead type can be derived from the form name"))
+
+        conv = g.get("conversion") or {}
+        if not conv.get("evaluated"):
+            out.append(result("FORM-03", "red", "warn", target,
+                              f"Submit could not be replayed through Tealium: {conv.get('error') or 'not evaluated'}",
+                              title="Conversion tags fire on submit"))
+        else:
+            fired = conv.get("conversion_tags_fired") or []
+            if fired:
+                out.append(result("FORM-03", "red", "pass", target,
+                                  f"On submit these conversion tags would fire: {', '.join(fired)}",
+                                  {**ev, "fired": fired}, title="Conversion tags fire on submit"))
+            else:
+                out.append(result("FORM-03", "red" if required else "yellow", "fail", target,
+                                  "On submit no Floodlight / Google Ads conversion tag would fire "
+                                  f"(gate_content_name {name or '(empty)'}).",
+                                  {**ev, "fired_all": conv.get("fired")}, title="Conversion tags fire on submit"))
+            if gid in base_forms:
+                base, now = set(base_forms[gid]), set(fired)
+                lost, gained = sorted(base - now, key=int), sorted(now - base, key=int)
+                if lost or gained:
+                    out.append(result("FORM-06", "red" if lost else "yellow", "fail" if lost else "warn", target,
+                                      "; ".join(filter(None, [
+                                          f"no longer fire: {', '.join(lost)}" if lost else "",
+                                          f"newly fire: {', '.join(gained)}" if gained else ""])),
+                                      {"baseline": sorted(base, key=int), "now": sorted(now, key=int)},
+                                      title="Form conversion tags unchanged vs. baseline"))
+
+        status = g.get("target_status")
+        if g.get("gate_type") in ("redirect", "download") and status is not None:
+            what = "Product tour / redirect target" if g["gate_type"] == "redirect" else "Download file"
+            url = g.get("redirect_url") or g.get("download_url")
+            out.append(result("FORM-04", "red", "pass" if 200 <= int(status) < 400 else "fail", target,
+                              f"{what} {url} answers HTTP {status}" if 200 <= int(status) < 400 else
+                              f"{what} {url} is broken (HTTP {status}). Leads get no content after submitting.",
+                              {"url": url, "status": status}, title="Content behind the form is reachable"))
+    return out
+
+
 def check_tealium(market_code: str, tealium: dict, baseline: dict | None) -> list[dict]:
     """tealium = {"fetch": {...}, "parsed": {...}, "diff": {...}, "conversion": {...}}"""
     out = []

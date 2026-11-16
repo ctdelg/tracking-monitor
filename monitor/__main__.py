@@ -8,6 +8,7 @@
     python -m monitor baseline confirm --market DE --by "Name"
     python -m monitor report [--day ..]                         static HTML (fallback dashboard)
     python -m monitor dashboard [--day ..] --out FILE           dashboard page for the Claude artifact
+    python -m monitor forms import inventory.json --market DE    lead form inventory from forms_inventory.js
 """
 
 from __future__ import annotations
@@ -34,14 +35,19 @@ def cmd_collect(args) -> None:
         try:
             for code, m in markets.items():
                 print(f"[{code}] Tealium CDN + load rules ...", flush=True)
-                pipeline.store_raw(args.day, code, tealium_part=pipeline.collect_tealium(browser, m, args.day))
+                teal = pipeline.collect_tealium(browser, m, args.day)
+                pipeline.store_raw(args.day, code, tealium_part=teal)
+                print(f"[{code}] lead forms ...", flush=True)
+                forms_part = pipeline.collect_forms(browser, m, teal.get("_body"))
+                pipeline.store_raw(args.day, code, forms_part=forms_part)
                 if not args.no_browser:
                     print(f"[{code}] browser checks ({len(m['urls'])} URLs, {len(m['journeys'])} journeys) ...",
                           flush=True)
-                    part = pipeline.collect_browser(browser, m, args.day, args.url)
+                    part = pipeline.collect_browser(browser, m, args.day, args.url, forms_part)
                     blocked = sum(1 for v in part["visits"] if v.get("blocked"))
                     if blocked:
                         print(f"[{code}]   {blocked} page(s) blocked by bot protection", flush=True)
+                    pipeline.update_form_inventory(code, part["visits"], args.day)
                     pipeline.store_raw(args.day, code, browser_part=part)
         finally:
             browser.close()
@@ -93,6 +99,10 @@ def main(argv=None) -> None:
     p = sub.add_parser("report"); common(p, market=False)
     p = sub.add_parser("dashboard"); common(p, market=False)
     p.add_argument("--out", required=True)
+    p = sub.add_parser("forms"); common(p, market=False)
+    p.add_argument("action", choices=["import"])
+    p.add_argument("file")
+    p.add_argument("--market", required=True)
     p = sub.add_parser("baseline"); common(p, market=False)
     p.add_argument("action", choices=["propose", "confirm"])
     p.add_argument("--market", required=True)
@@ -117,6 +127,17 @@ def main(argv=None) -> None:
         cmd_report(args)
     elif args.cmd == "dashboard":
         cmd_dashboard(args)
+    elif args.cmd == "forms":
+        import html
+        from . import forms
+        data = json.loads(open(args.file, encoding="utf-8").read())
+        code = args.market.upper()
+        for page_id, idxs in data["P"].items():
+            gates = [{"id": data["G"][i][0], "ctas": [html.unescape(c) for c in data["G"][i][1]],
+                      "embedded": bool(data["G"][i][2])} for i in idxs]
+            forms.update_inventory(code, page_id, gates, args.day)
+        inv = forms.load_inventory(code)
+        print(f"{code}: {len(inv['pages'])} page(s) with forms, {len(forms.gates_in_inventory(inv))} distinct form(s)")
     elif args.cmd == "baseline":
         code = args.market.upper()
         if args.action == "propose":

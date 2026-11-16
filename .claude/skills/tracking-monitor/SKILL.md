@@ -78,6 +78,25 @@ handful of pages, because these visits send real, marked tracking hits):
 Then: `python -m monitor ingest <file> --day <day>`, `python -m monitor evaluate --day <day>`,
 render and publish the dashboard, commit.
 
+## Lead forms (demo, product tour, download, quote, contact)
+CTAs such as "Produkttour starten" or "Demo anfordern" open Gated Content forms (`#gate-<id>`).
+The daily run checks every form in `config/forms/<MKT>.json` without submitting anything:
+- FORM-00: the account-wide submit script still sends `utag.link` with `action=form_submit_success`
+  and `gate_content_name` (if not, no form on the site fires conversions → red everywhere)
+- FORM-01: form configuration exists and is active
+- FORM-02: `gate_content_name` (= the gate's `lastContentName`) carries a lead type code
+- FORM-03: replaying the exact submit event through Tealium fires Floodlight / Ads conversion tags
+- FORM-04: the product tour page / download file behind the form answers (browser runs only)
+- FORM-06: the form's conversion tags are unchanged vs. the baseline
+Pages behind redirect forms (product tours) are added to the page checks automatically.
+
+Refresh the inventory when pages change (new CTAs) – no tracking hits are sent:
+1. In the Claude built-in browser open any page of the market on www.sage.com.
+2. Run `monitor/forms_inventory.js`, then `__invForms(<[[page id, path], ...] from markets.yaml>)`.
+3. Poll `JSON.stringify({p: __inv.progress, done: __inv.done})`, then `__invExport()`.
+4. Save the export to a file, `python -m monitor forms import <file> --market <MKT>`, then
+   `python -m monitor run --no-browser --market <MKT>`, propose/confirm the baseline, commit.
+
 ## Rules
 - Never submit forms, start checkouts or create leads. Journeys stop before submit.
 - Never put personal data or secrets in the repo. The allowlist header lives only in the GitHub secret `MONITOR_AUTH_HEADER`.

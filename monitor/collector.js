@@ -47,6 +47,21 @@
     };
   }
 
+  // Lead forms ("gates") on the page: every CTA that opens #gate-<id>, plus gates rendered on the page.
+  function gates() {
+    const byId = {};
+    const add = function (id) { return byId[id] = byId[id] || { id: id, ctas: [], rendered: false }; };
+    Array.prototype.slice.call(document.querySelectorAll('a[href^="#gate-"]')).forEach(function (a) {
+      const g = add(a.getAttribute('href').slice(6));
+      const t = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60);
+      if (t && g.ctas.indexOf(t) < 0) g.ctas.push(t);
+    });
+    Array.prototype.slice.call(document.querySelectorAll('[data-gcdc-gate-id]')).forEach(function (e) {
+      add(e.getAttribute('data-gcdc-gate-id')).rendered = true;
+    });
+    return Object.keys(byId).map(function (k) { return byId[k]; });
+  }
+
   function bannerVisible() {
     const b = document.querySelector('#onetrust-banner-sdk');
     if (!b) return false;
@@ -93,6 +108,7 @@
         consent_groups: groups,
         utag: utagInfo(),
         has_form: !!document.querySelector('form input[type=email], form input[name*=mail i]'),
+        gates: gates(),
         collected_at: new Date().toISOString()
       };
     },
@@ -136,6 +152,26 @@
       const pre = tm.compact(tm.snapshot());
       const post = tm.compact(await tm.acceptAndSnapshot(waitMs || 8000));
       return { status: 200, final_url: location.href, pre: pre, post: post };
+    },
+    // For each gate on the page, load its configuration and check that the content behind it
+    // (product tour redirect, download file) answers. Same-origin HEAD requests only; nothing is submitted.
+    gateTargets: async function (account) {
+      const list = gates();
+      for (const g of list) {
+        try {
+          const r = await fetch('https://app.gatedcontent.com/gates/' + (account || '50338383') + '/' + g.id);
+          const b = ((await r.json()) || {}).Body || {};
+          const url = decodeURIComponent(b.gateType === 'redirect' ? (b.redirectUrl || '') : (b.gateType === 'download' ? (b.downloadUrl || '') : ''));
+          if (url) {
+            g.target_url = url;
+            if (new URL(url, location.href).origin === location.origin) {
+              const h = await fetch(url, { method: 'HEAD', redirect: 'follow' });
+              g.target_status = h.status;
+            }
+          }
+        } catch (e) { g.error = String(e).slice(0, 120); }
+      }
+      return list;
     },
     acceptAndSnapshot: async function (waitMs) {
       tm.mark();

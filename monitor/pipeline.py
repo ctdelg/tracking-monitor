@@ -15,7 +15,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import SCHEMA_VERSION, __version__, checks, loadrules, rules, tealium
+from . import SCHEMA_VERSION, __version__, checks, forms, loadrules, rules, tealium
 from .config import BASELINE_DIR, RESULTS_DIR, load_acks, load_markets, load_platforms, load_settings
 
 
@@ -63,23 +63,71 @@ def collect_tealium(browser, market: dict, day: str) -> dict:
         r["conversion_tags_fired"] = sorted(
             (t for t in r["fired"] if parsed["tags"].get(t, {}).get("tid") in templates), key=int)
     out["conversion"] = conv
+    out["_body"] = fetched["body"]   # handed to collect_forms, never stored
     return out
 
 
-def collect_browser(browser, market: dict, day: str, url_ids: list[str] | None = None) -> dict:
+def collect_forms(browser, market: dict, utag_body: str | None) -> dict:
+    """Lead forms: fetch gate configs and replay each form's submit event through Tealium."""
+    settings = load_settings()
+    templates = set(str(k) for k in settings.get("conversion_templates", {}))
+    account = str(settings.get("gated_content_account", "50338383"))
+    part = forms.collect(market, account)
+    gates = {gid: g for gid, g in part["gates"].items() if g.get("ok")}
+    if not gates:
+        return part
+    if not utag_body:
+        for g in gates.values():
+            g["conversion"] = {"evaluated": False, "error": "utag.js not available"}
+        return part
+    parsed = tealium.parse_utag(utag_body)
+    events = [{"name": gid, "payload": forms.submit_payload(g)} for gid, g in gates.items()]
+    res = loadrules.evaluate(browser, utag_body, market["tealium_profile"], events)
+    by_name = {r["name"]: r for r in res.get("results", [])}
+    for gid, g in gates.items():
+        r = by_name.get(gid)
+        if not res.get("ok") or not r:
+            g["conversion"] = {"evaluated": False, "error": res.get("error") or "no result"}
+            continue
+        g["conversion"] = {
+            "evaluated": True, "fired": r["fired"], "errors": r.get("errors"),
+            "conversion_tags_fired": sorted(
+                (t for t in r["fired"] if parsed["tags"].get(t, {}).get("tid") in templates), key=int),
+        }
+    return part
+
+
+def form_followup_pages(market: dict, forms_part: dict | None) -> list[dict]:
+    """Pages behind redirect forms (e.g. the product tour start page), checked like landing pages."""
+    seen = {u["url"].rstrip("/") for u in market["urls"]}
+    out = []
+    prefix = f"/{market['tealium_profile']}/"
+    for g in ((forms_part or {}).get("gates") or {}).values():
+        url = (g.get("redirect_url") or "").split("?")[0]
+        if g.get("gate_type") != "redirect" or prefix not in url or url.rstrip("/") in seen:
+            continue
+        seen.add(url.rstrip("/"))
+        slug = url.split(prefix, 1)[1].strip("/").replace("/", "-")[:48]
+        out.append({"id": f"tour-{slug}", "url": url, "type": "form_target", "via_form": g.get("gate_name")})
+    return out
+
+
+def collect_browser(browser, market: dict, day: str, url_ids: list[str] | None = None,
+                    forms_part: dict | None = None) -> dict:
     from . import browser as br  # imported lazily: only needed in Playwright mode
 
     platforms = load_platforms()
     locale = market.get("locale", market["tealium_profile"])
     visits, journeys = [], []
-    for entry in market["urls"]:
+    entries = market["urls"] + ([] if url_ids else form_followup_pages(market, forms_part))
+    for entry in entries:
         if url_ids and entry["id"] not in url_ids:
             continue
         visits.append(br.visit_url(browser, market, entry, platforms, day, locale))
         br.politeness_pause()
         if visits[-1].get("blocked") and not url_ids:
             # Bot protection is all-or-nothing; record the rest as blocked without hammering the site.
-            for rest in market["urls"][len(visits):]:
+            for rest in entries[len(visits):]:
                 visits.append({"id": rest["id"], "url": rest["url"], "type": rest.get("type"),
                                "blocked": True, "status": visits[-1]["status"], "skipped": True})
             break
@@ -93,14 +141,28 @@ def collect_browser(browser, market: dict, day: str, url_ids: list[str] | None =
 
 
 def store_raw(day: str, market: str, *, tealium_part: dict | None = None,
-              browser_part: dict | None = None) -> None:
+              browser_part: dict | None = None, forms_part: dict | None = None) -> None:
     path = raw_path(day, market)
     raw = _read(path, {"market": market, "day": day})
     if tealium_part is not None:
-        raw["tealium"] = tealium_part
+        raw["tealium"] = {k: v for k, v in tealium_part.items() if not k.startswith("_")}
+    if forms_part is not None:
+        raw["forms"] = forms_part
     if browser_part is not None:
         raw["browser"] = browser_part
     _write(path, raw)
+
+
+def update_form_inventory(market: str, visits: list[dict], day: str) -> int:
+    """Store the gates found on each visited page (collector.js snapshot 'gates')."""
+    n = 0
+    for v in visits:
+        snap = v.get("pre") or {}
+        if v.get("blocked") or "gates" not in snap:
+            continue
+        forms.update_inventory(market, v["id"], snap["gates"], day)
+        n += 1
+    return n
 
 
 def ingest_browser_evidence(day: str, payload: dict) -> list[str]:
@@ -119,6 +181,7 @@ def ingest_browser_evidence(day: str, payload: dict) -> list[str]:
         jby = {j["id"]: j for j in existing.get("journeys", []) if not j.get("blocked")}
         for j in part.get("journeys", []):
             jby[j["id"]] = j
+        update_form_inventory(code, part.get("visits", []), day)
         store_raw(day, code, browser_part={"source": "claude-browser", "collected_at": _now(),
                                            "visits": list(by_id.values()), "journeys": list(jby.values())})
         done.append(code)
@@ -146,6 +209,8 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
         results = []
         if raw.get("tealium"):
             results += checks.check_tealium(code, raw["tealium"], base)
+        if raw.get("forms"):
+            results += checks.check_forms(m, raw["forms"], base)
         brw = raw.get("browser") or {}
         url_meta = {u["id"]: u for u in m["urls"]}
         for v in brw.get("visits", []):
@@ -171,7 +236,9 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
                 "changed": bool(((raw.get("tealium") or {}).get("diff") or {}).get("changed")),
                 "diff": (raw.get("tealium") or {}).get("diff"),
             },
-            "pages": [{"id": u["id"], "url": u["url"], "type": u.get("type")} for u in m["urls"]],
+            "pages": [{"id": u["id"], "url": u["url"], "type": u.get("type")} for u in m["urls"]]
+                     + [{"id": v["id"], "url": v.get("url"), "type": v.get("type", "form_target")}
+                        for v in brw.get("visits", []) if v["id"] not in url_meta],
             "checks": results,
             "acks_applied": [a for a in applied if a],
         }
@@ -262,6 +329,10 @@ def propose_baseline(day: str, market: str, url_ids: list[str] | None = None) ->
     if not url_ids:
         for r in ((raw.get("tealium") or {}).get("conversion") or {}).get("results", []):
             prop["conversion"][r["name"]] = r.get("conversion_tags_fired", [])
+        prop["forms"] = dict(current.get("forms", {}))
+        for gid, g in ((raw.get("forms") or {}).get("gates") or {}).items():
+            if (g.get("conversion") or {}).get("evaluated"):
+                prop["forms"][gid] = g["conversion"]["conversion_tags_fired"]
     _write(BASELINE_DIR / "_pending" / f"{market}.json", prop)
     return prop
 

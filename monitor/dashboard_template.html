@@ -159,6 +159,10 @@ tbody tr.sel[aria-selected="true"] td:first-child { box-shadow: inset 3px 0 0 va
 .q.red { background: var(--crit-fill); } .q.yellow { background: var(--warn-fill); } .q.green { background: var(--ok-fill); }
 .q.green.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--ok-fill); }
 .q.yellow.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--warn-fill); }
+button.q { border: 0; padding: 0; cursor: pointer; transition: transform .12s; }
+button.q:hover { transform: translateY(-2px); }
+.q.on { outline: 2px solid var(--fg); outline-offset: 2px; }
+.notice.past { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; box-shadow: 0 0 0 1px var(--accent), 0 2px 4px var(--ring); }
 .q.pub::before { content: ""; position: absolute; left: 50%; top: -7px; transform: translateX(-50%); border: 4px solid transparent; border-top: 5px solid var(--accent); border-bottom: 0; }
 .saxis { display: grid; grid-template-columns: 34px 1fr 1fr; font-size: 12px; color: var(--faint); }
 .saxis span:last-child { text-align: right; }
@@ -260,8 +264,12 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
   "use strict";
   const MODE = "__MODE__";
   const P = __DATA__;
-  const R = P.results, D = P.diagnosis || {}, H = P.history || {days: {}};
-  const MARKETS = Object.keys(R.markets);
+  const H = P.history || {days: {}};
+  // Every run inside the 14-day window is embedded; R/D/MARKETS point at the run being viewed.
+  const LATEST = P.results.day;
+  const RUNS = Object.assign({}, P.runs || {}, {[LATEST]: {results: P.results, diagnosis: P.diagnosis}});
+  let R = P.results, D = P.diagnosis || {};
+  let MARKETS = Object.keys(R.markets);
   const ORDER = {green: 0, yellow: 1, red: 2};
   const EVENTS = {ecom_try: "Web-shop trial", ecom_buy: "Web-shop purchase", gated_trial: "Trial form", gated_contact: "Contact form"};
   const REASONS = {"TAG-BASELINE": ["unconfirmed baseline", "unconfirmed baselines"], "CONS-05": ["pre-consent request", "pre-consent requests"],
@@ -274,9 +282,18 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
   const validScope = v => v === ALL || MARKETS.includes(v);
   const readScope = () => { try { return localStorage.getItem(SCOPE_KEY); } catch (e) { return null; } };
   const writeScope = v => { try { localStorage.setItem(SCOPE_KEY, v); } catch (e) { /* private mode */ } };
-  let selected = (location.hash || "").replace("#", "").toUpperCase();
+  // Hash: #DE, #ALL, or with a run day #DE@2026-11-14.
+  const parseHash = () => { const [s, d] = (location.hash || "").replace("#", "").split("@"); return {scope: (s || "").toUpperCase(), day: d || null}; };
+  const hashFor = () => "#" + selected + (R.day !== LATEST ? "@" + R.day : "");
+  let selected = parseHash().scope;
   if (!validScope(selected)) selected = readScope();
   if (!validScope(selected)) selected = ALL;
+  function loadRun(day) {
+    const run = RUNS[day] || RUNS[LATEST];
+    R = run.results; D = run.diagnosis || {}; MARKETS = Object.keys(R.markets);
+    if (!validScope(selected)) selected = ALL;
+  }
+  if (parseHash().day && RUNS[parseHash().day]) loadRun(parseHash().day);
   let openAckFor = null;
 
   const el = (tag, attrs, ...kids) => {
@@ -360,8 +377,13 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
   function select(code) {
     if (!validScope(code)) return;
     const changed = code !== selected;
-    selected = code; openAckFor = null; history.replaceState(null, "", "#" + code); writeScope(code); renderAll();
+    selected = code; openAckFor = null; writeScope(code); history.replaceState(null, "", hashFor()); renderAll();
     if (changed) document.getElementById("sec-overview").scrollIntoView({block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+  }
+  function openDay(day) {
+    if (!RUNS[day] || day === R.day) return;
+    loadRun(day); openAckFor = null; history.replaceState(null, "", hashFor()); renderAll();
+    document.getElementById("sec-overview").scrollIntoView({block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
   }
   const isAll = () => selected === ALL;
   const scope = () => isAll() ? MARKETS : [selected];
@@ -444,6 +466,9 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     document.getElementById("verdict").replaceChildren(lead, rest ? " " : "", rest ? el("span", {class: "rest"}, rest) : null);
     const notes = document.getElementById("notices");
     notes.replaceChildren();
+    if (R.day !== LATEST) notes.append(el("div", {class: "notice past"},
+      el("p", {}, "You're looking at the run of ", el("b", {}, fmtDay(R.day)), ". Acknowledging is only possible on the latest run."),
+      el("button", {class: "btn primary", type: "button", onclick: () => { loadRun(LATEST); history.replaceState(null, "", hashFor()); renderAll(); }}, "Back to latest run (" + shortDay(LATEST) + ")")));
     for (const inc of g.incidents) {
       if (!isAll() && !inc.markets.includes(selected)) continue;
       notes.append(el("div", {class: "notice crit"}, el("b", {}, "Global incident: " + inc.check + " fails in " + inc.markets.join(", ")),
@@ -570,8 +595,8 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
 
   function renderHistory() {
     const box = document.getElementById("history");
-    const days = []; for (let i = 13; i >= 0; i--) days.push(addDays(R.day, -i));
-    const runs = Object.keys(H.days || {}).length;
+    const days = []; for (let i = 13; i >= 0; i--) days.push(addDays(LATEST, -i));   // fixed window: always ends at the latest run
+    const runs = days.filter(d => RUNS[d]).length;
     const rows = scope().map(code => {
       const pv = pubDay(R.markets[code].utag.publish_version);
       return el("div", {class: "srow"}, el("b", {}, code), days.map(d => {
@@ -580,11 +605,15 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
         const cfg = v && v.coverage === "tealium_only";
         const cls = "q" + (v ? " run " + v.status + (cfg ? " cfg" : "") : "") + (pub ? " pub" : "");
         const t = shortDay(d) + ": " + (v ? v.status + (cfg ? " (Tealium config only)" : v.coverage === "partial" ? " (some pages opened)" : "") : "no run") + (pub ? ", Tealium publish" : "");
-        return el("span", {class: cls, title: t, role: "img", "aria-label": code + " " + t});
+        const on = d === R.day ? " on" : "";
+        return RUNS[d]
+          ? el("button", {class: cls + on, type: "button", title: t + " · open this run", "aria-label": "Open run of " + shortDay(d) + " (" + code + " " + t.split(": ")[1] + ")",
+              "aria-pressed": String(d === R.day), onclick: () => openDay(d)})
+          : el("span", {class: cls, title: t, role: "img", "aria-label": code + " " + t});
       }));
     });
     box.replaceChildren(
-      el("div", {class: "head"}, el("h2", {}, "Last 14 days"), el("span", {class: "muted"}, runs + " run day" + (runs === 1 ? "" : "s") + " recorded")),
+      el("div", {class: "head"}, el("h2", {}, "Last 14 days"), el("span", {class: "muted"}, runs + " run" + (runs === 1 ? "" : "s") + " in the window · click a day to open its run")),
       el("div", {class: "strip"}, rows, el("div", {class: "saxis"}, el("span"), el("span", {}, shortDay(days[0])), el("span", {}, shortDay(days[13])))),
       el("div", {class: "legend"},
         el("span", {}, el("i", {class: "q run red"}), "red"), el("span", {}, el("i", {class: "q run yellow"}), "yellow"),
@@ -633,7 +662,7 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
       const who = ack.by ? (names[ack.by] || (ack.source === "file" ? ack.by : "Someone")) : "Someone";
       actions.append(el("span", {class: "muted"}, "Acknowledged by " + who + (ack.note ? ": " + ack.note : "") + (ack.expires ? " (until " + ack.expires + ")" : " (until fixed)")));
       if (db && canWrite && ack._id) actions.append(el("button", {class: "btn", onclick: () => withdraw(ack._id)}, "Withdraw"));
-    } else if (db && canWrite && c.result !== "pass") {
+    } else if (db && canWrite && c.result !== "pass" && R.day === LATEST) {
       actions.append(el("button", {class: "btn", onclick: () => { openAckFor = keyOf(code, c); renderMarket(); }}, "Acknowledge"));
     }
     if (actions.childNodes.length) node.append(actions);
@@ -757,7 +786,12 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     if (isAll()) renderNeeds(); else renderMarket();
     renderPublish();
   }
-  window.addEventListener("hashchange", () => { const h = location.hash.replace("#", "").toUpperCase(); if (validScope(h) && h !== selected) select(h); });
+  window.addEventListener("hashchange", () => {
+    const h = parseHash(), day = h.day && RUNS[h.day] ? h.day : LATEST;
+    if (day !== R.day) loadRun(day);
+    if (validScope(h.scope)) selected = h.scope;
+    renderAll();
+  });
   renderAll();
 
   // --- live acknowledgements (artifact only) ------------------------------------------

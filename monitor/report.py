@@ -12,6 +12,7 @@ Both embed the day's results, the Claude diagnosis (if present) and the full his
 from __future__ import annotations
 
 import json
+from datetime import date, timedelta
 from pathlib import Path
 
 from .config import RESULTS_DIR, ROOT, load_acks
@@ -48,8 +49,19 @@ def build_payload(day: str) -> dict:
         "results": _trim(doc),
         "diagnosis": _read(RESULTS_DIR / "diagnosis" / f"{doc['day']}.json"),
         "history": _read(RESULTS_DIR / "index.json", {"days": {}}),
+        "runs": _earlier_runs(doc["day"]),
         "acks_file": load_acks(),
     }
+
+
+def _earlier_runs(day: str, window: int = 14) -> dict:
+    """Earlier runs inside the dashboard's lookback window, so a day in the history strip can be opened."""
+    first = (date.fromisoformat(day) - timedelta(days=window - 1)).isoformat()
+    runs = {}
+    for p in sorted(RESULTS_DIR.glob("????-??-??.json")):
+        if first <= p.stem < day:
+            runs[p.stem] = {"results": _trim(_read(p)), "diagnosis": _read(RESULTS_DIR / "diagnosis" / p.name)}
+    return runs
 
 
 def _render(day: str, mode: str) -> str:

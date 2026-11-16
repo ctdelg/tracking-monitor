@@ -1,131 +1,230 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><title>EU Tracking Monitor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: control-room board - status strip on top, market tiles, then one market's findings, publish diff and history. */
+/* Layout: app shell (sidebar + main). Main reads top-down: verdict sentence, three state cards,
+   market x conversion-event matrix, 14-day status strip, the selected market's findings, publishes.
+   No line charts: runs are daily pass/fail states, and percentages would hide one broken conversion. */
 :root {
-  --bg: #f4f6f8; --surface: #ffffff; --fg: #17212b; --muted: #5a6673; --line: #dbe1e7; --accent: #1d5fa8;
-  --ok: #1f7f4a; --ok-bg: #e5f3ea; --warn: #9a6512; --warn-bg: #fbf0dc; --crit: #b8322a; --crit-bg: #fbe6e3;
-  --down: #5b4bc4; --down-bg: #ece9fb; --sys: #5f6b78; --sys-bg: #eceff2;
-  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
-  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --page: #ffffff; --shell: #f4f4f6; --surface: #ffffff; --sunk: #f4f4f6;
+  --fg: #020a0f; --muted: #5d636b; --faint: #8b9098; --line: rgba(80, 84, 92, .14); --ring: rgba(103, 103, 103, .10);
+  --accent: #1b65be; --brand: #00d639;
+  --ok: #1f7a32; --ok-fill: #2f9e44; --ok-bg: #e8f5ea;
+  --warn: #8a5300; --warn-fill: #e39b1f; --warn-bg: #fdf2dc;
+  --crit: #b42318; --crit-fill: #d93a2b; --crit-bg: #fdeceb;
+  --down: #3f5a74; --down-fill: #5b7a99; --down-bg: #e7eef5;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --shadow: 0 0 0 1px var(--ring), 0 2px 4px var(--ring);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #0e1319; --surface: #151c24; --fg: #e4e9ee; --muted: #93a0ad; --line: #26313d; --accent: #6aa8ea;
-  --ok: #4cc283; --ok-bg: #12291d; --warn: #e2a640; --warn-bg: #2d2412; --crit: #f0675b; --crit-bg: #33171a;
-  --down: #a196f3; --down-bg: #211d3a; --sys: #9aa6b3; --sys-bg: #1d252e; color-scheme: dark; } }
+  --page: #0b0e12; --shell: #12161c; --surface: #191e25; --sunk: #12161c;
+  --fg: #eef1f4; --muted: #a3abb5; --faint: #7c8590; --line: rgba(200, 210, 220, .12); --ring: rgba(0, 0, 0, .35);
+  --accent: #6aa8ea;
+  --ok: #5fd07a; --ok-fill: #3fb35a; --ok-bg: #12291a;
+  --warn: #f0b24d; --warn-fill: #e39b1f; --warn-bg: #2d2412;
+  --crit: #ff7b6e; --crit-fill: #e5483a; --crit-bg: #35171a;
+  --down: #9db8d3; --down-fill: #6f8fae; --down-bg: #1b2530;
+  --shadow: 0 0 0 1px rgba(255, 255, 255, .06), 0 2px 6px var(--ring); color-scheme: dark; } }
 :root[data-theme="dark"] {
-  --bg: #0e1319; --surface: #151c24; --fg: #e4e9ee; --muted: #93a0ad; --line: #26313d; --accent: #6aa8ea;
-  --ok: #4cc283; --ok-bg: #12291d; --warn: #e2a640; --warn-bg: #2d2412; --crit: #f0675b; --crit-bg: #33171a;
-  --down: #a196f3; --down-bg: #211d3a; --sys: #9aa6b3; --sys-bg: #1d252e; color-scheme: dark; }
+  --page: #0b0e12; --shell: #12161c; --surface: #191e25; --sunk: #12161c;
+  --fg: #eef1f4; --muted: #a3abb5; --faint: #7c8590; --line: rgba(200, 210, 220, .12); --ring: rgba(0, 0, 0, .35);
+  --accent: #6aa8ea;
+  --ok: #5fd07a; --ok-fill: #3fb35a; --ok-bg: #12291a;
+  --warn: #f0b24d; --warn-fill: #e39b1f; --warn-bg: #2d2412;
+  --crit: #ff7b6e; --crit-fill: #e5483a; --crit-bg: #35171a;
+  --down: #9db8d3; --down-fill: #6f8fae; --down-bg: #1b2530;
+  --shadow: 0 0 0 1px rgba(255, 255, 255, .06), 0 2px 6px var(--ring); color-scheme: dark; }
 
 * { box-sizing: border-box; }
-body { background: var(--bg); color: var(--fg); font: 14px/1.5 var(--f-body); }
-.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
-.wrap > * { min-width: 0; }
-h1, h2, h3 { font-family: var(--f-display); font-weight: 600; margin: 0; text-wrap: balance; }
-h1 { font-size: 26px; letter-spacing: .01em; }
-h2 { font-size: 19px; }
-h3 { font-size: 15px; }
+body { margin: 0; background: var(--page); color: var(--fg); font: 14px/1.5 var(--f-body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -.015em; text-wrap: balance; }
+h2 { font-size: 17px; }
+h3 { font-size: 14px; }
+p { margin: 0; }
+a { color: var(--accent); }
+button { font: inherit; color: inherit; cursor: pointer; }
 .muted { color: var(--muted); }
 .mono { font-family: var(--f-mono); font-size: 12.5px; }
-.eyebrow { font: 600 11px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-a { color: var(--accent); }
-button { font: inherit; cursor: pointer; }
-button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, .tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
-header.top .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 13px; }
-.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font: 600 12px/1.4 var(--f-body); letter-spacing: .04em; text-transform: uppercase; }
-.pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
-.s-green { color: var(--ok); background: var(--ok-bg); }
-.s-yellow { color: var(--warn); background: var(--warn-bg); }
-.s-red { color: var(--crit); background: var(--crit-bg); }
-.s-down { color: var(--down); background: var(--down-bg); }
-.s-sys { color: var(--sys); background: var(--sys-bg); }
-.big-pill { font-size: 14px; padding: 6px 14px; }
+/* shell */
+.shell { width: calc(100% - 32px); max-width: 1360px; margin: 16px auto; background: var(--shell); border-radius: 24px; padding: 12px;
+  display: grid; grid-template-columns: 216px minmax(0, 1fr); gap: 12px; align-items: start; }
+.side { position: sticky; top: 12px; background: var(--surface); box-shadow: var(--shadow); border-radius: 20px; padding: 18px 12px; display: grid; gap: 2px; }
+.brand { display: grid; gap: 2px; padding: 0 8px 16px; }
+.brand svg { width: 76px; height: auto; display: block; }
+.brand span { font-size: 12.5px; color: var(--muted); }
+.navlabel { font-size: 12px; color: var(--faint); padding: 14px 10px 4px; }
+.nav, .mk { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border: 0; background: none; border-radius: 10px;
+  text-align: left; color: var(--muted); font-weight: 500; transition: background-color .15s, color .15s; }
+.nav:hover, .mk:hover { background: var(--sunk); color: var(--fg); }
+.mk[aria-pressed="true"] { background: var(--sunk); color: var(--fg); box-shadow: inset 0 0 0 1px var(--line); }
+.mk .nm { flex: 1; }
+.mk .n { font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.nav svg { width: 17px; height: 17px; flex: none; }
+.legend2 { display: grid; gap: 4px; font-size: 12px; color: var(--faint); padding: 14px 10px 0; }
+.legend2 span { display: flex; gap: 8px; align-items: center; }
 
-.notice { border: 1px solid var(--line); border-left: 4px solid var(--sys); background: var(--surface); padding: 10px 14px; border-radius: 6px; }
-.notice.crit { border-left-color: var(--crit); }
-.notice p { margin: 4px 0 0; }
-.summary { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; }
-.summary p { margin: 0; max-width: 78ch; }
+/* status dot: solid = checked on the page, ring = Tealium config only */
+.sd { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--faint); }
+.sd.red { background: var(--crit-fill); } .sd.yellow { background: var(--warn-fill); } .sd.green { background: var(--ok-fill); }
+.sd.down { background: var(--down-fill); }
+.sd.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--ok-fill); }
+.sd.cfg.yellow { box-shadow: inset 0 0 0 2px var(--warn-fill); } .sd.cfg.red { background: var(--crit-fill); box-shadow: none; }
 
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
-.tile { text-align: left; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--sys); border-radius: 8px; padding: 12px 14px; display: grid; gap: 6px; color: var(--fg); min-width: 0; }
-.tile.green { border-top-color: var(--ok); } .tile.yellow { border-top-color: var(--warn); } .tile.red { border-top-color: var(--crit); }
-.tile[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent) inset; }
-.tile .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-.tile .code { font: 600 22px/1 var(--f-display); }
-.tile .counts { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.tile .counts b { color: var(--fg); font-weight: 600; }
-.tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.tag { font-size: 11.5px; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); }
+.main { display: grid; gap: 12px; min-width: 0; }
+.main > * { min-width: 0; }
+.card { background: var(--surface); box-shadow: var(--shadow); border-radius: 20px; padding: 20px 22px; display: grid; gap: 14px; min-width: 0; }
+.head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 12px; }
+.head .muted { font-size: 12.5px; }
 
-section.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; }
-.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+/* verdict */
+.meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
+.meta b { color: var(--fg); font-weight: 500; }
+.verdict h1 { font-size: clamp(24px, 2.6vw, 34px); line-height: 1.18; max-width: 30ch; }
+.verdict h1 .rest { color: var(--faint); }
+.brief { display: grid; gap: 6px; padding: 12px 14px; background: var(--sunk); border-radius: 12px; font-size: 13.5px; max-width: 90ch; }
+.brief b { font-size: 12px; color: var(--muted); font-weight: 500; }
 
-.findings { display: grid; gap: 8px; }
-.finding { border: 1px solid var(--line); border-left: 4px solid var(--sys); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; min-width: 0; }
-.finding.red { border-left-color: var(--crit); } .finding.yellow { border-left-color: var(--warn); }
-.finding.site_down { border-left-color: var(--down); } .finding.info { border-left-color: var(--accent); }
-.finding.acked { opacity: .62; }
-.finding .line1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
-.finding .title { font-weight: 600; }
-.finding .detail { margin: 0; overflow-wrap: anywhere; }
-.diag { margin: 0; padding: 8px 10px; background: var(--bg); border-radius: 4px; font-size: 13.5px; }
-.diag::before { content: "Diagnosis  "; font: 600 11px var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
-details summary { cursor: pointer; color: var(--muted); font-size: 12.5px; }
-pre.ev { margin: 6px 0 0; padding: 8px; background: var(--bg); border-radius: 4px; overflow-x: auto; font: 12px/1.45 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 280px; }
-.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.btn { border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 6px; padding: 4px 10px; font-size: 13px; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
-.ackform { display: grid; gap: 8px; padding: 10px; border: 1px dashed var(--line); border-radius: 6px; }
-.ackform label { display: grid; gap: 4px; font-size: 12.5px; color: var(--muted); }
-.ackform input, .ackform select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; }
+/* state cards */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.stat { gap: 6px; padding: 16px 18px; align-content: start; }
+.stat .lb { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.stat .lb svg { width: 16px; height: 16px; }
+.stat .big { font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat .big small { font-size: 14px; font-weight: 500; color: var(--faint); letter-spacing: 0; margin-left: 4px; }
+.stat .sub { font-size: 12.5px; color: var(--muted); }
+.segs { display: flex; gap: 3px; height: 10px; margin-top: 4px; }
+.segs i { flex: 1; border-radius: 3px; background: var(--sunk); }
+.segs i.ok { background: var(--ok-fill); } .segs i.bad { background: var(--crit-fill); } .segs i.ack { background: var(--faint); }
+.bar { height: 10px; border-radius: 3px; background: var(--sunk); overflow: hidden; margin-top: 4px; }
+.bar i { display: block; height: 100%; min-width: 4px; border-radius: 3px; background: var(--warn-fill); }
+.bar i.full { background: var(--ok-fill); }
 
+/* chips */
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+.s-green { color: var(--ok); background: var(--ok-bg); } .s-yellow { color: var(--warn); background: var(--warn-bg); }
+.s-red { color: var(--crit); background: var(--crit-bg); } .s-down { color: var(--down); background: var(--down-bg); }
+.s-sys { color: var(--muted); background: var(--sunk); }
+.s-cfg { color: var(--ok); background: transparent; box-shadow: inset 0 0 0 1px var(--ok-fill); }
+
+/* tables */
 .scroll { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 13px; }
-th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
-th { font: 600 11px var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
-td.cell { text-align: center; }
-.dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--line); }
-.dot.pass { background: var(--ok); } .dot.fail-red { background: var(--crit); } .dot.fail-yellow, .dot.warn { background: var(--warn); }
-.dot.fail-site_down { background: var(--down); } .dot.blocked { background: var(--sys); } .dot.acked { background: var(--muted); }
+th, td { text-align: left; padding: 9px 10px; border-top: 1px solid var(--line); vertical-align: middle; }
+thead th { border-top: 0; font-size: 12px; font-weight: 500; color: var(--faint); white-space: nowrap; padding-top: 0; }
+tbody tr.sel { cursor: pointer; transition: background-color .15s; }
+tbody tr.sel:hover { background: var(--sunk); }
+tbody tr.sel[aria-selected="true"] td:first-child { box-shadow: inset 3px 0 0 var(--fg); }
+.code { font-weight: 600; display: inline-flex; gap: 8px; align-items: center; }
+.ok-t { color: var(--ok); } .bad-t { color: var(--crit); font-weight: 500; } .na-t { color: var(--faint); } .ack-t { color: var(--faint); text-decoration: line-through; }
+.ic { width: 15px; height: 15px; vertical-align: -3px; }
+.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 
-.hist { display: grid; gap: 6px; }
-.hrow { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; }
-.hcells { display: flex; gap: 2px; overflow-x: auto; padding-bottom: 2px; }
-.hc { flex: 0 0 auto; width: 12px; height: 20px; border-radius: 2px; background: var(--line); }
-.hc.green { background: var(--ok); } .hc.yellow { background: var(--warn); } .hc.red { background: var(--crit); }
-.hc.tealium_only, .hc.partial { opacity: .55; }
-.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); }
-.legend span { display: inline-flex; gap: 5px; align-items: center; }
-.diffitem { border-bottom: 1px solid var(--line); padding: 8px 0; display: grid; gap: 4px; min-width: 0; }
+/* 14-day strip */
+.strip { display: grid; gap: 10px; }
+.srow { display: grid; grid-template-columns: 34px repeat(14, minmax(0, 1fr)); gap: 4px; align-items: center; }
+.srow b { font-weight: 600; font-size: 13px; }
+.q { position: relative; height: 18px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--line); background: repeating-linear-gradient(135deg, transparent 0 3px, var(--line) 3px 4px); }
+.q.run { background: var(--sunk); box-shadow: none; }
+.q.red { background: var(--crit-fill); } .q.yellow { background: var(--warn-fill); } .q.green { background: var(--ok-fill); }
+.q.green.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--ok-fill); }
+.q.yellow.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--warn-fill); }
+.q.pub::before { content: ""; position: absolute; left: 50%; top: -7px; transform: translateX(-50%); border: 4px solid transparent; border-top: 5px solid var(--accent); border-bottom: 0; }
+.saxis { display: grid; grid-template-columns: 34px 1fr 1fr; font-size: 12px; color: var(--faint); }
+.saxis span:last-child { text-align: right; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+.legend .q { width: 16px; height: 12px; }
+
+/* notices */
+.notice { background: var(--surface); box-shadow: var(--shadow); border-radius: 16px; padding: 12px 16px; display: grid; gap: 4px; }
+.notice.crit { box-shadow: 0 0 0 1px var(--crit-fill), 0 2px 4px var(--ring); }
+
+/* findings */
+.findings { display: grid; gap: 10px; }
+.finding { border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; min-width: 0; box-shadow: inset 0 0 0 1px var(--line); }
+.finding.acked { opacity: .6; }
+.finding .line1 { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.finding .title { font-weight: 600; }
+.finding .detail { overflow-wrap: anywhere; color: var(--muted); }
+.diag { padding: 10px 12px; background: var(--sunk); border-radius: 10px; font-size: 13.5px; }
+.diag::before { content: "Diagnosis  "; font-size: 12px; font-weight: 600; color: var(--accent); }
+details summary { cursor: pointer; color: var(--muted); font-size: 12.5px; }
+pre.ev { margin: 6px 0 0; padding: 10px; background: var(--sunk); border-radius: 10px; overflow-x: auto; font: 12px/1.45 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 280px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { border: 0; box-shadow: inset 0 0 0 1px var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500;
+  transition: background-color .15s, transform .1s; }
+.btn:hover { background: var(--sunk); }
+.btn:active { transform: scale(.97); }
+.btn.primary { background: var(--fg); color: var(--page); box-shadow: none; }
+.btn.primary:hover { opacity: .88; }
+.ackform { display: grid; gap: 10px; padding: 12px; background: var(--sunk); border-radius: 12px; }
+.ackform label { display: grid; gap: 4px; font-size: 12.5px; color: var(--muted); }
+.ackform input, .ackform select { font: inherit; color: var(--fg); background: var(--surface); border: 0; box-shadow: inset 0 0 0 1px var(--line); border-radius: 8px; padding: 7px 10px; }
+
+/* page matrix */
+td.cell { text-align: center; }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 4px; background: var(--sunk); box-shadow: inset 0 0 0 1px var(--line); }
+.dot.pass { background: var(--ok-fill); box-shadow: none; } .dot.fail-red { background: var(--crit-fill); box-shadow: none; }
+.dot.fail-yellow, .dot.warn { background: var(--warn-fill); box-shadow: none; }
+.dot.fail-site_down { background: var(--down-fill); box-shadow: none; } .dot.blocked { background: var(--faint); box-shadow: none; }
+.dot.acked { background: transparent; box-shadow: inset 0 0 0 2px var(--faint); }
+
+.diffitem { border-top: 1px solid var(--line); padding: 8px 0; display: grid; gap: 4px; min-width: 0; }
 .diffitem code { font: 12px var(--f-mono); overflow-wrap: anywhere; }
-footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
+footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; padding: 6px 10px 4px; }
+
+@media (max-width: 1080px) { .stats { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .stats .stat:last-child { grid-column: 1 / -1; } }
+@media (max-width: 860px) {
+  .shell { grid-template-columns: minmax(0, 1fr); width: 100%; margin: 0; border-radius: 0; padding: 10px; }
+  .side { position: static; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 12px; }
+  .brand { padding: 0 8px 0 4px; margin-right: auto; }
+  .navlabel, .nav, .legend2 { display: none; }
+  .mk { width: auto; padding: 8px 12px; min-height: 44px; }
+  .mk .n { display: none; }
+  .stats { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 16px; border-radius: 16px; }
+}
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
-<div class="wrap" id="app">
-  <header class="top">
-    <div>
-      <div class="eyebrow">Paid media tracking · DE AT FR ES PT</div>
-      <h1>EU Tracking Monitor</h1>
+<div class="shell">
+  <aside class="side" aria-label="Navigation">
+    <div class="brand">
+      <svg viewBox="0 4.9 24 14.2" role="img" aria-label="Sage"><path fill="var(--brand)" d="M2.702 5.316C1.167 5.316 0 6.48 0 7.972c0 1.635 1.167 2.267 2.46 2.655 1.224.387 1.804.818 1.804 1.666 0 .86-.64 1.465-1.477 1.465-.84 0-1.566-.604-1.566-1.535 0-.516.242-.647.242-.934 0-.33-.227-.574-.599-.574-.423 0-.864.647-.864 1.566 0 1.48 1.266 2.57 2.787 2.57 1.535 0 2.701-1.163 2.701-2.656 0-1.623-1.166-2.267-2.472-2.655-1.209-.372-1.792-.818-1.792-1.666 0-.845.626-1.45 1.463-1.45.867 0 1.565.617 1.577 1.465.016.388.285.617.599.617a.592.592 0 0 0 .61-.647c-.027-1.48-1.263-2.543-2.771-2.543zm6.171 9.52c.683 0 1.21-.23 1.21-.69a.57.57 0 0 0-.557-.574c-.2 0-.341.085-.668.085-.882 0-1.577-.76-1.577-1.65 0-.962.71-1.725 1.608-1.725 1.009 0 1.65.775 1.65 1.895v2.054c0 .36.284.604.625.604.327 0 .61-.244.61-.604v-2.097c0-1.72-1.178-2.984-2.858-2.984-1.566 0-2.86 1.22-2.86 2.856 0 1.58 1.282 2.83 2.817 2.83zm6.257 3.848c1.535 0 2.701-1.163 2.701-2.656 0-1.635-1.166-2.267-2.472-2.655-1.209-.387-1.792-.818-1.792-1.666s.64-1.465 1.463-1.465c.84 0 1.577.604 1.577 1.535 0 .519-.241.647-.241.934 0 .33.226.574.583.574.441 0 .882-.647.882-1.566 0-1.48-1.278-2.57-2.801-2.57-1.535 0-2.687 1.163-2.687 2.656 0 1.623 1.152 2.267 2.46 2.655 1.224.372 1.804.818 1.804 1.666 0 .86-.64 1.45-1.462 1.45-.883 0-1.566-.601-1.578-1.465-.015-.388-.3-.604-.598-.604-.327 0-.626.216-.61.631.011 1.499 1.247 2.546 2.77 2.546zm6.171-3.849c.795 0 1.424-.229 1.862-.503.426-.272.595-.504.595-.76 0-.272-.2-.516-.568-.516-.441 0-.795.66-1.877.66-.952 0-1.707-.76-1.707-1.722 0-.95.725-1.724 1.635-1.724.982 0 1.508.647 1.508 1.062 0 .116-.085.174-.2.174h-1.194c-.326 0-.568.216-.568.503 0 .314.242.546.568.546h1.636c.625 0 1.009-.33 1.009-.89 0-1.408-1.194-2.512-2.774-2.512-1.566 0-2.83 1.263-2.83 2.84s1.312 2.842 2.905 2.842z"/></svg>
+      <span>Paid media tracking monitor</span>
     </div>
-    <div class="meta" id="meta"></div>
-  </header>
-  <div id="notices"></div>
-  <div id="summary"></div>
-  <div class="tiles" id="tiles" role="group" aria-label="Markets"></div>
-  <section class="panel" id="market"></section>
-  <section class="panel" id="publish"></section>
-  <section class="panel" id="history"></section>
-  <footer>
-    <div><b>Red</b>: conversion tags, click IDs or consent compliance broken. <b>Yellow</b>: secondary pixels, data layer or a conversion-relevant Tealium publish. <b>Site down</b>: page or utag.js unreachable (shown separately). <b>Global</b>: the same check fails in 3+ markets.</div>
-    <div>Checks run Mon–Fri around 06:00 CET from outside, like a visitor. No forms are submitted and tracking hits are blocked, except on one marked sample page per market.</div>
-  </footer>
+    <button class="nav" type="button" data-go="sec-overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="7" rx="1.5"/><rect x="14" y="4" width="6" height="4" rx="1.5"/><rect x="4" y="15" width="6" height="5" rx="1.5"/><rect x="14" y="12" width="6" height="8" rx="1.5"/></svg>Overview</button>
+    <button class="nav" type="button" data-go="market"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/></svg>Findings</button>
+    <button class="nav" type="button" data-go="history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4m6-4v4"/></svg>History</button>
+    <button class="nav" type="button" data-go="publish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M6 8v5a3 3 0 0 0 3 3h7M18 16v-5a3 3 0 0 0-3-3H8"/></svg>Publishes</button>
+    <div class="navlabel">Markets</div>
+    <div id="marketnav" role="group" aria-label="Markets" style="display: contents"></div>
+    <div class="legend2" aria-hidden="true">
+      <span><i class="sd green"></i>Checked on the page</span>
+      <span><i class="sd cfg"></i>Tealium config only</span>
+    </div>
+  </aside>
+
+  <main class="main" id="app">
+    <div id="notices" style="display: grid; gap: 12px"></div>
+    <section class="card verdict" id="sec-overview">
+      <div class="meta" id="meta"></div>
+      <h1 id="verdict"></h1>
+      <div id="summary"></div>
+    </section>
+    <div class="stats" id="stats"></div>
+    <section class="card" id="matrix"></section>
+    <section class="card" id="history"></section>
+    <section class="card" id="market"></section>
+    <section class="card" id="publish"></section>
+    <footer>
+      <div><b>Red</b>: conversion tags, click IDs or consent compliance broken. <b>Yellow</b>: secondary pixels, data layer or a conversion-relevant Tealium publish. <b>Site down</b>: page or utag.js unreachable (shown separately). <b>Global</b>: the same check fails in 3+ markets.</div>
+      <div>A solid dot means pages were opened and checked like a visitor. A ring means only the Tealium configuration (utag.js load rules) was checked. Checks run Mon–Fri around 06:00 CET. No forms are submitted.</div>
+    </footer>
+  </main>
 </div>
 
 <script>
@@ -136,6 +235,9 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
   const R = P.results, D = P.diagnosis || {}, H = P.history || {days: {}};
   const MARKETS = Object.keys(R.markets);
   const ORDER = {green: 0, yellow: 1, red: 2};
+  const EVENTS = {ecom_try: "Web-shop trial", ecom_buy: "Web-shop purchase", gated_trial: "Trial form", gated_contact: "Contact form"};
+  const REASONS = {"TAG-BASELINE": ["unconfirmed baseline", "unconfirmed baselines"], "CONS-05": ["pre-consent request", "pre-consent requests"],
+    "TEAL-03": ["data layer issue", "data layer issues"], "TEAL-04": ["conversion-relevant publish", "conversion-relevant publishes"]};
   let liveAcks = [];          // from the artifact database
   let db = null, user = null, myId = null, names = {}, canWrite = false;
   let selected = (location.hash || "").replace("#", "").toUpperCase();
@@ -152,9 +254,23 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
     for (const kid of kids.flat()) if (kid !== null && kid !== undefined && kid !== false) n.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
     return n;
   };
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const icon = d => { const s = document.createElementNS(SVGNS, "svg"); s.setAttribute("viewBox", "0 0 24 24"); s.setAttribute("fill", "none");
+    s.setAttribute("stroke", "currentColor"); s.setAttribute("stroke-width", "2.2"); s.setAttribute("stroke-linecap", "round"); s.setAttribute("stroke-linejoin", "round");
+    s.setAttribute("aria-hidden", "true"); s.setAttribute("class", "ic"); const p = document.createElementNS(SVGNS, "path"); p.setAttribute("d", d); s.append(p); return s; };
+  const I_CHECK = "M5 12.5l4.5 4.5L19 7.5", I_X = "M6 6l12 12M18 6L6 18";
   const fmtDay = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {weekday: "short", day: "numeric", month: "short", year: "numeric"});
+  const shortDay = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "short", timeZone: "UTC"});
+  const pubDay = v => { const m = /^(\d{4})(\d{2})(\d{2})/.exec(v || ""); return m ? m[1] + "-" + m[2] + "-" + m[3] : null; };
+  const addDays = (d, n) => new Date(Date.parse(d + "T12:00:00Z") + n * 864e5).toISOString().slice(0, 10);
+  const list = a => a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
+  // "web-shop trial", "web-shop purchase" -> "web-shop trial and purchase"
+  const listShared = a => { const p = a.length > 1 && a.every(x => x.split(" ")[0] === a[0].split(" ")[0]) ? a[0].split(" ")[0] + " " : "";
+    return p ? p + list(a.map(x => x.slice(p.length))) : list(a); };
   const baseId = id => id.split(":")[0];
   const keyOf = (m, c) => m + "|" + c.id + "|" + c.target;
+  const pageChecked = m => R.markets[m].rating.coverage !== "tealium_only" && (R.markets[m].rating.pages_checked || 0) > 0;
+  const convChecks = m => R.markets[m].checks.filter(c => baseId(c.id) === "CONV-01");
 
   // --- acknowledgements --------------------------------------------------------------
   function allAcks() {
@@ -168,13 +284,16 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
       (a.check === c.id || a.check === baseId(c.id) || a.check === "*") &&
       (!a.target || a.target === "*" || a.target === c.target || a.target === c.target.split("#")[0]));
   }
+  function activeIssues(market) {
+    return R.markets[market].checks.filter(c => (c.result === "fail" || c.result === "warn") && !ackFor(market, c));
+  }
   function rate(market) {
     const m = R.markets[market];
-    const active = m.checks.filter(c => (c.result === "fail" || c.result === "warn") && !ackFor(market, c));
+    const active = activeIssues(market);
     const red = active.filter(c => c.severity === "red" && c.result === "fail");
     const yellow = active.filter(c => c.severity === "yellow" || (c.severity === "red" && c.result === "warn"));
     const down = new Set(active.filter(c => c.severity === "site_down" && c.result === "fail").map(c => c.target));
-    return {status: red.length ? "red" : yellow.length ? "yellow" : "green", red: red.length, yellow: yellow.length,
+    return {status: red.length ? "red" : yellow.length ? "yellow" : "green", red: red.length, yellow: yellow.length, yellowChecks: yellow,
             down: down.size, coverage: m.rating.coverage, blocked: m.rating.blocked_pages.length};
   }
   function globalStatus() {
@@ -190,18 +309,66 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
   }
 
   // --- rendering -----------------------------------------------------------------------
-  function pill(status, label, big) {
-    const cls = {green: "s-green", yellow: "s-yellow", red: "s-red"}[status] || "s-sys";
-    return el("span", {class: "pill " + cls + (big ? " big-pill" : "")}, label || status);
+  function pill(status, label) {
+    const cls = {green: "s-green", yellow: "s-yellow", red: "s-red", down: "s-down", cfg: "s-cfg"}[status] || "s-sys";
+    return el("span", {class: "chip " + cls}, label || status);
+  }
+  function dotFor(code) {
+    const r = rate(code);
+    return el("i", {class: "sd " + (r.down ? "down" : r.status) + (pageChecked(code) ? "" : " cfg"), "aria-hidden": "true"});
+  }
+  function statusText(code) {
+    const r = rate(code);
+    if (r.down) return "site down";
+    return r.status + (pageChecked(code) ? "" : ", config only");
+  }
+  function select(code) {
+    selected = code; history.replaceState(null, "", "#" + code); renderAll();
+  }
+
+  function renderNav() {
+    document.getElementById("marketnav").replaceChildren(...MARKETS.map(code => {
+      const r = rate(code);
+      return el("button", {class: "mk", type: "button", "aria-pressed": String(code === selected), "aria-label": R.markets[code].name + ": " + statusText(code),
+        onclick: () => select(code)}, dotFor(code), el("span", {class: "nm"}, code), r.red + r.yellow ? el("span", {class: "n"}, r.red + r.yellow) : null);
+    }));
+  }
+
+  function verdictParts() {
+    const red = MARKETS.filter(c => rate(c).status === "red");
+    const lead = [];
+    if (red.length === 1) {
+      const code = red[0], bad = convChecks(code).filter(c => c.result === "fail" && !ackFor(code, c)).map(c => (EVENTS[c.id.split(":")[1]] || c.id.split(":")[1].replace(/_/g, " ")).toLowerCase());
+      lead.push(bad.length ? R.markets[code].name + " loses its " + listShared(bad) + " conversions." : R.markets[code].name + " has " + rate(code).red + " broken check" + (rate(code).red > 1 ? "s" : "") + ".");
+    } else if (red.length > 1) {
+      lead.push(list(red.map(c => R.markets[c].name)) + " have broken conversion tracking.");
+    } else {
+      const y = MARKETS.reduce((s, c) => s + rate(c).yellow, 0);
+      lead.push(y ? "No conversion is broken. " + y + " item" + (y > 1 ? "s" : "") + " to review." : "Every checked conversion tracks.");
+    }
+    const rest = [];
+    const others = MARKETS.filter(c => !red.includes(c));
+    const down = others.filter(c => rate(c).down);
+    if (down.length) rest.push("Pages in " + list(down.map(c => R.markets[c].name)) + " did not load.");
+    const okVerified = others.filter(c => !rate(c).down && rate(c).status !== "red" && pageChecked(c));
+    const okConfig = others.filter(c => !rate(c).down && rate(c).status !== "red" && !pageChecked(c));
+    if (okVerified.length && red.length) rest.push(list(okVerified.map(c => R.markets[c].name)) + (okVerified.length > 1 ? " track" : " tracks") + " on the page.");
+    if (okConfig.length) rest.push(list(okConfig.map(c => R.markets[c].name)) + (okConfig.length > 1 ? " look" : " looks") + " clean in Tealium, but no page was opened there.");
+    return [lead.join(" "), rest.join(" ")];
   }
 
   function renderHeader() {
     const g = globalStatus();
-    const meta = document.getElementById("meta");
-    meta.replaceChildren(
+    const opened = MARKETS.filter(pageChecked);
+    const srcs = [...new Set(MARKETS.map(c => R.markets[c].source).filter(s => s && s !== "none"))];
+    const srcLabel = {playwright: "automated browser", "claude-browser": "built-in browser"};
+    document.getElementById("meta").replaceChildren(
       el("span", {}, "Run ", el("b", {}, fmtDay(R.day))),
-      el("span", {}, "Generated " + R.generated_at.replace("T", " ").replace("Z", " UTC")),
-      pill(g.status, "Overall " + g.status, true));
+      el("span", {}, opened.length ? "Pages opened in " + list(opened) + (srcs.length ? " via " + srcs.map(s => srcLabel[s] || s).join(", ") : "") : "Tealium CDN only"),
+      el("span", {}, "Generated " + R.generated_at.replace("T", " ").slice(0, 16) + " UTC"),
+      pill(g.status, "Overall " + g.status));
+    const [lead, rest] = verdictParts();
+    document.getElementById("verdict").replaceChildren(lead, rest ? " " : "", rest ? el("span", {class: "rest"}, rest) : null);
     const notes = document.getElementById("notices");
     notes.replaceChildren();
     for (const inc of g.incidents) {
@@ -212,32 +379,107 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
     if (MODE === "artifact" && db === null && window.__dbTried) notes.append(el("div", {class: "notice"}, el("p", {}, "Acknowledgements are read-only in this view.")));
     const sum = document.getElementById("summary");
     sum.replaceChildren();
-    if (D.summary) sum.append(el("div", {class: "summary"}, el("div", {class: "eyebrow"}, "Today in brief"), ...D.summary.split(/\n+/).map(t => el("p", {}, t))));
+    if (D.summary) sum.append(el("div", {class: "brief"}, el("b", {}, "Today in brief"), ...D.summary.split(/\n+/).map(t => el("p", {}, t))));
   }
 
-  function renderTiles() {
-    const box = document.getElementById("tiles");
-    box.replaceChildren(...MARKETS.map(code => {
-      const m = R.markets[code], r = rate(code);
-      const tags = [];
-      if (r.down) tags.push(el("span", {class: "tag"}, r.down + " site down"));
-      if (r.coverage === "tealium_only") tags.push(el("span", {class: "tag"}, "Tealium checks only"));
-      else if (r.coverage === "partial") tags.push(el("span", {class: "tag"}, m.rating.pages_checked + "/" + m.rating.pages_configured + " pages checked"));
-      if (m.utag.changed) tags.push(el("span", {class: "tag"}, "new publish"));
-      if (!m.baseline_confirmed) tags.push(el("span", {class: "tag"}, "baseline pending"));
-      return el("button", {class: "tile " + r.status, "aria-pressed": String(code === selected), onclick: () => { selected = code; history.replaceState(null, "", "#" + code); renderAll(); }},
-        el("div", {class: "row"}, el("span", {class: "code"}, code), pill(r.status)),
-        el("div", {class: "muted"}, m.name + " · " + m.tealium_profile + (m.utag.publish_version ? " · publish " + m.utag.publish_version : "")),
-        el("div", {class: "counts"}, el("span", {}, el("b", {}, r.red), " red"), el("span", {}, el("b", {}, r.yellow), " yellow"),
-          m.red_since ? el("span", {}, "red since ", el("b", {}, m.red_since)) : null),
-        tags.length ? el("div", {class: "tags"}, tags) : null);
-    }));
+  function statCard(label, iconPath, big, small, visual, sub) {
+    const lb = el("div", {class: "lb"}); const ic = icon(iconPath); lb.append(ic, label);
+    return el("div", {class: "card stat"}, lb, el("div", {class: "big"}, big, small ? el("small", {}, small) : null), visual, sub ? el("div", {class: "sub"}, sub) : null);
+  }
+
+  function renderStats() {
+    const conv = [];
+    for (const code of MARKETS) for (const c of convChecks(code)) conv.push({code, c, ack: ackFor(code, c)});
+    const broken = conv.filter(x => x.c.result === "fail" && !x.ack);
+    const setUp = [...new Set(conv.map(x => x.code))];
+    const segs = el("div", {class: "segs", "aria-hidden": "true"}, conv.map(x => el("i", {class: x.c.result === "pass" ? "ok" : x.ack ? "ack" : "bad", title: x.code + " · " + (EVENTS[x.c.id.split(":")[1]] || x.c.id)})));
+    const c1 = statCard("Conversion events broken", "M12 8v4m0 4h.01M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
+      conv.length ? String(broken.length) : "–", conv.length ? "of " + conv.length + " checked" : null,
+      conv.length ? segs : null,
+      conv.length ? "Set up for " + list(setUp) + (setUp.length < MARKETS.length ? " only" : "") : "No conversion events set up yet");
+
+    const opened = MARKETS.reduce((s, c) => s + (R.markets[c].rating.pages_checked || 0), 0);
+    const conf = MARKETS.reduce((s, c) => s + (R.markets[c].rating.pages_configured || 0), 0);
+    const blocked = MARKETS.reduce((s, c) => s + R.markets[c].rating.blocked_pages.length, 0);
+    const pct = conf ? Math.round(opened / conf * 100) : 0;
+    const c2 = statCard("Pages opened on the site", "M3 12s3.5-6.5 9-6.5S21 12 21 12s-3.5 6.5-9 6.5S3 12 3 12Zm9-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z",
+      String(opened), "of " + conf,
+      el("div", {class: "bar", role: "img", "aria-label": pct + "% of configured pages opened"}, el("i", {class: pct >= 90 ? "full" : "", style: "width:" + Math.max(pct, 1) + "%"})),
+      blocked ? blocked + " blocked by bot protection" : pct < 90 ? "The rest is checked through Tealium only" : "Full coverage");
+
+    const ys = []; for (const code of MARKETS) for (const c of rate(code).yellowChecks) ys.push({code, c});
+    const byReason = {}; for (const y of ys) { const k = baseId(y.c.id); byReason[k] = (byReason[k] || 0) + 1; }
+    const top = Object.entries(byReason).sort((a, b) => b[1] - a[1]);
+    let sub = "Nothing open";
+    if (top.length) {
+      const [k, n] = top[0], lab = REASONS[k] ? REASONS[k][n > 1 ? 1 : 0] : (ys.find(y => baseId(y.c.id) === k).c.title.toLowerCase());
+      sub = n + " " + lab + (ys.length > n ? " · " + (ys.length - n) + " other" : "");
+    }
+    const ym = [...new Set(ys.map(y => y.code))];
+    const c3 = statCard("To review", "M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9",
+      String(ys.length), ym.length ? "in " + list(ym) : null, null, sub);
+    document.getElementById("stats").replaceChildren(c1, c2, c3);
+  }
+
+  function renderMatrix() {
+    const box = document.getElementById("matrix");
+    const evs = [];
+    for (const code of MARKETS) for (const c of convChecks(code)) { const e = c.id.split(":")[1]; if (!evs.includes(e)) evs.push(e); }
+    const known = Object.keys(EVENTS);
+    evs.sort((a, b) => (known.indexOf(a) + 1 || 99) - (known.indexOf(b) + 1 || 99));
+    const rows = MARKETS.map(code => {
+      const m = R.markets[code], mine = convChecks(code);
+      const cells = mine.length ? evs.map(e => {
+        const c = mine.find(x => x.id.split(":")[1] === e);
+        if (!c) return el("td", {class: "na-t"}, "–");
+        const tags = (/tag\(s\)\s*([\d,\s]+)/.exec(c.detail || "") || [])[1];
+        if (c.result === "pass") return el("td", {class: "ok-t", title: c.detail}, icon(I_CHECK));
+        const ack = ackFor(code, c);
+        return el("td", {class: ack ? "ack-t" : "bad-t", title: c.detail}, icon(I_X), tags ? " Tag " + tags.trim().replace(/\s*,\s*/g, ", ") : "");
+      }) : evs.length ? [el("td", {class: "na-t", colspan: String(evs.length)}, "No conversion events set up yet")] : [];
+      const pv = pubDay(m.utag.publish_version);
+      return el("tr", {class: "sel", tabindex: "0", "aria-selected": String(code === selected), onclick: () => select(code),
+          onkeydown: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(code); } }},
+        el("td", {}, el("span", {class: "code"}, dotFor(code), code)),
+        cells,
+        el("td", {class: "num" + (pageChecked(code) ? "" : " na-t")}, (m.rating.pages_checked || 0) + " / " + m.rating.pages_configured),
+        el("td", {class: "num na-t"}, pv ? shortDay(pv) : "–"));
+    });
+    box.replaceChildren(
+      el("div", {class: "head"}, el("h2", {}, "Conversions by market"), el("span", {class: "muted"}, "Would each conversion tag fire? Checked against the live Tealium load rules")),
+      el("div", {class: "scroll"}, el("table", {},
+        el("thead", {}, el("tr", {}, el("th", {}, "Market"), evs.map(e => el("th", {}, EVENTS[e] || e.replace(/_/g, " "))), el("th", {}, "Pages opened"), el("th", {}, "Last publish"))),
+        el("tbody", {}, rows))));
+  }
+
+  function renderHistory() {
+    const box = document.getElementById("history");
+    const days = []; for (let i = 13; i >= 0; i--) days.push(addDays(R.day, -i));
+    const runs = Object.keys(H.days || {}).length;
+    const rows = MARKETS.map(code => {
+      const pv = pubDay(R.markets[code].utag.publish_version);
+      return el("div", {class: "srow"}, el("b", {}, code), days.map(d => {
+        const v = (H.days[d] || {})[code];
+        const pub = (v && v.publish) || d === pv;
+        const cfg = v && v.coverage === "tealium_only";
+        const cls = "q" + (v ? " run " + v.status + (cfg ? " cfg" : "") : "") + (pub ? " pub" : "");
+        const t = shortDay(d) + ": " + (v ? v.status + (cfg ? " (Tealium config only)" : v.coverage === "partial" ? " (some pages opened)" : "") : "no run") + (pub ? ", Tealium publish" : "");
+        return el("span", {class: cls, title: t, role: "img", "aria-label": code + " " + t});
+      }));
+    });
+    box.replaceChildren(
+      el("div", {class: "head"}, el("h2", {}, "Last 14 days"), el("span", {class: "muted"}, runs + " run day" + (runs === 1 ? "" : "s") + " recorded")),
+      el("div", {class: "strip"}, rows, el("div", {class: "saxis"}, el("span"), el("span", {}, shortDay(days[0])), el("span", {}, shortDay(days[13])))),
+      el("div", {class: "legend"},
+        el("span", {}, el("i", {class: "q run red"}), "red"), el("span", {}, el("i", {class: "q run yellow"}), "yellow"),
+        el("span", {}, el("i", {class: "q run green"}), "green, pages opened"), el("span", {}, el("i", {class: "q run green cfg"}), "green, config only"),
+        el("span", {}, el("i", {class: "q"}), "no run"), el("span", {}, el("i", {class: "q pub", style: "margin-top:6px"}), "Tealium publish")));
   }
 
   function findingNode(code, c) {
     const ack = ackFor(code, c);
     const sev = c.severity;
-    const sevLabel = {red: "red", yellow: "yellow", site_down: "site down", info: "info", system: "system"}[sev] || sev;
+    const sevLabel = {red: "Red", yellow: "Yellow", site_down: "Site down", info: "Info", system: "System"}[sev] || sev;
     const diag = ((D.markets || {})[code] || {}).findings || {};
     const dtext = diag[c.id + "|" + c.target] || diag[c.id];
     const node = el("div", {class: "finding " + sev + (ack ? " acked" : "")},
@@ -301,13 +543,17 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
     issues.sort((a, b) => (!!ackFor(code, a) - !!ackFor(code, b)) || (prio[a.severity] - prio[b.severity]));
     const passed = m.checks.filter(c => c.result === "pass").length;
     const mdiag = ((D.markets || {})[code] || {}).summary;
+    const src = {playwright: "automated browser", "claude-browser": "built-in browser", none: "Tealium CDN only"}[m.source] || m.source;
     box.replaceChildren(...[
-      el("div", {class: "panel-head"}, el("h2", {}, m.name + " (" + code + ")"), pill(r.status, r.status, true)),
+      el("div", {class: "head"},
+        el("h2", {}, m.name + " (" + code + ")"),
+        el("span", {class: "actions"}, pill(r.down ? "down" : r.status, r.down ? "Site down" : r.status[0].toUpperCase() + r.status.slice(1)),
+          pageChecked(code) ? null : pill("cfg", "Tealium config only"))),
+      el("p", {class: "muted"}, issues.length + " finding" + (issues.length === 1 ? "" : "s") + " · " + passed + " checks passed · source: " + src +
+        (m.red_since ? " · red since " + shortDay(m.red_since) + " (first seen by the monitor)" : "")),
       mdiag ? el("p", {class: "diag"}, mdiag) : null,
-      el("div", {class: "muted"}, issues.length + " finding(s) · " + passed + " checks passed · source: " +
-        ({playwright: "automated browser", "claude-browser": "Claude browser run", none: "Tealium CDN only"}[m.source] || m.source)),
-      issues.length ? el("div", {class: "findings"}, issues.map(c => findingNode(code, c))) : el("p", {}, "No findings. Everything checked is working."),
-      infos.length ? el("details", {}, el("summary", {}, infos.length + " informational note(s)"), el("div", {class: "findings"}, infos.map(c => findingNode(code, c)))) : null,
+      issues.length ? el("div", {class: "findings"}, issues.map(c => findingNode(code, c))) : el("p", {}, pageChecked(code) ? "No findings. Everything checked is working." : "No findings in the Tealium configuration. No page was opened in this run."),
+      infos.length ? el("details", {}, el("summary", {}, infos.length + " informational note" + (infos.length === 1 ? "" : "s")), el("div", {class: "findings", style: "margin-top:10px"}, infos.map(c => findingNode(code, c)))) : null,
       pagesMatrix(code)].filter(Boolean));
   }
 
@@ -332,12 +578,12 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
             else { const w = open.find(c => c.severity === "red") || open.find(c => c.severity === "site_down") || open[0];
                    cls = w.result === "warn" ? "warn" : "fail-" + w.severity; tip = label + ": " + w.detail; }
           }
-          return el("td", {class: "cell"}, el("span", {class: "dot " + cls, title: tip, "aria-label": tip}));
+          return el("td", {class: "cell"}, el("span", {class: "dot " + cls, title: tip, role: "img", "aria-label": tip}));
         }));
     });
-    if (!rows.length) return el("p", {class: "muted"}, "No page-level results for this run (only Tealium CDN and load-rule checks).");
-    return el("div", {}, el("h3", {}, "Pages"),
-      el("div", {class: "scroll"}, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "Page"), groups.map(([, l]) => el("th", {}, l)))), el("tbody", {}, rows))),
+    if (!rows.length) return null;
+    return el("div", {style: "display:grid;gap:10px"}, el("h3", {}, "Pages opened"),
+      el("div", {class: "scroll"}, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "Page"), groups.map(([, l]) => el("th", {style: "text-align:center"}, l)))), el("tbody", {}, rows))),
       el("div", {class: "legend"}, ...[["pass", "passed"], ["fail-red", "red"], ["warn", "yellow"], ["fail-site_down", "site down"], ["blocked", "blocked"], ["acked", "acknowledged"]]
         .map(([c, l]) => el("span", {}, el("i", {class: "dot " + c}), l))));
   }
@@ -345,40 +591,33 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; }
   function renderPublish() {
     const box = document.getElementById("publish");
     const changed = MARKETS.filter(c => R.markets[c].utag.changed);
-    const head = el("div", {class: "panel-head"}, el("h2", {}, "Tealium publishes"), el("span", {class: "muted"}, changed.length ? changed.length + " profile(s) changed since the last run" : "No publish since the last run"));
+    const head = el("div", {class: "head"}, el("h2", {}, "Tealium publishes"), el("span", {class: "muted"}, changed.length ? changed.length + " profile(s) changed since the last run" : "No publish since the last run"));
     const parts = [head];
+    parts.push(el("div", {class: "scroll"}, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "Market"), el("th", {}, "Profile"), el("th", {}, "Live publish"), el("th", {}, "Published"))),
+      el("tbody", {}, MARKETS.map(code => { const u = R.markets[code].utag, pv = pubDay(u.publish_version);
+        return el("tr", {}, el("td", {}, el("span", {class: "code"}, code)), el("td", {class: "mono"}, R.markets[code].tealium_profile),
+          el("td", {class: "mono"}, u.publish_version || "–"), el("td", {class: "num"}, pv ? shortDay(pv) : "–", u.changed ? " " : null, u.changed ? pill("yellow", "new") : null)); })))));
     for (const code of changed) {
       const d = R.markets[code].utag.diff || {};
       const ai = ((D.publish || {})[code]) || null;
-      parts.push(el("div", {}, el("h3", {}, code + " · " + R.markets[code].tealium_profile + " · " + (d.from_version || "?") + " → " + (d.to_version || "?")),
+      parts.push(el("div", {style: "display:grid;gap:8px"}, el("h3", {}, code + " · " + R.markets[code].tealium_profile + " · " + (d.from_version || "?") + " → " + (d.to_version || "?")),
         ai ? el("p", {class: "diag"}, (ai.risk ? "Risk " + ai.risk + ". " : "") + ai.summary) : null,
         el("details", {}, el("summary", {}, (d.items || []).length + " change(s), " + (d.items || []).filter(i => i.conversion_relevant).length + " conversion-relevant"),
           ...(d.items || []).map(i => el("div", {class: "diffitem"},
             el("div", {}, el("b", {}, i.kind.replace(/_/g, " ")), " ", el("span", {class: "mono"}, i.tag ? "tag " + i.tag + (i.template ? " (template " + i.template + ")" : "") : "rule " + i.rule),
-              i.conversion_relevant ? el("span", {class: "pill s-yellow", style: "margin-left:8px"}, "conversion") : null),
+              i.conversion_relevant ? el("span", {class: "chip s-yellow", style: "margin-left:8px"}, "conversion") : null),
             i.before ? el("code", {}, "before: " + (typeof i.before === "string" ? i.before : JSON.stringify(i.before))) : null,
             i.after ? el("code", {}, "after: " + (typeof i.after === "string" ? i.after : JSON.stringify(i.after))) : null)))));
     }
     box.replaceChildren(...parts);
   }
 
-  function renderHistory() {
-    const box = document.getElementById("history");
-    const days = Object.keys(H.days || {}).sort();
-    const last = days.slice(-120);
-    box.replaceChildren(el("div", {class: "panel-head"}, el("h2", {}, "History"), el("span", {class: "muted"}, days.length + " run day(s) recorded" + (days.length > 120 ? ", last 120 shown" : ""))),
-      el("div", {class: "hist"}, ["_global"].concat(MARKETS).map(code => el("div", {class: "hrow"},
-        el("span", {class: "mono"}, code === "_global" ? "ALL" : code),
-        el("div", {class: "hcells"}, last.map(d => {
-          const v = (H.days[d] || {})[code];
-          const t = v ? d + ": " + v.status + (v.coverage && v.coverage !== "full" ? " (" + v.coverage.replace("_", " ") + ")" : "") + (v.publish ? ", publish" : "") : d + ": no data";
-          return el("span", {class: "hc " + (v ? v.status + " " + (v.coverage || "") : ""), title: t, "aria-label": t});
-        }))))),
-      el("div", {class: "legend"}, el("span", {}, el("i", {class: "hc green"}), "green"), el("span", {}, el("i", {class: "hc yellow"}), "yellow"),
-        el("span", {}, el("i", {class: "hc red"}), "red"), el("span", {}, el("i", {class: "hc green tealium_only"}), "faded: not all pages checked")));
-  }
+  for (const b of document.querySelectorAll("[data-go]")) b.addEventListener("click", () => {
+    const t = document.getElementById(b.dataset.go);
+    if (t) t.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+  });
 
-  function renderAll() { renderHeader(); renderTiles(); renderMarket(); renderPublish(); renderHistory(); }
+  function renderAll() { renderNav(); renderHeader(); renderStats(); renderMatrix(); renderHistory(); renderMarket(); renderPublish(); }
   renderAll();
 
   // --- live acknowledgements (artifact only) ------------------------------------------

@@ -78,7 +78,7 @@ Until a market is confirmed, its pages show yellow ("baseline pending").
 - **Blocked / system notices:** not a tracking problem. Check the allowlist header secret.
 
 ## Open items at handover (2026-11-14)
-- [ ] Allowlist from the sage.com web team (`docs/allowlist-request.md`) → set `MONITOR_AUTH_HEADER`.
+- [ ] Send the allowlist request (`docs/allowlist-request.md`, not sent yet) to the sage.com IT / web security team; once granted, set `MONITOR_AUTH_HEADER`.
 - [ ] Market owners review the URL lists and add paid-only landing pages.
 - [ ] Confirm baselines for all five markets.
 - [ ] Decide the email channel (Phase 2): Claude mail connector or SMTP from GitHub Actions.

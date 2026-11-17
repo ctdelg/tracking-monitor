@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 from . import SCHEMA_VERSION, __version__, checks, forms, gtm, loadrules, rules, tealium
 from .config import BASELINE_DIR, RESULTS_DIR, load_acks, load_markets, load_platforms, load_settings
@@ -149,31 +150,38 @@ def collect_browser(browser, market: dict, day: str, url_ids: list[str] | None =
     locale = market.get("locale") or market.get("tealium_profile") or "en-GB"
     visits, journeys = [], []
     entries = market["urls"] + ([] if url_ids else form_followup_pages(market, forms_part))
+    blocked_hosts: dict[str, int | None] = {}
     for entry in entries:
         if url_ids and entry["id"] not in url_ids:
             continue
+        host = urlparse(entry["url"]).hostname
+        if host in blocked_hosts and not url_ids:
+            # Bot protection is per site and all-or-nothing: record the rest of that site as blocked
+            # without hammering it. Pages on other sites of the market (e.g. ciel.com for FR) still run.
+            visits.append({"id": entry["id"], "url": entry["url"], "type": entry.get("type"),
+                           "blocked": True, "status": blocked_hosts[host], "skipped": True})
+            continue
         visits.append(br.visit_url(browser, market, entry, platforms, day, locale))
         br.politeness_pause()
-        if visits[-1].get("blocked") and not url_ids:
-            # Bot protection is all-or-nothing; record the rest as blocked without hammering the site.
-            for rest in entries[len(visits):]:
-                visits.append({"id": rest["id"], "url": rest["url"], "type": rest.get("type"),
-                               "blocked": True, "status": visits[-1]["status"], "skipped": True})
-            break
-    if not any(v.get("blocked") for v in visits):
-        for j in market["journeys"]:
+        if visits[-1].get("blocked"):
+            blocked_hosts[host] = visits[-1].get("status")
+    for j in market["journeys"]:
+        first = next((st.get("goto") for st in j["steps"] if st.get("goto")), "")
+        if urlparse(first).hostname in blocked_hosts:
+            journeys.append({"id": j["id"], "name": j.get("name", j["id"]), "blocked": True, "steps": []})
+        else:
             journeys.append(br.run_journey(browser, market, j, platforms, day, locale))
-    else:
-        journeys = [{"id": j["id"], "name": j.get("name", j["id"]), "blocked": True, "steps": []}
-                    for j in market["journeys"]]
     return {"source": "playwright", "collected_at": _now(), "visits": visits, "journeys": journeys}
 
 
 def store_raw(day: str, market: str, *, tealium_part: dict | None = None,
               browser_part: dict | None = None, forms_part: dict | None = None,
-              gtm_part: dict | None = None) -> None:
+              gtm_part: dict | None = None, tealium_extra: dict | None = None) -> None:
     path = raw_path(day, market)
     raw = _read(path, {"market": market, "day": day})
+    if tealium_extra is not None:
+        raw["tealium_extra"] = {p: {k: v for k, v in part.items() if not k.startswith("_")}
+                                for p, part in tealium_extra.items()}
     if gtm_part is not None:
         raw["gtm"] = gtm_part
     if tealium_part is not None:
@@ -245,11 +253,17 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
             results += checks.check_forms(m, raw["forms"], base)
         if raw.get("gtm"):
             results += checks.check_gtm(m, raw["gtm"], base)
+        for prof, part in (raw.get("tealium_extra") or {}).items():
+            if prof in (m.get("extra_tealium_profiles") or []):
+                results += checks.check_tealium(code, part, None, target=f"tealium:{prof}")
         brw = raw.get("browser") or {}
         url_meta = {u["id"]: u for u in m["urls"]}
         for v in brw.get("visits", []):
             v.setdefault("url", url_meta.get(v["id"], {}).get("url"))
-            results += checks.check_page(v, m, platforms, (base.get("urls") or {}).get(v["id"]))
+            # a page can live on another site of the market (e.g. ciel.com for FR): its own site/profile win
+            meta = url_meta.get(v["id"], {})
+            mm = {**m, **{k: meta[k] for k in ("site", "tealium_profile", "tag_manager") if k in meta}}
+            results += checks.check_page(v, mm, platforms, (base.get("urls") or {}).get(v["id"]))
         for j in brw.get("journeys", []):
             results += checks.check_journey(j, platforms, (base.get("journeys") or {}).get(j["id"]))
         applied = rules.apply_acks(code, results, acks, day)

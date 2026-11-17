@@ -218,31 +218,45 @@ markets:
     name: France
     tealium_profile: fr-fr
     locale: fr-FR
+    # Also checked every day: utag.js of the ciel.com profile used by the two Ciel pages.
+    extra_tealium_profiles: [ciel]
     urls:
+      # Source: FR paid search URL list, 2026-11-17 - tracking parameters removed, 34 URLs.
+      # Two Sage 50 (formerly Ciel) pages live on www.ciel.com with their own Tealium profile 'ciel'.
+      - {id: fr-ciel-compta, url: "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx", type: product, site: "https://www.ciel.com/", tealium_profile: ciel}
+      - {id: fr-ciel-gestion-commerciale, url: "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx", type: product, site: "https://www.ciel.com/", tealium_profile: ciel}
       - {id: fr-home, url: "https://www.sage.com/fr-fr/", type: content}
-      - {id: fr-produits, url: "https://www.sage.com/fr-fr/produits/", type: product}
-      - {id: fr-sage-50, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/", type: product, live_sample: true}
-      - {id: fr-sage-50-test, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/", type: trial}
-      - {id: fr-sage-50-compta, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-compta/", type: product}
-      - {id: fr-sage-50-gescom, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-gestion-commerciale/", type: product}
-      - {id: fr-sage-active, url: "https://www.sage.com/fr-fr/produits/sage-active/", type: product}
-      - {id: fr-sage-100, url: "https://www.sage.com/fr-fr/produits/sage-100/", type: product}
-      - {id: fr-sage-100-compta, url: "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/", type: product}
-      - {id: fr-sage-100-paie, url: "https://www.sage.com/fr-fr/produits/sage-100-paie-rh/", type: product}
-      - {id: fr-frp-1000, url: "https://www.sage.com/fr-fr/produits/sage-frp-1000/", type: product}
-      - {id: fr-intacct, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/", type: product}
-      - {id: fr-x3, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/", type: product}
-      - {id: fr-x3-demo, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/demander-demonstration/", type: form}
-      - {id: fr-compta-facturation, url: "https://www.sage.com/fr-fr/sage-business-cloud/compta-facturation/", type: product}
-      - {id: fr-comptabilite, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/", type: landing_page}
-      - {id: fr-compta-test, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/version-test-gratuit/", type: trial}
-      - {id: fr-compta-tpe, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/tpe-petite-entreprise/", type: landing_page}
-      - {id: fr-facturation, url: "https://www.sage.com/fr-fr/comptabilite-logiciels/facturation/", type: landing_page}
-      - {id: fr-facture-electronique, url: "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/api-plateforme-agreee/", type: landing_page}
-      - {id: fr-paie, url: "https://www.sage.com/fr-fr/paie-logiciels-gestion/", type: landing_page}
-      - {id: fr-erp, url: "https://www.sage.com/fr-fr/erp-logiciels/", type: landing_page}
+      - {id: fr-cp-50100jemaitrise, url: "https://www.sage.com/fr-fr/cp/50100jemaitrise/", type: landing_page}
+      - {id: fr-dematerialisation-facture-electronique, url: "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/", type: landing_page}
       - {id: fr-experts-comptables, url: "https://www.sage.com/fr-fr/experts-comptables/", type: landing_page}
-      - {id: fr-contact, url: "https://www.sage.com/fr-fr/a-propos/contact/", type: form}
+      - {id: fr-experts-comptables-produits-sage-generation-exp, url: "https://www.sage.com/fr-fr/experts-comptables/produits/sage-generation-experts-connect/", type: landing_page}
+      - {id: fr-experts-comptables-saisie-comptable-automatique, url: "https://www.sage.com/fr-fr/experts-comptables/saisie-comptable-automatique/", type: landing_page}
+      - {id: fr-produits-sage-100, url: "https://www.sage.com/fr-fr/produits/sage-100/", type: product}
+      - {id: fr-produits-sage-100-comptabilite, url: "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/", type: product}
+      - {id: fr-produits-sage-100-gestion-commerciale, url: "https://www.sage.com/fr-fr/produits/sage-100/gestion-commerciale/", type: product}
+      - {id: fr-produits-sage-100-sage-automatisation-comptable, url: "https://www.sage.com/fr-fr/produits/sage-100/sage-automatisation-comptable/", type: product}
+      - {id: fr-produits-sage-100-sage-recouvrement-creances, url: "https://www.sage.com/fr-fr/produits/sage-100/sage-recouvrement-creances/", type: product}
+      - {id: fr-produits-sage-50cloud, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/", type: product, live_sample: true}
+      - {id: fr-produits-sage-50cloud-test-gratuit, url: "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/", type: trial}
+      - {id: fr-produits-sage-active, url: "https://www.sage.com/fr-fr/produits/sage-active/", type: product}
+      - {id: fr-produits-sage-bi-reporting, url: "https://www.sage.com/fr-fr/produits/sage-bi-reporting/", type: product}
+      - {id: fr-produits-sage-business-reporting, url: "https://www.sage.com/fr-fr/produits/sage-business-reporting/", type: product}
+      - {id: fr-produits-sage-data-clean-and-control, url: "https://www.sage.com/fr-fr/produits/sage-data-clean-and-control/", type: product}
+      - {id: fr-produits-sage-frp-1000, url: "https://www.sage.com/fr-fr/produits/sage-frp-1000/", type: product}
+      - {id: fr-produits-sage-sales-management, url: "https://www.sage.com/fr-fr/produits/sage-sales-management/", type: product}
+      - {id: fr-produits-sage-xrt-advanced, url: "https://www.sage.com/fr-fr/produits/sage-xrt-advanced/", type: product}
+      - {id: fr-sbc-intacct, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/", type: product}
+      - {id: fr-sbc-intacct-bon-commandes, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/bon-commandes/", type: product}
+      - {id: fr-sbc-intacct-compte-crediteur, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-crediteur/", type: product}
+      - {id: fr-sbc-intacct-compte-debiteur, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-debiteur/", type: product}
+      - {id: fr-sbc-intacct-multi-societes, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/multi-societes/", type: product}
+      - {id: fr-sbc-intacct-consolidation-comptable, url: "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/extended-capabilities/consolidation-comptable/", type: product}
+      - {id: fr-sbc-logiciels-gestionnaire-de-paie, url: "https://www.sage.com/fr-fr/sage-business-cloud/logiciels/gestionnaire-de-paie/", type: product}
+      - {id: fr-sbc-sage-x3, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/", type: product}
+      - {id: fr-sbc-sage-x3-gestion-de-la-production, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/fonctionnalites-produit/gestion-de-la-production/", type: product}
+      - {id: fr-sbc-sage-x3-secteurs-agroalimentaire, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/agroalimentaire/", type: product}
+      - {id: fr-sbc-sage-x3-secteurs-construction, url: "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/construction/", type: product}
+      - {id: fr-cp-logiciel-comptabilite, url: "https://www.sage.com/fr-fr/cp/logiciel-comptabilite/", type: landing_page}
     journeys:
       - id: fr-j-sage50-trial
         name: Sage 50 product page -> free trial page

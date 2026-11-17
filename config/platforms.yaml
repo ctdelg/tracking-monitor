@@ -139,6 +139,7 @@ ignore_hosts:
   - "^edge\\.api\\.brightcove\\.com$"
   - "(^|\\.)mypurecloud\\.ie$"       # Genesys chat widget
   - "(^|\\.)sagedpw\\.at$"           # AT site (first party)
+  - "(^|\\.)ciel\\.com$"             # FR Sage 50 (Ciel) site (first party)
   - "(^|\\.)usercentrics\\.(eu|com)$" # consent tool on sagedpw.at
   - "(^|\\.)cookielaw\\.org$"
   - "(^|\\.)onetrust\\.com$"

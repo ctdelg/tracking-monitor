@@ -1,0 +1,32 @@
+{
+ "publish_version": "202602181412",
+ "sha256": "1578f9a6ff02c863b0424b61176d45b49aa2f9d5fa0d3f5f19da9b05cd6c0c7e",
+ "size": 50698,
+ "tags": {
+  "4": {
+   "load": "1",
+   "send": "1",
+   "v": "202402200908",
+   "tid": "7142"
+  },
+  "9": {
+   "load": "((utag.cond[4]))",
+   "send": "1",
+   "v": "202602181412",
+   "tid": "4049"
+  },
+  "10": {
+   "load": "((utag.cond[5]))",
+   "send": "1",
+   "v": "202602181412",
+   "tid": "4049"
+  },
+  "13": {
+   "load": "((utag.cond[6] || utag.cond[7] || utag.cond[4] || utag.cond[9] || utag.cond[10]))",
+   "send": "1",
+   "v": "202509081715",
+   "tid": "20064"
+  }
+ },
+ "load_rules": {}
+}

@@ -40,7 +40,7 @@ def parse_utag(body: str) -> dict:
         tag_id, load, send, v, tid = m.groups()
         tags[tag_id] = {"load": load, "send": send, "v": v, "tid": tid}
     rules = {m.group(1): m.group(2) for m in _RULE_RE.finditer(body)}
-    ver = _VERSION_RE.search(body)
+    ver = _VERSION_RE.search(body) or re.search(r"utag\.loader ut4\.\d+\.(\d{12})", body)
     return {
         "publish_version": ver.group(1) if ver else None,
         "sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(),

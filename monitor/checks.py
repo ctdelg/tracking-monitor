@@ -243,7 +243,9 @@ def _consent_and_tag_checks(visit, market, platforms, baseline, tid, pre) -> lis
         out.append(result("CONS-02", "red", "pass", tid, "No marketing tags or cookies before consent"))
 
     google_pre = [h for h in pre_hits if h["vendor"] in {"ga4", "floodlight", "google_ads"}]
-    granted = [h for h in google_pre if (_gcs(h["url"]) or "G100") != "G100"]
+    # A Google hit before consent is only fine as a Consent Mode ping with gcs=G100 (denied).
+    # Hits without any consent signal (no Consent Mode at all) count as granted.
+    granted = [h for h in google_pre if _gcs(h["url"]) != "G100"]
     out.append(result("CONS-03", "red", "fail" if granted else "pass", tid,
                       f"{len(granted)} Google hit(s) before consent without denied consent state"
                       if granted else "Consent Mode default denied (or no Google hits before consent)",
@@ -379,7 +381,7 @@ def check_journey(journey: dict, platforms: Platforms, baseline: dict | None) ->
 
 def check_forms(market: dict, forms_part: dict, baseline: dict | None) -> list[dict]:
     """Lead form checks (see monitor/forms.py). forms_part = raw["forms"]."""
-    from .forms import NAME_CONVENTION, lead_type
+    from .forms import lead_type
 
     out = []
     script = forms_part.get("event_script") or {}
@@ -427,9 +429,13 @@ def check_forms(market: dict, forms_part: dict, baseline: dict | None) -> list[d
                               "_PDF_ ...). Tealium cannot classify the lead, so lead-type based tags will not fire.", ev,
                               title="Lead type can be derived from the form name"))
         else:
-            ok_conv = bool(NAME_CONVENTION.match(name))
-            out.append(result("FORM-02", "yellow", "pass" if ok_conv else "warn", target,
-                              f"{name} -> {lt}" + ("" if ok_conv else " (name does not follow the usual pattern)"),
+            # Leading/trailing spaces break Tealium rules that anchor on the start of the name
+            # (e.g. DE rule 331 for Floodlight tag 389); different-but-valid naming styles are fine.
+            clean = name == name.strip()
+            out.append(result("FORM-02", "yellow", "pass" if clean else "warn", target,
+                              f"{name.strip()} -> {lt}" + ("" if clean else
+                              " - the name has a leading or trailing space, so rules that check the start of the "
+                              "name (for example Floodlight tags that need a specific code) will not match"),
                               title="Lead type can be derived from the form name"))
 
         conv = g.get("conversion") or {}
@@ -530,10 +536,10 @@ def check_gtm(market: dict, part: dict, baseline: dict | None) -> list[dict]:
     return out
 
 
-def check_tealium(market_code: str, tealium: dict, baseline: dict | None) -> list[dict]:
+def check_tealium(market_code: str, tealium: dict, baseline: dict | None, target: str = "market") -> list[dict]:
     """tealium = {"fetch": {...}, "parsed": {...}, "diff": {...}, "conversion": {...}}"""
     out = []
-    t = "market"
+    t = target
     f = tealium.get("fetch", {})
     if not f.get("status") or f["status"] >= 400:
         out.append(result("TEAL-05", "site_down", "fail", t,

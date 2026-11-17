@@ -42,6 +42,12 @@ def cmd_collect(args) -> None:
                     print(f"[{code}] lead forms ...", flush=True)
                     forms_part = pipeline.collect_forms(browser, m, teal.get("_body"))
                     pipeline.store_raw(args.day, code, forms_part=forms_part)
+                    extra = {}
+                    for prof in m.get("extra_tealium_profiles") or []:
+                        print(f"[{code}] Tealium profile {prof} ...", flush=True)
+                        extra[prof] = pipeline.collect_tealium(browser, {**m, "tealium_profile": prof}, args.day)
+                    if extra:
+                        pipeline.store_raw(args.day, code, tealium_extra=extra)
                 else:
                     print(f"[{code}] Google Tag Manager container ...", flush=True)
                     # tealium/forms parts are cleared so nothing from an earlier sage.com setup lingers

@@ -91,6 +91,52 @@
     "coverage": "tealium_only",
     "publish": false
    }
+  },
+  "2026-11-17": {
+   "_global": {
+    "status": "red",
+    "incidents": 0
+   },
+   "DE": {
+    "status": "red",
+    "red": 2,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "tealium_only",
+    "publish": false
+   },
+   "AT": {
+    "status": "yellow",
+    "red": 0,
+    "yellow": 10,
+    "site_down": 0,
+    "coverage": "full",
+    "publish": true
+   },
+   "FR": {
+    "status": "red",
+    "red": 8,
+    "yellow": 6,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "ES": {
+    "status": "green",
+    "red": 0,
+    "yellow": 0,
+    "site_down": 0,
+    "coverage": "tealium_only",
+    "publish": false
+   },
+   "PT": {
+    "status": "green",
+    "red": 0,
+    "yellow": 0,
+    "site_down": 0,
+    "coverage": "tealium_only",
+    "publish": false
+   }
   }
  }
 }

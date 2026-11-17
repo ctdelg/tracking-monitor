@@ -74,14 +74,14 @@ web app.
 |---|---|---|---|---|---|
 | DE | www.sage.com/de-de/ | Tealium | OneTrust | 116 (paid media report) + 10 product tour pages | 136 forms on 99 pages |
 | AT | **www.sagedpw.at** (Sage DPW, HR software only) | Google Tag Manager | Usercentrics | 6 (paid search report) + 2 form journeys | Infopaket and contact form pages |
-| FR | www.sage.com/fr-fr/ | Tealium | OneTrust | 24 (first proposal from the sitemap) | not yet inventoried |
+| FR | www.sage.com/fr-fr/ (+ www.ciel.com for two Sage 50 pages) | Tealium (profiles fr-fr and ciel) | OneTrust (none found on ciel.com) | 34 (paid search report): 32 on sage.com, 2 on ciel.com | 49 forms on 31 pages |
 | ES | www.sage.com/es-es/ | Tealium | OneTrust | 22 (first proposal from the sitemap) | not yet inventoried |
 | PT | www.sage.com/pt-pt/ | Tealium | OneTrust | 20 (first proposal from the sitemap) | not yet inventoried |
 
-## Current status (16 Nov 2026)
+## Current status (17 Nov 2026)
 
 **What already runs fully automated every day**
-- **AT** (www.sagedpw.at): all checks, including page visits and form journeys. The site has no bot protection.
+- **AT** (www.sagedpw.at) and the two **FR** pages on www.ciel.com: all checks, including page visits. These sites have no bot protection.
 - **DE, FR, ES, PT** (www.sage.com): tag rule checks, conversion replays, lead form checks and change detection.
 
 **What is still blocked: page visits on www.sage.com**
@@ -98,7 +98,8 @@ web app.
       market shows yellow.
 - [ ] DE: clarify whether Microsoft UET should fire on the payroll and HR landing pages (it currently does not).
 - [ ] AT: clarify whether the missing Google Ads remarketing, UET, LinkedIn and Meta tags on sagedpw.at are intended.
-- [ ] FR, ES, PT: replace the sitemap proposals with the paid media landing page reports, then inventory their forms.
+- [ ] FR: www.ciel.com has no cookie banner, and tags fire before consent. Raise this with the privacy / web team.
+- [ ] ES, PT: replace the sitemap proposals with the paid media landing page reports, then inventory their forms.
 - [ ] Phase 2: email alerts for new red and yellow findings.
 
 ## Where to look

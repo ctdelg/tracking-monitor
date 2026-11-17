@@ -1,0 +1,801 @@
+{
+ "market": "FR",
+ "pages": {
+  "fr-home": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "beebeee9-9bc0-4fa7-93bb-44f8b2035f1d",
+     "ctas": [
+      "Visite interactive de Sage Intacct"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-cp-50100jemaitrise": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "771a9269-f882-4a2d-8d76-ab5aad04947b",
+     "ctas": [
+      "Echangez avec un conseiller"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "613188c1-964d-4488-ac99-d64ff4382b21",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "3f85b4de-2cc3-4ae1-a0e4-6ca80204bbf2",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "957858fc-31b7-4821-ba78-3427c27097d3",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "ce79bd06-1c2c-4b87-818c-b46f259530de",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-dematerialisation-facture-electronique": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "dc7de96c-9947-4ae3-bf65-d2d08b1e4b4c",
+     "ctas": [
+      "Demandez un rappel",
+      "Etre contacté(e)"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "613188c1-964d-4488-ac99-d64ff4382b21",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "3f85b4de-2cc3-4ae1-a0e4-6ca80204bbf2",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "957858fc-31b7-4821-ba78-3427c27097d3",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "ce79bd06-1c2c-4b87-818c-b46f259530de",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-experts-comptables": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "7f6f4f80-8cab-46fc-b48c-7776cbd9d922",
+     "ctas": [
+      "Nous contacter",
+      "Demandez un rappel"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "1b61611f-e15b-4ff1-a730-383ece79c756",
+     "ctas": [],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-experts-comptables-produits-sage-generation-exp": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "7f6f4f80-8cab-46fc-b48c-7776cbd9d922",
+     "ctas": [
+      "Nous contacter",
+      "Demandez un rappel"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "ba235c11-d040-45c1-8658-790d08184423",
+     "ctas": [
+      "Demandez une démo",
+      "Demandez une démo Sage Génération Expert"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "ce79bd06-1c2c-4b87-818c-b46f259530de",
+     "ctas": [
+      "Téléchargez"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-experts-comptables-saisie-comptable-automatique": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "7f6f4f80-8cab-46fc-b48c-7776cbd9d922",
+     "ctas": [
+      "Nous contacter",
+      "Demandez un rappel"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-100": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "6cf25285-c105-43cc-b0c9-d4abd715e2e5",
+     "ctas": [
+      "Demandez une démo",
+      "Réservez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "27371fff-7142-4f1b-94ca-2d5b7d3b6659",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "2750fbf2-3892-458d-9b18-16207476ebc5",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "88c9430a-f78c-4399-9321-10d7a538e998",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "47f605fa-a40d-4214-8f4d-a726ec58ab8e",
+     "ctas": [
+      "Form Intacct"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-100-comptabilite": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "27371fff-7142-4f1b-94ca-2d5b7d3b6659",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "47f605fa-a40d-4214-8f4d-a726ec58ab8e",
+     "ctas": [
+      "Form Intacct"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-100-gestion-commerciale": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "2750fbf2-3892-458d-9b18-16207476ebc5",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "47f605fa-a40d-4214-8f4d-a726ec58ab8e",
+     "ctas": [
+      "Form Intacct"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-100-sage-automatisation-comptable": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "6ca8e97a-04c5-4344-b274-b85f2b91a9fc",
+     "ctas": [
+      "Demandez une démo",
+      "Echangez avec un expert"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-100-sage-recouvrement-creances": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "30e29714-df8c-4695-a1cd-36758937a59f",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "70cdf0a5-4f16-4671-922a-7dfd9a7999a0",
+     "ctas": [
+      "Téléchargez le livre blanc"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "da18d790-e59e-4396-94bd-2140dbf8d90b",
+     "ctas": [
+      "Téléchargez l’infographie"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-50cloud": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "0a047f42-2b28-4134-9741-c5ae19ce7f0c",
+     "ctas": [
+      "Démo en ligne",
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "50580884-5634-4dfe-aa42-9615ee3a287a",
+     "ctas": [
+      "Demandez un rappel"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-50cloud-test-gratuit": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "0a047f42-2b28-4134-9741-c5ae19ce7f0c",
+     "ctas": [
+      "Démo en ligne",
+      "Demandez une démo"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-active": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "694e9742-7868-4061-8a29-8df61ba4fdc2",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "cebce4b8-7cdf-4293-864b-71d5cba251ea",
+     "ctas": [
+      "Hidden gate"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-bi-reporting": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "1fdbf787-e9b8-40bc-85f2-dea2247b47b4",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "3b8bfb83-e66f-46bd-9495-a832c4a23361",
+     "ctas": [
+      "Téléchargez l'infographie"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-business-reporting": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "c0d6bd79-1553-40aa-b255-d322305b37d7",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-data-clean-and-control": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "db32bf53-3d23-4002-956f-ff89dc3ed336",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "6759c388-4fe6-4bbe-b2fa-126db07cb1d0",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-frp-1000": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "94cf276e-8105-4c63-9b8c-f13354e90138",
+     "ctas": [
+      "Demandez une démo",
+      "Contactez-nous pour en savoir plus"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "f80611e7-760f-4392-b029-769795288175",
+     "ctas": [
+      "Téléchargez le guide clients Sage FRP 10"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-sales-management": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "b8bba13c-b114-425f-b142-70f7a0301b7d",
+     "ctas": [
+      "Demandez une démo",
+      "Demandez une démo personnalisée"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "0a047f42-2b28-4134-9741-c5ae19ce7f0c",
+     "ctas": [
+      "Démo en ligne",
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "177259a6-e27e-4aa6-8989-e9fa5b596c7e",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-produits-sage-xrt-advanced": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "3c360e8d-998f-415d-9e4e-148988125f09",
+     "ctas": [
+      "Demandez une démo",
+      "Contactez-nous"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-intacct": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "cb6b885e-aceb-4f58-96eb-832e4366206a",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "2baa8cef-2395-40a4-bf72-b898f3fe0a35",
+     "ctas": [
+      "Product Tour",
+      "Visite interactive de Sage Intacct"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "beebeee9-9bc0-4fa7-93bb-44f8b2035f1d",
+     "ctas": [
+      "Visite interactive de Sage Intacct"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "aed21b28-c9cc-43cd-afc9-7395f5ce63cb",
+     "ctas": [
+      "Exchangez avec nos experts"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "6cfae0e2-b56e-4884-ab44-d05a3a1f19e8",
+     "ctas": [
+      "Demandez un devis personnalisé"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "3a490cb7-2156-4631-b295-376194596eb9",
+     "ctas": [
+      "Demandez un devis",
+      "veuillez contacter notre équipe"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "47f605fa-a40d-4214-8f4d-a726ec58ab8e",
+     "ctas": [
+      "Form Intacct"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-intacct-bon-commandes": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "cb6b885e-aceb-4f58-96eb-832e4366206a",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "2baa8cef-2395-40a4-bf72-b898f3fe0a35",
+     "ctas": [
+      "Product Tour",
+      "Visite interactive de Sage Intacct"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "aed21b28-c9cc-43cd-afc9-7395f5ce63cb",
+     "ctas": [
+      "Exchangez avec nos experts"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "a292f503-1b8f-401d-a70b-12842d5c63c7",
+     "ctas": [
+      "Contactez-nous"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-intacct-compte-crediteur": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "cb6b885e-aceb-4f58-96eb-832e4366206a",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "2baa8cef-2395-40a4-bf72-b898f3fe0a35",
+     "ctas": [
+      "Product Tour",
+      "Visite interactive de Sage Intacct"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "571b0e5a-0c90-4902-ab27-c2061c0d90cd",
+     "ctas": [
+      "Contactez-nous"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-intacct-compte-debiteur": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "cb6b885e-aceb-4f58-96eb-832e4366206a",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "2baa8cef-2395-40a4-bf72-b898f3fe0a35",
+     "ctas": [
+      "Product Tour",
+      "Visite interactive de Sage Intacct"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "aed21b28-c9cc-43cd-afc9-7395f5ce63cb",
+     "ctas": [
+      "Exchangez avec nos experts"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "571b0e5a-0c90-4902-ab27-c2061c0d90cd",
+     "ctas": [
+      "Contactez-nous"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-intacct-multi-societes": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "cb6b885e-aceb-4f58-96eb-832e4366206a",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "aed21b28-c9cc-43cd-afc9-7395f5ce63cb",
+     "ctas": [
+      "Exchangez avec nos experts"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-intacct-consolidation-comptable": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "cb6b885e-aceb-4f58-96eb-832e4366206a",
+     "ctas": [
+      "Demandez une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "aed21b28-c9cc-43cd-afc9-7395f5ce63cb",
+     "ctas": [
+      "Exchangez avec nos experts"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-logiciels-gestionnaire-de-paie": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "a0ac38e1-3e04-4267-80fd-0ef5806bf0fd",
+     "ctas": [
+      "Demandez une démo",
+      "Demandez une demo"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-sage-x3": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "3f9f23aa-9eed-4c80-a16d-0e7c52937b14",
+     "ctas": [
+      "Demandez une démo",
+      "Demander une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "c9faf818-5e3d-43b8-bae5-5acbd42da1cb",
+     "ctas": [
+      "Visite guidée du produit",
+      "Visite interactive de Sage X3"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-sage-x3-gestion-de-la-production": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "3f9f23aa-9eed-4c80-a16d-0e7c52937b14",
+     "ctas": [
+      "Demandez une démo",
+      "Demander une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "c9faf818-5e3d-43b8-bae5-5acbd42da1cb",
+     "ctas": [
+      "Visite guidée du produit",
+      "Visite interactive de Sage X3"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "4b0df4e2-2ff4-4ed4-918b-be13078987d2",
+     "ctas": [
+      "Téléchargez le guide"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "7898f9d7-6bc6-4f81-8167-ec0d536b704a",
+     "ctas": [
+      "Téléchargez le guide"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "4c9599f8-4806-4cac-8714-c9c3d955e0b8",
+     "ctas": [
+      "Téléchargez le guide"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "d4e0ecec-e201-4907-95f2-1e24cb6de5ea",
+     "ctas": [
+      "Essayez X3"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-sage-x3-secteurs-agroalimentaire": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "3f9f23aa-9eed-4c80-a16d-0e7c52937b14",
+     "ctas": [
+      "Demandez une démo",
+      "Demander une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "c9faf818-5e3d-43b8-bae5-5acbd42da1cb",
+     "ctas": [
+      "Visite guidée du produit",
+      "Visite interactive de Sage X3"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "4b0df4e2-2ff4-4ed4-918b-be13078987d2",
+     "ctas": [
+      "Téléchargez le guide"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "7898f9d7-6bc6-4f81-8167-ec0d536b704a",
+     "ctas": [
+      "Téléchargez le guide"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "c7be1ca6-e451-47b9-92c9-b1af98e8c2eb",
+     "ctas": [
+      "Découvrez"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "93e25d36-20ff-4fa9-9184-81af4faede7d",
+     "ctas": [
+      "Téléchargez le guide"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "d4e0ecec-e201-4907-95f2-1e24cb6de5ea",
+     "ctas": [
+      "Essayez X3"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "fr-sbc-sage-x3-secteurs-construction": {
+   "discovered": "2026-11-17",
+   "gates": [
+    {
+     "id": "3f9f23aa-9eed-4c80-a16d-0e7c52937b14",
+     "ctas": [
+      "Demandez une démo",
+      "Demander une démo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "c9faf818-5e3d-43b8-bae5-5acbd42da1cb",
+     "ctas": [
+      "Visite guidée du produit",
+      "Visite interactive de Sage X3"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "4b0df4e2-2ff4-4ed4-918b-be13078987d2",
+     "ctas": [
+      "Téléchargez le guide"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "d4e0ecec-e201-4907-95f2-1e24cb6de5ea",
+     "ctas": [
+      "Essayez X3"
+     ],
+     "embedded": false
+    }
+   ]
+  }
+ }
+}

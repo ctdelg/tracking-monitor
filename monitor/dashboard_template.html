@@ -2,9 +2,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: app shell (sidebar + main). Main reads top-down: verdict sentence, three state cards,
-   market x conversion-event matrix, 14-day status strip, the selected market's findings, publishes.
-   No line charts: runs are daily pass/fail states, and percentages would hide one broken conversion. */
+/* Layout: app shell (sidebar + main). Main reads top-down: verdict card (sentence, key figures, market
+   board or brief), market x conversion-event matrix, workday status strip, findings grouped by who has
+   to act, publishes (only when one changed something). Red marks lost conversions and broken consent
+   only, and only once per item: the dot. No line charts: runs are daily pass/fail states. */
 :root {
   --page: #ffffff; --shell: #f4f4f6; --surface: #ffffff; --sunk: #f4f4f6;
   --fg: #020a0f; --muted: #5d636b; --faint: #8b9098; --line: rgba(80, 84, 92, .14); --ring: rgba(103, 103, 103, .10);
@@ -45,7 +46,7 @@ p { margin: 0; }
 a { color: var(--accent); }
 button { font: inherit; color: inherit; cursor: pointer; }
 .muted { color: var(--muted); }
-.mono { font-family: var(--f-mono); font-size: 12.5px; }
+.mono { font-family: var(--f-mono); font-size: 12px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* shell */
@@ -59,10 +60,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .nav, .mk { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border: 0; background: none; border-radius: 10px;
   text-align: left; color: var(--muted); font-weight: 500; transition: background-color .15s, color .15s; }
 .nav:hover, .mk:hover { background: var(--sunk); color: var(--fg); }
+.nav[aria-current="true"] { color: var(--fg); }
+.nav[aria-current="true"] svg { color: var(--accent); }
 .mk[aria-pressed="true"] { background: var(--sunk); color: var(--fg); box-shadow: inset 0 0 0 1px var(--line); }
 .mk .nm { flex: 1; }
-.mk .n { font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; }
-.nav svg { width: 17px; height: 17px; flex: none; }
+.nav svg { width: 17px; height: 17px; flex: none; transition: color .15s; }
+.nav[hidden] { display: none; }
 .legend2 { display: grid; gap: 4px; font-size: 12px; color: var(--faint); padding: 14px 10px 0; }
 .legend2 span { display: flex; gap: 8px; align-items: center; }
 
@@ -75,17 +78,30 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .main { display: grid; gap: 12px; min-width: 0; }
 .main > * { min-width: 0; }
-.card { background: var(--surface); box-shadow: var(--shadow); border-radius: 20px; padding: 20px 22px; display: grid; gap: 14px; min-width: 0; }
+.card { background: var(--surface); box-shadow: var(--shadow); border-radius: 20px; padding: 20px 22px; display: grid; gap: 16px; min-width: 0; }
+.card[hidden] { display: none; }
 .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 12px; }
 .head .muted { font-size: 12.5px; }
 
 /* verdict */
-.meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
 .meta b { color: var(--fg); font-weight: 500; }
 .verdict h1 { font-size: clamp(24px, 2.6vw, 34px); line-height: 1.18; text-wrap: pretty; }
 .verdict h1 .rest { color: var(--faint); }
-.brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
-.bt { background: var(--sunk); border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.kpis { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.kpi { flex: 1 1 160px; display: grid; gap: 2px; padding: 12px 16px; border-left: 1px solid var(--line); min-width: 0; }
+.kpi:first-child { border-left: 0; padding-left: 0; }
+.kpi b { font-size: 24px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; font-variant-numeric: tabular-nums; display: flex; align-items: center; gap: 8px; }
+.kpi b small { font-size: 13px; font-weight: 500; color: var(--faint); letter-spacing: 0; }
+.kpi span { font-size: 12.5px; color: var(--muted); }
+.kpi.bad b::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--crit-fill); }
+.alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; background: var(--sunk); border-radius: 12px; font-size: 13.5px; }
+.alert svg { width: 16px; height: 16px; flex: none; margin-top: 2px; color: var(--crit); }
+.alert b { font-weight: 600; }
+
+/* brief: a 12-column grid, rows balanced by the script (5 blocks -> 3 + 2, never 4 + 1) */
+.brief { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px; }
+.bt { grid-column: span var(--span, 3); background: var(--sunk); border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
 .bt h3 { font-size: 13px; display: flex; align-items: center; gap: 8px; }
 .bt ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 13.5px; }
 .bt li { position: relative; padding-left: 14px; overflow-wrap: anywhere; }
@@ -103,32 +119,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .mt:active { transform: translateY(0); }
 .mt-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .mt-line { font-weight: 500; font-size: 14px; line-height: 1.35; }
-.mt.red .mt-line { color: var(--crit); }
 .mt-meta { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .crumb, .linkish { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; text-decoration: underline; text-underline-offset: 2px; }
-
-/* needs action (all markets) */
-.needs { display: grid; }
-.need { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
-.need:first-child { border-top: 0; padding-top: 0; }
-.need-body { display: grid; gap: 2px; min-width: 0; }
-.need-body .muted { font-size: 13px; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-@media (max-width: 860px) { .need { grid-template-columns: minmax(0, 1fr); gap: 6px; } }
-
-/* state cards */
-.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.stat { gap: 6px; padding: 16px 18px; align-content: start; }
-.stat .lb { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
-.stat .lb svg { width: 16px; height: 16px; }
-.stat .big { font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.stat .big small { font-size: 14px; font-weight: 500; color: var(--faint); letter-spacing: 0; margin-left: 4px; }
-.stat .sub { font-size: 12.5px; color: var(--muted); }
-.segs { display: flex; gap: 3px; height: 10px; margin-top: 4px; }
-.segs i { flex: 1; border-radius: 3px; background: var(--sunk); }
-.segs i.ok { background: var(--ok-fill); } .segs i.bad { background: var(--crit-fill); } .segs i.ack { background: var(--faint); }
-.bar { height: 10px; border-radius: 3px; background: var(--sunk); overflow: hidden; margin-top: 4px; }
-.bar i { display: block; height: 100%; min-width: 4px; border-radius: 3px; background: var(--warn-fill); }
-.bar i.full { background: var(--ok-fill); }
 
 /* chips */
 .chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 500; white-space: nowrap; }
@@ -136,46 +128,67 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .s-red { color: var(--crit); background: var(--crit-bg); } .s-down { color: var(--down); background: var(--down-bg); }
 .s-sys { color: var(--muted); background: var(--sunk); }
 .s-cfg { color: var(--ok); background: transparent; box-shadow: inset 0 0 0 1px var(--ok-fill); }
+.owner { display: inline-flex; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 500; white-space: nowrap; color: var(--fg); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
 
 /* tables */
 .scroll { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 13px; }
-th, td { text-align: left; padding: 9px 10px; border-top: 1px solid var(--line); vertical-align: middle; }
+th, td { text-align: left; padding: 10px 10px; border-top: 1px solid var(--line); vertical-align: middle; }
 thead th { border-top: 0; font-size: 12px; font-weight: 500; color: var(--faint); white-space: nowrap; padding-top: 0; }
 tbody tr.sel { cursor: pointer; transition: background-color .15s; }
 tbody tr.sel:hover { background: var(--sunk); }
-tbody tr.sel[aria-selected="true"] td:first-child { box-shadow: inset 3px 0 0 var(--fg); }
 .code { font-weight: 600; display: inline-flex; gap: 8px; align-items: center; }
-.ok-t { color: var(--ok); } .bad-t { color: var(--crit); font-weight: 500; } .na-t { color: var(--faint); } .ack-t { color: var(--faint); text-decoration: line-through; }
+.ok-t { color: var(--ok); } .bad-t { color: var(--crit); font-weight: 500; white-space: nowrap; } .na-t { color: var(--faint); } .ack-t { color: var(--faint); text-decoration: line-through; }
 .ic { width: 15px; height: 15px; vertical-align: -3px; }
 .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+.mcards { display: none; gap: 10px; }
+.mcard { display: grid; gap: 8px; text-align: left; border: 0; background: var(--sunk); border-radius: 14px; padding: 12px 14px; }
+.mcard .row { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
 
-/* 14-day strip */
-.strip { display: grid; gap: 10px; }
-.srow { display: grid; grid-template-columns: 34px repeat(14, minmax(0, 1fr)); gap: 4px; align-items: center; }
+/* workday strip */
+.strip { display: grid; gap: 13px; }
+.srow { display: grid; gap: 4px; align-items: center; }
 .srow b { font-weight: 600; font-size: 13px; }
-.q { position: relative; height: 18px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--line); background: repeating-linear-gradient(135deg, transparent 0 3px, var(--line) 3px 4px); }
-.q.run { background: var(--sunk); box-shadow: none; }
+.q { position: relative; height: 18px; border-radius: 4px; background: var(--sunk); }
 .q.red { background: var(--crit-fill); } .q.yellow { background: var(--warn-fill); } .q.green { background: var(--ok-fill); }
 .q.green.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--ok-fill); }
 .q.yellow.cfg { background: transparent; box-shadow: inset 0 0 0 2px var(--warn-fill); }
+.q.pub::after { content: ""; position: absolute; left: 50%; top: -8px; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: var(--accent); }
 button.q { border: 0; padding: 0; cursor: pointer; transition: transform .12s; }
 button.q:hover { transform: translateY(-2px); }
 .q.on { transform: scaleY(1.22); }
 button.q.on:hover { transform: scaleY(1.22) translateY(-1px); }
-.notice.past { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; box-shadow: 0 0 0 1px var(--accent), 0 2px 4px var(--ring); }
-.q.pub::before { content: ""; position: absolute; left: 50%; top: -7px; transform: translateX(-50%); border: 4px solid transparent; border-top: 5px solid var(--accent); border-bottom: 0; }
-.saxis { display: grid; grid-template-columns: 34px 1fr 1fr; font-size: 12px; color: var(--faint); }
-.saxis span:last-child { text-align: right; }
-.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); }
-.legend span { display: inline-flex; gap: 6px; align-items: center; }
-.legend .q { width: 16px; height: 12px; }
+.dates span { font-size: 11.5px; color: var(--faint); text-align: center; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.dates span.today { color: var(--fg); font-weight: 500; }
+.legend .q { width: 16px; height: 12px; display: inline-block; }
+.legend .q.pub::after { top: 3.5px; left: 50%; }
 
 /* notices */
 .notice { background: var(--surface); box-shadow: var(--shadow); border-radius: 16px; padding: 12px 16px; display: grid; gap: 4px; }
-.notice.crit { box-shadow: 0 0 0 1px var(--crit-fill), 0 2px 4px var(--ring); }
+.notice.warn { box-shadow: 0 0 0 1px var(--warn-fill), 0 2px 4px var(--ring); }
+.notice.past { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; box-shadow: 0 0 0 1px var(--accent), 0 2px 4px var(--ring); }
 
-/* findings */
+/* grouped findings: one row per problem and market */
+.lane { display: grid; gap: 4px; }
+.lane + .lane { margin-top: 8px; }
+.lane h3 { font-size: 13px; color: var(--muted); font-weight: 500; display: flex; gap: 8px; align-items: center; padding-bottom: 6px; }
+.lane h3 b { color: var(--fg); font-weight: 600; }
+.need { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto 16px; gap: 14px; align-items: center; padding: 12px 10px; margin: 0 -10px;
+  border: 0; border-top: 1px solid var(--line); background: none; text-align: left; border-radius: 10px; transition: background-color .15s; }
+.need:hover { background: var(--sunk); }
+.need:hover + .need, .lane h3 + .need { border-top-color: transparent; }
+.need-body { display: grid; gap: 2px; min-width: 0; }
+.need-body b { font-weight: 600; }
+.need-body .muted { font-size: 13px; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.need-tags { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+.need-tags:empty { display: none; }
+.need .pages { font-size: 12.5px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.need .chev { width: 16px; height: 16px; color: var(--faint); transition: transform .15s; }
+.need:hover .chev { transform: translateX(2px); color: var(--fg); }
+
+/* findings in a market */
 .findings { display: grid; gap: 10px; }
 .finding { border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; min-width: 0; box-shadow: inset 0 0 0 1px var(--line); }
 .finding.acked { opacity: .6; }
@@ -207,18 +220,28 @@ td.cell { text-align: center; }
 
 .diffitem { border-top: 1px solid var(--line); padding: 8px 0; display: grid; gap: 4px; min-width: 0; }
 .diffitem code { font: 12px var(--f-mono); overflow-wrap: anywhere; }
-footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; padding: 6px 10px 4px; }
+footer { color: var(--faint); font-size: 12.5px; padding: 4px 10px; }
 
-@media (max-width: 1080px) { .stats { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .stats .stat:last-child { grid-column: 1 / -1; } }
+@media (max-width: 1080px) {
+  .bt { grid-column: span 6; }
+  .bt:last-child:nth-child(odd) { grid-column: span 12; }
+}
 @media (max-width: 860px) {
   .shell { grid-template-columns: minmax(0, 1fr); width: 100%; margin: 0; border-radius: 0; padding: 10px; }
   .side { position: static; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 12px; }
   .brand { padding: 0 8px 0 4px; margin-right: auto; }
   .navlabel, .nav, .legend2 { display: none; }
   .mk { width: auto; padding: 8px 12px; min-height: 44px; }
-  .mk .n { display: none; }
-  .stats { grid-template-columns: minmax(0, 1fr); }
   .card { padding: 16px; border-radius: 16px; }
+  .bt, .bt:last-child:nth-child(odd) { grid-column: span 12; }
+  .kpi { flex-basis: 50%; padding: 10px 0; border-left: 0; }
+  .kpi:nth-child(even) { padding-left: 14px; border-left: 1px solid var(--line); }
+  .matrix-table { display: none; }
+  .mcards { display: grid; }
+  .need { grid-template-columns: 44px minmax(0, 1fr) 16px; }
+  .need-tags { grid-column: 2; justify-content: flex-start; }
+  .need .chev { grid-column: 3; grid-row: 1; }
+  .dates .wd { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -230,8 +253,9 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
       <span>Paid media tracking monitor</span>
     </div>
     <button class="nav" type="button" data-go="sec-overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="7" rx="1.5"/><rect x="14" y="4" width="6" height="4" rx="1.5"/><rect x="4" y="15" width="6" height="5" rx="1.5"/><rect x="14" y="12" width="6" height="8" rx="1.5"/></svg>Overview</button>
-    <button class="nav" type="button" data-go="market"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/></svg>Findings</button>
+    <button class="nav" type="button" data-go="matrix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M10 3v18"/></svg>Conversions</button>
     <button class="nav" type="button" data-go="history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4m6-4v4"/></svg>History</button>
+    <button class="nav" type="button" data-go="market"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/></svg>Findings</button>
     <button class="nav" type="button" data-go="publish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M6 8v5a3 3 0 0 0 3 3h7M18 16v-5a3 3 0 0 0-3-3H8"/></svg>Publishes</button>
     <div class="navlabel">Markets</div>
     <div id="marketnav" role="group" aria-label="Markets" style="display: contents"></div>
@@ -246,17 +270,15 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     <section class="card verdict" id="sec-overview">
       <div class="meta" id="meta"></div>
       <h1 id="verdict"></h1>
+      <div class="kpis" id="kpis"></div>
+      <div id="incidents" style="display: grid; gap: 8px"></div>
       <div id="summary"></div>
     </section>
-    <div class="stats" id="stats"></div>
     <section class="card" id="matrix"></section>
     <section class="card" id="history"></section>
     <section class="card" id="market"></section>
-    <section class="card" id="publish"></section>
-    <footer>
-      <div><b>Red</b>: conversion tags, click IDs or consent compliance broken. <b>Yellow</b>: secondary pixels, data layer or a conversion-relevant Tealium publish. <b>Site down</b>: page or utag.js unreachable (shown separately). <b>Global</b>: the same check fails in 3+ markets.</div>
-      <div>A solid dot means pages were opened and checked like a visitor. A ring means only the Tealium configuration (utag.js load rules) was checked. Checks run Mon–Fri around 06:00 CET. No forms are submitted.</div>
-    </footer>
+    <section class="card" id="publish" hidden></section>
+    <footer>Checks run Mon–Fri around 06:00 CET from outside, like a visitor. No forms are submitted.</footer>
   </main>
 </div>
 
@@ -273,8 +295,13 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
   let MARKETS = Object.keys(R.markets);
   const ORDER = {green: 0, yellow: 1, red: 2};
   const EVENTS = {ecom_try: "Web-shop trial", ecom_buy: "Web-shop purchase", gated_trial: "Trial form", gated_contact: "Contact form", purchase: "Order confirmed (sales tag)"};
-  const REASONS = {"TAG-BASELINE": ["unconfirmed baseline", "unconfirmed baselines"], "CONS-05": ["pre-consent request", "pre-consent requests"],
-    "TEAL-03": ["data layer issue", "data layer issues"], "TEAL-04": ["conversion-relevant publish", "conversion-relevant publishes"]};
+  // What went wrong, in words, per check (the check titles state the expectation instead).
+  const PROBLEMS = {"CONS-01": "No consent banner", "CONS-02": "Marketing tags or cookies before consent", "CONS-03": "Consent Mode not denied by default",
+    "CONS-04": "Consent not stored after 'Accept all'", "CONS-05": "Third-party requests before consent", "CLID-01": "gclid not stored",
+    "CLID-02": "msclkid not stored", "CLID-03": "fbclid not stored", "CLID-04": "gclid missing on Google hits", "PAGE-01": "Page not reachable",
+    "PAGE-02": "Page doesn't render", "PAGE-03": "Landing page redirects", "TEAL-01": "Tealium doesn't load", "TEAL-02": "Wrong Tealium profile",
+    "TEAL-03": "Data layer values missing", "TEAL-05": "utag.js not reachable", "TAG-BASELINE": "Tag baseline still learning"};
+  const LANES = [["conv", "Conversions and tracking"], ["consent", "Consent and privacy"], ["site", "Site down"]];
   let liveAcks = [];          // from the artifact database
   let db = null, user = null, myId = null, names = {}, canWrite = false;
   // Scope: "ALL" (cross-market overview) or one market code. A #CODE link wins; otherwise each viewer
@@ -307,23 +334,41 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     for (const kid of kids.flat()) if (kid !== null && kid !== undefined && kid !== false) n.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
     return n;
   };
+  const fill = (id, ...kids) => document.getElementById(id).replaceChildren(...kids.flat().filter(k => k !== null && k !== undefined && k !== false));
   const SVGNS = "http://www.w3.org/2000/svg";
-  const icon = d => { const s = document.createElementNS(SVGNS, "svg"); s.setAttribute("viewBox", "0 0 24 24"); s.setAttribute("fill", "none");
+  const icon = (d, cls) => { const s = document.createElementNS(SVGNS, "svg"); s.setAttribute("viewBox", "0 0 24 24"); s.setAttribute("fill", "none");
     s.setAttribute("stroke", "currentColor"); s.setAttribute("stroke-width", "2.2"); s.setAttribute("stroke-linecap", "round"); s.setAttribute("stroke-linejoin", "round");
-    s.setAttribute("aria-hidden", "true"); s.setAttribute("class", "ic"); const p = document.createElementNS(SVGNS, "path"); p.setAttribute("d", d); s.append(p); return s; };
-  const I_CHECK = "M5 12.5l4.5 4.5L19 7.5", I_X = "M6 6l12 12M18 6L6 18";
-  const fmtDay = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {weekday: "short", day: "numeric", month: "short", year: "numeric"});
+    s.setAttribute("aria-hidden", "true"); s.setAttribute("class", cls || "ic"); const p = document.createElementNS(SVGNS, "path"); p.setAttribute("d", d); s.append(p); return s; };
+  const I_CHECK = "M5 12.5l4.5 4.5L19 7.5", I_X = "M6 6l12 12M18 6L6 18", I_CHEV = "M9 6l6 6-6 6", I_LINK = "M12 9v4m0 4h.01M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z";
+  const fmtDay = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {weekday: "short", day: "numeric", month: "short", year: "numeric", timeZone: "UTC"});
   const shortDay = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "short", timeZone: "UTC"});
+  const weekday = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {weekday: "short", timeZone: "UTC"});
+  const isWorkday = d => { const w = new Date(d + "T12:00:00Z").getUTCDay(); return w > 0 && w < 6; };
   const pubDay = v => { const m = /^(\d{4})(\d{2})(\d{2})/.exec(v || ""); return m ? m[1] + "-" + m[2] + "-" + m[3] : null; };
+  const fmtVersion = v => { const m = /^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})$/.exec(v || ""); return m ? shortDay(m[1] + "-" + m[2] + "-" + m[3]) + ", " + m[4] + ":" + m[5] : (v || "?"); };
   const addDays = (d, n) => new Date(Date.parse(d + "T12:00:00Z") + n * 864e5).toISOString().slice(0, 10);
   const list = a => a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
   // "web-shop trial", "web-shop purchase" -> "web-shop trial and purchase"
   const listShared = a => { const p = a.length > 1 && a.every(x => x.split(" ")[0] === a[0].split(" ")[0]) ? a[0].split(" ")[0] + " " : "";
     return p ? p + list(a.map(x => x.slice(p.length))) : list(a); };
+  const plural = (n, one, many) => n + " " + (n === 1 ? one : many);
+  const verb = (n, one, many) => n === 1 ? one : many;
   const baseId = id => id.split(":")[0];
   const keyOf = (m, c) => m + "|" + c.id + "|" + c.target;
   const pageChecked = m => R.markets[m].rating.coverage !== "tealium_only" && (R.markets[m].rating.pages_checked || 0) > 0;
+  const evKey = c => c.id.split(":")[1];
+  const evLabel = e => EVENTS[e] || e.replace(/_/g, " ");
   const convChecks = m => R.markets[m].checks.filter(c => baseId(c.id) === "CONV-01");
+  // One check per event and market: when a market checks an event on two sites, the worst result counts.
+  const RANK = {fail: 0, warn: 1, pass: 2, skip: 3};
+  function convByEvent(m) {
+    const out = new Map();
+    for (const c of convChecks(m)) { const e = evKey(c), cur = out.get(e); if (!cur || (RANK[c.result] ?? 4) < (RANK[cur.result] ?? 4)) out.set(e, c); }
+    return [...out.values()];
+  }
+  const convOffered = m => convByEvent(m).filter(c => c.result !== "skip");   // "skip" = the market does not offer this conversion
+  const tagsOf = c => ((/tag\(s\)\s*([\d,\s]+)/.exec(c.detail || "") || [])[1] || "").trim().replace(/\s*,\s*/g, ", ");
+  const sourceTag = c => ((/:\s*(.+?) would NOT fire/.exec(c.detail || "") || [])[1] || "");
 
   // --- acknowledgements --------------------------------------------------------------
   function allAcks() {
@@ -361,6 +406,97 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     return {status: incidents.length ? "red" : worst, incidents};
   }
 
+  // --- problems, owners and groups ---------------------------------------------------
+  const lane = c => baseId(c.id).startsWith("CONS") ? "consent" : c.severity === "site_down" ? "site" : "conv";
+  const actionable = code => activeIssues(code).filter(c => c.result === "fail" && (c.severity === "red" || c.severity === "site_down"));
+  function problem(c) {
+    const b = baseId(c.id);
+    if (b === "CONV-01") { const t = tagsOf(c), s = sourceTag(c); return evLabel(evKey(c)) + ": " + (t ? "tag " + t : s || "conversion tag") + " doesn't fire"; }
+    if (b === "GTM-07") { const m = /^([^:]+):/.exec(c.detail || ""); return (m ? m[1] : "GTM conversion") + " can't fire"; }
+    if (b === "TAG" && / fires like on the market's other pages$/.test(c.title)) return c.title.replace(/ fires like on the market's other pages$/, " missing on some pages");
+    return PROBLEMS[b] || c.title;
+  }
+  function diagEntry(code, c) {
+    const f = ((D.markets || {})[code] || {}).findings || {};
+    return f[c.id + "|" + c.target] || f[c.id] || null;
+  }
+  const diagText = (code, c) => { const d = diagEntry(code, c); return typeof d === "string" ? d : d && d.text || null; };
+  // Who has to act: the diagnosis names an owner ("owner" field, or "Owner: ..." in the text).
+  function team(s) {
+    if (!s) return null;
+    const t = s.toLowerCase();
+    if (/martech|tealium/.test(t)) return "MarTech";
+    if (/agency|paid media/.test(t)) return "Agency";
+    if (/gtm/.test(t)) return "GTM owner";
+    if (/web|marketing automation|site/.test(t)) return "Web team";
+    if (/privacy|legal/.test(t)) return "Privacy";
+    return s.length <= 24 ? s : null;
+  }
+  function ownerOf(code, c) {
+    const d = diagEntry(code, c);
+    if (d && typeof d === "object" && d.owner) return team(d.owner);
+    const m = /Owners?:\s*([^.;]+)/i.exec(typeof d === "string" ? d : d && d.text || "");
+    return m ? team(m[1]) : null;
+  }
+  function groupKey(c) {
+    const b = baseId(c.id);
+    if (b === "CONV-01") return c.id;
+    if (b === "TAG") return "TAG|" + c.title;
+    if (b === "GTM-07") return c.id + "|" + c.target;
+    return b;
+  }
+  // One entry per market and problem; the same failure on several pages is one entry.
+  function groupsOf(codes, pick) {
+    const out = new Map();
+    for (const code of codes) for (const c of pick(code)) {
+      const k = code + "|" + groupKey(c);
+      if (!out.has(k)) out.set(k, {code, checks: [], lane: lane(c)});
+      out.get(k).checks.push(c);
+    }
+    return [...out.values()].map(g => {
+      const pages = new Set(g.checks.map(c => c.target).filter(t => t && t !== "market" && !t.startsWith("conversion:")));
+      const texts = g.checks.map(c => diagText(g.code, c)).filter(Boolean);
+      return Object.assign(g, {title: problem(g.checks[0]), pages: pages.size,
+        text: texts.find(t => !/^same (cause|as)\b/i.test(t)) || texts[0] || g.checks[0].detail,
+        owner: g.checks.map(c => ownerOf(g.code, c)).find(Boolean) || null});
+    }).map((g, i, all) => {
+      if (!g.owner && /^same (cause|as)\b/i.test(g.text)) g.owner = (all.find(o => o.code === g.code && o.lane === g.lane && o.owner) || {}).owner || null;
+      g.text = g.text.replace(/\s*Owners?:\s*.*?(\.(?=\s+[A-Z])|\.?$)/i, "").trim();   // the owner sentence ends at ". " + capital, not at "ciel.com"
+      return g;
+    });
+  }
+  const consentProblems = code => groupsOf([code], actionable).filter(g => g.lane === "consent").length;
+  const lostEvents = code => convOffered(code).filter(c => c.result === "fail" && !ackFor(code, c)).map(c => evLabel(evKey(c)).toLowerCase());
+
+  // --- time: freshness, next run, missing run ------------------------------------------
+  const TZ = "Europe/Berlin";
+  function zoned(t) {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23"})
+      .formatToParts(new Date(t)).map(x => [x.type, x.value]));
+    return {day: p.year + "-" + p.month + "-" + p.day, hour: +p.hour, minute: +p.minute};
+  }
+  function atLocal(day, hour) {   // timestamp of <day> <hour>:00 Berlin time
+    const guess = Date.parse(day + "T" + String(hour).padStart(2, "0") + ":00:00Z");
+    const z = zoned(guess), shown = Date.parse(z.day + "T" + String(z.hour).padStart(2, "0") + ":" + String(z.minute).padStart(2, "0") + ":00Z");
+    return guess - (shown - guess);
+  }
+  function nextRun(now) {
+    const today = zoned(now).day;
+    for (let i = 0; i < 8; i++) { const d = addDays(today, i); if (isWorkday(d) && atLocal(d, 6) > now) return atLocal(d, 6); }
+    return null;
+  }
+  function expectedRunDay(now) {   // the latest workday whose run should be in by 08:00
+    const today = zoned(now).day;
+    for (let i = 0; i < 8; i++) { const d = addDays(today, -i); if (isWorkday(d) && atLocal(d, 8) <= now) return d; }
+    return null;
+  }
+  function ago(t, now) {
+    const m = Math.round((now - t) / 6e4);
+    if (m < 60) return plural(Math.max(m, 1), "min", "min") + " ago";
+    const h = Math.round(m / 60);
+    return h < 48 ? plural(h, "hour", "hours") + " ago" : plural(Math.round(h / 24), "day", "days") + " ago";
+  }
+
   // --- rendering -----------------------------------------------------------------------
   function pill(status, label) {
     const cls = {green: "s-green", yellow: "s-yellow", red: "s-red", down: "s-down", cfg: "s-cfg"}[status] || "s-sys";
@@ -375,140 +511,177 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     if (r.down) return "site down";
     return r.status + (pageChecked(code) ? "" : ", config only");
   }
+  const smooth = () => matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
   function select(code) {
     if (!validScope(code)) return;
     const changed = code !== selected;
     selected = code; openAckFor = null; writeScope(code); history.replaceState(null, "", hashFor()); renderAll();
-    if (changed) document.getElementById("sec-overview").scrollIntoView({block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    if (changed) document.getElementById("sec-overview").scrollIntoView({block: "start", behavior: smooth()});
   }
   function openDay(day) {
     if (!RUNS[day] || day === R.day) return;
     loadRun(day); openAckFor = null; history.replaceState(null, "", hashFor()); renderAll();
-    document.getElementById("sec-overview").scrollIntoView({block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    document.getElementById("sec-overview").scrollIntoView({block: "start", behavior: smooth()});
   }
   const isAll = () => selected === ALL;
   const scope = () => isAll() ? MARKETS : [selected];
   const name = code => R.markets[code].name;
-  const lostEvents = code => convChecks(code).filter(c => c.result === "fail" && !ackFor(code, c))
-    .map(c => (EVENTS[c.id.split(":")[1]] || c.id.split(":")[1].replace(/_/g, " ")).toLowerCase());
-  const plural = (n, one, many) => n + " " + (n === 1 ? one : many);
 
   function renderNav() {
     const g = globalStatus();
-    const total = MARKETS.reduce((s, c) => s + rate(c).red + rate(c).yellow, 0);
     const all = el("button", {class: "mk", type: "button", "aria-pressed": String(isAll()), "aria-label": "All markets: overall " + g.status, onclick: () => select(ALL)},
-      el("i", {class: "sd " + g.status, "aria-hidden": "true"}), el("span", {class: "nm"}, "All markets"), total ? el("span", {class: "n"}, total) : null);
-    document.getElementById("marketnav").replaceChildren(all, ...MARKETS.map(code => {
-      const r = rate(code);
-      return el("button", {class: "mk", type: "button", "aria-pressed": String(code === selected), "aria-label": name(code) + ": " + statusText(code),
-        onclick: () => select(code)}, dotFor(code), el("span", {class: "nm"}, code), r.red + r.yellow ? el("span", {class: "n"}, r.red + r.yellow) : null);
-    }));
+      el("i", {class: "sd " + g.status, "aria-hidden": "true"}), el("span", {class: "nm"}, "All markets"));
+    fill("marketnav", all, MARKETS.map(code => el("button", {class: "mk", type: "button", "aria-pressed": String(code === selected),
+      "aria-label": name(code) + ": " + statusText(code), title: name(code) + ": " + statusText(code), onclick: () => select(code)},
+      dotFor(code), el("span", {class: "nm"}, code))));
   }
 
   // One line per market, the same rules for every market, so no market stands out because it has more data.
   function marketLine(code) {
-    const r = rate(code), lost = lostEvents(code);
+    const r = rate(code), lost = lostEvents(code), cons = consentProblems(code);
     if (r.down) return plural(r.down, "page did not load", "pages did not load");
     if (lost.length) return "Loses " + listShared(lost) + " conversions";
+    if (cons) return plural(cons, "consent issue", "consent issues");
     if (r.red) return plural(r.red, "broken check", "broken checks");
     if (r.yellow) return plural(r.yellow, "item", "items") + " to review";
     return pageChecked(code) ? "Everything checked works" : "Clean in Tealium, no page opened";
   }
 
   function allVerdict() {
-    const red = MARKETS.filter(c => rate(c).status === "red");
-    const losing = red.filter(c => lostEvents(c).length), otherRed = red.filter(c => !losing.includes(c));
-    const lead = [];
-    if (losing.length) lead.push(losing.length + " of " + plural(MARKETS.length, "market", "markets") + (losing.length === 1 ? " loses" : " lose") + " conversions: " + list(losing.map(name)) + ".");
-    if (otherRed.length) lead.push(list(otherRed.map(name)) + (otherRed.length === 1 ? " has" : " have") + " broken tracking checks.");
-    if (!red.length) {
-      const y = MARKETS.reduce((s, c) => s + rate(c).yellow, 0);
-      lead.push(y ? "No market loses conversions. " + plural(y, "item", "items") + " to review." : "No market loses conversions.");
-    }
+    const N = MARKETS.length;
+    const losing = MARKETS.filter(c => lostEvents(c).length);
+    const otherRed = MARKETS.filter(c => !losing.includes(c) && rate(c).status === "red");
+    let lead;
+    if (losing.length) lead = losing.length + " of " + N + " markets " + verb(losing.length, "loses", "lose") + " conversions" +
+      (losing.length <= 2 ? ": " + list(losing.map(name)) : "") + ".";
+    else lead = "No market loses conversions" + (otherRed.length ? ", but " + list(otherRed.map(name)) + " " + verb(otherRed.length, "has", "have") + " broken checks." : ".");
     const rest = [];
-    const others = MARKETS.filter(c => !red.includes(c));
+    const others = MARKETS.filter(c => !losing.includes(c) && !otherRed.includes(c));
     const down = others.filter(c => rate(c).down);
-    if (down.length) rest.push("Pages in " + list(down.map(name)) + " did not load.");
     const okVerified = others.filter(c => !rate(c).down && pageChecked(c));
     const okConfig = others.filter(c => !rate(c).down && !pageChecked(c));
-    if (okVerified.length) rest.push(list(okVerified.map(name)) + (okVerified.length > 1 ? " track" : " tracks") + " on the page.");
-    if (okConfig.length) rest.push(list(okConfig.map(name)) + (okConfig.length > 1 ? " look" : " looks") + " clean in Tealium, but no page was opened there.");
-    return [lead.join(" "), rest.join(" ")];
+    if (down.length) rest.push("Pages in " + list(down.map(name)) + " did not load.");
+    if (okConfig.length && !okVerified.length && !down.length && losing.length + otherRed.length)
+      rest.push("Only " + list(okConfig.map(name)) + " " + verb(okConfig.length, "looks", "look") + " clean, and only in Tealium.");
+    else {
+      if (okVerified.length) rest.push(list(okVerified.map(name)) + " " + verb(okVerified.length, "tracks", "track") + " on the page.");
+      if (okConfig.length) rest.push(list(okConfig.map(name)) + " " + verb(okConfig.length, "looks", "look") + " clean, but only in Tealium.");
+    }
+    return [lead, rest.join(" ")];
   }
 
   function marketVerdict(code) {
-    const r = rate(code), lost = lostEvents(code), m = R.markets[code], hasConv = convChecks(code).length > 0;
+    const r = rate(code), lost = lostEvents(code), m = R.markets[code], hasConv = convOffered(code).length > 0, cons = consentProblems(code);
     let lead;
     if (r.down) lead = name(code) + ": " + plural(r.down, "page did not load", "pages did not load") + ".";
     else if (lost.length) lead = name(code) + " loses its " + listShared(lost) + " conversions.";
+    else if (cons) lead = name(code) + " has " + plural(cons, "consent issue", "consent issues") + ".";
     else if (r.red) lead = name(code) + " has " + plural(r.red, "broken check", "broken checks") + ".";
     else lead = (hasConv ? name(code) + " tracks every checked conversion." : name(code) + " has no conversion events set up yet.") +
       (r.yellow ? " " + plural(r.yellow, "item", "items") + " to review." : "");
-    const rest = pageChecked(code)
-      ? (m.rating.pages_checked || 0) + " of " + m.rating.pages_configured + " paid landing pages opened today."
-      : "No page was opened today, so only the Tealium configuration was checked.";
-    return [lead, rest];
+    const rest = [];
+    if (cons && (lost.length || r.down)) rest.push("Also " + plural(cons, "consent issue", "consent issues") + ".");
+    const when = R.day === LATEST ? "today" : "in this run";
+    rest.push(pageChecked(code) ? (m.rating.pages_checked || 0) + " of " + m.rating.pages_configured + " pages opened " + when + "."
+      : "No page opened " + when + ", Tealium config only.");
+    return [lead, rest.join(" ")];
   }
 
   function renderHeader() {
-    const g = globalStatus();
+    const g = globalStatus(), now = Date.now();
     const sc = scope();
     const opened = sc.filter(pageChecked);
     const srcs = [...new Set(sc.map(c => R.markets[c].source).filter(s => s && s !== "none"))];
     const srcLabel = {playwright: "automated browser", "claude-browser": "built-in browser"};
     const r = isAll() ? null : rate(selected);
-    document.getElementById("meta").replaceChildren(...[
+    const gen = Date.parse(R.generated_at), latest = R.day === LATEST, nr = nextRun(now);
+    fill("meta",
       isAll() ? null : el("span", {}, el("button", {class: "crumb", type: "button", onclick: () => select(ALL)}, "All markets"), " / ", el("b", {}, name(selected))),
       el("span", {}, "Run ", el("b", {}, fmtDay(R.day))),
-      el("span", {}, opened.length ? (isAll() ? "Pages opened in " + list(opened) : "Pages opened") + (srcs.length ? " via " + srcs.map(s => srcLabel[s] || s).join(", ") : "") : "Tealium CDN only"),
-      el("span", {}, "Generated " + R.generated_at.replace("T", " ").slice(0, 16) + " UTC"),
-      isAll() ? pill(g.status, "Overall " + g.status) : pill(r.down ? "down" : r.status, name(selected) + " " + (r.down ? "site down" : r.status))].filter(Boolean));
+      el("span", {title: "Generated " + R.generated_at.replace("T", " ").slice(0, 16) + " UTC"}, latest ? "Updated " + ago(gen, now) : "Generated " + shortDay(zoned(gen).day)),
+      latest && nr ? el("span", {}, "Next run " + new Date(nr).toLocaleString("en-GB", {weekday: "short", hour: "2-digit", minute: "2-digit", timeZone: TZ}) + " CET") : null,
+      el("span", {}, opened.length ? "Pages opened" + (isAll() ? " in " + list(opened) : "") + (srcs.length ? " via " + srcs.map(s => srcLabel[s] || s).join(", ") : "") : "Tealium CDN only"),
+      isAll() ? pill(g.status, "Overall " + g.status) : pill(r.down ? "down" : r.status, name(selected) + " " + (r.down ? "site down" : r.status)));
     const [lead, rest] = isAll() ? allVerdict() : marketVerdict(selected);
-    document.getElementById("verdict").replaceChildren(lead, rest ? " " : "", rest ? el("span", {class: "rest"}, rest) : null);
-    const notes = document.getElementById("notices");
-    notes.replaceChildren();
-    if (R.day !== LATEST) notes.append(el("div", {class: "notice past"},
+    fill("verdict", lead, rest ? " " : null, rest ? el("span", {class: "rest"}, rest) : null);
+
+    const notes = [];
+    if (!latest) notes.push(el("div", {class: "notice past"},
       el("p", {}, "You're looking at the run of ", el("b", {}, fmtDay(R.day)), ". Acknowledging is only possible on the latest run."),
       el("button", {class: "btn primary", type: "button", onclick: () => { loadRun(LATEST); history.replaceState(null, "", hashFor()); renderAll(); }}, "Back to latest run (" + shortDay(LATEST) + ")")));
-    for (const inc of g.incidents) {
-      if (!isAll() && !inc.markets.includes(selected)) continue;
-      notes.append(el("div", {class: "notice crit"}, el("b", {}, "Global incident: " + inc.check + " fails in " + inc.markets.join(", ")),
-        el("p", {}, "The same check fails in several markets at once. Look for a shared cause first: shared Tealium extension or template, OneTrust configuration, or a vendor outage.")));
-    }
-    if (R.global.system_notice) notes.append(el("div", {class: "notice"}, el("b", {}, "Coverage"), el("p", {}, R.global.system_notice)));
-    if (MODE === "artifact" && db === null && window.__dbTried) notes.append(el("div", {class: "notice"}, el("p", {}, "Acknowledgements are read-only in this view.")));
-    const sum = document.getElementById("summary");
-    sum.replaceChildren(...[isAll() ? marketBoard() : marketBrief(selected)].filter(Boolean));
+    const exp = expectedRunDay(now);
+    if (latest && exp && LATEST < exp) notes.push(el("div", {class: "notice warn"},
+      el("p", {}, el("b", {}, "No run since " + fmtDay(LATEST) + ". "), "The run for " + fmtDay(exp) + " is missing, so this page may be out of date.")));
+    if (R.global.system_notice) notes.push(el("div", {class: "notice"}, el("b", {}, "Coverage"), el("p", {}, R.global.system_notice)));
+    if (MODE === "artifact" && db === null && window.__dbTried) notes.push(el("div", {class: "notice"}, el("p", {}, "Acknowledgements are read-only in this view.")));
+    fill("notices", notes);
+
+    renderKpis();
+    // The same failure in 3+ markets: one line, and the diagnosis says whether the cause is shared.
+    const incs = g.incidents.filter(inc => isAll() || inc.markets.includes(selected));
+    fill("incidents", incs.map(inc => {
+      const what = inc.check.startsWith("CONV-") ? evLabel(inc.check.split(":")[1]) : PROBLEMS[baseId(inc.check)] || inc.check;
+      const info = (D.incidents || {})[inc.check] || {};
+      const why = info.shared === true ? ". Likely one shared cause." : info.shared === false ? ", each for its own reason." : ". Check for a shared cause first.";
+      return el("div", {class: "alert"}, icon(I_LINK), el("p", {}, el("b", {}, what + " fails in " + list(inc.markets)),
+        why, info.summary ? " " + info.summary : ""));
+    }));
+    fill("summary", isAll() ? marketBoard() : marketBrief(selected));
+  }
+
+  function renderKpis() {
+    const sc = scope();
+    let total = 0, broken = 0;
+    for (const code of sc) for (const c of convOffered(code)) { total++; if (c.result === "fail" && !ackFor(code, c)) broken++; }
+    const cons = sc.reduce((s, c) => s + consentProblems(c), 0);
+    const opened = sc.reduce((s, c) => s + (R.markets[c].rating.pages_checked || 0), 0);
+    const conf = sc.reduce((s, c) => s + (R.markets[c].rating.pages_configured || 0), 0);
+    const review = sc.reduce((s, c) => s + rate(c).yellow, 0);
+    const kpi = (bad, big, small, label) => el("div", {class: "kpi" + (bad ? " bad" : "")}, el("b", {}, big, small ? el("small", {}, small) : null), el("span", {}, label));
+    fill("kpis",
+      kpi(broken > 0, total ? String(broken) : "–", total ? "of " + total : null, "conversion events broken"),
+      kpi(cons > 0, String(cons), null, verb(cons, "consent issue", "consent issues")),
+      kpi(false, String(opened), "of " + conf, R.day === LATEST ? "pages opened today" : "pages opened in this run"),
+      kpi(false, String(review), null, "to review"));
   }
 
   function marketBoard() {
     return el("div", {class: "board", role: "group", "aria-label": "Markets"}, MARKETS.map(code => {
-      const r = rate(code), m = R.markets[code], conv = convChecks(code);
+      const r = rate(code), m = R.markets[code], conv = convOffered(code), cons = consentProblems(code), lost = lostEvents(code).length;
       const okConv = conv.filter(c => c.result === "pass").length;
-      const chip = r.down ? pill("down", "Site down") : pageChecked(code) || r.status !== "green" ? pill(r.status, r.status[0].toUpperCase() + r.status.slice(1)) : pill("cfg", "Config only");
-      return el("button", {class: "mt " + (r.down ? "down" : r.status), type: "button", onclick: () => select(code), "aria-label": "Open " + name(code) + ": " + marketLine(code)},
+      const chip = r.down ? pill("down", "Site down") : lost ? pill("red", lost + " broken") : cons ? pill("red", "Consent")
+        : r.red ? pill("red", r.red + " broken") : r.yellow ? pill("yellow", "Review") : pageChecked(code) ? pill("green", "OK") : pill("cfg", "Config only");
+      const meta = [(m.rating.pages_checked || 0) + "/" + m.rating.pages_configured + " pages", conv.length ? okConv + "/" + conv.length + " events OK" : "no events yet"];
+      if (cons && lost) meta.push(plural(cons, "consent issue", "consent issues"));
+      return el("button", {class: "mt", type: "button", onclick: () => select(code), "aria-label": "Open " + name(code) + ": " + marketLine(code)},
         el("span", {class: "mt-top"}, el("span", {class: "code"}, dotFor(code), name(code)), chip),
         el("span", {class: "mt-line"}, marketLine(code)),
-        el("span", {class: "mt-meta"}, (m.rating.pages_checked || 0) + "/" + m.rating.pages_configured + " pages · " +
-          (conv.length ? okConv + "/" + conv.length + " events OK" : "no events yet")));
+        el("span", {class: "mt-meta"}, meta.join(" · ")));
     }));
   }
 
+  // Balanced rows of at most four: 5 blocks -> 3 + 2, 6 -> 3 + 3, 7 -> 4 + 3.
+  function spans(n) {
+    const rows = Math.ceil(n / 4), base = Math.floor(n / rows), extra = n % rows, out = [];
+    for (let r = 0; r < rows; r++) { const size = base + (r < extra ? 1 : 0); for (let i = 0; i < size; i++) out.push(12 / size); }
+    return out;
+  }
   function marketBrief(code) {
     const blocks = briefBlocks(code);
     if (!blocks.length) return null;
-    return el("div", {class: "brief", role: "group", "aria-label": "Today in brief"}, blocks.map(b =>
-      el("div", {class: "bt " + (b.tone || "")},
+    const sp = spans(blocks.length);
+    return el("div", {class: "brief", role: "group", "aria-label": "Today in brief"}, blocks.map((b, i) =>
+      el("div", {class: "bt " + (b.tone || ""), style: "--span:" + sp[i]},
         el("h3", {}, el("i", {class: "sd " + ({red: "red", yellow: "yellow", green: "green"}[b.tone] || ""), "aria-hidden": "true"}), b.title),
         b.items.length ? el("ul", {}, b.items.map(it => el("li", {}, typeof it === "string" ? it : [it.text, it.action ? el("span", {class: "act"}, " " + it.action) : null]))) : null,
         b.text ? el("p", {}, b.text) : null)));
   }
-
   // Per-market brief from the diagnosis (markets.<CODE>.brief: [{tone, title, items}]); falls back to
-  // the market summary, where "Header:" lines start a block and "- " lines become its bullets.
+  // the market summary. Coverage blocks are left out: the headline states coverage from the data.
   function briefBlocks(code) {
     const md = (D.markets || {})[code] || {};
-    if (Array.isArray(md.brief) && md.brief.length) return md.brief.map(b => ({tone: b.tone, title: b.title, items: b.items || [], text: b.text}));
+    if (Array.isArray(md.brief) && md.brief.length)
+      return md.brief.filter(b => !/^coverage\b/i.test(b.title || "")).map(b => ({tone: b.tone, title: b.title, items: b.items || [], text: b.text}));
     if (!md.summary) return [];
     const out = []; let cur = null;
     for (const raw of md.summary.split(/\n+/)) {
@@ -520,126 +693,106 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     return out;
   }
 
-  function statCard(label, iconPath, big, small, visual, sub) {
-    const lb = el("div", {class: "lb"}); const ic = icon(iconPath); lb.append(ic, label);
-    return el("div", {class: "card stat"}, lb, el("div", {class: "big"}, big, small ? el("small", {}, small) : null), visual, sub ? el("div", {class: "sub"}, sub) : null);
+  function lastPublish(m) {
+    const pv = pubDay(m.utag.publish_version);
+    return pv ? shortDay(pv) : m.utag.publish_version ? String(m.utag.publish_version).split(/\s+/).pop() : "–";
   }
-
-  function renderStats() {
-    const sc = scope();
-    const conv = [];
-    for (const code of sc) for (const c of convChecks(code)) conv.push({code, c, ack: ackFor(code, c)});
-    const broken = conv.filter(x => x.c.result === "fail" && !x.ack);
-    const setUp = [...new Set(conv.map(x => x.code))];
-    const segs = el("div", {class: "segs", "aria-hidden": "true"}, conv.map(x => el("i", {class: x.c.result === "pass" ? "ok" : x.ack ? "ack" : "bad", title: x.code + " · " + (EVENTS[x.c.id.split(":")[1]] || x.c.id)})));
-    const c1 = statCard("Conversion events broken", "M12 8v4m0 4h.01M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
-      conv.length ? String(broken.length) : "–", conv.length ? "of " + conv.length + " checked" : null,
-      conv.length ? segs : null,
-      !conv.length ? "No conversion events set up yet" : isAll() ? "Set up for " + list(setUp) + (setUp.length < MARKETS.length ? " only" : "") : broken.length ? "Broken: " + listShared(lostEvents(selected)) : "Every checked event fires");
-
-    const opened = sc.reduce((s, c) => s + (R.markets[c].rating.pages_checked || 0), 0);
-    const conf = sc.reduce((s, c) => s + (R.markets[c].rating.pages_configured || 0), 0);
-    const blocked = sc.reduce((s, c) => s + R.markets[c].rating.blocked_pages.length, 0);
-    const pct = conf ? Math.round(opened / conf * 100) : 0;
-    const c2 = statCard("Pages opened on the site", "M3 12s3.5-6.5 9-6.5S21 12 21 12s-3.5 6.5-9 6.5S3 12 3 12Zm9-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z",
-      String(opened), "of " + conf,
-      el("div", {class: "bar", role: "img", "aria-label": pct + "% of configured pages opened"}, opened ? el("i", {class: pct >= 90 ? "full" : "", style: "width:" + Math.max(pct, 1) + "%"}) : null),
-      blocked ? blocked + " blocked by bot protection" : !opened ? "Checked through Tealium only" : pct < 90 ? "The rest is checked through Tealium only" : "Full coverage");
-
-    const ys = []; for (const code of sc) for (const c of rate(code).yellowChecks) ys.push({code, c});
-    const byReason = {}; for (const y of ys) { const k = baseId(y.c.id); byReason[k] = (byReason[k] || 0) + 1; }
-    const top = Object.entries(byReason).sort((a, b) => b[1] - a[1]);
-    let sub = "Nothing open";
-    if (top.length) {
-      const [k, n] = top[0], lab = REASONS[k] ? REASONS[k][n > 1 ? 1 : 0] : (ys.find(y => baseId(y.c.id) === k).c.title.toLowerCase());
-      sub = n + " " + lab + (ys.length > n ? " · " + (ys.length - n) + " other" : "");
-    }
-    const ym = [...new Set(ys.map(y => y.code))];
-    const c3 = statCard("To review", "M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9",
-      String(ys.length), isAll() && ym.length ? "in " + list(ym) : null, null, sub);
-    document.getElementById("stats").replaceChildren(c1, c2, c3);
+  function convCell(code, c) {
+    if (!c) return {cls: "na-t", tip: "Not checked in this market", body: ["–"]};
+    if (c.result === "skip") return {cls: "na-t", tip: c.detail || "Not offered in this market", body: ["–"]};
+    if (c.result === "pass") return {cls: "ok-t", tip: c.detail, body: [icon(I_CHECK)]};
+    const t = tagsOf(c), s = sourceTag(c).split(/\s+/).pop();
+    return {cls: ackFor(code, c) ? "ack-t" : "bad-t", tip: c.detail, body: [icon(I_X), t ? " Tag " + t : s ? " " + s : ""]};
   }
-
   function renderMatrix() {
-    const box = document.getElementById("matrix");
     const sc = scope();
     const evs = [];
-    for (const code of sc) for (const c of convChecks(code)) { const e = c.id.split(":")[1]; if (!evs.includes(e)) evs.push(e); }
+    for (const code of sc) for (const c of convChecks(code)) { const e = evKey(c); if (!evs.includes(e)) evs.push(e); }
     const known = Object.keys(EVENTS);
     evs.sort((a, b) => (known.indexOf(a) + 1 || 99) - (known.indexOf(b) + 1 || 99));
     const rows = sc.map(code => {
-      const m = R.markets[code], mine = convChecks(code);
-      const cells = mine.length ? evs.map(e => {
-        const c = mine.find(x => x.id.split(":")[1] === e);
-        if (!c) return el("td", {class: "na-t", title: "Not checked in this market"}, "–");
-        if (c.result === "skip") return el("td", {class: "na-t", title: c.detail}, "not offered");
-        const tags = (/tag\(s\)\s*([\d,\s]+)/.exec(c.detail || "") || [])[1];
-        if (c.result === "pass") return el("td", {class: "ok-t", title: c.detail}, icon(I_CHECK));
-        const ack = ackFor(code, c);
-        return el("td", {class: ack ? "ack-t" : "bad-t", title: c.detail}, icon(I_X), tags ? " Tag " + tags.trim().replace(/\s*,\s*/g, ", ") : "");
-      }) : [el("td", {class: "na-t", colspan: String(Math.max(evs.length, 1))}, "No conversion events set up yet")];
-      const pv = pubDay(m.utag.publish_version);
+      const m = R.markets[code], mine = convByEvent(code);
+      const cells = mine.length ? evs.map(e => { const x = convCell(code, mine.find(c => evKey(c) === e)); return el("td", {class: x.cls, title: x.tip}, x.body); })
+        : [el("td", {class: "na-t", colspan: String(Math.max(evs.length, 1))}, "No conversion events set up yet")];
       const attrs = isAll() ? {class: "sel", tabindex: "0", onclick: () => select(code), "aria-label": "Open " + name(code),
           onkeydown: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(code); } }} : {};
       return el("tr", attrs,
         el("td", {}, el("span", {class: "code"}, dotFor(code), code)),
         cells,
         el("td", {class: "num" + (pageChecked(code) ? "" : " na-t")}, (m.rating.pages_checked || 0) + " / " + m.rating.pages_configured),
-        el("td", {class: "num na-t"}, pv ? shortDay(pv) : "–"));
+        el("td", {class: "num na-t"}, lastPublish(m)));
     });
-    const heads = evs.length ? evs.map(e => el("th", {}, EVENTS[e] || e.replace(/_/g, " "))) : [el("th", {}, "Conversion events")];
-    box.replaceChildren(
-      el("div", {class: "head"}, el("h2", {}, isAll() ? "Conversions by market" : "Conversions"), el("span", {class: "muted"}, "Would each conversion tag fire? Checked against the live Tealium rules (AT: the live GTM trigger)")),
-      el("div", {class: "scroll"}, el("table", {},
+    // Phone: one card per market, offered events only.
+    const cards = sc.map(code => {
+      const m = R.markets[code], mine = convOffered(code);
+      return el(isAll() ? "button" : "div", {class: "mcard", type: isAll() ? "button" : null, onclick: isAll() ? () => select(code) : null},
+        el("span", {class: "row"}, el("span", {class: "code"}, dotFor(code), name(code)), el("span", {class: "num na-t"}, (m.rating.pages_checked || 0) + "/" + m.rating.pages_configured + " pages")),
+        mine.length ? mine.map(c => { const x = convCell(code, c); return el("span", {class: "row"}, el("span", {}, evLabel(evKey(c))), el("span", {class: x.cls}, x.body)); })
+          : el("span", {class: "row na-t"}, "No conversion events set up yet"));
+    });
+    const heads = evs.length ? evs.map(e => el("th", {}, evLabel(e))) : [el("th", {}, "Conversion events")];
+    fill("matrix",
+      el("div", {class: "head"}, el("h2", {}, isAll() ? "Conversions by market" : "Conversions"), el("span", {class: "muted"}, "Would each conversion tag fire? Checked against the live tag rules")),
+      el("div", {class: "scroll matrix-table"}, el("table", {},
         el("thead", {}, el("tr", {}, el("th", {}, "Market"), heads, el("th", {}, "Pages opened"), el("th", {}, "Last publish"))),
-        el("tbody", {}, rows))));
+        el("tbody", {}, rows))),
+      el("div", {class: "mcards"}, cards),
+      el("div", {class: "legend"},
+        el("span", {class: "ok-t"}, icon(I_CHECK), el("span", {class: "muted"}, "fires")),
+        el("span", {class: "bad-t"}, icon(I_X), el("span", {class: "muted"}, "doesn't fire")),
+        el("span", {}, el("span", {class: "na-t"}, "–"), "not offered in this market"),
+        sc.some(c => /^GTM-/.test(R.markets[c].utag.publish_version || "")) ? el("span", {}, "AT is checked against the live GTM trigger") : null));
   }
 
+  // Workdays only (runs are Mon–Fri); a weekend day appears only if a run happened on it.
   function renderHistory() {
-    const box = document.getElementById("history");
-    const days = []; for (let i = 13; i >= 0; i--) days.push(addDays(LATEST, -i));   // fixed window: always ends at the latest run
+    const win = []; for (let i = 13; i >= 0; i--) win.push(addDays(LATEST, -i));
+    const days = win.filter(d => isWorkday(d) || RUNS[d] || (H.days || {})[d]);
     const runs = days.filter(d => RUNS[d]).length;
+    const cols = "34px repeat(" + days.length + ", minmax(0, 1fr))";
     const rows = scope().map(code => {
       const pv = pubDay(R.markets[code].utag.publish_version);
-      return el("div", {class: "srow"}, el("b", {}, code), days.map(d => {
+      const pubShown = pv && pv >= win[0] ? days.find(d => d >= pv) : null;
+      return el("div", {class: "srow", style: "grid-template-columns:" + cols}, el("b", {}, code), days.map(d => {
         const v = (H.days[d] || {})[code];
-        const pub = (v && v.publish) || d === pv;
+        const pub = (v && v.publish) || d === pubShown;
         const cfg = v && v.coverage === "tealium_only";
-        const cls = "q" + (v ? " run " + v.status + (cfg ? " cfg" : "") : "") + (pub ? " pub" : "");
-        const t = shortDay(d) + ": " + (v ? v.status + (cfg ? " (Tealium config only)" : v.coverage === "partial" ? " (some pages opened)" : "") : "no run") + (pub ? ", Tealium publish" : "");
-        const on = d === R.day ? " on" : "";
+        const cls = "q" + (v ? " " + v.status + (cfg ? " cfg" : "") : "") + (pub ? " pub" : "");
+        const t = fmtDay(d) + ": " + (v ? v.status + (cfg ? " (Tealium config only)" : v.coverage === "partial" ? " (some pages opened)" : "") : "no run") + (pub ? ", Tealium publish" : "");
         return RUNS[d]
-          ? el("button", {class: cls + on, type: "button", title: t + " · open this run", "aria-label": "Open run of " + shortDay(d) + " (" + code + " " + t.split(": ")[1] + ")",
+          ? el("button", {class: cls + (d === R.day ? " on" : ""), type: "button", title: t + " · open this run", "aria-label": "Open run of " + shortDay(d) + " (" + code + " " + t.split(": ")[1] + ")",
               "aria-pressed": String(d === R.day), onclick: () => openDay(d)})
           : el("span", {class: cls, title: t, role: "img", "aria-label": code + " " + t});
       }));
     });
-    box.replaceChildren(
-      el("div", {class: "head"}, el("h2", {}, "Last 14 days"), el("span", {class: "muted"}, runs + " run" + (runs === 1 ? "" : "s") + " in the window · click a day to open its run")),
-      el("div", {class: "strip"}, rows, el("div", {class: "saxis"}, el("span"), el("span", {}, shortDay(days[0])), el("span", {}, shortDay(days[13])))),
+    const dates = el("div", {class: "srow dates", style: "grid-template-columns:" + cols, "aria-hidden": "true"}, el("span"),
+      days.map(d => el("span", {class: d === R.day ? "today" : null}, el("span", {class: "wd"}, weekday(d) + " "), String(+d.slice(8)))));
+    fill("history",
+      el("div", {class: "head"}, el("h2", {}, "Last two weeks"), el("span", {class: "muted"}, plural(runs, "run", "runs") + " · click a day to open its run")),
+      el("div", {class: "strip"}, rows, dates),
       el("div", {class: "legend"},
-        el("span", {}, el("i", {class: "q run red"}), "red"), el("span", {}, el("i", {class: "q run yellow"}), "yellow"),
-        el("span", {}, el("i", {class: "q run green"}), "green, pages opened"), el("span", {}, el("i", {class: "q run green cfg"}), "green, config only"),
-        el("span", {}, el("i", {class: "q"}), "no run"), el("span", {}, el("i", {class: "q pub", style: "margin-top:6px"}), "Tealium publish")));
+        el("span", {}, el("i", {class: "q red"}), "red"), el("span", {}, el("i", {class: "q yellow"}), "yellow"),
+        el("span", {}, el("i", {class: "q green"}), "green, pages opened"), el("span", {}, el("i", {class: "q green cfg"}), "green, config only"),
+        el("span", {}, el("i", {class: "q"}), "no run"), el("span", {}, el("i", {class: "q pub"}), "Tealium publish")));
   }
 
-  // All markets: only what needs someone today (red and site-down findings), each labelled with its market.
+  function needRow(g) {
+    return el("button", {class: "need", type: "button", onclick: () => select(g.code), "aria-label": "Open " + name(g.code) + ": " + g.title},
+      el("span", {class: "code"}, dotFor(g.code), g.code),
+      el("span", {class: "need-body"}, el("b", {}, g.title), el("span", {class: "muted"}, g.text)),
+      el("span", {class: "need-tags"}, g.owner ? el("span", {class: "owner", title: "Who has to act"}, g.owner) : null,
+        g.pages > 1 ? el("span", {class: "pages"}, plural(g.pages, "page", "pages")) : null),
+      icon(I_CHEV, "chev"));
+  }
+
+  // All markets: what needs someone today, one row per problem and market, split by kind.
   function renderNeeds() {
-    const box = document.getElementById("market");
-    const items = [];
-    for (const code of MARKETS) for (const c of activeIssues(code)) if (c.result === "fail" && (c.severity === "red" || c.severity === "site_down")) items.push({code, c});
+    const gs = groupsOf(MARKETS, actionable);
     const yellow = MARKETS.map(code => [code, rate(code).yellow]).filter(([, n]) => n);
-    box.replaceChildren(
-      el("div", {class: "head"}, el("h2", {}, "Needs action"), el("span", {class: "muted"}, items.length ? plural(items.length, "broken check", "broken checks") + " across the markets" : "Nothing broken across the markets")),
-      items.length ? el("div", {class: "needs"}, items.map(({code, c}) => {
-        const diag = (((D.markets || {})[code] || {}).findings || {});
-        const dtext = diag[c.id + "|" + c.target] || diag[c.id];
-        return el("div", {class: "need"},
-          el("span", {class: "code"}, dotFor(code), code),
-          el("div", {class: "need-body"}, el("b", {}, c.title), el("span", {class: "muted"}, dtext || c.detail)),
-          el("button", {class: "btn", type: "button", onclick: () => select(code)}, "Open " + code));
-      })) : null,
-      yellow.length ? el("p", {class: "muted"}, "To review: ", ...yellow.map(([code, n], i) => [i ? " · " : "",
+    fill("market",
+      el("div", {class: "head"}, el("h2", {}, "Needs action"), el("span", {class: "muted"}, gs.length ? plural(gs.length, "problem", "problems") + " across the markets" : "Nothing broken across the markets")),
+      LANES.map(([k, label]) => { const mine = gs.filter(g => g.lane === k); return mine.length ? el("div", {class: "lane"}, el("h3", {}, el("b", {}, label), String(mine.length)), mine.map(needRow)) : null; }),
+      yellow.length ? el("p", {class: "muted"}, "To review: ", yellow.flatMap(([code, n], i) => [i ? " · " : "",
         el("button", {class: "linkish", type: "button", onclick: () => select(code)}, code + " " + n)])) : null);
   }
 
@@ -647,12 +800,12 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     const ack = ackFor(code, c);
     const sev = c.severity;
     const sevLabel = {red: "Red", yellow: "Yellow", site_down: "Site down", info: "Info", system: "System"}[sev] || sev;
-    const diag = ((D.markets || {})[code] || {}).findings || {};
-    const dtext = diag[c.id + "|" + c.target] || diag[c.id];
+    const dtext = diagText(code, c), owner = ownerOf(code, c);
     const node = el("div", {class: "finding " + sev + (ack ? " acked" : "")},
       el("div", {class: "line1"},
         pill(sev === "site_down" ? "down" : sev === "system" || sev === "info" ? "sys" : sev, sevLabel),
-        el("span", {class: "title"}, c.title),
+        el("span", {class: "title"}, problem(c)),
+        owner ? el("span", {class: "owner"}, owner) : null,
         el("span", {class: "mono muted"}, c.id + " · " + c.target)),
       el("p", {class: "detail"}, c.detail),
       dtext ? el("p", {class: "diag"}, dtext) : null);
@@ -676,7 +829,7 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     const id = "ack-" + code + "-" + c.id.replace(/[^a-z0-9]/gi, "_") + "-" + c.target.replace(/[^a-z0-9]/gi, "_");
     const note = el("input", {id: id + "-note", type: "text", maxlength: "200", placeholder: "e.g. MarTech ticket raised"});
     const exp = el("select", {id: id + "-exp"}, el("option", {value: ""}, "Until fixed"), el("option", {value: "7"}, "7 days"), el("option", {value: "30"}, "30 days"));
-    const scope = el("select", {id: id + "-scope"}, el("option", {value: "one"}, "This page only (" + c.target + ")"), el("option", {value: "all"}, "All pages in " + code));
+    const scopeSel = el("select", {id: id + "-scope"}, el("option", {value: "one"}, "This page only (" + c.target + ")"), el("option", {value: "all"}, "All pages in " + code));
     const status = el("span", {class: "muted", role: "status"});
     const form = el("form", {class: "ackform", onsubmit: async e => {
       e.preventDefault();
@@ -684,14 +837,14 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
       const expires = days ? new Date(Date.now() + days * 864e5).toISOString().slice(0, 10) : null;
       status.textContent = "Saving…";
       try {
-        await db.collection("acks").add({market: code, check: c.id, target: scope.value === "all" ? "*" : c.target,
+        await db.collection("acks").add({market: code, check: c.id, target: scopeSel.value === "all" ? "*" : c.target,
           note: note.value.trim(), expires, created: new Date().toISOString(), by: myId || null, day: R.day});
         openAckFor = null;
       } catch (err) { status.textContent = "Could not save: " + (err && err.message || "unknown error"); }
     }},
       el("label", {for: note.id}, "Note (who is on it, ticket number)", note),
       el("label", {for: exp.id}, "Mute for", exp),
-      el("label", {for: scope.id}, "Applies to", scope),
+      el("label", {for: scopeSel.id}, "Applies to", scopeSel),
       el("div", {class: "actions"}, el("button", {class: "btn primary", type: "submit"}, "Acknowledge"),
         el("button", {class: "btn", type: "button", onclick: () => { openAckFor = null; renderMarket(); }}, "Cancel"), status));
     return form;
@@ -701,25 +854,29 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     try { await db.collection("acks").doc(docId).delete(); } catch (e) { /* the snapshot keeps the true state */ }
   }
 
+  // One market: every finding with its evidence, grouped like "Needs action", then what is left to review.
   function renderMarket() {
     const code = selected, m = R.markets[code], r = rate(code);
-    const box = document.getElementById("market");
     const issues = m.checks.filter(c => c.result === "fail" || (c.result === "warn" && c.severity !== "info"));
     const infos = m.checks.filter(c => c.result === "warn" && c.severity === "info");
-    const prio = {red: 0, site_down: 1, system: 2, yellow: 3, info: 4};
-    issues.sort((a, b) => (!!ackFor(code, a) - !!ackFor(code, b)) || (prio[a.severity] - prio[b.severity]));
+    const isAct = c => c.result === "fail" && (c.severity === "red" || c.severity === "site_down");
+    issues.sort((a, b) => (!!ackFor(code, a) - !!ackFor(code, b)));
     const passed = m.checks.filter(c => c.result === "pass").length;
     const src = {playwright: "automated browser", "claude-browser": "built-in browser", none: "Tealium CDN only"}[m.source] || m.source;
-    box.replaceChildren(...[
+    const block = (label, list) => list.length ? el("div", {class: "lane"}, el("h3", {}, el("b", {}, label), String(list.length)),
+      el("div", {class: "findings"}, list.map(c => findingNode(code, c)))) : null;
+    fill("market",
       el("div", {class: "head"},
         el("h2", {}, "Findings in " + m.name),
         el("span", {class: "actions"}, pill(r.down ? "down" : r.status, r.down ? "Site down" : r.status[0].toUpperCase() + r.status.slice(1)),
           pageChecked(code) ? null : pill("cfg", "Tealium config only"))),
-      el("p", {class: "muted"}, issues.length + " finding" + (issues.length === 1 ? "" : "s") + " · " + passed + " checks passed · source: " + src +
+      el("p", {class: "muted"}, plural(issues.length, "finding", "findings") + " · " + passed + " checks passed · source: " + src +
         (m.red_since ? " · red since " + shortDay(m.red_since) + " (first seen by the monitor)" : "")),
-      issues.length ? el("div", {class: "findings"}, issues.map(c => findingNode(code, c))) : el("p", {}, pageChecked(code) ? "No findings. Everything checked is working." : "No findings in the Tealium configuration. No page was opened in this run."),
-      infos.length ? el("details", {}, el("summary", {}, infos.length + " informational note" + (infos.length === 1 ? "" : "s")), el("div", {class: "findings", style: "margin-top:10px"}, infos.map(c => findingNode(code, c)))) : null,
-      pagesMatrix(code)].filter(Boolean));
+      issues.length ? null : el("p", {}, pageChecked(code) ? "No findings. Everything checked is working." : "No findings in the Tealium configuration. No page was opened in this run."),
+      LANES.map(([k, label]) => block(label, issues.filter(c => isAct(c) && lane(c) === k))),
+      block("To review", issues.filter(c => !isAct(c))),
+      infos.length ? el("details", {}, el("summary", {}, plural(infos.length, "informational note", "informational notes")), el("div", {class: "findings", style: "margin-top:10px"}, infos.map(c => findingNode(code, c)))) : null,
+      pagesMatrix(code));
   }
 
   function pagesMatrix(code) {
@@ -730,7 +887,7 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     const rows = m.pages.filter(p => byTarget[p.id]).map(p => {
       const cs = byTarget[p.id];
       const blocked = cs.some(c => c.id === "BOT-01");
-      return el("tr", {}, el("td", {}, el("div", {class: "mono"}, p.id), el("a", {href: p.url, target: "_blank", rel: "noopener", class: "muted"}, p.url.replace("https://www.sage.com", ""))),
+      return el("tr", {}, el("td", {}, el("div", {class: "mono"}, p.id), el("a", {href: p.url, target: "_blank", rel: "noopener", class: "muted"}, p.url.replace(/^https:\/\/www\.[^/]+/, ""))),
         groups.map(([g, label]) => {
           const mine = cs.filter(c => baseId(c.id) === g || baseId(c.id).startsWith(g + "-") || (g === "TAG" && c.id.startsWith("TAG")));
           let cls = "", tip = label + ": not run";
@@ -747,46 +904,56 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
         }));
     });
     if (!rows.length) return null;
-    return el("div", {style: "display:grid;gap:10px"}, el("h3", {}, "Pages opened"),
+    return el("div", {style: "display:grid;gap:10px;margin-top:6px"}, el("h3", {}, "Pages opened"),
       el("div", {class: "scroll"}, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "Page"), groups.map(([, l]) => el("th", {style: "text-align:center"}, l)))), el("tbody", {}, rows))),
       el("div", {class: "legend"}, ...[["pass", "passed"], ["fail-red", "red"], ["warn", "yellow"], ["fail-site_down", "site down"], ["blocked", "blocked"], ["acked", "acknowledged"]]
         .map(([c, l]) => el("span", {}, el("i", {class: "dot " + c}), l))));
   }
 
+  // Shown only when a publish in scope changed something; "Last publish" in the matrix covers the rest.
   function renderPublish() {
     const box = document.getElementById("publish");
-    const sc = scope();
-    const changed = sc.filter(c => R.markets[c].utag.changed);
-    const head = el("div", {class: "head"}, el("h2", {}, "Tealium publishes"), el("span", {class: "muted"}, changed.length ? changed.length + " profile(s) changed since the last run" : "No publish since the last run"));
-    const parts = [head];
-    parts.push(el("div", {class: "scroll"}, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "Market"), el("th", {}, "Profile"), el("th", {}, "Live publish"), el("th", {}, "Published"))),
-      el("tbody", {}, sc.map(code => { const u = R.markets[code].utag, pv = pubDay(u.publish_version);
-        return el("tr", {}, el("td", {}, el("span", {class: "code"}, code)), el("td", {class: "mono"}, R.markets[code].tealium_profile),
-          el("td", {class: "mono"}, u.publish_version || "–"), el("td", {class: "num"}, pv ? shortDay(pv) : "–", u.changed ? " " : null, u.changed ? pill("yellow", "new") : null)); })))));
-    for (const code of changed) {
-      const d = R.markets[code].utag.diff || {};
-      const ai = ((D.publish || {})[code]) || null;
-      parts.push(el("div", {style: "display:grid;gap:8px"}, el("h3", {}, code + " · " + R.markets[code].tealium_profile + " · " + (d.from_version || "?") + " → " + (d.to_version || "?")),
-        ai ? el("p", {class: "diag"}, (ai.risk ? "Risk " + ai.risk + ". " : "") + ai.summary) : null,
-        el("details", {}, el("summary", {}, (d.items || []).length + " change(s), " + (d.items || []).filter(i => i.conversion_relevant).length + " conversion-relevant"),
-          ...(d.items || []).map(i => el("div", {class: "diffitem"},
-            el("div", {}, el("b", {}, i.kind.replace(/_/g, " ")), " ", el("span", {class: "mono"}, i.tag ? "tag " + i.tag + (i.template ? " (template " + i.template + ")" : "") : "rule " + i.rule),
-              i.conversion_relevant ? el("span", {class: "chip s-yellow", style: "margin-left:8px"}, "conversion") : null),
-            i.before ? el("code", {}, "before: " + (typeof i.before === "string" ? i.before : JSON.stringify(i.before))) : null,
-            i.after ? el("code", {}, "after: " + (typeof i.after === "string" ? i.after : JSON.stringify(i.after))) : null)))));
-    }
-    box.replaceChildren(...parts);
+    const changed = scope().filter(c => { const u = R.markets[c].utag; return u.changed && ((u.diff || {}).items || []).length; });
+    box.hidden = !changed.length;
+    document.querySelector('[data-go="publish"]').hidden = !changed.length;
+    if (!changed.length) { box.replaceChildren(); return; }
+    fill("publish",
+      el("div", {class: "head"}, el("h2", {}, "Tealium publishes"), el("span", {class: "muted"}, plural(changed.length, "profile", "profiles") + " changed since the last run")),
+      changed.map(code => {
+        const d = R.markets[code].utag.diff || {};
+        const ai = ((D.publish || {})[code]) || null;
+        const items = d.items || [];
+        return el("div", {style: "display:grid;gap:8px"}, el("h3", {}, code + " · " + R.markets[code].tealium_profile + " · " + fmtVersion(d.from_version) + " → " + fmtVersion(d.to_version)),
+          ai ? el("p", {class: "diag"}, (ai.risk ? "Risk " + ai.risk + ". " : "") + ai.summary) : null,
+          el("details", {}, el("summary", {}, plural(items.length, "change", "changes") + ", " + items.filter(i => i.conversion_relevant).length + " conversion-relevant"),
+            items.map(i => el("div", {class: "diffitem"},
+              el("div", {}, el("b", {}, i.kind.replace(/_/g, " ")), " ", el("span", {class: "mono"}, i.tag ? "tag " + i.tag + (i.template ? " (template " + i.template + ")" : "") : "rule " + i.rule),
+                i.conversion_relevant ? el("span", {class: "chip s-yellow", style: "margin-left:8px"}, "conversion") : null),
+              i.before ? el("code", {}, "before: " + (typeof i.before === "string" ? i.before : JSON.stringify(i.before))) : null,
+              i.after ? el("code", {}, "after: " + (typeof i.after === "string" ? i.after : JSON.stringify(i.after))) : null))));
+      }));
   }
 
-  for (const b of document.querySelectorAll("[data-go]")) b.addEventListener("click", () => {
+  // Sidebar: scroll to a section, and mark the section in view.
+  const navs = [...document.querySelectorAll("[data-go]")];
+  for (const b of navs) b.addEventListener("click", () => {
     const t = document.getElementById(b.dataset.go);
-    if (t) t.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+    if (t) t.scrollIntoView({behavior: smooth(), block: "start"});
   });
+  let spyQueued = false;
+  function spy() {
+    spyQueued = false;
+    let cur = navs[0];
+    for (const b of navs) { const t = document.getElementById(b.dataset.go); if (t && !t.hidden && t.getBoundingClientRect().top <= 140) cur = b; }
+    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) cur = navs.filter(b => !b.hidden && !document.getElementById(b.dataset.go).hidden).pop() || cur;
+    for (const b of navs) b.setAttribute("aria-current", String(b === cur));
+  }
+  addEventListener("scroll", () => { if (!spyQueued) { spyQueued = true; requestAnimationFrame(spy); } }, {passive: true});
 
   function renderAll() {
-    renderNav(); renderHeader(); renderStats(); renderMatrix(); renderHistory();
+    renderNav(); renderHeader(); renderMatrix(); renderHistory();
     if (isAll()) renderNeeds(); else renderMarket();
-    renderPublish();
+    renderPublish(); spy();
   }
   window.addEventListener("hashchange", () => {
     const h = parseHash(), day = h.day && RUNS[h.day] ? h.day : LATEST;

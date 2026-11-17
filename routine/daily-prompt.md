@@ -33,22 +33,30 @@ Steps:
    {"day": "<today>", "written_by": "Claude routine",
     "summary": "2-4 short paragraphs separated by \n: overall picture first, then what changed since yesterday, then coverage notes",
     "markets": {"<CODE>": {"summary": "1-2 sentences",
-                           "brief": [{"tone": "red|yellow|green|", "title": "short label, e.g. Why it is red / New today / Working / Coverage",
+                           "brief": [{"tone": "red|yellow|green|", "title": "short label, e.g. Why it is red / New today / Working",
                                       "items": ["one fact per bullet, max ~15 words", {"text": "a fact", "action": "what to do"}]}],
-                           "findings": {"<check id>|<target>": "likely cause, evidence, who should act (MarTech / web team / agency) and the fix"}}},
+                           "findings": {"<check id>|<target>": {"text": "likely cause, evidence and the fix",
+                                                                 "owner": "MarTech | Web team | Agency | Privacy | GTM owner"}}}},
+    "incidents": {"<check id from global.incidents>": {"shared": true, "summary": "one sentence: the shared cause, or why the causes differ"}},
     "publish": {"<CODE>": {"risk": "low|medium|high", "summary": "what the Tealium publish changed and what it means for paid media"}}}
    ```
    - `markets.<CODE>.brief` is what the dashboard shows at the top of that market's view: 2-4 blocks
-     in this order (problem, new today, working, coverage), each with 1-4 short bullets. Write one
-     for every market with something to say, in the same shape, so no market reads differently.
-     Leave out empty blocks. The all-markets overview is built from the data, not from a brief.
+     in this order (problem, new today, working), each with 1-4 short bullets. Write it fresh for
+     today's run: never copy yesterday's blocks, and put no page counts or coverage in titles or
+     blocks (the dashboard states coverage from the data). Write one for every market with
+     something to say, in the same shape, so no market reads differently. Leave out empty blocks.
+     The all-markets overview is built from the data, not from a brief.
+   - `findings` values: `owner` is who has to act, one of the five names; the dashboard groups by it.
+     Write a finding once per check; on further pages of the same check write "Same as <page>." and
+     the owner again.
    - Explain every failing check with result `fail` in severity `red` or `site_down`, and any new `yellow`.
    - For `CONV-*` findings read the load rules in `results/utag/<profile>/` (latest `.json`) and
      name the condition that blocks the tag. Compare with the previous snapshot when a publish happened.
    - For `TEAL-04` (publish detected) summarise `markets.<CODE>.utag.diff.items`; rate risk
      high if a conversion tag (templates 4049 Floodlight, 7132 Google Ads) or its load rule changed.
    - If the same check fails in 3 or more markets (`global.incidents`), say so first and name the
-     likely shared cause.
+     likely shared cause, and fill `incidents.<check id>`: `shared: false` when each market fails for
+     its own reason (the dashboard then says so instead of suggesting a shared cause).
    - Do not invent causes. If the evidence does not show the cause, say what to check next.
 
 4. Render and publish: `python -m monitor dashboard --day <today> --out dashboard/index.html`,

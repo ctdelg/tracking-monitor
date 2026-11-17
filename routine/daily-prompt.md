@@ -34,7 +34,8 @@ Steps:
     "summary": "2-4 short paragraphs separated by \n: overall picture first, then what changed since yesterday, then coverage notes",
     "markets": {"<CODE>": {"summary": "1-2 sentences",
                            "brief": [{"tone": "red|yellow|green|", "title": "short label, e.g. Why it is red / New today / Working",
-                                      "items": ["one fact per bullet, max ~15 words", {"text": "a fact", "action": "what to do"}]}],
+                                      "items": ["one fact per bullet, max ~15 words", {"text": "a fact", "action": "what to do", "check": "<check id>|<target>"}],
+                                      "from_day": "<YYYY-MM-DD, only when the block describes an earlier run>"}],
                            "findings": {"<check id>|<target>": {"text": "likely cause, evidence and the fix",
                                                                  "owner": "MarTech | Web team | Agency | Privacy | GTM owner"}}}},
     "incidents": {"<check id from global.incidents>": {"shared": true, "summary": "one sentence: the shared cause, or why the causes differ"}},
@@ -46,6 +47,9 @@ Steps:
      blocks (the dashboard states coverage from the data). Write one for every market with
      something to say, in the same shape, so no market reads differently. Leave out empty blocks.
      The all-markets overview is built from the data, not from a brief.
+     Give every bullet that is about one finding its `check` (the `<check id>|<target>` key of that
+     check): the dashboard turns it into a link to the finding. A block about an earlier run (for
+     example the last day pages were opened) gets `from_day`, and its checks must exist in that run.
    - `findings` values: `owner` is who has to act, one of the five names; the dashboard groups by it.
      Write a finding once per check; on further pages of the same check write "Same as <page>." and
      the owner again.

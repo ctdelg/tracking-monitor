@@ -109,6 +109,14 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .bt.red li::before { background: var(--crit-fill); } .bt.yellow li::before { background: var(--warn-fill); }
 .bt.green li::before { background: var(--ok-fill); }
 .bt .act { color: var(--muted); }
+.bt .from { font-size: 12.5px; color: var(--muted); margin-top: -4px; }
+.blink { border: 0; background: none; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer;
+  text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; transition: text-decoration-color .15s; }
+.blink:hover { text-decoration-color: currentColor; }
+.finding { scroll-margin: 120px; }
+.finding.flash { animation: flash 1.6s ease-out; }
+@keyframes flash { 0% { box-shadow: inset 0 0 0 2px var(--accent); } 100% { box-shadow: inset 0 0 0 1px var(--line); } }
+@media (prefers-reduced-motion: reduce) { .finding.flash { animation: none; box-shadow: inset 0 0 0 2px var(--accent); } }
 .bt p { font-size: 13.5px; }
 
 /* market board (all markets): one equal tile per market */
@@ -670,18 +678,38 @@ footer { color: var(--faint); font-size: 12.5px; padding: 4px 10px; }
     const blocks = briefBlocks(code);
     if (!blocks.length) return null;
     const sp = spans(blocks.length);
+    const fromRun = b => b.from_day && b.from_day !== R.day ? b.from_day : null;
     return el("div", {class: "brief", role: "group", "aria-label": "Today in brief"}, blocks.map((b, i) =>
       el("div", {class: "bt " + (b.tone || ""), style: "--span:" + sp[i]},
         el("h3", {}, el("i", {class: "sd " + ({red: "red", yellow: "yellow", green: "green"}[b.tone] || ""), "aria-hidden": "true"}), b.title),
-        b.items.length ? el("ul", {}, b.items.map(it => el("li", {}, typeof it === "string" ? it : [it.text, it.action ? el("span", {class: "act"}, " " + it.action) : null]))) : null,
+        fromRun(b) ? el("p", {class: "from"}, "From the run of " + fmtDay(fromRun(b)),
+          RUNS[fromRun(b)] ? [" · ", el("button", {class: "linkish", type: "button", onclick: () => openDay(fromRun(b))}, "Open that run")] : null) : null,
+        b.items.length ? el("ul", {}, b.items.map(it => {
+          if (typeof it === "string") return el("li", {}, it);
+          const body = [it.text, it.action ? el("span", {class: "act"}, " " + it.action) : null];
+          // A bullet that names its check links to the finding (in the run the block comes from).
+          return el("li", {}, it.check ? el("button", {class: "blink", type: "button", title: "Show the finding",
+            onclick: () => showFinding(code, it.check, fromRun(b))}, body) : body);
+        })) : null,
         b.text ? el("p", {}, b.text) : null)));
+  }
+  const findingId = (code, key) => "f-" + (code + "-" + key).replace(/[^a-z0-9]+/gi, "-");
+  function showFinding(code, key, day) {
+    if (day && RUNS[day] && day !== R.day) { loadRun(day); history.replaceState(null, "", hashFor()); renderAll(); }
+    const [id, target] = key.split("|");
+    const c = R.markets[code].checks.find(x => x.id === id && (!target || x.target === target)) || R.markets[code].checks.find(x => x.id === id);
+    const node = c && document.getElementById(findingId(code, c.id + "|" + c.target));
+    if (!node) { document.getElementById("market").scrollIntoView({behavior: smooth(), block: "start"}); return; }
+    const det = node.closest("details"); if (det) det.open = true;
+    node.scrollIntoView({behavior: smooth(), block: "center"});
+    node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash");
   }
   // Per-market brief from the diagnosis (markets.<CODE>.brief: [{tone, title, items}]); falls back to
   // the market summary. Coverage blocks are left out: the headline states coverage from the data.
   function briefBlocks(code) {
     const md = (D.markets || {})[code] || {};
     if (Array.isArray(md.brief) && md.brief.length)
-      return md.brief.filter(b => !/^coverage\b/i.test(b.title || "")).map(b => ({tone: b.tone, title: b.title, items: b.items || [], text: b.text}));
+      return md.brief.filter(b => !/^coverage\b/i.test(b.title || "")).map(b => ({tone: b.tone, title: b.title, items: b.items || [], text: b.text, from_day: b.from_day}));
     if (!md.summary) return [];
     const out = []; let cur = null;
     for (const raw of md.summary.split(/\n+/)) {
@@ -801,7 +829,7 @@ footer { color: var(--faint); font-size: 12.5px; padding: 4px 10px; }
     const sev = c.severity;
     const sevLabel = {red: "Red", yellow: "Yellow", site_down: "Site down", info: "Info", system: "System"}[sev] || sev;
     const dtext = diagText(code, c), owner = ownerOf(code, c);
-    const node = el("div", {class: "finding " + sev + (ack ? " acked" : "")},
+    const node = el("div", {class: "finding " + sev + (ack ? " acked" : ""), id: findingId(code, c.id + "|" + c.target)},
       el("div", {class: "line1"},
         pill(sev === "site_down" ? "down" : sev === "system" || sev === "info" ? "sys" : sev, sevLabel),
         el("span", {class: "title"}, problem(c)),

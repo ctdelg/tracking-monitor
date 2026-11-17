@@ -72,7 +72,10 @@
      "tone": "red",
      "title": "Why it is red",
      "items": [
-      "Floodlight tag 98 does not fire for web-shop trial and purchase submits.",
+      {
+       "text": "Floodlight tag 98 does not fire for web-shop trial and purchase submits.",
+       "check": "CONV-01:ecom_try|market"
+      },
       "Cause: load rule 274, since the Tealium publish of 24 Aug 2026.",
       "Lead forms with a gate_content_name still fire it."
      ]
@@ -83,13 +86,24 @@
      "items": [
       {
        "text": "/cp/webinar-sage-x3/ redirects to the DE homepage.",
-       "action": "Pause or update the campaign."
+       "action": "Pause or update the campaign.",
+       "check": "PAGE-03|de-cp-webinar-sage-x3"
       },
-      "/cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.",
-      "Microsoft UET did not fire on the HR and payroll pages, so msclkid was not stored.",
-      "A Brightcove video player sends metrics before consent.",
+      {
+       "text": "/cp/hr/zeiterfassung/ redirects to /cp/hr/zeiterfassungv2/.",
+       "check": "PAGE-03|de-cp-hr-zeiterfassung"
+      },
+      {
+       "text": "Microsoft UET did not fire on the HR and payroll pages, so msclkid was not stored.",
+       "check": "TAG:microsoft_uet|de-cp-payroll-standard-shopping"
+      },
+      {
+       "text": "A Brightcove video player sends metrics before consent.",
+       "check": "CONS-05|de-cp-hr-zeiterfassung"
+      },
       "12 more landing pages redirect (8x Sage 100cloud, 3x X3 industries)."
-     ]
+     ],
+     "from_day": "2026-11-16"
     },
     {
      "tone": "green",
@@ -99,7 +113,8 @@
       "Every submit would fire Floodlight 98 and its lead-type tag.",
       {
        "text": "One form code starts with a space, so tag 389 cannot fire.",
-       "action": "Fix the gate's lastContentName."
+       "action": "Fix the gate's lastContentName.",
+       "check": "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung"
       }
      ]
     },
@@ -109,7 +124,8 @@
      "items": [
       "Consent, Floodlight, Google Ads, GA4, LinkedIn, Meta and TikTok on all five pages.",
       "The gclid is stored on every page."
-     ]
+     ],
+     "from_day": "2026-11-16"
     },
     {
      "tone": "",
@@ -123,12 +139,16 @@
      "tone": "yellow",
      "title": "From the baseline",
      "items": [
-      "Microsoft UET fires on 3 of 5 checked DE pages, but not on the payroll and HR pages.",
+      {
+       "text": "Microsoft UET fires on 3 of 5 checked DE pages, but not on the payroll and HR pages.",
+       "check": "TAG:microsoft_uet|de-cp-payroll-standard-shopping"
+      },
       {
        "text": "Bing clicks to those pages lose their msclkid.",
        "action": "Check the UET load rule for /cp/payroll and /cp/hr pages."
       }
-     ]
+     ],
+     "from_day": "2026-11-16"
     }
    ]
   },

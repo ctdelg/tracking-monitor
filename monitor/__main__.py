@@ -4,8 +4,9 @@
     python -m monitor collect [--market ..] [--url ID ..] [--no-browser]
     python -m monitor ingest evidence.json [--day YYYY-MM-DD]   evidence from the Claude browser
     python -m monitor evaluate [--day ..]
-    python -m monitor baseline propose --market DE [--url ID ..] [--day ..]
-    python -m monitor baseline confirm --market DE --by "Name"
+    python -m monitor baseline show --market DE                  learned tags, learning status, market rule
+    python -m monitor baseline reset --market DE [--url ID ..]   re-learn after an intended tag change
+    python -m monitor baseline adopt --market DE                 take everything seen so far as baseline now
     python -m monitor report [--day ..]                         static HTML (fallback dashboard)
     python -m monitor dashboard [--day ..] --out FILE           dashboard page for the Claude artifact
     python -m monitor forms import inventory.json --market DE    lead form inventory from forms_inventory.js
@@ -119,10 +120,9 @@ def main(argv=None) -> None:
     p.add_argument("file")
     p.add_argument("--market", required=True)
     p = sub.add_parser("baseline"); common(p, market=False)
-    p.add_argument("action", choices=["propose", "confirm"])
+    p.add_argument("action", choices=["show", "reset", "adopt"])
     p.add_argument("--market", required=True)
     p.add_argument("--url", nargs="*")
-    p.add_argument("--by", default="unknown")
 
     args = ap.parse_args(argv)
     if args.cmd == "run":
@@ -154,17 +154,26 @@ def main(argv=None) -> None:
         inv = forms.load_inventory(code)
         print(f"{code}: {len(inv['pages'])} page(s) with forms, {len(forms.gates_in_inventory(inv))} distinct form(s)")
     elif args.cmd == "baseline":
+        from . import baseline
+        from .config import load_platforms
         code = args.market.upper()
-        if args.action == "propose":
-            prop = pipeline.propose_baseline(args.day, code, args.url)
-            print(f"Proposed baseline for {code}: {len(prop['urls'])} page(s), "
-                  f"{len(prop['journeys'])} journey(s), conversion events: {list(prop['conversion'])}")
-            print("Review baseline/_pending/%s.json, then: python -m monitor baseline confirm --market %s --by NAME"
-                  % (code, code))
+        if args.action == "reset":
+            baseline.reset(code, args.url)
+            print(f"{code}: baseline reset for {', '.join(args.url) if args.url else 'all pages'} - it is learned again over the next 3 run days.")
+        elif args.action == "adopt":
+            raws = [(p.parent.name, json.loads(p.read_text(encoding="utf-8")))
+                    for p in sorted(RESULTS_DIR.glob(f"raw/*/{code}.json"))]
+            m = load_markets([code])[code]
+            keep = {u["id"] for u in m["urls"]} | {j["id"] for j in m["journeys"]}
+            b = baseline.adopt_history(code, raws, load_platforms(), keep)
+            print(f"{code}: as-is baseline adopted from {len(raws)} run day(s): {len(b.get('urls', {}))} page(s), "
+                  f"{len(b.get('journeys', {}))} journey(s), {len(b.get('forms', {}))} form(s); "
+                  f"market rule: {', '.join(b.get('market_core', {})) or 'not enough pages yet'}")
         else:
-            pipeline.confirm_baseline(code, args.by)
-            print(f"Baseline for {code} confirmed by {args.by}.")
-
+            b = baseline.load(code)
+            for pid, e in sorted((b.get("urls") or {}).items()):
+                print(f"{pid:55} {e.get('status'):10} {len(e.get('days', []))}d  {', '.join(sorted(e.get('post', {})))}")
+            print("market rule (expected on every page):", b.get("market_core") or "-")
 
 if __name__ == "__main__":
     sys.exit(main())

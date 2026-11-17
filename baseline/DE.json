@@ -1,6 +1,5 @@
 {
  "market": "DE",
- "proposed_from": "2026-11-16",
  "urls": {
   "de-cp-payroll-standard-shopping": {
    "post": {
@@ -29,7 +28,14 @@
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
     ]
-   }
+   },
+   "days": [
+    "2026-11-16"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "de-cp-hr-zeiterfassung": {
    "post": {
@@ -58,7 +64,14 @@
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
     ]
-   }
+   },
+   "days": [
+    "2026-11-16"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "de-cp-sage-intacct": {
    "post": {
@@ -94,7 +107,14 @@
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
     ]
-   }
+   },
+   "days": [
+    "2026-11-16"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "de-produkte-sage-active": {
    "post": {
@@ -130,7 +150,14 @@
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
     ]
-   }
+   },
+   "days": [
+    "2026-11-16"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "de-cp-webinar-sage-x3": {
    "post": {
@@ -166,7 +193,14 @@
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
     ]
-   }
+   },
+   "days": [
+    "2026-11-16"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   }
  },
  "journeys": {},
@@ -182,6 +216,9 @@
    "98",
    "389",
    "406"
+  ],
+  "purchase": [
+   "284"
   ]
  },
  "forms": {
@@ -200,7 +237,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "94029ced-2b95-460d-addc-fdb34c17cdb8": {
    "tags": [
@@ -217,7 +255,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e47b6c99-c3f5-4d2d-ac33-1f7caa0f0a52": {
    "tags": [
@@ -234,7 +273,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "483ff00b-5153-4257-b4ea-438225ca7df9": {
    "tags": [
@@ -251,7 +291,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "ae3b2afe-6408-4d5c-b7af-487a3e46b6b4": {
    "tags": [
@@ -268,7 +309,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "ab6160bc-0630-4a09-9f42-6e4e99da0c20": {
    "tags": [
@@ -285,7 +327,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "57c69df8-cff7-4093-a146-ebaf1b0663b3": {
    "tags": [
@@ -301,7 +344,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e0392794-6d65-4d52-93e8-c405762c6711": {
    "tags": [
@@ -318,7 +362,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "832d386c-78b7-4bf0-99a0-73ec8c888567": {
    "tags": [
@@ -335,7 +380,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "7e3084ab-c2bc-4030-a12d-9776edbba44d": {
    "tags": [
@@ -352,7 +398,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "72e1c07d-0094-4359-b24d-423e5ecdc7a5": {
    "tags": [
@@ -369,7 +416,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "7baa2f3b-f1a3-42aa-a064-d78fcb064a37": {
    "tags": [
@@ -386,7 +434,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b645e14d-3075-43fd-b726-e6a68780aa20": {
    "tags": [
@@ -403,7 +452,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "ff6d4026-4307-4193-b67b-c7073af4b8f2": {
    "tags": [
@@ -420,7 +470,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "5ba837be-77cc-47bf-ac61-d78cb7e78cc5": {
    "tags": [
@@ -437,7 +488,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "da009dcd-dad5-451d-9f42-ccccf715587b": {
    "tags": [
@@ -454,7 +506,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "5021f97e-989b-4b13-99a2-91a4f48988d9": {
    "tags": [
@@ -471,7 +524,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "7f13f0d0-3a2c-4f42-8fb3-ef46aad957d6": {
    "tags": [
@@ -488,7 +542,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b6ba5886-c451-4e78-83d4-bcc1694d982e": {
    "tags": [
@@ -504,7 +559,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "9b6ac938-2ea7-4d45-b03c-63fc02d00791": {
    "tags": [
@@ -521,7 +577,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "1d8a9f46-b62a-4d8a-b96a-1ac587e37550": {
    "tags": [
@@ -538,7 +595,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "51c63a01-5934-4b5d-a9f5-02b6c39191ff": {
    "tags": [
@@ -555,7 +613,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "db706995-91e6-41fc-bc83-7f241fb9e58b": {
    "tags": [
@@ -572,7 +631,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b5292568-e9b2-4ff8-81cb-b776b42a5b6a": {
    "tags": [
@@ -589,7 +649,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "63c435cc-78a0-439c-8a30-0a91b068fdb0": {
    "tags": [
@@ -606,7 +667,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "6f2c1dbb-624e-40f9-8fc1-944a173b1043": {
    "tags": [
@@ -623,7 +685,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "0aa9bbac-40c5-4b27-b3c1-b0cf6ede6919": {
    "tags": [
@@ -639,7 +702,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "06275950-46bc-4e89-b68f-4eccdfe7bd8a": {
    "tags": [
@@ -656,7 +720,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "84289664-1246-49f5-aab8-2e5cb0d9a59f": {
    "tags": [
@@ -673,7 +738,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "fa151f71-bf7a-443b-8b9d-e7007b3a8356": {
    "tags": [
@@ -690,7 +756,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "4bb47099-259f-40fd-af62-cfaa38fc0205": {
    "tags": [
@@ -707,7 +774,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "accc568a-4611-4032-8c53-7469fd831064": {
    "tags": [
@@ -724,7 +792,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e161b03f-8ca1-4bc3-98ee-e0325ec025ed": {
    "tags": [
@@ -741,7 +810,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "7627744e-9900-487b-8b5f-0c1eff5c90b5": {
    "tags": [
@@ -758,7 +828,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "7567190a-1507-46b3-a1ec-1f17b36b4f5d": {
    "tags": [
@@ -775,7 +846,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "018b974b-d5ff-4e4e-ade6-25000711cde5": {
    "tags": [
@@ -792,7 +864,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "d2347581-94f0-43e4-865a-256ec233e4f6": {
    "tags": [
@@ -809,7 +882,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "aaf78e22-620f-4db7-893a-bb7a202fdc93": {
    "tags": [
@@ -826,7 +900,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "c1715bc6-f1ac-470c-a4b1-8fea4b82d471": {
    "tags": [
@@ -842,7 +917,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b39d5963-6857-4d64-918f-63f35f1feb5f": {
    "tags": [
@@ -859,7 +935,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "049b108b-5f6e-46a1-9910-6ceb3da40434": {
    "tags": [
@@ -876,7 +953,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "8b9c54e4-324a-4cb3-88f2-057cf2e8016a": {
    "tags": [
@@ -893,7 +971,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "970fc5c2-1f4f-4352-a0b0-4a3802f0cabf": {
    "tags": [
@@ -910,7 +989,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "a9a49eb6-6a8d-4b7e-9760-cec8719d119f": {
    "tags": [
@@ -927,7 +1007,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "13e08eab-2767-4d84-aa2c-18eeba6d52bd": {
    "tags": [
@@ -944,7 +1025,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "c0f85ef6-7a16-44ae-a98d-cabe5ca4048e": {
    "tags": [
@@ -961,7 +1043,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "226d4eb4-862e-48b1-ac44-f3465f3e169d": {
    "tags": [
@@ -978,7 +1061,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "648a98d4-1b96-430b-bf16-eb1301fc5957": {
    "tags": [
@@ -995,7 +1079,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "eb33b81c-f33e-4b77-bb2f-d34b69e8b090": {
    "tags": [
@@ -1012,7 +1097,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "c90c4b68-a809-4a6d-bdad-dce5c099d170": {
    "tags": [
@@ -1029,7 +1115,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "6774111a-130e-46e4-b9a6-9b647c3e3dde": {
    "tags": [
@@ -1046,7 +1133,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b3391dfd-688b-4ed6-ad05-d379a9bd815d": {
    "tags": [
@@ -1063,7 +1151,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "19130846-6edc-439a-9b61-dcb60033880c": {
    "tags": [
@@ -1081,7 +1170,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "4fee8520-5364-439f-96dd-16a8e8fa8e67": {
    "tags": [
@@ -1098,7 +1188,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "ac703bd8-2fd5-4b77-b555-8bc5aa347dfd": {
    "tags": [
@@ -1116,7 +1207,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e48c1d7c-1337-486a-855a-988204cbde34": {
    "tags": [
@@ -1132,7 +1224,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "8d99223a-fa85-4a97-9ad8-6e869d985b7b": {
    "tags": [
@@ -1150,7 +1243,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "4e97fbef-ce99-4ac4-829e-d79423efda88": {
    "tags": [
@@ -1168,7 +1262,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "8aad00d2-dc41-4c21-a0de-c10b3b35c359": {
    "tags": [
@@ -1186,7 +1281,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b81c0873-ebbf-41f7-83dc-53ad54751dab": {
    "tags": [
@@ -1203,7 +1299,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "cca0b947-a6e5-4fe6-ac3d-431293058138": {
    "tags": [
@@ -1220,7 +1317,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "c43b5822-1897-4f97-8e54-065deb732686": {
    "tags": [
@@ -1238,7 +1336,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "679f9450-f33e-4ef4-80c8-3e3a65ff9fdb": {
    "tags": [
@@ -1256,7 +1355,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "a92e20bf-b1d8-4a04-9ab7-6d998d0e540b": {
    "tags": [
@@ -1274,7 +1374,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "9dd742bc-851d-4407-880e-3f58bde3f734": {
    "tags": [
@@ -1292,7 +1393,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "602810ef-b68d-4f93-a406-df25cac92453": {
    "tags": [
@@ -1310,7 +1412,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "8224a722-c1cb-4ebc-8dc7-de62b91bda75": {
    "tags": [
@@ -1328,7 +1431,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "04b3d937-2c5a-4031-9ed1-22c4d9c7b90b": {
    "tags": [
@@ -1346,7 +1450,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "0284b04b-c31b-43c7-9e44-62cb43fccec2": {
    "tags": [
@@ -1364,7 +1469,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "753cbdfe-5a9f-4156-bb07-ed7f9fb2227f": {
    "tags": [
@@ -1382,7 +1488,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "d1bdc037-7d61-4885-a931-5b128feef9a4": {
    "tags": [
@@ -1400,7 +1507,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "a09b7209-46a5-488b-b239-552899c3b81c": {
    "tags": [
@@ -1417,7 +1525,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "d6a4cb33-c42d-4627-b9c4-5d7e7c7a3f6d": {
    "tags": [
@@ -1434,7 +1543,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "43eb0a43-73df-45f5-aed2-16f6136394e4": {
    "tags": [
@@ -1451,7 +1561,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b408beff-1958-41f9-9d02-4c0a90c99734": {
    "tags": [
@@ -1468,7 +1579,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "7d5d4444-fb00-4487-90fc-fb50af2b2fa5": {
    "tags": [
@@ -1485,7 +1597,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "5edeeedd-b843-4cff-af51-37cb2a358e54": {
    "tags": [
@@ -1502,7 +1615,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "64a193c0-c2cc-428b-9e3b-da08fdfba5c3": {
    "tags": [
@@ -1519,7 +1633,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "6e8abcd5-bfe5-4ee4-8ef4-f9e9fc48527c": {
    "tags": [
@@ -1536,7 +1651,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e6c7b01e-2344-4660-84a6-31b9e8395bab": {
    "tags": [
@@ -1553,7 +1669,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "00dc7de3-edf3-440f-878d-be4989193ea1": {
    "tags": [
@@ -1570,7 +1687,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "520733ab-67ba-4881-b5f8-a4f2fcf8a5aa": {
    "tags": [
@@ -1587,7 +1705,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "eae94977-88c9-4922-ba39-7c841f8d3925": {
    "tags": [
@@ -1604,7 +1723,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "f23199f8-5909-4867-b9bf-0332df1c8260": {
    "tags": [
@@ -1621,7 +1741,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "db352172-af98-4288-b2fb-d7797e28d2b3": {
    "tags": [
@@ -1638,7 +1759,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "89afcfe7-19d3-46ca-9952-0ec9fccf2f66": {
    "tags": [
@@ -1655,7 +1777,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "f1c90824-6a5a-4fbd-b0dd-a9999bc59d3a": {
    "tags": [
@@ -1672,7 +1795,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "eff8d672-d4a9-468e-9687-1829fa1b6014": {
    "tags": [
@@ -1689,7 +1813,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "1a1920b3-6deb-4db0-b9ac-7175d40859a2": {
    "tags": [
@@ -1706,7 +1831,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "d352870d-94fd-4c7e-9171-b04d7e742324": {
    "tags": [
@@ -1723,7 +1849,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "ff0f4cbf-d099-4fb0-bc49-a3bcc82cea97": {
    "tags": [
@@ -1740,7 +1867,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e63497be-9b5e-4dd2-bb70-4999aa8f6b59": {
    "tags": [
@@ -1757,7 +1885,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e65cad50-022f-456b-887a-72450db9f4a2": {
    "tags": [
@@ -1774,7 +1903,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "c2af9d29-4bcc-49f8-87b2-094731bf5ad2": {
    "tags": [
@@ -1791,7 +1921,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e83662c9-f96c-45a8-8335-f8f62dd015f8": {
    "tags": [
@@ -1808,7 +1939,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "4c7c6d8d-81e6-47e7-a1bc-6b0a7fe7dc45": {
    "tags": [
@@ -1825,7 +1957,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e9333f04-a9e6-4f3d-8a27-02aab94ddae6": {
    "tags": [
@@ -1842,7 +1975,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "f8e3456d-d6ea-4a3a-8e69-723f0b80785f": {
    "tags": [
@@ -1859,7 +1993,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "bd9ea7c0-dbe4-4142-b75f-303d5a2e2800": {
    "tags": [
@@ -1876,7 +2011,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "d04a161e-853f-45e2-bdd7-8684a692122c": {
    "tags": [
@@ -1893,7 +2029,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "237b0a48-453f-4208-910f-0f5015d9143b": {
    "tags": [
@@ -1910,7 +2047,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "4c6c1c25-400f-478d-93a5-e30492a6d3f8": {
    "tags": [
@@ -1927,7 +2065,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "93e7f073-24a6-4cf0-85da-e30fd600009f": {
    "tags": [
@@ -1944,7 +2083,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "5ac6ee8e-d8ea-44fb-9b88-c44490445f91": {
    "tags": [
@@ -1961,7 +2101,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "29d76a84-3b26-4b84-a953-919295305e45": {
    "tags": [
@@ -1978,7 +2119,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "f3bd2e6d-d2d0-40b1-ad3f-b29ca394807e": {
    "tags": [
@@ -1995,7 +2137,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "67fd60b7-a335-40ae-9a19-8b001be2f42c": {
    "tags": [
@@ -2012,7 +2155,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "88023c89-c2e2-4561-97b1-628455a3a118": {
    "tags": [
@@ -2029,7 +2173,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "92da510a-f648-42cb-8262-9a0b0d2ef625": {
    "tags": [
@@ -2046,7 +2191,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "ca5c00d7-4eab-49ed-933a-90d259692a18": {
    "tags": [
@@ -2063,7 +2209,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "5175a953-811e-41b9-9807-df3f5136ba50": {
    "tags": [
@@ -2080,7 +2227,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "cf1fd894-49ce-4e7d-844f-43d049837e89": {
    "tags": [
@@ -2097,7 +2245,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "f7388a4d-f856-494d-805a-23f3055c43e1": {
    "tags": [
@@ -2114,7 +2263,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "e2ecab28-e651-48dc-a214-a694abeacc09": {
    "tags": [
@@ -2131,7 +2281,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "49c11ae4-5456-4d29-9cdf-b243e7ba588e": {
    "tags": [
@@ -2148,7 +2299,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b78aaeaa-f618-4281-9abf-846b925e23a3": {
    "tags": [
@@ -2165,7 +2317,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "101d52d8-ba42-4404-a32b-6d39cae7f292": {
    "tags": [
@@ -2182,7 +2335,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "c8a088ad-8e72-4ad2-9648-095a97924ae1": {
    "tags": [
@@ -2199,7 +2353,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "9d1f4618-a389-4e68-85d3-b4e417445173": {
    "tags": [
@@ -2216,7 +2371,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "1a0b11bb-648e-407a-9eff-bd2fb7051833": {
    "tags": [
@@ -2233,7 +2389,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "3df2c3de-9adb-40f3-9ad6-03065c57bae7": {
    "tags": [
@@ -2250,7 +2407,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "af87415a-8d9f-48f9-9fa9-a3d0115e91ef": {
    "tags": [
@@ -2268,7 +2426,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "5fd03345-2340-4aa0-a0ae-8887809e9c00": {
    "tags": [
@@ -2286,7 +2445,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "7258c76e-c1a8-4ac4-970e-1c09106b54a7": {
    "tags": [
@@ -2303,7 +2463,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "5c90b822-0746-4835-8918-a3d9390811aa": {
    "tags": [
@@ -2320,7 +2481,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "47d67b3a-2bdd-4fc7-8b09-085bcd357e6d": {
    "tags": [
@@ -2337,7 +2499,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "a245505e-fd60-4b30-8dfc-eb0affca1047": {
    "tags": [
@@ -2354,7 +2517,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "b66ef8d2-3dc5-499f-a2b1-9ba4053f4d4c": {
    "tags": [
@@ -2372,7 +2536,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "2e32c3c1-ac6e-4f63-9eb7-fcdf1001b378": {
    "tags": [
@@ -2390,7 +2555,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "585cf5ef-cbf3-4a64-af40-ef217987bb95": {
    "tags": [
@@ -2407,7 +2573,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "a9e77bb1-e10f-4515-ab3f-7ddffd97c6ea": {
    "tags": [
@@ -2424,7 +2591,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "9639c9c0-4dde-414d-a166-f1734001e8d8": {
    "tags": [
@@ -2441,7 +2609,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "9d01d471-db22-4ef5-8807-85c387d29894": {
    "tags": [
@@ -2458,7 +2627,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "90827784-3adf-46e8-8663-915ce0c46f0e": {
    "tags": [
@@ -2475,7 +2645,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "c94231cf-f33d-4da7-9960-a19f98c4b571": {
    "tags": [
@@ -2492,7 +2663,8 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   },
   "71c11c4f-16eb-4ab7-8f1d-a9e44b9018ca": {
    "tags": [
@@ -2509,7 +2681,53 @@
     "quantcast",
     "sixsense",
     "tiktok"
-   ]
+   ],
+   "since": "2026-11-16"
   }
- }
+ },
+ "market_core": {
+  "floodlight": {
+   "pages": 5,
+   "of": 5
+  },
+  "ga4": {
+   "pages": 5,
+   "of": 5
+  },
+  "google_ads": {
+   "pages": 5,
+   "of": 5
+  },
+  "linkedin": {
+   "pages": 5,
+   "of": 5
+  },
+  "meta": {
+   "pages": 5,
+   "of": 5
+  },
+  "tealium_collect": {
+   "pages": 5,
+   "of": 5
+  },
+  "tiktok": {
+   "pages": 5,
+   "of": 5
+  },
+  "zoominfo": {
+   "pages": 5,
+   "of": 5
+  },
+  "microsoft_uet": {
+   "pages": 3,
+   "of": 5
+  },
+  "quantcast": {
+   "pages": 3,
+   "of": 5
+  }
+ },
+ "updated_at": "2026-11-17T13:28:47Z",
+ "confirmed_at": "2026-11-17T13:28:17Z",
+ "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

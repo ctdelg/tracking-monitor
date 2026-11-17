@@ -1,7 +1,7 @@
 {
  "day": "2026-11-17",
  "written_by": "Claude (FR landing page list added)",
- "summary": "Global incident: web-shop purchases (the Sage Active checkout) do not fire the Floodlight lead tag in DE (98), FR (129) or ES (36). The tag rules need ga4_customer_lead_type, which Tealium only derives from lead form names, and the checkout does not send one. In DE this broke with the Tealium publish of 24 Aug 2026; in FR and ES it was never set up (July 2026 versions behave the same). MarTech has confirmed the EU set-up is still pending. DE also loses web-shop trials (only DE offers trials). Order confirmations still fire the sales tags (DE 284, FR 464, ES 283).\nFR is red because the two Sage 50 (formerly Ciel) pages on www.ciel.com have no cookie banner: analytics and advertising cookies are set and GA4, Google Ads and LinkedIn fire before any consent. This is a privacy problem rather than a measurement problem.\nDE stays red for one reason: Floodlight tag 98 does not fire for web-shop trial and purchase submits (load rule 274, since the Tealium publish of 24 Aug 2026).\nNew today: the FR list from the paid search report is in (34 URLs: 32 on sage.com/fr-fr, 2 on ciel.com). All 32 sage.com pages answer. All 49 FR lead forms (demo, callback, quote, download, product tour) are active and their submit fires Floodlight 129 plus the matching lead-type tag, LinkedIn, Meta, TikTok and Reddit.\nAT is red: its main Floodlight conversion (sage_012) is set to fire on a click on a button whose ID contains 'Submit', but the buttons on the AT contact and Infopaket forms have no ID, so it cannot fire when a form is sent. ES and PT: tag rule checks only.\nConversion checks now cover every market: for each one the monitor knows which Floodlight tag must fire for a lead form submit (DE 98, FR 129, ES 36, PT 402) and for a purchase (DE 284, FR 464, ES 283, ciel.com 9). In AT (Google Tag Manager) it reads each Floodlight trigger and checks the matching button or link exists.",
+ "summary": "Global incident: web-shop purchases (the Sage Active checkout) do not fire the Floodlight lead tag in DE (98), FR (129) or ES (36). The tag rules need ga4_customer_lead_type, which Tealium only derives from lead form names, and the checkout does not send one. In DE this broke with the Tealium publish of 24 Aug 2026; in FR and ES it was never set up (July 2026 versions behave the same). MarTech has confirmed the EU set-up is still pending. DE also loses web-shop trials (only DE offers trials). Order confirmations still fire the sales tags (DE 284, FR 464, ES 283).\nFR is red because the two Sage 50 (formerly Ciel) pages on www.ciel.com have no cookie banner: analytics and advertising cookies are set and GA4, Google Ads and LinkedIn fire before any consent. This is a privacy problem rather than a measurement problem.\nDE stays red for one reason: Floodlight tag 98 does not fire for web-shop trial and purchase submits (load rule 274, since the Tealium publish of 24 Aug 2026).\nNew today: the FR list from the paid search report is in (34 URLs: 32 on sage.com/fr-fr, 2 on ciel.com). All 32 sage.com pages answer. All 49 FR lead forms (demo, callback, quote, download, product tour) are active and their submit fires Floodlight 129 plus the matching lead-type tag, LinkedIn, Meta, TikTok and Reddit.\nAT is red: its main Floodlight conversion (sage_012) is set to fire on a click on a button whose ID contains 'Submit', but the buttons on the AT contact and Infopaket forms have no ID, so it cannot fire when a form is sent. ES and PT: tag rule checks only.\nConversion checks now cover every market: for each one the monitor knows which Floodlight tag must fire for a lead form submit (DE 98, FR 129, ES 36, PT 402) and for a purchase (DE 284, FR 464, ES 283, ciel.com 9). In AT (Google Tag Manager) it reads each Floodlight trigger and checks the matching button or link exists.\nBaselines: the current tag set was adopted as the baseline for all markets. New pages learn for 3 run days. A tag that fires on most pages of a market is expected on all of them. In DE this flags Microsoft UET (and the msclkid) as missing on the payroll and HR landing pages whenever those pages are checked.",
  "markets": {
   "FR": {
    "summary": "34 paid search URLs. The 2 ciel.com pages are checked automatically every day; the 32 sage.com pages wait for the bot-protection exception. All 49 lead forms on the sage.com pages pass.",
@@ -118,6 +118,17 @@
       "5 of 116 paid landing pages opened today.",
       "The other pages are checked through Tealium only."
      ]
+    },
+    {
+     "tone": "yellow",
+     "title": "From the baseline",
+     "items": [
+      "Microsoft UET fires on 3 of 5 checked DE pages, but not on the payroll and HR pages.",
+      {
+       "text": "Bing clicks to those pages lose their msclkid.",
+       "action": "Check the UET load rule for /cp/payroll and /cp/hr pages."
+      }
+     ]
     }
    ]
   },
@@ -140,8 +151,7 @@
      "tone": "yellow",
      "title": "To check",
      "items": [
-      "Floodlight sage_013 fires on a click on the 'Sage DPW to GO' order form PDF; no checked page links to it.",
-      "Tag baseline still to confirm."
+      "Floodlight sage_013 fires on a click on the 'Sage DPW to GO' order form PDF; no checked page links to it."
      ]
     },
     {
@@ -193,7 +203,7 @@
    }
   },
   "PT": {
-   "summary": "No web shop in PT. Lead forms fire Floodlight 402. Tag rules only; no page opened today."
+   "summary": "No web shop in PT. Lead forms fire Floodlight 402. Open question: the checked PT page sent no Floodlight page view (Google Ads only) - confirm whether PT should have Floodlight on page views."
   }
  },
  "publish": {}

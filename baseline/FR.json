@@ -1,0 +1,927 @@
+{
+ "market": "FR",
+ "urls": {},
+ "journeys": {},
+ "conversion": {
+  "ecom_try": [],
+  "ecom_buy": [],
+  "gated_trial": [
+   "129",
+   "595",
+   "608"
+  ],
+  "gated_contact": [
+   "129",
+   "595",
+   "609"
+  ],
+  "purchase": [
+   "464"
+  ]
+ },
+ "forms": {
+  "beebeee9-9bc0-4fa7-93bb-44f8b2035f1d": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "771a9269-f882-4a2d-8d76-ab5aad04947b": {
+   "tags": [
+    "129",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "613188c1-964d-4488-ac99-d64ff4382b21": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "3f85b4de-2cc3-4ae1-a0e4-6ca80204bbf2": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "957858fc-31b7-4821-ba78-3427c27097d3": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "ce79bd06-1c2c-4b87-818c-b46f259530de": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "dc7de96c-9947-4ae3-bf65-d2d08b1e4b4c": {
+   "tags": [
+    "129",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "7f6f4f80-8cab-46fc-b48c-7776cbd9d922": {
+   "tags": [
+    "129",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "1b61611f-e15b-4ff1-a730-383ece79c756": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "ba235c11-d040-45c1-8658-790d08184423": {
+   "tags": [
+    "129",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "6cf25285-c105-43cc-b0c9-d4abd715e2e5": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "27371fff-7142-4f1b-94ca-2d5b7d3b6659": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "2750fbf2-3892-458d-9b18-16207476ebc5": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "88c9430a-f78c-4399-9321-10d7a538e998": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "47f605fa-a40d-4214-8f4d-a726ec58ab8e": {
+   "tags": [
+    "129",
+    "595",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "6ca8e97a-04c5-4344-b274-b85f2b91a9fc": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "30e29714-df8c-4695-a1cd-36758937a59f": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "70cdf0a5-4f16-4671-922a-7dfd9a7999a0": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "da18d790-e59e-4396-94bd-2140dbf8d90b": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "0a047f42-2b28-4134-9741-c5ae19ce7f0c": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "50580884-5634-4dfe-aa42-9615ee3a287a": {
+   "tags": [
+    "129",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "694e9742-7868-4061-8a29-8df61ba4fdc2": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "cebce4b8-7cdf-4293-864b-71d5cba251ea": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "1fdbf787-e9b8-40bc-85f2-dea2247b47b4": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "3b8bfb83-e66f-46bd-9495-a832c4a23361": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "c0d6bd79-1553-40aa-b255-d322305b37d7": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "db32bf53-3d23-4002-956f-ff89dc3ed336": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "6759c388-4fe6-4bbe-b2fa-126db07cb1d0": {
+   "tags": [
+    "129",
+    "595",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "94cf276e-8105-4c63-9b8c-f13354e90138": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "f80611e7-760f-4392-b029-769795288175": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "b8bba13c-b114-425f-b142-70f7a0301b7d": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "177259a6-e27e-4aa6-8989-e9fa5b596c7e": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "3c360e8d-998f-415d-9e4e-148988125f09": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "cb6b885e-aceb-4f58-96eb-832e4366206a": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "2baa8cef-2395-40a4-bf72-b898f3fe0a35": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "aed21b28-c9cc-43cd-afc9-7395f5ce63cb": {
+   "tags": [
+    "129",
+    "595",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "6cfae0e2-b56e-4884-ab44-d05a3a1f19e8": {
+   "tags": [
+    "129",
+    "595",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "3a490cb7-2156-4631-b295-376194596eb9": {
+   "tags": [
+    "129",
+    "595",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "a292f503-1b8f-401d-a70b-12842d5c63c7": {
+   "tags": [
+    "129",
+    "595",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "571b0e5a-0c90-4902-ab27-c2061c0d90cd": {
+   "tags": [
+    "129",
+    "595",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "a0ac38e1-3e04-4267-80fd-0ef5806bf0fd": {
+   "tags": [
+    "129",
+    "609"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "3f9f23aa-9eed-4c80-a16d-0e7c52937b14": {
+   "tags": [
+    "129"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "c9faf818-5e3d-43b8-bae5-5acbd42da1cb": {
+   "tags": [
+    "129",
+    "595",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "4b0df4e2-2ff4-4ed4-918b-be13078987d2": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "7898f9d7-6bc6-4f81-8167-ec0d536b704a": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "4c9599f8-4806-4cac-8714-c9c3d955e0b8": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "d4e0ecec-e201-4907-95f2-1e24cb6de5ea": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "c7be1ca6-e451-47b9-92c9-b1af98e8c2eb": {
+   "tags": [
+    "129",
+    "608"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  },
+  "93e25d36-20ff-4fa9-9184-81af4faede7d": {
+   "tags": [
+    "129",
+    "610"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "linkedin",
+    "meta",
+    "openai",
+    "quantcast",
+    "reddit",
+    "sixsense",
+    "tiktok"
+   ],
+   "since": "2026-11-17"
+  }
+ },
+ "market_core": {},
+ "updated_at": "2026-11-17T13:28:47Z",
+ "confirmed_at": "2026-11-17T13:28:19Z",
+ "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
+}

@@ -265,11 +265,27 @@ def _consent_and_tag_checks(visit, market, platforms, baseline, tid, pre) -> lis
     # Tags after consent (baseline-driven) ---------------------------------------------------
     post_hits = classify(post.get("requests", []), platforms)
     seen = vendor_summary(post_hits)
-    out.extend(_tag_checks(tid, seen, (baseline or {}).get("post"), platforms))
+    b = baseline or {}
+    expected = b.get("post")
+    if expected is None and b.get("status") in ("learning", "new"):
+        n = b.get("days", 0)
+        out.append(result("TAG-BASELINE", "info", "warn", tid,
+                          f"Learning which tags belong on this page ({n} of 3 run days). Tags are recorded; "
+                          "from the 3rd day a missing tag is reported.", {"seen": seen}))
+    else:
+        out.extend(_tag_checks(tid, seen, expected, platforms))
+    core = b.get("core") or {}
+    for vendor, info in sorted(core.items()):
+        if vendor in seen or (expected and vendor in expected):
+            continue
+        out.append(result(f"TAG:{vendor}", platforms.severity(vendor), "fail", tid,
+                          f"{platforms.display_name(vendor)} did not fire here, although it fires on "
+                          f"{info['pages']} of {info['of']} pages of this market.",
+                          {"market_pages_with_tag": info}, title=f"{platforms.display_name(vendor)} fires like on the market's other pages"))
 
     # Click IDs -----------------------------------------------------------------------------
-    out.extend(_click_id_checks(tid, visit.get("click_ids") or {}, post, post_hits,
-                                (baseline or {}).get("post") or seen, platforms))
+    expected_vendors = {**seen, **(b.get("learned") or {}), **(expected or {}), **{v: [] for v in core}}
+    out.extend(_click_id_checks(tid, visit.get("click_ids") or {}, post, post_hits, expected_vendors, platforms))
     return out
 
 
@@ -351,6 +367,8 @@ def check_journey(journey: dict, platforms: Platforms, baseline: dict | None) ->
             return out
         out.append(result("JRNY-01", "site_down", "pass", target, step["snapshot"].get("url", "")))
         hits = classify(step["snapshot"].get("requests", []), platforms)
+        if (baseline or {}).get("status", "confirmed") != "confirmed":
+            continue  # still learning this journey's tags
         exp = ((baseline or {}).get("steps") or [None] * len(steps))
         exp_step = exp[i] if i < len(exp) else None
         out.extend(_tag_checks(target, vendor_summary(hits), exp_step, platforms))

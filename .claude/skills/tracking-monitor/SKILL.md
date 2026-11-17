@@ -1,6 +1,6 @@
 ---
 name: tracking-monitor
-description: Operate and maintain the EU Tracking Monitor (daily outside-in check of Sage paid media tracking for DE, AT, FR, ES, PT). Use when the user asks to add or remove a URL or journey, create or confirm a tag baseline, run the check now, explain why a market is red or yellow, acknowledge a finding, run the interim browser check, or anything about the tracking monitor, its dashboard or its results.
+description: Operate and maintain the EU Tracking Monitor (daily outside-in check of Sage paid media tracking for DE, AT, FR, ES, PT). Use when the user asks to add or remove a URL or journey, show or re-learn a tag baseline, run the check now, explain why a market is red or yellow, acknowledge a finding, run the interim browser check, or anything about the tracking monitor, its dashboard or its results.
 ---
 
 # EU Tracking Monitor – operator skill
@@ -12,7 +12,7 @@ with a clear message so the daily GitHub Actions run picks it up.
 Key files:
 - `config/markets.yaml`: markets, URLs, journeys, conversion events. Edit with care; keep the format.
 - `config/platforms.yaml`: vendor patterns and severities (change only when asked).
-- `baseline/<MKT>.json`: confirmed expected tags; `baseline/_pending/` = proposals.
+- `baseline/<MKT>.json`: learned tags per page/journey/form, learning status and the market rule (`market_core`).
 - `results/<day>.json`: evaluated results; `results/index.json`: history; `results/diagnosis/`: explanations.
 - Commands: `python -m monitor --help` (run, collect, ingest, evaluate, baseline, report, dashboard).
 
@@ -28,20 +28,21 @@ Before running Python commands make sure dependencies exist: `pip install -r req
    Types: landing_page, product, pricing, form, trial, checkout, content. Never set `live_sample`
    unless asked (one per market maximum).
 4. Run `python -m monitor run --market <MKT> --url <id>` (works once the allowlist exists; until then the
-   page shows as blocked, which is expected). Then propose a baseline for that page:
-   `python -m monitor baseline propose --market <MKT> --url <id>`, show the user the vendors found,
-   and ask whether to confirm.
+   page shows as blocked, which is expected). The page's baseline is learned automatically over its
+   first 3 run days; nothing to confirm.
 5. Commit: `Add <id> to <MKT>` and push.
 
 ## Remove a URL
 Delete the entry from `markets.yaml` (history in `results/` stays). Commit `Remove <id> from <MKT>`.
 
-## Create / confirm a baseline
-- Propose from the latest run: `python -m monitor baseline propose --market <MKT> [--day YYYY-MM-DD] [--url id ...]`.
-- Show the user, per page, which vendors and account IDs were seen (from `baseline/_pending/<MKT>.json`)
-  and the conversion tags per event. Point out anything odd (e.g. no Floodlight on a paid landing page).
-- Only after the user says yes: `python -m monitor baseline confirm --market <MKT> --by "<their name>"`,
-  then `python -m monitor evaluate`, commit `Confirm baseline <MKT>` and push.
+## Baselines (learned automatically)
+- The current state is the baseline (Paid Media decision, 17 Nov 2026). New pages learn for 3 run days,
+  then a missing tag is reported. A red/yellow vendor on >= 60% (and >= 3) of a market's pages is expected on
+  all its pages (`market_core`). Pages with tags before consent are not learned.
+- Show: `python -m monitor baseline show --market <MKT>`.
+- After an intended change ("we removed Meta on purpose"): `python -m monitor baseline reset --market <MKT> --url <id ...>`
+  (or the whole market without `--url`), then `python -m monitor evaluate`, commit `Re-learn baseline <MKT>` and push.
+- Never reset a baseline just to make a finding go away; acknowledge it instead.
 
 ## Run the check now
 - Full: `gh workflow run daily.yml` (optionally `-f market="FR" -f url="fr-home"`), then tell the user
@@ -54,7 +55,7 @@ Read `results/<latest>.json` → `markets.<MKT>.checks` where `result` is `fail`
 `results/diagnosis/<latest>.json`. Explain in plain language: what is broken, since when
 (`red_since`), what it affects (bidding, reporting, compliance), who should fix it and how.
 Severity meaning: red = conversions, click IDs or consent compliance broken; yellow = secondary
-pixel, data layer, unconfirmed baseline or a conversion-relevant Tealium publish; site down = page
+pixel, data layer or a conversion-relevant Tealium publish; site down = page
 or utag.js unreachable; system = monitor was blocked (not a tracking problem).
 
 ## Acknowledge a finding
@@ -95,7 +96,7 @@ Refresh the inventory when pages change (new CTAs) – no tracking hits are sent
 2. Run `monitor/forms_inventory.js`, then `__invForms(<[[page id, path], ...] from markets.yaml>)`.
 3. Poll `JSON.stringify({p: __inv.progress, done: __inv.done})`, then `__invExport()`.
 4. Save the export to a file, `python -m monitor forms import <file> --market <MKT>`, then
-   `python -m monitor run --no-browser --market <MKT>`, propose/confirm the baseline, commit.
+   `python -m monitor run --no-browser --market <MKT>`, commit (new forms join the baseline automatically).
 
 ## Rules
 - Never submit forms, start checkouts or create leads. Journeys stop before submit.

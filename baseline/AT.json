@@ -1,6 +1,5 @@
 {
  "market": "AT",
- "proposed_from": "2026-11-16",
  "urls": {
   "at-dpw-sage-dpw": {
    "post": {
@@ -12,7 +11,15 @@
     ],
     "other:doubleclick.net": [],
     "other:googleadservices.com": []
-   }
+   },
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "at-dpw-zeiterfassung": {
    "post": {
@@ -24,7 +31,15 @@
     ],
     "other:doubleclick.net": [],
     "other:googleadservices.com": []
-   }
+   },
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "at-dpw-lohn-outsourcing": {
    "post": {
@@ -37,7 +52,15 @@
     "other:doubleclick.net": [],
     "other:googleadservices.com": [],
     "other:googletagmanager.com": []
-   }
+   },
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "at-dpw-lohnverrechnung": {
    "post": {
@@ -49,7 +72,15 @@
     ],
     "other:doubleclick.net": [],
     "other:googleadservices.com": []
-   }
+   },
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "at-dpw-reisekostenabrechnung": {
    "post": {
@@ -60,8 +91,17 @@
      "G-M4HF0CKEGQ"
     ],
     "other:doubleclick.net": [],
-    "other:googleadservices.com": []
-   }
+    "other:googleadservices.com": [],
+    "other:googletagmanager.com": []
+   },
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "at-dpw-fairpay": {
    "post": {
@@ -73,7 +113,15 @@
     ],
     "other:doubleclick.net": [],
     "other:googleadservices.com": []
-   }
+   },
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   }
  },
  "journeys": {
@@ -97,7 +145,15 @@
       "G-M4HF0CKEGQ"
      ]
     }
-   ]
+   ],
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   },
   "at-j-kontakt": {
    "steps": [
@@ -119,15 +175,41 @@
       "G-M4HF0CKEGQ"
      ]
     }
-   ]
+   ],
+   "days": [
+    "2026-11-16",
+    "2026-11-17"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-16",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   }
  },
- "conversion": {},
+ "conversion": {
+  "ecom_try": [],
+  "ecom_buy": [],
+  "gated_trial": [],
+  "gated_contact": []
+ },
+ "forms": {},
+ "market_core": {
+  "floodlight": {
+   "pages": 6,
+   "of": 6
+  },
+  "ga4": {
+   "pages": 6,
+   "of": 6
+  }
+ },
+ "updated_at": "2026-11-17T13:28:47Z",
  "gtm_conversion_tags": {
   "2": "Floodlight counter 5195550/sageg0/sage_013",
   "3": "Floodlight counter 5195550/sageg0/sage_012",
   "26": "Conversion Linker",
   "27": "Conversion Linker"
  },
- "forms": {}
+ "confirmed_at": "2026-11-17T13:28:18Z",
+ "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

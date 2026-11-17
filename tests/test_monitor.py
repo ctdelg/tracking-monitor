@@ -83,6 +83,18 @@ class Rating(unittest.TestCase):
         self.assertEqual(rules.rate_global({"A": mk(1), "B": mk(1), "C": mk(0)})["incidents"], [])
         self.assertEqual(len(rules.rate_global({"A": mk(1), "B": mk(1), "C": mk(1)})["incidents"]), 1)
 
+    def test_market_rule_flags_tag_missing_on_few_pages(self):
+        from monitor import baseline
+        p = load_platforms()
+        base = {"urls": {f"p{i}": {"post": {"ga4": [], "microsoft_uet": []} if i < 3 else {"ga4": []},
+                                   "status": "confirmed"} for i in range(5)}}
+        core = baseline.market_core(base, p)
+        self.assertIn("microsoft_uet", core)          # 3 of 5 pages = 60%
+        self.assertIn("ga4", core)
+        exp = baseline.page_expectation({**base, "market_core": core}, "p4")
+        self.assertEqual(exp["status"], "confirmed")
+        self.assertIn("microsoft_uet", exp["core"])
+
     def test_acknowledged_finding_does_not_count(self):
         c = [{"id": "TAG:meta", "severity": "red", "result": "fail", "target": "fr-home"}]
         rules.apply_acks("FR", c, [{"id": "a1", "market": "FR", "check": "TAG:meta", "target": "*"}], "2026-11-17")

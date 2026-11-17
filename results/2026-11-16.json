@@ -2,7 +2,7 @@
  "schema_version": 1,
  "monitor_version": "1.0.0",
  "day": "2026-11-16",
- "generated_at": "2026-11-16T13:02:50Z",
+ "generated_at": "2026-11-17T13:28:46Z",
  "global": {
   "status": "red",
   "incidents": [],
@@ -14,8 +14,8 @@
    "tealium_profile": "de-de",
    "rating": {
     "status": "red",
-    "red_count": 2,
-    "yellow_count": 9,
+    "red_count": 6,
+    "yellow_count": 5,
     "site_down": [],
     "blocked_pages": [],
     "coverage": "partial",
@@ -25,7 +25,23 @@
    },
    "status": "red",
    "source": "claude-browser",
-   "baseline_confirmed": null,
+   "baseline_confirmed": "2026-11-17T13:28:17Z",
+   "baseline": {
+    "pages_confirmed": 5,
+    "pages_learning": 0,
+    "market_core": [
+     "floodlight",
+     "ga4",
+     "google_ads",
+     "linkedin",
+     "meta",
+     "microsoft_uet",
+     "quantcast",
+     "tealium_collect",
+     "tiktok",
+     "zoominfo"
+    ]
+   },
    "utag": {
     "publish_version": "202611051049",
     "changed": false,
@@ -681,6 +697,18 @@
      }
     },
     {
+     "id": "CONV-03:ecom_try",
+     "title": "Conversion tag set for 'ecom_try' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged ()",
+     "evidence": {
+      "baseline": [],
+      "now": []
+     }
+    },
+    {
      "id": "CONV-01:ecom_buy",
      "title": "Conversion tags fire for 'ecom_buy' (load rules)",
      "severity": "red",
@@ -722,6 +750,18 @@
        "266"
       ],
       "errors": []
+     }
+    },
+    {
+     "id": "CONV-03:ecom_buy",
+     "title": "Conversion tag set for 'ecom_buy' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged ()",
+     "evidence": {
+      "baseline": [],
+      "now": []
      }
     },
     {
@@ -785,6 +825,26 @@
      }
     },
     {
+     "id": "CONV-03:gated_trial",
+     "title": "Conversion tag set for 'gated_trial' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (98, 389, 405)",
+     "evidence": {
+      "baseline": [
+       "98",
+       "389",
+       "405"
+      ],
+      "now": [
+       "98",
+       "389",
+       "405"
+      ]
+     }
+    },
+    {
      "id": "CONV-01:gated_contact",
      "title": "Conversion tags fire for 'gated_contact' (load rules)",
      "severity": "red",
@@ -842,6 +902,26 @@
        "341"
       ],
       "errors": []
+     }
+    },
+    {
+     "id": "CONV-03:gated_contact",
+     "title": "Conversion tag set for 'gated_contact' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (98, 389, 406)",
+     "evidence": {
+      "baseline": [
+       "98",
+       "389",
+       "406"
+      ],
+      "now": [
+       "98",
+       "389",
+       "406"
+      ]
      }
     },
     {
@@ -916,6 +996,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:ACG_16Q4_NCM_DE_DGAD_AC0220_S50DefaultTrialDBTest24",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -938,9 +1027,9 @@
      "id": "FORM-02",
      "title": "Lead type can be derived from the form name",
      "severity": "yellow",
-     "result": "warn",
+     "result": "pass",
      "target": "form:BMS_18Q4_NCM_DE_DGWW_ER0460_demo",
-     "detail": "CL_VAS_DE_DEM_S100Hosting_COM|TOP|GNRC -> trial_demo (name does not follow the usual pattern)",
+     "detail": "CL_VAS_DE_DEM_S100Hosting_COM|TOP|GNRC -> trial_demo",
      "evidence": {}
     },
     {
@@ -976,6 +1065,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_18Q4_NCM_DE_DGWW_ER0460_demo",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -1058,6 +1156,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2412_NCA_DE_Sage Operations",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1120,6 +1227,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_ActiveProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1180,6 +1296,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_CPKreislaufWirtschaftIDGStudieS100",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -1246,6 +1371,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_ERPSoftwareInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1306,6 +1440,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_HandelEBkHerausforderungDistributionS100",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -1370,6 +1513,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_HandelIDCStudieHandelS100",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1430,6 +1582,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_HandelPraxisleitfadenS100",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -1496,6 +1657,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100Angebot",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1558,6 +1728,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100CRMAngebot",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1618,6 +1797,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100CloudBeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -1690,6 +1878,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100Infopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1752,6 +1949,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100OnlineShopInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -1818,6 +2024,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100OnlineShopProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -1878,6 +2093,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100ProdBeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -1944,6 +2168,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100ProdInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2006,6 +2239,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100ProdProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -2092,6 +2334,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100Produkttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2156,6 +2407,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100ReweBeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -2224,6 +2484,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100ReweInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2288,6 +2557,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100ReweProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -2358,6 +2636,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100WawiBeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2422,6 +2709,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100WawiInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -2490,6 +2786,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100WawiProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2550,6 +2855,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100XRMAngebot",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -2616,6 +2930,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100XRMInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2678,6 +3001,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_S100XRMProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2738,6 +3070,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_24Q1_NCA_DE_SDMO",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -2804,6 +3145,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2508_NCA_DE_ActiveMobile",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2866,6 +3216,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2605_NCA_DE_SageOperationsQuote",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -2926,6 +3285,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2605_NCA_DE_SageOperationsSparkAdsDemo_Form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3002,6 +3370,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SODemoRequestUnterseiten",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3082,6 +3459,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form01",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3144,6 +3530,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form03",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3210,6 +3605,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form04",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3272,6 +3676,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form05",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3338,6 +3751,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SOProdukttourBeschaffung_Form06",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3398,6 +3820,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SageOperationsProdukttourMobile",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3466,6 +3897,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2610_NCA_DE_SageOperationsProdukttour_Form01",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3528,6 +3968,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2611_NCA_DE_SOProdukttourECommerce",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3594,6 +4043,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2612_NCA_DE_ECommWachstumWeb",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3654,6 +4112,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2612_NCA_DE_HORIZAgenticAI",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3720,6 +4187,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:BMS_2612_NCA_DE_SOProdukttourTechnischerGrosshandel",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3780,6 +4256,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:CRM_2511_NCA_DE_SSMBeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -3844,6 +4329,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:CRM_2602_NCA_DE_Infopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3906,6 +4400,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:CRM_2602_NCA_DE_SSMDemoRequest",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -3966,6 +4469,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_23Q3_NCA_DE_HRTrendsEBooks_Form3",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -4042,6 +4554,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteAngebot",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4104,6 +4625,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteBedarfsanalyse",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4162,6 +4692,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteEBkMAGespraech",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -4238,6 +4777,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4298,6 +4846,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteInfopaketEmail",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -4362,6 +4919,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteInfopaketPKP",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4424,6 +4990,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuitePersAbrInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4484,6 +5059,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuitePersAbrProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -4550,6 +5134,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuitePersMgtInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4612,6 +5205,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuitePersMgtProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -4690,6 +5292,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4750,6 +5361,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteRKInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -4814,6 +5434,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteRKProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -4882,6 +5511,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteZeitMgtInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -4942,6 +5580,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_HRSuiteZeitMgtProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -5018,6 +5665,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_PeopleDemo",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5078,6 +5734,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_PeopleInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -5154,6 +5819,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_PeopleProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5220,6 +5894,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_SageHRDemo",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5282,6 +5965,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_SageHRProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5342,6 +6034,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_24Q1_NCA_DE_SageHRTestzugang",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -5414,6 +6115,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2501_NCA_DE_SageHRProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5474,6 +6184,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2503_NCA_DE_PeopleWebPeopleAnalytics",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -5546,6 +6265,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2504_NCA_DE_SageHRPayrollWebdemo",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5606,6 +6334,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2507_NCA_DE_PeopleEbookPeopleAnalytics",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -5671,6 +6408,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2508_NCA_DE_SageHRPayrollProduktbroschuere",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5734,6 +6480,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2510_NCA_DE_SageHRSuiteBMSmartInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5794,6 +6549,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2512_NCA_DE_SageHRPayrollWebdemoEssentials",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -5860,6 +6624,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form01",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -5922,6 +6695,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -5988,6 +6770,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form03",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6052,6 +6843,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form04",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6114,6 +6914,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form05",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -6182,6 +6991,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketDienstplanung_Form06",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6244,6 +7062,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form01",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -6310,6 +7137,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6372,6 +7208,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form03",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -6438,6 +7283,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form04",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6500,6 +7354,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2602_NCA_DE_AgnosticInfopaketHRSoftware_form05",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -6565,6 +7428,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2604_NCA_DE_DPAPraxisGuide",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6627,6 +7499,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2608_NCA_DE_EntgTranspGPraxisGuide_Form01",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -6695,6 +7576,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2609_NCA_DE_ZeiterfSoftwareProduktagnostischDemo",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6757,6 +7647,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form1",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -6823,6 +7722,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form2",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -6885,6 +7793,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form3",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -6951,6 +7868,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form4",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7013,6 +7939,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2612_NCA_DE_ProdukttourHRSuiteAgnosticHR_form6",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7079,6 +8014,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2701_NCA_DE_AgnosticLiveDemoPersonalabrechnung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7103,7 +8047,7 @@
      "severity": "yellow",
      "result": "warn",
      "target": "form:HCM_2701_NCA_DE_HRReadyNCABeratung",
-     "detail": " CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung -> contact (name does not follow the usual pattern)",
+     "detail": "CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung -> contact - the name has a leading or trailing space, so rules that check the start of the name (for example Floodlight tags that need a specific code) will not match",
      "evidence": {}
     },
     {
@@ -7139,6 +8083,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2701_NCA_DE_HRReadyNCABeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7200,6 +8153,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2702_NCA_DE_HRReadinessScorecard",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7264,6 +8226,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2702_NCA_DE_HRReadinessScorecard_Form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7324,6 +8295,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2702_NCA_DE_HRSoftwareNCABeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7388,6 +8368,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:HCM_2702_NCA_DE_WebinaraufzeichnungHRReadyNCA",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7449,6 +8438,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_23Q1_NCA_US_0009SageBusinessCloudProductTour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7530,6 +8528,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2408_NCA_DE_IntacctProdukttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7595,6 +8602,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_24Q2_NCA_DE_IntacctAngebot",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7668,6 +8684,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_24Q2_NCA_DE_IntacctDemo",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7730,6 +8755,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2502_NCA_DE_SDMOWebinarBasic",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7787,6 +8821,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2507_NCA_US_0009SageBusinessCloudProductTour_Form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7852,6 +8895,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2601_NCA_DE_AgnosticFinanzmanagementloesung_form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -7915,6 +8967,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2601_NCA_DE_IntacctProduktbroschuere_form1",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -7995,6 +9056,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2602_NCA_DE_AgnosticPagesNextLevelFinance",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8055,6 +9125,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2603_NCA_DE_Intacct2026StudieErfolgscode_Form1",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -8120,6 +9199,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2605_NCA_DE_IntacctProdukttour_Form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8181,6 +9269,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form01",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -8246,6 +9343,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form02",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8307,6 +9413,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form03",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -8374,6 +9489,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form04",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8437,6 +9561,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form05",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8498,6 +9631,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2605_NCA_DE_ProdukttourFinanceBuchhaltung_Form06",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -8567,6 +9709,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_2606_NCA_DE_IntacctAngebot",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8628,6 +9779,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:INT_CON_NCA_US_EngagewareBookingReqPricing",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -8706,6 +9866,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:NPS_24Q1_NCA_DE_AllgemeinesKontaktformular",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8766,6 +9935,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:OTH_2610_NCA_DE_SageBeratungAnfordern",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -8830,6 +10008,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:S50_CON_NCA_DE_S50ConnectedBeratung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -8916,6 +10103,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:S50_PDF_NCA_DE_S50HWInfopaket",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -8996,6 +10192,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:S50_QUO_NCA_DE_S50HWAngebot",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -9060,6 +10265,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:S50_TRL_NCA_DE_TrialS50ConnectedComfort",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -9122,6 +10336,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:S50_TRL_NCA_DE_TrialS50ConnectedProfessional",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -9190,6 +10413,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:S50_TRL_NCA_DE_TrialS50ConnectedStandard",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -9255,6 +10487,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_2408_NCA_DE_X3SwitcherCampaign_Callback",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -9318,6 +10559,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_2408_NCA_DE_X3SwitcherCampaign_Producttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -9392,6 +10642,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_24Q1_NCA_DE_X3EBkEnterpriseBusinessMgt",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -9464,6 +10723,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_24Q1_NCA_DE_X3EBkMehrAlsERP",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -9534,6 +10802,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_24Q1_NCA_DE_X3EBkProjektmanagement",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -9614,6 +10891,15 @@
      }
     },
     {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_24Q1_NCA_DE_X3InfopaketDigitalisierung",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
+    },
+    {
      "id": "FORM-01",
      "title": "FORM-01",
      "severity": "red",
@@ -9687,6 +10973,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_24Q1_NCA_DE_X3Produkttour",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "FORM-01",
@@ -9766,6 +11061,15 @@
        "tiktok"
       ]
      }
+    },
+    {
+     "id": "FORM-07",
+     "title": "Platforms receiving the form submit unchanged (LinkedIn, Meta, UET ...)",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "form:SX3_24Q1_NCA_DE_X3ProdukttourRueckruf",
+     "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
+     "evidence": {}
     },
     {
      "id": "PAGE-01",
@@ -9864,39 +11168,147 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "de-cp-payroll-standard-shopping",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "G-PE4Z9JJWVN",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:google_ads",
+     "title": "Google Ads (remarketing / conversion) fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "970123043",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:linkedin",
+     "title": "LinkedIn Insight Tag fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "58294",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:meta",
+     "title": "Meta Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "499565794547363",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:adnxs.com",
+     "title": "other:adnxs.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:ojrq.net",
+     "title": "other:ojrq.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:openai.com",
+     "title": "other:openai.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:sjv.io",
+     "title": "other:sjv.io fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tealium_collect",
+     "title": "Tealium Collect (AudienceStream) fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tiktok",
+     "title": "TikTok Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:zoominfo",
+     "title": "ZoomInfo fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "654e77cd8ec2360c5a6693e1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:microsoft_uet",
+     "title": "Microsoft Advertising UET fires like on the market's other pages",
+     "severity": "red",
+     "result": "fail",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "Microsoft Advertising UET did not fire here, although it fires on 3 of 5 pages of this market.",
      "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-PE4Z9JJWVN"
-       ],
-       "google_ads": [
-        "970123043"
-       ],
-       "linkedin": [
-        "58294"
-       ],
-       "meta": [
-        "499565794547363"
-       ],
-       "other:adnxs.com": [],
-       "other:doubleclick.net": [],
-       "other:ojrq.net": [],
-       "other:openai.com": [],
-       "other:sjv.io": [],
-       "tealium_collect": [],
-       "tiktok": [],
-       "zoominfo": [
-        "654e77cd8ec2360c5a6693e1"
-       ]
+      "market_pages_with_tag": {
+       "pages": 3,
+       "of": 5
+      }
+     }
+    },
+    {
+     "id": "TAG:quantcast",
+     "title": "Quantcast fires like on the market's other pages",
+     "severity": "yellow",
+     "result": "fail",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "Quantcast did not fire here, although it fires on 3 of 5 pages of this market.",
+     "evidence": {
+      "market_pages_with_tag": {
+       "pages": 3,
+       "of": 5
       }
      }
     },
@@ -9910,6 +11322,18 @@
      "evidence": {
       "cookie": "_gcl_aw",
       "value": "GCL.1794818517.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-02",
+     "title": "msclkid stored in _uetmsclkid",
+     "severity": "red",
+     "result": "fail",
+     "target": "de-cp-payroll-standard-shopping",
+     "detail": "_uetmsclkid missing or does not contain the test msclkid.",
+     "evidence": {
+      "cookie": "_uetmsclkid",
+      "value": null
      }
     },
     {
@@ -10046,39 +11470,147 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "de-cp-hr-zeiterfassung",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "G-PE4Z9JJWVN",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:google_ads",
+     "title": "Google Ads (remarketing / conversion) fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "970123043",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:linkedin",
+     "title": "LinkedIn Insight Tag fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "58294",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:meta",
+     "title": "Meta Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "499565794547363",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:adnxs.com",
+     "title": "other:adnxs.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:brightcove.com",
+     "title": "other:brightcove.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:openai.com",
+     "title": "other:openai.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:sjv.io",
+     "title": "other:sjv.io fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tealium_collect",
+     "title": "Tealium Collect (AudienceStream) fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tiktok",
+     "title": "TikTok Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:zoominfo",
+     "title": "ZoomInfo fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "654e77cd8ec2360c5a6693e1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:microsoft_uet",
+     "title": "Microsoft Advertising UET fires like on the market's other pages",
+     "severity": "red",
+     "result": "fail",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Microsoft Advertising UET did not fire here, although it fires on 3 of 5 pages of this market.",
      "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-PE4Z9JJWVN"
-       ],
-       "google_ads": [
-        "970123043"
-       ],
-       "linkedin": [
-        "58294"
-       ],
-       "meta": [
-        "499565794547363"
-       ],
-       "other:adnxs.com": [],
-       "other:brightcove.com": [],
-       "other:doubleclick.net": [],
-       "other:openai.com": [],
-       "other:sjv.io": [],
-       "tealium_collect": [],
-       "tiktok": [],
-       "zoominfo": [
-        "654e77cd8ec2360c5a6693e1"
-       ]
+      "market_pages_with_tag": {
+       "pages": 3,
+       "of": 5
+      }
+     }
+    },
+    {
+     "id": "TAG:quantcast",
+     "title": "Quantcast fires like on the market's other pages",
+     "severity": "yellow",
+     "result": "fail",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "Quantcast did not fire here, although it fires on 3 of 5 pages of this market.",
+     "evidence": {
+      "market_pages_with_tag": {
+       "pages": 3,
+       "of": 5
       }
      }
     },
@@ -10092,6 +11624,18 @@
      "evidence": {
       "cookie": "_gcl_aw",
       "value": "GCL.1794818553.TEST_MON_20261116"
+     }
+    },
+    {
+     "id": "CLID-02",
+     "title": "msclkid stored in _uetmsclkid",
+     "severity": "red",
+     "result": "fail",
+     "target": "de-cp-hr-zeiterfassung",
+     "detail": "_uetmsclkid missing or does not contain the test msclkid.",
+     "evidence": {
+      "cookie": "_uetmsclkid",
+      "value": null
      }
     },
     {
@@ -10214,48 +11758,148 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "de-cp-sage-intacct",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-PE4Z9JJWVN"
-       ],
-       "google_ads": [
-        "970123043"
-       ],
-       "linkedin": [
-        "58294"
-       ],
-       "meta": [
-        "499565794547363"
-       ],
-       "microsoft_uet": [
-        "12002546"
-       ],
-       "other:adnxs.com": [],
-       "other:bing.com": [],
-       "other:doubleclick.net": [],
-       "other:openai.com": [],
-       "other:quantserve.com": [],
-       "other:sjv.io": [],
-       "quantcast": [
-        "p-E6KY6asqFcmVm"
-       ],
-       "tealium_collect": [],
-       "tiktok": [],
-       "zoominfo": [
-        "654e77cd8ec2360c5a6693e1"
-       ]
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "G-PE4Z9JJWVN",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:google_ads",
+     "title": "Google Ads (remarketing / conversion) fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "970123043",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:linkedin",
+     "title": "LinkedIn Insight Tag fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "58294",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:meta",
+     "title": "Meta Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "499565794547363",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:microsoft_uet",
+     "title": "Microsoft Advertising UET fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "12002546",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:adnxs.com",
+     "title": "other:adnxs.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:bing.com",
+     "title": "other:bing.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:openai.com",
+     "title": "other:openai.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:quantserve.com",
+     "title": "other:quantserve.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:sjv.io",
+     "title": "other:sjv.io fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:quantcast",
+     "title": "Quantcast fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "p-E6KY6asqFcmVm",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tealium_collect",
+     "title": "Tealium Collect (AudienceStream) fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tiktok",
+     "title": "TikTok Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:zoominfo",
+     "title": "ZoomInfo fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-sage-intacct",
+     "detail": "654e77cd8ec2360c5a6693e1",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -10401,48 +12045,148 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "de-produkte-sage-active",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-PE4Z9JJWVN"
-       ],
-       "google_ads": [
-        "970123043"
-       ],
-       "linkedin": [
-        "58294"
-       ],
-       "meta": [
-        "499565794547363"
-       ],
-       "microsoft_uet": [
-        "12002546"
-       ],
-       "other:adnxs.com": [],
-       "other:bing.com": [],
-       "other:doubleclick.net": [],
-       "other:openai.com": [],
-       "other:quantserve.com": [],
-       "other:sjv.io": [],
-       "quantcast": [
-        "p-E6KY6asqFcmVm"
-       ],
-       "tealium_collect": [],
-       "tiktok": [],
-       "zoominfo": [
-        "654e77cd8ec2360c5a6693e1"
-       ]
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "G-PE4Z9JJWVN",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:google_ads",
+     "title": "Google Ads (remarketing / conversion) fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "970123043",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:linkedin",
+     "title": "LinkedIn Insight Tag fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "58294",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:meta",
+     "title": "Meta Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "499565794547363",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:microsoft_uet",
+     "title": "Microsoft Advertising UET fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "12002546",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:adnxs.com",
+     "title": "other:adnxs.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:bing.com",
+     "title": "other:bing.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:openai.com",
+     "title": "other:openai.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:quantserve.com",
+     "title": "other:quantserve.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:sjv.io",
+     "title": "other:sjv.io fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:quantcast",
+     "title": "Quantcast fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "p-E6KY6asqFcmVm",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tealium_collect",
+     "title": "Tealium Collect (AudienceStream) fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tiktok",
+     "title": "TikTok Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:zoominfo",
+     "title": "ZoomInfo fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "654e77cd8ec2360c5a6693e1",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -10600,48 +12344,148 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "de-cp-webinar-sage-x3",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-PE4Z9JJWVN"
-       ],
-       "google_ads": [
-        "970123043"
-       ],
-       "linkedin": [
-        "58294"
-       ],
-       "meta": [
-        "499565794547363"
-       ],
-       "microsoft_uet": [
-        "12002546"
-       ],
-       "other:adnxs.com": [],
-       "other:bing.com": [],
-       "other:doubleclick.net": [],
-       "other:openai.com": [],
-       "other:quantserve.com": [],
-       "other:sjv.io": [],
-       "quantcast": [
-        "p-E6KY6asqFcmVm"
-       ],
-       "tealium_collect": [],
-       "tiktok": [],
-       "zoominfo": [
-        "654e77cd8ec2360c5a6693e1"
-       ]
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "G-PE4Z9JJWVN",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:google_ads",
+     "title": "Google Ads (remarketing / conversion) fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "970123043",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:linkedin",
+     "title": "LinkedIn Insight Tag fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "58294",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:meta",
+     "title": "Meta Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "499565794547363",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:microsoft_uet",
+     "title": "Microsoft Advertising UET fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "12002546",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:adnxs.com",
+     "title": "other:adnxs.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:bing.com",
+     "title": "other:bing.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:openai.com",
+     "title": "other:openai.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:quantserve.com",
+     "title": "other:quantserve.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:sjv.io",
+     "title": "other:sjv.io fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:quantcast",
+     "title": "Quantcast fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "p-E6KY6asqFcmVm",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tealium_collect",
+     "title": "Tealium Collect (AudienceStream) fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tiktok",
+     "title": "TikTok Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:zoominfo",
+     "title": "ZoomInfo fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-cp-webinar-sage-x3",
+     "detail": "654e77cd8ec2360c5a6693e1",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -10693,15 +12537,22 @@
    ],
    "acks_applied": [],
    "red_since": "2026-11-14",
-   "new_failures": []
+   "new_failures": [
+    "CLID-02|de-cp-hr-zeiterfassung",
+    "CLID-02|de-cp-payroll-standard-shopping",
+    "TAG:microsoft_uet|de-cp-hr-zeiterfassung",
+    "TAG:microsoft_uet|de-cp-payroll-standard-shopping",
+    "TAG:quantcast|de-cp-hr-zeiterfassung",
+    "TAG:quantcast|de-cp-payroll-standard-shopping"
+   ]
   },
   "AT": {
    "name": "Austria",
    "tealium_profile": "GTM-PS6MXC",
    "rating": {
-    "status": "yellow",
+    "status": "green",
     "red_count": 0,
-    "yellow_count": 10,
+    "yellow_count": 0,
     "site_down": [],
     "blocked_pages": [],
     "coverage": "full",
@@ -10709,9 +12560,17 @@
     "pages_checked": 6,
     "pages_configured": 6
    },
-   "status": "yellow",
+   "status": "green",
    "source": "playwright",
-   "baseline_confirmed": null,
+   "baseline_confirmed": "2026-11-17T13:28:18Z",
+   "baseline": {
+    "pages_confirmed": 6,
+    "pages_learning": 0,
+    "market_core": [
+     "floodlight",
+     "ga4"
+    ]
+   },
    "utag": {
     "publish_version": "GTM-PS6MXC v13",
     "changed": false,
@@ -10861,24 +12720,40 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-dpw-sage-dpw",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": []
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-sage-dpw",
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -10982,24 +12857,40 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-dpw-zeiterfassung",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": []
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-zeiterfassung",
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -11103,25 +12994,49 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-dpw-lohn-outsourcing",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": [],
-       "other:googletagmanager.com": []
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googletagmanager.com",
+     "title": "other:googletagmanager.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-lohn-outsourcing",
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -11225,24 +13140,40 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-dpw-lohnverrechnung",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": []
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-lohnverrechnung",
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -11346,23 +13277,50 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-dpw-reisekostenabrechnung",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googletagmanager.com",
+     "title": "other:googletagmanager.com fires after consent",
+     "severity": "info",
+     "result": "fail",
+     "target": "at-dpw-reisekostenabrechnung",
+     "detail": "other:googletagmanager.com did not fire after consent.",
      "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": []
-      }
+      "expected_accounts": []
      }
     },
     {
@@ -11467,24 +13425,40 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-dpw-fairpay",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": []
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-dpw-fairpay",
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -11519,24 +13493,40 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-j-infopaket#1",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": []
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-j-infopaket#1",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-j-infopaket#1",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-j-infopaket#1",
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "JRNY-01",
@@ -11548,22 +13538,31 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-j-infopaket#2",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ]
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-j-infopaket#2",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "JRNY-04",
+     "title": "gclid survives the journey",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-j-infopaket#2",
+     "detail": "gclid still in _gcl_aw at the last step",
+     "evidence": {}
     },
     {
      "id": "JRNY-01",
@@ -11575,24 +13574,40 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-j-kontakt#1",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ],
-       "other:doubleclick.net": [],
-       "other:googleadservices.com": []
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-j-kontakt#1",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-j-kontakt#1",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:googleadservices.com",
+     "title": "other:googleadservices.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "at-j-kontakt#1",
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "JRNY-01",
@@ -11604,27 +13619,38 @@
      "evidence": {}
     },
     {
-     "id": "TAG-BASELINE",
-     "title": "Tag baseline for this page",
-     "severity": "yellow",
-     "result": "warn",
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
      "target": "at-j-kontakt#2",
-     "detail": "No confirmed baseline yet - tags recorded but not compared.",
-     "evidence": {
-      "seen": {
-       "floodlight": [
-        "5195550"
-       ],
-       "ga4": [
-        "G-M4HF0CKEGQ"
-       ]
-      }
-     }
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-j-kontakt#2",
+     "detail": "G-M4HF0CKEGQ",
+     "evidence": {}
+    },
+    {
+     "id": "JRNY-04",
+     "title": "gclid survives the journey",
+     "severity": "red",
+     "result": "pass",
+     "target": "at-j-kontakt#2",
+     "detail": "gclid still in _gcl_aw at the last step",
+     "evidence": {}
     }
    ],
    "acks_applied": [],
    "red_since": null,
-   "new_failures": []
+   "new_failures": [
+    "TAG:other:googletagmanager.com|at-dpw-reisekostenabrechnung"
+   ]
   },
   "FR": {
    "name": "France",
@@ -11638,11 +13664,16 @@
     "coverage": "tealium_only",
     "acknowledged_count": 0,
     "pages_checked": 0,
-    "pages_configured": 24
+    "pages_configured": 34
    },
    "status": "green",
    "source": "none",
-   "baseline_confirmed": null,
+   "baseline_confirmed": "2026-11-17T13:28:19Z",
+   "baseline": {
+    "pages_confirmed": 0,
+    "pages_learning": 0,
+    "market_core": []
+   },
    "utag": {
     "publish_version": "202611051052",
     "changed": false,
@@ -11654,113 +13685,28 @@
    },
    "pages": [
     {
+     "id": "fr-ciel-compta",
+     "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx",
+     "type": "product"
+    },
+    {
+     "id": "fr-ciel-gestion-commerciale",
+     "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx",
+     "type": "product"
+    },
+    {
      "id": "fr-home",
      "url": "https://www.sage.com/fr-fr/",
      "type": "content"
     },
     {
-     "id": "fr-produits",
-     "url": "https://www.sage.com/fr-fr/produits/",
-     "type": "product"
-    },
-    {
-     "id": "fr-sage-50",
-     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
-     "type": "product"
-    },
-    {
-     "id": "fr-sage-50-test",
-     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/",
-     "type": "trial"
-    },
-    {
-     "id": "fr-sage-50-compta",
-     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-compta/",
-     "type": "product"
-    },
-    {
-     "id": "fr-sage-50-gescom",
-     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/sage-50-gestion-commerciale/",
-     "type": "product"
-    },
-    {
-     "id": "fr-sage-active",
-     "url": "https://www.sage.com/fr-fr/produits/sage-active/",
-     "type": "product"
-    },
-    {
-     "id": "fr-sage-100",
-     "url": "https://www.sage.com/fr-fr/produits/sage-100/",
-     "type": "product"
-    },
-    {
-     "id": "fr-sage-100-compta",
-     "url": "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/",
-     "type": "product"
-    },
-    {
-     "id": "fr-sage-100-paie",
-     "url": "https://www.sage.com/fr-fr/produits/sage-100-paie-rh/",
-     "type": "product"
-    },
-    {
-     "id": "fr-frp-1000",
-     "url": "https://www.sage.com/fr-fr/produits/sage-frp-1000/",
-     "type": "product"
-    },
-    {
-     "id": "fr-intacct",
-     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
-     "type": "product"
-    },
-    {
-     "id": "fr-x3",
-     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/",
-     "type": "product"
-    },
-    {
-     "id": "fr-x3-demo",
-     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/demander-demonstration/",
-     "type": "form"
-    },
-    {
-     "id": "fr-compta-facturation",
-     "url": "https://www.sage.com/fr-fr/sage-business-cloud/compta-facturation/",
-     "type": "product"
-    },
-    {
-     "id": "fr-comptabilite",
-     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/",
+     "id": "fr-cp-50100jemaitrise",
+     "url": "https://www.sage.com/fr-fr/cp/50100jemaitrise/",
      "type": "landing_page"
     },
     {
-     "id": "fr-compta-test",
-     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/version-test-gratuit/",
-     "type": "trial"
-    },
-    {
-     "id": "fr-compta-tpe",
-     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/tpe-petite-entreprise/",
-     "type": "landing_page"
-    },
-    {
-     "id": "fr-facturation",
-     "url": "https://www.sage.com/fr-fr/comptabilite-logiciels/facturation/",
-     "type": "landing_page"
-    },
-    {
-     "id": "fr-facture-electronique",
-     "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/api-plateforme-agreee/",
-     "type": "landing_page"
-    },
-    {
-     "id": "fr-paie",
-     "url": "https://www.sage.com/fr-fr/paie-logiciels-gestion/",
-     "type": "landing_page"
-    },
-    {
-     "id": "fr-erp",
-     "url": "https://www.sage.com/fr-fr/erp-logiciels/",
+     "id": "fr-dematerialisation-facture-electronique",
+     "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/",
      "type": "landing_page"
     },
     {
@@ -11769,9 +13715,144 @@
      "type": "landing_page"
     },
     {
-     "id": "fr-contact",
-     "url": "https://www.sage.com/fr-fr/a-propos/contact/",
-     "type": "form"
+     "id": "fr-experts-comptables-produits-sage-generation-exp",
+     "url": "https://www.sage.com/fr-fr/experts-comptables/produits/sage-generation-experts-connect/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-experts-comptables-saisie-comptable-automatique",
+     "url": "https://www.sage.com/fr-fr/experts-comptables/saisie-comptable-automatique/",
+     "type": "landing_page"
+    },
+    {
+     "id": "fr-produits-sage-100",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-100-comptabilite",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-100-gestion-commerciale",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100/gestion-commerciale/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-100-sage-automatisation-comptable",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-automatisation-comptable/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-100-sage-recouvrement-creances",
+     "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-recouvrement-creances/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-50cloud",
+     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-50cloud-test-gratuit",
+     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/",
+     "type": "trial"
+    },
+    {
+     "id": "fr-produits-sage-active",
+     "url": "https://www.sage.com/fr-fr/produits/sage-active/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-bi-reporting",
+     "url": "https://www.sage.com/fr-fr/produits/sage-bi-reporting/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-business-reporting",
+     "url": "https://www.sage.com/fr-fr/produits/sage-business-reporting/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-data-clean-and-control",
+     "url": "https://www.sage.com/fr-fr/produits/sage-data-clean-and-control/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-frp-1000",
+     "url": "https://www.sage.com/fr-fr/produits/sage-frp-1000/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-sales-management",
+     "url": "https://www.sage.com/fr-fr/produits/sage-sales-management/",
+     "type": "product"
+    },
+    {
+     "id": "fr-produits-sage-xrt-advanced",
+     "url": "https://www.sage.com/fr-fr/produits/sage-xrt-advanced/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-intacct",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-intacct-bon-commandes",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/bon-commandes/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-intacct-compte-crediteur",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-crediteur/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-intacct-compte-debiteur",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-debiteur/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-intacct-multi-societes",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/multi-societes/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-intacct-consolidation-comptable",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/extended-capabilities/consolidation-comptable/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-logiciels-gestionnaire-de-paie",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/logiciels/gestionnaire-de-paie/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-sage-x3",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-sage-x3-gestion-de-la-production",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/fonctionnalites-produit/gestion-de-la-production/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-sage-x3-secteurs-agroalimentaire",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/agroalimentaire/",
+     "type": "product"
+    },
+    {
+     "id": "fr-sbc-sage-x3-secteurs-construction",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/construction/",
+     "type": "product"
+    },
+    {
+     "id": "fr-cp-logiciel-comptabilite",
+     "url": "https://www.sage.com/fr-fr/cp/logiciel-comptabilite/",
+     "type": "landing_page"
     }
    ],
    "checks": [
@@ -11792,6 +13873,70 @@
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "CONV-03:ecom_try",
+     "title": "Conversion tag set for 'ecom_try' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged ()",
+     "evidence": {
+      "baseline": [],
+      "now": []
+     }
+    },
+    {
+     "id": "CONV-03:ecom_buy",
+     "title": "Conversion tag set for 'ecom_buy' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged ()",
+     "evidence": {
+      "baseline": [],
+      "now": []
+     }
+    },
+    {
+     "id": "CONV-03:gated_trial",
+     "title": "Conversion tag set for 'gated_trial' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (129, 595, 608)",
+     "evidence": {
+      "baseline": [
+       "129",
+       "595",
+       "608"
+      ],
+      "now": [
+       "129",
+       "595",
+       "608"
+      ]
+     }
+    },
+    {
+     "id": "CONV-03:gated_contact",
+     "title": "Conversion tag set for 'gated_contact' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (129, 595, 609)",
+     "evidence": {
+      "baseline": [
+       "129",
+       "595",
+       "609"
+      ],
+      "now": [
+       "129",
+       "595",
+       "609"
+      ]
+     }
     }
    ],
    "acks_applied": [],
@@ -11814,7 +13959,12 @@
    },
    "status": "green",
    "source": "none",
-   "baseline_confirmed": null,
+   "baseline_confirmed": "2026-11-17T13:28:20Z",
+   "baseline": {
+    "pages_confirmed": 1,
+    "pages_learning": 0,
+    "market_core": []
+   },
    "utag": {
     "publish_version": "202611051016",
     "changed": false,
@@ -11954,6 +14104,78 @@
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "CONV-03:ecom_try",
+     "title": "Conversion tag set for 'ecom_try' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (203)",
+     "evidence": {
+      "baseline": [
+       "203"
+      ],
+      "now": [
+       "203"
+      ]
+     }
+    },
+    {
+     "id": "CONV-03:ecom_buy",
+     "title": "Conversion tag set for 'ecom_buy' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (203)",
+     "evidence": {
+      "baseline": [
+       "203"
+      ],
+      "now": [
+       "203"
+      ]
+     }
+    },
+    {
+     "id": "CONV-03:gated_trial",
+     "title": "Conversion tag set for 'gated_trial' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (36, 203, 398)",
+     "evidence": {
+      "baseline": [
+       "36",
+       "203",
+       "398"
+      ],
+      "now": [
+       "36",
+       "203",
+       "398"
+      ]
+     }
+    },
+    {
+     "id": "CONV-03:gated_contact",
+     "title": "Conversion tag set for 'gated_contact' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (36, 203, 399)",
+     "evidence": {
+      "baseline": [
+       "36",
+       "203",
+       "399"
+      ],
+      "now": [
+       "36",
+       "203",
+       "399"
+      ]
+     }
     }
    ],
    "acks_applied": [],
@@ -11976,7 +14198,12 @@
    },
    "status": "green",
    "source": "none",
-   "baseline_confirmed": null,
+   "baseline_confirmed": "2026-11-17T13:28:21Z",
+   "baseline": {
+    "pages_confirmed": 1,
+    "pages_learning": 0,
+    "market_core": []
+   },
    "utag": {
     "publish_version": "202611050958",
     "changed": false,
@@ -12106,6 +14333,78 @@
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "CONV-03:ecom_try",
+     "title": "Conversion tag set for 'ecom_try' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (223)",
+     "evidence": {
+      "baseline": [
+       "223"
+      ],
+      "now": [
+       "223"
+      ]
+     }
+    },
+    {
+     "id": "CONV-03:ecom_buy",
+     "title": "Conversion tag set for 'ecom_buy' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (223)",
+     "evidence": {
+      "baseline": [
+       "223"
+      ],
+      "now": [
+       "223"
+      ]
+     }
+    },
+    {
+     "id": "CONV-03:gated_trial",
+     "title": "Conversion tag set for 'gated_trial' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (223, 402, 589)",
+     "evidence": {
+      "baseline": [
+       "223",
+       "402",
+       "589"
+      ],
+      "now": [
+       "223",
+       "402",
+       "589"
+      ]
+     }
+    },
+    {
+     "id": "CONV-03:gated_contact",
+     "title": "Conversion tag set for 'gated_contact' unchanged",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "market",
+     "detail": "Conversion tags unchanged (223, 402, 590)",
+     "evidence": {
+      "baseline": [
+       "223",
+       "402",
+       "590"
+      ],
+      "now": [
+       "223",
+       "402",
+       "590"
+      ]
+     }
     }
    ],
    "acks_applied": [],

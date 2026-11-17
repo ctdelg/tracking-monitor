@@ -38,12 +38,29 @@ The monitor answers these questions for every market:
 | 1 | **Do the landing pages load?** | It opens every paid landing page from the campaign reports and notes errors and redirects (for example an expired page that sends visitors to the homepage). |
 | 2 | **Does the tag manager load?** | It checks that Tealium (sage.com) or Google Tag Manager (sagedpw.at) loads, and that it is the right setup for the market. |
 | 3 | **Does the cookie banner work?** | Before the visitor agrees, **no** advertising tag may fire and no advertising cookie may be set. After "Accept all", the consent must be stored. |
-| 4 | **Do all ad and analytics tags fire?** | After "Accept all" it records which platforms receive a page view: Floodlight, Google Ads, GA4, Microsoft UET, Meta, LinkedIn, TikTok and others. It compares this with the agreed list for that page (the "baseline"). |
+| 4 | **Do all ad and analytics tags fire?** | After "Accept all" it records which platforms receive a page view: Floodlight, Google Ads, GA4, Microsoft UET, Meta, LinkedIn, TikTok and others. It compares this with the list of tags that normally fire there (the "baseline", see below). |
 | 5 | **Is the click ID kept?** | It arrives with a test click ID (`gclid`, `msclkid`, `fbclid`, all starting with `TEST_MON_`) and checks that it is stored and passed on to the ad tags. |
 | 6 | **Do conversions fire?** | It reads the live tag rules and replays a form submission or web-shop trial/purchase "in a sandbox", without sending anything. Then it checks which conversion tags would fire. This is the check that would have caught the tag-98 break. |
 | 7 | **Do the lead forms work?** | It finds every demo, product tour, download, quote and contact form behind the CTAs on each landing page. It checks that each form is active and that sending it would reach Floodlight and the other platforms (UET, LinkedIn, Meta, TikTok …). |
 | 8 | **Does the journey work?** | It follows the path a visitor takes, for example landing page → product tour page or landing page → contact form. It checks that the click ID and the tags survive along the way. It stops before anything is sent. |
 | 9 | **Did someone change the tag setup?** | Every day it compares the published Tealium and Google Tag Manager setup with the day before. Changes are listed on the dashboard. If a conversion tag was touched, the market turns yellow. |
+
+### How the baseline works
+
+Nobody has a complete list of which tags belong on which page, so the monitor uses the **current state as
+the baseline** and reports every change from then on:
+
+- **New pages learn for 3 run days.** Every tag seen in those runs counts as "belongs here", so a tag that
+  only loads now and then is not reported by mistake. From the 3rd day, a missing tag is reported.
+- **Market rule:** an important tag (Floodlight, Google Ads, GA4, Microsoft UET, Meta, LinkedIn and others)
+  that fires on most pages of a market is expected on every page of that market. A tag that is missing on a
+  few pages from the start is reported, not accepted as normal. Example: Microsoft UET on the German payroll
+  and HR pages.
+- **Known problems stay problems.** The conversion checks (web shop, lead forms, the AT form trigger) and the
+  cookie banner checks do not depend on the baseline.
+- Pages where tags fire before consent (www.ciel.com) are not learned until the cookie banner works.
+- **After an intended change**, for example a tag removed on purpose, the baseline is reset for that page or
+  market and learned again (ask Claude "re-learn the baseline for FR").
 
 ### What the monitor never does
 
@@ -94,8 +111,7 @@ web app.
 **Other open items**
 - [ ] Carolina Torres sends the allowlist request (`docs/allowlist-request.md`). Once granted, add the agreed header as the GitHub
       secret `MONITOR_AUTH_HEADER`.
-- [ ] Confirm the tag baselines for DE and AT, then for FR, ES and PT. Until a baseline is confirmed, that
-      market shows yellow.
+- [x] Baselines: the current state was adopted as the baseline on 17 Nov 2026 (see "How the baseline works").
 - [ ] DE: clarify whether Microsoft UET should fire on the payroll and HR landing pages (it currently does not).
 - [ ] AT: clarify whether the missing Google Ads remarketing, UET, LinkedIn and Meta tags on sagedpw.at are intended.
 - [ ] FR: www.ciel.com has no cookie banner, and tags fire before consent. Raise this with the privacy / web team.
@@ -118,7 +134,7 @@ web app.
 | **Floodlight** | Google's conversion tags (Campaign Manager 360). Google Ads and SA360 bid on them. |
 | **Click ID** (gclid, msclkid, fbclid) | The ID an ad click adds to the URL. Without it, a later conversion cannot be credited to the ad. |
 | **Consent** | The visitor's choice in the cookie banner. Advertising tags may only run after "Accept". |
-| **Baseline** | The agreed list of tags that should fire on a page or form. The monitor reports differences from it. |
+| **Baseline** | The list of tags that normally fire on a page or form, learned from the monitor's own runs. The monitor reports differences from it. |
 | **Acknowledge** | Mark a finding as "being handled" so it stops affecting the colour for a while. |
 
 ---
@@ -135,7 +151,7 @@ python -m monitor run --market AT         # full run for one market
 python -m unittest discover tests         # regression tests incl. the tag-98 replay
 ```
 
-Day-to-day changes ("add this URL to FR", "why is DE red?", "confirm the AT baseline") are easiest with the
+Day-to-day changes ("add this URL to FR", "why is DE red?", "re-learn the FR baseline") are easiest with the
 Claude skill in `.claude/skills/tracking-monitor/`, which loads automatically in this repository.
 
 ### Repository map
@@ -146,7 +162,7 @@ Claude skill in `.claude/skills/tracking-monitor/`, which loads automatically in
 | `config/platforms.yaml` | How each platform's hits are recognised, and how serious a missing hit is |
 | `config/forms/<MKT>.json` | Which lead forms (demo, product tour, download …) sit on which page |
 | `config/acks.json` | Acknowledged findings (mirrored from the dashboard) |
-| `baseline/` | Confirmed expected tags per page, form and conversion event; `_pending/` holds proposals |
+| `baseline/` | Learned tags per page, journey, form and conversion event, plus each market's rule (tags expected on every page) |
 | `monitor/` | The checker (`checks.py` holds the check catalogue) |
 | `results/` | Daily results, history, Tealium and GTM snapshots, Claude's explanations |
 | `.github/workflows/daily.yml` | Scheduled run plus a manual "Run workflow" button |

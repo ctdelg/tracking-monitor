@@ -53,16 +53,16 @@
    },
    "DE": {
     "status": "red",
-    "red": 2,
-    "yellow": 9,
+    "red": 6,
+    "yellow": 5,
     "site_down": 0,
     "coverage": "partial",
     "publish": false
    },
    "AT": {
-    "status": "yellow",
+    "status": "green",
     "red": 0,
-    "yellow": 10,
+    "yellow": 0,
     "site_down": 0,
     "coverage": "full",
     "publish": false
@@ -108,7 +108,7 @@
    "AT": {
     "status": "red",
     "red": 2,
-    "yellow": 11,
+    "yellow": 1,
     "site_down": 0,
     "coverage": "full",
     "publish": true
@@ -116,7 +116,7 @@
    "FR": {
     "status": "red",
     "red": 9,
-    "yellow": 6,
+    "yellow": 4,
     "site_down": 0,
     "coverage": "partial",
     "publish": false

@@ -43,10 +43,11 @@ Variant A or B:
 5. Share the dashboard (Share menu on the artifact) with the market managers, Marius and MarTech.
    People who should acknowledge findings need at least "Contributor" access.
 
-## 4. Confirm baselines (once per market)
-The monitor learns which tags each page should fire ("baseline"). Proposals are in `baseline/_pending/`.
-Ask Claude: "Show me the pending baseline for FR". If it looks right: "Confirm the FR baseline".
-Until a market is confirmed, its pages show yellow ("baseline pending").
+## 4. Baselines (nothing to confirm)
+The monitor learns which tags belong on each page by itself: the current state was adopted on 17 Nov 2026,
+and new pages learn for their first 3 run days. A tag that fires on most pages of a market is expected on all
+of them. To see what was learned: "Show me the baseline for DE". After an intended tag change:
+"Re-learn the baseline for <page or market>".
 
 ## 5. Demo script (30 minutes)
 1. **Why (3 min):** the DE tag-98 story. Nobody noticed for weeks. Show `tests/test_monitor.py`: the monitor
@@ -80,7 +81,6 @@ Until a market is confirmed, its pages show yellow ("baseline pending").
 ## Open items at handover (2026-11-14)
 - [ ] Carolina Torres sends the allowlist request (`docs/allowlist-request.md`, not sent yet) to the sage.com IT / web security team; once granted, set `MONITOR_AUTH_HEADER`.
 - [ ] Market owners review the URL lists and add paid-only landing pages.
-- [ ] Confirm baselines for all five markets.
 - [ ] Decide the email channel (Phase 2): Claude mail connector or SMTP from GitHub Actions.
 - [ ] Check with MarTech: AT has no active Floodlight / Google Ads conversion tags (they are limited to
       en-ZA style profiles); FR, ES and PT ecom checkouts (if used) do not fire the Floodlight form tag either.

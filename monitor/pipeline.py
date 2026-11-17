@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from . import SCHEMA_VERSION, __version__, checks, forms, gtm, loadrules, rules, tealium
+from . import baseline as baseline_mod
 from .config import BASELINE_DIR, RESULTS_DIR, load_acks, load_markets, load_platforms, load_settings
 
 
@@ -247,7 +248,7 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
         raw = _read(raw_path(day, code))
         if not raw:
             continue
-        base = load_baseline(code) or {}
+        base = baseline_mod.learn(day, code, raw, platforms)   # as-is baseline, learns new pages
         results = []
         if raw.get("tealium"):
             results += checks.check_tealium(code, raw["tealium"], base)
@@ -265,7 +266,7 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
             # a page can live on another site of the market (e.g. ciel.com for FR): its own site/profile win
             meta = url_meta.get(v["id"], {})
             mm = {**m, **{k: meta[k] for k in ("site", "tealium_profile", "tag_manager") if k in meta}}
-            results += checks.check_page(v, mm, platforms, (base.get("urls") or {}).get(v["id"]))
+            results += checks.check_page(v, mm, platforms, baseline_mod.page_expectation(base, v["id"]))
         for j in brw.get("journeys", []):
             results += checks.check_journey(j, platforms, (base.get("journeys") or {}).get(j["id"]))
         applied = rules.apply_acks(code, results, acks, day)
@@ -281,6 +282,9 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
             "status": rating["status"],
             "source": brw.get("source", "none"),
             "baseline_confirmed": (base or {}).get("confirmed_at"),
+            "baseline": {"pages_confirmed": sum(1 for e in (base.get("urls") or {}).values() if e.get("status") == "confirmed"),
+                         "pages_learning": sum(1 for e in (base.get("urls") or {}).values() if e.get("status") != "confirmed"),
+                         "market_core": sorted((base.get("market_core") or {}))},
             "utag": ({
                 "publish_version": ((raw.get("tealium") or {}).get("parsed") or {}).get("publish_version"),
                 "changed": bool(((raw.get("tealium") or {}).get("diff") or {}).get("changed")),

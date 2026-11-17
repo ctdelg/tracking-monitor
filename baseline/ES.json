@@ -1,6 +1,5 @@
 {
  "market": "ES",
- "proposed_from": "2026-11-14",
  "urls": {
   "es-sage-50": {
    "post": {
@@ -25,7 +24,6 @@
     "other:contentsquare.net": [],
     "other:doubleclick.net": [],
     "other:entfabric-sage.com": [],
-    "other:mypurecloud.ie": [],
     "other:on.aws": [],
     "other:openai.com": [],
     "other:optimizely.com": [],
@@ -42,7 +40,14 @@
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
     ]
-   }
+   },
+   "days": [
+    "2026-11-14"
+   ],
+   "status": "confirmed",
+   "since": "2026-11-14",
+   "confirmed_at": "2026-11-17",
+   "adopted": "as-is baseline"
   }
  },
  "journeys": {},
@@ -62,6 +67,14 @@
    "36",
    "203",
    "399"
+  ],
+  "purchase": [
+   "283"
   ]
- }
+ },
+ "forms": {},
+ "market_core": {},
+ "updated_at": "2026-11-17T13:28:47Z",
+ "confirmed_at": "2026-11-17T13:28:20Z",
+ "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

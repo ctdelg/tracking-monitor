@@ -330,6 +330,7 @@
      "expected_tags": [
       "98"
      ],
+     "not_offered": false,
      "conversion_tags_fired": []
     },
     {
@@ -376,6 +377,7 @@
      "expected_tags": [
       "98"
      ],
+     "not_offered": false,
      "conversion_tags_fired": []
     },
     {
@@ -441,6 +443,7 @@
      "expected_tags": [
       "98"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "98",
       "389",
@@ -510,6 +513,7 @@
      "expected_tags": [
       "98"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "98",
       "389",
@@ -561,6 +565,7 @@
      "expected_tags": [
       "284"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "284"
      ]

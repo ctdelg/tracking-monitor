@@ -318,6 +318,7 @@
      },
      "errors": [],
      "expected_tags": [],
+     "not_offered": true,
      "conversion_tags_fired": [
       "203"
      ]
@@ -365,7 +366,10 @@
       "platform": null
      },
      "errors": [],
-     "expected_tags": [],
+     "expected_tags": [
+      "36"
+     ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "203"
      ]
@@ -430,6 +434,7 @@
      "expected_tags": [
       "36"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "36",
       "203",
@@ -496,6 +501,7 @@
      "expected_tags": [
       "36"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "36",
       "203",
@@ -548,6 +554,7 @@
      "expected_tags": [
       "283"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "283"
      ]

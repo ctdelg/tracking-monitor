@@ -1,7 +1,7 @@
 {
  "day": "2026-11-17",
  "written_by": "Claude (FR landing page list added)",
- "summary": "FR is red because the two Sage 50 (formerly Ciel) pages on www.ciel.com have no cookie banner: analytics and advertising cookies are set and GA4, Google Ads and LinkedIn fire before any consent. This is a privacy problem rather than a measurement problem.\nDE stays red for one reason: Floodlight tag 98 does not fire for web-shop trial and purchase submits (load rule 274, since the Tealium publish of 24 Aug 2026).\nNew today: the FR list from the paid search report is in (34 URLs: 32 on sage.com/fr-fr, 2 on ciel.com). All 32 sage.com pages answer. All 49 FR lead forms (demo, callback, quote, download, product tour) are active and their submit fires Floodlight 129 plus the matching lead-type tag, LinkedIn, Meta, TikTok and Reddit.\nAT is red: its main Floodlight conversion (sage_012) is set to fire on a click on a button whose ID contains 'Submit', but the buttons on the AT contact and Infopaket forms have no ID, so it cannot fire when a form is sent. ES and PT: tag rule checks only.\nConversion checks now cover every market: for each one the monitor knows which Floodlight tag must fire for a lead form submit (DE 98, FR 129, ES 36, PT 402) and for a purchase (DE 284, FR 464, ES 283, ciel.com 9). In AT (Google Tag Manager) it reads each Floodlight trigger and checks the matching button or link exists.",
+ "summary": "Global incident: web-shop purchases (the Sage Active checkout) do not fire the Floodlight lead tag in DE (98), FR (129) or ES (36). The tag rules need ga4_customer_lead_type, which Tealium only derives from lead form names, and the checkout does not send one. In DE this broke with the Tealium publish of 24 Aug 2026; in FR and ES it was never set up (July 2026 versions behave the same). MarTech has confirmed the EU set-up is still pending. DE also loses web-shop trials (only DE offers trials). Order confirmations still fire the sales tags (DE 284, FR 464, ES 283).\nFR is red because the two Sage 50 (formerly Ciel) pages on www.ciel.com have no cookie banner: analytics and advertising cookies are set and GA4, Google Ads and LinkedIn fire before any consent. This is a privacy problem rather than a measurement problem.\nDE stays red for one reason: Floodlight tag 98 does not fire for web-shop trial and purchase submits (load rule 274, since the Tealium publish of 24 Aug 2026).\nNew today: the FR list from the paid search report is in (34 URLs: 32 on sage.com/fr-fr, 2 on ciel.com). All 32 sage.com pages answer. All 49 FR lead forms (demo, callback, quote, download, product tour) are active and their submit fires Floodlight 129 plus the matching lead-type tag, LinkedIn, Meta, TikTok and Reddit.\nAT is red: its main Floodlight conversion (sage_012) is set to fire on a click on a button whose ID contains 'Submit', but the buttons on the AT contact and Infopaket forms have no ID, so it cannot fire when a form is sent. ES and PT: tag rule checks only.\nConversion checks now cover every market: for each one the monitor knows which Floodlight tag must fire for a lead form submit (DE 98, FR 129, ES 36, PT 402) and for a purchase (DE 284, FR 464, ES 283, ciel.com 9). In AT (Google Tag Manager) it reads each Floodlight trigger and checks the matching button or link exists.",
  "markets": {
   "FR": {
    "summary": "34 paid search URLs. The 2 ciel.com pages are checked automatically every day; the 32 sage.com pages wait for the bot-protection exception. All 49 lead forms on the sage.com pages pass.",
@@ -16,6 +16,15 @@
        "text": "Affects both Sage 50 pages on ciel.com.",
        "action": "Raise with the privacy / web team."
       }
+     ]
+    },
+    {
+     "tone": "red",
+     "title": "Web shop",
+     "items": [
+      "Sage Active purchases do not fire Floodlight 129.",
+      "Never set up in FR; MarTech confirmed it is pending EU-wide.",
+      "Order confirmations still fire sales tag 464."
      ]
     },
     {
@@ -43,7 +52,8 @@
     "CONS-03|fr-ciel-compta": "Google tags (GA4 G-8EYWV34H9Z and G-PE4Z9JJWVN, Google Ads) send hits without any Consent Mode signal, so Google treats them as consented.",
     "CONS-01|fr-ciel-gestion-commerciale": "Same as the Sage 50 Compta page: no consent tool on www.ciel.com.",
     "CONS-02|fr-ciel-gestion-commerciale": "Same as the Sage 50 Compta page: LinkedIn and Google Ads cookies before consent.",
-    "CONS-03|fr-ciel-gestion-commerciale": "Same as the Sage 50 Compta page: Google hits without Consent Mode."
+    "CONS-03|fr-ciel-gestion-commerciale": "Same as the Sage 50 Compta page: Google hits without Consent Mode.",
+    "CONV-01:ecom_buy|market": "Floodlight 129 needs (action=form_submit_success OR sitecore form) AND ga4_customer_lead_type, which only gated forms set. The Sage Active checkout (/fr-fr/cart/buy/) sends customer_lead_type=ecom_buy without it. Same set-up already in July 2026, so it was never configured. Owner: MarTech (Tealium), as part of the pending EU web-shop set-up."
    }
   },
   "DE": {
@@ -149,10 +159,41 @@
    }
   },
   "ES": {
-   "summary": "No page checks today (tag rule checks only)."
+   "summary": "Lead forms fire Floodlight 36 and purchases fire sales tag 283, but web-shop purchases from the Sage Active checkout do not fire the lead tag.",
+   "brief": [
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      "Sage Active web-shop purchases do not fire Floodlight 36.",
+      {
+       "text": "Never set up in ES (same in June 2026).",
+       "action": "Part of the pending EU web-shop set-up with MarTech."
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Lead forms fire Floodlight 36.",
+      "Order confirmations fire sales tag 283."
+     ]
+    },
+    {
+     "tone": "",
+     "title": "Coverage",
+     "items": [
+      "Tag rules only; no page opened today."
+     ]
+    }
+   ],
+   "findings": {
+    "CONV-01:ecom_buy|market": "Floodlight 36 needs ga4_customer_lead_type (rule 211), which only gated forms set. The Sage Active checkout (/es-es/cart/buy/) does not send it. Unchanged since at least June 2026. Owner: MarTech (Tealium)."
+   }
   },
   "PT": {
-   "summary": "No page checks today (tag rule checks only)."
+   "summary": "No web shop in PT. Lead forms fire Floodlight 402. Tag rules only; no page opened today."
   }
  },
  "publish": {}

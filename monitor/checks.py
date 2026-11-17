@@ -589,6 +589,15 @@ def check_gtm(market: dict, part: dict, baseline: dict | None, browser_part: dic
                     f"cannot fire from the paid landing pages or form pages - {why}. The link may exist elsewhere on the site."
                     if only_links else
                     f"can never fire on form submit - {why}. The GTM trigger and the website no longer match.")
+            if label in (market.get("tag_manager") or {}).get("lead_form_conversions", []):
+                # mirror the lead-form conversion into the cross-market conversion table
+                out.append(result("CONV-01:gated_contact", "red", "pass" if ok else "fail", "market",
+                                  f"Lead form submit: Floodlight {label} " + ("would fire." if ok else f"would NOT fire - {why}."),
+                                  {"trigger": paths}, title="Conversion tags fire for lead forms (GTM trigger)"))
+            if label in (market.get("tag_manager") or {}).get("lead_form_conversions", []):
+                for ev in (market.get("tag_manager") or {}).get("not_offered", []):
+                    out.append(result(f"CONV-01:{ev}", "info", "skip", "market",
+                                      f"'{ev}' is not offered in this market - not checked."))
             out.append(result("GTM-07", sev, "pass" if ok else "fail", f"conversion:{label}",
                               f"Floodlight {label}: " + text,
                               {"trigger": paths, "pages_checked": len(snaps)},
@@ -631,6 +640,10 @@ def check_tealium(market_code: str, tealium: dict, baseline: dict | None, target
         fired = set(r["fired"])
         expected = set(r.get("expected_tags") or [])
         cid = f"CONV-01:{name}"
+        if r.get("not_offered"):
+            out.append(result(cid, "info", "skip", t, f"'{name}' is not offered in this market - not checked.",
+                              title=f"Conversion tags fire for '{name}' (load rules)"))
+            continue
         if expected:
             missing = sorted(expected - fired, key=int)
             out.append(result(cid, "red", "fail" if missing else "pass", t,

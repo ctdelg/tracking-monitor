@@ -2,10 +2,20 @@
  "schema_version": 1,
  "monitor_version": "1.0.0",
  "day": "2026-11-17",
- "generated_at": "2026-11-17T11:05:10Z",
+ "generated_at": "2026-11-17T12:37:33Z",
  "global": {
   "status": "red",
-  "incidents": [],
+  "incidents": [
+   {
+    "check": "CONV-01:ecom_buy",
+    "markets": [
+     "DE",
+     "ES",
+     "FR"
+    ],
+    "note": "Same check fails in several markets - likely a shared cause (shared Tealium template/extension, OneTrust configuration or vendor outage)."
+   }
+  ],
   "system_notice": null
  },
  "markets": {
@@ -9822,7 +9832,7 @@
    "tealium_profile": "GTM-PS6MXC",
    "rating": {
     "status": "red",
-    "red_count": 1,
+    "red_count": 2,
     "yellow_count": 11,
     "site_down": [],
     "blocked_pages": [],
@@ -9905,6 +9915,76 @@
      "result": "pass",
      "target": "market",
      "detail": "Floodlight counter 5195550/sageg0/sage_013; Floodlight counter 5195550/sageg0/sage_012; Conversion Linker; Conversion Linker",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:gated_contact",
+     "title": "Conversion tags fire for lead forms (GTM trigger)",
+     "severity": "red",
+     "result": "fail",
+     "target": "market",
+     "detail": "Lead form submit: Floodlight sage_012 would NOT fire - no form button has an ID containing 'Submit' (buttons found: 'Jetzt kostenlos downloaden' id=none, 'Absenden' id=none).",
+     "evidence": {
+      "trigger": [
+       [
+        {
+         "fn": "_cn",
+         "var": "DoubleClick Floodlight",
+         "value": "true"
+        },
+        {
+         "fn": "_re",
+         "var": "__e",
+         "value": "(consents_initialized)|(consent_changed.*)"
+        },
+        {
+         "fn": "_eq",
+         "var": "__e",
+         "value": "gtm.click"
+        },
+        {
+         "fn": "_cn",
+         "var": "ID",
+         "value": "Submit"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "id": "CONV-01:ecom_try",
+     "title": "Conversion tags would fire for the conversion event (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'ecom_try' is not offered in this market - not checked.",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:ecom_buy",
+     "title": "Conversion tags would fire for the conversion event (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'ecom_buy' is not offered in this market - not checked.",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:gated_trial",
+     "title": "Conversion tags would fire for the conversion event (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'gated_trial' is not offered in this market - not checked.",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:purchase",
+     "title": "Conversion tags would fire for the conversion event (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'purchase' is not offered in this market - not checked.",
      "evidence": {}
     },
     {
@@ -10820,6 +10900,7 @@
    "acks_applied": [],
    "red_since": "2026-11-17",
    "new_failures": [
+    "CONV-01:gated_contact|market",
     "GTM-07|conversion:sage_012",
     "GTM-07|conversion:sage_013"
    ]
@@ -10829,7 +10910,7 @@
    "tealium_profile": "fr-fr",
    "rating": {
     "status": "red",
-    "red_count": 8,
+    "red_count": 9,
     "yellow_count": 6,
     "site_down": [],
     "blocked_pages": [
@@ -11042,6 +11123,62 @@
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "CONV-01:ecom_try",
+     "title": "Conversion tags fire for 'ecom_try' (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'ecom_try' is not offered in this market - not checked.",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:ecom_buy",
+     "title": "Conversion tags fire for 'ecom_buy' (load rules)",
+     "severity": "red",
+     "result": "fail",
+     "target": "market",
+     "detail": "Event 'ecom_buy': tag(s) 129 would NOT fire.",
+     "evidence": {
+      "fired": [
+       "61",
+       "201",
+       "339",
+       "402",
+       "433",
+       "436",
+       "467",
+       "470",
+       "475",
+       "476",
+       "500",
+       "507",
+       "520",
+       "527",
+       "550",
+       "557",
+       "583",
+       "607",
+       "633",
+       "645",
+       "648",
+       "656",
+       "657",
+       "658"
+      ],
+      "true_rules": [
+       "121",
+       "196",
+       "267",
+       "284",
+       "323",
+       "344",
+       "345",
+       "347"
+      ],
+      "errors": []
+     }
     },
     {
      "id": "CONV-01:gated_trial",
@@ -14709,15 +14846,16 @@
     "CONS-03|fr-ciel-compta",
     "CONS-03|fr-ciel-gestion-commerciale",
     "CONS-04|fr-ciel-compta",
-    "CONS-04|fr-ciel-gestion-commerciale"
+    "CONS-04|fr-ciel-gestion-commerciale",
+    "CONV-01:ecom_buy|market"
    ]
   },
   "ES": {
    "name": "Spain",
    "tealium_profile": "es-es",
    "rating": {
-    "status": "green",
-    "red_count": 0,
+    "status": "red",
+    "red_count": 1,
     "yellow_count": 0,
     "site_down": [],
     "blocked_pages": [],
@@ -14726,7 +14864,7 @@
     "pages_checked": 0,
     "pages_configured": 22
    },
-   "status": "green",
+   "status": "red",
    "source": "none",
    "baseline_confirmed": null,
    "utag": {
@@ -14868,6 +15006,61 @@
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "CONV-01:ecom_try",
+     "title": "Conversion tags fire for 'ecom_try' (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'ecom_try' is not offered in this market - not checked.",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:ecom_buy",
+     "title": "Conversion tags fire for 'ecom_buy' (load rules)",
+     "severity": "red",
+     "result": "fail",
+     "target": "market",
+     "detail": "Event 'ecom_buy': tag(s) 36 would NOT fire.",
+     "evidence": {
+      "fired": [
+       "3",
+       "4",
+       "8",
+       "75",
+       "180",
+       "203",
+       "273",
+       "285",
+       "293",
+       "318",
+       "338",
+       "340",
+       "352",
+       "362",
+       "397",
+       "412",
+       "418",
+       "420",
+       "426",
+       "427",
+       "430"
+      ],
+      "true_rules": [
+       "2",
+       "43",
+       "45",
+       "81",
+       "140",
+       "151",
+       "194",
+       "196",
+       "197",
+       "198"
+      ],
+      "errors": []
+     }
     },
     {
      "id": "CONV-01:gated_trial",
@@ -15038,8 +15231,10 @@
     }
    ],
    "acks_applied": [],
-   "red_since": null,
-   "new_failures": []
+   "red_since": "2026-11-17",
+   "new_failures": [
+    "CONV-01:ecom_buy|market"
+   ]
   },
   "PT": {
    "name": "Portugal",
@@ -15189,6 +15384,24 @@
      "evidence": {}
     },
     {
+     "id": "CONV-01:ecom_try",
+     "title": "Conversion tags fire for 'ecom_try' (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'ecom_try' is not offered in this market - not checked.",
+     "evidence": {}
+    },
+    {
+     "id": "CONV-01:ecom_buy",
+     "title": "Conversion tags fire for 'ecom_buy' (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'ecom_buy' is not offered in this market - not checked.",
+     "evidence": {}
+    },
+    {
      "id": "CONV-01:gated_trial",
      "title": "Conversion tags fire for 'gated_trial' (load rules)",
      "severity": "red",
@@ -15289,6 +15502,15 @@
       ],
       "errors": []
      }
+    },
+    {
+     "id": "CONV-01:purchase",
+     "title": "Conversion tags fire for 'purchase' (load rules)",
+     "severity": "info",
+     "result": "skip",
+     "target": "market",
+     "detail": "'purchase' is not offered in this market - not checked.",
+     "evidence": {}
     },
     {
      "id": "FORM-00",

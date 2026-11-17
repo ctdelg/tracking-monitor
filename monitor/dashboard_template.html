@@ -272,7 +272,7 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
   let R = P.results, D = P.diagnosis || {};
   let MARKETS = Object.keys(R.markets);
   const ORDER = {green: 0, yellow: 1, red: 2};
-  const EVENTS = {ecom_try: "Web-shop trial", ecom_buy: "Web-shop purchase", gated_trial: "Trial form", gated_contact: "Contact form"};
+  const EVENTS = {ecom_try: "Web-shop trial", ecom_buy: "Web-shop purchase", gated_trial: "Trial form", gated_contact: "Contact form", purchase: "Order confirmed (sales tag)"};
   const REASONS = {"TAG-BASELINE": ["unconfirmed baseline", "unconfirmed baselines"], "CONS-05": ["pre-consent request", "pre-consent requests"],
     "TEAL-03": ["data layer issue", "data layer issues"], "TEAL-04": ["conversion-relevant publish", "conversion-relevant publishes"]};
   let liveAcks = [];          // from the artifact database
@@ -353,7 +353,7 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     const failing = {};
     for (const code of MARKETS) for (const c of R.markets[code].checks) {
       if (c.result !== "fail" || !["red", "site_down"].includes(c.severity) || ackFor(code, c)) continue;
-      const k = c.id.startsWith("TAG:") ? c.id : baseId(c.id);
+      const k = (c.id.startsWith("TAG:") || c.id.startsWith("CONV-")) ? c.id : baseId(c.id);
       (failing[k] = failing[k] || new Set()).add(code);
     }
     const incidents = Object.entries(failing).filter(([, s]) => s.size >= 3).map(([k, s]) => ({check: k, markets: [...s].sort()}));
@@ -571,7 +571,8 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
       const m = R.markets[code], mine = convChecks(code);
       const cells = mine.length ? evs.map(e => {
         const c = mine.find(x => x.id.split(":")[1] === e);
-        if (!c) return el("td", {class: "na-t"}, "–");
+        if (!c) return el("td", {class: "na-t", title: "Not checked in this market"}, "–");
+        if (c.result === "skip") return el("td", {class: "na-t", title: c.detail}, "not offered");
         const tags = (/tag\(s\)\s*([\d,\s]+)/.exec(c.detail || "") || [])[1];
         if (c.result === "pass") return el("td", {class: "ok-t", title: c.detail}, icon(I_CHECK));
         const ack = ackFor(code, c);
@@ -588,7 +589,7 @@ footer { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; paddin
     });
     const heads = evs.length ? evs.map(e => el("th", {}, EVENTS[e] || e.replace(/_/g, " "))) : [el("th", {}, "Conversion events")];
     box.replaceChildren(
-      el("div", {class: "head"}, el("h2", {}, isAll() ? "Conversions by market" : "Conversions"), el("span", {class: "muted"}, "Would each conversion tag fire? Checked against the live Tealium load rules")),
+      el("div", {class: "head"}, el("h2", {}, isAll() ? "Conversions by market" : "Conversions"), el("span", {class: "muted"}, "Would each conversion tag fire? Checked against the live Tealium rules (AT: the live GTM trigger)")),
       el("div", {class: "scroll"}, el("table", {},
         el("thead", {}, el("tr", {}, el("th", {}, "Market"), heads, el("th", {}, "Pages opened"), el("th", {}, "Last publish"))),
         el("tbody", {}, rows))));

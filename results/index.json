@@ -95,7 +95,7 @@
   "2026-11-17": {
    "_global": {
     "status": "red",
-    "incidents": 0
+    "incidents": 1
    },
    "DE": {
     "status": "red",
@@ -107,7 +107,7 @@
    },
    "AT": {
     "status": "red",
-    "red": 1,
+    "red": 2,
     "yellow": 11,
     "site_down": 0,
     "coverage": "full",
@@ -115,15 +115,15 @@
    },
    "FR": {
     "status": "red",
-    "red": 8,
+    "red": 9,
     "yellow": 6,
     "site_down": 0,
     "coverage": "partial",
     "publish": false
    },
    "ES": {
-    "status": "green",
-    "red": 0,
+    "status": "red",
+    "red": 1,
     "yellow": 0,
     "site_down": 0,
     "coverage": "tealium_only",

@@ -193,7 +193,9 @@ markets:
     # Paid media in AT only promotes HR software (Sage DPW) and links to www.sagedpw.at, a separate
     # WordPress site with Google Tag Manager and Usercentrics (not sage.com / Tealium / OneTrust).
     site: "https://www.sagedpw.at/"
-    tag_manager: {type: gtm, container: GTM-PS6MXC}
+    tag_manager: {type: gtm, container: GTM-PS6MXC, lead_form_conversions: [sage_012], not_offered: [ecom_try, ecom_buy, gated_trial, purchase]}
+    # sage_012 = Floodlight lead conversion for the contact and Infopaket forms (GTM trigger: click on a Submit button).
+    # No web shop, no trials, no purchase tag on sagedpw.at.
     locale: de-AT
     urls:
       # Source: paid search landing page report, 2026-11-16 - tracking parameters removed, 6 URLs.
@@ -230,8 +232,11 @@ markets:
       # decide which Floodlight tag should count them and add expected_tags to ecom_try.
       - name: ecom_try
         payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+        not_offered: true          # no trials in the Sage Active checkout (only DE offers them)
       - name: ecom_buy
         payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+        expected_tags: [129]       # web-shop purchase should count like a lead form. Never set up in FR
+                                   # (not in the July 2026 utag.js either); MarTech confirmed it is pending for EU markets.
       - name: gated_trial
         payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
                   gate_content_name: FR_INT_FR_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
@@ -301,8 +306,11 @@ markets:
     conversion_events:
       - name: ecom_try
         payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+        not_offered: true          # no trials in the Sage Active checkout (only DE offers them)
       - name: ecom_buy
         payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+        expected_tags: [36]       # web-shop purchase should count like a lead form. Never set up in ES
+                                   # (not in the July 2026 utag.js either); MarTech confirmed it is pending for EU markets.
       - name: gated_trial
         payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
                   gate_content_name: ES_INT_ES_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
@@ -351,8 +359,10 @@ markets:
     conversion_events:
       - name: ecom_try
         payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+        not_offered: true          # no trials in the Sage Active checkout (only DE offers them)
       - name: ecom_buy
         payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+        not_offered: true          # no Sage Active checkout in PT
       - name: gated_trial
         payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
                   gate_content_name: PT_INT_PT_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
@@ -361,7 +371,9 @@ markets:
         payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
                   gate_content_name: PT_INT_PT_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
         expected_tags: [402]
-      # PT has no Floodlight sales tag for purchases (no web shop).
+      - name: purchase
+        payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
+        not_offered: true          # no web shop in PT, so no Floodlight sales tag
     urls:
       - {id: pt-home, url: "https://www.sage.com/pt-pt/", type: content}
       - {id: pt-produtos, url: "https://www.sage.com/pt-pt/produtos/", type: product}

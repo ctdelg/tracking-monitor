@@ -289,6 +289,7 @@
      },
      "errors": [],
      "expected_tags": [],
+     "not_offered": true,
      "conversion_tags_fired": [
       "223"
      ]
@@ -332,6 +333,7 @@
      },
      "errors": [],
      "expected_tags": [],
+     "not_offered": true,
      "conversion_tags_fired": [
       "223"
      ]
@@ -390,6 +392,7 @@
      "expected_tags": [
       "402"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "223",
       "402",
@@ -450,11 +453,51 @@
      "expected_tags": [
       "402"
      ],
+     "not_offered": false,
      "conversion_tags_fired": [
       "223",
       "402",
       "590"
      ]
+    },
+    {
+     "name": "purchase",
+     "fired": [
+      "5",
+      "190",
+      "324",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "546",
+      "588",
+      "613",
+      "615",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "201",
+      "209",
+      "213"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "not_offered": true,
+     "conversion_tags_fired": []
     }
    ]
   }

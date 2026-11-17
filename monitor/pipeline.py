@@ -61,6 +61,7 @@ def collect_tealium(browser, market: dict, day: str) -> dict:
     for r in conv.get("results", []):
         ev = next((e for e in events if e["name"] == r["name"]), {})
         r["expected_tags"] = [str(t) for t in ev.get("expected_tags", [])]
+        r["not_offered"] = bool(ev.get("not_offered"))
         r["conversion_tags_fired"] = sorted(
             (t for t in r["fired"] if parsed["tags"].get(t, {}).get("tid") in templates), key=int)
     out["conversion"] = conv

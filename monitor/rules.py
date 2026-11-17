@@ -69,7 +69,7 @@ def rate_global(markets: dict) -> dict:
     for code, m in markets.items():
         for c in m["checks"]:
             if c["result"] == "fail" and c["severity"] in ("red", "site_down") and not c.get("acknowledged"):
-                failing.setdefault(_base_id(c["id"]) if not c["id"].startswith("TAG:") else c["id"], set()).add(code)
+                failing.setdefault(c["id"] if c["id"].startswith(("TAG:", "CONV-")) else _base_id(c["id"]), set()).add(code)
     incidents = [
         {"check": cid, "markets": sorted(codes),
          "note": "Same check fails in several markets - likely a shared cause "

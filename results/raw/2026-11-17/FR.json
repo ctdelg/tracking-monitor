@@ -492,7 +492,9 @@
       "chatgpt_form_submission_type_local": "appointment_scheduled"
      },
      "errors": [],
-     "expected_tags": [],
+     "expected_tags": [
+      "129"
+     ],
      "conversion_tags_fired": [
       "129",
       "595",
@@ -563,11 +565,67 @@
       "chatgpt_form_submission_type_local": ""
      },
      "errors": [],
-     "expected_tags": [],
+     "expected_tags": [
+      "129"
+     ],
      "conversion_tags_fired": [
       "129",
       "595",
       "609"
+     ]
+    },
+    {
+     "name": "purchase",
+     "fired": [
+      "61",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "464",
+      "467",
+      "470",
+      "475",
+      "476",
+      "478",
+      "500",
+      "507",
+      "520",
+      "523",
+      "527",
+      "550",
+      "557",
+      "580",
+      "582",
+      "607",
+      "633",
+      "645",
+      "647",
+      "656",
+      "657",
+      "658"
+     ],
+     "true_rules": [
+      "121",
+      "196",
+      "323",
+      "343",
+      "344",
+      "345",
+      "349"
+     ],
+     "derived": {
+      "platform": "",
+      "ut.event": "link",
+      "tealium_session_event_number": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "464"
+     ],
+     "conversion_tags_fired": [
+      "464"
      ]
     }
    ]
@@ -4423,74 +4481,26 @@
     "ok": true,
     "results": [
      {
-      "name": "ecom_try",
+      "name": "purchase",
       "fired": [
        "4",
+       "9",
        "13"
       ],
       "true_rules": [
-       "10"
+       "4"
       ],
       "derived": {
        "ut.event": "link",
        "tealium_session_event_number": "1"
       },
       "errors": [],
-      "expected_tags": [],
-      "conversion_tags_fired": []
-     },
-     {
-      "name": "ecom_buy",
-      "fired": [
-       "4",
-       "13"
+      "expected_tags": [
+       "9"
       ],
-      "true_rules": [
-       "10"
-      ],
-      "derived": {
-       "ut.event": "link",
-       "tealium_session_event_number": "1"
-      },
-      "errors": [],
-      "expected_tags": [],
-      "conversion_tags_fired": []
-     },
-     {
-      "name": "gated_trial",
-      "fired": [
-       "4",
-       "13"
-      ],
-      "true_rules": [
-       "10"
-      ],
-      "derived": {
-       "ut.event": "link",
-       "tealium_event": "view",
-       "tealium_session_event_number": "1"
-      },
-      "errors": [],
-      "expected_tags": [],
-      "conversion_tags_fired": []
-     },
-     {
-      "name": "gated_contact",
-      "fired": [
-       "4",
-       "13"
-      ],
-      "true_rules": [
-       "10"
-      ],
-      "derived": {
-       "ut.event": "link",
-       "tealium_event": "view",
-       "tealium_session_event_number": "1"
-      },
-      "errors": [],
-      "expected_tags": [],
-      "conversion_tags_fired": []
+      "conversion_tags_fired": [
+       "9"
+      ]
      }
     ]
    }

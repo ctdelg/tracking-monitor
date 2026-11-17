@@ -88,6 +88,7 @@ def collect_gtm(market: dict, day: str) -> dict:
         gtm.save_snapshot(snap_dir, day, parsed)
     out["parsed"] = {"version": parsed["version"], "sha256": parsed["sha256"], "tags": parsed["tags"]}
     out["conversion_tags"] = gtm.conversion_tags(parsed)
+    out["triggers"] = parsed.get("triggers", {})
     return out
 
 
@@ -252,7 +253,7 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
         if raw.get("forms"):
             results += checks.check_forms(m, raw["forms"], base)
         if raw.get("gtm"):
-            results += checks.check_gtm(m, raw["gtm"], base)
+            results += checks.check_gtm(m, raw["gtm"], base, raw.get("browser"))
         for prof, part in (raw.get("tealium_extra") or {}).items():
             if prof in (m.get("extra_tealium_profiles") or []):
                 results += checks.check_tealium(code, part, None, target=f"tealium:{prof}")

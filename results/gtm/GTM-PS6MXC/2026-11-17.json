@@ -60,5 +60,55 @@
    "function": "__tg",
    "ids": {}
   }
+ },
+ "triggers": {
+  "sage_013": [
+   [
+    {
+     "fn": "_cn",
+     "var": "DoubleClick Floodlight",
+     "value": "true"
+    },
+    {
+     "fn": "_re",
+     "var": "__e",
+     "value": "(consents_initialized)|(consent_changed.*)"
+    },
+    {
+     "fn": "_cn",
+     "var": "URL",
+     "value": "uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf"
+    },
+    {
+     "fn": "_eq",
+     "var": "__e",
+     "value": "gtm.click"
+    }
+   ]
+  ],
+  "sage_012": [
+   [
+    {
+     "fn": "_cn",
+     "var": "DoubleClick Floodlight",
+     "value": "true"
+    },
+    {
+     "fn": "_re",
+     "var": "__e",
+     "value": "(consents_initialized)|(consent_changed.*)"
+    },
+    {
+     "fn": "_eq",
+     "var": "__e",
+     "value": "gtm.click"
+    },
+    {
+     "fn": "_cn",
+     "var": "ID",
+     "value": "Submit"
+    }
+   ]
+  ]
  }
 }

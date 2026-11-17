@@ -84,13 +84,63 @@
    "3": "Floodlight counter 5195550/sageg0/sage_012",
    "26": "Conversion Linker",
    "27": "Conversion Linker"
+  },
+  "triggers": {
+   "sage_013": [
+    [
+     {
+      "fn": "_cn",
+      "var": "DoubleClick Floodlight",
+      "value": "true"
+     },
+     {
+      "fn": "_re",
+      "var": "__e",
+      "value": "(consents_initialized)|(consent_changed.*)"
+     },
+     {
+      "fn": "_cn",
+      "var": "URL",
+      "value": "uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf"
+     },
+     {
+      "fn": "_eq",
+      "var": "__e",
+      "value": "gtm.click"
+     }
+    ]
+   ],
+   "sage_012": [
+    [
+     {
+      "fn": "_cn",
+      "var": "DoubleClick Floodlight",
+      "value": "true"
+     },
+     {
+      "fn": "_re",
+      "var": "__e",
+      "value": "(consents_initialized)|(consent_changed.*)"
+     },
+     {
+      "fn": "_eq",
+      "var": "__e",
+      "value": "gtm.click"
+     },
+     {
+      "fn": "_cn",
+      "var": "ID",
+      "value": "Submit"
+     }
+    ]
+   ]
   }
  },
  "tealium": {},
  "forms": {},
  "browser": {
   "source": "playwright",
-  "collected_at": "2026-11-17T10:49:51Z",
+  "collected_at": "2026-11-17T11:04:24Z",
   "visits": [
    {
     "id": "at-dpw-sage-dpw",
@@ -347,7 +397,7 @@
        "type": "fetch"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F&cb=1794912435266",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F&cb=1794913308926",
        "type": "image"
       },
       {
@@ -371,7 +421,11 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:47:20.006Z"
+     "submit_controls": [],
+     "doc_links": [
+      "https://www.sagedpw.at/wp-content/uploads/Sage-DPW-Module-und-Features.pdf"
+     ],
+     "collected_at": "2026-11-17T11:01:53.781Z"
     },
     "post": {
      "url": "https://www.sagedpw.at/loesungen/sage-dpw/?gclid=TEST_MON_20261117&msclkid=TEST_MON_20261117&fbclid=TEST_MON_20261117&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -390,19 +444,19 @@
        "type": "script"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F&cb=1794912440036",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F&cb=1794913313804",
        "type": "image"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=1927656632.1794912440&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1779233381.1794912440&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940091~115938466~115938468~118897920~118897930~119863601~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794912440326&tfd=6080&tids=DC-5195550&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&auid=556240378.1794913314&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=191227134.1794913314&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776795~118131808~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794913314075&tfd=5948&_gsid=Kn89OPkogyGn7HVAQ9J1wECQ-5xQlbcAwg&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=10&frm=0&apvc=1&auid=1927656632.1794912440&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1779233381.1794912440&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940091~115938466~115938468~118897920~118897930~119863601~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794912440326&tfd=6080&tids=DC-5195550&fmt=8",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=9&frm=0&apvc=1&auid=556240378.1794913314&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=191227134.1794913314&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776795~118131808~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794913314075&tfd=5948&_gsid=Kn89OPkogyGn7HVAQ9J1wECQ-5xQlbcAwg&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=1927656632.1794912440&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?_gsid=Kn89OPkogyGn7HVAQ9J1wECQ-5xQlbcAwg&gclid=TEST_MON_20261117&auid=556240378.1794913314&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
        "type": "fetch"
       },
       {
@@ -410,23 +464,23 @@
        "type": "script"
       },
       {
-       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912434461&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=778108648.1794912441&frm=0&lps=1&pscdl=noapi&rcb=2&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119863601~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034&sid=1794912440&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6327",
+       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913308275&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1472328467.1794913314&frm=0&lps=1&pscdl=noapi&rcb=7&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&sid=1794913314&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6156",
        "type": "fetch"
       },
       {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=778108648.1794912441&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=2&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938466~115938469~118897920~118897930~119863601~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034",
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1472328467.1794913314&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034",
        "type": "ping"
       },
       {
-       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=778108648.1794912441&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=2&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938466~115938469~118897920~118897930~119863601~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034&z=520338065",
+       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1472328467.1794913314&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&z=326644220",
        "type": "image"
       }
      ],
      "cookies": {
-      "_gcl_au": "1.1.1927656632.1794912440",
-      "_gcl_aw": "GCL.1794912441.TEST_MON_20261117",
-      "_ga_M4HF0CKEGQ": "GS2.1.s1794912440$o1$g0$t1794912440$j60$l0$h0",
-      "_ga": "GA1.1.778108648.1794912441"
+      "_gcl_au": "1.1.556240378.1794913314",
+      "_gcl_aw": "GCL.1794913314.TEST_MON_20261117",
+      "_ga_M4HF0CKEGQ": "GS2.1.s1794913314$o1$g0$t1794913314$j60$l0$h0",
+      "_ga": "GA1.1.1472328467.1794913314"
      },
      "banner": false,
      "consent_tool": "usercentrics",
@@ -449,7 +503,11 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:47:28.053Z",
+     "submit_controls": [],
+     "doc_links": [
+      "https://www.sagedpw.at/wp-content/uploads/Sage-DPW-Module-und-Features.pdf"
+     ],
+     "collected_at": "2026-11-17T11:02:01.820Z",
      "accepted": true
     }
    },
@@ -636,7 +694,7 @@
        "type": "fetch"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794912451157",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794913324944",
        "type": "image"
       },
       {
@@ -660,7 +718,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:47:36.056Z"
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:02:09.817Z"
     },
     "post": {
      "url": "https://www.sagedpw.at/hr-software/zeiterfassung/?gclid=TEST_MON_20261117&msclkid=TEST_MON_20261117&fbclid=TEST_MON_20261117&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -679,31 +739,31 @@
        "type": "script"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794912456086",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794913329846",
        "type": "image"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&auid=453583395.1794912456&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1266143827.1794912456&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119404696~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794912456352&tfd=6035&tids=DC-5195550&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=1790269194.1794913330&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=146284684.1794913330&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794913330159&tfd=5989&_gsid=q-EFS-cUvYo7SeaJm26Pn71e6pyPlfWd8g&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=4&frm=0&apvc=1&auid=453583395.1794912456&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1266143827.1794912456&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119404696~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794912456352&tfd=6035&tids=DC-5195550&fmt=8",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=17&frm=0&apvc=1&auid=1790269194.1794913330&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=146284684.1794913330&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794913330159&tfd=5989&_gsid=q-EFS-cUvYo7SeaJm26Pn71e6pyPlfWd8g&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=453583395.1794912456&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?_gsid=q-EFS-cUvYo7SeaJm26Pn71e6pyPlfWd8g&gclid=TEST_MON_20261117&auid=1790269194.1794913330&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&auid=453583395.1794912456&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1266143827.1794912456&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119404696~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794912456352&tfd=6035&tids=DC-5195550&fmt=3",
+       "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=1790269194.1794913330&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=146284684.1794913330&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794913330159&tfd=5989&_gsid=q-EFS-cUvYo7SeaJm26Pn71e6pyPlfWd8g&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=4&frm=0&apvc=1&auid=453583395.1794912456&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1266143827.1794912456&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119404696~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794912456352&tfd=6035&tids=DC-5195550&fmt=3",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=17&frm=0&apvc=1&auid=1790269194.1794913330&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=146284684.1794913330&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794913330159&tfd=5989&_gsid=q-EFS-cUvYo7SeaJm26Pn71e6pyPlfWd8g&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=453583395.1794912456&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=3",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?_gsid=q-EFS-cUvYo7SeaJm26Pn71e6pyPlfWd8g&gclid=TEST_MON_20261117&auid=1790269194.1794913330&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=3",
        "type": "image"
       },
       {
@@ -711,23 +771,23 @@
        "type": "script"
       },
       {
-       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912450462&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1277004942.1794912457&frm=0&lps=1&pscdl=noapi&rcb=14&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232&sid=1794912456&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6314",
+       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913324312&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1108676560.1794913330&frm=0&lps=1&pscdl=noapi&rcb=2&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785232&sid=1794913330&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6232",
        "type": "fetch"
       },
       {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1277004942.1794912457&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=14&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232",
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1108676560.1794913330&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=2&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785232",
        "type": "ping"
       },
       {
-       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1277004942.1794912457&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=14&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232&z=1312307396",
+       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1108676560.1794913330&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=2&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785232&z=723816393",
        "type": "image"
       }
      ],
      "cookies": {
-      "_gcl_au": "1.1.453583395.1794912456",
-      "_gcl_aw": "GCL.1794912457.TEST_MON_20261117",
-      "_ga_M4HF0CKEGQ": "GS2.1.s1794912456$o1$g0$t1794912456$j60$l0$h0",
-      "_ga": "GA1.1.1277004942.1794912457"
+      "_gcl_au": "1.1.1790269194.1794913330",
+      "_gcl_aw": "GCL.1794913330.TEST_MON_20261117",
+      "_ga_M4HF0CKEGQ": "GS2.1.s1794913330$o1$g0$t1794913330$j60$l0$h0",
+      "_ga": "GA1.1.1108676560.1794913330"
      },
      "banner": false,
      "consent_tool": "usercentrics",
@@ -750,7 +810,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:47:44.101Z",
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:02:17.859Z",
      "accepted": true
     }
    },
@@ -937,7 +999,7 @@
        "type": "fetch"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F&cb=1794912467136",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F&cb=1794913340860",
        "type": "image"
       },
       {
@@ -961,7 +1023,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:47:51.894Z"
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:02:25.633Z"
     },
     "post": {
      "url": "https://www.sagedpw.at/loesungen/sage-dpw-lohn-outsourcing/?gclid=TEST_MON_20261117&msclkid=TEST_MON_20261117&fbclid=TEST_MON_20261117&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -980,7 +1044,7 @@
        "type": "script"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F&cb=1794912471921",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F&cb=1794913345652",
        "type": "image"
       },
       {
@@ -992,47 +1056,47 @@
        "type": "script"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=2138220973.1794912472&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1434306527.1794912472&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912472264&tfd=5902&tids=DC-5195550&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&auid=1338072120.1794913346&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1859931545.1794913346&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776795~118897920~118897930~119317810~119860443~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794913345949&tfd=5837&_gsid=7oOfgMYicLppR8uu_BBTJ_MXWGmB2Em78Q&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=12&frm=0&apvc=1&auid=2138220973.1794912472&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1434306527.1794912472&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912472264&tfd=5902&tids=DC-5195550&fmt=8",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=7&frm=0&apvc=1&auid=1338072120.1794913346&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1859931545.1794913346&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776795~118897920~118897930~119317810~119860443~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794913345949&tfd=5837&_gsid=7oOfgMYicLppR8uu_BBTJ_MXWGmB2Em78Q&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=2138220973.1794912472&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=8",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?_gsid=7oOfgMYicLppR8uu_BBTJ_MXWGmB2Em78Q&gclid=TEST_MON_20261117&auid=1338072120.1794913346&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=2138220973.1794912472&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1434306527.1794912472&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912472264&tfd=5902&tids=DC-5195550&fmt=3",
+       "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&auid=1338072120.1794913346&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1859931545.1794913346&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776795~118897920~118897930~119317810~119860443~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794913345949&tfd=5837&_gsid=7oOfgMYicLppR8uu_BBTJ_MXWGmB2Em78Q&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=12&frm=0&apvc=1&auid=2138220973.1794912472&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1434306527.1794912472&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912472264&tfd=5902&tids=DC-5195550&fmt=3",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=7&frm=0&apvc=1&auid=1338072120.1794913346&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1859931545.1794913346&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776795~118897920~118897930~119317810~119860443~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794913345949&tfd=5837&_gsid=7oOfgMYicLppR8uu_BBTJ_MXWGmB2Em78Q&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=2138220973.1794912472&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=3",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?_gsid=7oOfgMYicLppR8uu_BBTJ_MXWGmB2Em78Q&gclid=TEST_MON_20261117&auid=1338072120.1794913346&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912466494&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=236337723.1794912472&frm=0&lps=1&pscdl=noapi&rcb=15&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794912472&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&gap.plf=5&tfd=6038",
+       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913340232&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1700586955.1794913346&frm=0&lps=1&pscdl=noapi&rcb=17&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119205315~119860443~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233&sid=1794913346&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=5981",
        "type": "fetch"
       },
       {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=236337723.1794912472&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=15&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616985~115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034",
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1700586955.1794913346&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=17&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~119205315~119860443~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233",
        "type": "ping"
       },
       {
-       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=236337723.1794912472&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=15&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616985~115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034&z=1440351190",
+       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1700586955.1794913346&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=17&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~119205315~119860443~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233&z=700187384",
        "type": "image"
       }
      ],
      "cookies": {
-      "_gcl_au": "1.1.2138220973.1794912472",
-      "_gcl_aw": "GCL.1794912472.TEST_MON_20261117",
-      "_ga_M4HF0CKEGQ": "GS2.1.s1794912472$o1$g0$t1794912472$j60$l0$h0",
-      "_ga": "GA1.1.236337723.1794912472"
+      "_gcl_au": "1.1.1338072120.1794913346",
+      "_gcl_aw": "GCL.1794913346.TEST_MON_20261117",
+      "_ga_M4HF0CKEGQ": "GS2.1.s1794913346$o1$g0$t1794913346$j60$l0$h0",
+      "_ga": "GA1.1.1700586955.1794913346"
      },
      "banner": false,
      "consent_tool": "usercentrics",
@@ -1055,7 +1119,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:47:59.933Z",
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:02:33.662Z",
      "accepted": true
     }
    },
@@ -1242,7 +1308,7 @@
        "type": "fetch"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F&cb=1794912483053",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F&cb=1794913356620",
        "type": "image"
       },
       {
@@ -1266,7 +1332,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:48:07.834Z"
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:02:41.534Z"
     },
     "post": {
      "url": "https://www.sagedpw.at/hr-software/lohnverrechnung/?gclid=TEST_MON_20261117&msclkid=TEST_MON_20261117&fbclid=TEST_MON_20261117&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -1285,55 +1353,55 @@
        "type": "script"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F&cb=1794912487858",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F&cb=1794913361560",
        "type": "image"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&auid=544732352.1794912488&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=527564691.1794912488&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlBlcnNvbmFsdmVycmVjaG51bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912488218&tfd=6042&tids=DC-5195550&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=1&auid=1217819160.1794913362&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1027119443.1794913362&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlBlcnNvbmFsdmVycmVjaG51bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131810~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913361843&tfd=5959&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=16&frm=0&apvc=1&auid=544732352.1794912488&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=527564691.1794912488&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912488218&tfd=6042&tids=DC-5195550&fmt=8",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=3&frm=0&apvc=1&auid=1217819160.1794913362&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1027119443.1794913362&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131810~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913361843&tfd=5959&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=544732352.1794912488&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=1217819160.1794913362&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&auid=544732352.1794912488&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=527564691.1794912488&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlBlcnNvbmFsdmVycmVjaG51bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912488218&tfd=6042&tids=DC-5195550&fmt=3",
+       "url": "https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=1&auid=1217819160.1794913362&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1027119443.1794913362&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlBlcnNvbmFsdmVycmVjaG51bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131810~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913361843&tfd=5959&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=16&frm=0&apvc=1&auid=544732352.1794912488&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=527564691.1794912488&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912488218&tfd=6042&tids=DC-5195550&fmt=3",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=3&frm=0&apvc=1&auid=1217819160.1794913362&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1027119443.1794913362&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131810~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913361843&tfd=5959&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=544732352.1794912488&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=3",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=1217819160.1794913362&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://www.googletagmanager.com/gtag/js?id=G-M4HF0CKEGQ&cx=c&gtm=4e6bg0h2",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-M4HF0CKEGQ&cx=c&gtm=4e6bd1",
        "type": "script"
       },
       {
-       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bg0h2v871434831za20ozb6518943zd6518943xf1&_p=1794912482296&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1885264459.1794912488&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=100940091~115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123785233&sid=1794912488&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6251",
+       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913355992&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1866157633.1794913362&frm=0&lps=1&pscdl=noapi&rcb=6&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115616985~115938465~115938468~118012008~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034&sid=1794913362&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&gap.plf=5&tfd=6188",
        "type": "fetch"
       },
       {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1885264459.1794912488&gtm=45je6bg0h2v871434831za20ozb6518943zd6518943xf1&rcb=1&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=100940091~115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123785233",
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1866157633.1794913362&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=6&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616985~115938465~115938468~118012008~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034",
        "type": "ping"
       },
       {
-       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1885264459.1794912488&gtm=45je6bg0h2v871434831za20ozb6518943zd6518943xf1&rcb=1&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=100940091~115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123785233&z=2078459397",
+       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1866157633.1794913362&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=6&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616985~115938465~115938468~118012008~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034&z=978275314",
        "type": "image"
       }
      ],
      "cookies": {
-      "_gcl_au": "1.1.544732352.1794912488",
-      "_gcl_aw": "GCL.1794912488.TEST_MON_20261117",
-      "_ga_M4HF0CKEGQ": "GS2.1.s1794912488$o1$g0$t1794912488$j60$l0$h0",
-      "_ga": "GA1.1.1885264459.1794912488"
+      "_gcl_au": "1.1.1217819160.1794913362",
+      "_gcl_aw": "GCL.1794913362.TEST_MON_20261117",
+      "_ga_M4HF0CKEGQ": "GS2.1.s1794913362$o1$g0$t1794913362$j60$l0$h0",
+      "_ga": "GA1.1.1866157633.1794913362"
      },
      "banner": false,
      "consent_tool": "usercentrics",
@@ -1356,7 +1424,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:48:15.872Z",
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:02:49.582Z",
      "accepted": true
     }
    },
@@ -1543,7 +1613,7 @@
        "type": "fetch"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F&cb=1794912498972",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F&cb=1794913372597",
        "type": "image"
       },
       {
@@ -1567,7 +1637,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:48:23.755Z"
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:02:57.409Z"
     },
     "post": {
      "url": "https://www.sagedpw.at/hr-software/reisekostenabrechnung/?gclid=TEST_MON_20261117&msclkid=TEST_MON_20261117&fbclid=TEST_MON_20261117&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -1586,55 +1658,63 @@
        "type": "script"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F&cb=1794912503778",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F&cb=1794913377432",
        "type": "image"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=717447579.1794912504&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=603637699.1794912504&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlJlaXNla29zdGVuYWJyZWNobnVuZyIsImIiOiJTYWdlIERQVyJ9XQ&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118012008~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912504079&tfd=5985&tids=DC-5195550&fmt=8",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=13&frm=0&apvc=1&auid=717447579.1794912504&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=603637699.1794912504&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118012008~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912504079&tfd=5985&tids=DC-5195550&fmt=8",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=717447579.1794912504&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=717447579.1794912504&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=603637699.1794912504&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlJlaXNla29zdGVuYWJyZWNobnVuZyIsImIiOiJTYWdlIERQVyJ9XQ&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118012008~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912504079&tfd=5985&tids=DC-5195550&fmt=3",
-       "type": "image"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=13&frm=0&apvc=1&auid=717447579.1794912504&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=603637699.1794912504&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118012008~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794912504079&tfd=5985&tids=DC-5195550&fmt=3",
-       "type": "image"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=717447579.1794912504&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=3",
-       "type": "image"
+       "url": "https://www.googletagmanager.com/gtag/js?id=DC-5195550&cx=c&gtm=4e6bd1",
+       "type": "script"
       },
       {
        "url": "https://www.googletagmanager.com/gtag/js?id=G-M4HF0CKEGQ&cx=c&gtm=4e6bd1",
        "type": "script"
       },
       {
-       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912498215&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=344565636.1794912504&frm=0&lps=1&pscdl=noapi&rcb=19&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=100940090~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794912504&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6189",
+       "url": "https://www.googletagmanager.com/td?id=DC-5195550&v=3&t=t&pid=1436256916&gtm=45fe6bd1v9173197956za200zb6518943zd6518943xf1&seq=1&exp=115616985~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034&dl=www.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F&tdp=DC-5195550;173197956;0;2;0&frm=0&rtg=518943&slo=12&hlo=2&lst=1&pcid=518943&bt=0&ct=3&z=0",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=578954444.1794913378&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=459231268.1794913378&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlJlaXNla29zdGVuYWJyZWNobnVuZyIsImIiOiJTYWdlIERQVyJ9XQ&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119317810~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913377753&tfd=5958&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=344565636.1794912504&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=19&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=100940090~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=11&frm=0&apvc=1&auid=578954444.1794913378&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=459231268.1794913378&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119317810~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913377753&tfd=5958&tids=DC-5195550&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=578954444.1794913378&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=578954444.1794913378&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=459231268.1794913378&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlJlaXNla29zdGVuYWJyZWNobnVuZyIsImIiOiJTYWdlIERQVyJ9XQ&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119317810~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913377753&tfd=5958&tids=DC-5195550&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=11&frm=0&apvc=1&auid=578954444.1794913378&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=459231268.1794913378&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119317810~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913377753&tfd=5958&tids=DC-5195550&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=578954444.1794913378&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913371914&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1015218775.1794913378&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034~123785233&sid=1794913377&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6091",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1015218775.1794913378&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=8&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034~123785233",
        "type": "ping"
       },
       {
-       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=344565636.1794912504&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=19&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=100940090~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&z=366192629",
+       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1015218775.1794913378&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=8&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034~123785233&z=1256077162",
        "type": "image"
       }
      ],
      "cookies": {
-      "_gcl_au": "1.1.717447579.1794912504",
-      "_gcl_aw": "GCL.1794912504.TEST_MON_20261117",
-      "_ga_M4HF0CKEGQ": "GS2.1.s1794912504$o1$g0$t1794912504$j60$l0$h0",
-      "_ga": "GA1.1.344565636.1794912504"
+      "_gcl_au": "1.1.578954444.1794913378",
+      "_gcl_aw": "GCL.1794913378.TEST_MON_20261117",
+      "_ga_M4HF0CKEGQ": "GS2.1.s1794913377$o1$g0$t1794913377$j60$l0$h0",
+      "_ga": "GA1.1.1015218775.1794913378"
      },
      "banner": false,
      "consent_tool": "usercentrics",
@@ -1657,7 +1737,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:48:31.795Z",
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:03:05.453Z",
      "accepted": true
     }
    },
@@ -1840,7 +1922,7 @@
        "type": "fetch"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F&cb=1794912514890",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F&cb=1794913388512",
        "type": "image"
       },
       {
@@ -1864,7 +1946,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:48:39.833Z"
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:03:13.396Z"
     },
     "post": {
      "url": "https://www.sagedpw.at/hr-software/fairpay/?gclid=TEST_MON_20261117&msclkid=TEST_MON_20261117&fbclid=TEST_MON_20261117&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -1883,7 +1967,7 @@
        "type": "script"
       },
       {
-       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F&cb=1794912519865",
+       "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F&cb=1794913393418",
        "type": "image"
       },
       {
@@ -1895,47 +1979,47 @@
        "type": "script"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&auid=94942761.1794912520&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1766825419.1794912520&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IkZhaXJQYXkiLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912520229&tfd=6180&tids=DC-5195550&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=1653235921.1794913394&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=948920460.1794913394&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IkZhaXJQYXkiLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940092~115938466~115938469~118897920~118897930~119381662~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794913393840&tfd=6104&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=18&frm=0&apvc=1&auid=94942761.1794912520&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1766825419.1794912520&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912520229&tfd=6180&tids=DC-5195550&fmt=8",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=13&frm=0&apvc=1&auid=1653235921.1794913394&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=948920460.1794913394&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940092~115938466~115938469~118897920~118897930~119381662~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794913393840&tfd=6104&tids=DC-5195550&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=94942761.1794912520&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=8",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=1653235921.1794913394&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&auid=94942761.1794912520&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1766825419.1794912520&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IkZhaXJQYXkiLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912520229&tfd=6180&tids=DC-5195550&fmt=3",
+       "url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=1653235921.1794913394&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=948920460.1794913394&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IkZhaXJQYXkiLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940092~115938466~115938469~118897920~118897930~119381662~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794913393840&tfd=6104&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=18&frm=0&apvc=1&auid=94942761.1794912520&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1766825419.1794912520&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794912520229&tfd=6180&tids=DC-5195550&fmt=3",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=13&frm=0&apvc=1&auid=1653235921.1794913394&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=948920460.1794913394&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940092~115938466~115938469~118897920~118897930~119381662~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034&tft=1794913393840&tfd=6104&tids=DC-5195550&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=94942761.1794912520&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=3",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=1653235921.1794913394&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912514167&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=159010674.1794912520&frm=0&lps=1&pscdl=noapi&rcb=16&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123785234&sid=1794912520&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%20DPW%20%7C%20FairPay&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6356",
+       "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913387854&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1121185460.1794913394&frm=0&lps=1&pscdl=noapi&rcb=7&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=100940090~115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794913393&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%20DPW%20%7C%20FairPay&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6271",
        "type": "fetch"
       },
       {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=159010674.1794912520&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=16&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123785234",
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1121185460.1794913394&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=100940090~115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034",
        "type": "ping"
       },
       {
-       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=159010674.1794912520&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=16&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123785234&z=1334850901",
+       "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1121185460.1794913394&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=100940090~115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034&z=782134043",
        "type": "image"
       }
      ],
      "cookies": {
-      "_gcl_au": "1.1.94942761.1794912520",
-      "_gcl_aw": "GCL.1794912520.TEST_MON_20261117",
-      "_ga_M4HF0CKEGQ": "GS2.1.s1794912520$o1$g0$t1794912520$j60$l0$h0",
-      "_ga": "GA1.1.159010674.1794912520"
+      "_gcl_au": "1.1.1653235921.1794913394",
+      "_gcl_aw": "GCL.1794913394.TEST_MON_20261117",
+      "_ga_M4HF0CKEGQ": "GS2.1.s1794913393$o1$g0$t1794913393$j60$l0$h0",
+      "_ga": "GA1.1.1121185460.1794913394"
      },
      "banner": false,
      "consent_tool": "usercentrics",
@@ -1958,7 +2042,9 @@
      },
      "has_form": false,
      "gates": [],
-     "collected_at": "2026-11-17T10:48:47.887Z",
+     "submit_controls": [],
+     "doc_links": [],
+     "collected_at": "2026-11-17T11:03:21.431Z",
      "accepted": true
     }
    }
@@ -2147,7 +2233,7 @@
          "type": "fetch"
         },
         {
-         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794912530863",
+         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794913404700",
          "type": "image"
         },
         {
@@ -2167,55 +2253,59 @@
          "type": "script"
         },
         {
-         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794912535732",
+         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794913409565",
          "type": "image"
         },
         {
-         "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=699570131.1794912536&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=191477566.1794912536&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123322203&tft=1794912536026&tfd=5915&gap.dlst=0.29&gap.dlsc=4&tids=DC-5195550&fmt=8",
-         "type": "fetch"
-        },
-        {
-         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=11&frm=0&apvc=1&auid=699570131.1794912536&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=191477566.1794912536&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123322203&tft=1794912536026&tfd=5915&gap.dlst=0.29&gap.dlsc=4&tids=DC-5195550&fmt=8",
-         "type": "fetch"
-        },
-        {
-         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=699570131.1794912536&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=8",
-         "type": "fetch"
-        },
-        {
-         "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=699570131.1794912536&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=191477566.1794912536&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123322203&tft=1794912536026&tfd=5915&gap.dlst=0.29&gap.dlsc=4&tids=DC-5195550&fmt=3",
-         "type": "image"
-        },
-        {
-         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=11&frm=0&apvc=1&auid=699570131.1794912536&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=191477566.1794912536&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123322203&tft=1794912536026&tfd=5915&gap.dlst=0.29&gap.dlsc=4&tids=DC-5195550&fmt=3",
-         "type": "image"
-        },
-        {
-         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=699570131.1794912536&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&fmt=3",
-         "type": "image"
+         "url": "https://www.googletagmanager.com/gtag/js?id=DC-5195550&cx=c&gtm=4e6bd1",
+         "type": "script"
         },
         {
          "url": "https://www.googletagmanager.com/gtag/js?id=G-M4HF0CKEGQ&cx=c&gtm=4e6bd1",
          "type": "script"
         },
         {
-         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912530244&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=193670267.1794912536&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794912536&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6099",
+         "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=1&auid=458201197.1794913410&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=790701210.1794913410&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938468~117628655~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794913409859&tfd=6033&tids=DC-5195550&fmt=8",
          "type": "fetch"
         },
         {
-         "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=193670267.1794912536&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=1&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034",
+         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=19&frm=0&apvc=1&auid=458201197.1794913410&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=790701210.1794913410&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938468~117628655~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794913409859&tfd=6033&tids=DC-5195550&fmt=8",
+         "type": "fetch"
+        },
+        {
+         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=458201197.1794913410&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=8",
+         "type": "fetch"
+        },
+        {
+         "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=1&auid=458201197.1794913410&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=790701210.1794913410&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938468~117628655~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794913409859&tfd=6033&tids=DC-5195550&fmt=3",
+         "type": "image"
+        },
+        {
+         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=19&frm=0&apvc=1&auid=458201197.1794913410&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=790701210.1794913410&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938468~117628655~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794913409859&tfd=6033&tids=DC-5195550&fmt=3",
+         "type": "image"
+        },
+        {
+         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=458201197.1794913410&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&fmt=3",
+         "type": "image"
+        },
+        {
+         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913403997&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=243411151.1794913410&frm=0&lps=1&pscdl=noapi&rcb=10&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~121284208~123785233&sid=1794913409&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6180",
+         "type": "fetch"
+        },
+        {
+         "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=243411151.1794913410&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=10&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~121284208~123785233",
          "type": "ping"
         },
         {
-         "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=193670267.1794912536&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=1&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&z=202397490",
+         "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=243411151.1794913410&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=10&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~121284208~123785233&z=2130736638",
          "type": "image"
         }
        ],
        "cookies": {
-        "_gcl_au": "1.1.699570131.1794912536",
-        "_gcl_aw": "GCL.1794912536.TEST_MON_20261117",
-        "_ga_M4HF0CKEGQ": "GS2.1.s1794912536$o1$g0$t1794912536$j60$l0$h0",
-        "_ga": "GA1.1.193670267.1794912536"
+        "_gcl_au": "1.1.458201197.1794913410",
+        "_gcl_aw": "GCL.1794913410.TEST_MON_20261117",
+        "_ga_M4HF0CKEGQ": "GS2.1.s1794913409$o1$g0$t1794913409$j60$l0$h0",
+        "_ga": "GA1.1.243411151.1794913410"
        },
        "banner": false,
        "consent_tool": "usercentrics",
@@ -2238,7 +2328,9 @@
        },
        "has_form": false,
        "gates": [],
-       "collected_at": "2026-11-17T10:49:03.755Z"
+       "submit_controls": [],
+       "doc_links": [],
+       "collected_at": "2026-11-17T11:03:37.586Z"
       },
       "status": 200
      },
@@ -2313,7 +2405,7 @@
          "type": "script"
         },
         {
-         "url": "https://www.sagedpw.at/wp-content/themes/sagedpw/dist/css/sagedpw.min.css?v=1794912551",
+         "url": "https://www.sagedpw.at/wp-content/themes/sagedpw/dist/css/sagedpw.min.css?v=1794913425",
          "type": "stylesheet"
         },
         {
@@ -2441,27 +2533,31 @@
          "type": "script"
         },
         {
-         "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&auid=699570131.1794912536&dt=Kostenloses%20Infopaket%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkostenloses-infopaket%2F%3Ffile%3DSage-DPW-Zeiterfassung.zip%26product%3Dzeiterfassung&scrsrc=www.googletagmanager.com&rnd=1742931930.1794912552&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940091~115616986~115938466~115938469~117776796~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123322203~123785234&tft=1794912552481&tfd=713&gap.dlst=0&gap.dlsc=4&tids=DC-5195550&fmt=8",
-         "type": "fetch"
-        },
-        {
-         "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&auid=699570131.1794912536&dt=Kostenloses%20Infopaket%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkostenloses-infopaket%2F%3Ffile%3DSage-DPW-Zeiterfassung.zip%26product%3Dzeiterfassung&scrsrc=www.googletagmanager.com&rnd=1742931930.1794912552&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=100940091~115616986~115938466~115938469~117776796~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123322203~123785234&tft=1794912552481&tfd=713&gap.dlst=0&gap.dlsc=4&tids=DC-5195550&fmt=3",
-         "type": "image"
+         "url": "https://www.googletagmanager.com/gtag/js?id=DC-5195550&cx=c&gtm=4e6bd1",
+         "type": "script"
         },
         {
          "url": "https://www.googletagmanager.com/gtag/js?id=G-M4HF0CKEGQ&cx=c&gtm=4e6bd1",
          "type": "script"
         },
         {
-         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912551987&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGQC&_ng=1&cid=193670267.1794912536&frm=0&pscdl=noapi&rcb=5&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=100940090~115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794912536&sct=1&seg=1&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkostenloses-infopaket%2F%3Ffile%3DSage-DPW-Zeiterfassung.zip%26product%3Dzeiterfassung&dt=Kostenloses%20Infopaket%20%7C%20Sage%20DPW&en=page_view&tfd=5827",
+         "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=458201197.1794913410&dt=Kostenloses%20Infopaket%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkostenloses-infopaket%2F%3Ffile%3DSage-DPW-Zeiterfassung.zip%26product%3Dzeiterfassung&scrsrc=www.googletagmanager.com&rnd=1149613215.1794913426&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938469~117628655~118897920~118897930~119863601~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123785232&tft=1794913426322&tfd=714&tids=DC-5195550&fmt=8",
+         "type": "fetch"
+        },
+        {
+         "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=458201197.1794913410&dt=Kostenloses%20Infopaket%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkostenloses-infopaket%2F%3Ffile%3DSage-DPW-Zeiterfassung.zip%26product%3Dzeiterfassung&scrsrc=www.googletagmanager.com&rnd=1149613215.1794913426&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zb6518943zd6518943xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938469~117628655~118897920~118897930~119863601~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123785232&tft=1794913426322&tfd=714&tids=DC-5195550&fmt=3",
+         "type": "image"
+        },
+        {
+         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913425824&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGQC&_ng=1&cid=243411151.1794913410&frm=0&pscdl=noapi&rcb=4&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034&sid=1794913409&sct=1&seg=1&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkostenloses-infopaket%2F%3Ffile%3DSage-DPW-Zeiterfassung.zip%26product%3Dzeiterfassung&dt=Kostenloses%20Infopaket%20%7C%20Sage%20DPW&en=page_view&tfd=5908",
          "type": "fetch"
         }
        ],
        "cookies": {
-        "_gcl_au": "1.1.699570131.1794912536",
-        "_gcl_aw": "GCL.1794912536.TEST_MON_20261117",
-        "_ga": "GA1.1.193670267.1794912536",
-        "_ga_M4HF0CKEGQ": "GS2.1.s1794912536$o1$g1$t1794912552$j44$l0$h0"
+        "_gcl_au": "1.1.458201197.1794913410",
+        "_gcl_aw": "GCL.1794913410.TEST_MON_20261117",
+        "_ga": "GA1.1.243411151.1794913410",
+        "_ga_M4HF0CKEGQ": "GS2.1.s1794913409$o1$g1$t1794913426$j43$l0$h0"
        },
        "banner": false,
        "consent_tool": "usercentrics",
@@ -2483,7 +2579,14 @@
        },
        "has_form": true,
        "gates": [],
-       "collected_at": "2026-11-17T10:49:20.246Z"
+       "submit_controls": [
+        {
+         "id": "",
+         "text": "Jetzt kostenlos downloaden"
+        }
+       ],
+       "doc_links": [],
+       "collected_at": "2026-11-17T11:03:54.036Z"
       },
       "status": null,
       "note": "click intercepted by an overlay; followed the link"
@@ -2674,7 +2777,7 @@
          "type": "fetch"
         },
         {
-         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794912561713",
+         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=1&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794913435703",
          "type": "image"
         },
         {
@@ -2694,55 +2797,55 @@
          "type": "script"
         },
         {
-         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794912566605",
+         "url": "https://uct.service.usercentrics.eu/uct?v=1&sid=VEjj0X-n4&t=5&abv=&r=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F&cb=1794913440469",
          "type": "image"
         },
         {
-         "url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=1340107418.1794912567&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=724230975.1794912567&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~118131808~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785232&tft=1794912566943&tfd=5992&tids=DC-5195550&fmt=8",
+         "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=438083261.1794913441&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1579243946.1794913441&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913440716&tfd=5873&tids=DC-5195550&fmt=8",
          "type": "fetch"
         },
         {
-         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=6&frm=0&apvc=1&auid=1340107418.1794912567&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=724230975.1794912567&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~118131808~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785232&tft=1794912566943&tfd=5992&tids=DC-5195550&fmt=8",
+         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=11&frm=0&apvc=1&auid=438083261.1794913441&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1579243946.1794913441&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913440716&tfd=5873&tids=DC-5195550&fmt=8",
          "type": "fetch"
         },
         {
-         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=1340107418.1794912567&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&fmt=8",
+         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=438083261.1794913441&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&fmt=8",
          "type": "fetch"
         },
         {
-         "url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=1340107418.1794912567&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=724230975.1794912567&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~118131808~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785232&tft=1794912566943&tfd=5992&tids=DC-5195550&fmt=3",
+         "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=438083261.1794913441&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1579243946.1794913441&gclaw=TEST_MON_20261117&navt=n&npa=1&sdl=W3sibiI6IlplaXRlcmZhc3N1bmciLCJiIjoiU2FnZSBEUFcifV0&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913440716&tfd=5873&tids=DC-5195550&fmt=3",
          "type": "image"
         },
         {
-         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=6&frm=0&apvc=1&auid=1340107418.1794912567&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=724230975.1794912567&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~118131808~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785232&tft=1794912566943&tfd=5992&tids=DC-5195550&fmt=3",
+         "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=11&frm=0&apvc=1&auid=438083261.1794913441&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&url=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1579243946.1794913441&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913440716&tfd=5873&tids=DC-5195550&fmt=3",
          "type": "image"
         },
         {
-         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=1340107418.1794912567&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&fmt=3",
+         "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261117&auid=438083261.1794913441&gtm=45fe6bg0h2v9173197956za208zd9173197956xecxf1&fmt=3",
          "type": "image"
         },
         {
-         "url": "https://www.googletagmanager.com/gtag/js?id=G-M4HF0CKEGQ&cx=c&gtm=4e6bd1",
+         "url": "https://www.googletagmanager.com/gtag/js?id=G-M4HF0CKEGQ&cx=c&gtm=4e6bg0h2",
          "type": "script"
         },
         {
-         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912561063&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1618506012.1794912567&frm=0&lps=1&pscdl=noapi&rcb=9&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938465~115938469~118012007~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034&sid=1794912567&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6222",
+         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bg0h2v871434831za20ozb6518943zd6518943xf1&_p=1794913434965&_gaz=1&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&_ng=1&cid=1912224385.1794913441&frm=0&lps=1&pscdl=noapi&rcb=16&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794913440&sct=1&seg=0&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_20261117%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6065",
          "type": "fetch"
         },
         {
-         "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1618506012.1794912567&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=9&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938469~118012007~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034",
+         "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-M4HF0CKEGQ&cid=1912224385.1794913441&gtm=45je6bg0h2v871434831za20ozb6518943zd6518943xf1&rcb=16&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034",
          "type": "ping"
         },
         {
-         "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1618506012.1794912567&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&rcb=9&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115938465~115938469~118012007~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034&z=1461689965",
+         "url": "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&_ng=1&tid=G-M4HF0CKEGQ&cid=1912224385.1794913441&gtm=45je6bg0h2v871434831za20ozb6518943zd6518943xf1&rcb=16&aip=1&dma=1&dma_cps=a&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&frm=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034&z=2128102181",
          "type": "image"
         }
        ],
        "cookies": {
-        "_gcl_au": "1.1.1340107418.1794912567",
-        "_gcl_aw": "GCL.1794912567.TEST_MON_20261117",
-        "_ga_M4HF0CKEGQ": "GS2.1.s1794912567$o1$g0$t1794912567$j60$l0$h0",
-        "_ga": "GA1.1.1618506012.1794912567"
+        "_gcl_au": "1.1.438083261.1794913441",
+        "_gcl_aw": "GCL.1794913441.TEST_MON_20261117",
+        "_ga_M4HF0CKEGQ": "GS2.1.s1794913440$o1$g0$t1794913440$j60$l0$h0",
+        "_ga": "GA1.1.1912224385.1794913441"
        },
        "banner": false,
        "consent_tool": "usercentrics",
@@ -2765,7 +2868,9 @@
        },
        "has_form": false,
        "gates": [],
-       "collected_at": "2026-11-17T10:49:34.623Z"
+       "submit_controls": [],
+       "doc_links": [],
+       "collected_at": "2026-11-17T11:04:08.479Z"
       },
       "status": 200
      },
@@ -3000,11 +3105,11 @@
          "type": "script"
         },
         {
-         "url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=1340107418.1794912567&dt=Kontaktformular%20%E2%80%93%20Wir%20freuen%20uns%20auf%20Ihre%20Anfrage!&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkontaktformular%2F&scrsrc=www.googletagmanager.com&rnd=352094748.1794912583&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118131808~118897920~118897930~119863601~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794912583310&tfd=670&tids=DC-5195550&fmt=8",
+         "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=438083261.1794913441&dt=Kontaktformular%20%E2%80%93%20Wir%20freuen%20uns%20auf%20Ihre%20Anfrage!&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkontaktformular%2F&scrsrc=www.googletagmanager.com&rnd=998152366.1794913457&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913457114&tfd=617&tids=DC-5195550&fmt=8",
          "type": "fetch"
         },
         {
-         "url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=1340107418.1794912567&dt=Kontaktformular%20%E2%80%93%20Wir%20freuen%20uns%20auf%20Ihre%20Anfrage!&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkontaktformular%2F&scrsrc=www.googletagmanager.com&rnd=352094748.1794912583&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118131808~118897920~118897930~119863601~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794912583310&tfd=670&tids=DC-5195550&fmt=3",
+         "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=438083261.1794913441&dt=Kontaktformular%20%E2%80%93%20Wir%20freuen%20uns%20auf%20Ihre%20Anfrage!&tid=DC-5195550&en=page_view&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkontaktformular%2F&scrsrc=www.googletagmanager.com&rnd=998152366.1794913457&gclaw=TEST_MON_20261117&navt=n&npa=1&ep.anonymize_ip=1&ep.user_data_mode=a&gtm=45fe6bd1v9173197956za208zd9173197956xecxf1&gcs=G1--&gcd=13l3l3R2l5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034&tft=1794913457114&tfd=617&tids=DC-5195550&fmt=3",
          "type": "image"
         },
         {
@@ -3012,15 +3117,15 @@
          "type": "script"
         },
         {
-         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794912582726&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGQC&_ng=1&cid=1618506012.1794912567&frm=0&pscdl=noapi&rcb=12&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119863601~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785234&sid=1794912567&sct=1&seg=1&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkontaktformular%2F&dt=Kontaktformular%20%E2%80%93%20Wir%20freuen%20uns%20auf%20Ihre%20Anfrage!&en=page_view&tfd=5829",
+         "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-M4HF0CKEGQ&gtm=45je6bd1v871434831za20ozb6518943zd6518943xf1&_p=1794913456588&gcs=G1--&gcd=13l3l3R2l5l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGQC&_ng=1&cid=1912224385.1794913441&frm=0&pscdl=noapi&rcb=9&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=de-at&gaf=2&_s=1&tag_exp=100940092~115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034~123785234&sid=1794913440&sct=1&seg=1&dl=https%3A%2F%2Fwww.sagedpw.at%2Fkontaktformular%2F&dt=Kontaktformular%20%E2%80%93%20Wir%20freuen%20uns%20auf%20Ihre%20Anfrage!&en=page_view&tfd=5842",
          "type": "fetch"
         }
        ],
        "cookies": {
-        "_gcl_au": "1.1.1340107418.1794912567",
-        "_gcl_aw": "GCL.1794912567.TEST_MON_20261117",
-        "_ga": "GA1.1.1618506012.1794912567",
-        "_ga_M4HF0CKEGQ": "GS2.1.s1794912567$o1$g1$t1794912583$j44$l0$h0"
+        "_gcl_au": "1.1.438083261.1794913441",
+        "_gcl_aw": "GCL.1794913441.TEST_MON_20261117",
+        "_ga": "GA1.1.1912224385.1794913441",
+        "_ga_M4HF0CKEGQ": "GS2.1.s1794913440$o1$g1$t1794913457$j43$l0$h0"
        },
        "banner": false,
        "consent_tool": "usercentrics",
@@ -3042,7 +3147,14 @@
        },
        "has_form": true,
        "gates": [],
-       "collected_at": "2026-11-17T10:49:50.993Z"
+       "submit_controls": [
+        {
+         "id": "",
+         "text": "Absenden"
+        }
+       ],
+       "doc_links": [],
+       "collected_at": "2026-11-17T11:04:24.796Z"
       },
       "status": null,
       "note": "click intercepted by an overlay; followed the link"

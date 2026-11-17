@@ -494,7 +494,44 @@ def check_forms(market: dict, forms_part: dict, baseline: dict | None) -> list[d
     return out
 
 
-def check_gtm(market: dict, part: dict, baseline: dict | None) -> list[dict]:
+def _trigger_reachable(paths: list, snaps: list[dict]) -> tuple[bool | None, str]:
+    """Can a visitor set off this click-based GTM trigger on the checked pages?
+
+    Returns (True/False, explanation), or (None, ...) when the trigger is not click-based
+    (then it cannot be judged from the page alone).
+    """
+    reasons = []
+    judged = False
+    for conds in paths:
+        if not any(c["var"] == "__e" and c["value"] == "gtm.click" for c in conds):
+            continue
+        judged = True
+        ok_all, why = True, []
+        for c in conds:
+            if c["fn"] != "_cn" or c["var"] not in ("ID", "Click ID", "URL", "Click URL"):
+                continue
+            val = str(c["value"])
+            if c["var"] in ("ID", "Click ID"):
+                hits = [s["id"] for sn in snaps for s in sn.get("submit_controls", []) if val in s.get("id", "")]
+                buttons = [s for sn in snaps for s in sn.get("submit_controls", [])]
+                if not hits:
+                    ok_all = False
+                    why.append(f"no form button has an ID containing '{val}'"
+                               + (f" (buttons found: {', '.join(repr(b['text']) + ' id=' + (b['id'] or 'none') for b in buttons[:4])})" if buttons else " (no form buttons on the checked pages)"))
+            else:
+                hits = [h for sn in snaps for h in sn.get("doc_links", []) if val in h]
+                if not hits:
+                    ok_all = False
+                    why.append(f"no link to '{val}' on the checked pages")
+        if ok_all:
+            return True, "trigger element present"
+        reasons += why
+    if not judged:
+        return None, "not a click trigger"
+    return False, "; ".join(reasons)
+
+
+def check_gtm(market: dict, part: dict, baseline: dict | None, browser_part: dict | None = None) -> list[dict]:
     """Google Tag Manager container checks for non-Tealium sites (AT: sagedpw.at)."""
     out, t = [], "market"
     c = part.get("container")
@@ -533,6 +570,29 @@ def check_gtm(market: dict, part: dict, baseline: dict | None) -> list[dict]:
     elif now:
         out.append(result("GTM-06", "red", "pass", t, "; ".join(now.values()),
                           title="Conversion tags live in the container"))
+
+    # GTM-07: can visitors actually set off each conversion trigger on the checked pages?
+    snaps = []
+    for v in (browser_part or {}).get("visits", []):
+        if v.get("pre") and "submit_controls" in v["pre"]:
+            snaps.append(v["pre"])
+    for j in (browser_part or {}).get("journeys", []):
+        snaps += [s["snapshot"] for s in j.get("steps", []) if s.get("snapshot") and "submit_controls" in s["snapshot"]]
+    if snaps:
+        for label, paths in sorted((part.get("triggers") or {}).items()):
+            ok, why = _trigger_reachable(paths, snaps)
+            if ok is None:
+                continue
+            only_links = not ok and "no form button" not in why
+            sev = "yellow" if only_links else "red"
+            text = ("a visitor can trigger it on the checked pages" if ok else
+                    f"cannot fire from the paid landing pages or form pages - {why}. The link may exist elsewhere on the site."
+                    if only_links else
+                    f"can never fire on form submit - {why}. The GTM trigger and the website no longer match.")
+            out.append(result("GTM-07", sev, "pass" if ok else "fail", f"conversion:{label}",
+                              f"Floodlight {label}: " + text,
+                              {"trigger": paths, "pages_checked": len(snaps)},
+                              title="Conversion trigger can fire on the site"))
     return out
 
 

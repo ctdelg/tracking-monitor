@@ -106,9 +106,9 @@
     "publish": false
    },
    "AT": {
-    "status": "yellow",
-    "red": 0,
-    "yellow": 10,
+    "status": "red",
+    "red": 1,
+    "yellow": 11,
     "site_down": 0,
     "coverage": "full",
     "publish": true

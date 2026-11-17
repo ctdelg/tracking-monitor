@@ -135,6 +135,13 @@
         gtm: gtmInfo(),
         has_form: !!document.querySelector('form input[type=email], form input[name*=mail i]'),
         gates: gates(),
+        // What click-based tag triggers (e.g. GTM "Click ID contains Submit") can match on this page.
+        submit_controls: Array.prototype.slice.call(document.querySelectorAll('button[type=submit], input[type=submit], button:not([type])'))
+          .filter(function (e) { return e.closest('form'); })
+          .map(function (e) { return { id: e.id || '', text: (e.textContent || e.value || '').trim().slice(0, 40) }; }).slice(0, 10),
+        doc_links: Array.prototype.slice.call(document.querySelectorAll('a[href]'))
+          .map(function (a) { return a.getAttribute('href'); })
+          .filter(function (h) { return /\.(pdf|zip|docx?|xlsx?)(\?|#|$)/i.test(h); }).slice(0, 40),
         collected_at: new Date().toISOString()
       };
     },

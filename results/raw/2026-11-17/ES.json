@@ -427,7 +427,9 @@
       "chatgpt_form_submission_type_local": ""
      },
      "errors": [],
-     "expected_tags": [],
+     "expected_tags": [
+      "36"
+     ],
      "conversion_tags_fired": [
       "36",
       "203",
@@ -491,11 +493,63 @@
       "chatgpt_form_submission_type_local": ""
      },
      "errors": [],
-     "expected_tags": [],
+     "expected_tags": [
+      "36"
+     ],
      "conversion_tags_fired": [
       "36",
       "203",
       "399"
+     ]
+    },
+    {
+     "name": "purchase",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "75",
+      "180",
+      "273",
+      "283",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "373",
+      "397",
+      "412",
+      "414",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "194",
+      "195",
+      "196",
+      "197",
+      "200"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "283"
+     ],
+     "conversion_tags_fired": [
+      "283"
      ]
     }
    ]

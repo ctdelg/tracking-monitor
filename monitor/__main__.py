@@ -45,7 +45,9 @@ def cmd_collect(args) -> None:
                     extra = {}
                     for prof in m.get("extra_tealium_profiles") or []:
                         print(f"[{code}] Tealium profile {prof} ...", flush=True)
-                        extra[prof] = pipeline.collect_tealium(browser, {**m, "tealium_profile": prof}, args.day)
+                        events = (m.get("profile_conversion_events") or {}).get(prof, m["conversion_events"])
+                        extra[prof] = pipeline.collect_tealium(
+                            browser, {**m, "tealium_profile": prof, "conversion_events": events}, args.day)
                     if extra:
                         pipeline.store_raw(args.day, code, tealium_extra=extra)
                 else:

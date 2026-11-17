@@ -35,6 +35,8 @@ default_conversion_events:
   - name: gated_contact
     payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
               gate_content_name: XX_INT_XX_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
+  - name: purchase
+    payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
 
 markets:
   DE:
@@ -56,6 +58,9 @@ markets:
         payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
                   gate_content_name: DE_INT_DE_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
         expected_tags: [98]
+      - name: purchase
+        payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
+        expected_tags: [284]        # Floodlight sales tag (transaction_id)
     urls:
       # Source: paid media landing page report (Google Ads / SA360), 2026-11-16 -
       # 553 rows, tracking parameters removed, de-duplicated to 116 URLs.
@@ -218,8 +223,31 @@ markets:
     name: France
     tealium_profile: fr-fr
     locale: fr-FR
+    conversion_events:
+      # Web-shop (Sage Active cart) submits do not fire FR Floodlight 129: its rule needs ga4_customer_lead_type,
+      # which only gated forms set (unchanged since at least July 2026). Recorded, not required.
+      - name: ecom_try
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+      - name: ecom_buy
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+      - name: gated_trial
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: FR_INT_FR_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
+        expected_tags: [129]       # Floodlight form_submit_success (same role as DE tag 98)
+      - name: gated_contact
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: FR_INT_FR_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
+        expected_tags: [129]
+      - name: purchase
+        payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
+        expected_tags: [464]        # Floodlight sales tag (transaction_id)
     # Also checked every day: utag.js of the ciel.com profile used by the two Ciel pages.
     extra_tealium_profiles: [ciel]
+    profile_conversion_events:
+      ciel:
+        - name: purchase
+          payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
+          expected_tags: [9]      # ciel.com shop purchase
     urls:
       # Source: FR paid search URL list, 2026-11-17 - tracking parameters removed, 34 URLs.
       # Two Sage 50 (formerly Ciel) pages live on www.ciel.com with their own Tealium profile 'ciel'.
@@ -268,6 +296,22 @@ markets:
     name: Spain
     tealium_profile: es-es
     locale: es-ES
+    conversion_events:
+      - name: ecom_try
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+      - name: ecom_buy
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+      - name: gated_trial
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: ES_INT_ES_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
+        expected_tags: [36]       # Floodlight form_submit_success (same role as DE tag 98)
+      - name: gated_contact
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: ES_INT_ES_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
+        expected_tags: [36]
+      - name: purchase
+        payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
+        expected_tags: [283]        # Floodlight sales tag (transaction_id)
     urls:
       - {id: es-home, url: "https://www.sage.com/es-es/", type: content}
       - {id: es-productos, url: "https://www.sage.com/es-es/productos/", type: product}
@@ -302,6 +346,20 @@ markets:
     name: Portugal
     tealium_profile: pt-pt
     locale: pt-PT
+    conversion_events:
+      - name: ecom_try
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
+      - name: ecom_buy
+        payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_buy}
+      - name: gated_trial
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: PT_INT_PT_SMB_TRL_TrackingMonitor, customer_lead_type: Trial_Demo, number_of_employees: 10-49 Employees}
+        expected_tags: [402]       # Floodlight form_submit_success (same role as DE tag 98)
+      - name: gated_contact
+        payload: {action: form_submit_success, event_name: form_submit_success, triggered_by: sitecore, release_date: "2026-01-01",
+                  gate_content_name: PT_INT_PT_SMB_CON_TrackingMonitor, customer_lead_type: Contact, number_of_employees: 10-49 Employees}
+        expected_tags: [402]
+      # PT has no Floodlight sales tag for purchases (no web shop).
     urls:
       - {id: pt-home, url: "https://www.sage.com/pt-pt/", type: content}
       - {id: pt-produtos, url: "https://www.sage.com/pt-pt/produtos/", type: product}

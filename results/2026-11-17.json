@@ -2,7 +2,7 @@
  "schema_version": 1,
  "monitor_version": "1.0.0",
  "day": "2026-11-17",
- "generated_at": "2026-11-17T10:50:51Z",
+ "generated_at": "2026-11-17T11:05:10Z",
  "global": {
   "status": "red",
   "incidents": [],
@@ -840,6 +840,51 @@
        "332",
        "336",
        "341"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:purchase",
+     "title": "Conversion tags fire for 'purchase' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'purchase': tag(s) 284 fire.",
+     "evidence": {
+      "fired": [
+       "9",
+       "143",
+       "145",
+       "202",
+       "273",
+       "284",
+       "287",
+       "296",
+       "301",
+       "311",
+       "322",
+       "329",
+       "336",
+       "349",
+       "352",
+       "356",
+       "361",
+       "375",
+       "379",
+       "402",
+       "423",
+       "424",
+       "425"
+      ],
+      "true_rules": [
+       "86",
+       "150",
+       "251",
+       "262",
+       "264",
+       "265",
+       "267"
       ],
       "errors": []
      }
@@ -9776,9 +9821,9 @@
    "name": "Austria",
    "tealium_profile": "GTM-PS6MXC",
    "rating": {
-    "status": "yellow",
-    "red_count": 0,
-    "yellow_count": 10,
+    "status": "red",
+    "red_count": 1,
+    "yellow_count": 11,
     "site_down": [],
     "blocked_pages": [],
     "coverage": "full",
@@ -9786,7 +9831,7 @@
     "pages_checked": 6,
     "pages_configured": 6
    },
-   "status": "yellow",
+   "status": "red",
    "source": "playwright",
    "baseline_confirmed": null,
    "utag": {
@@ -9861,6 +9906,76 @@
      "target": "market",
      "detail": "Floodlight counter 5195550/sageg0/sage_013; Floodlight counter 5195550/sageg0/sage_012; Conversion Linker; Conversion Linker",
      "evidence": {}
+    },
+    {
+     "id": "GTM-07",
+     "title": "Conversion trigger can fire on the site",
+     "severity": "red",
+     "result": "fail",
+     "target": "conversion:sage_012",
+     "detail": "Floodlight sage_012: can never fire on form submit - no form button has an ID containing 'Submit' (buttons found: 'Jetzt kostenlos downloaden' id=none, 'Absenden' id=none). The GTM trigger and the website no longer match.",
+     "evidence": {
+      "trigger": [
+       [
+        {
+         "fn": "_cn",
+         "var": "DoubleClick Floodlight",
+         "value": "true"
+        },
+        {
+         "fn": "_re",
+         "var": "__e",
+         "value": "(consents_initialized)|(consent_changed.*)"
+        },
+        {
+         "fn": "_eq",
+         "var": "__e",
+         "value": "gtm.click"
+        },
+        {
+         "fn": "_cn",
+         "var": "ID",
+         "value": "Submit"
+        }
+       ]
+      ],
+      "pages_checked": 10
+     }
+    },
+    {
+     "id": "GTM-07",
+     "title": "Conversion trigger can fire on the site",
+     "severity": "yellow",
+     "result": "fail",
+     "target": "conversion:sage_013",
+     "detail": "Floodlight sage_013: cannot fire from the paid landing pages or form pages - no link to 'uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf' on the checked pages. The link may exist elsewhere on the site.",
+     "evidence": {
+      "trigger": [
+       [
+        {
+         "fn": "_cn",
+         "var": "DoubleClick Floodlight",
+         "value": "true"
+        },
+        {
+         "fn": "_re",
+         "var": "__e",
+         "value": "(consents_initialized)|(consent_changed.*)"
+        },
+        {
+         "fn": "_cn",
+         "var": "URL",
+         "value": "uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf"
+        },
+        {
+         "fn": "_eq",
+         "var": "__e",
+         "value": "gtm.click"
+        }
+       ]
+      ],
+      "pages_checked": 10
+     }
     },
     {
      "id": "PAGE-01",
@@ -9969,7 +10084,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1794912441.TEST_MON_20261117"
+      "value": "GCL.1794913314.TEST_MON_20261117"
      }
     },
     {
@@ -9980,7 +10095,7 @@
      "target": "at-dpw-sage-dpw",
      "detail": "1/1 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=1927656632.1794912440&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST"
+      "sample": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&auid=556240378.1794913314&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_M"
      }
     },
     {
@@ -10090,7 +10205,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1794912457.TEST_MON_20261117"
+      "value": "GCL.1794913330.TEST_MON_20261117"
      }
     },
     {
@@ -10101,7 +10216,7 @@
      "target": "at-dpw-zeiterfassung",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&auid=453583395.1794912456&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTES"
+      "sample": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=1790269194.1794913330&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DT"
      }
     },
     {
@@ -10211,7 +10326,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1794912472.TEST_MON_20261117"
+      "value": "GCL.1794913346.TEST_MON_20261117"
      }
     },
     {
@@ -10222,7 +10337,7 @@
      "target": "at-dpw-lohn-outsourcing",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=2138220973.1794912472&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3"
+      "sample": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&auid=1338072120.1794913346&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3D"
      }
     },
     {
@@ -10332,7 +10447,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1794912488.TEST_MON_20261117"
+      "value": "GCL.1794913362.TEST_MON_20261117"
      }
     },
     {
@@ -10343,7 +10458,7 @@
      "target": "at-dpw-lohnverrechnung",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&auid=544732352.1794912488&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclk"
+      "sample": "https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=1&auid=1217819160.1794913362&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261117%26msclk"
      }
     },
     {
@@ -10440,7 +10555,8 @@
         "G-M4HF0CKEGQ"
        ],
        "other:doubleclick.net": [],
-       "other:googleadservices.com": []
+       "other:googleadservices.com": [],
+       "other:googletagmanager.com": []
       }
      }
     },
@@ -10453,7 +10569,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1794912504.TEST_MON_20261117"
+      "value": "GCL.1794913378.TEST_MON_20261117"
      }
     },
     {
@@ -10464,7 +10580,7 @@
      "target": "at-dpw-reisekostenabrechnung",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=717447579.1794912504&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DT"
+      "sample": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=578954444.1794913378&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DT"
      }
     },
     {
@@ -10574,7 +10690,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1794912520.TEST_MON_20261117"
+      "value": "GCL.1794913394.TEST_MON_20261117"
      }
     },
     {
@@ -10585,7 +10701,7 @@
      "target": "at-dpw-fairpay",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&auid=94942761.1794912520&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON_2"
+      "sample": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=1653235921.1794913394&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261117&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261117%26msclkid%3DTEST_MON_20261117%26fbclid%3DTEST_MON"
      }
     },
     {
@@ -10702,8 +10818,11 @@
     }
    ],
    "acks_applied": [],
-   "red_since": null,
-   "new_failures": []
+   "red_since": "2026-11-17",
+   "new_failures": [
+    "GTM-07|conversion:sage_012",
+    "GTM-07|conversion:sage_013"
+   ]
   },
   "FR": {
    "name": "France",
@@ -10923,6 +11042,182 @@
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "CONV-01:gated_trial",
+     "title": "Conversion tags fire for 'gated_trial' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_trial': tag(s) 129 fire.",
+     "evidence": {
+      "fired": [
+       "61",
+       "129",
+       "201",
+       "339",
+       "402",
+       "433",
+       "436",
+       "467",
+       "470",
+       "471",
+       "475",
+       "476",
+       "477",
+       "500",
+       "507",
+       "520",
+       "527",
+       "550",
+       "557",
+       "579",
+       "581",
+       "583",
+       "595",
+       "607",
+       "608",
+       "633",
+       "645",
+       "646",
+       "648",
+       "656",
+       "657",
+       "658"
+      ],
+      "true_rules": [
+       "121",
+       "196",
+       "267",
+       "284",
+       "323",
+       "344",
+       "345",
+       "347",
+       "348",
+       "359",
+       "360",
+       "366",
+       "392",
+       "402",
+       "403",
+       "407"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:gated_contact",
+     "title": "Conversion tags fire for 'gated_contact' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_contact': tag(s) 129 fire.",
+     "evidence": {
+      "fired": [
+       "61",
+       "129",
+       "201",
+       "339",
+       "402",
+       "433",
+       "436",
+       "467",
+       "470",
+       "471",
+       "475",
+       "476",
+       "477",
+       "500",
+       "507",
+       "520",
+       "527",
+       "550",
+       "557",
+       "579",
+       "581",
+       "583",
+       "595",
+       "607",
+       "609",
+       "633",
+       "645",
+       "646",
+       "648",
+       "656",
+       "657",
+       "658"
+      ],
+      "true_rules": [
+       "121",
+       "196",
+       "267",
+       "284",
+       "323",
+       "344",
+       "345",
+       "347",
+       "348",
+       "359",
+       "360",
+       "366",
+       "392",
+       "402",
+       "403",
+       "408"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:purchase",
+     "title": "Conversion tags fire for 'purchase' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'purchase': tag(s) 464 fire.",
+     "evidence": {
+      "fired": [
+       "61",
+       "201",
+       "339",
+       "402",
+       "433",
+       "436",
+       "464",
+       "467",
+       "470",
+       "475",
+       "476",
+       "478",
+       "500",
+       "507",
+       "520",
+       "523",
+       "527",
+       "550",
+       "557",
+       "580",
+       "582",
+       "607",
+       "633",
+       "645",
+       "647",
+       "656",
+       "657",
+       "658"
+      ],
+      "true_rules": [
+       "121",
+       "196",
+       "323",
+       "343",
+       "344",
+       "345",
+       "349"
+      ],
+      "errors": []
+     }
     },
     {
      "id": "FORM-00",
@@ -14109,6 +14404,25 @@
      "evidence": {}
     },
     {
+     "id": "CONV-01:purchase",
+     "title": "Conversion tags fire for 'purchase' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "tealium:ciel",
+     "detail": "Event 'purchase': tag(s) 9 fire.",
+     "evidence": {
+      "fired": [
+       "4",
+       "9",
+       "13"
+      ],
+      "true_rules": [
+       "4"
+      ],
+      "errors": []
+     }
+    },
+    {
      "id": "PAGE-01",
      "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
      "severity": "site_down",
@@ -14556,6 +14870,164 @@
      "evidence": {}
     },
     {
+     "id": "CONV-01:gated_trial",
+     "title": "Conversion tags fire for 'gated_trial' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_trial': tag(s) 36 fire.",
+     "evidence": {
+      "fired": [
+       "3",
+       "4",
+       "8",
+       "36",
+       "75",
+       "180",
+       "203",
+       "273",
+       "285",
+       "293",
+       "318",
+       "338",
+       "340",
+       "352",
+       "362",
+       "372",
+       "397",
+       "398",
+       "412",
+       "413",
+       "418",
+       "420",
+       "426",
+       "427",
+       "430"
+      ],
+      "true_rules": [
+       "2",
+       "43",
+       "45",
+       "81",
+       "140",
+       "151",
+       "194",
+       "196",
+       "197",
+       "198",
+       "199",
+       "211",
+       "212",
+       "215",
+       "227",
+       "233"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:gated_contact",
+     "title": "Conversion tags fire for 'gated_contact' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_contact': tag(s) 36 fire.",
+     "evidence": {
+      "fired": [
+       "3",
+       "4",
+       "8",
+       "36",
+       "75",
+       "180",
+       "203",
+       "273",
+       "285",
+       "293",
+       "318",
+       "338",
+       "340",
+       "352",
+       "362",
+       "372",
+       "397",
+       "399",
+       "412",
+       "413",
+       "418",
+       "420",
+       "426",
+       "427",
+       "430"
+      ],
+      "true_rules": [
+       "2",
+       "43",
+       "45",
+       "81",
+       "140",
+       "151",
+       "194",
+       "196",
+       "197",
+       "198",
+       "199",
+       "211",
+       "212",
+       "215",
+       "227",
+       "234"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:purchase",
+     "title": "Conversion tags fire for 'purchase' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'purchase': tag(s) 283 fire.",
+     "evidence": {
+      "fired": [
+       "3",
+       "4",
+       "8",
+       "75",
+       "180",
+       "273",
+       "283",
+       "285",
+       "293",
+       "318",
+       "338",
+       "340",
+       "352",
+       "362",
+       "373",
+       "397",
+       "412",
+       "414",
+       "420",
+       "426",
+       "427",
+       "430"
+      ],
+      "true_rules": [
+       "2",
+       "43",
+       "45",
+       "81",
+       "194",
+       "195",
+       "196",
+       "197",
+       "200"
+      ],
+      "errors": []
+     }
+    },
+    {
      "id": "FORM-00",
      "title": "FORM-00",
      "severity": "red",
@@ -14715,6 +15187,108 @@
      "target": "market",
      "detail": "No publish since the last run",
      "evidence": {}
+    },
+    {
+     "id": "CONV-01:gated_trial",
+     "title": "Conversion tags fire for 'gated_trial' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_trial': tag(s) 402 fire.",
+     "evidence": {
+      "fired": [
+       "5",
+       "190",
+       "223",
+       "324",
+       "402",
+       "429",
+       "445",
+       "448",
+       "458",
+       "489",
+       "492",
+       "502",
+       "516",
+       "545",
+       "588",
+       "589",
+       "613",
+       "614",
+       "618",
+       "621",
+       "628"
+      ],
+      "true_rules": [
+       "2",
+       "27",
+       "30",
+       "53",
+       "155",
+       "163",
+       "201",
+       "209",
+       "210",
+       "211",
+       "220",
+       "223",
+       "225",
+       "243",
+       "244"
+      ],
+      "errors": []
+     }
+    },
+    {
+     "id": "CONV-01:gated_contact",
+     "title": "Conversion tags fire for 'gated_contact' (load rules)",
+     "severity": "red",
+     "result": "pass",
+     "target": "market",
+     "detail": "Event 'gated_contact': tag(s) 402 fire.",
+     "evidence": {
+      "fired": [
+       "5",
+       "190",
+       "223",
+       "324",
+       "402",
+       "429",
+       "445",
+       "448",
+       "458",
+       "489",
+       "492",
+       "502",
+       "516",
+       "545",
+       "588",
+       "590",
+       "613",
+       "614",
+       "618",
+       "621",
+       "628"
+      ],
+      "true_rules": [
+       "2",
+       "27",
+       "30",
+       "53",
+       "155",
+       "163",
+       "201",
+       "209",
+       "210",
+       "211",
+       "220",
+       "223",
+       "225",
+       "239",
+       "244"
+      ],
+      "errors": []
+     }
     },
     {
      "id": "FORM-00",

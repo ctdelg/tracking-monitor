@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import urllib.request
 from pathlib import Path
 
@@ -57,6 +58,51 @@ def _resource(js: str) -> dict:
     raise ValueError("container resource not found")
 
 
+def _triggers(res: dict) -> dict:
+    """{activity or tag label: [[condition, ...], ...]} for live Floodlight tags (one list per firing trigger).
+
+    Trigger groups (__tg) are resolved to their member triggers; each condition is
+    {"fn": "_cn"/"_eq"/"_re"..., "var": "ID"/"URL"/"Event"..., "value": "..."}.
+    """
+    tags, preds, macros = res.get("tags", []), res.get("predicates", []), res.get("macros", [])
+
+    def var(ref):
+        if isinstance(ref, list) and ref and ref[0] == "macro":
+            m = macros[ref[1]]
+            return m.get("vtp_name") or m.get("vtp_varType") or m.get("function")
+        return ref
+
+    def conds(rule, key):
+        return [{"fn": preds[i]["function"], "var": var(preds[i].get("arg0")), "value": preds[i].get("arg1")}
+                for part in rule if part[0] == key for i in part[1:]]
+
+    by_tag: dict[int, list] = {}
+    for rule in res.get("rules", []):
+        for part in rule:
+            if part[0] == "add":
+                for t in part[1:]:
+                    by_tag.setdefault(t, []).append(conds(rule, "if"))
+    firing = {t.get("vtp_firingId"): i for i, t in enumerate(tags) if t.get("function") == "__tg" and t.get("vtp_firingId")}
+    groups = {t.get("vtp_uniqueTriggerId"): t.get("vtp_triggerIds", [])[1:] for t in tags
+              if t.get("function") == "__tg" and t.get("vtp_uniqueTriggerId")}
+    out = {}
+    for i, t in enumerate(tags):
+        if t.get("function") not in ("__flc", "__fls", "__awct"):
+            continue
+        label = t.get("vtp_activityTag") or t.get("vtp_conversionLabel") or str(t.get("tag_id"))
+        paths = []
+        for cs in by_tag.get(i, []):
+            gid = next((str(c["value"]) for c in cs if c["var"] == "gtm.triggers"), None)
+            members = []
+            if gid:
+                m = re.search(r"\d+_\d+", gid)
+                for fid in groups.get(m.group(0), []) if m else []:
+                    members += [c for cc in by_tag.get(firing.get(fid), []) for c in cc]
+            paths.append([c for c in cs if c["var"] not in ("gtm.triggers",) and c["value"] != "gtm.triggerGroup"] + members)
+        out[label] = paths
+    return out
+
+
 def parse(js: str) -> dict:
     res = _resource(js)
     tags = {}
@@ -66,7 +112,8 @@ def parse(js: str) -> dict:
         if fn == "__paused":
             fn = "__paused:" + str(t.get("vtp_originalTagType"))
         tags[str(t.get("tag_id"))] = {"function": fn, "ids": ids}
-    return {"version": str(res.get("version")), "sha256": hashlib.sha256(js.encode("utf-8")).hexdigest(), "tags": tags}
+    return {"version": str(res.get("version")), "sha256": hashlib.sha256(js.encode("utf-8")).hexdigest(), "tags": tags,
+            "triggers": _triggers(res)}
 
 
 def conversion_tags(parsed: dict) -> dict:

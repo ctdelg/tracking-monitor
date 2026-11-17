@@ -1,7 +1,7 @@
 {
  "day": "2026-11-17",
  "written_by": "Claude (FR landing page list added)",
- "summary": "FR is red because the two Sage 50 (formerly Ciel) pages on www.ciel.com have no cookie banner: analytics and advertising cookies are set and GA4, Google Ads and LinkedIn fire before any consent. This is a privacy problem rather than a measurement problem.\nDE stays red for one reason: Floodlight tag 98 does not fire for web-shop trial and purchase submits (load rule 274, since the Tealium publish of 24 Aug 2026).\nNew today: the FR list from the paid search report is in (34 URLs: 32 on sage.com/fr-fr, 2 on ciel.com). All 32 sage.com pages answer. All 49 FR lead forms (demo, callback, quote, download, product tour) are active and their submit fires Floodlight 129 plus the matching lead-type tag, LinkedIn, Meta, TikTok and Reddit.\nAT (sagedpw.at) runs fully automated and passes; it is yellow only until its baseline is confirmed. ES and PT: tag rule checks only.",
+ "summary": "FR is red because the two Sage 50 (formerly Ciel) pages on www.ciel.com have no cookie banner: analytics and advertising cookies are set and GA4, Google Ads and LinkedIn fire before any consent. This is a privacy problem rather than a measurement problem.\nDE stays red for one reason: Floodlight tag 98 does not fire for web-shop trial and purchase submits (load rule 274, since the Tealium publish of 24 Aug 2026).\nNew today: the FR list from the paid search report is in (34 URLs: 32 on sage.com/fr-fr, 2 on ciel.com). All 32 sage.com pages answer. All 49 FR lead forms (demo, callback, quote, download, product tour) are active and their submit fires Floodlight 129 plus the matching lead-type tag, LinkedIn, Meta, TikTok and Reddit.\nAT is red: its main Floodlight conversion (sage_012) is set to fire on a click on a button whose ID contains 'Submit', but the buttons on the AT contact and Infopaket forms have no ID, so it cannot fire when a form is sent. ES and PT: tag rule checks only.\nConversion checks now cover every market: for each one the monitor knows which Floodlight tag must fire for a lead form submit (DE 98, FR 129, ES 36, PT 402) and for a purchase (DE 284, FR 464, ES 283, ciel.com 9). In AT (Google Tag Manager) it reads each Floodlight trigger and checks the matching button or link exists.",
  "markets": {
   "FR": {
    "summary": "34 paid search URLs. The 2 ciel.com pages are checked automatically every day; the 32 sage.com pages wait for the bot-protection exception. All 49 lead forms on the sage.com pages pass.",
@@ -112,35 +112,41 @@
    ]
   },
   "AT": {
-   "summary": "Sage DPW site (www.sagedpw.at): 6 paid landing pages and 2 form journeys checked automatically - no bot protection there.",
+   "summary": "Pages, consent and tags work on all 6 landing pages, but the form conversion in GTM can no longer fire.",
    "brief": [
     {
-     "tone": "green",
-     "title": "Working",
+     "tone": "red",
+     "title": "Why it is red",
      "items": [
-      "Usercentrics banner shows; nothing fires before consent.",
-      "After consent: GTM-PS6MXC, Floodlight DC-5195550 and GA4 G-M4HF0CKEGQ on all 6 pages.",
-      "gclid is stored and still present on the Infopaket and contact form pages.",
-      "GTM v13 has 2 live Floodlight tags (sageg0/sage_012, sage_013) and the Conversion Linker."
+      "Floodlight sage_012 fires on a click on an element with 'Submit' in its ID.",
+      "The 'Absenden' and 'Jetzt kostenlos downloaden' buttons have no ID.",
+      {
+       "text": "So form submits are not counted as conversions.",
+       "action": "Fix the GTM trigger or give the buttons an ID."
+      }
      ]
     },
     {
      "tone": "yellow",
-     "title": "To confirm",
+     "title": "To check",
      "items": [
-      "Tag baseline pending: confirm it once.",
-      "No Google Ads, Microsoft UET, LinkedIn or Meta tags on the site - check this is intended."
+      "Floodlight sage_013 fires on a click on the 'Sage DPW to GO' order form PDF; no checked page links to it.",
+      "Tag baseline still to confirm."
      ]
     },
     {
-     "tone": "",
-     "title": "Coverage",
+     "tone": "green",
+     "title": "Working",
      "items": [
-      "All 6 paid landing pages and both form journeys."
+      "Usercentrics banner, nothing before consent.",
+      "GTM, Floodlight page views and GA4 on all 6 pages; gclid reaches the form pages."
      ]
     }
    ],
-   "findings": {}
+   "findings": {
+    "GTM-07|conversion:sage_012": "In GTM-PS6MXC (v13) Floodlight sageg0/sage_012 fires on gtm.click where Click ID contains 'Submit' (after Floodlight consent). The submit buttons on /kontaktformular/ and /kostenloses-infopaket/ are <input type=submit> without an id, so the trigger never matches. Owner: whoever manages GTM-PS6MXC / the sagedpw.at site. Fix: trigger on the form's success event (or a thank-you page view) instead of a click, or add an id containing 'Submit' to the buttons.",
+    "GTM-07|conversion:sage_013": "Floodlight sage_013 fires on a click on a link to uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf. None of the 6 paid landing pages or the 2 form pages link to it. Check whether the PDF is still offered somewhere; if not, the tag is obsolete."
+   }
   },
   "ES": {
    "summary": "No page checks today (tag rule checks only)."

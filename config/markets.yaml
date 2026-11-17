@@ -226,6 +226,8 @@ markets:
     conversion_events:
       # Web-shop (Sage Active cart) submits do not fire FR Floodlight 129: its rule needs ga4_customer_lead_type,
       # which only gated forms set (unchanged since at least July 2026). Recorded, not required.
+      # As of 2026-11-17 the FR Sage Active checkout offers no trials (purchases only). If trials are added,
+      # decide which Floodlight tag should count them and add expected_tags to ecom_try.
       - name: ecom_try
         payload: {action: form_submit_success, tealium_event: form_submit_success, customer_lead_type: ecom_try}
       - name: ecom_buy

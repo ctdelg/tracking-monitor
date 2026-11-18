@@ -92,8 +92,8 @@ web app.
 | DE | www.sage.com/de-de/ | Tealium | OneTrust | 116 (paid media report) + 10 product tour pages | 136 forms on 99 pages |
 | AT | **www.sagedpw.at** (Sage DPW, HR software only) | Google Tag Manager | Usercentrics | 6 (paid search report) + 2 form journeys | Infopaket and contact form pages |
 | FR | www.sage.com/fr-fr/ (+ www.ciel.com for two Sage 50 pages) | Tealium (profiles fr-fr and ciel) | OneTrust (none found on ciel.com) | 34 (paid search report): 32 on sage.com, 2 on ciel.com | 49 forms on 31 pages |
-| ES | www.sage.com/es-es/ | Tealium | OneTrust | 22 (first proposal from the sitemap) | not yet inventoried |
-| PT | www.sage.com/pt-pt/ | Tealium | OneTrust | 20 (first proposal from the sitemap) | not yet inventoried |
+| ES | www.sage.com/es-es/ | Tealium | OneTrust | 11 (Paid Media list) | 31 forms on 11 pages |
+| PT | www.sage.com/pt-pt/ | Tealium | OneTrust | 6 (Paid Media list) | 22 forms on 6 pages |
 
 ## Current status (17 Nov 2026)
 
@@ -115,7 +115,7 @@ web app.
 - [ ] DE: clarify whether Microsoft UET should fire on the payroll and HR landing pages (it currently does not).
 - [ ] AT: clarify whether the missing Google Ads remarketing, UET, LinkedIn and Meta tags on sagedpw.at are intended.
 - [ ] FR: www.ciel.com has no cookie banner, and tags fire before consent. Raise this with the privacy / web team.
-- [ ] ES, PT: replace the sitemap proposals with the paid media landing page reports, then inventory their forms.
+- [ ] PT: confirm whether PT pages should send a Floodlight page view (only Google Ads was seen).
 - [ ] Phase 2: email alerts for new red and yellow findings.
 
 ## Where to look

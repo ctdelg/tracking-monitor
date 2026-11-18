@@ -1,0 +1,292 @@
+{
+ "market": "ES",
+ "pages": {
+  "es-productos-sage-50cloud": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "790d61f9-cbc3-413c-a5d2-67d1d02ef816",
+     "ctas": [
+      "Solicita más información",
+      "Contáctanos para comprar"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "50e8c733-4279-4764-851b-94c7445a87a6",
+     "ctas": [
+      "Inicia el tour de producto"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "4058db34-5547-4fc4-be02-f9174ae4da8d",
+     "ctas": [
+      "Inicia el tour de producto",
+      "Contáctanos para comprar"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-productos-sage-active": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "4b4a6275-5337-4595-974a-5007c229b1dc",
+     "ctas": [
+      "Visita guiada a Sage Active"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "d85c3254-04a6-4896-b226-5b1d3ca026c3",
+     "ctas": [
+      "Más información"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-cp-contabilidad": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "d85c3254-04a6-4896-b226-5b1d3ca026c3",
+     "ctas": [
+      "Más información"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-productos-sage-for-accountants": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "7c4705c9-46e1-436e-8d23-847f8c67c0f1",
+     "ctas": [
+      "Solicita más información",
+      "Más informacion"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "f7b1edf3-ef97-439e-816e-62816ae1afcb",
+     "ctas": [
+      "Solicita una demo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "f24c85a7-9f86-4b61-912a-0736d6440588",
+     "ctas": [
+      "Ir al Product tour"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "74ea509b-94b0-48ba-8715-13ff47c0e22e",
+     "ctas": [
+      "Ir al Product tour"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "3b1185d1-2fdb-4fa7-a8b5-97db861cfb69",
+     "ctas": [
+      "Ir al Product tour"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-sbc-hr": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "51d83bf2-5632-4f79-9d5c-07d6aaf13ee2",
+     "ctas": [
+      "Solicita una demostración"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "1f9a6586-16d9-4def-9a48-9bff3d4a37a4",
+     "ctas": [
+      "Inicia el tour de producto"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-productos-sage-200-cloud-laboral": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "2bc36689-2d99-48c7-af73-de0c56702ef1",
+     "ctas": [
+      "Solicita más información",
+      "Solicita una demostración"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "fd40aa0a-9905-47f9-af6f-0ad9f72d3fd2",
+     "ctas": [
+      "Solicita una demostración",
+      "Solicita más información"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "6b7adc0f-eb9a-4b82-a20e-3660ece36bd3",
+     "ctas": [
+      "Inicia el tour de producto",
+      "Inicia el tour interactivo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "2ab66739-d1a6-47d0-9f79-7379af916238",
+     "ctas": [
+      "Solicita más información"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "90d4f36e-fb49-467e-b32b-93f725b9d069",
+     "ctas": [
+      "Solicita más información"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-productos-sage-200": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "b96197f9-5419-49db-a619-da59c0980f24",
+     "ctas": [
+      "Solicita una demostración"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "2e8c4972-8c7e-4299-8825-ff08a8d21fc8",
+     "ctas": [
+      "Inicia el tour interactivo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "fea9f669-36f5-4e33-b320-7e55cfda1214",
+     "ctas": [
+      "Solicita más información"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "a0b0f52e-4525-4047-a8af-8a558d2aa0b4",
+     "ctas": [
+      "Solicita más información"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "5d0bcdd2-7bf1-464c-b9fd-56d6a052ba5b",
+     "ctas": [
+      "Solicita más información"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-sbc-sage-x3": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "5c5193d4-d26a-452a-8477-0eeab2da50ce",
+     "ctas": [
+      "Solicita una demostración"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "95f21282-dac7-46aa-b02a-fbc6558e51b5",
+     "ctas": [
+      "Inicia el tour interactivo",
+      "Echa un vistazo al producto"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-cp-software-erp": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "de9e0092-0814-4451-86e1-6665a84be908",
+     "ctas": [
+      "Habla con un experto",
+      "Conoce Sage Copilot"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-productos-sage-xrt-treasury": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "d1b4920b-4147-4f62-b813-d01c44a41bc4",
+     "ctas": [
+      "Inicia el tour interactivo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "a64021be-e666-4933-8511-2e65ef6e1516",
+     "ctas": [
+      "Solicita más información"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "d93967c7-b2f6-48dd-8c77-cffdb756acf7",
+     "ctas": [
+      "Descarga la guía"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "62b423cb-14c5-419f-9298-9f07bc137e51",
+     "ctas": [
+      "Descarga la guía"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "24960e0c-c7fa-405b-9c09-10b90ab00e2f",
+     "ctas": [
+      "Acceder a la demo"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "es-productos-sage-sales-management": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "7b4fdbe4-44ef-42c7-9da2-c56698c1a2e6",
+     "ctas": [
+      "Solicita una demo"
+     ],
+     "embedded": false
+    }
+   ]
+  }
+ }
+}

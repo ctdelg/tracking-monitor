@@ -1,0 +1,191 @@
+{
+ "market": "PT",
+ "pages": {
+  "pt-produtos-sage-50cloud": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "ce38dd33-82af-40fa-aa50-5d147be0cc35",
+     "ctas": [
+      "Saiba mais",
+      "Contacte-nos para subscrever"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "168b667e-f8dc-4d9f-a001-889224d1212e",
+     "ctas": [
+      "Peça mais informações"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "27f27919-3393-40d6-bd99-b58fff832a58",
+     "ctas": [
+      "Peça uma demo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "8703023a-0cd6-4472-98b2-aecb71ba646f",
+     "ctas": [
+      "Peça mais informações"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "pt-contabilistas-sage-for-accountants": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "2a03c43e-fe20-417c-9b7e-13f2f2f13546",
+     "ctas": [
+      "Peça mais informações"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "8fd0797b-c0c9-408b-abe9-01c6718e3323",
+     "ctas": [
+      "Fazer uma visita ao produto"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "da319b00-75ec-42c8-9d53-0e8c63984f67",
+     "ctas": [
+      "Nós ligamos"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "6fc5204b-94fc-4bf1-a56c-b683762699f3",
+     "ctas": [
+      "Nós ligamos"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "a5b7d3b7-f394-427d-9f18-02eac773cce2",
+     "ctas": [
+      "Peça mais informações"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "pt-produtos-sage-50cloud-contabilidade": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "6e6f462e-a56b-4f04-b1a5-6b2736f6f85f",
+     "ctas": [
+      "Experimente já"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "a650fc0b-81df-4f26-90b3-11780d0e856e",
+     "ctas": [
+      "Peça mais informações"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "pt-sbc-hr": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "2d7fb4d8-36ca-43c8-b5e0-d8998c67f428",
+     "ctas": [
+      "Agende uma demonstração"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "e6cc2d2b-0638-4976-8a1d-e1a7bdbae0b5",
+     "ctas": [
+      "Fazer uma visita ao produto",
+      "Assista a uma apresentação do produto"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "pt-sbc-sage-x3": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "02f515fc-13bb-4fa3-b6a2-ba1f9f2c37d7",
+     "ctas": [
+      "Peça uma demo"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "150f8e74-55ec-4bc8-9a2a-cbebb304a6b7",
+     "ctas": [
+      "Veja uma apresentação do produto"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "dc449d1c-61e4-4604-afd3-6149a0902b8f",
+     "ctas": [
+      "Faça download"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "ede24abf-a4ed-46fe-abb5-812d0d58bd83",
+     "ctas": [
+      "Faça download"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "fe54e74c-3fce-4d39-bb38-e2ea5f6e5606",
+     "ctas": [
+      "Faça download"
+     ],
+     "embedded": false
+    }
+   ]
+  },
+  "pt-produtos-sage-xrt-advanced": {
+   "discovered": "2026-11-18",
+   "gates": [
+    {
+     "id": "b35e7125-a89e-485b-a103-9023ec508939",
+     "ctas": [
+      "Solicite uma demonstração"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "aa154eb7-b97b-48e5-9107-8342e9a05932",
+     "ctas": [
+      "Baixe o guia"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "c893fa63-73ea-439c-bad4-967bc298c2aa",
+     "ctas": [
+      "Baixe o guia"
+     ],
+     "embedded": false
+    },
+    {
+     "id": "c6a22385-35e7-486b-800a-97b3b31520c0",
+     "ctas": [
+      "Acesse a demo"
+     ],
+     "embedded": false
+    }
+   ]
+  }
+ }
+}

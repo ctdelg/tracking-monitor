@@ -1,0 +1,46 @@
+{
+ "publish_version": "202611181017",
+ "sha256": "e1aae93dae61637a2f3718ea00645d370dbcc9e234aef074b7e99a165031e124",
+ "size": 50911,
+ "tags": {
+  "4": {
+   "load": "1",
+   "send": "1",
+   "v": "202402200908",
+   "tid": "7142"
+  },
+  "9": {
+   "load": "((utag.cond[4]))",
+   "send": "1",
+   "v": "202602181412",
+   "tid": "4049"
+  },
+  "17": {
+   "load": "(((utag.cond[4])  &&  (utag.cond[8])))",
+   "send": "1",
+   "v": "202611181017",
+   "tid": "4049"
+  },
+  "10": {
+   "load": "((utag.cond[5]))",
+   "send": "1",
+   "v": "202602181412",
+   "tid": "4049"
+  },
+  "13": {
+   "load": "((utag.cond[6] || utag.cond[7] || utag.cond[4] || utag.cond[9] || utag.cond[10]))",
+   "send": "1",
+   "v": "202509081715",
+   "tid": "20064"
+  }
+ },
+ "load_rules": {
+  "10": "c[10]|=(typeof d['action']!='undefined'&&d['action'].toString().toLowerCase()=='form_submit_success'.toLowerCase())",
+  "4": "c[4]|=(typeof d['transaction_id']!='undefined'&&typeof d['transaction_id']!='undefined'&&d['transaction_id']!='')",
+  "5": "c[5]|=(d['dom.pathname'].toString().toLowerCase().indexOf('confirmation-demande-version-test-gratuit'.toLowerCase())>-1)",
+  "6": "c[6]|=(d['ut.event'].toString().toLowerCase()=='view'.toLowerCase())",
+  "7": "c[7]|=(d['event']=='ee_add_to_cart')",
+  "8": "c[8]|=(d['event'].toString().toLowerCase()=='ee_purchase'.toLowerCase())",
+  "9": "c[9]|=(d['event'].toString().toLowerCase()=='ee_user_info'.toLowerCase())"
+ }
+}

@@ -14,8 +14,9 @@ from pathlib import Path
 
 CDN = "https://tags.tiqcdn.com/utag/sage/{profile}/{env}/utag.js"
 
-_TAG_RE = re.compile(r'"(\d+)":\{load:(.*?),send:(.*?),v:(\d+),wait:\d+,tid:(\d+)\}')
-_RULE_RE = re.compile(r"case'(\d+)':try\{(.*?)\}catch\(e\)\{utag\.DB\(e\)\};break;")
+_TAG_RE = re.compile(r'"(\d+)"\s*:\s*\{\s*load\s*:(.*?),\s*send\s*:(.*?),\s*v\s*:\s*(\d+),\s*wait\s*:\s*\d+,\s*tid\s*:\s*(\d+)\s*\}')
+# Tolerates both minified ("case'1':try{...};break;") and older spaced profiles ("case '1':try{...}; break;").
+_RULE_RE = re.compile(r"case\s*'(\d+)'\s*:\s*try\{(.*?)\}catch\(e\)\{utag\.DB\(e\)\};\s*break;")
 _VERSION_RE = re.compile(r'utid:"sage/[a-z-]+/(\d{12})"')
 _TEMPLATE_RE = re.compile(r"utag\.loader ut([\d.]+)")
 

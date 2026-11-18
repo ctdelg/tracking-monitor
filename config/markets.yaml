@@ -253,8 +253,8 @@ markets:
     profile_conversion_events:
       ciel:
         - name: purchase
-          payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
-          expected_tags: [9]      # ciel.com shop purchase
+          payload: {tealium_event: purchase, event: ee_purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
+          expected_tags: [9]      # ciel.com shop purchase; tag 17 (sageciel, event ee_purchase) added 2026-11-18
     urls:
       # Source: FR paid search URL list, 2026-11-17 - tracking parameters removed, 34 URLs.
       # Two Sage 50 (formerly Ciel) pages live on www.ciel.com with their own Tealium profile 'ciel'.
@@ -323,28 +323,18 @@ markets:
         payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
         expected_tags: [283]        # Floodlight sales tag (transaction_id)
     urls:
-      - {id: es-home, url: "https://www.sage.com/es-es/", type: content}
-      - {id: es-productos, url: "https://www.sage.com/es-es/productos/", type: product}
-      - {id: es-sage-50, url: "https://www.sage.com/es-es/productos/sage-50cloud/", type: product, live_sample: true}
-      - {id: es-sage-50-precios, url: "https://www.sage.com/es-es/productos/sage-50cloud/precios/", type: pricing}
-      - {id: es-sage-200, url: "https://www.sage.com/es-es/productos/sage-200/", type: product}
-      - {id: es-sage-200-laboral, url: "https://www.sage.com/es-es/productos/sage-200-cloud-laboral/", type: product}
-      - {id: es-contaplus, url: "https://www.sage.com/es-es/productos/sage-contaplus/", type: product}
-      - {id: es-nominaplus, url: "https://www.sage.com/es-es/productos/sage-nominaplus/", type: product}
-      - {id: es-control-horario, url: "https://www.sage.com/es-es/productos/sage-control-horario/", type: product}
-      - {id: es-sales-mgmt, url: "https://www.sage.com/es-es/productos/sage-sales-management/", type: product}
-      - {id: es-sales-mgmt-precios, url: "https://www.sage.com/es-es/productos/sage-sales-management/precios/", type: pricing}
-      - {id: es-tpv-online, url: "https://www.sage.com/es-es/productos/sage-tpv-online/", type: product}
-      - {id: es-x3, url: "https://www.sage.com/es-es/sage-business-cloud/sage-x3/", type: product}
-      - {id: es-hr, url: "https://www.sage.com/es-es/sage-business-cloud/hr/", type: product}
-      - {id: es-contabilidad, url: "https://www.sage.com/es-es/software-contabilidad/", type: landing_page}
-      - {id: es-contabilidad-online, url: "https://www.sage.com/es-es/software-contabilidad/online/", type: landing_page}
-      - {id: es-factura-electronica, url: "https://www.sage.com/es-es/software-contabilidad/factura-electronica/", type: landing_page}
-      - {id: es-verifactu, url: "https://www.sage.com/es-es/certificacion-software/sistema-verifactu/", type: landing_page}
-      - {id: es-nominas, url: "https://www.sage.com/es-es/nominas-software/", type: landing_page}
-      - {id: es-erp, url: "https://www.sage.com/es-es/erp/", type: landing_page}
-      - {id: es-asesorias, url: "https://www.sage.com/es-es/asesorias-y-despachos/", type: landing_page}
-      - {id: es-contacto, url: "https://www.sage.com/es-es/sobre-sage/contacto/", type: form}
+      # Source: ES paid media URL list from Paid Media, 2026-11-18 - 11 URLs.
+      - {id: es-productos-sage-active, url: "https://www.sage.com/es-es/productos/sage-active/", type: product}
+      - {id: es-productos-sage-50cloud, url: "https://www.sage.com/es-es/productos/sage-50cloud/", type: product, live_sample: true}
+      - {id: es-cp-contabilidad, url: "https://www.sage.com/es-es/cp/contabilidad/", type: landing_page}
+      - {id: es-productos-sage-for-accountants, url: "https://www.sage.com/es-es/productos/sage-for-accountants/", type: product}
+      - {id: es-sbc-hr, url: "https://www.sage.com/es-es/sage-business-cloud/hr/", type: product}
+      - {id: es-productos-sage-200-cloud-laboral, url: "https://www.sage.com/es-es/productos/sage-200-cloud-laboral/", type: product}
+      - {id: es-productos-sage-200, url: "https://www.sage.com/es-es/productos/sage-200/", type: product}
+      - {id: es-sbc-sage-x3, url: "https://www.sage.com/es-es/sage-business-cloud/sage-x3/", type: product}
+      - {id: es-cp-software-erp, url: "https://www.sage.com/es-es/cp/software-erp/", type: landing_page}
+      - {id: es-productos-sage-xrt-treasury, url: "https://www.sage.com/es-es/productos/sage-xrt-treasury/", type: product}
+      - {id: es-productos-sage-sales-management, url: "https://www.sage.com/es-es/productos/sage-sales-management/", type: product}
     journeys:
       - id: es-j-sage50-pricing
         name: Sage 50 product page -> pricing
@@ -375,26 +365,13 @@ markets:
         payload: {tealium_event: purchase, event: purchase, page_id: purchase_complete, transaction_id: TEST_MON, order_id: TEST_MON, customer_lead_type: ecom_buy}
         not_offered: true          # no web shop in PT, so no Floodlight sales tag
     urls:
-      - {id: pt-home, url: "https://www.sage.com/pt-pt/", type: content}
-      - {id: pt-produtos, url: "https://www.sage.com/pt-pt/produtos/", type: product}
-      - {id: pt-sage-50, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud/", type: product, live_sample: true}
-      - {id: pt-sage-50-preco, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud/preco/", type: pricing}
-      - {id: pt-sage-50-contab, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud-contabilidade/", type: product}
-      - {id: pt-sage-50-salarios, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud-salarios/", type: product}
-      - {id: pt-sage-100, url: "https://www.sage.com/pt-pt/produtos/sage-100cloud/", type: product}
-      - {id: pt-sage-one, url: "https://www.sage.com/pt-pt/produtos/sage-one/", type: product}
-      - {id: pt-sage-one-fat, url: "https://www.sage.com/pt-pt/produtos/sage-one/software-de-facturacao-online/", type: product}
-      - {id: pt-sage-for-accountants, url: "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/", type: product}
-      - {id: pt-sfa-preco, url: "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/preco/", type: pricing}
-      - {id: pt-x3, url: "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/", type: product}
-      - {id: pt-hr, url: "https://www.sage.com/pt-pt/sage-business-cloud/hr/", type: product}
-      - {id: pt-faturacao, url: "https://www.sage.com/pt-pt/software-faturacao/", type: landing_page}
-      - {id: pt-faturacao-cloud, url: "https://www.sage.com/pt-pt/software-faturacao/cloud/", type: landing_page}
-      - {id: pt-faturacao-pme, url: "https://www.sage.com/pt-pt/software-faturacao/pequenas-empresas/", type: landing_page}
-      - {id: pt-erp, url: "https://www.sage.com/pt-pt/erp/", type: landing_page}
-      - {id: pt-tesouraria, url: "https://www.sage.com/pt-pt/software-tesouraria/", type: landing_page}
-      - {id: pt-contabilistas, url: "https://www.sage.com/pt-pt/contabilistas/", type: landing_page}
-      - {id: pt-contactos, url: "https://www.sage.com/pt-pt/sobre-nos/contactos/", type: form}
+      # Source: PT paid media URL list from Paid Media, 2026-11-18 - 6 URLs.
+      - {id: pt-produtos-sage-50cloud, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud/", type: product, live_sample: true}
+      - {id: pt-contabilistas-sage-for-accountants, url: "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/", type: product}
+      - {id: pt-produtos-sage-50cloud-contabilidade, url: "https://www.sage.com/pt-pt/produtos/sage-50cloud-contabilidade/", type: product}
+      - {id: pt-sbc-hr, url: "https://www.sage.com/pt-pt/sage-business-cloud/hr/", type: product}
+      - {id: pt-sbc-sage-x3, url: "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/", type: product}
+      - {id: pt-produtos-sage-xrt-advanced, url: "https://www.sage.com/pt-pt/produtos/sage-xrt-advanced/", type: product}
     journeys:
       - id: pt-j-sage50-pricing
         name: Sage 50 product page -> pricing

@@ -63,9 +63,384 @@
   ],
   "purchase": []
  },
- "forms": {},
+ "forms": {
+  "ce38dd33-82af-40fa-aa50-5d147be0cc35": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "168b667e-f8dc-4d9f-a001-889224d1212e": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "27f27919-3393-40d6-bd99-b58fff832a58": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "8703023a-0cd6-4472-98b2-aecb71ba646f": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "2a03c43e-fe20-417c-9b7e-13f2f2f13546": {
+   "tags": [
+    "223",
+    "402",
+    "589"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "8fd0797b-c0c9-408b-abe9-01c6718e3323": {
+   "tags": [
+    "223",
+    "402",
+    "589"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "da319b00-75ec-42c8-9d53-0e8c63984f67": {
+   "tags": [
+    "223",
+    "402",
+    "589"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "6fc5204b-94fc-4bf1-a56c-b683762699f3": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "a5b7d3b7-f394-427d-9f18-02eac773cce2": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "6e6f462e-a56b-4f04-b1a5-6b2736f6f85f": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "a650fc0b-81df-4f26-90b3-11780d0e856e": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "2d7fb4d8-36ca-43c8-b5e0-d8998c67f428": {
+   "tags": [
+    "223",
+    "402",
+    "589"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "e6cc2d2b-0638-4976-8a1d-e1a7bdbae0b5": {
+   "tags": [
+    "223",
+    "402",
+    "589"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "02f515fc-13bb-4fa3-b6a2-ba1f9f2c37d7": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "150f8e74-55ec-4bc8-9a2a-cbebb304a6b7": {
+   "tags": [
+    "223",
+    "402",
+    "591"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "dc449d1c-61e4-4604-afd3-6149a0902b8f": {
+   "tags": [
+    "223",
+    "402",
+    "591"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "ede24abf-a4ed-46fe-abb5-812d0d58bd83": {
+   "tags": [
+    "223",
+    "402",
+    "591"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "fe54e74c-3fce-4d39-bb38-e2ea5f6e5606": {
+   "tags": [
+    "223",
+    "402",
+    "591"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "b35e7125-a89e-485b-a103-9023ec508939": {
+   "tags": [
+    "223",
+    "402",
+    "590"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "aa154eb7-b97b-48e5-9107-8342e9a05932": {
+   "tags": [
+    "223",
+    "402",
+    "591"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "c893fa63-73ea-439c-bad4-967bc298c2aa": {
+   "tags": [
+    "223",
+    "402",
+    "591"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  },
+  "c6a22385-35e7-486b-800a-97b3b31520c0": {
+   "tags": [
+    "223",
+    "402",
+    "591"
+   ],
+   "vendors": [
+    "eloqua",
+    "floodlight",
+    "google_ads",
+    "linkedin",
+    "meta",
+    "quantcast",
+    "sixsense"
+   ],
+   "since": "2026-11-18"
+  }
+ },
  "market_core": {},
- "updated_at": "2026-11-17T13:28:47Z",
+ "updated_at": "2026-11-18T14:09:12Z",
  "confirmed_at": "2026-11-17T13:28:21Z",
  "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

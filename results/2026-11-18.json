@@ -2,7 +2,7 @@
  "schema_version": 1,
  "monitor_version": "1.0.0",
  "day": "2026-11-18",
- "generated_at": "2026-11-18T14:09:12Z",
+ "generated_at": "2026-11-18T14:29:52Z",
  "global": {
   "status": "red",
   "incidents": [
@@ -24,17 +24,17 @@
    "tealium_profile": "de-de",
    "rating": {
     "status": "red",
-    "red_count": 2,
+    "red_count": 4,
     "yellow_count": 1,
     "site_down": [],
     "blocked_pages": [],
-    "coverage": "tealium_only",
+    "coverage": "partial",
     "acknowledged_count": 0,
-    "pages_checked": 0,
+    "pages_checked": 1,
     "pages_configured": 116
    },
    "status": "red",
-   "source": "none",
+   "source": "claude-browser",
    "baseline_confirmed": "2026-11-17T13:28:17Z",
    "baseline": {
     "pages_confirmed": 5,
@@ -11141,11 +11141,324 @@
      "target": "form:SX3_24Q1_NCA_DE_X3ProdukttourRueckruf",
      "detail": "eloqua, floodlight, linkedin, meta, microsoft_uet, openai, quantcast, sixsense, tiktok",
      "evidence": {}
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/de-de/produkte/sage-active/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "Sage Active - Online Buchhaltung | Sage Deutschland",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "ut4.53.202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "sage/de-de/202611051049",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "137 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "OneTrust banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:floodlight",
+     "title": "Floodlight (Campaign Manager 360) fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "5195550",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:ga4",
+     "title": "Google Analytics 4 fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "G-PE4Z9JJWVN",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:google_ads",
+     "title": "Google Ads (remarketing / conversion) fires after consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "970123043",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:linkedin",
+     "title": "LinkedIn Insight Tag fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "58294",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:meta",
+     "title": "Meta Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "499565794547363",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:microsoft_uet",
+     "title": "Microsoft Advertising UET fires after consent",
+     "severity": "red",
+     "result": "fail",
+     "target": "de-produkte-sage-active",
+     "detail": "Microsoft Advertising UET did not fire after consent.",
+     "evidence": {
+      "expected_accounts": [
+       "12002546"
+      ]
+     }
+    },
+    {
+     "id": "TAG:other:adnxs.com",
+     "title": "other:adnxs.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:bing.com",
+     "title": "other:bing.com fires after consent",
+     "severity": "info",
+     "result": "fail",
+     "target": "de-produkte-sage-active",
+     "detail": "other:bing.com did not fire after consent.",
+     "evidence": {
+      "expected_accounts": []
+     }
+    },
+    {
+     "id": "TAG:other:doubleclick.net",
+     "title": "other:doubleclick.net fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:openai.com",
+     "title": "other:openai.com fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:other:quantserve.com",
+     "title": "other:quantserve.com fires after consent",
+     "severity": "info",
+     "result": "fail",
+     "target": "de-produkte-sage-active",
+     "detail": "other:quantserve.com did not fire after consent.",
+     "evidence": {
+      "expected_accounts": []
+     }
+    },
+    {
+     "id": "TAG:other:sjv.io",
+     "title": "other:sjv.io fires after consent",
+     "severity": "info",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:quantcast",
+     "title": "Quantcast fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "p-E6KY6asqFcmVm",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tealium_collect",
+     "title": "Tealium Collect (AudienceStream) fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:tiktok",
+     "title": "TikTok Pixel fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "",
+     "evidence": {}
+    },
+    {
+     "id": "TAG:zoominfo",
+     "title": "ZoomInfo fires after consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "654e77cd8ec2360c5a6693e1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-NEW",
+     "title": "New tag not in baseline",
+     "severity": "info",
+     "result": "warn",
+     "target": "de-produkte-sage-active",
+     "detail": "Not in baseline: other:ojrq.net",
+     "evidence": {
+      "vendors": {
+       "other:ojrq.net": []
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1795011923.TEST_MON_20261118"
+     }
+    },
+    {
+     "id": "CLID-02",
+     "title": "msclkid stored in _uetmsclkid",
+     "severity": "red",
+     "result": "fail",
+     "target": "de-produkte-sage-active",
+     "detail": "_uetmsclkid missing or does not contain the test msclkid.",
+     "evidence": {
+      "cookie": "_uetmsclkid",
+      "value": null
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1795011921696.TEST_MON_20261118"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "de-produkte-sage-active",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&gclaw=TEST_MON_20261118&gcs=G111"
+     }
     }
    ],
    "acks_applied": [],
    "red_since": "2026-11-14",
-   "new_failures": []
+   "new_failures": [
+    "CLID-02|de-produkte-sage-active",
+    "TAG:microsoft_uet|de-produkte-sage-active",
+    "TAG:other:bing.com|de-produkte-sage-active",
+    "TAG:other:quantserve.com|de-produkte-sage-active"
+   ]
   },
   "AT": {
    "name": "Austria",
@@ -11508,7 +11821,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1795010703.TEST_MON_20261118"
+      "value": "GCL.1795012024.TEST_MON_20261118"
      }
     },
     {
@@ -11519,7 +11832,7 @@
      "target": "at-dpw-sage-dpw",
      "detail": "1/1 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&auid=621370851.1795010703&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_"
+      "sample": "https://www.google.com/ccm/collect?rcb=5&frm=0&apvc=1&auid=1475102802.1795012024&dt=Sage%20DPW%20Cloud%20%E2%80%93%20die%20effiziente%20Software%20f%C3%BCr%20alle%20HR-Themen&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw%2F%3Fgclid%3DTEST_"
      }
     },
     {
@@ -11645,7 +11958,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1795010719.TEST_MON_20261118"
+      "value": "GCL.1795012040.TEST_MON_20261118"
      }
     },
     {
@@ -11656,7 +11969,7 @@
      "target": "at-dpw-zeiterfassung",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&auid=405965259.1795010718&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTES"
+      "sample": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=1923636928.1795012040&dt=Zeiterfassungssoftware%3A%20So%20flexibel%20wie%20die%20Arbeitszeit%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Fzeiterfassung%2F%3Fgclid%3DTE"
      }
     },
     {
@@ -11777,12 +12090,10 @@
      "id": "TAG:other:googletagmanager.com",
      "title": "other:googletagmanager.com fires after consent",
      "severity": "info",
-     "result": "fail",
+     "result": "pass",
      "target": "at-dpw-lohn-outsourcing",
-     "detail": "other:googletagmanager.com did not fire after consent.",
-     "evidence": {
-      "expected_accounts": []
-     }
+     "detail": "",
+     "evidence": {}
     },
     {
      "id": "CLID-01",
@@ -11793,7 +12104,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1795010734.TEST_MON_20261118"
+      "value": "GCL.1795012056.TEST_MON_20261118"
      }
     },
     {
@@ -11804,7 +12115,7 @@
      "target": "at-dpw-lohn-outsourcing",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&auid=2118061049.1795010734&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261118%26msclkid%3D"
+      "sample": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&auid=94497475.1795012056&dt=Sage%20DPW%20Lohn-Outsourcing%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Floesungen%2Fsage-dpw-lohn-outsourcing%2F%3Fgclid%3DTEST_MON_20261118%26msclkid%3DTE"
      }
     },
     {
@@ -11930,7 +12241,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1795010750.TEST_MON_20261118"
+      "value": "GCL.1795012072.TEST_MON_20261118"
      }
     },
     {
@@ -11941,7 +12252,7 @@
      "target": "at-dpw-lohnverrechnung",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=1861670647.1795010750&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261118%26mscl"
+      "sample": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=1934856908.1795012071&dt=Lohnverrechnungsprogramm%20%C3%96sterreich%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Flohnverrechnung%2F%3Fgclid%3DTEST_MON_20261118%26msclk"
      }
     },
     {
@@ -12078,7 +12389,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1795010766.TEST_MON_20261118"
+      "value": "GCL.1795012088.TEST_MON_20261118"
      }
     },
     {
@@ -12089,7 +12400,7 @@
      "target": "at-dpw-reisekostenabrechnung",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&auid=630763154.1795010766&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DTE"
+      "sample": "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&auid=1131311470.1795012088&dt=Reisekostenabrechnung%20einfach%20per%20Software%20abwickeln%20%7C%20Sage%20DPW&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Freisekostenabrechnung%2F%3Fgclid%3DT"
      }
     },
     {
@@ -12215,7 +12526,7 @@
      "detail": "_gcl_aw contains the test gclid",
      "evidence": {
       "cookie": "_gcl_aw",
-      "value": "GCL.1795010782.TEST_MON_20261118"
+      "value": "GCL.1795012104.TEST_MON_20261118"
      }
     },
     {
@@ -12226,7 +12537,7 @@
      "target": "at-dpw-fairpay",
      "detail": "2/2 Google Ads/Floodlight hits carry the gclid",
      "evidence": {
-      "sample": "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=1467090262.1795010782&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261118%26msclkid%3DTEST_MON_20261118%26fbclid%3DTEST_MON"
+      "sample": "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&auid=2000788097.1795012104&dt=Sage%20DPW%20%7C%20FairPay&tid=DC-5195550&en=page_view&gclid=TEST_MON_20261118&dl=https%3A%2F%2Fwww.sagedpw.at%2Fhr-software%2Ffairpay%2F%3Fgclid%3DTEST_MON_20261118%26msclkid%3DTEST_MON_20261118%26fbclid%3DTEST_MON"
      }
     },
     {
@@ -16695,7 +17006,7 @@
      "severity": "yellow",
      "result": "warn",
      "target": "fr-ciel-compta",
-     "detail": "Third-party requests before consent (not an ad tag, review with the privacy team): bazaarvoice.com, doubleclick.net, entfabric-sage.com, google-analytics.com, google.com, googleadservices.com, linkedin.com, nr-data.net, siteimproveanalytics.io",
+     "detail": "Third-party requests before consent (not an ad tag, review with the privacy team): bazaarvoice.com, doubleclick.net, entfabric-sage.com, google-analytics.com, google.com, googleadservices.com, googletagmanager.com, linkedin.com, nr-data.net, siteimproveanalytics.io",
      "evidence": {
       "hosts": [
        "bazaarvoice.com",
@@ -16704,6 +17015,7 @@
        "google-analytics.com",
        "google.com",
        "googleadservices.com",
+       "googletagmanager.com",
        "linkedin.com",
        "nr-data.net",
        "siteimproveanalytics.io"
@@ -16719,7 +17031,7 @@
      "detail": "Before consent: tags fired (LinkedIn Insight Tag); cookies set (_gcl_au, _gcl_aw)",
      "evidence": {
       "hits": [
-       "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795010626944&pageLoadId=5dc37a94-bad0-47b8-ae82-75234a0a6980&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261118%26msclkid%3DTEST_MON_20261118%26fbclid%3DTEST_MON_20261118%26utm_source%3Dtr",
+       "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795011947101&pageLoadId=74de0ef0-186a-4b5f-a0f5-ae14715fb689&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261118%26msclkid%3DTEST_MON_20261118%26fbclid%3DTEST_MON_20261118%26utm_source%3Dtr",
        "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
        "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g"
       ],
@@ -16738,11 +17050,11 @@
      "detail": "6 Google hit(s) before consent without denied consent state",
      "evidence": {
       "hits": [
-       "https://region1.analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&_p=1795010626450&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&cid=1370094852.1795010627&frm=0&lps=1&pscdl=noapi&rcb=16&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%",
-       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=1370094852.1795010627&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=16&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420416~1204",
-       "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-8EYWV34H9Z&cid=1370094852.1795010627&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=16&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~12041252",
-       "https://region1.analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&_p=1795010626450&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dYmQxMT&_eu=AAAAAGAC&cid=1370094852.1795010627&frm=0&lps=1&pscdl=noapi&rcb=9&sr=1366x900&uaa=x86&uab=64&uafvl=Hea",
-       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=1370094852.1795010627&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&rcb=9&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~12046"
+       "https://region1.analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&_p=1795011946536&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&cid=1407331969.1795011947&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3",
+       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=1407331969.1795011947&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=8&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~12046",
+       "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-8EYWV34H9Z&cid=1407331969.1795011947&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=8&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416",
+       "https://region1.analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&_p=1795011946536&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dYmQxMT&_eu=AAAAAGAC&cid=1407331969.1795011947&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=Hea",
+       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=1407331969.1795011947&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&rcb=1&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420416~12046"
       ]
      }
     },
@@ -16828,7 +17140,7 @@
      "severity": "yellow",
      "result": "warn",
      "target": "fr-ciel-gestion-commerciale",
-     "detail": "Third-party requests before consent (not an ad tag, review with the privacy team): bazaarvoice.com, doubleclick.net, entfabric-sage.com, google-analytics.com, google.com, googleadservices.com, linkedin.com, nr-data.net, siteimproveanalytics.io",
+     "detail": "Third-party requests before consent (not an ad tag, review with the privacy team): bazaarvoice.com, doubleclick.net, entfabric-sage.com, google-analytics.com, google.com, googleadservices.com, googletagmanager.com, linkedin.com, nr-data.net, siteimproveanalytics.io",
      "evidence": {
       "hosts": [
        "bazaarvoice.com",
@@ -16837,6 +17149,7 @@
        "google-analytics.com",
        "google.com",
        "googleadservices.com",
+       "googletagmanager.com",
        "linkedin.com",
        "nr-data.net",
        "siteimproveanalytics.io"
@@ -16852,7 +17165,7 @@
      "detail": "Before consent: tags fired (LinkedIn Insight Tag); cookies set (_gcl_au, _gcl_aw)",
      "evidence": {
       "hits": [
-       "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795010659506&pageLoadId=f1affc7c-6dcb-4539-8d70-f9c06a3d9104&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261118%26msclkid%3DTEST_MON_20261118%26fbclid%3DTEST_MON_20261118%26ut",
+       "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795011979821&pageLoadId=a9147417-84ec-46bd-919d-d472f46ae6d5&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261118%26msclkid%3DTEST_MON_20261118%26fbclid%3DTEST_MON_20261118%26ut",
        "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
        "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g"
       ],
@@ -16871,11 +17184,11 @@
      "detail": "6 Google hit(s) before consent without denied consent state",
      "evidence": {
       "hits": [
-       "https://region1.analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&_p=1795010658963&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&cid=738863368.1795010659&frm=0&lps=1&pscdl=noapi&rcb=10&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3",
-       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=738863368.1795010659&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=10&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420416~12046",
-       "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-8EYWV34H9Z&cid=738863368.1795010659&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=10&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528",
-       "https://region1.analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&_p=1795010658963&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dYmQxMT&_eu=AAAAAGAC&cid=738863368.1795010659&frm=0&lps=1&pscdl=noapi&rcb=2&sr=1366x900&uaa=x86&uab=64&uafvl=Head",
-       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=738863368.1795010659&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&rcb=2&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469"
+       "https://region1.analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&_p=1795011979376&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAGAC&cid=1756139290.1795011980&frm=0&lps=1&pscdl=noapi&rcb=4&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3",
+       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=1756139290.1795011980&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=4&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412526~120420416~12046",
+       "https://www.google.de/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-8EYWV34H9Z&cid=1756139290.1795011980&gtm=45je6bg2v883700838za20ozb71004762zd71004762xf1&rcb=4&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412526",
+       "https://region1.analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&_p=1795011979376&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dYmQxMT&_eu=AAAAAGAC&cid=1756139290.1795011980&frm=0&lps=1&pscdl=noapi&rcb=5&sr=1366x900&uaa=x86&uab=64&uafvl=Hea",
+       "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=1756139290.1795011980&gtm=45je6bg2v894327700za200zb71004762zd71004762xf1&rcb=5&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938469~118897920~118897930~119860443~120213116~120385423~120412526~120420414~12046"
       ]
      }
     },
@@ -16922,17 +17235,17 @@
     "yellow_count": 0,
     "site_down": [],
     "blocked_pages": [],
-    "coverage": "tealium_only",
+    "coverage": "partial",
     "acknowledged_count": 0,
-    "pages_checked": 0,
+    "pages_checked": 1,
     "pages_configured": 11
    },
    "status": "red",
-   "source": "none",
+   "source": "claude-browser",
    "baseline_confirmed": "2026-11-17T13:28:20Z",
    "baseline": {
     "pages_confirmed": 1,
-    "pages_learning": 0,
+    "pages_learning": 1,
     "market_core": []
    },
    "utag": {
@@ -19530,6 +19843,173 @@
      "target": "form:XRT_2508_NCA_ES_FirmaElectronica",
      "detail": "eloqua, floodlight, google_ads, linkedin, meta, openai, quantcast, sixsense",
      "evidence": {}
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/es-es/productos/sage-50cloud/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "Sage 50 - Contabilidad y gestión para negocios | Sage España",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "ut4.53.202611051016",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "sage/es-es/202611051016",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "147 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "OneTrust banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "info",
+     "result": "warn",
+     "target": "es-productos-sage-50cloud",
+     "detail": "Learning which tags belong on this page (1 of 3 run days). Tags are recorded; from the 3rd day a missing tag is reported.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "5201701"
+       ],
+       "ga4": [
+        "G-PE4Z9JJWVN"
+       ],
+       "google_ads": [
+        "956094480"
+       ],
+       "linkedin": [
+        "58294"
+       ],
+       "meta": [
+        "499565794547363"
+       ],
+       "other:adnxs.com": [],
+       "other:doubleclick.net": [],
+       "other:ojrq.net": [],
+       "other:openai.com": [],
+       "other:pxf.io": [],
+       "tealium_collect": [],
+       "zoominfo": [
+        "654e77cd8ec2360c5a6693e1"
+       ]
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1795011959.TEST_MON_20261118"
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1795011957862.TEST_MON_20261118"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "es-productos-sage-50cloud",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://ad.doubleclick.net/activity;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261118;gcs=G111"
+     }
     }
    ],
    "acks_applied": [],
@@ -19545,17 +20025,17 @@
     "yellow_count": 0,
     "site_down": [],
     "blocked_pages": [],
-    "coverage": "tealium_only",
+    "coverage": "partial",
     "acknowledged_count": 0,
-    "pages_checked": 0,
+    "pages_checked": 1,
     "pages_configured": 6
    },
    "status": "green",
-   "source": "none",
+   "source": "claude-browser",
    "baseline_confirmed": "2026-11-17T13:28:21Z",
    "baseline": {
     "pages_confirmed": 1,
-    "pages_learning": 0,
+    "pages_learning": 1,
     "market_core": []
    },
    "utag": {
@@ -21339,6 +21819,171 @@
      "target": "form:XRT_2508_NCA_PT_FirmaElectronica",
      "detail": "eloqua, floodlight, google_ads, linkedin, meta, quantcast, sixsense",
      "evidence": {}
+    },
+    {
+     "id": "PAGE-01",
+     "title": "Page reachable (HTTP 2xx, no unexpected redirect)",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "HTTP 200",
+     "evidence": {
+      "final_url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/"
+     }
+    },
+    {
+     "id": "PAGE-02",
+     "title": "Page renders",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "Sage 50 | Sage PT",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-01",
+     "title": "Tealium utag.js loads",
+     "severity": "site_down",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "ut4.53.202611050958",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-02",
+     "title": "Correct Tealium profile / environment",
+     "severity": "red",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "sage/pt-pt/202611050958",
+     "evidence": {}
+    },
+    {
+     "id": "TEAL-03",
+     "title": "Tealium data layer populated",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "143 data layer values",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-01",
+     "title": "Consent banner shown on first visit",
+     "severity": "red",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "OneTrust banner visible",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-05",
+     "title": "No other third-party requests before consent",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "No other third-party requests before consent",
+     "evidence": {
+      "hosts": []
+     }
+    },
+    {
+     "id": "CONS-02",
+     "title": "No marketing tags or cookies before consent",
+     "severity": "red",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "No marketing tags or cookies before consent",
+     "evidence": {}
+    },
+    {
+     "id": "CONS-03",
+     "title": "Google Consent Mode defaults to denied",
+     "severity": "red",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "Consent Mode default denied (or no Google hits before consent)",
+     "evidence": {
+      "hits": []
+     }
+    },
+    {
+     "id": "CONS-04",
+     "title": "Consent stored after 'Accept all'",
+     "severity": "red",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "Consent groups: C0001:1,C0002:1,C0003:1,C0004:1",
+     "evidence": {}
+    },
+    {
+     "id": "TAG-BASELINE",
+     "title": "Tag baseline for this page",
+     "severity": "info",
+     "result": "warn",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "Learning which tags belong on this page (1 of 3 run days). Tags are recorded; from the 3rd day a missing tag is reported.",
+     "evidence": {
+      "seen": {
+       "floodlight": [
+        "6144405"
+       ],
+       "ga4": [
+        "G-PE4Z9JJWVN"
+       ],
+       "google_ads": [
+        "956094480"
+       ],
+       "linkedin": [
+        "58294"
+       ],
+       "meta": [
+        "499565794547363"
+       ],
+       "other:adnxs.com": [],
+       "other:doubleclick.net": [],
+       "other:pxf.io": [],
+       "tealium_collect": [],
+       "zoominfo": [
+        "654e77cd8ec2360c5a6693e1"
+       ]
+      }
+     }
+    },
+    {
+     "id": "CLID-01",
+     "title": "gclid stored in _gcl_aw",
+     "severity": "red",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "_gcl_aw contains the test gclid",
+     "evidence": {
+      "cookie": "_gcl_aw",
+      "value": "GCL.1795011993.TEST_MON_20261118"
+     }
+    },
+    {
+     "id": "CLID-03",
+     "title": "fbclid stored in _fbc",
+     "severity": "yellow",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "_fbc contains the test fbclid",
+     "evidence": {
+      "cookie": "_fbc",
+      "value": "fb.2.1795011991391.TEST_MON_20261118"
+     }
+    },
+    {
+     "id": "CLID-04",
+     "title": "gclid passed on Floodlight / Google Ads hits",
+     "severity": "red",
+     "result": "pass",
+     "target": "pt-produtos-sage-50cloud",
+     "detail": "4/5 Google Ads/Floodlight hits carry the gclid",
+     "evidence": {
+      "sample": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261118"
+     }
     }
    ],
    "acks_applied": [],

@@ -2727,5 +2727,144 @@
    "es-sbc-hr",
    "es-sbc-sage-x3"
   ]
+ },
+ "browser": {
+  "source": "claude-browser",
+  "collected_at": "2026-11-18T14:29:50Z",
+  "visits": [
+   {
+    "id": "es-productos-sage-50cloud",
+    "url": "https://www.sage.com/es-es/productos/sage-50cloud/",
+    "status": 200,
+    "final_url": "https://www.sage.com/es-es/productos/sage-50cloud/",
+    "live_sample": true,
+    "click_ids": {
+     "gclid": "TEST_MON_20261118",
+     "msclkid": "TEST_MON_20261118",
+     "fbclid": "TEST_MON_20261118"
+    },
+    "pre": {
+     "title": "Sage 50 - Contabilidad y gestión para negocios | Sage España",
+     "requests": [],
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "banner": true,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "utag": {
+      "present": true,
+      "utid": "sage/es-es/202611051016",
+      "version": "ut4.53.202611051016",
+      "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+      "data_keys": 147,
+      "page_type": "article",
+      "language": "es-es",
+      "country": "es"
+     }
+    },
+    "post": {
+     "title": "Sage 50 - Contabilidad y gestión para negocios | Sage España",
+     "accepted": true,
+     "banner": false,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "_fbc": "fb.2.1795011957862.TEST_MON_20261118",
+      "_fbp": "",
+      "_gcl_au": "",
+      "_gcl_aw": "GCL.1795011959.TEST_MON_20261118"
+     },
+     "utag": {
+      "present": true,
+      "utid": "sage/es-es/202611051016",
+      "version": "ut4.53.202611051016",
+      "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+      "data_keys": 149,
+      "page_type": "article",
+      "language": "es-es",
+      "country": "es"
+     },
+     "requests": [
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/BBsdzR6xx5b9BbAakJXaAM.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://sagespain.pxf.io/xur/55270",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261118;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5201701&en=page_view&gclid=TEST_MON_20261118&gclaw=TEST_MON_20261118&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261118",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261118",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261118&gclaw=TEST_MON_20261118&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ojrq.net/p/",
+       "type": "img"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956094480/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://bzr.openai.com/v1/sdk/events?pid=BBsdzR6xx5b9BbAakJXaAM",
+       "type": "fetch"
+      }
+     ]
+    },
+    "blocked": false
+   }
+  ],
+  "journeys": []
  }
 }

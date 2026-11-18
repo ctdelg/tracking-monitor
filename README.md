@@ -115,7 +115,7 @@ web app.
 - [ ] DE: clarify whether Microsoft UET should fire on the payroll and HR landing pages (it currently does not).
 - [ ] AT: clarify whether the missing Google Ads remarketing, UET, LinkedIn and Meta tags on sagedpw.at are intended.
 - [ ] FR: www.ciel.com has no cookie banner, and tags fire before consent. Raise this with the privacy / web team.
-- [ ] PT: confirm whether PT pages should send a Floodlight page view (only Google Ads was seen).
+- [ ] DE: Microsoft UET stopped sending page views (and storing the msclkid) on the Sage Active page between 16 and 18 Nov - check with MarTech.
 - [ ] Phase 2: email alerts for new red and yellow findings.
 
 ## Where to look

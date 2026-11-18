@@ -41,6 +41,37 @@
    "since": "2026-11-14",
    "confirmed_at": "2026-11-17",
    "adopted": "as-is baseline"
+  },
+  "pt-produtos-sage-50cloud": {
+   "post": {
+    "floodlight": [
+     "6144405"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "956094480"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "other:adnxs.com": [],
+    "other:doubleclick.net": [],
+    "other:pxf.io": [],
+    "tealium_collect": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   },
+   "days": [
+    "2026-11-18"
+   ],
+   "status": "learning",
+   "since": "2026-11-18"
   }
  },
  "journeys": {},
@@ -440,7 +471,7 @@
   }
  },
  "market_core": {},
- "updated_at": "2026-11-18T14:09:12Z",
+ "updated_at": "2026-11-18T14:29:52Z",
  "confirmed_at": "2026-11-17T13:28:21Z",
  "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

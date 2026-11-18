@@ -27,7 +27,7 @@ from .config import Platforms
 COLLECTOR_JS = (Path(__file__).parent / "collector.js").read_text(encoding="utf-8")
 NAV_TIMEOUT_MS = 45_000
 SETTLE_MS = 5_000
-POST_CONSENT_MS = 8_000
+POST_CONSENT_MS = 15_000   # some tags (e.g. PT Floodlight) arrive 8-15 s after consent
 
 
 def click_ids(day: str) -> dict:

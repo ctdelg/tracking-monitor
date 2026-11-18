@@ -1,77 +1,258 @@
 {
  "day": "2026-11-18",
- "written_by": "Claude (ES and PT landing page lists added)",
- "summary": "Web-shop purchases from the Sage Active checkout still do not fire the Floodlight lead tag in DE, FR and ES (global incident, pending EU set-up with MarTech). DE also loses web-shop trials.\nNew today: the ES (11) and PT (6) paid media URL lists are in. All 17 pages answer without redirects. Their 53 lead forms (31 ES, 22 PT) are active, and every submit fires Floodlight (ES 36, PT 402) with the matching lead-type tag, Google Ads, LinkedIn and Meta.\nAlso new: a Tealium publish on the ciel.com profile (FR) added Floodlight tag 17 for shop purchases. Purchases there now fire tags 9 and 17.\nStill open: AT form conversions cannot fire (GTM trigger needs a button ID the forms do not have), and www.ciel.com has no cookie banner.",
+ "written_by": "Claude (ES and PT lists added; sample pages opened in DE, ES and PT)",
+ "summary": "Web-shop purchases from the Sage Active checkout still do not fire the Floodlight lead tag in DE, FR and ES (global incident, pending EU set-up with MarTech). DE also loses web-shop trials.\nNew today: the ES (11) and PT (6) paid media URL lists are in. All 17 pages answer without redirects. Their 53 lead forms (31 ES, 22 PT) are active, and every submit fires Floodlight (ES 36, PT 402) with the matching lead-type tag, Google Ads, LinkedIn and Meta.\nAlso new: a Tealium publish on the ciel.com profile (FR) added Floodlight tag 17 for shop purchases. Purchases there now fire tags 9 and 17.\nSample pages opened today in DE, ES and PT (AT and the FR ciel.com pages run automatically). New in DE: Microsoft UET no longer sends anything on the Sage Active page - its script loads, but no page view reaches Microsoft and the msclkid is not stored (it worked on 16 Nov). PT has Floodlight after all (DC-6144405): it arrives 8-15 seconds after consent, later than the earlier check waited, so the PT question is answered.\nStill open: AT form conversions cannot fire (GTM trigger needs a button ID the forms do not have), and www.ciel.com has no cookie banner.",
  "incidents": {
-  "CONV-01:ecom_buy": {"shared": true, "summary": "One shared cause: the Floodlight lead tags need ga4_customer_lead_type, which Tealium only sets for lead forms, and the Sage Active checkout does not send it."}
+  "CONV-01:ecom_buy": {
+   "shared": true,
+   "summary": "One shared cause: the Floodlight lead tags need ga4_customer_lead_type, which Tealium only sets for lead forms, and the Sage Active checkout does not send it."
+  }
  },
  "markets": {
   "DE": {
    "summary": "Lead forms, purchases and all 136 forms work; web-shop trials and purchases are not counted as leads.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "Web-shop trials do not fire Floodlight 98.", "check": "CONV-01:ecom_try|market"},
-     {"text": "Web-shop purchases do not fire Floodlight 98.", "action": "MarTech: EU web-shop set-up.", "check": "CONV-01:ecom_buy|market"}]},
-    {"tone": "yellow", "title": "To review", "items": [
-     {"text": "One HR form name starts with a space, so Floodlight 389 cannot fire for it.", "check": "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung"}]},
-    {"tone": "green", "title": "Working", "items": ["Lead forms fire Floodlight 98.", "Order confirmations fire sales tag 284."]}],
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "Web-shop trials do not fire Floodlight 98.",
+       "check": "CONV-01:ecom_try|market"
+      },
+      {
+       "text": "Web-shop purchases do not fire Floodlight 98.",
+       "action": "MarTech: EU web-shop set-up.",
+       "check": "CONV-01:ecom_buy|market"
+      },
+      {
+       "text": "Microsoft UET sends no page view and stores no msclkid on the Sage Active page.",
+       "action": "Check the UET tag in Tealium (load rule / consent).",
+       "check": "TAG:microsoft_uet|de-produkte-sage-active"
+      }
+     ]
+    },
+    {
+     "tone": "yellow",
+     "title": "To review",
+     "items": [
+      {
+       "text": "One HR form name starts with a space, so Floodlight 389 cannot fire for it.",
+       "check": "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Lead forms fire Floodlight 98.",
+      "Order confirmations fire sales tag 284."
+     ]
+    }
+   ],
    "findings": {
-    "CONV-01:ecom_try|market": {"text": "Tag 98 needs ga4_customer_lead_type (rule 274, added with the Tealium publish of 24 Aug 2026). Tealium derives it only from lead form names; the checkout sends customer_lead_type=ecom_try without one. Before the publish the tag fired. Fix: map customer_lead_type to ga4_customer_lead_type for web-shop events, or drop rule 274 from tag 98.", "owner": "MarTech"},
-    "CONV-01:ecom_buy|market": {"text": "Same cause as web-shop trials (rule 274 on tag 98).", "owner": "MarTech"},
-    "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung": {"text": "The form's lastContentName starts with a space (' CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung'). Load rule 331 checks the start of the name, so Floodlight 389 never fires for this form. Fix: remove the space in the Gated Content gate.", "owner": "Web team"}}},
+    "CONV-01:ecom_try|market": {
+     "text": "Tag 98 needs ga4_customer_lead_type (rule 274, added with the Tealium publish of 24 Aug 2026). Tealium derives it only from lead form names; the checkout sends customer_lead_type=ecom_try without one. Before the publish the tag fired. Fix: map customer_lead_type to ga4_customer_lead_type for web-shop events, or drop rule 274 from tag 98.",
+     "owner": "MarTech"
+    },
+    "CONV-01:ecom_buy|market": {
+     "text": "Same cause as web-shop trials (rule 274 on tag 98).",
+     "owner": "MarTech"
+    },
+    "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung": {
+     "text": "The form's lastContentName starts with a space (' CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung'). Load rule 331 checks the start of the name, so Floodlight 389 never fires for this form. Fix: remove the space in the Gated Content gate.",
+     "owner": "Web team"
+    },
+    "TAG:microsoft_uet|de-produkte-sage-active": {
+     "text": "After 'Accept all' the UET library (bat.js) loads and window.uetq exists, but no bat.bing.com/action hit is sent, even after 20 seconds. On 16 Nov the same page sent the UET page view with the msclkid. No Tealium publish happened in between (de-de still 202611051049), so the change is probably on the UET side (tag settings, Microsoft consent mode) or in how Tealium hands over consent to UET.",
+     "owner": "MarTech"
+    },
+    "CLID-02|de-produkte-sage-active": {
+     "text": "Same cause as the UET finding: without a UET hit the _uetmsclkid cookie is never written, so Bing Ads clicks cannot be matched to later conversions.",
+     "owner": "MarTech"
+    }
+   }
+  },
   "AT": {
    "summary": "Pages, consent and page-view tags work on sagedpw.at, but form submits cannot fire the Floodlight conversion.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "Floodlight sage_012 waits for a click on a button with 'Submit' in its ID; the form buttons have no ID.", "action": "Fix the GTM trigger or the buttons.", "check": "GTM-07|conversion:sage_012"}]},
-    {"tone": "yellow", "title": "To review", "items": [
-     {"text": "Floodlight sage_013 waits for a click on the DPW to GO order PDF; no checked page links to it.", "check": "GTM-07|conversion:sage_013"}]},
-    {"tone": "green", "title": "Working", "items": ["Usercentrics banner; nothing fires before consent.", "Floodlight page views, GA4 and gclid on all landing and form pages."]}],
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "Floodlight sage_012 waits for a click on a button with 'Submit' in its ID; the form buttons have no ID.",
+       "action": "Fix the GTM trigger or the buttons.",
+       "check": "GTM-07|conversion:sage_012"
+      }
+     ]
+    },
+    {
+     "tone": "yellow",
+     "title": "To review",
+     "items": [
+      {
+       "text": "Floodlight sage_013 waits for a click on the DPW to GO order PDF; no checked page links to it.",
+       "check": "GTM-07|conversion:sage_013"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Usercentrics banner; nothing fires before consent.",
+      "Floodlight page views, GA4 and gclid on all landing and form pages."
+     ]
+    }
+   ],
    "findings": {
-    "GTM-07|conversion:sage_012": {"text": "GTM-PS6MXC v13: sageg0/sage_012 fires on gtm.click where Click ID contains 'Submit'. The submit inputs on /kontaktformular/ and /kostenloses-infopaket/ have no id, so the trigger never matches. Fix: trigger on the form's success event or thank-you page, or give the buttons an id containing 'Submit'.", "owner": "GTM owner"},
-    "CONV-01:gated_contact|market": {"text": "Same as GTM-07 for sage_012.", "owner": "GTM owner"},
-    "GTM-07|conversion:sage_013": {"text": "sageg0/sage_013 fires on a click on a link to uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf. None of the paid landing pages or form pages link to it. Check whether the PDF is still offered; if not, the tag is obsolete.", "owner": "GTM owner"}}},
+    "GTM-07|conversion:sage_012": {
+     "text": "GTM-PS6MXC v13: sageg0/sage_012 fires on gtm.click where Click ID contains 'Submit'. The submit inputs on /kontaktformular/ and /kostenloses-infopaket/ have no id, so the trigger never matches. Fix: trigger on the form's success event or thank-you page, or give the buttons an id containing 'Submit'.",
+     "owner": "GTM owner"
+    },
+    "CONV-01:gated_contact|market": {
+     "text": "Same as GTM-07 for sage_012.",
+     "owner": "GTM owner"
+    },
+    "GTM-07|conversion:sage_013": {
+     "text": "sageg0/sage_013 fires on a click on a link to uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf. None of the paid landing pages or form pages link to it. Check whether the PDF is still offered; if not, the tag is obsolete.",
+     "owner": "GTM owner"
+    }
+   }
+  },
   "FR": {
    "summary": "Lead forms and purchases work; web-shop purchases are not counted as leads, and ciel.com has no cookie banner.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "www.ciel.com has no cookie banner; Google and LinkedIn tags fire before consent.", "action": "Raise with the privacy / web team.", "check": "CONS-01|fr-ciel-compta"},
-     {"text": "Web-shop purchases do not fire Floodlight 129.", "check": "CONV-01:ecom_buy|market"}]},
-    {"tone": "yellow", "title": "New today", "items": [
-     {"text": "ciel.com Tealium publish added Floodlight tag 17 for shop purchases (ee_purchase).", "check": "TEAL-04|tealium:ciel"}]},
-    {"tone": "green", "title": "Working", "items": ["49 lead forms fire Floodlight 129.", "Purchases fire sales tag 464 (sage.com) and 9 + 17 (ciel.com)."]}],
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "www.ciel.com has no cookie banner; Google and LinkedIn tags fire before consent.",
+       "action": "Raise with the privacy / web team.",
+       "check": "CONS-01|fr-ciel-compta"
+      },
+      {
+       "text": "Web-shop purchases do not fire Floodlight 129.",
+       "check": "CONV-01:ecom_buy|market"
+      }
+     ]
+    },
+    {
+     "tone": "yellow",
+     "title": "New today",
+     "items": [
+      {
+       "text": "ciel.com Tealium publish added Floodlight tag 17 for shop purchases (ee_purchase).",
+       "check": "TEAL-04|tealium:ciel"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "49 lead forms fire Floodlight 129.",
+      "Purchases fire sales tag 464 (sage.com) and 9 + 17 (ciel.com)."
+     ]
+    }
+   ],
    "findings": {
-    "CONS-01|fr-ciel-compta": {"text": "www.ciel.com loads no consent tool at all; visitors are never asked.", "owner": "Privacy"},
-    "CONS-02|fr-ciel-compta": {"text": "Before any consent the LinkedIn Insight tag fires and Google Ads cookies (_gcl_au, _gcl_aw) are set. Fix: add the cookie banner and gate the tags on consent in the ciel Tealium profile.", "owner": "Privacy"},
-    "CONS-03|fr-ciel-compta": {"text": "Google tags send hits without any Consent Mode signal, so Google treats them as consented.", "owner": "Privacy"},
-    "CONS-04|fr-ciel-compta": {"text": "No 'Accept all' button because there is no banner.", "owner": "Privacy"},
-    "CONS-01|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONS-02|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONS-03|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONS-04|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONV-01:ecom_buy|market": {"text": "Floodlight 129 needs ga4_customer_lead_type, which the Sage Active checkout (/fr-fr/cart/buy/) does not send. Never set up in FR (same in July 2026).", "owner": "MarTech"},
-    "TEAL-04|tealium:ciel": {"text": "Publish 202611181017 added tag 17 (Floodlight, group sageciel) that fires on event ee_purchase with a transaction ID. Looks like an intended new purchase conversion; it fires correctly in the replay.", "owner": "MarTech"}}},
+    "CONS-01|fr-ciel-compta": {
+     "text": "www.ciel.com loads no consent tool at all; visitors are never asked.",
+     "owner": "Privacy"
+    },
+    "CONS-02|fr-ciel-compta": {
+     "text": "Before any consent the LinkedIn Insight tag fires and Google Ads cookies (_gcl_au, _gcl_aw) are set. Fix: add the cookie banner and gate the tags on consent in the ciel Tealium profile.",
+     "owner": "Privacy"
+    },
+    "CONS-03|fr-ciel-compta": {
+     "text": "Google tags send hits without any Consent Mode signal, so Google treats them as consented.",
+     "owner": "Privacy"
+    },
+    "CONS-04|fr-ciel-compta": {
+     "text": "No 'Accept all' button because there is no banner.",
+     "owner": "Privacy"
+    },
+    "CONS-01|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONS-02|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONS-03|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONS-04|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONV-01:ecom_buy|market": {
+     "text": "Floodlight 129 needs ga4_customer_lead_type, which the Sage Active checkout (/fr-fr/cart/buy/) does not send. Never set up in FR (same in July 2026).",
+     "owner": "MarTech"
+    },
+    "TEAL-04|tealium:ciel": {
+     "text": "Publish 202611181017 added tag 17 (Floodlight, group sageciel) that fires on event ee_purchase with a transaction ID. Looks like an intended new purchase conversion; it fires correctly in the replay.",
+     "owner": "MarTech"
+    }
+   }
+  },
   "ES": {
    "summary": "Lead forms and purchases work; web-shop purchases are not counted as leads.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "Sage Active web-shop purchases do not fire Floodlight 36.", "action": "Part of the pending EU web-shop set-up.", "check": "CONV-01:ecom_buy|market"}]},
-    {"tone": "green", "title": "New today", "items": [
-     "11 paid media URLs added; all answer without redirects.",
-     "31 lead forms: all active, each fires Floodlight 36, its lead-type tag and Google Ads 203."]}],
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "Sage Active web-shop purchases do not fire Floodlight 36.",
+       "action": "Part of the pending EU web-shop set-up.",
+       "check": "CONV-01:ecom_buy|market"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "New today",
+     "items": [
+      "11 paid media URLs added; all answer without redirects.",
+      "31 lead forms: all active, each fires Floodlight 36, its lead-type tag and Google Ads 203.",
+      "Sample page: consent, Floodlight DC-5201701, Google Ads, GA4, LinkedIn and Meta all fire."
+     ]
+    }
+   ],
    "findings": {
-    "CONV-01:ecom_buy|market": {"text": "Floodlight 36 needs ga4_customer_lead_type (rule 211), which the Sage Active checkout (/es-es/cart/buy/) does not send. Never set up in ES (same in June 2026).", "owner": "MarTech"}}},
+    "CONV-01:ecom_buy|market": {
+     "text": "Floodlight 36 needs ga4_customer_lead_type (rule 211), which the Sage Active checkout (/es-es/cart/buy/) does not send. Never set up in ES (same in June 2026).",
+     "owner": "MarTech"
+    }
+   }
+  },
   "PT": {
-   "summary": "Lead forms work; there is no web shop in PT.",
+   "summary": "Lead forms and page tags work; there is no web shop in PT.",
    "brief": [
-    {"tone": "green", "title": "New today", "items": [
-     "6 paid media URLs added; all answer without redirects.",
-     "22 lead forms: all active, each fires Floodlight 402, its lead-type tag and Google Ads 223."]},
-    {"tone": "yellow", "title": "To clarify", "items": [
-     "The earlier PT sample page sent no Floodlight page view (Google Ads only). Confirm whether PT should have one."]}],
-   "findings": {}}
+    {
+     "tone": "green",
+     "title": "New today",
+     "items": [
+      "6 paid media URLs added; all answer without redirects.",
+      "22 lead forms: all active, each fires Floodlight 402, its lead-type tag and Google Ads 223.",
+      "Floodlight page view confirmed (DC-6144405); it arrives 8-15 s after consent."
+     ]
+    }
+   ],
+   "findings": {}
+  }
  },
  "publish": {
-  "FR": {"risk": "low", "summary": "ciel.com profile: new Floodlight tag 17 for shop purchases (event ee_purchase). Adds measurement, removes nothing."}
+  "FR": {
+   "risk": "low",
+   "summary": "ciel.com profile: new Floodlight tag 17 for shop purchases (event ee_purchase). Adds measurement, removes nothing."
+  }
  }
 }

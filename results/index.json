@@ -145,10 +145,10 @@
    },
    "DE": {
     "status": "red",
-    "red": 2,
+    "red": 4,
     "yellow": 1,
     "site_down": 0,
-    "coverage": "tealium_only",
+    "coverage": "partial",
     "publish": false
    },
    "AT": {
@@ -172,7 +172,7 @@
     "red": 1,
     "yellow": 0,
     "site_down": 0,
-    "coverage": "tealium_only",
+    "coverage": "partial",
     "publish": false
    },
    "PT": {
@@ -180,7 +180,7 @@
     "red": 0,
     "yellow": 0,
     "site_down": 0,
-    "coverage": "tealium_only",
+    "coverage": "partial",
     "publish": false
    }
   }

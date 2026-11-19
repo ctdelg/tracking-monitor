@@ -165,7 +165,7 @@ def main(argv=None) -> None:
                     for p in sorted(RESULTS_DIR.glob(f"raw/*/{code}.json"))]
             m = load_markets([code])[code]
             keep = {u["id"] for u in m["urls"]} | {j["id"] for j in m["journeys"]}
-            b = baseline.adopt_history(code, raws, load_platforms(), keep)
+            b = baseline.adopt_history(code, raws, load_platforms(), keep, pipeline._main_host(m))
             print(f"{code}: as-is baseline adopted from {len(raws)} run day(s): {len(b.get('urls', {}))} page(s), "
                   f"{len(b.get('journeys', {}))} journey(s), {len(b.get('forms', {}))} form(s); "
                   f"market rule: {', '.join(b.get('market_core', {})) or 'not enough pages yet'}")

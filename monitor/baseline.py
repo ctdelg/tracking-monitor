@@ -22,6 +22,7 @@ re-learns after an intended change.
 from __future__ import annotations
 
 import json
+from urllib.parse import urlparse
 from datetime import datetime, timezone
 
 from . import checks
@@ -72,8 +73,12 @@ def _consent_broken(visit: dict, platforms: Platforms) -> bool:
                and not checks._is_denied_google_ping(h) for h in hits)
 
 
-def learn(day: str, market: str, raw: dict, platforms: Platforms) -> dict:
-    """Update the market's baseline with today's evidence. Returns the updated baseline."""
+def learn(day: str, market: str, raw: dict, platforms: Platforms, main_host: str | None = None) -> dict:
+    """Update the market's baseline with today's evidence. Returns the updated baseline.
+
+    main_host: the market's own site. Pages on another site of the market (e.g. www.ciel.com in FR)
+    are tagged with their host and get their own market rule.
+    """
     base = load(market)
     urls = base.setdefault("urls", {})
     brw = raw.get("browser") or {}
@@ -82,6 +87,11 @@ def learn(day: str, market: str, raw: dict, platforms: Platforms) -> dict:
             continue
         seen = checks.vendor_summary(checks.classify(v["post"].get("requests", []), platforms))
         urls[v["id"]] = _learn_entry(urls.get(v["id"]), seen, day)
+        host = urlparse(v.get("url") or "").hostname
+        if host and main_host and host != main_host:
+            urls[v["id"]]["site"] = host
+        else:
+            urls[v["id"]].pop("site", None)
     journeys = base.setdefault("journeys", {})
     for j in brw.get("journeys", []):
         steps = j.get("steps") or []
@@ -111,15 +121,28 @@ def learn(day: str, market: str, raw: dict, platforms: Platforms) -> dict:
     if raw.get("gtm") and "gtm_conversion_tags" not in base:
         base["gtm_conversion_tags"] = raw["gtm"].get("conversion_tags", {})
 
-    base["market_core"] = market_core(base, platforms)
+    _set_core(base, platforms)
     base["updated_at"] = _now()
     save(market, base)
     return base
 
 
-def market_core(base: dict, platforms: Platforms) -> dict:
-    """{vendor: pages it fires on} for important vendors expected on every page of the market."""
-    pages = [e for e in (base.get("urls") or {}).values() if e.get("post") is not None]
+def _set_core(base: dict, platforms: Platforms) -> None:
+    base["market_core"] = market_core(base, platforms)
+    other = sorted({e["site"] for e in (base.get("urls") or {}).values() if e.get("site")})
+    if other:
+        base["market_core_sites"] = {s: market_core(base, platforms, s) for s in other}
+    else:
+        base.pop("market_core_sites", None)
+
+
+def market_core(base: dict, platforms: Platforms, site: str | None = None) -> dict:
+    """{vendor: pages it fires on} for important vendors expected on every page of the market.
+
+    Computed per site: the market's own site (site=None) and each other site separately.
+    """
+    pages = [e for e in (base.get("urls") or {}).values()
+             if e.get("post") is not None and e.get("site") == site]
     if len(pages) < CORE_MIN_PAGES:
         return {}
     counts: dict[str, int] = {}
@@ -131,29 +154,33 @@ def market_core(base: dict, platforms: Platforms) -> dict:
             if n >= CORE_MIN_PAGES and n / len(pages) >= CORE_SHARE}
 
 
-def page_expectation(base: dict, page_id: str) -> dict | None:
-    """What check_page compares against: {"post": {...}, "status": ..., "core": {...}} or None if unknown."""
+def page_expectation(base: dict, page_id: str, site: str | None = None) -> dict | None:
+    """What check_page compares against: {"post": {...}, "status": ..., "core": {...}} or None if unknown.
+
+    site: the page's host if it is not on the market's own site; the market rule of that site applies.
+    """
+    core = ((base.get("market_core_sites") or {}).get(site) or {}) if site else (base.get("market_core") or {})
     e = (base.get("urls") or {}).get(page_id)
     if not e:
-        return {"post": None, "status": "new", "core": base.get("market_core") or {}}
+        return {"post": None, "status": "new", "core": core}
     return {"post": e.get("post") if e.get("status") == "confirmed" else None, "status": e.get("status"),
-            "days": len(e.get("days", [])), "learned": e.get("post"), "core": base.get("market_core") or {}}
+            "days": len(e.get("days", [])), "learned": e.get("post"), "core": core}
 
 
 def adopt_history(market: str, raws: list[tuple[str, dict]], platforms: Platforms,
-                  keep_ids: set[str] | None = None) -> dict:
+                  keep_ids: set[str] | None = None, main_host: str | None = None) -> dict:
     """Take everything seen so far as the baseline right away (used once when switching to as-is baselines)."""
     base = {"market": market}
     save(market, base)
     for day, raw in sorted(raws):
-        base = learn(day, market, raw, platforms)
+        base = learn(day, market, raw, platforms, main_host)
     for e in list((base.get("urls") or {}).values()) + list((base.get("journeys") or {}).values()):
         if e.get("status") != "confirmed":
             e["status"], e["confirmed_at"], e["adopted"] = "confirmed", raws[-1][0] if raws else None, "as-is baseline"
     if keep_ids is not None:   # pages that left the URL list are not part of the baseline
         base["urls"] = {k: v for k, v in (base.get("urls") or {}).items() if k in keep_ids}
         base["journeys"] = {k: v for k, v in (base.get("journeys") or {}).items() if k in keep_ids}
-    base["market_core"] = market_core(base, platforms)
+    _set_core(base, platforms)
     base["confirmed_at"] = _now()
     base["confirmed_by"] = "as-is baseline (Paid Media decision, 2026-11-17)"
     save(market, base)

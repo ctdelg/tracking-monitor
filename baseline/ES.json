@@ -74,13 +74,76 @@
     "tealium_collect": [],
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
-    ]
+    ],
+    "quantcast": [],
+    "sixsense": []
    },
    "days": [
-    "2026-11-18"
+    "2026-11-18",
+    "2026-11-19"
    ],
    "status": "learning",
    "since": "2026-11-18"
+  },
+  "es-productos-sage-active": {
+   "post": {
+    "floodlight": [
+     "5201701"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "956094480"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "quantcast": [],
+    "sixsense": [],
+    "tealium_collect": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   },
+   "days": [
+    "2026-11-19"
+   ],
+   "status": "learning",
+   "since": "2026-11-19"
+  },
+  "es-productos-sage-200": {
+   "post": {
+    "floodlight": [
+     "5201701"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "956094480"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "quantcast": [],
+    "sixsense": [],
+    "tealium_collect": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   },
+   "days": [
+    "2026-11-19"
+   ],
+   "status": "learning",
+   "since": "2026-11-19"
   }
  },
  "journeys": {},
@@ -663,8 +726,45 @@
    "since": "2026-11-18"
   }
  },
- "market_core": {},
- "updated_at": "2026-11-18T14:29:52Z",
+ "market_core": {
+  "floodlight": {
+   "pages": 4,
+   "of": 4
+  },
+  "ga4": {
+   "pages": 4,
+   "of": 4
+  },
+  "google_ads": {
+   "pages": 4,
+   "of": 4
+  },
+  "linkedin": {
+   "pages": 4,
+   "of": 4
+  },
+  "meta": {
+   "pages": 4,
+   "of": 4
+  },
+  "quantcast": {
+   "pages": 4,
+   "of": 4
+  },
+  "sixsense": {
+   "pages": 4,
+   "of": 4
+  },
+  "tealium_collect": {
+   "pages": 4,
+   "of": 4
+  },
+  "zoominfo": {
+   "pages": 4,
+   "of": 4
+  }
+ },
+ "updated_at": "2026-11-19T10:30:11Z",
  "confirmed_at": "2026-11-17T13:28:20Z",
  "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

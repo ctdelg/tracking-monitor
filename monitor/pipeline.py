@@ -239,6 +239,11 @@ def load_baseline(market: str) -> dict | None:
     return _read(BASELINE_DIR / f"{market}.json")
 
 
+def _main_host(m: dict) -> str:
+    """The market's own site host (sage.com markets have no explicit site)."""
+    return urlparse(m.get("site") or "https://www.sage.com/").hostname
+
+
 def evaluate_day(day: str, only: list[str] | None = None) -> dict:
     markets_cfg = load_markets(only)
     platforms = load_platforms()
@@ -248,7 +253,8 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
         raw = _read(raw_path(day, code))
         if not raw:
             continue
-        base = baseline_mod.learn(day, code, raw, platforms)   # as-is baseline, learns new pages
+        main_host = _main_host(m)
+        base = baseline_mod.learn(day, code, raw, platforms, main_host)   # as-is baseline, learns new pages
         results = []
         if raw.get("tealium"):
             results += checks.check_tealium(code, raw["tealium"], base)
@@ -266,7 +272,9 @@ def evaluate_day(day: str, only: list[str] | None = None) -> dict:
             # a page can live on another site of the market (e.g. ciel.com for FR): its own site/profile win
             meta = url_meta.get(v["id"], {})
             mm = {**m, **{k: meta[k] for k in ("site", "tealium_profile", "tag_manager") if k in meta}}
-            results += checks.check_page(v, mm, platforms, baseline_mod.page_expectation(base, v["id"]))
+            host = urlparse(v.get("url") or "").hostname
+            site = host if host and host != main_host else None
+            results += checks.check_page(v, mm, platforms, baseline_mod.page_expectation(base, v["id"], site))
         for j in brw.get("journeys", []):
             results += checks.check_journey(j, platforms, (base.get("journeys") or {}).get(j["id"]))
         applied = rules.apply_acks(code, results, acks, day)

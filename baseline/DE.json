@@ -205,8 +205,12 @@
  },
  "journeys": {},
  "conversion": {
-  "ecom_try": [],
-  "ecom_buy": [],
+  "ecom_try": [
+   "98"
+  ],
+  "ecom_buy": [
+   "98"
+  ],
   "gated_trial": [
    "98",
    "389",
@@ -2727,7 +2731,13 @@
    "of": 5
   }
  },
- "updated_at": "2026-11-18T14:29:52Z",
+ "updated_at": "2026-11-19T10:30:11Z",
  "confirmed_at": "2026-11-17T13:28:17Z",
- "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
+ "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)",
+ "notes": [
+  {
+   "day": "2026-11-19",
+   "text": "ecom_try/ecom_buy conversion baseline set to tag 98 after the de-de publish 202611190912 fixed rule 274."
+  }
+ ]
 }

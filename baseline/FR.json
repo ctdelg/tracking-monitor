@@ -1,6 +1,107 @@
 {
  "market": "FR",
- "urls": {},
+ "urls": {
+  "fr-produits-sage-50cloud": {
+   "post": {
+    "floodlight": [
+     "5201003"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "990362824"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "outbrain": [
+     "63878"
+    ],
+    "reddit": [
+     "a2_jcwvn8khk1j0"
+    ],
+    "sixsense": [],
+    "tiktok": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   },
+   "days": [
+    "2026-11-19"
+   ],
+   "status": "learning",
+   "since": "2026-11-19"
+  },
+  "fr-sbc-intacct": {
+   "post": {
+    "floodlight": [
+     "5201003"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "990362824"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "outbrain": [
+     "63878"
+    ],
+    "sixsense": [],
+    "tiktok": []
+   },
+   "days": [
+    "2026-11-19"
+   ],
+   "status": "learning",
+   "since": "2026-11-19"
+  },
+  "fr-produits-sage-100": {
+   "post": {
+    "floodlight": [
+     "5201003"
+    ],
+    "ga4": [
+     "G-PE4Z9JJWVN"
+    ],
+    "google_ads": [
+     "990362824"
+    ],
+    "linkedin": [
+     "58294"
+    ],
+    "meta": [
+     "499565794547363"
+    ],
+    "outbrain": [
+     "63878"
+    ],
+    "quantcast": [],
+    "reddit": [
+     "a2_jcwvn8khk1j0"
+    ],
+    "sixsense": [],
+    "tiktok": [],
+    "zoominfo": [
+     "654e77cd8ec2360c5a6693e1"
+    ]
+   },
+   "days": [
+    "2026-11-19"
+   ],
+   "status": "learning",
+   "since": "2026-11-19"
+  }
+ },
  "journeys": {},
  "conversion": {
   "ecom_try": [],
@@ -920,8 +1021,41 @@
    "since": "2026-11-17"
   }
  },
- "market_core": {},
- "updated_at": "2026-11-18T14:29:52Z",
+ "market_core": {
+  "floodlight": {
+   "pages": 3,
+   "of": 3
+  },
+  "ga4": {
+   "pages": 3,
+   "of": 3
+  },
+  "google_ads": {
+   "pages": 3,
+   "of": 3
+  },
+  "linkedin": {
+   "pages": 3,
+   "of": 3
+  },
+  "meta": {
+   "pages": 3,
+   "of": 3
+  },
+  "outbrain": {
+   "pages": 3,
+   "of": 3
+  },
+  "sixsense": {
+   "pages": 3,
+   "of": 3
+  },
+  "tiktok": {
+   "pages": 3,
+   "of": 3
+  }
+ },
+ "updated_at": "2026-11-19T10:30:11Z",
  "confirmed_at": "2026-11-17T13:28:19Z",
  "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

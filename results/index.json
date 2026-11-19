@@ -192,7 +192,7 @@
    "DE": {
     "status": "red",
     "red": 4,
-    "yellow": 4,
+    "yellow": 2,
     "site_down": 0,
     "coverage": "partial",
     "publish": true

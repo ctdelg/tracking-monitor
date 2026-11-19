@@ -2,7 +2,7 @@
  "schema_version": 1,
  "monitor_version": "1.0.0",
  "day": "2026-11-19",
- "generated_at": "2026-11-19T10:30:11Z",
+ "generated_at": "2026-11-19T11:00:30Z",
  "global": {
   "status": "red",
   "incidents": [],
@@ -15,7 +15,7 @@
    "rating": {
     "status": "red",
     "red_count": 4,
-    "yellow_count": 4,
+    "yellow_count": 2,
     "site_down": [],
     "blocked_pages": [],
     "coverage": "partial",
@@ -883,12 +883,14 @@
     {
      "id": "CONV-03:ecom_try",
      "title": "Conversion tag set for 'ecom_try' unchanged",
-     "severity": "yellow",
-     "result": "warn",
+     "severity": "info",
+     "result": "pass",
      "target": "market",
-     "detail": "newly fire: 98",
+     "detail": "Fixed on 2026-11-19: tag(s) 98 fire again; now 98",
      "evidence": {
-      "baseline": [],
+      "baseline": [
+       "98"
+      ],
       "now": [
        "98"
       ]
@@ -943,12 +945,14 @@
     {
      "id": "CONV-03:ecom_buy",
      "title": "Conversion tag set for 'ecom_buy' unchanged",
-     "severity": "yellow",
-     "result": "warn",
+     "severity": "info",
+     "result": "pass",
      "target": "market",
-     "detail": "newly fire: 98",
+     "detail": "Fixed on 2026-11-19: tag(s) 98 fire again; now 98",
      "evidence": {
-      "baseline": [],
+      "baseline": [
+       "98"
+      ],
       "now": [
        "98"
       ]
@@ -1017,7 +1021,7 @@
     {
      "id": "CONV-03:gated_trial",
      "title": "Conversion tag set for 'gated_trial' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (98, 389, 405)",
@@ -1097,7 +1101,7 @@
     {
      "id": "CONV-03:gated_contact",
      "title": "Conversion tag set for 'gated_contact' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (98, 389, 406)",
@@ -1163,7 +1167,7 @@
     {
      "id": "CONV-03:purchase",
      "title": "Conversion tag set for 'purchase' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (284)",
@@ -13997,7 +14001,7 @@
     {
      "id": "CONV-03:ecom_buy",
      "title": "Conversion tag set for 'ecom_buy' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged ()",
@@ -14072,7 +14076,7 @@
     {
      "id": "CONV-03:gated_trial",
      "title": "Conversion tag set for 'gated_trial' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (129, 595, 608)",
@@ -14155,7 +14159,7 @@
     {
      "id": "CONV-03:gated_contact",
      "title": "Conversion tag set for 'gated_contact' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (129, 595, 609)",
@@ -14225,7 +14229,7 @@
     {
      "id": "CONV-03:purchase",
      "title": "Conversion tag set for 'purchase' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (464)",
@@ -19002,7 +19006,7 @@
     {
      "id": "CONV-03:ecom_buy",
      "title": "Conversion tag set for 'ecom_buy' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (203)",
@@ -19074,7 +19078,7 @@
     {
      "id": "CONV-03:gated_trial",
      "title": "Conversion tag set for 'gated_trial' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (36, 203, 398)",
@@ -19150,7 +19154,7 @@
     {
      "id": "CONV-03:gated_contact",
      "title": "Conversion tag set for 'gated_contact' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (36, 203, 399)",
@@ -19216,7 +19220,7 @@
     {
      "id": "CONV-03:purchase",
      "title": "Conversion tag set for 'purchase' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (283)",
@@ -22249,7 +22253,7 @@
     {
      "id": "CONV-03:gated_trial",
      "title": "Conversion tag set for 'gated_trial' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (223, 402, 589)",
@@ -22320,7 +22324,7 @@
     {
      "id": "CONV-03:gated_contact",
      "title": "Conversion tag set for 'gated_contact' unchanged",
-     "severity": "yellow",
+     "severity": "info",
      "result": "pass",
      "target": "market",
      "detail": "Conversion tags unchanged (223, 402, 590)",

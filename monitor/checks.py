@@ -674,13 +674,17 @@ def check_tealium(market_code: str, tealium: dict, baseline: dict | None, target
         if name in exp_events:
             base = set(exp_events[name])
             lost, gained = sorted(base - conv_fired, key=int), sorted(conv_fired - base, key=int)
-            sev = "red" if lost else "yellow"
-            outcome = "fail" if lost else ("warn" if gained else "pass")
+            # tags only gained = a fix, not a risk: green right away
+            sev = "red" if lost else "info"
+            outcome = "fail" if lost else "pass"
+            fixed = ((baseline or {}).get("conversion_fixed") or {}).get(name)
             out.append(result(f"CONV-03:{name}", sev, outcome, t,
                               "; ".join(filter(None, [
                                   f"no longer fire: {', '.join(lost)}" if lost else "",
-                                  f"newly fire: {', '.join(gained)}" if gained else ""])) or
-                              f"Conversion tags unchanged ({', '.join(sorted(base, key=int))})",
+                                  f"fixed - newly fire: {', '.join(gained)}" if gained else ""])) or
+                              (f"Fixed on {fixed['day']}: tag(s) {', '.join(fixed['gained'])} fire again; "
+                               f"now {', '.join(sorted(base, key=int))}" if fixed else
+                               f"Conversion tags unchanged ({', '.join(sorted(base, key=int))})"),
                               {"baseline": sorted(base, key=int), "now": sorted(conv_fired, key=int)},
                               title=f"Conversion tag set for '{name}' unchanged"))
     return out

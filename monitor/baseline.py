@@ -112,7 +112,15 @@ def learn(day: str, market: str, raw: dict, platforms: Platforms, main_host: str
     # Deterministic parts: adopt on first sight.
     conv = base.setdefault("conversion", {})
     for r in ((raw.get("tealium") or {}).get("conversion") or {}).get("results", []):
-        conv.setdefault(r["name"], r.get("conversion_tags_fired", []))
+        now = r.get("conversion_tags_fired", [])
+        before = conv.get(r["name"])
+        if before is None:
+            conv[r["name"]] = now
+        elif set(now) > set(before):
+            # only tags added, none lost: a fix (e.g. a tag that was broken fires again) -> adopt it today
+            conv[r["name"]] = sorted(now, key=int)
+            base.setdefault("conversion_fixed", {})[r["name"]] = {
+                "day": day, "gained": sorted(set(now) - set(before), key=int)}
     fb = base.setdefault("forms", {})
     for gid, g in ((raw.get("forms") or {}).get("gates") or {}).items():
         c = g.get("conversion") or {}

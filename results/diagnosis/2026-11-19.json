@@ -5,114 +5,271 @@
  "incidents": {},
  "markets": {
   "DE": {
-   "summary": "Web-shop trials and purchases fire Floodlight 98 again; Microsoft UET is broken on the Sage Active page.",
+   "summary": "Web-shop trials and purchases fire Floodlight 98 again (fixed today); DE stays red only because Microsoft UET is broken on Sage Active and payroll.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "Microsoft UET sends no page view and stores no msclkid on the Sage Active page (since 18 Nov).", "action": "MarTech: check the UET tag in Tealium.", "check": "TAG:microsoft_uet|de-produkte-sage-active"},
-     {"text": "Microsoft UET is missing on the payroll pages (known, market rule).", "check": "TAG:microsoft_uet|de-cp-payroll-standard-shopping"}
-    ]},
-    {"tone": "yellow", "title": "New today", "items": [
-     {"text": "Tealium publish 202611190912: rule 274 now also accepts customer_lead_type, so Floodlight 98 fires for web-shop trials and purchases.", "check": "TEAL-04|market"},
-     {"text": "Web-shop trial and purchase now fire tag 98 (fixed). Baseline updated, so this turns green tomorrow.", "check": "CONV-03:ecom_try|market"},
-     {"text": "One HR form name starts with a space, so Floodlight 389 cannot fire for it.", "check": "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung"}
-    ]},
-    {"tone": "green", "title": "Working", "items": [
-     "Web-shop trials, purchases and all 136 lead forms fire Floodlight 98.",
-     "Consent, gclid and fbclid on all three sample pages; Intacct UET works (tag 12002546)."
-    ]}
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "Microsoft UET sends no page view and stores no msclkid on the Sage Active page (since 18 Nov).",
+       "action": "MarTech: check the UET tag in Tealium.",
+       "check": "TAG:microsoft_uet|de-produkte-sage-active"
+      },
+      {
+       "text": "Microsoft UET is missing on the payroll pages (known, market rule).",
+       "check": "TAG:microsoft_uet|de-cp-payroll-standard-shopping"
+      }
+     ]
+    },
+    {
+     "tone": "yellow",
+     "title": "New today",
+     "items": [
+      {
+       "text": "Tealium publish 202611190912: rule 274 now also accepts customer_lead_type, so Floodlight 98 fires for web-shop trials and purchases.",
+       "check": "TEAL-04|market"
+      },
+      {
+       "text": "One HR form name starts with a space, so Floodlight 389 cannot fire for it.",
+       "check": "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Fixed today: web-shop trials and purchases fire Floodlight 98 again (green from this run on).",
+      "Web-shop trials, purchases and all 136 lead forms fire Floodlight 98.",
+      "Consent, gclid and fbclid on all three sample pages; Intacct UET works (tag 12002546)."
+     ]
+    }
    ],
    "findings": {
-    "TAG:microsoft_uet|de-produkte-sage-active": {"text": "Re-checked with a 28 s wait: bat.bing.com/bat.js loads right after consent, but window.uetq stays a plain queue of 35 events, so the UET library never initialises and never sends a bat.bing.com/action hit. The page worked on 16 Nov. The Intacct page loads its own UET tag (bat.bing.com/p/action/12002546.js) and sends pageLoad with the msclkid, so UET itself works. The Sage Active / generic UET tag configuration is the likely cause.", "owner": "MarTech"},
-    "CLID-02|de-produkte-sage-active": {"text": "Same cause as the UET finding: without a UET hit the _uetmsclkid cookie is never written, so Microsoft Ads clicks cannot be matched to later conversions.", "owner": "MarTech"},
-    "TAG:microsoft_uet|de-cp-payroll-standard-shopping": {"text": "Same picture as Sage Active: bat.js loads, window.uetq stays a queue of 15 events, no hit. UET fires on most DE pages, so it is expected here too (market rule). Already on the list to clarify with MarTech.", "owner": "MarTech"},
-    "CLID-02|de-cp-payroll-standard-shopping": {"text": "Same cause as the UET finding on this page.", "owner": "MarTech"},
-    "TEAL-04|market": {"text": "de-de publish 202611190912: rule 274 (used by Floodlight 98) changed from 'ga4_customer_lead_type is set' to 'ga4_customer_lead_type OR customer_lead_type is set'. The web shop sends customer_lead_type, so tag 98 fires again for ecom_try and ecom_buy (replayed in the sandbox). Also new: tag 438 (Capterra pixel, tr.capterra.com) and rules 358/359 for the en-my / en-sg profiles. Low risk, fixes the August break.", "owner": "MarTech"},
-    "CONV-03:ecom_try|market": {"text": "Positive change: tag 98 fires again for web-shop trials. The baseline has been updated to expect tag 98.", "owner": "MarTech"},
-    "CONV-03:ecom_buy|market": {"text": "Positive change: tag 98 fires again for web-shop purchases. The baseline has been updated to expect tag 98.", "owner": "MarTech"},
-    "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung": {"text": "The form's lastContentName starts with a space (' CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung'). Load rule 331 checks the start of the name, so Floodlight 389 never fires for this form. Fix: remove the space in the Gated Content gate.", "owner": "Web team"}
+    "TAG:microsoft_uet|de-produkte-sage-active": {
+     "text": "Re-checked with a 28 s wait: bat.bing.com/bat.js loads right after consent, but window.uetq stays a plain queue of 35 events, so the UET library never initialises and never sends a bat.bing.com/action hit. The page worked on 16 Nov. The Intacct page loads its own UET tag (bat.bing.com/p/action/12002546.js) and sends pageLoad with the msclkid, so UET itself works. The Sage Active / generic UET tag configuration is the likely cause.",
+     "owner": "MarTech"
+    },
+    "CLID-02|de-produkte-sage-active": {
+     "text": "Same cause as the UET finding: without a UET hit the _uetmsclkid cookie is never written, so Microsoft Ads clicks cannot be matched to later conversions.",
+     "owner": "MarTech"
+    },
+    "TAG:microsoft_uet|de-cp-payroll-standard-shopping": {
+     "text": "Same picture as Sage Active: bat.js loads, window.uetq stays a queue of 15 events, no hit. UET fires on most DE pages, so it is expected here too (market rule). Already on the list to clarify with MarTech.",
+     "owner": "MarTech"
+    },
+    "CLID-02|de-cp-payroll-standard-shopping": {
+     "text": "Same cause as the UET finding on this page.",
+     "owner": "MarTech"
+    },
+    "TEAL-04|market": {
+     "text": "de-de publish 202611190912: rule 274 (used by Floodlight 98) changed from 'ga4_customer_lead_type is set' to 'ga4_customer_lead_type OR customer_lead_type is set'. The web shop sends customer_lead_type, so tag 98 fires again for ecom_try and ecom_buy (replayed in the sandbox). Also new: tag 438 (Capterra pixel, tr.capterra.com) and rules 358/359 for the en-my / en-sg profiles. Low risk, fixes the August break.",
+     "owner": "MarTech"
+    },
+    "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung": {
+     "text": "The form's lastContentName starts with a space (' CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung'). Load rule 331 checks the start of the name, so Floodlight 389 never fires for this form. Fix: remove the space in the Gated Content gate.",
+     "owner": "Web team"
+    }
    }
   },
   "AT": {
    "summary": "Pages, consent and page-view tags work on sagedpw.at, but form submits cannot fire the Floodlight conversion.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "Floodlight sage_012 waits for a click on a button with 'Submit' in its ID; the form buttons have no ID.", "action": "Fix the GTM trigger or the buttons.", "check": "GTM-07|conversion:sage_012"}
-    ]},
-    {"tone": "yellow", "title": "To review", "items": [
-     {"text": "Floodlight sage_013 waits for a click on the DPW to GO order PDF; no checked page links to it.", "check": "GTM-07|conversion:sage_013"}
-    ]},
-    {"tone": "green", "title": "Working", "items": [
-     "Usercentrics banner; nothing fires before consent.",
-     "Floodlight page views, GA4 and gclid on all 6 landing pages and both form journeys."
-    ]}
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "Floodlight sage_012 waits for a click on a button with 'Submit' in its ID; the form buttons have no ID.",
+       "action": "Fix the GTM trigger or the buttons.",
+       "check": "GTM-07|conversion:sage_012"
+      }
+     ]
+    },
+    {
+     "tone": "yellow",
+     "title": "To review",
+     "items": [
+      {
+       "text": "Floodlight sage_013 waits for a click on the DPW to GO order PDF; no checked page links to it.",
+       "check": "GTM-07|conversion:sage_013"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Usercentrics banner; nothing fires before consent.",
+      "Floodlight page views, GA4 and gclid on all 6 landing pages and both form journeys."
+     ]
+    }
    ],
    "findings": {
-    "GTM-07|conversion:sage_012": {"text": "GTM-PS6MXC v13 (unchanged): sageg0/sage_012 fires on gtm.click where Click ID contains 'Submit'. The submit inputs on /kontaktformular/ and /kostenloses-infopaket/ have no id, so the trigger never matches. Fix: trigger on the form's success event or thank-you page, or give the buttons an id containing 'Submit'.", "owner": "GTM owner"},
-    "CONV-01:gated_contact|market": {"text": "Same as GTM-07 for sage_012.", "owner": "GTM owner"},
-    "GTM-07|conversion:sage_013": {"text": "sageg0/sage_013 fires on a click on a link to uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf. None of the paid landing pages or form pages link to it. Check whether the PDF is still offered; if not, the tag is obsolete.", "owner": "GTM owner"}
+    "GTM-07|conversion:sage_012": {
+     "text": "GTM-PS6MXC v13 (unchanged): sageg0/sage_012 fires on gtm.click where Click ID contains 'Submit'. The submit inputs on /kontaktformular/ and /kostenloses-infopaket/ have no id, so the trigger never matches. Fix: trigger on the form's success event or thank-you page, or give the buttons an id containing 'Submit'.",
+     "owner": "GTM owner"
+    },
+    "CONV-01:gated_contact|market": {
+     "text": "Same as GTM-07 for sage_012.",
+     "owner": "GTM owner"
+    },
+    "GTM-07|conversion:sage_013": {
+     "text": "sageg0/sage_013 fires on a click on a link to uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf. None of the paid landing pages or form pages link to it. Check whether the PDF is still offered; if not, the tag is obsolete.",
+     "owner": "GTM owner"
+    }
    }
   },
   "FR": {
    "summary": "sage.com pages are clean; web-shop purchases are not counted as leads, and ciel.com has no cookie banner.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "www.ciel.com has no cookie banner; Google and LinkedIn tags fire before consent.", "action": "Raise with the privacy / web team.", "check": "CONS-01|fr-ciel-compta"},
-     {"text": "Web-shop purchases do not fire Floodlight 129.", "action": "Part of the pending EU web-shop set-up.", "check": "CONV-01:ecom_buy|market"}
-    ]},
-    {"tone": "yellow", "title": "To review", "items": [
-     {"text": "Sage Intacct page: Contentsquare (session analytics) sends data before consent.", "action": "Check with privacy whether Contentsquare is classed as strictly necessary.", "check": "CONS-05|fr-sbc-intacct"}
-    ]},
-    {"tone": "green", "title": "New today", "items": [
-     "Three sage.com pages opened (Sage 50, Sage Intacct, Sage 100): banner works, nothing fires before consent.",
-     "After consent: Floodlight DC-5201003, Google Ads, GA4, LinkedIn, Meta, TikTok, Reddit, Outbrain, 6sense; gclid and fbclid stored.",
-     "fr-fr publish 202611190923 swaps an always-on Capterra tag (645) for one with load rules (664). Not conversion-relevant."
-    ]}
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "www.ciel.com has no cookie banner; Google and LinkedIn tags fire before consent.",
+       "action": "Raise with the privacy / web team.",
+       "check": "CONS-01|fr-ciel-compta"
+      },
+      {
+       "text": "Web-shop purchases do not fire Floodlight 129.",
+       "action": "Part of the pending EU web-shop set-up.",
+       "check": "CONV-01:ecom_buy|market"
+      }
+     ]
+    },
+    {
+     "tone": "yellow",
+     "title": "To review",
+     "items": [
+      {
+       "text": "Sage Intacct page: Contentsquare (session analytics) sends data before consent.",
+       "action": "Check with privacy whether Contentsquare is classed as strictly necessary.",
+       "check": "CONS-05|fr-sbc-intacct"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "New today",
+     "items": [
+      "Three sage.com pages opened (Sage 50, Sage Intacct, Sage 100): banner works, nothing fires before consent.",
+      "After consent: Floodlight DC-5201003, Google Ads, GA4, LinkedIn, Meta, TikTok, Reddit, Outbrain, 6sense; gclid and fbclid stored.",
+      "fr-fr publish 202611190923 swaps an always-on Capterra tag (645) for one with load rules (664). Not conversion-relevant."
+     ]
+    }
    ],
    "findings": {
-    "CONS-01|fr-ciel-compta": {"text": "www.ciel.com loads no consent tool at all; visitors are never asked.", "owner": "Privacy"},
-    "CONS-02|fr-ciel-compta": {"text": "Before any consent the LinkedIn Insight tag fires and Google Ads cookies (_gcl_au, _gcl_aw) are set. Fix: add the cookie banner and gate the tags on consent in the ciel Tealium profile.", "owner": "Privacy"},
-    "CONS-03|fr-ciel-compta": {"text": "Google tags send hits without any Consent Mode signal, so Google treats them as consented.", "owner": "Privacy"},
-    "CONS-04|fr-ciel-compta": {"text": "No 'Accept all' button because there is no banner.", "owner": "Privacy"},
-    "CONS-01|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONS-02|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONS-03|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONS-04|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
-    "CONV-01:ecom_buy|market": {"text": "Floodlight 129 needs ga4_customer_lead_type, which the Sage Active checkout (/fr-fr/cart/buy/) does not send. DE fixed the same problem today by letting its rule also accept customer_lead_type (de-de rule 274); the same change in fr-fr would fix it here.", "owner": "MarTech"},
-    "CONS-05|fr-sbc-intacct": {"text": "Before consent the page sends XHRs to c.contentsquare.net and k-aeu1.contentsquare.net (Contentsquare session analytics / recording). Not an ad tag, so yellow. Only seen on the Intacct page.", "owner": "Privacy"}
+    "CONS-01|fr-ciel-compta": {
+     "text": "www.ciel.com loads no consent tool at all; visitors are never asked.",
+     "owner": "Privacy"
+    },
+    "CONS-02|fr-ciel-compta": {
+     "text": "Before any consent the LinkedIn Insight tag fires and Google Ads cookies (_gcl_au, _gcl_aw) are set. Fix: add the cookie banner and gate the tags on consent in the ciel Tealium profile.",
+     "owner": "Privacy"
+    },
+    "CONS-03|fr-ciel-compta": {
+     "text": "Google tags send hits without any Consent Mode signal, so Google treats them as consented.",
+     "owner": "Privacy"
+    },
+    "CONS-04|fr-ciel-compta": {
+     "text": "No 'Accept all' button because there is no banner.",
+     "owner": "Privacy"
+    },
+    "CONS-01|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONS-02|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONS-03|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONS-04|fr-ciel-gestion-commerciale": {
+     "text": "Same as fr-ciel-compta.",
+     "owner": "Privacy"
+    },
+    "CONV-01:ecom_buy|market": {
+     "text": "Floodlight 129 needs ga4_customer_lead_type, which the Sage Active checkout (/fr-fr/cart/buy/) does not send. DE fixed the same problem today by letting its rule also accept customer_lead_type (de-de rule 274); the same change in fr-fr would fix it here.",
+     "owner": "MarTech"
+    },
+    "CONS-05|fr-sbc-intacct": {
+     "text": "Before consent the page sends XHRs to c.contentsquare.net and k-aeu1.contentsquare.net (Contentsquare session analytics / recording). Not an ad tag, so yellow. Only seen on the Intacct page.",
+     "owner": "Privacy"
+    }
    }
   },
   "ES": {
    "summary": "Lead forms, purchases and page tags work; web-shop purchases are not counted as leads.",
    "brief": [
-    {"tone": "red", "title": "Why it is red", "items": [
-     {"text": "Sage Active web-shop purchases do not fire Floodlight 36.", "action": "Part of the pending EU web-shop set-up.", "check": "CONV-01:ecom_buy|market"}
-    ]},
-    {"tone": "green", "title": "Working", "items": [
-     "Three sample pages (Sage 50, Sage Active, Sage 200): consent works, Floodlight DC-5201701, Google Ads, GA4, LinkedIn, Meta, Quantcast fire; gclid and fbclid stored.",
-     "es-es publish 202611190920 only adds the Capterra pixel and two profile rules."
-    ]}
+    {
+     "tone": "red",
+     "title": "Why it is red",
+     "items": [
+      {
+       "text": "Sage Active web-shop purchases do not fire Floodlight 36.",
+       "action": "Part of the pending EU web-shop set-up.",
+       "check": "CONV-01:ecom_buy|market"
+      }
+     ]
+    },
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Three sample pages (Sage 50, Sage Active, Sage 200): consent works, Floodlight DC-5201701, Google Ads, GA4, LinkedIn, Meta, Quantcast fire; gclid and fbclid stored.",
+      "es-es publish 202611190920 only adds the Capterra pixel and two profile rules."
+     ]
+    }
    ],
    "findings": {
-    "CONV-01:ecom_buy|market": {"text": "Floodlight 36 needs ga4_customer_lead_type (rule 211), which the Sage Active checkout (/es-es/cart/buy/) does not send. Today's DE fix (the rule also accepts customer_lead_type) would work here too.", "owner": "MarTech"},
-    "CONS-05|es-productos-sage-active": {"text": "The Brightcove video player loads before consent (edge.api.brightcove.com, metrics.brightcove.com). Not an ad tag; review with privacy.", "owner": "Privacy"}
+    "CONV-01:ecom_buy|market": {
+     "text": "Floodlight 36 needs ga4_customer_lead_type (rule 211), which the Sage Active checkout (/es-es/cart/buy/) does not send. Today's DE fix (the rule also accepts customer_lead_type) would work here too.",
+     "owner": "MarTech"
+    },
+    "CONS-05|es-productos-sage-active": {
+     "text": "The Brightcove video player loads before consent (edge.api.brightcove.com, metrics.brightcove.com). Not an ad tag; review with privacy.",
+     "owner": "Privacy"
+    }
    }
   },
   "PT": {
    "summary": "Everything checked works; there is no web shop in PT.",
    "brief": [
-    {"tone": "green", "title": "Working", "items": [
-     "Three sample pages (Sage 50, Sage HR, Sage for Accountants): consent works, Floodlight DC-6144405, Google Ads, GA4, LinkedIn, Meta, Quantcast fire; gclid and fbclid stored.",
-     "22 lead forms fire Floodlight 402.",
-     "pt-pt publish 202611190938 only adds the Capterra pixel and two profile rules."
-    ]}
+    {
+     "tone": "green",
+     "title": "Working",
+     "items": [
+      "Three sample pages (Sage 50, Sage HR, Sage for Accountants): consent works, Floodlight DC-6144405, Google Ads, GA4, LinkedIn, Meta, Quantcast fire; gclid and fbclid stored.",
+      "22 lead forms fire Floodlight 402.",
+      "pt-pt publish 202611190938 only adds the Capterra pixel and two profile rules."
+     ]
+    }
    ],
    "findings": {}
   }
  },
  "publish": {
-  "DE": {"risk": "low", "summary": "Rule 274 now also accepts customer_lead_type, so Floodlight 98 fires for web-shop trials and purchases again (fix). Adds Capterra pixel tag 438."},
-  "FR": {"risk": "low", "summary": "Replaces the always-on Capterra tag 645 with tag 664 (load rules). Not conversion-relevant."},
-  "ES": {"risk": "low", "summary": "Adds Capterra pixel tag 437 and two profile rules. Not conversion-relevant."},
-  "PT": {"risk": "low", "summary": "Adds Capterra pixel tag 640 and two profile rules. Not conversion-relevant."}
+  "DE": {
+   "risk": "low",
+   "summary": "Rule 274 now also accepts customer_lead_type, so Floodlight 98 fires for web-shop trials and purchases again (fix). Adds Capterra pixel tag 438."
+  },
+  "FR": {
+   "risk": "low",
+   "summary": "Replaces the always-on Capterra tag 645 with tag 664 (load rules). Not conversion-relevant."
+  },
+  "ES": {
+   "risk": "low",
+   "summary": "Adds Capterra pixel tag 437 and two profile rules. Not conversion-relevant."
+  },
+  "PT": {
+   "risk": "low",
+   "summary": "Adds Capterra pixel tag 640 and two profile rules. Not conversion-relevant."
+  }
  }
 }

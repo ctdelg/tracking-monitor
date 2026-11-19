@@ -412,6 +412,11 @@ Plain-English commands for the colleague in Claude Code. The skill edits config,
 - **Auto-discovered vendors** (not listed in `platforms.yaml`) are informational rather than yellow. This
   avoids flapping colours; a vendor is promoted by adding it to `platforms.yaml`.
 - The skill lives in `.claude/skills/tracking-monitor/`, so Claude Code loads it automatically in the repo.
+- **Fixes are green in the same run** (2026-11-19). If a conversion event fires more conversion tags than its
+  baseline and loses none (for example a broken tag fires again), CONV-03 passes right away and the new tag set
+  becomes the baseline in that run. Only lost tags make CONV-03 red.
+- **Market rule per site** (2026-11-19). Pages on another site of a market (www.ciel.com in FR) get their own
+  market rule and are not compared with the market's sage.com pages.
 
 ## 15. Three-day plan
 | Day | Work |

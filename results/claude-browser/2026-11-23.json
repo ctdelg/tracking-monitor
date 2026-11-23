@@ -1,0 +1,1803 @@
+{
+ "collected_by": "Claude built-in browser (interim mode, live hits marked utm_source=tracking-monitor, click IDs TEST_MON_20261123)",
+ "note": "Two sample pages per sage.com market (DE, FR, ES, PT), 25 s wait after consent, all third-party requests recorded (known vendor hits minified to host/path + ID/consent/click-ID params, other hosts as host only). AT and the two FR ciel.com pages run automatically. uetq_queued = events still waiting in window.uetq after 25 s (UET library never initialised).",
+ "markets": {
+  "DE": {
+   "visits": [
+    {
+     "id": "de-produkte-sage-active",
+     "url": "https://www.sage.com/de-de/produkte/sage-active/",
+     "status": 200,
+     "final_url": "https://www.sage.com/de-de/produkte/sage-active/",
+     "live_sample": true,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Sage Active - Online Buchhaltung | Sage Deutschland",
+      "requests": [],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/de-de/202611190912",
+       "version": "ut4.53.202611190912",
+       "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+       "page_type": "article",
+       "language": "de-de",
+       "country": "de"
+      }
+     },
+     "post": {
+      "title": "Sage Active - Online Buchhaltung | Sage Deutschland",
+      "requests": [
+       {
+        "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/970123043/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/ccm/s/collect",
+        "type": "fetch"
+       },
+       {
+        "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygv",
+        "type": "fetch"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://lux.speedcurve.com/lux/",
+        "type": "img"
+       },
+       {
+        "url": "https://logx.optimizely.com/v1/events",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/image.aspx",
+        "type": "img"
+       },
+       {
+        "url": "https://cdn.segment.com/v1/projects/oG2jCj9scr1uz5Ke9",
+        "type": "fetch"
+       },
+       {
+        "url": "https://js.zi-scripts.com/unified/v1/master/getSubscrip",
+        "type": "fetch"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/events",
+        "type": "fetch"
+       },
+       {
+        "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
+        "type": "beacon"
+       },
+       {
+        "url": "https://analytics.tiktok.com/api/v2/pixel",
+        "type": "fetch"
+       },
+       {
+        "url": "https://secure.adnxs.com/getuidj",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/wdceu/721103/onsite/onsiteDat",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://sagegmbh.sjv.io/xur/27498",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://events.eu1.segmentapis.com/v1/p",
+        "type": "fetch"
+       },
+       {
+        "url": "https://events.eu1.segmentapis.com/v1/i",
+        "type": "fetch"
+       },
+       {
+        "url": "https://epsilon.6sense.com/v3/company/details",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+        "type": "fetch"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.ojrq.net/p/",
+        "type": "img"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/api/web/events",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://bzr.openai.com/v1/sdk/events",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/pageview",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/v2/recording",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.contentsquare.net/dvar",
+        "type": "xmlhttprequest"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_fbc": "fb.2.1795428750281.TEST_MON_20261123",
+       "_gcl_aw": "GCL.1795428751.TEST_MON_20261123",
+       "_gcl_au": "",
+       "_fbp": "",
+       "_ttp": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/de-de/202611190912",
+       "version": "ut4.53.202611190912",
+       "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+       "page_type": "article",
+       "language": "de-de",
+       "country": "de"
+      },
+      "accepted": true,
+      "uetq_queued": 35
+     }
+    },
+    {
+     "id": "de-cp-sage-intacct",
+     "url": "https://www.sage.com/de-de/cp/sage-intacct/",
+     "status": 200,
+     "final_url": "https://www.sage.com/de-de/cp/sage-intacct/",
+     "live_sample": false,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Sage Intacct Finanzmanagement-Software | Sage Intacct DE",
+      "requests": [],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/de-de/202611190912",
+       "version": "ut4.53.202611190912",
+       "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+       "page_type": "article",
+       "language": "de-de",
+       "country": "de"
+      }
+     },
+     "post": {
+      "title": "Sage Intacct Finanzmanagement-Software | Sage Intacct DE",
+      "requests": [
+       {
+        "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/ccm/s/collect",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/970123043/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://js.zi-scripts.com/unified/v1/master/getSubscrip",
+        "type": "fetch"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygv",
+        "type": "fetch"
+       },
+       {
+        "url": "https://lux.speedcurve.com/lux/",
+        "type": "img"
+       },
+       {
+        "url": "https://secure.adnxs.com/getuidj",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/image.aspx",
+        "type": "img"
+       },
+       {
+        "url": "https://logx.optimizely.com/v1/events",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/events",
+        "type": "fetch"
+       },
+       {
+        "url": "https://cdn.segment.com/v1/projects/oG2jCj9scr1uz5Ke9",
+        "type": "fetch"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://epsilon.6sense.com/v3/company/details",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://sagegmbh.sjv.io/xur/27498",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/wdceu/721103/onsite/onsiteDat",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
+        "type": "beacon"
+       },
+       {
+        "url": "https://analytics.tiktok.com/api/v2/pixel",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/pageview",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/api/web/events",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/v2/recording",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+        "type": "fetch"
+       },
+       {
+        "url": "https://bzr.openai.com/v1/sdk/events",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/dvar",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://events.eu1.segmentapis.com/v1/i",
+        "type": "fetch"
+       },
+       {
+        "url": "https://events.eu1.segmentapis.com/v1/p",
+        "type": "fetch"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_fbc": "fb.2.1795428781933.TEST_MON_20261123",
+       "_gcl_au": "",
+       "_gcl_aw": "GCL.1795428783.TEST_MON_20261123",
+       "_fbp": "",
+       "_ttp": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/de-de/202611190912",
+       "version": "ut4.53.202611190912",
+       "path": "//tags.tiqcdn.com/utag/sage/de-de/prod/",
+       "page_type": "article",
+       "language": "de-de",
+       "country": "de"
+      },
+      "accepted": true,
+      "uetq_queued": 10
+     }
+    }
+   ]
+  },
+  "FR": {
+   "visits": [
+    {
+     "id": "fr-produits-sage-50cloud",
+     "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
+     "status": 200,
+     "final_url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
+     "live_sample": true,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Sage 50 - Comptabilité et Gestion commerciale | Sage France",
+      "requests": [],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/fr-fr/202611190923",
+       "version": "ut4.53.202611190923",
+       "path": "//tags.tiqcdn.com/utag/sage/fr-fr/prod/",
+       "page_type": "article",
+       "language": "fr-fr",
+       "country": "fr"
+      }
+     },
+     "post": {
+      "title": "Sage 50 - Comptabilité et Gestion commerciale | Sage France",
+      "requests": [
+       {
+        "url": "https://mcm.entfabric-sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://sagefr.pxf.io/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://prebid.smilewanted.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://js.zi-scripts.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://lux.speedcurve.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://secure.adnxs.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://collect-eu-west-1.tealiumiq.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://bzrcdn.openai.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://epsilon.6sense.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://tr.capterra.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://logx.optimizely.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://analytics-ipv6.tiktokw.us/",
+        "type": "beacon"
+       },
+       {
+        "url": "https://analytics.tiktok.com/api/v2/pixel",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/activity;src=5201003;type=non_conv;cat=sage_0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://5201003.fls.doubleclick.net/activityi;src=5201003;type=non_conv;cat=sage_0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/990362824/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/990362824/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://bzr.openai.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+        "type": "fetch"
+       },
+       {
+        "url": "https://pixel-config.reddit.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://alb.reddit.com/rp?id=a2_jcwvn8khk1j0",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.ojrq.net/",
+        "type": "img"
+       },
+       {
+        "url": "https://p1.outbrain.com/v2/p/js/63878/PAGE_VIEW/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ads-engagement.presage.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://cdn.segment.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://events.eu1.segmentapis.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_fbc": "fb.2.1795428876513.TEST_MON_20261123",
+       "_fbp": "",
+       "_ttp": "",
+       "_gcl_au": "",
+       "_gcl_aw": "GCL.1795428878.TEST_MON_20261123",
+       "_rdt_uuid": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/fr-fr/202611190923",
+       "version": "ut4.53.202611190923",
+       "path": "//tags.tiqcdn.com/utag/sage/fr-fr/prod/",
+       "page_type": "article",
+       "language": "fr-fr",
+       "country": "fr"
+      },
+      "accepted": true,
+      "uetq_queued": null
+     }
+    },
+    {
+     "id": "fr-sbc-intacct",
+     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
+     "status": 200,
+     "final_url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
+     "live_sample": false,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Sage Intacct - Logiciel de gestion financière | Sage France",
+      "requests": [
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "xmlhttprequest"
+       }
+      ],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/fr-fr/202611190923",
+       "version": "ut4.53.202611190923",
+       "path": "//tags.tiqcdn.com/utag/sage/fr-fr/prod/",
+       "page_type": "article",
+       "language": "fr-fr",
+       "country": "fr"
+      }
+     },
+     "post": {
+      "title": "Sage Intacct - Logiciel de gestion financière | Sage France",
+      "requests": [
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "beacon"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "beacon"
+       },
+       {
+        "url": "https://prebid.smilewanted.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://mcm.entfabric-sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://pixel-config.reddit.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://alb.reddit.com/rp?id=a2_jcwvn8khk1j0",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ads-engagement.presage.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://p1.outbrain.com/v2/p/js/63878/PAGE_VIEW/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://js.zi-scripts.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://collect-eu-west-1.tealiumiq.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://lux.speedcurve.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://logx.optimizely.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://secure.adnxs.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/990362824/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/990362824/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://5201003.fls.doubleclick.net/activityi;src=5201003;type=non_conv;cat=sage_0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://cdn.segment.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://bzrcdn.openai.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://sagefr.pxf.io/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://epsilon.6sense.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://analytics-ipv6.tiktokw.us/",
+        "type": "beacon"
+       },
+       {
+        "url": "https://analytics.tiktok.com/api/v2/pixel",
+        "type": "fetch"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://pixel.quantserve.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://tr.capterra.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_rdt_uuid": "",
+       "_fbc": "fb.2.1795428915503.TEST_MON_20261123",
+       "_gcl_aw": "GCL.1795428916.TEST_MON_20261123",
+       "_gcl_au": "",
+       "_fbp": "",
+       "_ttp": "",
+       "__qca": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/fr-fr/202611190923",
+       "version": "ut4.53.202611190923",
+       "path": "//tags.tiqcdn.com/utag/sage/fr-fr/prod/",
+       "page_type": "article",
+       "language": "fr-fr",
+       "country": "fr"
+      },
+      "accepted": true,
+      "uetq_queued": null
+     }
+    }
+   ]
+  },
+  "ES": {
+   "visits": [
+    {
+     "id": "es-productos-sage-50cloud",
+     "url": "https://www.sage.com/es-es/productos/sage-50cloud/",
+     "status": 200,
+     "final_url": "https://www.sage.com/es-es/productos/sage-50cloud/",
+     "live_sample": true,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Sage 50 - Contabilidad y gestión para negocios | Sage España",
+      "requests": [],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/es-es/202611190920",
+       "version": "ut4.53.202611190920",
+       "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+       "page_type": "article",
+       "language": "es-es",
+       "country": "es"
+      }
+     },
+     "post": {
+      "title": "Sage 50 - Contabilidad y gestión para negocios | Sage España",
+      "requests": [
+       {
+        "url": "https://lux.speedcurve.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://bzrcdn.openai.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://secure.adnxs.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://js.zi-scripts.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://mcm.entfabric-sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://epsilon.6sense.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://pixel.quantserve.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://sagespain.pxf.io/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://logx.optimizely.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ad.doubleclick.net/activity;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://5201701.fls.doubleclick.net/activityi;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-5201701&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://pixel.quantserve.com/pixel;a=p-E6KY6asqFcmVm",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://bzr.openai.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_fbc": "fb.2.1795429027829.TEST_MON_20261123",
+       "_fbp": "",
+       "_gcl_au": "",
+       "_gcl_aw": "GCL.1795429029.TEST_MON_20261123",
+       "__qca": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/es-es/202611190920",
+       "version": "ut4.53.202611190920",
+       "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+       "page_type": "article",
+       "language": "es-es",
+       "country": "es"
+      },
+      "accepted": true,
+      "uetq_queued": null
+     }
+    },
+    {
+     "id": "es-productos-sage-active",
+     "url": "https://www.sage.com/es-es/productos/sage-active/",
+     "status": 200,
+     "final_url": "https://www.sage.com/es-es/productos/sage-active/",
+     "live_sample": false,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Toma el control de tu facturación y ventas con Sage Active | Sage España",
+      "requests": [
+       {
+        "url": "https://edge.api.brightcove.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://metrics.brightcove.com/",
+        "type": "img"
+       }
+      ],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/es-es/202611190920",
+       "version": "ut4.53.202611190920",
+       "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+       "page_type": "article",
+       "language": "es-es",
+       "country": "es"
+      }
+     },
+     "post": {
+      "title": "Toma el control de tu facturación y ventas con Sage Active | Sage España",
+      "requests": [
+       {
+        "url": "https://mcm.entfabric-sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://sagespain.pxf.io/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://js.zi-scripts.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://lux.speedcurve.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://secure.adnxs.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ad.doubleclick.net/activity;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://5201701.fls.doubleclick.net/activityi;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googletagmanager.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-5201701&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://pixel.quantserve.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://epsilon.6sense.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://logx.optimizely.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://pixel.quantserve.com/pixel;a=p-E6KY6asqFcmVm",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://bzrcdn.openai.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://srm.ba.contentsquare.net/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://bzr.openai.com/",
+        "type": "fetch"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_gcl_aw": "GCL.1795429061.TEST_MON_20261123",
+       "_fbc": "fb.2.1795429060884.TEST_MON_20261123",
+       "_gcl_au": "",
+       "_fbp": "",
+       "__qca": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/es-es/202611190920",
+       "version": "ut4.53.202611190920",
+       "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+       "page_type": "article",
+       "language": "es-es",
+       "country": "es"
+      },
+      "accepted": true,
+      "uetq_queued": null
+     }
+    }
+   ]
+  },
+  "PT": {
+   "visits": [
+    {
+     "id": "pt-produtos-sage-50cloud",
+     "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/",
+     "status": 200,
+     "final_url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/",
+     "live_sample": true,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Sage 50 | Sage PT",
+      "requests": [],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/pt-pt/202611190938",
+       "version": "ut4.53.202611190938",
+       "path": "//tags.tiqcdn.com/utag/sage/pt-pt/prod/",
+       "page_type": "artigo",
+       "language": "pt-pt",
+       "country": "pt"
+      }
+     },
+     "post": {
+      "title": "Sage 50 | Sage PT",
+      "requests": [
+       {
+        "url": "https://secure.adnxs.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://js.zi-scripts.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://mcm.entfabric-sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://epsilon.6sense.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://lux.speedcurve.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://collect-eu-west-1.tealiumiq.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://pixel.quantserve.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://sageportugal.pxf.io/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://logx.optimizely.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ad.doubleclick.net/activity;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://6144405.fls.doubleclick.net/activityi;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googletagmanager.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-6144405&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://pixel.quantserve.com/pixel;a=p-E6KY6asqFcmVm",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_fbc": "fb.2.1795429094276.TEST_MON_20261123",
+       "_gcl_au": "",
+       "_fbp": "",
+       "_gcl_aw": "GCL.1795429096.TEST_MON_20261123",
+       "__qca": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/pt-pt/202611190938",
+       "version": "ut4.53.202611190938",
+       "path": "//tags.tiqcdn.com/utag/sage/pt-pt/prod/",
+       "page_type": "artigo",
+       "language": "pt-pt",
+       "country": "pt"
+      },
+      "accepted": true,
+      "uetq_queued": null
+     }
+    },
+    {
+     "id": "pt-sbc-hr",
+     "url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/",
+     "status": 200,
+     "final_url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/",
+     "live_sample": false,
+     "click_ids": {
+      "gclid": "TEST_MON_20261123",
+      "msclkid": "TEST_MON_20261123",
+      "fbclid": "TEST_MON_20261123"
+     },
+     "pre": {
+      "title": "Sage HR – Software de Gestão de Recursos Humanos | Sage Portugal",
+      "requests": [],
+      "cookies": {
+       "OptanonConsent": ""
+      },
+      "banner": true,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+      "utag": {
+       "present": true,
+       "utid": "sage/pt-pt/202611190938",
+       "version": "ut4.53.202611190938",
+       "path": "//tags.tiqcdn.com/utag/sage/pt-pt/prod/",
+       "page_type": "article",
+       "language": "pt-pt",
+       "country": "pt"
+      }
+     },
+     "post": {
+      "title": "Sage HR – Software de Gestão de Recursos Humanos | Sage Portugal",
+      "requests": [
+       {
+        "url": "https://mcm.entfabric-sage.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+        "type": "fetch"
+       },
+       {
+        "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://sageportugal.pxf.io/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://js.zi-scripts.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://collect-eu-west-1.tealiumiq.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://lux.speedcurve.com/",
+        "type": "img"
+       },
+       {
+        "url": "https://secure.adnxs.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://c.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ipv6.6sc.co/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/collect?pid=58294",
+        "type": "fetch"
+       },
+       {
+        "url": "https://c.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ad.doubleclick.net/activity;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://6144405.fls.doubleclick.net/activityi;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261123;gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=DC-6144405&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.googleadservices.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://ad.doubleclick.net/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261123",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+        "type": "fetch"
+       },
+       {
+        "url": "https://connect.facebook.net/signals/config/499565794547363",
+        "type": "fetch"
+       },
+       {
+        "url": "https://pixel.quantserve.com/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://61518.global.siteimproveanalytics.io/",
+        "type": "img"
+       },
+       {
+        "url": "https://px.ads.linkedin.com/wa/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://b.6sc.co/v1/beacon/img.gif",
+        "type": "fetch"
+       },
+       {
+        "url": "https://epsilon.6sense.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://k-aeu1.contentsquare.net/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+        "type": "fetch"
+       },
+       {
+        "url": "https://logx.optimizely.com/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://resources.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://pixel.quantserve.com/pixel;a=p-E6KY6asqFcmVm",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
+        "type": "fetch"
+       },
+       {
+        "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+        "type": "xmlhttprequest"
+       },
+       {
+        "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+        "type": "fetch"
+       }
+      ],
+      "cookies": {
+       "OptanonAlertBoxClosed": "",
+       "OptanonConsent": "",
+       "_gcl_aw": "GCL.1795429126.TEST_MON_20261123",
+       "_fbc": "fb.2.1795429126170.TEST_MON_20261123",
+       "_gcl_au": "",
+       "_fbp": "",
+       "__qca": ""
+      },
+      "banner": false,
+      "consent_tool": "onetrust",
+      "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+      "utag": {
+       "present": true,
+       "utid": "sage/pt-pt/202611190938",
+       "version": "ut4.53.202611190938",
+       "path": "//tags.tiqcdn.com/utag/sage/pt-pt/prod/",
+       "page_type": "article",
+       "language": "pt-pt",
+       "country": "pt"
+      },
+      "accepted": true,
+      "uetq_queued": null
+     }
+    }
+   ]
+  }
+ }
+}

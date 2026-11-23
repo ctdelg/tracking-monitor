@@ -1,0 +1,108 @@
+{
+ "day": "2026-11-23",
+ "written_by": "Claude (2 sample pages per sage.com market, 25 s wait after consent, full third-party capture; AT and ciel.com automated)",
+ "summary": "No Tealium or GTM publish since 19 Nov. The setup is unchanged, and the DE fix for Floodlight 98 (web-shop trials and purchases) still works.\nDE stays red because of Microsoft UET. Today it sends nothing on either sample page, the Intacct page included: bat.js loads, but window.uetq stays a queue (35 / 10 events), so there is no page view and no _uetmsclkid. On 19 Nov Intacct still sent UET on a second try. UET now looks broken across DE, not just on Sage Active.\nAlso in DE: Quantcast sent no hit on either page within 25 s. It worked on 19 Nov and works in ES and PT today, so watch it before escalating.\nFR and ES: web-shop purchases still do not fire Floodlight (129 / 36). This is the pending EU web-shop set-up. The same rule change as in DE would fix it.\nFR, ES and PT sample pages are otherwise clean: the banner works, nothing fires before consent, Floodlight, Google Ads, GA4, LinkedIn, Meta and Quantcast fire, and gclid and fbclid are stored. PT is green.\nStill open: AT form conversion sage_012 (GTM trigger needs a button ID), and www.ciel.com has no cookie banner.",
+ "incidents": {},
+ "markets": {
+  "DE": {
+   "summary": "Conversions work (Floodlight 98 incl. web shop); Microsoft UET sends nothing on the checked pages.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+     {"text": "Microsoft UET sends no page view and stores no msclkid on Sage Active (since 18 Nov).", "action": "MarTech: check the UET tags in Tealium.", "check": "TAG:microsoft_uet|de-produkte-sage-active"},
+     {"text": "Today also on Sage Intacct: UET library loads but never sends.", "check": "TAG:microsoft_uet|de-cp-sage-intacct"}
+    ]},
+    {"tone": "yellow", "title": "To review", "items": [
+     {"text": "Quantcast sent no hit on either sample page within 25 s (worked on 19 Nov).", "check": "TAG:quantcast|de-produkte-sage-active"},
+     {"text": "One HR form name starts with a space, so Floodlight 389 cannot fire for it.", "check": "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung"}
+    ]},
+    {"tone": "green", "title": "Working", "items": [
+     "Web-shop trials, purchases and all lead forms fire Floodlight 98.",
+     "Consent, Floodlight, Google Ads, GA4, LinkedIn, Meta, TikTok; gclid and fbclid stored."
+    ]}
+   ],
+   "findings": {
+    "TAG:microsoft_uet|de-produkte-sage-active": {"text": "After 'Accept all' bat.bing.com/bat.js loads, but window.uetq is still a plain array of 35 queued events after 25 s, so the UET library never initialises and no bat.bing.com/action hit is sent. Same since 18 Nov; no Tealium publish since 19 Nov. Worked on 16 Nov.", "owner": "MarTech"},
+    "CLID-02|de-produkte-sage-active": {"text": "Same cause as the UET finding: without a UET hit the _uetmsclkid cookie is never written, so Microsoft Ads clicks cannot be matched to conversions.", "owner": "MarTech"},
+    "TAG:microsoft_uet|de-cp-sage-intacct": {"text": "Same picture today (window.uetq stays a queue of 10 events, no hit). On 19 Nov this page sent UET via its own tag 12002546 on the second try, so UET on Intacct is at best unreliable. Together with Sage Active and payroll this points to a general UET problem in de-de, e.g. the UET consent hand-over or the bat.js initialisation.", "owner": "MarTech"},
+    "CLID-02|de-cp-sage-intacct": {"text": "Same cause as the UET finding on this page.", "owner": "MarTech"},
+    "TAG:quantcast|de-produkte-sage-active": {"text": "No request to pixel.quantserve.com within 25 s after consent on either DE page. On 19 Nov the Quantcast pixel (p-E6KY6asqFcmVm) fired about 3 s after consent, and today it fires in ES and PT. No publish in between, so this may be intermittent. Re-check on the next run before escalating.", "owner": "MarTech"},
+    "TAG:quantcast|de-cp-sage-intacct": {"text": "Same as on Sage Active.", "owner": "MarTech"},
+    "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung": {"text": "The form's lastContentName starts with a space (' CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung'). Load rule 331 checks the start of the name, so Floodlight 389 never fires for this form. Fix: remove the space in the Gated Content gate.", "owner": "Web team"}
+   }
+  },
+  "AT": {
+   "summary": "Pages, consent and page-view tags work on sagedpw.at, but form submits cannot fire the Floodlight conversion.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+     {"text": "Floodlight sage_012 waits for a click on a button with 'Submit' in its ID; the form buttons have no ID.", "action": "Fix the GTM trigger or the buttons.", "check": "GTM-07|conversion:sage_012"}
+    ]},
+    {"tone": "yellow", "title": "To review", "items": [
+     {"text": "Floodlight sage_013 waits for a click on the DPW to GO order PDF; no checked page links to it.", "check": "GTM-07|conversion:sage_013"}
+    ]},
+    {"tone": "green", "title": "Working", "items": [
+     "Usercentrics banner; nothing fires before consent.",
+     "Floodlight page views, GA4 and gclid on all 6 landing pages and both form journeys. GTM container unchanged (v13)."
+    ]}
+   ],
+   "findings": {
+    "GTM-07|conversion:sage_012": {"text": "GTM-PS6MXC v13 (unchanged): sageg0/sage_012 fires on gtm.click where Click ID contains 'Submit'. The submit inputs on /kontaktformular/ and /kostenloses-infopaket/ have no id, so the trigger never matches. Fix: trigger on the form's success event or thank-you page, or give the buttons an id containing 'Submit'.", "owner": "GTM owner"},
+    "CONV-01:gated_contact|market": {"text": "Same as GTM-07 for sage_012.", "owner": "GTM owner"},
+    "GTM-07|conversion:sage_013": {"text": "sageg0/sage_013 fires on a click on a link to uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf. None of the paid landing pages or form pages link to it. Check whether the PDF is still offered; if not, the tag is obsolete.", "owner": "GTM owner"}
+   }
+  },
+  "FR": {
+   "summary": "sage.com pages are clean; web-shop purchases are not counted as leads, and ciel.com has no cookie banner.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+     {"text": "www.ciel.com has no cookie banner; Google and LinkedIn tags fire before consent.", "action": "Raise with the privacy / web team.", "check": "CONS-01|fr-ciel-compta"},
+     {"text": "Web-shop purchases do not fire Floodlight 129.", "action": "Part of the pending EU web-shop set-up.", "check": "CONV-01:ecom_buy|market"}
+    ]},
+    {"tone": "yellow", "title": "To review", "items": [
+     {"text": "Sage Intacct page: Contentsquare (session analytics) sends data before consent.", "action": "Check with privacy.", "check": "CONS-05|fr-sbc-intacct"}
+    ]},
+    {"tone": "green", "title": "Working", "items": [
+     "Sage 50 and Sage Intacct: banner works, nothing fires before consent.",
+     "After consent: Floodlight DC-5201003, Google Ads, GA4, LinkedIn, Meta, TikTok, Reddit, Outbrain, Quantcast, Capterra; gclid and fbclid stored."
+    ]}
+   ],
+   "findings": {
+    "CONS-01|fr-ciel-compta": {"text": "www.ciel.com loads no consent tool at all; visitors are never asked.", "owner": "Privacy"},
+    "CONS-02|fr-ciel-compta": {"text": "Before any consent the LinkedIn Insight tag fires and Google Ads cookies (_gcl_au, _gcl_aw) are set. Fix: add the cookie banner and gate the tags on consent in the ciel Tealium profile.", "owner": "Privacy"},
+    "CONS-03|fr-ciel-compta": {"text": "Google tags send hits without any Consent Mode signal, so Google treats them as consented.", "owner": "Privacy"},
+    "CONS-04|fr-ciel-compta": {"text": "No 'Accept all' button because there is no banner.", "owner": "Privacy"},
+    "CONS-01|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
+    "CONS-02|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
+    "CONS-03|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
+    "CONS-04|fr-ciel-gestion-commerciale": {"text": "Same as fr-ciel-compta.", "owner": "Privacy"},
+    "CONV-01:ecom_buy|market": {"text": "Floodlight 129 needs ga4_customer_lead_type, which the Sage Active checkout (/fr-fr/cart/buy/) does not send. DE fixed the same problem on 19 Nov by letting rule 274 also accept customer_lead_type; the same change in fr-fr would fix it here.", "owner": "MarTech"},
+    "CONS-05|fr-sbc-intacct": {"text": "Before consent the page sends XHRs to c.contentsquare.net and k-aeu1.contentsquare.net (Contentsquare session analytics / recording). Not an ad tag, so yellow. Only seen on the Intacct page.", "owner": "Privacy"}
+   }
+  },
+  "ES": {
+   "summary": "Lead forms, purchases and page tags work; web-shop purchases are not counted as leads.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+     {"text": "Sage Active web-shop purchases do not fire Floodlight 36.", "action": "Part of the pending EU web-shop set-up.", "check": "CONV-01:ecom_buy|market"}
+    ]},
+    {"tone": "green", "title": "Working", "items": [
+     "Sage 50 and Sage Active: consent works; Floodlight DC-5201701, Google Ads, GA4, LinkedIn, Meta, Quantcast fire; gclid and fbclid stored."
+    ]}
+   ],
+   "findings": {
+    "CONV-01:ecom_buy|market": {"text": "Floodlight 36 needs ga4_customer_lead_type (rule 211), which the Sage Active checkout (/es-es/cart/buy/) does not send. The DE fix of 19 Nov (rule also accepts customer_lead_type) would work here too.", "owner": "MarTech"},
+    "CONS-05|es-productos-sage-active": {"text": "The Brightcove video player loads before consent (edge.api.brightcove.com, metrics.brightcove.com). Not an ad tag; review with privacy.", "owner": "Privacy"}
+   }
+  },
+  "PT": {
+   "summary": "Everything checked works; there is no web shop in PT.",
+   "brief": [
+    {"tone": "green", "title": "Working", "items": [
+     "Sage 50 and Sage HR: consent works; Floodlight DC-6144405, Google Ads, GA4, LinkedIn, Meta, Quantcast fire; gclid and fbclid stored.",
+     "Lead forms fire Floodlight 402."
+    ]}
+   ],
+   "findings": {}
+  }
+ },
+ "publish": {}
+}

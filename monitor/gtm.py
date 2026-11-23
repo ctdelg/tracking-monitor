@@ -144,6 +144,9 @@ def diff(old: dict | None, new: dict) -> dict:
         items.append({"kind": kind, "tag": tid, "before": a, "after": b,
                       "conversion_relevant": bool(fns & set(CONVERSION_FUNCTIONS))
                       or any(str(f).startswith("__paused") for f in fns if f)})
+    if not items and old.get("version") == new.get("version"):
+        # same container version, only runtime/serving bytes differ (gtm.js is not byte-stable)
+        return {"changed": False, "items": [], "conversion_relevant": False}
     return {"changed": True, "from_version": old.get("version"), "to_version": new.get("version"),
             "items": items, "conversion_relevant": any(i["conversion_relevant"] for i in items)}
 

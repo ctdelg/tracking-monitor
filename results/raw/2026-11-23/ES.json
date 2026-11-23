@@ -1,0 +1,3185 @@
+{
+ "market": "ES",
+ "day": "2026-11-23",
+ "tealium": {
+  "fetch": {
+   "url": "https://tags.tiqcdn.com/utag/sage/es-es/prod/utag.js",
+   "status": 200,
+   "last_modified": "Thu, 19 Nov 2026 09:21:09 GMT",
+   "error": null
+  },
+  "parsed": {
+   "publish_version": "202611190920",
+   "sha256": "038c6e9a9df94d88d728e253225d18d0a6d24d3dafe1e2cf23062e917b54ea52",
+   "tags": {
+    "285": {
+     "load": "4",
+     "send": "((utag.cond[196]))",
+     "v": "202403181045",
+     "tid": "7143"
+    },
+    "340": {
+     "load": "1",
+     "send": "1",
+     "v": "202507231437",
+     "tid": "20067"
+    },
+    "318": {
+     "load": "(((utag.cond[186]||utag.cond[193]||utag.cond[194]||utag.cond[187]||utag.cond[192]||utag.cond[222]||utag.cond[152]||utag.cond[201]||utag.cond[202]||utag.cond[177]||utag.cond[214]||utag.cond[220]||utag.cond[110])&&(utag.cond[20]||utag.cond[151]||utag.cond[200]||utag.cond[215])))",
+     "send": "1",
+     "v": "202604091209",
+     "tid": "12047"
+    },
+    "418": {
+     "load": "((utag.cond[20]||utag.cond[151]||utag.cond[215]))",
+     "send": "1",
+     "v": "202611051016",
+     "tid": "12047"
+    },
+    "3": {
+     "load": "utag.cond[2]",
+     "send": "1",
+     "v": "202106211036",
+     "tid": "20010"
+    },
+    "4": {
+     "load": "utag.cond[2]",
+     "send": "1",
+     "v": "202106211036",
+     "tid": "20010"
+    },
+    "8": {
+     "load": "1",
+     "send": "1",
+     "v": "202106211036",
+     "tid": "19116"
+    },
+    "31": {
+     "load": "((utag.cond[20]))",
+     "send": "1",
+     "v": "202610191456",
+     "tid": "4049"
+    },
+    "36": {
+     "load": "((((utag.cond[198]||utag.cond[227])&&(utag.cond[211]))&&!(utag.cond[165])))",
+     "send": "1",
+     "v": "202610191456",
+     "tid": "4049"
+    },
+    "75": {
+     "load": "(((utag.cond[45])&&!(utag.cond[223])))",
+     "send": "1",
+     "v": "202508060845",
+     "tid": "20010"
+    },
+    "100": {
+     "load": "utag.cond[28]",
+     "send": "1",
+     "v": "202207111524",
+     "tid": "7132"
+    },
+    "180": {
+     "load": "(((utag.cond[140]||utag.cond[81])&&!(utag.cond[146]||utag.cond[169])))",
+     "send": "1",
+     "v": "202610121250",
+     "tid": "7142"
+    },
+    "202": {
+     "load": "((utag.cond[20]))",
+     "send": "1",
+     "v": "202512101439",
+     "tid": "7132"
+    },
+    "203": {
+     "load": "(((utag.cond[151]||utag.cond[227])&&(utag.cond[43])))",
+     "send": "1",
+     "v": "202512101439",
+     "tid": "7132"
+    },
+    "273": {
+     "load": "((utag.cond[192]||utag.cond[193]||utag.cond[194]||utag.cond[110]||utag.cond[186]||utag.cond[152]))",
+     "send": "1",
+     "v": "202407300959",
+     "tid": "14037"
+    },
+    "283": {
+     "load": "((utag.cond[200]))",
+     "send": "1",
+     "v": "202611051016",
+     "tid": "4049"
+    },
+    "398": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[233])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "399": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[234])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "400": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[235]||utag.cond[236])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "293": {
+     "load": "(((utag.cond[193]||utag.cond[194]||utag.cond[186]||utag.cond[187]||utag.cond[188]||utag.cond[189]||utag.cond[152]||utag.cond[177]||utag.cond[201]||utag.cond[202]||utag.cond[110])&&(utag.cond[197])))",
+     "send": "1",
+     "v": "202601191508",
+     "tid": "20067"
+    },
+    "309": {
+     "load": "(((utag.cond[186]||utag.cond[152]||utag.cond[222])&&(utag.cond[200])))",
+     "send": "1",
+     "v": "202501201412",
+     "tid": "14037"
+    },
+    "326": {
+     "load": "((utag.cond[152]||utag.cond[222]||utag.cond[192]||utag.cond[177]||utag.cond[110]||utag.cond[187]||utag.cond[186]||utag.cond[225]))",
+     "send": "1",
+     "v": "202606091449",
+     "tid": "20119"
+    },
+    "335": {
+     "load": "(((utag.cond[20])&&(utag.cond[205])))",
+     "send": "1",
+     "v": "202603051159",
+     "tid": "4049"
+    },
+    "336": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[205])))",
+     "send": "1",
+     "v": "202601131603",
+     "tid": "4049"
+    },
+    "338": {
+     "load": "1",
+     "send": "1",
+     "v": "202409051434",
+     "tid": "20010"
+    },
+    "350": {
+     "load": "(((utag.cond[151])&&(utag.cond[214])))",
+     "send": "1",
+     "v": "202410141416",
+     "tid": "12047"
+    },
+    "352": {
+     "load": "(((utag.cond[110]||utag.cond[202]||utag.cond[201]||utag.cond[222]||utag.cond[186]||utag.cond[187]||utag.cond[193]||utag.cond[194]||utag.cond[192]||utag.cond[152]||utag.cond[177])&&(utag.cond[20]||utag.cond[216]||utag.cond[200]||utag.cond[151]||utag.cond[215])))",
+     "send": "1",
+     "v": "202606091449",
+     "tid": "6037"
+    },
+    "362": {
+     "load": "1",
+     "send": "1",
+     "v": "202503041251",
+     "tid": "3131"
+    },
+    "371": {
+     "load": "(((utag.cond[20])&&(utag.cond[152]||utag.cond[222]||utag.cond[192]||utag.cond[225]||utag.cond[193]||utag.cond[194]||utag.cond[220]||utag.cond[186]||utag.cond[187]||utag.cond[226])))",
+     "send": "1",
+     "v": "202503061722",
+     "tid": "17001"
+    },
+    "372": {
+     "load": "(((utag.cond[151]||utag.cond[215])&&(utag.cond[212])&&(utag.cond[152]||utag.cond[222]||utag.cond[192]||utag.cond[225]||utag.cond[193]||utag.cond[194]||utag.cond[220]||utag.cond[186]||utag.cond[187]||utag.cond[226])))",
+     "send": "1",
+     "v": "202503061722",
+     "tid": "17001"
+    },
+    "373": {
+     "load": "(((utag.cond[200])&&(utag.cond[152]||utag.cond[222]||utag.cond[224]||utag.cond[192]||utag.cond[225]||utag.cond[193]||utag.cond[194]||utag.cond[220]||utag.cond[186]||utag.cond[187]||utag.cond[226])))",
+     "send": "1",
+     "v": "202503061722",
+     "tid": "17001"
+    },
+    "397": {
+     "load": "1",
+     "send": "1",
+     "v": "202508270938",
+     "tid": "20067"
+    },
+    "411": {
+     "load": "((utag.cond[152]||utag.cond[202]||utag.cond[201]||utag.cond[187]||utag.cond[110]))",
+     "send": "1",
+     "v": "202610211127",
+     "tid": "18048"
+    },
+    "412": {
+     "load": "1",
+     "send": "1",
+     "v": "202607230936",
+     "tid": "9043"
+    },
+    "413": {
+     "load": "(((utag.cond[198]||utag.cond[227])&&(utag.cond[199])))",
+     "send": "1",
+     "v": "202607230936",
+     "tid": "9043"
+    },
+    "414": {
+     "load": "((utag.cond[195]))",
+     "send": "1",
+     "v": "202607230936",
+     "tid": "9043"
+    },
+    "415": {
+     "load": "(((utag.cond[151]||utag.cond[227])&&(utag.cond[237])))",
+     "send": "1",
+     "v": "202611051016",
+     "tid": "7132"
+    },
+    "417": {
+     "load": "((utag.cond[238]))",
+     "send": "1",
+     "v": "202608260913",
+     "tid": "7132"
+    },
+    "420": {
+     "load": "(((utag.cond[119]||utag.cond[20]||utag.cond[151]||utag.cond[200]||utag.cond[240])&&!(utag.cond[204])))",
+     "send": "1",
+     "v": "202610121250",
+     "tid": "20064"
+    },
+    "426": {
+     "load": "(((utag.cond[20]||utag.cond[151]||utag.cond[200])&&(utag.cond[202]||utag.cond[152]||utag.cond[110]||utag.cond[187]||utag.cond[194]||utag.cond[186])))",
+     "send": "1",
+     "v": "202611190920",
+     "tid": "15038"
+    },
+    "427": {
+     "load": "(!(utag.cond[242]))",
+     "send": "1",
+     "v": "202611190920",
+     "tid": "20067"
+    },
+    "430": {
+     "load": "((utag.cond[20]||utag.cond[151]||utag.cond[200]))",
+     "send": "1",
+     "v": "202611190920",
+     "tid": "15038"
+    },
+    "437": {
+     "load": "((utag.cond[202]||utag.cond[110]||utag.cond[187]||utag.cond[252]||utag.cond[220]||utag.cond[253]))",
+     "send": "1",
+     "v": "202611190920",
+     "tid": "3095"
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion": {
+   "ok": true,
+   "results": [
+    {
+     "name": "ecom_try",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "397",
+      "412",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "not_offered": true,
+     "conversion_tags_fired": [
+      "203"
+     ]
+    },
+    {
+     "name": "ecom_buy",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "397",
+      "412",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "36"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "203"
+     ]
+    },
+    {
+     "name": "gated_trial",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198",
+      "199",
+      "211",
+      "212",
+      "215",
+      "227",
+      "233"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "trial_demo",
+      "facebook_form_submission_type": "StartTrial",
+      "chatgpt_form_submission_type_local": ""
+     },
+     "errors": [],
+     "expected_tags": [
+      "36"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ]
+    },
+    {
+     "name": "gated_contact",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "140",
+      "151",
+      "194",
+      "196",
+      "197",
+      "198",
+      "199",
+      "211",
+      "212",
+      "215",
+      "227",
+      "234"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "contact",
+      "facebook_form_submission_type": "Contact",
+      "chatgpt_form_submission_type_local": ""
+     },
+     "errors": [],
+     "expected_tags": [
+      "36"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ]
+    },
+    {
+     "name": "purchase",
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "75",
+      "180",
+      "273",
+      "283",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "373",
+      "397",
+      "412",
+      "414",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "true_rules": [
+      "2",
+      "43",
+      "45",
+      "81",
+      "194",
+      "195",
+      "196",
+      "197",
+      "200"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "283"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "283"
+     ]
+    }
+   ]
+  }
+ },
+ "forms": {
+  "event_script": {
+   "ok": true,
+   "missing": [],
+   "script_len": 2168
+  },
+  "gates": {
+   "790d61f9-cbc3-413c-a5d2-67d1d02ef816": {
+    "ok": true,
+    "gate_id": "790d61f9-cbc3-413c-a5d2-67d1d02ef816",
+    "gate_name": "S50_23Q2_NCA_ES_FormularioCallMe",
+    "gate_type": "general",
+    "form_type": "OptimizedTwoStepSimpleGate",
+    "last_content_name": "CL_S50_ES_SMA_CON_BOFU_CallMeS50",
+    "campaign_id": "70106000001dOknAAE",
+    "score": "High Score",
+    "product": "Sage 50cloud - ES",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:56.000Z",
+    "pages": [
+     "es-productos-sage-50cloud"
+    ],
+    "ctas": [
+     "Contáctanos para comprar",
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "50e8c733-4279-4764-851b-94c7445a87a6": {
+    "ok": true,
+    "gate_id": "50e8c733-4279-4764-851b-94c7445a87a6",
+    "gate_name": "ACG_20Q1_NCM_ES_DGCS_AC3010_S50cloud_ProductTour_Form1",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_ES_TOO_Sage50cProductTour_COM|MID|GNRC",
+    "campaign_id": "7011o000000yNNKAA2",
+    "score": "Low Score",
+    "product": "Sage 50cloud - ES",
+    "redirect_url": "https://www.sage.com/es-es/productos/sage-50cloud/sage-50cloud-product-tour",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-06T13:38:46.000Z",
+    "pages": [
+     "es-productos-sage-50cloud"
+    ],
+    "ctas": [
+     "Inicia el tour de producto"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "4058db34-5547-4fc4-be02-f9174ae4da8d": {
+    "ok": true,
+    "gate_id": "4058db34-5547-4fc4-be02-f9174ae4da8d",
+    "gate_name": "S50_2609_NCA_ES_FormCompraCallRequest",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_S50_ES_SMA_CON_BOFU_FormCompraCallRequest",
+    "campaign_id": "701W700000hHGquIAG",
+    "score": "High Score",
+    "product": "Sage 50cloud - ES",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-06-30T12:43:03.000Z",
+    "pages": [
+     "es-productos-sage-50cloud"
+    ],
+    "ctas": [
+     "Contáctanos para comprar",
+     "Inicia el tour de producto"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "4b4a6275-5337-4595-974a-5007c229b1dc": {
+    "ok": true,
+    "gate_id": "4b4a6275-5337-4595-974a-5007c229b1dc",
+    "gate_name": "BMS_23Q4_NCA_ES_SageActiveProductTour",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_SMA_CON_BOFU_ProductTourSageActiv",
+    "campaign_id": "70106000001ZlwfAAC",
+    "score": "High Score",
+    "product": "Sage Active",
+    "redirect_url": "https://sage.com/es-es/productos/sage-active/sage-active-tour-interactivo/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:39.000Z",
+    "pages": [
+     "es-productos-sage-active"
+    ],
+    "ctas": [
+     "Visita guiada a Sage Active"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "d85c3254-04a6-4896-b226-5b1d3ca026c3": {
+    "ok": true,
+    "gate_id": "d85c3254-04a6-4896-b226-5b1d3ca026c3",
+    "gate_name": "BMS_23Q4_NCA_ES_SageActiveMasInfo",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_MED_CON_MOFU_FormMasinfo",
+    "campaign_id": "70106000000f1SYAAY",
+    "score": "High Score",
+    "product": "Sage Active",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:39.000Z",
+    "pages": [
+     "es-productos-sage-active",
+     "es-cp-contabilidad"
+    ],
+    "ctas": [
+     "Más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "7c4705c9-46e1-436e-8d23-847f8c67c0f1": {
+    "ok": true,
+    "gate_id": "7c4705c9-46e1-436e-8d23-847f8c67c0f1",
+    "gate_name": "ACS_2502_NCA_ES_FormularioInformacionSFA",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_ES_SMA_CON_MOFU_FormularioCallme",
+    "campaign_id": "701Of00000H3bdzIAB",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:35.000Z",
+    "pages": [
+     "es-productos-sage-for-accountants"
+    ],
+    "ctas": [
+     "Más informacion",
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "f7b1edf3-ef97-439e-816e-62816ae1afcb": {
+    "ok": true,
+    "gate_id": "f7b1edf3-ef97-439e-816e-62816ae1afcb",
+    "gate_name": "ACS_2502_NCA_ES_SolictudDemoSFA",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_ES_SMA_DEM_MOFU_SolictudDemoSFA",
+    "campaign_id": "701Of00000H3IxyIAF",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:35.000Z",
+    "pages": [
+     "es-productos-sage-for-accountants"
+    ],
+    "ctas": [
+     "Solicita una demo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "f24c85a7-9f86-4b61-912a-0736d6440588": {
+    "ok": true,
+    "gate_id": "f24c85a7-9f86-4b61-912a-0736d6440588",
+    "gate_name": "ACS_2509_NCA_ES_ProducttourContableSFA_Form01",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_ES_SMA_TOO_MOFU_0000ProductTourContabilidadSFA",
+    "campaign_id": "701Of00000TrFJcIAN",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "https://www.sage.com/es-es/productos/sage-for-accountants/sfa-product-tour-contabilidad/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:36.000Z",
+    "pages": [
+     "es-productos-sage-for-accountants"
+    ],
+    "ctas": [
+     "Ir al Product tour"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "74ea509b-94b0-48ba-8715-13ff47c0e22e": {
+    "ok": true,
+    "gate_id": "74ea509b-94b0-48ba-8715-13ff47c0e22e",
+    "gate_name": "ACS_2509_NCA_ES_ProducttourContableSFA_Form02",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_ES_SMA_TOO_MOFU_0000ProductTourFacturacionSFA",
+    "campaign_id": "701Of00000TrPxJIAV",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "https://www.sage.com/es-es/productos/sage-for-accountants/sfa-product-tour-facturacion/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:36.000Z",
+    "pages": [
+     "es-productos-sage-for-accountants"
+    ],
+    "ctas": [
+     "Ir al Product tour"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "3b1185d1-2fdb-4fa7-a8b5-97db861cfb69": {
+    "ok": true,
+    "gate_id": "3b1185d1-2fdb-4fa7-a8b5-97db861cfb69",
+    "gate_name": "ACS_2509_NCA_ES_ProducttourContableSFA_Form03",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_ES_SMA_TOO_MOFU_0000ProductTourLaboralSFA",
+    "campaign_id": "701Of00000Tra4iIAB",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "https://www.sage.com/es-es/productos/sage-for-accountants/sfa-product-tour-laboral/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:36.000Z",
+    "pages": [
+     "es-productos-sage-for-accountants"
+    ],
+    "ctas": [
+     "Ir al Product tour"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "51d83bf2-5632-4f79-9d5c-07d6aaf13ee2": {
+    "ok": true,
+    "gate_id": "51d83bf2-5632-4f79-9d5c-07d6aaf13ee2",
+    "gate_name": "HCM_21Q4_NCA_ES_DemoOnlineSageHRForm1",
+    "gate_type": "general",
+    "form_type": "SimpleGate",
+    "last_content_name": "CL_HCM_ES_SMA_DEM_MOFU_DemoSageHR",
+    "campaign_id": "70106000001EW3yAAG",
+    "score": "High Score",
+    "product": "Sage HR Suite",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-04-15T09:16:43.000Z",
+    "pages": [
+     "es-sbc-hr"
+    ],
+    "ctas": [
+     "Solicita una demostración"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "1f9a6586-16d9-4def-9a48-9bff3d4a37a4": {
+    "ok": true,
+    "gate_id": "1f9a6586-16d9-4def-9a48-9bff3d4a37a4",
+    "gate_name": "HCM_2509_NCA_ES_SHRProductTour",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_HCM_ES_MED_TOO_BOFU_SHR",
+    "campaign_id": "701Of00000DRgDQIA1",
+    "score": "High Score",
+    "product": "Sage HR Suite",
+    "redirect_url": "https://www.sage.com/es-es/sage-business-cloud/hr/hr-tour-interactivo/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-05-19T14:02:52.000Z",
+    "pages": [
+     "es-sbc-hr"
+    ],
+    "ctas": [
+     "Inicia el tour de producto"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "2bc36689-2d99-48c7-af73-de0c56702ef1": {
+    "ok": true,
+    "gate_id": "2bc36689-2d99-48c7-af73-de0c56702ef1",
+    "gate_name": "PRL_2608_NCA_ES_S200LProductTourAndDemoCall",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_PRL_ES_MED_TOO_MOFU_S200LaboralProductTourHeader",
+    "campaign_id": "701W700000eVp8zIAC",
+    "score": "High Score",
+    "product": "Sage Payroll",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-05-25T17:28:48.000Z",
+    "pages": [
+     "es-productos-sage-200-cloud-laboral"
+    ],
+    "ctas": [
+     "Solicita más información",
+     "Solicita una demostración"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "fd40aa0a-9905-47f9-af6f-0ad9f72d3fd2": {
+    "ok": true,
+    "gate_id": "fd40aa0a-9905-47f9-af6f-0ad9f72d3fd2",
+    "gate_name": "PRL_20Q1_NCM_ES_CNVI_HR0180_S200_Payroll_SolicitudDemo",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_HRP_ES_DEM_200Laboral_COM|BOT|GNRC",
+    "campaign_id": "7011o000000ySSpAAM",
+    "score": "High Score",
+    "product": "Sage Laboral Murano",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:54.000Z",
+    "pages": [
+     "es-productos-sage-200-cloud-laboral"
+    ],
+    "ctas": [
+     "Solicita más información",
+     "Solicita una demostración"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "6b7adc0f-eb9a-4b82-a20e-3660ece36bd3": {
+    "ok": true,
+    "gate_id": "6b7adc0f-eb9a-4b82-a20e-3660ece36bd3",
+    "gate_name": "PRL_2502_NCA_ES_S200LaboralProductTour",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_PRL_ES_MED_VID_MOFU_ProductTourS200Labor",
+    "campaign_id": "701Of00000HPJtiIAH",
+    "score": "High Score",
+    "product": "Sage Payroll",
+    "redirect_url": "https://www.sage.com/es-es/productos/sage-200-cloud-laboral/sage-200cloud-laboral-product-tour",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-05-19T14:02:33.000Z",
+    "pages": [
+     "es-productos-sage-200-cloud-laboral"
+    ],
+    "ctas": [
+     "Inicia el tour de producto",
+     "Inicia el tour interactivo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "400",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "400"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "2ab66739-d1a6-47d0-9f79-7379af916238": {
+    "ok": true,
+    "gate_id": "2ab66739-d1a6-47d0-9f79-7379af916238",
+    "gate_name": "BMS_2408_NCA_ES_MOREINFOSage200LaboralPayrollPRO",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_PRL_ES_MED_CON_BOFU_S200LPayrollPRO",
+    "campaign_id": "701Of000008Xe8ZIAS",
+    "score": "High Score",
+    "product": "Sage 200cloud",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:40.000Z",
+    "pages": [
+     "es-productos-sage-200-cloud-laboral"
+    ],
+    "ctas": [
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "90d4f36e-fb49-467e-b32b-93f725b9d069": {
+    "ok": true,
+    "gate_id": "90d4f36e-fb49-467e-b32b-93f725b9d069",
+    "gate_name": "BMS_2408_NCA_ES_MOREINFOSage200LaboralNominaLITEOnline",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_PRL_ES_MED_CON_BOFU_S200LNominaLITEOnline",
+    "campaign_id": "701Of000008XnNAIA0",
+    "score": "High Score",
+    "product": "Sage 200cloud",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:39.000Z",
+    "pages": [
+     "es-productos-sage-200-cloud-laboral"
+    ],
+    "ctas": [
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "b96197f9-5419-49db-a619-da59c0980f24": {
+    "ok": true,
+    "gate_id": "b96197f9-5419-49db-a619-da59c0980f24",
+    "gate_name": "CL_BMS_ES_MED_DEM_BOFU_S200General",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_MED_DEM_BOFU_S200General",
+    "campaign_id": "701Of000009RVoxIAG",
+    "score": "High Score",
+    "product": "Sage 200cloud",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-02T11:01:58.000Z",
+    "pages": [
+     "es-productos-sage-200"
+    ],
+    "ctas": [
+     "Solicita una demostración"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "2e8c4972-8c7e-4299-8825-ff08a8d21fc8": {
+    "ok": true,
+    "gate_id": "2e8c4972-8c7e-4299-8825-ff08a8d21fc8",
+    "gate_name": "CL_BMS_ES_MED_TOO_BOFU_S200SoftwareERP",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_MED_TOO_BOFU_S200SoftwareERP",
+    "campaign_id": "701Of000009REctIAG",
+    "score": "High Score",
+    "product": "Sage 200cloud",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-02T11:02:38.000Z",
+    "pages": [
+     "es-productos-sage-200"
+    ],
+    "ctas": [
+     "Inicia el tour interactivo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "fea9f669-36f5-4e33-b320-7e55cfda1214": {
+    "ok": true,
+    "gate_id": "fea9f669-36f5-4e33-b320-7e55cfda1214",
+    "gate_name": "BMS_CON_NCA_ES_S200MasInfoSolicitudWeb",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_MED_CON_BOFU_S200ProductCard",
+    "campaign_id": "701Of000009RVgrIAG",
+    "score": "High Score",
+    "product": "Sage 200cloud",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-04-21T10:51:48.000Z",
+    "pages": [
+     "es-productos-sage-200"
+    ],
+    "ctas": [
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "a0b0f52e-4525-4047-a8af-8a558d2aa0b4": {
+    "ok": true,
+    "gate_id": "a0b0f52e-4525-4047-a8af-8a558d2aa0b4",
+    "gate_name": "BMS_2601_NCA_ES_S200SmartBusinessMasInfoSolicitudWeb_Form01",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_MED_CON_BOFU_S200SmartBusinessProductCard",
+    "campaign_id": "701W700000TiSRLIA3",
+    "score": "High Score",
+    "product": "Sage 200",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:43.000Z",
+    "pages": [
+     "es-productos-sage-200"
+    ],
+    "ctas": [
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "5d0bcdd2-7bf1-464c-b9fd-56d6a052ba5b": {
+    "ok": true,
+    "gate_id": "5d0bcdd2-7bf1-464c-b9fd-56d6a052ba5b",
+    "gate_name": "BMS_2601_NCA_ES_S200SmartBusinessMasInfoSolicitudWeb_Form02",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_MED_CON_BOFU_S200SmartBusinessCompletePCard",
+    "campaign_id": "701W700000TiOKWIA3",
+    "score": "High Score",
+    "product": "Sage 200",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:13:43.000Z",
+    "pages": [
+     "es-productos-sage-200"
+    ],
+    "ctas": [
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "5c5193d4-d26a-452a-8477-0eeab2da50ce": {
+    "ok": true,
+    "gate_id": "5c5193d4-d26a-452a-8477-0eeab2da50ce",
+    "gate_name": "SX3_2411_NCA_ES_DemoRequest",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_ES_MED_DEM_BOFU_DemoRequest",
+    "campaign_id": "701Of000009RN56IAG",
+    "score": "High Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-02T08:46:54.000Z",
+    "pages": [
+     "es-sbc-sage-x3"
+    ],
+    "ctas": [
+     "Solicita una demostración"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "95f21282-dac7-46aa-b02a-fbc6558e51b5": {
+    "ok": true,
+    "gate_id": "95f21282-dac7-46aa-b02a-fbc6558e51b5",
+    "gate_name": "CL_SX3_ES_MED_TOO_BOFU_ProductTour",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_ES_MED_TOO_BOFU_ProductTour",
+    "campaign_id": "701Of000009RXynIAG",
+    "score": "High Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-02T08:46:22.000Z",
+    "pages": [
+     "es-sbc-sage-x3"
+    ],
+    "ctas": [
+     "Echa un vistazo al producto",
+     "Inicia el tour interactivo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "de9e0092-0814-4451-86e1-6665a84be908": {
+    "ok": true,
+    "gate_id": "de9e0092-0814-4451-86e1-6665a84be908",
+    "gate_name": "BMS_2611_NCA_ES_ERPFirstGenericFY27RequestCall",
+    "gate_type": "chilipiper",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_ES_MED_CON_BOFU_ERPFirstGenericFY27RequestCall",
+    "campaign_id": "701W700000jEwYXIA0",
+    "score": "High Score",
+    "product": "Sage 200cloud",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-11T11:11:15.000Z",
+    "pages": [
+     "es-cp-software-erp"
+    ],
+    "ctas": [
+     "Conoce Sage Copilot",
+     "Habla con un experto"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "d1b4920b-4147-4f62-b813-d01c44a41bc4": {
+    "ok": true,
+    "gate_id": "d1b4920b-4147-4f62-b813-d01c44a41bc4",
+    "gate_name": "XRT_20Q3_NCA_ES_DGWW_XRT_ProductTour_formPre",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_ES_VID_XRTProdTour_COM|BOT|GNRC|BOT|GNRC",
+    "campaign_id": "7011o000000qc5BAAQ",
+    "score": "High Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-10-30T18:14:30.000Z",
+    "pages": [
+     "es-productos-sage-xrt-treasury"
+    ],
+    "ctas": [
+     "Inicia el tour interactivo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "400",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "400"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "a64021be-e666-4933-8511-2e65ef6e1516": {
+    "ok": true,
+    "gate_id": "a64021be-e666-4933-8511-2e65ef6e1516",
+    "gate_name": "XRT_21Q2_NCM_ES_DGWW_X3_WebsiteSageCallMe",
+    "gate_type": "chilipiper",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_NPS_ES_CON_MásInformación58_COM|MID|GNRC",
+    "campaign_id": "7011o000000v6DLAAY",
+    "score": "High Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-02T13:17:35.000Z",
+    "pages": [
+     "es-productos-sage-xrt-treasury"
+    ],
+    "ctas": [
+     "Solicita más información"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "399",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "399"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "d93967c7-b2f6-48dd-8c77-cffdb756acf7": {
+    "ok": true,
+    "gate_id": "d93967c7-b2f6-48dd-8c77-cffdb756acf7",
+    "gate_name": "XRT_2508_NCA_ES_Controldepagos",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_ES_MED_GDE_TOFU_Controldepagos",
+    "campaign_id": "701Of00000Ts2x1IAB",
+    "score": "Low Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/es-es/-/media/Files/SageDotCom/Master/gated-assets/marketing-automation/FY25/es/SAGE_Guia_El_control_de_pagos_Sage_XRT.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-05-19T12:43:43.000Z",
+    "pages": [
+     "es-productos-sage-xrt-treasury"
+    ],
+    "ctas": [
+     "Descarga la guía"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "62b423cb-14c5-419f-9298-9f07bc137e51": {
+    "ok": true,
+    "gate_id": "62b423cb-14c5-419f-9298-9f07bc137e51",
+    "gate_name": "XRT_2508_NCA_ES_8ideasfuncionfinanciera",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_ES_MED_GDE_TOFU_8ideasfuncionfinanciera",
+    "campaign_id": "701Of00000TrymwIAB",
+    "score": "Low Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/es-es/-/media/Files/SageDotCom/Master/gated-assets/marketing-automation/FY25/es/GUIA_Sage_8_ideas_funcion_financiera_Sage_XRT.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-05-19T12:44:40.000Z",
+    "pages": [
+     "es-productos-sage-xrt-treasury"
+    ],
+    "ctas": [
+     "Descarga la guía"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "24960e0c-c7fa-405b-9c09-10b90ab00e2f": {
+    "ok": true,
+    "gate_id": "24960e0c-c7fa-405b-9c09-10b90ab00e2f",
+    "gate_name": "XRT_2508_NCA_ES_FirmaElectronica",
+    "gate_type": "youtube",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_ES_MED_VID_BOFU_FirmaElectronica",
+    "campaign_id": "701Of00000SJ2VpIAL",
+    "score": "Low Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-05-19T13:21:27.000Z",
+    "pages": [
+     "es-productos-sage-xrt-treasury"
+    ],
+    "ctas": [
+     "Acceder a la demo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "400",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "400"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "7b4fdbe4-44ef-42c7-9da2-c56698c1a2e6": {
+    "ok": true,
+    "gate_id": "7b4fdbe4-44ef-42c7-9da2-c56698c1a2e6",
+    "gate_name": "CRM_2610_NCA_ES_SolicitarDemo",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_CRM_ES_MED_DEM_BOFU_SSMSolicitarDemo",
+    "campaign_id": "701W700000ZVtybIAD",
+    "score": "High Score",
+    "product": "Sage Sales Management (SSM)",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-10-02T15:31:13.000Z",
+    "pages": [
+     "es-productos-sage-sales-management"
+    ],
+    "ctas": [
+     "Solicita una demo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "3",
+      "4",
+      "8",
+      "36",
+      "75",
+      "180",
+      "203",
+      "273",
+      "285",
+      "293",
+      "318",
+      "338",
+      "340",
+      "352",
+      "362",
+      "372",
+      "397",
+      "398",
+      "412",
+      "413",
+      "418",
+      "420",
+      "426",
+      "427",
+      "430"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "36",
+      "203",
+      "398"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   }
+  },
+  "inventory_pages": [
+   "es-cp-contabilidad",
+   "es-cp-software-erp",
+   "es-productos-sage-200",
+   "es-productos-sage-200-cloud-laboral",
+   "es-productos-sage-50cloud",
+   "es-productos-sage-active",
+   "es-productos-sage-for-accountants",
+   "es-productos-sage-sales-management",
+   "es-productos-sage-xrt-treasury",
+   "es-sbc-hr",
+   "es-sbc-sage-x3"
+  ]
+ },
+ "browser": {
+  "source": "claude-browser",
+  "collected_at": "2026-11-23T10:21:13Z",
+  "visits": [
+   {
+    "id": "es-productos-sage-50cloud",
+    "url": "https://www.sage.com/es-es/productos/sage-50cloud/",
+    "status": 200,
+    "final_url": "https://www.sage.com/es-es/productos/sage-50cloud/",
+    "live_sample": true,
+    "click_ids": {
+     "gclid": "TEST_MON_20261123",
+     "msclkid": "TEST_MON_20261123",
+     "fbclid": "TEST_MON_20261123"
+    },
+    "pre": {
+     "title": "Sage 50 - Contabilidad y gestión para negocios | Sage España",
+     "requests": [],
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "banner": true,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "utag": {
+      "present": true,
+      "utid": "sage/es-es/202611190920",
+      "version": "ut4.53.202611190920",
+      "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+      "page_type": "article",
+      "language": "es-es",
+      "country": "es"
+     }
+    },
+    "post": {
+     "title": "Sage 50 - Contabilidad y gestión para negocios | Sage España",
+     "requests": [
+      {
+       "url": "https://lux.speedcurve.com/",
+       "type": "img"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://secure.adnxs.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://c.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ipv6.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://js.zi-scripts.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "fetch"
+      },
+      {
+       "url": "https://epsilon.6sense.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif",
+       "type": "fetch"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "fetch"
+      },
+      {
+       "url": "https://pixel.quantserve.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/",
+       "type": "img"
+      },
+      {
+       "url": "https://sagespain.pxf.io/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://logx.optimizely.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://5201701.fls.doubleclick.net/activityi;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5201701&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.googleadservices.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956094480/?en=gtag.config",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261123",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://pixel.quantserve.com/pixel;a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://c.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://bzr.openai.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://k-aeu1.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://resources.digital-cloud.medallia.eu/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
+       "type": "fetch"
+      },
+      {
+       "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+       "type": "xmlhttprequest"
+      }
+     ],
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "_fbc": "fb.2.1795429027829.TEST_MON_20261123",
+      "_fbp": "",
+      "_gcl_au": "",
+      "_gcl_aw": "GCL.1795429029.TEST_MON_20261123",
+      "__qca": ""
+     },
+     "banner": false,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "utag": {
+      "present": true,
+      "utid": "sage/es-es/202611190920",
+      "version": "ut4.53.202611190920",
+      "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+      "page_type": "article",
+      "language": "es-es",
+      "country": "es"
+     },
+     "accepted": true,
+     "uetq_queued": null
+    },
+    "blocked": false
+   },
+   {
+    "id": "es-productos-sage-active",
+    "url": "https://www.sage.com/es-es/productos/sage-active/",
+    "status": 200,
+    "final_url": "https://www.sage.com/es-es/productos/sage-active/",
+    "live_sample": false,
+    "click_ids": {
+     "gclid": "TEST_MON_20261123",
+     "msclkid": "TEST_MON_20261123",
+     "fbclid": "TEST_MON_20261123"
+    },
+    "pre": {
+     "title": "Toma el control de tu facturación y ventas con Sage Active | Sage España",
+     "requests": [
+      {
+       "url": "https://edge.api.brightcove.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://metrics.brightcove.com/",
+       "type": "img"
+      }
+     ],
+     "cookies": {
+      "OptanonConsent": ""
+     },
+     "banner": true,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "utag": {
+      "present": true,
+      "utid": "sage/es-es/202611190920",
+      "version": "ut4.53.202611190920",
+      "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+      "page_type": "article",
+      "language": "es-es",
+      "country": "es"
+     }
+    },
+    "post": {
+     "title": "Toma el control de tu facturación y ventas con Sage Active | Sage España",
+     "requests": [
+      {
+       "url": "https://mcm.entfabric-sage.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://sagespain.pxf.io/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://js.zi-scripts.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "fetch"
+      },
+      {
+       "url": "https://lux.speedcurve.com/",
+       "type": "img"
+      },
+      {
+       "url": "https://secure.adnxs.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://c.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ipv6.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "fetch"
+      },
+      {
+       "url": "https://c.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://5201701.fls.doubleclick.net/activityi;src=5201701;type=lobu30;cat=sagec0;gclaw=TEST_MON_20261123;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.googletagmanager.com/",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5201701&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.googleadservices.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956094480/?en=gtag.config",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261123",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261123&gclaw=TEST_MON_20261123&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "fetch"
+      },
+      {
+       "url": "https://pixel.quantserve.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/",
+       "type": "img"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif",
+       "type": "fetch"
+      },
+      {
+       "url": "https://epsilon.6sense.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://k-aeu1.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://resources.digital-cloud.medallia.eu/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://logx.optimizely.com/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://pixel.quantserve.com/pixel;a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
+       "type": "fetch"
+      },
+      {
+       "url": "https://analytics-fe.digital-cloud.medallia.eu/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://srm.ba.contentsquare.net/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://bzr.openai.com/",
+       "type": "fetch"
+      }
+     ],
+     "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "_gcl_aw": "GCL.1795429061.TEST_MON_20261123",
+      "_fbc": "fb.2.1795429060884.TEST_MON_20261123",
+      "_gcl_au": "",
+      "_fbp": "",
+      "__qca": ""
+     },
+     "banner": false,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "utag": {
+      "present": true,
+      "utid": "sage/es-es/202611190920",
+      "version": "ut4.53.202611190920",
+      "path": "//tags.tiqcdn.com/utag/sage/es-es/prod/",
+      "page_type": "article",
+      "language": "es-es",
+      "country": "es"
+     },
+     "accepted": true,
+     "uetq_queued": null
+    },
+    "blocked": false
+   }
+  ],
+  "journeys": []
+ }
+}

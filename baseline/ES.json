@@ -75,15 +75,31 @@
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
     ],
-    "quantcast": [],
-    "sixsense": []
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
+    ],
+    "sixsense": [],
+    "other:6sc.co": [],
+    "other:6sense.com": [],
+    "other:contentsquare.net": [],
+    "other:entfabric-sage.com": [],
+    "other:googleadservices.com": [],
+    "other:medallia.eu": [],
+    "other:on.aws": [],
+    "other:optimizely.com": [],
+    "other:quantserve.com": [],
+    "other:siteimproveanalytics.io": [],
+    "other:speedcurve.com": [],
+    "other:zi-scripts.com": []
    },
    "days": [
     "2026-11-18",
-    "2026-11-19"
+    "2026-11-19",
+    "2026-11-23"
    ],
-   "status": "learning",
-   "since": "2026-11-18"
+   "status": "confirmed",
+   "since": "2026-11-18",
+   "confirmed_at": "2026-11-23"
   },
   "es-productos-sage-active": {
    "post": {
@@ -102,15 +118,35 @@
     "meta": [
      "499565794547363"
     ],
-    "quantcast": [],
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
+    ],
     "sixsense": [],
     "tealium_collect": [],
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
-    ]
+    ],
+    "other:6sc.co": [],
+    "other:6sense.com": [],
+    "other:adnxs.com": [],
+    "other:contentsquare.net": [],
+    "other:doubleclick.net": [],
+    "other:entfabric-sage.com": [],
+    "other:googleadservices.com": [],
+    "other:googletagmanager.com": [],
+    "other:medallia.eu": [],
+    "other:on.aws": [],
+    "other:openai.com": [],
+    "other:optimizely.com": [],
+    "other:pxf.io": [],
+    "other:quantserve.com": [],
+    "other:siteimproveanalytics.io": [],
+    "other:speedcurve.com": [],
+    "other:zi-scripts.com": []
    },
    "days": [
-    "2026-11-19"
+    "2026-11-19",
+    "2026-11-23"
    ],
    "status": "learning",
    "since": "2026-11-19"
@@ -764,7 +800,7 @@
    "of": 4
   }
  },
- "updated_at": "2026-11-19T11:00:30Z",
+ "updated_at": "2026-11-23T10:21:49Z",
  "confirmed_at": "2026-11-17T13:28:20Z",
  "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

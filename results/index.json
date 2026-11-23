@@ -229,6 +229,52 @@
     "coverage": "partial",
     "publish": true
    }
+  },
+  "2026-11-23": {
+   "_global": {
+    "status": "red",
+    "incidents": 0
+   },
+   "DE": {
+    "status": "red",
+    "red": 4,
+    "yellow": 3,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "AT": {
+    "status": "red",
+    "red": 2,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "full",
+    "publish": false
+   },
+   "FR": {
+    "status": "red",
+    "red": 9,
+    "yellow": 5,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "ES": {
+    "status": "red",
+    "red": 1,
+    "yellow": 1,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   },
+   "PT": {
+    "status": "green",
+    "red": 0,
+    "yellow": 0,
+    "site_down": 0,
+    "coverage": "partial",
+    "publish": false
+   }
   }
  }
 }

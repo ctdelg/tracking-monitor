@@ -1936,499 +1936,90 @@
   ]
  },
  "browser": {
-  "source": "claude-browser",
-  "collected_at": "2026-11-26T14:25:03Z",
+  "source": "playwright",
+  "collected_at": "2026-11-26T15:33:20Z",
   "visits": [
    {
     "id": "pt-produtos-sage-50cloud",
     "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/",
-    "status": 200,
-    "final_url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
-    "live_sample": true,
+    "type": "product",
     "click_ids": {
      "gclid": "TEST_MON_20261126",
      "msclkid": "TEST_MON_20261126",
      "fbclid": "TEST_MON_20261126"
     },
-    "pre": {
-     "title": "Sage 50 | Sage PT",
-     "requests": [],
-     "cookies": {
-      "AWSALBTG": "",
-      "AWSALBTGCORS": "",
-      "AWSALB": "",
-      "AWSALBCORS": "",
-      "sage_utm_preservation": "",
-      "shell#lang": "",
-      "utag_main_v_id": "",
-      "utag_main__sn": "",
-      "utag_main__se": "",
-      "utag_main__ss": "",
-      "utag_main__st": "",
-      "utag_main_ses_id": "",
-      "utag_main__pn": "",
-      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
-     },
-     "banner": true,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
-     "utag": {
-      "present": true,
-      "utid": "sage/pt-pt/202611190938",
-      "version": "ut4.53.202611190938",
-      "page_type": "artigo",
-      "language": "pt-pt",
-      "country": "pt",
-      "data_keys": 141
-     }
-    },
-    "post": {
-     "title": "Sage 50 | Sage PT",
-     "requests": [
-      {
-       "url": "https://collect-eu-west-1.tealiumiq.com/sage/en-gb/2/i.gif",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://c.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ipv6.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://js.zi-scripts.com/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "beacon"
-      },
-      {
-       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "img"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/",
-       "type": "img"
-      },
-      {
-       "url": "https://lux.speedcurve.com/",
-       "type": "img"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/collect?pid=58294",
-       "type": "img"
-      },
-      {
-       "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://connect.facebook.net/signals/config/499565794547363",
-       "type": "script"
-      },
-      {
-       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
-       "type": "fetch"
-      },
-      {
-       "url": "https://csxd.contentsquare.net/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/activity;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://6144405.fls.doubleclick.net/activityi;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "iframe"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=DC-6144405&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
-       "type": "img"
-      },
-      {
-       "url": "https://api-cdn.mypurecloud.ie/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://c.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://k-aeu1.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
-       "type": "iframe"
-      },
-      {
-       "url": "https://secure.adnxs.com/getuidj",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
-       "type": "img"
-      },
-      {
-       "url": "https://epsilon.6sense.com/v3/company/details",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
-       "type": "img"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/pt-pt/produtos/sage-50cloud/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/*",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://logx.optimizely.com/v1/events",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
-       "type": "img"
-      },
-      {
-       "url": "https://sageportugal.pxf.io/xur/55271",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/pt-pt/produtos/sage-50cloud/*",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/pt-pt/produtos/*",
-       "type": "xmlhttprequest"
-      }
-     ],
-     "cookies": {
-      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
-      "OptanonAlertBoxClosed": "",
-      "_ga": "",
-      "_fbp": "",
-      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
-      "_gcl_au": "1.1.1555904567.1795702542",
-      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126"
-     },
-     "banner": false,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
-     "utag": {
-      "present": true,
-      "utid": "sage/pt-pt/202611190938",
-      "version": "ut4.53.202611190938",
-      "page_type": "artigo",
-      "language": "pt-pt",
-      "country": "pt",
-      "data_keys": 141
-     },
-     "accepted": true
-    },
-    "blocked": false
+    "live_sample": true,
+    "status": 403,
+    "final_url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": true,
+    "pre": null,
+    "post": null
+   },
+   {
+    "id": "pt-contabilistas-sage-for-accountants",
+    "url": "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "pt-produtos-sage-50cloud-contabilidade",
+    "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud-contabilidade/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
    },
    {
     "id": "pt-sbc-hr",
     "url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/",
-    "status": 200,
-    "final_url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
-    "live_sample": false,
-    "click_ids": {
-     "gclid": "TEST_MON_20261126",
-     "msclkid": "TEST_MON_20261126",
-     "fbclid": "TEST_MON_20261126"
-    },
-    "pre": {
-     "title": "Sage HR – Software de Gestão de Recursos Humanos | Sage Portugal",
-     "requests": [
-      {
-       "url": "https://widget.trustpilot.com/",
-       "type": "iframe"
-      }
-     ],
-     "cookies": {
-      "AWSALBTG": "",
-      "AWSALBTGCORS": "",
-      "AWSALB": "",
-      "AWSALBCORS": "",
-      "sage_utm_preservation": "",
-      "shell#lang": "",
-      "utag_main_v_id": "",
-      "utag_main__sn": "",
-      "utag_main__se": "",
-      "utag_main__ss": "",
-      "utag_main__st": "",
-      "utag_main_ses_id": "",
-      "utag_main__pn": "",
-      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
-     },
-     "banner": true,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
-     "utag": {
-      "present": true,
-      "utid": "sage/pt-pt/202611190938",
-      "version": "ut4.53.202611190938",
-      "page_type": "article",
-      "language": "pt-pt",
-      "country": "pt",
-      "data_keys": 135
-     }
-    },
-    "post": {
-     "title": "Sage HR – Software de Gestão de Recursos Humanos | Sage Portugal",
-     "requests": [
-      {
-       "url": "https://js.zi-scripts.com/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://collect-eu-west-1.tealiumiq.com/sage/en-gb/2/i.gif",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://lux.speedcurve.com/",
-       "type": "img"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "beacon"
-      },
-      {
-       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "img"
-      },
-      {
-       "url": "https://c.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ipv6.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/collect?pid=58294",
-       "type": "img"
-      },
-      {
-       "url": "https://ad.doubleclick.net/activity;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://6144405.fls.doubleclick.net/activityi;src=6144405;type=sagegpt;cat=sagelp;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "iframe"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=DC-6144405&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=DC-6144405&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/rmkt/collect/956094480/?en=gtag.config&gclaw=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=AW-956094480&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://connect.facebook.net/signals/config/499565794547363",
-       "type": "script"
-      },
-      {
-       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
-       "type": "fetch"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/",
-       "type": "img"
-      },
-      {
-       "url": "https://csxd.contentsquare.net/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/pagead/1p-user-list/956094480/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://www.google.de/pagead/1p-user-list/956094480/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
-       "type": "img"
-      },
-      {
-       "url": "https://api-cdn.mypurecloud.ie/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://c.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://k-aeu1.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
-       "type": "iframe"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/pt-pt/sage-business-cloud/hr/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://secure.adnxs.com/getuidj",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://sageportugal.pxf.io/xur/55271",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
-       "type": "img"
-      },
-      {
-       "url": "https://epsilon.6sense.com/v3/company/details",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://logx.optimizely.com/v1/events",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
-       "type": "img"
-      },
-      {
-       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
-       "type": "img"
-      }
-     ],
-     "cookies": {
-      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
-      "OptanonAlertBoxClosed": "",
-      "_ga": "",
-      "_fbp": "",
-      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
-      "_gcl_au": "1.1.1555904567.1795702542",
-      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126"
-     },
-     "banner": false,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
-     "utag": {
-      "present": true,
-      "utid": "sage/pt-pt/202611190938",
-      "version": "ut4.53.202611190938",
-      "page_type": "article",
-      "language": "pt-pt",
-      "country": "pt",
-      "data_keys": 135
-     },
-     "accepted": true
-    },
-    "blocked": false
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "pt-sbc-sage-x3",
+    "url": "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "pt-produtos-sage-xrt-advanced",
+    "url": "https://www.sage.com/pt-pt/produtos/sage-xrt-advanced/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-hr-hr-apresentacao-produto",
+    "url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/hr-apresentacao-produto/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-sage-x3-tour-do-produto",
+    "url": "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/tour-do-produto/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
    }
   ],
-  "journeys": []
+  "journeys": [
+   {
+    "id": "pt-j-sage50-pricing",
+    "name": "Sage 50 product page -> pricing",
+    "blocked": true,
+    "steps": []
+   }
+  ]
  }
 }

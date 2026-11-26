@@ -660,7 +660,7 @@
     "inactive": false,
     "schedule_active": false,
     "schedule_end": "",
-    "updated_at": "2026-05-22T09:37:43.000Z",
+    "updated_at": "2026-11-26T14:18:44.000Z",
     "pages": [
      "fr-home",
      "fr-sbc-intacct"
@@ -4525,8 +4525,8 @@
   }
  },
  "browser": {
-  "source": "claude-browser",
-  "collected_at": "2026-11-26T14:25:03Z",
+  "source": "playwright",
+  "collected_at": "2026-11-26T15:32:59Z",
   "visits": [
    {
     "id": "fr-ciel-compta",
@@ -4575,18 +4575,6 @@
        "type": "script"
       },
       {
-       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-THQ38J",
-       "type": "script"
-      },
-      {
-       "url": "https://d.impactradius-event.com/A1382897-bebb-4360-8200-824fe2a7eeaf1.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/js/third-party/tealium/tealiumStuff.js",
-       "type": "script"
-      },
-      {
        "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/sage_50_compta.webp",
        "type": "image"
       },
@@ -4612,6 +4600,18 @@
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/js/third-party/funnelback.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-THQ38J",
+       "type": "script"
+      },
+      {
+       "url": "https://d.impactradius-event.com/A1382897-bebb-4360-8200-824fe2a7eeaf1.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/tealium/tealiumStuff.js",
        "type": "script"
       },
       {
@@ -4647,28 +4647,64 @@
        "type": "script"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1928606444.1795701533&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1051278542.1795701533&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034~123785232&tft=1795701533081&tfd=1155&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&ae=g&auid=978775713.1795707101&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1860369303.1795707101&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~120385423~120469145~120469153~121246026~121246034&tft=1795707100634&tfd=1413&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=7&frm=0&apvc=1&ae=g&auid=1928606444.1795701533&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1051278542.1795701533&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034~123785232&tft=1795701533081&tfd=1155&fmt=8",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=10&frm=0&apvc=1&ae=g&auid=978775713.1795707101&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1860369303.1795707101&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~120385423~120469145~120469153~121246026~121246034&tft=1795707100634&tfd=1413&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=1928606444.1795701533&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=8",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=978775713.1795707101&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1928606444.1795701533&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1051278542.1795701533&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034~123785232&tft=1795701533081&tfd=1155&fmt=3",
+       "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&ae=g&auid=978775713.1795707101&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1860369303.1795707101&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~120385423~120469145~120469153~121246026~121246034&tft=1795707100634&tfd=1413&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=7&frm=0&apvc=1&ae=g&auid=1928606444.1795701533&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1051278542.1795701533&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034~123785232&tft=1795701533081&tfd=1155&fmt=3",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=10&frm=0&apvc=1&ae=g&auid=978775713.1795707101&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1860369303.1795707101&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~120385423~120469145~120469153~121246026~121246034&tft=1795707100634&tfd=1413&fmt=3",
        "type": "image"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=1928606444.1795701533&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=3",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=978775713.1795707101&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=3",
        "type": "image"
+      },
+      {
+       "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1922100558&t=pageview&_s=1&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&ul=fr-fr&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&sr=1366x900&vp=1366x900&_u=YGBAiEABBAAAgCAEK~&jid=1441548800&gjid=2139245876&cid=733915530.1795707101&tid=UA-53356708-1&_gid=1660263157.1795707101&_slc=1&gtm=45He6bh1n71THQ38Jv71004762za200zd71004762xf1&cd3=1795707100617.f85tes5i&cd4=2026-11-26T15%3A31%3A40.617%2B00%3A00&cd9=Prospect&cd10=Client%20Abonn%C3%A9s&cd11=Not%20Available&cd12=Not%20Available&cd13=0.46481740306713293_1795707100621&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~120385423~120469145~120469153~121246026~121246034&cd2=733915530.1795707101&z=1654076018",
+       "type": "xhr"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j102&tid=UA-53356708-1&cid=733915530.1795707101&jid=1441548800&gjid=2139245876&_gid=1660263157.1795707101&_u=YGBAiEABBAAAgGAEK~&z=675930596",
+       "type": "xhr"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795707100719&li_adsId=8ee1c583-8440-4c64-ad53-c8d2b1aad2c5&pageLoadId=7d785b87-b644-495c-83b6-81b4efb880d4&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795707100406&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=733915530.1795707101&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938466~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785232&sid=1795707100&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&tfd=1575",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=733915530.1795707101&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&rcb=1&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785232",
+       "type": "ping"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795707100406&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=733915530.1795707101&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938466~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785232&sid=1795707100&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&tfd=1575",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/insight_tag_errors.gif?v=2&pid=58294&error=version%3A%201000050%20%7C%20WebsiteActions-1000050-TypeError%3A%20Failed%20to%20fetch%3B%20ErrorData%3A%20%7B%22domain%22%3A%22ciel.com%22%2C%22requestFetcher%22%3A%22fetch-keepalive%22%2C%22body%22%3A%22H4sIAAAAAAAAA3VQXWvcMBD8K8c%2BlBasnOzzhyQ4SghpOEib0jN5KeVYSXuOOFl2LZm2hPz3cs61T%2B3jzDCzs%2FMMo7MR1NdKFLL8lkE0kxvTI03RDQFUzjnnFc8guZ5A5Y2sGt7knIs8z8AOPboACowjf2WGHjKYJw8KnlIao1qv%2FwhrP3TuDFjEjljFjR9myxbGDP2Y8Arj%2BPN9Z7yz2%2FZ23x4%2BPnw6FLyo87yo3%2FTR%2BNM%2FlaP%2Bj2VO%2FSEO82RomyY0Jxc61g%2FBpWFatJ6sm%2FvthXKhgwx%2BkI4u0d51Af0X%2Bj5TTDsLCtAepTCFZgINsmNhCyYbLllRotSy5khYQwYjdnQ%2FoF08jW1EpUXDdF2WrJSVYWKjayZyXdJRC8FtCRm42E4YosdEFtQRfaQMvPuAr5fhDO4chvQKehcNqGcYo94nTASKlS%2FnlHsXTmR34Xoc%2F8ac%2B7QueQIFe%2BxoVfHVzTL36i0G4ygE6imk1Y0jf1HeQQZP1IMKs%2FcZxGWL9td4zvh8fXd7eNztd%2B3l2V2ICYOhpaqpc1FKWTFRFBtmdZ4zIWvNRGM3GmVTlobg5Tf0rNf8cwIAAA%3D%3D%22%7D&href=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g",
+       "type": "ping"
       },
       {
        "url": "https://www.ciel.com/ajaxpages/basket.aspx/GetNbCurrentBasketItems",
@@ -4681,26 +4717,6 @@
       {
        "url": "https://www.ciel.com/resourcesCiel/images/svg/proofs.svg",
        "type": "other"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Bold.woff2",
-       "type": "font"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Medium.woff2",
-       "type": "font"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Headline-Black.woff2",
-       "type": "font"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Regular.woff2",
-       "type": "font"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/images/illustrations/facture-electronique.svg",
-       "type": "image"
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/images/svg/support30.svg",
@@ -4743,34 +4759,6 @@
        "type": "other"
       },
       {
-       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/events.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/DOMs.js?v=2",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/catalog.js?v=2",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/page.js?v=2",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/js/third-party/loader.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/js/libraries/modalPanel.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/js/libraries/commons.js",
-       "type": "script"
-      },
-      {
        "url": "https://www.ciel.com/resourcesCiel/images/svg/selected.svg",
        "type": "image"
       },
@@ -4799,6 +4787,54 @@
        "type": "image"
       },
       {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Bold.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Medium.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Headline-Black.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Regular.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/illustrations/facture-electronique.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/events.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/DOMs.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/catalog.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/page.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/loader.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/modalPanel.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/commons.js",
+       "type": "script"
+      },
+      {
        "url": "https://www.ciel.com/resourcesCommons/images/svg/social-media-icons.svg",
        "type": "image"
       },
@@ -4807,88 +4843,8 @@
        "type": "script"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1928606444.1795701533&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1051278542.1795701533&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgQ29tcHRhIiwiYiI6IlNhZ2UiLCJvIjpbeyJwIjoiMTkiLCJjdSI6IkVVUiJ9XX1d&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034~123785232&tft=1795701533318&tfd=1392&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&ae=g&auid=978775713.1795707101&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1860369303.1795707101&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgQ29tcHRhIiwiYiI6IlNhZ2UiLCJvIjpbeyJwIjoiMTkiLCJjdSI6IkVVUiJ9XX1d&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~120385423~120469145~120469153~121246026~121246034&tft=1795707101045&tfd=1824&fmt=8",
        "type": "fetch"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/image.aspx?url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&title=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&res=1366x900&accountid=61518&rt=1405&luid=a9941d8e-4adc-4423-9392-3b655dc97204&prev=1db17560-13b6-7f7e-5daf-060f21160930&rnd=78136",
-       "type": "image"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1928606444.1795701533&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1051278542.1795701533&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgQ29tcHRhIiwiYiI6IlNhZ2UiLCJvIjpbeyJwIjoiMTkiLCJjdSI6IkVVUiJ9XX1d&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034~123785232&tft=1795701533318&tfd=1392&fmt=3",
-       "type": "image"
-      },
-      {
-       "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=995286720&t=pageview&_s=1&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&ul=fr-fr&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&sr=1366x900&vp=1366x900&_u=YGBAiEABBAAAgCAEK~&jid=799090974&gjid=954777967&cid=680139903.1795701533&tid=UA-53356708-1&_gid=1011327973.1795701533&_slc=1&gtm=45He6bh1n71THQ38Jv71004762za200zd71004762xf1&cd3=1795701533061.zlgxmcde&cd4=2026-11-26T13%3A58%3A53.62%2B00%3A00&cd9=Prospect&cd10=Client%20Abonn%C3%A9s&cd11=Not%20Available&cd12=Not%20Available&cd13=0.012397953128973627_1795701533065&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034~123785232&cd2=680139903.1795701533&z=276175287",
-       "type": "xhr"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j102&tid=UA-53356708-1&cid=680139903.1795701533&jid=799090974&gjid=954777967&_gid=1011327973.1795701533&_u=YGBAiEABBAAAgGAEK~&z=2052668382",
-       "type": "xhr"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795701533507&li_adsId=d553bcab-c12b-4ba1-8382-c3f1b54398ae&pageLoadId=6f82e37e-e58b-4233-82d4-c8dc1377548c&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
-       "type": "image"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
-       "type": "fetch"
-      },
-      {
-       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795701532769&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=680139903.1795701533&frm=0&lps=1&pscdl=noapi&rcb=17&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785234&sid=1795701533&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&tfd=1696",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=680139903.1795701533&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&rcb=17&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785234",
-       "type": "ping"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/insight_tag_errors.gif?v=2&pid=58294&error=version%3A%201000050%20%7C%20WebsiteActions-1000050-TypeError%3A%20Failed%20to%20fetch%3B%20ErrorData%3A%20%7B%22domain%22%3A%22ciel.com%22%2C%22requestFetcher%22%3A%22fetch-keepalive%22%2C%22body%22%3A%22H4sIAAAAAAAAA3VQXWvcMBD8K8c%2BlBasnG1ZZ1lwlBDScJA2pWfyUsqxltaOiCS7lkxbQv57uY%2F2qX2cGWZ2Z15gsiaC%2Bipk2VTfMoh6tlN6pDnaMYAq8jzPRZ5Bsp5AFXUj6rwQnIuyysCMHm0ABdqSu9KjhwyW2YGCp5SmqNbrP8LajYM9AhZxICZy7cbFsBOjRz8lvMI4%2FXw%2FaGfNtr3dt4ePD58OZV5uiqLcvPFRu%2Bd%2FKn33H8uS%2FCGOy6xpm2bUzzYMzI%2FBpnE%2BaZ6MXfz2QtkwQAY%2FqIs20d4OAd0X%2Br5QTDsDCrBoNqXmyFBTw7qCNwx7yRn1XOim0VLXAjKYcKD7Ec3Js%2BllSbwmRkJ2rCo5Z7I0FdPS6ILXtaikhgxsbGcM0WEiA6pHFykDZz%2Fg%2BTIcwZ3FkM7A26hBvcAUu33CRKBY9XpMubfhmcwuXE%2FT35jjP61NjkDBHgdaiXx1c5p79RaDthQCeQppdWPJXZR3kMETeVBhcS6DeNqi%2FTUdMz5f390eHnf7XXspuwsxYdB0Ltx1eWl6wXoUyCQ2OZNGCsZlr2vR1bzjG3j9DStBUlVzAgAA%22%7D&href=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
-       "type": "image"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g",
-       "type": "ping"
-      },
-      {
-       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795701532769&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=680139903.1795701533&frm=0&lps=1&pscdl=noapi&rcb=17&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785234&sid=1795701533&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&tfd=1696",
-       "type": "fetch"
-      },
-      {
-       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
-       "type": "script"
-      },
-      {
-       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
-       "type": "script"
-      },
-      {
-       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN&cx=c&gtm=4e6bh1",
-       "type": "script"
-      },
-      {
-       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN",
-       "type": "script"
-      },
-      {
-       "url": "https://collect.tealiumiq.com/sage/ciel/2/i.gif",
-       "type": "xhr"
-      },
-      {
-       "url": "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795701533687",
-       "type": "script"
-      },
-      {
-       "url": "https://visitor-service.tealiumiq.com/sage/ciel/01a21826ebcb0002e84951c0817d0008800b8080008f2?callback=utag.ut%5B%22writevaciel%22%5D&rnd=1795701533694",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageEvents.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageDOMs.js",
-       "type": "script"
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/js/products/pages/page.js",
@@ -4907,19 +4863,23 @@
        "type": "script"
       },
       {
-       "url": "https://analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795701532769&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=680139903.1795701533&frm=0&lps=1&pscdl=noapi&rcb=3&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938465~115938469~120213116~120385423~120469145~120469153~121049589~121246026~121246034&sid=1795701533&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=680139903.1795701533&ep.epoch_timestamp=1795703333644&tfd=1974",
-       "type": "fetch"
+       "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&ae=g&auid=978775713.1795707101&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1860369303.1795707101&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgQ29tcHRhIiwiYiI6IlNhZ2UiLCJvIjpbeyJwIjoiMTkiLCJjdSI6IkVVUiJ9XX1d&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~120385423~120469145~120469153~121246026~121246034&tft=1795707101045&tfd=1824&fmt=3",
+       "type": "image"
       },
       {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=680139903.1795701533&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&rcb=3&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938469~120213116~120385423~120469145~120469153~121049589~121246026~121246034",
-       "type": "ping"
-      },
-      {
-       "url": "https://www.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795701532769&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=680139903.1795701533&frm=0&lps=1&pscdl=noapi&rcb=3&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938465~115938469~120213116~120385423~120469145~120469153~121049589~121246026~121246034&sid=1795701533&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=680139903.1795701533&ep.epoch_timestamp=1795703333644&tfd=1974",
-       "type": "fetch"
+       "url": "https://61518.global.siteimproveanalytics.io/image.aspx?url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&title=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&res=1366x900&accountid=61518&rt=1849&luid=3b525c4e-6733-1fd3-180d-bfc93ad0e812&prev=95282029-3d41-62e0-048b-446e84102e24&rnd=72351",
+       "type": "image"
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/js/products/pages/catalogConfigurator.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageEvents.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageDOMs.js",
        "type": "script"
       },
       {
@@ -4943,11 +4903,19 @@
        "type": "script"
       },
       {
-       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a609690f1faa9007",
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a609f0fa99947628",
        "type": "script"
       },
       {
-       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/h/g/jsd/oneshot/b9d4778be3d9/0.5177224876947288:1795699237:mloBu4qyQmIQCk5tozoX0PO8h3Dy8vLghG17zM2z0fY/a609690f1faa9007",
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/h/g/jsd/oneshot/b9d4778be3d9/0.5177224876947288:1795699237:mloBu4qyQmIQCk5tozoX0PO8h3Dy8vLghG17zM2z0fY/a609f0fa99947628",
        "type": "xhr"
       },
       {
@@ -4955,8 +4923,48 @@
        "type": "script"
       },
       {
+       "url": "https://collect.tealiumiq.com/sage/ciel/2/i.gif",
+       "type": "xhr"
+      },
+      {
+       "url": "https://visitor-service.tealiumiq.com/sage/ciel/01a2187be052001dbe6187e7a1720008800b8080008f2?callback=utag.ut%5B%22writevaciel%22%5D&rnd=1795707101516",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN&cx=c&gtm=4e6bh1",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795707101557",
+       "type": "script"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795707100406&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=733915530.1795707101&frm=0&lps=1&pscdl=noapi&rcb=0&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~119793973~120213116~120385422~120469145~120469153~121049589~121246026~121246034&sid=1795707101&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=733915530.1795707101&ep.epoch_timestamp=1795708901266&tfd=2475",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=733915530.1795707101&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&rcb=0&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616985~115938466~115938468~119793973~120213116~120385422~120469145~120469153~121049589~121246026~121246034",
+       "type": "ping"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795707100406&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=733915530.1795707101&frm=0&lps=1&pscdl=noapi&rcb=0&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115616985~115938466~115938468~119793973~120213116~120385422~120469145~120469153~121049589~121246026~121246034&sid=1795707101&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=733915530.1795707101&ep.epoch_timestamp=1795708901266&tfd=2475",
+       "type": "fetch"
+      },
+      {
        "url": "https://api.bazaarvoice.com/data/batch.json?passKey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&apiversion=5.5&displaycode=13939-fr_fr&resource.q0=products&limit.q0=1",
        "type": "fetch"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx",
+       "type": "xhr"
+      },
+      {
+       "url": "https://js-agent.newrelic.com/nr-spa-1.324.1.min.js",
+       "type": "script"
       },
       {
        "url": "https://apps.bazaarvoice.com/apps/api/api-0.8.2.js",
@@ -4979,7 +4987,7 @@
        "type": "script"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=ca844007e81ad8a2bad&BVBRANDID=c19f2a74-6be3-48d6-bde8-f98472d05375&BVBRANDSID=df7d418f-438c-44f7-8c3a-3413c31559f9&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:bv-loader,bvProductVersion:%2713.19.3%27,cl:Diagnostic,deploymentZone:main_site,elapsedMs:%271.7000%27,endTime:%272990.4000%27,locale:fr_FR,name:timeToRunScout,startTime:%272988.7000%27,type:Performance))&_=9r7aoy",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=a35a7d79305b3afc3&BVBRANDID=962c2ac5-bc7f-4ea4-99ee-ba167c1320fc&BVBRANDSID=706c4608-a668-4a2e-985a-18c3f87c843b&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:bv-loader,bvProductVersion:%2713.19.3%27,cl:Diagnostic,deploymentZone:main_site,elapsedMs:%271.5000%27,endTime:%272524.0000%27,locale:fr_FR,name:timeToRunScout,startTime:%272522.5000%27,type:Performance))&_=azauls",
        "type": "image"
       },
       {
@@ -4991,31 +4999,23 @@
        "type": "xhr"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=PageView&loadId=ca844007e81ad8a2bad&type=Embedded&BVBRANDID=c19f2a74-6be3-48d6-bde8-f98472d05375&BVBRANDSID=df7d418f-438c-44f7-8c3a-3413c31559f9&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&href=https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&res=1366x900&lang=fr-fr&charset=UTF-8&geo=1&cookies=1&r_t=(con:46,dns:32,load:-1795701532777,req:510,res:254,tot:-1795701531926)&_=ygs54z&ref=",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=PageView&loadId=a35a7d79305b3afc3&type=Embedded&BVBRANDID=962c2ac5-bc7f-4ea4-99ee-ba167c1320fc&BVBRANDSID=706c4608-a668-4a2e-985a-18c3f87c843b&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&href=https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&res=1366x900&lang=fr-fr&charset=UTF-8&geo=1&cookies=1&r_t=(con:20,dns:45,load:1424,req:684,res:351,tot:2530)&_=wcjj1d&ref=",
        "type": "image"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=ca844007e81ad8a2bad&BVBRANDID=c19f2a74-6be3-48d6-bde8-f98472d05375&BVBRANDSID=df7d418f-438c-44f7-8c3a-3413c31559f9&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&detail1=&detail2=&_=gvks27",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=a35a7d79305b3afc3&BVBRANDID=962c2ac5-bc7f-4ea4-99ee-ba167c1320fc&BVBRANDSID=706c4608-a668-4a2e-985a-18c3f87c843b&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&detail1=&detail2=&_=ofquly",
        "type": "image"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=ca844007e81ad8a2bad&BVBRANDID=c19f2a74-6be3-48d6-bde8-f98472d05375&BVBRANDSID=df7d418f-438c-44f7-8c3a-3413c31559f9&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&detail1=&detail2=&_=jvxsr3",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=a35a7d79305b3afc3&BVBRANDID=962c2ac5-bc7f-4ea4-99ee-ba167c1320fc&BVBRANDSID=706c4608-a668-4a2e-985a-18c3f87c843b&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&detail1=&detail2=&_=49svd",
        "type": "image"
       },
       {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx",
+       "url": "https://bam.nr-data.net/browser/connect/2/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&s=abab7ffb8c5ba497",
        "type": "xhr"
       },
       {
-       "url": "https://js-agent.newrelic.com/nr-spa-1.324.1.min.js",
-       "type": "script"
-      },
-      {
-       "url": "https://bam.nr-data.net/browser/connect/2/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&s=51d9e87fc2055519",
-       "type": "xhr"
-      },
-      {
-       "url": "https://bam.nr-data.net/jserrors/1/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&to=MVBQYBBSCxEEBk1dWggac2cyHBUDAgBNUVgWWVNAB0BKEgQCXFdaCEFTXQxWF0wEFklM&rst=3169&s=51d9e87fc2055519&ref=https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx&ptid=3d1fdcb84a89bfcc",
+       "url": "https://bam.nr-data.net/jserrors/1/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&to=MVBQYBBSCxEEBk1dWggac2cyHBUDAgBNUVgWWVNAB0BKEgQCXFdaCEFTXQxWF0wEFklM&rst=2780&s=abab7ffb8c5ba497&ref=https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx&ptid=e9988422ebd21d29",
        "type": "xhr"
       },
       {
@@ -5023,12 +5023,12 @@
        "type": "xhr"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=ca844007e81ad8a2bad&BVBRANDID=c19f2a74-6be3-48d6-bde8-f98472d05375&BVBRANDSID=df7d418f-438c-44f7-8c3a-3413c31559f9&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:RatingSummary,bvProductVersion:%272.63.12%27,cl:Diagnostic,deploymentZone:main_site,displaySegment:baseline,elapsedMs:0.6000000000349246,locale:fr_FR,name:bv_rating_summary_render_time,productId:S50cCompta,startTime:3067.7999999999884,type:Performance))&_=c3op1y",
-       "type": "image"
-      },
-      {
        "url": "https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js",
        "type": "script"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=a35a7d79305b3afc3&BVBRANDID=962c2ac5-bc7f-4ea4-99ee-ba167c1320fc&BVBRANDSID=706c4608-a668-4a2e-985a-18c3f87c843b&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:RatingSummary,bvProductVersion:%272.63.12%27,cl:Diagnostic,deploymentZone:main_site,displaySegment:baseline,elapsedMs:0.40000000000873115,locale:fr_FR,name:bv_rating_summary_render_time,productId:S50cCompta,startTime:2751.0999999999913,type:Performance))&_=ovgjv3",
+       "type": "image"
       },
       {
        "url": "https://api-cdn.mypurecloud.ie/webdeployments/v1/deployments/29241946-1de9-4783-aed1-0ace46f53936/domains.json",
@@ -5051,11 +5051,11 @@
        "type": "script"
       },
       {
-       "url": "https://bam.eu01.nr-data.net/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=128&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=fc0a15764a27da46&af=err,spa,xhr,stn,ins&be=20&fe=81&dc=10&perf=%7B%22timing%22:%7B%22of%22:1795701535680,%22n%22:0,%22f%22:2,%22dn%22:2,%22dne%22:2,%22c%22:2,%22s%22:2,%22ce%22:2,%22rq%22:8,%22rp%22:20,%22rpe%22:21,%22di%22:30,%22ds%22:30,%22de%22:30,%22dc%22:99,%22l%22:99,%22le%22:101%7D,%22navigation%22:%7B%7D%7D",
+       "url": "https://bam.eu01.nr-data.net/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=171&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=d025f437775e7f96&af=err,spa,xhr,stn,ins&be=25&fe=65&dc=7&perf=%7B%22timing%22:%7B%22of%22:1795707102340,%22n%22:0,%22f%22:3,%22dn%22:3,%22dne%22:3,%22c%22:3,%22s%22:3,%22ce%22:3,%22rq%22:6,%22rp%22:26,%22rpe%22:26,%22di%22:33,%22ds%22:33,%22de%22:33,%22dc%22:89,%22l%22:89,%22le%22:90%7D,%22navigation%22:%7B%7D%7D",
        "type": "xhr"
       },
       {
-       "url": "https://bam.eu01.nr-data.net/jserrors/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=134&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=fc0a15764a27da46",
+       "url": "https://bam.eu01.nr-data.net/jserrors/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=176&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=d025f437775e7f96",
        "type": "xhr"
       },
       {
@@ -5075,32 +5075,16 @@
        "type": "document"
       },
       {
+       "url": "https://apps.mypurecloud.ie/messenger/main.css",
+       "type": "stylesheet"
+      },
+      {
        "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.css",
        "type": "stylesheet"
       },
       {
        "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
        "type": "script"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/messenger/messagingMiddleware.min.js",
-       "type": "script"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/messenger/muiVendor.min.js",
-       "type": "script"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/messenger/defaultVendors.min.js",
-       "type": "script"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.min.js",
-       "type": "script"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/messenger/main.css",
-       "type": "stylesheet"
       },
       {
        "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
@@ -5131,6 +5115,26 @@
        "type": "script"
       },
       {
+       "url": "https://apps.mypurecloud.ie/messenger/messagingMiddleware.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/muiVendor.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/defaultVendors.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/fr.json",
+       "type": "xhr"
+      },
+      {
        "url": "https://apps.mypurecloud.ie/messenger/i18n/fr.json",
        "type": "xhr"
       },
@@ -5149,27 +5153,35 @@
       {
        "url": "https://apps.mypurecloud.ie/messenger/messenger.min.js",
        "type": "script"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795707100406&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=733915530.1795707101&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=2&tag_exp=115938466~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785232&sid=1795707100&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=scroll&epn.percent_scrolled=90&_et=8&tfd=6586",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795707100406&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=733915530.1795707101&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=2&tag_exp=115938466~115938468~120213116~120385423~120469145~120469153~121246026~121246034~123785232&sid=1795707100&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=scroll&epn.percent_scrolled=90&_et=8&tfd=6586",
+       "type": "fetch"
       }
      ],
      "cookies": {
       "CodeT": "",
       "ParrainageID": "",
-      "TemporyUserId": "d418b803-fffc-428e-bacd-ab7ecdd6004b",
+      "TemporyUserId": "a6109dbf-0246-4916-8c34-9a42d908af5d",
       "IDUser": "",
       "Visitor": "",
-      "_gcl_au": "1.1.1928606444.1795701533",
-      "_cs_mk": "0.012397953128973627_1795701533065",
-      "nmstat": "1db17560-13b6-7f7e-5daf-060f21160930",
-      "_gid": "GA1.2.1011327973.1795701533",
-      "_gac_UA-53356708-1": "1.1795701533.TEST_MON_20261126",
+      "_gcl_au": "1.1.978775713.1795707101",
+      "_cs_mk": "0.46481740306713293_1795707100621",
+      "_gid": "GA1.2.1660263157.1795707101",
+      "_gac_UA-53356708-1": "1.1795707101.TEST_MON_20261126",
       "_dc_gtm_UA-53356708-1": "1",
-      "_gcl_aw": "GCL.1795701534.TEST_MON_20261126",
-      "_ga_8EYWV34H9Z": "GS2.1.s1795701533$o1$g0$t1795701533$j60$l0$h0",
-      "_ga": "GA1.1.680139903.1795701533",
-      "utag_main": "v_id:01a21826ebcb0002e84951c0817d0008800b8080008f2$_sn:1$_se:1$_ss:1$_st:1795703333644$ses_id:1795701533644%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
-      "_ga_PE4Z9JJWVN": "GS2.1.s1795701533$o1$g0$t1795701533$j60$l0$h0",
-      "BVBRANDID": "c19f2a74-6be3-48d6-bde8-f98472d05375",
-      "BVBRANDSID": "df7d418f-438c-44f7-8c3a-3413c31559f9",
+      "_ga": "GA1.1.733915530.1795707101",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795707100$o1$g0$t1795707100$j60$l0$h0",
+      "nmstat": "95282029-3d41-62e0-048b-446e84102e24",
+      "utag_main": "v_id:01a2187be052001dbe6187e7a1720008800b8080008f2$_sn:1$_se:1$_ss:1$_st:1795708901266$ses_id:1795707101266%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_gcl_aw": "GCL.1795707102.TEST_MON_20261126",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795707101$o1$g0$t1795707101$j60$l0$h0",
+      "BVBRANDID": "962c2ac5-bc7f-4ea4-99ee-ba167c1320fc",
+      "BVBRANDSID": "706c4608-a668-4a2e-985a-18c3f87c843b",
       "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
       "swm_messenger_instance": "fr_wm_plus_cb"
      },
@@ -5183,7 +5195,7 @@
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
-       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795701533687"
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795707101557"
       ],
       "utid": "sage/ciel/202611181017",
       "version": "ut4.49.202611181017",
@@ -5200,6 +5212,7 @@
       ],
       "data_layer_events": [
        "gtm.js",
+       "gtm.scrollDepth",
        "gtm.dom",
        "gtm.load",
        "gtm.scrollDepth"
@@ -5252,7 +5265,7 @@
      "doc_links": [
       "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
      ],
-     "collected_at": "2026-11-26T13:59:00.059Z"
+     "collected_at": "2026-11-26T15:31:46.779Z"
     },
     "post": {
      "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -5261,22 +5274,22 @@
      "cookies": {
       "CodeT": "",
       "ParrainageID": "",
-      "TemporyUserId": "d418b803-fffc-428e-bacd-ab7ecdd6004b",
+      "TemporyUserId": "a6109dbf-0246-4916-8c34-9a42d908af5d",
       "IDUser": "",
       "Visitor": "",
-      "_gcl_au": "1.1.1928606444.1795701533",
-      "_cs_mk": "0.012397953128973627_1795701533065",
-      "nmstat": "1db17560-13b6-7f7e-5daf-060f21160930",
-      "_gid": "GA1.2.1011327973.1795701533",
-      "_gac_UA-53356708-1": "1.1795701533.TEST_MON_20261126",
+      "_gcl_au": "1.1.978775713.1795707101",
+      "_cs_mk": "0.46481740306713293_1795707100621",
+      "_gid": "GA1.2.1660263157.1795707101",
+      "_gac_UA-53356708-1": "1.1795707101.TEST_MON_20261126",
       "_dc_gtm_UA-53356708-1": "1",
-      "_gcl_aw": "GCL.1795701534.TEST_MON_20261126",
-      "_ga_8EYWV34H9Z": "GS2.1.s1795701533$o1$g0$t1795701533$j60$l0$h0",
-      "_ga": "GA1.1.680139903.1795701533",
-      "utag_main": "v_id:01a21826ebcb0002e84951c0817d0008800b8080008f2$_sn:1$_se:1$_ss:1$_st:1795703333644$ses_id:1795701533644%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
-      "_ga_PE4Z9JJWVN": "GS2.1.s1795701533$o1$g0$t1795701533$j60$l0$h0",
-      "BVBRANDID": "c19f2a74-6be3-48d6-bde8-f98472d05375",
-      "BVBRANDSID": "df7d418f-438c-44f7-8c3a-3413c31559f9",
+      "_ga": "GA1.1.733915530.1795707101",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795707100$o1$g0$t1795707100$j60$l0$h0",
+      "nmstat": "95282029-3d41-62e0-048b-446e84102e24",
+      "utag_main": "v_id:01a2187be052001dbe6187e7a1720008800b8080008f2$_sn:1$_se:1$_ss:1$_st:1795708901266$ses_id:1795707101266%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_gcl_aw": "GCL.1795707102.TEST_MON_20261126",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795707101$o1$g0$t1795707101$j60$l0$h0",
+      "BVBRANDID": "962c2ac5-bc7f-4ea4-99ee-ba167c1320fc",
+      "BVBRANDSID": "706c4608-a668-4a2e-985a-18c3f87c843b",
       "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
       "swm_messenger_instance": "fr_wm_plus_cb"
      },
@@ -5290,7 +5303,7 @@
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
-       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795701533687"
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795707101557"
       ],
       "utid": "sage/ciel/202611181017",
       "version": "ut4.49.202611181017",
@@ -5307,6 +5320,7 @@
       ],
       "data_layer_events": [
        "gtm.js",
+       "gtm.scrollDepth",
        "gtm.dom",
        "gtm.load",
        "gtm.scrollDepth"
@@ -5359,7 +5373,7 @@
      "doc_links": [
       "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
      ],
-     "collected_at": "2026-11-26T13:59:30.088Z",
+     "collected_at": "2026-11-26T15:32:16.802Z",
      "accepted": false
     }
    },
@@ -5422,6 +5436,14 @@
        "type": "script"
       },
       {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/tools.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/ServerExchange.js",
+       "type": "script"
+      },
+      {
        "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/sage_50_gestion.webp",
        "type": "image"
       },
@@ -5470,15 +5492,7 @@
        "type": "script"
       },
       {
-       "url": "https://www.ciel.com/resourcesCommons/js/libraries/tools.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/js/libraries/ServerExchange.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.googletagmanager.com/gtag/js?id=G-8EYWV34H9Z&cx=c&gtm=4e6bi0h2",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-8EYWV34H9Z&cx=c&gtm=4e6bh1",
        "type": "script"
       },
       {
@@ -5502,32 +5516,68 @@
        "type": "script"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=660151582.1795701573&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1896746270.1795701573&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~120385423~120469145~120469153~121246026~121246034&tft=1795701572869&tfd=1204&fmt=8",
+       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=305375599.1795707140&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1610522273.1795707140&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117628656~120385423~120469145~120469153~121246026~121246034&tft=1795707139689&tfd=1321&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=1&frm=0&apvc=1&ae=g&auid=660151582.1795701573&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1896746270.1795701573&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~120385423~120469145~120469153~121246026~121246034&tft=1795701572869&tfd=1204&fmt=8",
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=1&frm=0&apvc=1&ae=g&auid=305375599.1795707140&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1610522273.1795707140&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117628656~120385423~120469145~120469153~121246026~121246034&tft=1795707139689&tfd=1321&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=660151582.1795701573&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&fmt=8",
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=305375599.1795707140&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=8",
        "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=305375599.1795707140&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1610522273.1795707140&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117628656~120385423~120469145~120469153~121246026~121246034&tft=1795707139689&tfd=1321&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=1&frm=0&apvc=1&ae=g&auid=305375599.1795707140&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1610522273.1795707140&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117628656~120385423~120469145~120469153~121246026~121246034&tft=1795707139689&tfd=1321&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=305375599.1795707140&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=17590652&t=pageview&_s=1&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&ul=fr-fr&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&sr=1366x900&vp=1366x900&_u=YGBAiEABBAAAgCAEK~&jid=867133291&gjid=1303682918&cid=542031708.1795707140&tid=UA-53356708-1&_gid=2046234264.1795707140&_slc=1&gtm=45He6bh1n71THQ38Jv71004762za200zd71004762xf1&cd3=1795707139669.q7148ky2&cd4=2026-11-26T15%3A32%3A19.669%2B00%3A00&cd9=Prospect&cd10=Client%20Abonn%C3%A9s&cd11=Not%20Available&cd12=Not%20Available&cd13=0.03864253009773089_1795707139674&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117628656~120385423~120469145~120469153~121246026~121246034&cd2=542031708.1795707140&z=1769493967",
+       "type": "xhr"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j102&tid=UA-53356708-1&cid=542031708.1795707140&jid=867133291&gjid=1303682918&_gid=2046234264.1795707140&_u=YGBAiEABBAAAgGAEK~&z=1335033968",
+       "type": "xhr"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795707139466&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=542031708.1795707140&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118012009~120213116~120385422~120469145~120469153~121246026~121246034~123785234&sid=1795707139&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&tfd=1531",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=542031708.1795707140&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&rcb=8&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616985~115938465~115938469~118012009~120213116~120385422~120469145~120469153~121246026~121246034~123785234",
+       "type": "ping"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795707139466&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=542031708.1795707140&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115616985~115938465~115938469~118012009~120213116~120385422~120469145~120469153~121246026~121246034~123785234&sid=1795707139&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&tfd=1531",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795707139930&li_adsId=d65c0fc2-4995-4a57-8bed-83be78ea7e8a&pageLoadId=aa746242-d6d5-4b7d-bd46-1a459ec965f5&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g",
+       "type": "ping"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/insight_tag_errors.gif?v=2&pid=58294&error=version%3A%201000050%20%7C%20WebsiteActions-1000050-TypeError%3A%20Failed%20to%20fetch%3B%20ErrorData%3A%20%7B%22domain%22%3A%22ciel.com%22%2C%22requestFetcher%22%3A%22fetch-keepalive%22%2C%22body%22%3A%22H4sIAAAAAAAAA3VRXYvbMBD8K2EfSgvWRbYlOzaEchzXELh%2B0Jh7KSXI0tq3RJJdS6Ytx%2F334uR67UP7ODs7s7uzjzCSCVB%2FkZusEl8TCHqiMd7jFGjwUKeccy55ApEcQp2WlSx5meZVlYsEzOAUeahBE9orPThIYJ4s1PAQ4xjq9fo3sbZDTwtgQfXIJNd2mA07V3oMkQbP9OAcTpqUxSsVxh9ve23JbJvbQ3N8%2F%2FHDMeNZkaZZ8coFbU%2F%2FZLr2P5I5umMY5knjNk5Kn8j3zA2e4jCdOYeGZrd9LpHvIYHv2AaKeKDeK%2FsZv80Y4t4s16Z6I6QRrMAsZ1VeIWtl17G8E2qT8qpIS4QERtXj3aDMWaNUKYpMZMwURjLRloa1RhQsVUJWqKtCdhISoNBMygerIhqoO2UDJmDpnbpMhgXsSPl4AY6ChvoRxtAeoooINRNPi8sd%2BROavb8exxebZZ%2BGokWo4aB6XEm%2B2l2yX938yX71WnlN6D069HF1Q2hf2v560RtI4AEd1H62NoFwTqn5OS7un653t8f7%2FWHfPMew9yEqr%2FF8hBCqy80mZUVWpUxoVbKi48iQa4klR%2BxaCU%2B%2FAEIDj2GaAgAA%22%7D&href=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
       },
       {
        "url": "https://www.ciel.com/ajaxpages/basket.aspx/GetNbCurrentBasketItems",
        "type": "xhr"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Bold.woff2",
-       "type": "font"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Regular.woff2",
-       "type": "font"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Medium.woff2",
-       "type": "font"
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/images/svg/softwares/sage50.svg",
@@ -5536,6 +5586,22 @@
       {
        "url": "https://www.ciel.com/resourcesCiel/images/svg/proofs.svg",
        "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Bold.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Medium.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Headline-Black.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Regular.woff2",
+       "type": "font"
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/images/svg/support30.svg",
@@ -5566,72 +5632,8 @@
        "type": "other"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=660151582.1795701573&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1896746270.1795701573&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~120385423~120469145~120469153~121246026~121246034&tft=1795701572869&tfd=1204&fmt=3",
-       "type": "image"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=1&frm=0&apvc=1&ae=g&auid=660151582.1795701573&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261126&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1896746270.1795701573&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~120385423~120469145~120469153~121246026~121246034&tft=1795701572869&tfd=1204&fmt=3",
-       "type": "image"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126&auid=660151582.1795701573&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&fmt=3",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/images/svg/selected.svg",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/images/tick.svg",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/images/info.svg",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/images/double-tick.svg",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Headline-Black.woff2",
-       "type": "font"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/images/illustrations/facture-electronique.svg",
-       "type": "image"
-      },
-      {
        "url": "https://www.ciel.com/resourcesCiel/images/svg/cross.svg",
        "type": "other"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/js/libraries/modalPanel.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/js/libraries/commons.js",
-       "type": "script"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCiel/images/testimonies/Sage_50_temoignage_garage_salva.webp",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/images/svg/play.svg",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/images/component-success-story-with-quotation-and-large-picture/quote.svg",
-       "type": "image"
-      },
-      {
-       "url": "https://www.ciel.com/resourcesCommons/images/svg/social-media-icons.svg",
-       "type": "image"
-      },
-      {
-       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
-       "type": "script"
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/events.js",
@@ -5654,11 +5656,63 @@
        "type": "script"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=660151582.1795701573&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1896746270.1795701573&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgR2VzdGlvbiBDb21tZXJjaWFsZSIsImIiOiJTYWdlIiwibyI6W3sicCI6IjE4IiwiY3UiOiJFVVIifV19XQ&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~120385423~120469145~120469153~121246026~121246034&tft=1795701573173&tfd=1508&fmt=8",
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/modalPanel.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/commons.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/selected.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/tick.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/info.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/double-tick.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/testimonies/Sage_50_temoignage_garage_salva.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/svg/play.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/component-success-story-with-quotation-and-large-picture/quote.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/svg/social-media-icons.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=305375599.1795707140&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1610522273.1795707140&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgR2VzdGlvbiBDb21tZXJjaWFsZSIsImIiOiJTYWdlIiwibyI6W3sicCI6IjE4IiwiY3UiOiJFVVIifV19XQ&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117628656~120385423~120469145~120469153~121246026~121246034&tft=1795707140226&tfd=1858&fmt=8",
        "type": "fetch"
       },
       {
-       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=660151582.1795701573&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1896746270.1795701573&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgR2VzdGlvbiBDb21tZXJjaWFsZSIsImIiOiJTYWdlIiwibyI6W3sicCI6IjE4IiwiY3UiOiJFVVIifV19XQ&gtm=45He6bi0h2v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~120385423~120469145~120469153~121246026~121246034&tft=1795701573173&tfd=1508&fmt=3",
+       "url": "https://www.ciel.com/resourcesCiel/images/illustrations/facture-electronique.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=305375599.1795707140&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=structured_data&gclid=TEST_MON_20261126&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1610522273.1795707140&gclaw=TEST_MON_20261126&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgR2VzdGlvbiBDb21tZXJjaWFsZSIsImIiOiJTYWdlIiwibyI6W3sicCI6IjE4IiwiY3UiOiJFVVIifV19XQ&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117628656~120385423~120469145~120469153~121246026~121246034&tft=1795707140226&tfd=1858&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/image.aspx?url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&title=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&res=1366x900&accountid=61518&rt=1949&luid=05773ccd-9ff5-ef35-0af5-1c027029dd81&prev=b4ea0508-d3ff-67aa-b18b-68746d4cdde4&rnd=31466",
        "type": "image"
       },
       {
@@ -5686,12 +5740,12 @@
        "type": "script"
       },
       {
-       "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=947594965&t=pageview&_s=1&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&ul=fr-fr&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&sr=1366x900&vp=1366x900&_u=YGBAiEABBAAAgCAEK~&jid=2032844824&gjid=975944081&cid=1271471931.1795701573&tid=UA-53356708-1&_gid=163105207.1795701573&_slc=1&gtm=45He6bi0h2n71THQ38Jv71004762za200zd71004762xf1&cd3=1795701572848.t5x0th4&cd4=2026-11-26T13%3A59%3A32.848%2B00%3A00&cd9=Prospect&cd10=Client%20Abonn%C3%A9s&cd11=Not%20Available&cd12=Not%20Available&cd13=0.6788337443916558_1795701572851&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~120385423~120469145~120469153~121246026~121246034&cd2=1271471931.1795701573&z=1482091872",
-       "type": "xhr"
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "type": "script"
       },
       {
-       "url": "https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j102&tid=UA-53356708-1&cid=1271471931.1795701573&jid=2032844824&gjid=975944081&_gid=163105207.1795701573&_u=YGBAiEABBAAAgGAEK~&z=756770197",
-       "type": "xhr"
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "type": "script"
       },
       {
        "url": "https://www.ciel.com/resourcesCiel/js/libraries/tools.js",
@@ -5702,32 +5756,12 @@
        "type": "script"
       },
       {
-       "url": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795701573257&li_adsId=5897bb99-d8a2-46a3-aae4-05fb5d258fe6&pageLoadId=8698eb21-25a6-4920-b268-1e1dcd140d12&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
-       "type": "image"
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN&cx=c&gtm=4e6bh1",
+       "type": "script"
       },
       {
-       "url": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
-       "type": "fetch"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/image.aspx?url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&title=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&res=1366x900&accountid=61518&rt=1605&luid=39358253-0d15-4a60-19a5-62ad99bd9936&prev=8bb62cc3-dd03-693f-2cc0-f611f5349d09&rnd=91685",
-       "type": "image"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g",
-       "type": "ping"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/insight_tag_errors.gif?v=2&pid=58294&error=version%3A%201000050%20%7C%20WebsiteActions-1000050-TypeError%3A%20Failed%20to%20fetch%3B%20ErrorData%3A%20%7B%22domain%22%3A%22ciel.com%22%2C%22requestFetcher%22%3A%22fetch-keepalive%22%2C%22body%22%3A%22H4sIAAAAAAAAA3VRXYvbMBD8K2EfSgvWRZItfwhCOY5rCFw%2FaMy9lBJkae0TkWTXkmnLcf%2B9JLle%2B9A%2Bzs7O7O7sI0zWRJBfRM2b4msGUc92Svc4RzsGkIxSSgXNIFmPIFnViIoyUeW8LDIwo1c2gARt0V3p0UMGy%2BxAwkNKU5Tr9W9i7cbBngCJakAiqHbjYsi5MmBMdgxEj97jrK1yeKXi9OPtoJ01m%2FZ23x7ef%2Fxw4JSXjPHylY%2FaHf%2FJ9N1%2FJEvyhzgus8ZNmpU%2B2jAQPwabxvnMeTR28Zvnkg0DZPAdu2gT7u0QlPuM3xaMaWdAQlNhjlgjyXXdkSLHnDQmZ6QXghZNhV3d9ZDBpAa8G5U5a%2BqyqbHjjHChSlI0nJKOlzVhyIw2rKCGccjAxnZWITqV0IDslYuYgbPv1GUynMDWqpAuwNuoQT7CFLt9UglBkuLp5HJnwxHNLlxP04vNaZ%2FWJocgYa8GXAm62l6yX938yX71WgVtMQT0GNLqxqJ7afvrRW8ggwf0IMPiXAbxnFL7czq5f7re3h7ud%2Ftd%2BxzDLsSkgsbzEYXQtClrTqqcI%2Blr05OKM0065FXXCyFUI%2BDpFynFn8OaAgAA%22%7D&href=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
-       "type": "image"
-      },
-      {
-       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bi0h2v883700838za20ozb71004762zd71004762xf1&_p=1795701572578&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=1271471931.1795701573&frm=0&lps=1&pscdl=noapi&rcb=12&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938466~115938468~120213116~120385422~120469145~120469153~121246026~121246034&sid=1795701573&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&tfd=1705",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=1271471931.1795701573&gtm=45je6bi0h2v883700838za20ozb71004762zd71004762xf1&rcb=12&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938468~120213116~120385422~120469145~120469153~121246026~121246034",
-       "type": "ping"
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN",
+       "type": "script"
       },
       {
        "url": "https://www.ciel.com/ajaxpages/offers.aspx/gettarifs",
@@ -5746,19 +5780,19 @@
        "type": "script"
       },
       {
-       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a6096a071cccad1a",
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a609f1eeff3033aa",
        "type": "script"
       },
       {
-       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bi0h2v883700838za20ozb71004762zd71004762xf1&_p=1795701572578&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=1271471931.1795701573&frm=0&lps=1&pscdl=noapi&rcb=12&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938466~115938468~120213116~120385422~120469145~120469153~121246026~121246034&sid=1795701573&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&tfd=1705",
-       "type": "fetch"
+       "url": "https://collect.tealiumiq.com/sage/ciel/2/i.gif",
+       "type": "xhr"
       },
       {
-       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "url": "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795707140423",
        "type": "script"
       },
       {
-       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "url": "https://visitor-service.tealiumiq.com/sage/ciel/01a2187c78f4001c11c8af5c2e9a0008800c5080008f2?callback=utag.ut%5B%22writevaciel%22%5D&rnd=1795707140437",
        "type": "script"
       },
       {
@@ -5766,28 +5800,20 @@
        "type": "script"
       },
       {
-       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN&cx=c&gtm=4e6bi0h2",
-       "type": "script"
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795707139466&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=542031708.1795707140&frm=0&lps=1&pscdl=noapi&rcb=9&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938465~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034~123785233&sid=1795707140&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=542031708.1795707140&ep.epoch_timestamp=1795708940342&tfd=2175",
+       "type": "fetch"
       },
       {
-       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN",
-       "type": "script"
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=542031708.1795707140&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&rcb=9&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034~123785233",
+       "type": "ping"
       },
       {
-       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/h/g/jsd/oneshot/b9d4778be3d9/0.5177224876947288:1795699237:mloBu4qyQmIQCk5tozoX0PO8h3Dy8vLghG17zM2z0fY/a6096a071cccad1a",
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/h/g/jsd/oneshot/b9d4778be3d9/0.5177224876947288:1795699237:mloBu4qyQmIQCk5tozoX0PO8h3Dy8vLghG17zM2z0fY/a609f1eeff3033aa",
        "type": "xhr"
       },
       {
-       "url": "https://collect.tealiumiq.com/sage/ciel/2/i.gif",
-       "type": "xhr"
-      },
-      {
-       "url": "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795701573576",
-       "type": "script"
-      },
-      {
-       "url": "https://visitor-service.tealiumiq.com/sage/ciel/01a21827871900203635f7779ee40008800c5080008f2?callback=utag.ut%5B%22writevaciel%22%5D&rnd=1795701573587",
-       "type": "script"
+       "url": "https://www.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795707139466&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=542031708.1795707140&frm=0&lps=1&pscdl=noapi&rcb=9&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938465~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034~123785233&sid=1795707140&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=542031708.1795707140&ep.epoch_timestamp=1795708940342&tfd=2175",
+       "type": "fetch"
       },
       {
        "url": "https://api.bazaarvoice.com/data/batch.json?passKey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&apiversion=5.5&displaycode=13939-fr_fr&resource.q0=products&limit.q0=1",
@@ -5814,19 +5840,7 @@
        "type": "script"
       },
       {
-       "url": "https://analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bi0h2v894327700za200zb71004762zd71004762xf1&_p=1795701572578&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=1271471931.1795701573&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938466~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034&sid=1795701573&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=1271471931.1795701573&ep.epoch_timestamp=1795703373405&tfd=2075",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=1271471931.1795701573&gtm=45je6bi0h2v894327700za200zb71004762zd71004762xf1&rcb=1&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034",
-       "type": "ping"
-      },
-      {
-       "url": "https://www.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bi0h2v894327700za200zb71004762zd71004762xf1&_p=1795701572578&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=1271471931.1795701573&frm=0&lps=1&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938466~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034&sid=1795701573&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=1271471931.1795701573&ep.epoch_timestamp=1795703373405&tfd=2075",
-       "type": "fetch"
-      },
-      {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=ee403aca7c4926ec2f&BVBRANDID=7952fc5c-1a27-42fd-98cc-50c5e5617a21&BVBRANDSID=ebcc4669-b5a7-4fcd-ae1b-f7046ae9f0c4&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:bv-loader,bvProductVersion:%2713.19.3%27,cl:Diagnostic,deploymentZone:main_site,elapsedMs:%274.6000%27,endTime:%271954.6000%27,locale:fr_FR,name:timeToRunScout,startTime:%271950.0000%27,type:Performance))&_=h1hpgq",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=64002e8ce417f7b3&BVBRANDID=bf77398f-bdde-4116-ad03-af7d411a2c16&BVBRANDSID=ba641d11-9b2a-42b0-90b8-68f73af104c5&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:bv-loader,bvProductVersion:%2713.19.3%27,cl:Diagnostic,deploymentZone:main_site,elapsedMs:%271.3000%27,endTime:%272287.3000%27,locale:fr_FR,name:timeToRunScout,startTime:%272286.0000%27,type:Performance))&_=hdnuii",
        "type": "image"
       },
       {
@@ -5838,15 +5852,15 @@
        "type": "xhr"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=PageView&loadId=ee403aca7c4926ec2f&type=Embedded&BVBRANDID=7952fc5c-1a27-42fd-98cc-50c5e5617a21&BVBRANDSID=ebcc4669-b5a7-4fcd-ae1b-f7046ae9f0c4&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&href=https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&res=1366x900&lang=fr-fr&charset=UTF-8&geo=1&cookies=1&r_t=(con:22,dns:2,load:-1795701572579,req:641,res:243,tot:-1795701571665)&_=sgzo6f&ref=",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=PageView&loadId=64002e8ce417f7b3&type=Embedded&BVBRANDID=bf77398f-bdde-4116-ad03-af7d411a2c16&BVBRANDSID=ba641d11-9b2a-42b0-90b8-68f73af104c5&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&href=https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&res=1366x900&lang=fr-fr&charset=UTF-8&geo=1&cookies=1&r_t=(con:17,dns:1,load:-1795707139530,req:835,res:300,tot:-1795707138368)&_=of1twi&ref=",
        "type": "image"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=ee403aca7c4926ec2f&BVBRANDID=7952fc5c-1a27-42fd-98cc-50c5e5617a21&BVBRANDSID=ebcc4669-b5a7-4fcd-ae1b-f7046ae9f0c4&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&detail1=&detail2=&_=72jiim",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=64002e8ce417f7b3&BVBRANDID=bf77398f-bdde-4116-ad03-af7d411a2c16&BVBRANDSID=ba641d11-9b2a-42b0-90b8-68f73af104c5&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&detail1=&detail2=&_=nkgeu6",
        "type": "image"
       },
       {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=ee403aca7c4926ec2f&BVBRANDID=7952fc5c-1a27-42fd-98cc-50c5e5617a21&BVBRANDSID=ebcc4669-b5a7-4fcd-ae1b-f7046ae9f0c4&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&detail1=&detail2=&_=sywe23",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=64002e8ce417f7b3&BVBRANDID=bf77398f-bdde-4116-ad03-af7d411a2c16&BVBRANDSID=ba641d11-9b2a-42b0-90b8-68f73af104c5&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&detail1=&detail2=&_=rvl03m",
        "type": "image"
       },
       {
@@ -5858,20 +5872,20 @@
        "type": "script"
       },
       {
-       "url": "https://bam.nr-data.net/browser/connect/2/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&s=dc64105d2e084595",
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=64002e8ce417f7b3&BVBRANDID=bf77398f-bdde-4116-ad03-af7d411a2c16&BVBRANDSID=ba641d11-9b2a-42b0-90b8-68f73af104c5&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:RatingSummary,bvProductVersion:%272.63.12%27,cl:Diagnostic,deploymentZone:main_site,displaySegment:baseline,elapsedMs:0.39999999999417923,locale:fr_FR,name:bv_rating_summary_render_time,productId:S50cFacturation,startTime:2349.2999999999884,type:Performance))&_=u9xknn",
+       "type": "image"
+      },
+      {
+       "url": "https://bam.nr-data.net/browser/connect/2/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&s=5fa43f24d5fb6a31",
        "type": "xhr"
       },
       {
-       "url": "https://bam.nr-data.net/jserrors/1/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&to=MVBQYBBSCxEEBk1dWggac2cyHBUDAgBNUVgWWVNAB0BKEgQCXFdaCEFTXQxWF0wEFklM&rst=2254&s=dc64105d2e084595&ref=https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx&ptid=7e40d56536c1a298",
+       "url": "https://bam.nr-data.net/jserrors/1/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&to=MVBQYBBSCxEEBk1dWggac2cyHBUDAgBNUVgWWVNAB0BKEgQCXFdaCEFTXQxWF0wEFklM&rst=2708&s=5fa43f24d5fb6a31&ref=https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx&ptid=3ef247e61b52f693",
        "type": "xhr"
       },
       {
        "url": "https://mcm.entfabric-sage.com/mapping/https://www.ciel.com/*",
        "type": "xhr"
-      },
-      {
-       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=ee403aca7c4926ec2f&BVBRANDID=7952fc5c-1a27-42fd-98cc-50c5e5617a21&BVBRANDSID=ebcc4669-b5a7-4fcd-ae1b-f7046ae9f0c4&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:RatingSummary,bvProductVersion:%272.63.12%27,cl:Diagnostic,deploymentZone:main_site,displaySegment:baseline,elapsedMs:0.5999999999767169,locale:fr_FR,name:bv_rating_summary_render_time,productId:S50cFacturation,startTime:2161.4000000000233,type:Performance))&_=ydfrj3",
-       "type": "image"
       },
       {
        "url": "https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js",
@@ -5910,11 +5924,11 @@
        "type": "document"
       },
       {
-       "url": "https://apps.mypurecloud.ie/messenger/main.css",
+       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.css",
        "type": "stylesheet"
       },
       {
-       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.css",
+       "url": "https://apps.mypurecloud.ie/messenger/main.css",
        "type": "stylesheet"
       },
       {
@@ -5928,10 +5942,6 @@
       {
        "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
        "type": "script"
-      },
-      {
-       "url": "https://bam.eu01.nr-data.net/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=276&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=ed6a0a4596007456&af=err,spa,xhr,stn,ins&be=25&fe=201&dc=17&perf=%7B%22timing%22:%7B%22of%22:1795701574390,%22n%22:0,%22f%22:6,%22dn%22:6,%22dne%22:6,%22c%22:6,%22s%22:6,%22ce%22:6,%22rq%22:13,%22rp%22:25,%22rpe%22:27,%22di%22:42,%22ds%22:42,%22de%22:42,%22dc%22:219,%22l%22:219,%22le%22:226%7D,%22navigation%22:%7B%7D%7D",
-       "type": "xhr"
       },
       {
        "url": "https://apps.mypurecloud.ie/messenger/messagingMiddleware.min.js",
@@ -5974,7 +5984,15 @@
        "type": "script"
       },
       {
-       "url": "https://bam.eu01.nr-data.net/jserrors/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=304&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=ed6a0a4596007456",
+       "url": "https://bam.eu01.nr-data.net/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=216&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=9d14ac905e548853&af=err,spa,xhr,stn,ins&be=25&fe=94&dc=7&perf=%7B%22timing%22:%7B%22of%22:1795707141878,%22n%22:0,%22f%22:1,%22dn%22:1,%22dne%22:1,%22c%22:1,%22s%22:1,%22ce%22:1,%22rq%22:6,%22rp%22:25,%22rpe%22:26,%22di%22:33,%22ds%22:33,%22de%22:33,%22dc%22:118,%22l%22:118,%22le%22:119%7D,%22navigation%22:%7B%7D%7D",
+       "type": "xhr"
+      },
+      {
+       "url": "https://bam.eu01.nr-data.net/jserrors/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=246&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=9d14ac905e548853",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/fr.json",
        "type": "xhr"
       },
       {
@@ -5996,29 +6014,50 @@
       {
        "url": "https://apps.mypurecloud.ie/messenger/messenger.min.js",
        "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messagingservice.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/genesyscloud-messaging-transport.mod.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/genesys-bootstrap/plugins/genesysvendors.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795707139466&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=542031708.1795707140&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=2&tag_exp=115616985~115938465~115938469~118012009~120213116~120385422~120469145~120469153~121246026~121246034~123785234&sid=1795707139&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=scroll&epn.percent_scrolled=90&_et=12&tfd=6549",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795707139466&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=542031708.1795707140&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=2&tag_exp=115616985~115938465~115938469~118012009~120213116~120385422~120469145~120469153~121246026~121246034~123785234&sid=1795707139&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261126%26msclkid%3DTEST_MON_20261126%26fbclid%3DTEST_MON_20261126%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=scroll&epn.percent_scrolled=90&_et=12&tfd=6549",
+       "type": "fetch"
       }
      ],
      "cookies": {
       "CodeT": "",
       "ParrainageID": "",
-      "TemporyUserId": "75034bfe-db0f-4b57-b2d3-f7b6badbee27",
+      "TemporyUserId": "a494d0e1-13af-48a2-805f-fd10cf640201",
       "IDUser": "",
       "Visitor": "",
-      "_gcl_au": "1.1.660151582.1795701573",
-      "_cs_mk": "0.6788337443916558_1795701572851",
-      "_gid": "GA1.2.163105207.1795701573",
-      "_gac_UA-53356708-1": "1.1795701573.TEST_MON_20261126",
+      "_gcl_au": "1.1.305375599.1795707140",
+      "_cs_mk": "0.03864253009773089_1795707139674",
+      "_gid": "GA1.2.2046234264.1795707140",
+      "_gac_UA-53356708-1": "1.1795707140.TEST_MON_20261126",
       "_dc_gtm_UA-53356708-1": "1",
-      "nmstat": "8bb62cc3-dd03-693f-2cc0-f611f5349d09",
-      "_ga_8EYWV34H9Z": "GS2.1.s1795701573$o1$g0$t1795701573$j60$l0$h0",
-      "_ga": "GA1.1.1271471931.1795701573",
-      "utag_main": "v_id:01a21827871900203635f7779ee40008800c5080008f2$_sn:1$_se:1$_ss:1$_st:1795703373405$ses_id:1795701573405%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
-      "_gcl_aw": "GCL.1795701574.TEST_MON_20261126",
-      "_ga_PE4Z9JJWVN": "GS2.1.s1795701573$o1$g0$t1795701573$j60$l0$h0",
-      "BVBRANDID": "7952fc5c-1a27-42fd-98cc-50c5e5617a21",
-      "BVBRANDSID": "ebcc4669-b5a7-4fcd-ae1b-f7046ae9f0c4",
+      "_ga": "GA1.1.542031708.1795707140",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795707139$o1$g0$t1795707139$j60$l0$h0",
+      "nmstat": "b4ea0508-d3ff-67aa-b18b-68746d4cdde4",
+      "utag_main": "v_id:01a2187c78f4001c11c8af5c2e9a0008800c5080008f2$_sn:1$_se:1$_ss:1$_st:1795708940342$ses_id:1795707140342%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_gcl_aw": "GCL.1795707141.TEST_MON_20261126",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795707140$o1$g0$t1795707140$j60$l0$h0",
+      "BVBRANDID": "bf77398f-bdde-4116-ad03-af7d411a2c16",
+      "BVBRANDSID": "ba641d11-9b2a-42b0-90b8-68f73af104c5",
       "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
-      "swm_messenger_instance": "fr_wm_plus_cb"
+      "swm_messenger_instance": "fr_wm_plus_cb",
+      "swm_messenger_opened": "false"
      },
      "banner": false,
      "consent_tool": null,
@@ -6030,7 +6069,7 @@
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
-       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795701573576"
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795707140423"
       ],
       "utid": "sage/ciel/202611181017",
       "version": "ut4.49.202611181017",
@@ -6047,6 +6086,7 @@
       ],
       "data_layer_events": [
        "gtm.js",
+       "gtm.scrollDepth",
        "gtm.dom",
        "gtm.load",
        "gtm.scrollDepth"
@@ -6099,7 +6139,7 @@
      "doc_links": [
       "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
      ],
-     "collected_at": "2026-11-26T13:59:38.891Z"
+     "collected_at": "2026-11-26T15:32:25.878Z"
     },
     "post": {
      "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
@@ -6108,24 +6148,25 @@
      "cookies": {
       "CodeT": "",
       "ParrainageID": "",
-      "TemporyUserId": "75034bfe-db0f-4b57-b2d3-f7b6badbee27",
+      "TemporyUserId": "a494d0e1-13af-48a2-805f-fd10cf640201",
       "IDUser": "",
       "Visitor": "",
-      "_gcl_au": "1.1.660151582.1795701573",
-      "_cs_mk": "0.6788337443916558_1795701572851",
-      "_gid": "GA1.2.163105207.1795701573",
-      "_gac_UA-53356708-1": "1.1795701573.TEST_MON_20261126",
+      "_gcl_au": "1.1.305375599.1795707140",
+      "_cs_mk": "0.03864253009773089_1795707139674",
+      "_gid": "GA1.2.2046234264.1795707140",
+      "_gac_UA-53356708-1": "1.1795707140.TEST_MON_20261126",
       "_dc_gtm_UA-53356708-1": "1",
-      "nmstat": "8bb62cc3-dd03-693f-2cc0-f611f5349d09",
-      "_ga_8EYWV34H9Z": "GS2.1.s1795701573$o1$g0$t1795701573$j60$l0$h0",
-      "_ga": "GA1.1.1271471931.1795701573",
-      "utag_main": "v_id:01a21827871900203635f7779ee40008800c5080008f2$_sn:1$_se:1$_ss:1$_st:1795703373405$ses_id:1795701573405%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
-      "_gcl_aw": "GCL.1795701574.TEST_MON_20261126",
-      "_ga_PE4Z9JJWVN": "GS2.1.s1795701573$o1$g0$t1795701573$j60$l0$h0",
-      "BVBRANDID": "7952fc5c-1a27-42fd-98cc-50c5e5617a21",
-      "BVBRANDSID": "ebcc4669-b5a7-4fcd-ae1b-f7046ae9f0c4",
+      "_ga": "GA1.1.542031708.1795707140",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795707139$o1$g0$t1795707139$j60$l0$h0",
+      "nmstat": "b4ea0508-d3ff-67aa-b18b-68746d4cdde4",
+      "utag_main": "v_id:01a2187c78f4001c11c8af5c2e9a0008800c5080008f2$_sn:1$_se:1$_ss:1$_st:1795708940342$ses_id:1795707140342%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_gcl_aw": "GCL.1795707141.TEST_MON_20261126",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795707140$o1$g0$t1795707140$j60$l0$h0",
+      "BVBRANDID": "bf77398f-bdde-4116-ad03-af7d411a2c16",
+      "BVBRANDSID": "ba641d11-9b2a-42b0-90b8-68f73af104c5",
       "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
-      "swm_messenger_instance": "fr_wm_plus_cb"
+      "swm_messenger_instance": "fr_wm_plus_cb",
+      "swm_messenger_opened": "false"
      },
      "banner": false,
      "consent_tool": null,
@@ -6137,7 +6178,7 @@
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
        "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
-       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795701573576"
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795707140423"
       ],
       "utid": "sage/ciel/202611181017",
       "version": "ut4.49.202611181017",
@@ -6154,6 +6195,7 @@
       ],
       "data_layer_events": [
        "gtm.js",
+       "gtm.scrollDepth",
        "gtm.dom",
        "gtm.load",
        "gtm.scrollDepth"
@@ -6206,607 +6248,307 @@
      "doc_links": [
       "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
      ],
-     "collected_at": "2026-11-26T14:00:08.923Z",
+     "collected_at": "2026-11-26T15:32:55.901Z",
      "accepted": false
     }
    },
    {
-    "id": "fr-produits-sage-50cloud",
-    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
-    "status": 200,
-    "final_url": "https://www.sage.com/fr-fr/produits/sage-50cloud/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
-    "live_sample": true,
+    "id": "fr-home",
+    "url": "https://www.sage.com/fr-fr/",
+    "type": "content",
     "click_ids": {
      "gclid": "TEST_MON_20261126",
      "msclkid": "TEST_MON_20261126",
      "fbclid": "TEST_MON_20261126"
     },
-    "pre": {
-     "title": "Sage 50 - Comptabilité et Gestion commerciale | Sage France",
-     "requests": [],
-     "cookies": {
-      "AWSALBTG": "",
-      "AWSALBTGCORS": "",
-      "AWSALB": "",
-      "AWSALBCORS": "",
-      "sage_utm_preservation": "",
-      "shell#lang": "",
-      "utag_main_v_id": "",
-      "utag_main__sn": "",
-      "utag_main__se": "",
-      "utag_main__ss": "",
-      "utag_main__st": "",
-      "utag_main_ses_id": "",
-      "utag_main__pn": "",
-      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
-     },
-     "banner": true,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
-     "utag": {
-      "present": true,
-      "utid": "sage/fr-fr/202611190923",
-      "version": "ut4.53.202611190923",
-      "page_type": "article",
-      "language": "fr-fr",
-      "country": "fr",
-      "data_keys": 134
-     }
-    },
-    "post": {
-     "title": "Sage 50 - Comptabilité et Gestion commerciale | Sage France",
-     "requests": [
-      {
-       "url": "https://js.zi-scripts.com/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://lux.speedcurve.com/",
-       "type": "img"
-      },
-      {
-       "url": "https://c.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ipv6.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://collect-eu-west-1.tealiumiq.com/sage/en-gb/2/i.gif",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "beacon"
-      },
-      {
-       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "img"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/",
-       "type": "img"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/collect?pid=58294",
-       "type": "img"
-      },
-      {
-       "url": "https://connect.facebook.net/signals/config/499565794547363",
-       "type": "script"
-      },
-      {
-       "url": "https://csxd.contentsquare.net/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/activity;src=5201003;type=non_conv;cat=sage_0;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://5201003.fls.doubleclick.net/activityi;src=5201003;type=non_conv;cat=sage_0;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "iframe"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/rmkt/collect/990362824/?en=gtag.config&gclaw=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
-       "type": "fetch"
-      },
-      {
-       "url": "https://c.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://api-cdn.mypurecloud.ie/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://k-aeu1.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
-       "type": "beacon"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel",
-       "type": "beacon"
-      },
-      {
-       "url": "https://www.google.com/pagead/1p-user-list/990362824/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://www.google.de/pagead/1p-user-list/990362824/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
-       "type": "img"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel/act",
-       "type": "beacon"
-      },
-      {
-       "url": "https://srm.ba.contentsquare.net/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
-       "type": "iframe"
-      },
-      {
-       "url": "https://sagefr.solution.weborama.fr/fcgi-bin/dispatch.fcgi",
-       "type": "iframe"
-      },
-      {
-       "url": "https://prebid.smilewanted.com/track/post_click.php",
-       "type": "img"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/fr-fr/produits/sage-50cloud/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://secure.adnxs.com/getuidj",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://logx.optimizely.com/v1/events",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
-       "type": "img"
-      },
-      {
-       "url": "https://epsilon.6sense.com/v3/company/details",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
-       "type": "img"
-      },
-      {
-       "url": "https://bzrcdn.openai.com/pixel-config/v1/1741c1VrTs1u4KcUA6o1RQ.json",
-       "type": "fetch"
-      },
-      {
-       "url": "https://sagefr.pxf.io/xc/7320767/3382126/44908",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://pixel-config.reddit.com/pixels/a2_jcwvn8khk1j0/config",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://alb.reddit.com/rp?id=a2_jcwvn8khk1j0&event=PageVisit",
-       "type": "fetch"
-      },
-      {
-       "url": "https://cdn.segment.com/v1/projects/8pB0u0DoFwbi0VKKjzFhWaMbF8JblpoJ/settings",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ads-engagement.presage.io/v2/pv/img.gif",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
-       "type": "img"
-      },
-      {
-       "url": "https://bzr.openai.com/v1/sdk/events?pid=1741c1VrTs1u4KcUA6o1RQ",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.ojrq.net/p/",
-       "type": "img"
-      },
-      {
-       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://p1.outbrain.com/v2/p/js/63878/PAGE_VIEW/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://tr.capterra.com/events/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://events.eu1.segmentapis.com/v1/p",
-       "type": "fetch"
-      },
-      {
-       "url": "https://events.eu1.segmentapis.com/v1/i",
-       "type": "fetch"
-      }
-     ],
-     "cookies": {
-      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
-      "OptanonAlertBoxClosed": "",
-      "_ga": "",
-      "_fbp": "",
-      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
-      "_gcl_au": "1.1.1555904567.1795702542",
-      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126",
-      "_ttp": ""
-     },
-     "banner": false,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
-     "utag": {
-      "present": true,
-      "utid": "sage/fr-fr/202611190923",
-      "version": "ut4.53.202611190923",
-      "page_type": "article",
-      "language": "fr-fr",
-      "country": "fr",
-      "data_keys": 134
-     },
-     "accepted": true
-    },
-    "blocked": false
+    "live_sample": false,
+    "status": 403,
+    "final_url": "https://www.sage.com/fr-fr/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": true,
+    "pre": null,
+    "post": null
+   },
+   {
+    "id": "fr-cp-50100jemaitrise",
+    "url": "https://www.sage.com/fr-fr/cp/50100jemaitrise/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-dematerialisation-facture-electronique",
+    "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-experts-comptables",
+    "url": "https://www.sage.com/fr-fr/experts-comptables/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-experts-comptables-produits-sage-generation-exp",
+    "url": "https://www.sage.com/fr-fr/experts-comptables/produits/sage-generation-experts-connect/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-experts-comptables-saisie-comptable-automatique",
+    "url": "https://www.sage.com/fr-fr/experts-comptables/saisie-comptable-automatique/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-comptabilite",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-gestion-commerciale",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/gestion-commerciale/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-sage-automatisation-comptable",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-automatisation-comptable/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-sage-recouvrement-creances",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-recouvrement-creances/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-50cloud",
+    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-50cloud-test-gratuit",
+    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/",
+    "type": "trial",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-active",
+    "url": "https://www.sage.com/fr-fr/produits/sage-active/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-bi-reporting",
+    "url": "https://www.sage.com/fr-fr/produits/sage-bi-reporting/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-business-reporting",
+    "url": "https://www.sage.com/fr-fr/produits/sage-business-reporting/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-data-clean-and-control",
+    "url": "https://www.sage.com/fr-fr/produits/sage-data-clean-and-control/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-frp-1000",
+    "url": "https://www.sage.com/fr-fr/produits/sage-frp-1000/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-sales-management",
+    "url": "https://www.sage.com/fr-fr/produits/sage-sales-management/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-xrt-advanced",
+    "url": "https://www.sage.com/fr-fr/produits/sage-xrt-advanced/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
    },
    {
     "id": "fr-sbc-intacct",
     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
-    "status": 200,
-    "final_url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
-    "live_sample": false,
-    "click_ids": {
-     "gclid": "TEST_MON_20261126",
-     "msclkid": "TEST_MON_20261126",
-     "fbclid": "TEST_MON_20261126"
-    },
-    "pre": {
-     "title": "Sage Intacct - Logiciel de gestion financière | Sage France",
-     "requests": [
-      {
-       "url": "https://view.ceros.com/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://widget.trustpilot.com/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://csxd.contentsquare.net/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://c.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://k-aeu1.contentsquare.net/",
-       "type": "xmlhttprequest"
-      }
-     ],
-     "cookies": {
-      "AWSALBTG": "",
-      "AWSALBTGCORS": "",
-      "AWSALB": "",
-      "AWSALBCORS": "",
-      "sage_utm_preservation": "",
-      "shell#lang": "",
-      "_cs_c": "",
-      "_cs_id": "",
-      "_hjHasCachedUserAttributes": "",
-      "_cs_s": "",
-      "utag_main_v_id": "",
-      "utag_main__sn": "",
-      "utag_main_ses_id": "",
-      "utag_main__pn": "",
-      "_cs_mk": "",
-      "utag_main__ss": "",
-      "utag_main__se": "",
-      "utag_main__st": "",
-      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
-     },
-     "banner": true,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
-     "utag": {
-      "present": true,
-      "utid": "sage/fr-fr/202611190923",
-      "version": "ut4.53.202611190923",
-      "page_type": "article",
-      "language": "fr-fr",
-      "country": "fr",
-      "data_keys": 147
-     }
-    },
-    "post": {
-     "title": "Sage Intacct - Logiciel de gestion financière | Sage France",
-     "requests": [
-      {
-       "url": "https://c.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://k-aeu1.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "beacon"
-      },
-      {
-       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "img"
-      },
-      {
-       "url": "https://js.zi-scripts.com/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://collect-eu-west-1.tealiumiq.com/sage/en-gb/2/i.gif",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://lux.speedcurve.com/",
-       "type": "img"
-      },
-      {
-       "url": "https://c.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ipv6.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/collect?pid=58294",
-       "type": "img"
-      },
-      {
-       "url": "https://www.google.com/rmkt/collect/990362824/?en=gtag.config&gclaw=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/",
-       "type": "img"
-      },
-      {
-       "url": "https://connect.facebook.net/signals/config/499565794547363",
-       "type": "script"
-      },
-      {
-       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
-       "type": "fetch"
-      },
-      {
-       "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
-       "type": "beacon"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel",
-       "type": "beacon"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://api-cdn.mypurecloud.ie/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://www.google.com/pagead/1p-user-list/990362824/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://www.google.de/pagead/1p-user-list/990362824/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel/act",
-       "type": "beacon"
-      },
-      {
-       "url": "https://beacon.speedcurve.com/",
-       "type": "beacon"
-      },
-      {
-       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
-       "type": "img"
-      },
-      {
-       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
-       "type": "iframe"
-      },
-      {
-       "url": "https://sagefr.solution.weborama.fr/fcgi-bin/dispatch.fcgi",
-       "type": "iframe"
-      },
-      {
-       "url": "https://prebid.smilewanted.com/track/post_click.php",
-       "type": "img"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://pixel-config.reddit.com/pixels/a2_jcwvn8khk1j0/config",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://alb.reddit.com/rp?id=a2_jcwvn8khk1j0&event=PageVisit",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ads-engagement.presage.io/v2/pv/img.gif",
-       "type": "img"
-      },
-      {
-       "url": "https://p1.outbrain.com/v2/p/js/63878/PAGE_VIEW/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://logx.optimizely.com/v1/events",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://secure.adnxs.com/getuidj",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://cdn.segment.com/v1/projects/8pB0u0DoFwbi0VKKjzFhWaMbF8JblpoJ/settings",
-       "type": "fetch"
-      },
-      {
-       "url": "https://bzrcdn.openai.com/pixel-config/v1/1741c1VrTs1u4KcUA6o1RQ.json",
-       "type": "fetch"
-      },
-      {
-       "url": "https://sagefr.pxf.io/xc/7320767/3382126/44908",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
-       "type": "img"
-      },
-      {
-       "url": "https://epsilon.6sense.com/v3/company/details",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://tr.capterra.com/events/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
-       "type": "img"
-      }
-     ],
-     "cookies": {
-      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
-      "OptanonAlertBoxClosed": "",
-      "_ga": "",
-      "_fbp": "",
-      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
-      "_gcl_au": "1.1.1555904567.1795702542",
-      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126",
-      "_ttp": ""
-     },
-     "banner": false,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
-     "utag": {
-      "present": true,
-      "utid": "sage/fr-fr/202611190923",
-      "version": "ut4.53.202611190923",
-      "page_type": "article",
-      "language": "fr-fr",
-      "country": "fr",
-      "data_keys": 147
-     },
-     "accepted": true
-    },
-    "blocked": false
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-bon-commandes",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/bon-commandes/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-compte-crediteur",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-crediteur/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-compte-debiteur",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-debiteur/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-multi-societes",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/multi-societes/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-consolidation-comptable",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/extended-capabilities/consolidation-comptable/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-logiciels-gestionnaire-de-paie",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/logiciels/gestionnaire-de-paie/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3-gestion-de-la-production",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/fonctionnalites-produit/gestion-de-la-production/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3-secteurs-agroalimentaire",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/agroalimentaire/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3-secteurs-construction",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/construction/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-cp-logiciel-comptabilite",
+    "url": "https://www.sage.com/fr-fr/cp/logiciel-comptabilite/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-intacct-ressources-visites-p",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/ressources/visites-produits/general/video/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-intacct-resources-product-to",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/resources/product-tours/general/brochure-mobile/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-sage-x3-visite-guidee-du-pro",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/visite-guidee-du-produit/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
    }
   ],
-  "journeys": []
+  "journeys": [
+   {
+    "id": "fr-j-sage50-trial",
+    "name": "Sage 50 product page -> free trial page",
+    "blocked": true,
+    "steps": []
+   }
+  ]
  }
 }

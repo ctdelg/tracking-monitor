@@ -10617,534 +10617,1034 @@
   ]
  },
  "browser": {
-  "source": "claude-browser",
-  "collected_at": "2026-11-26T14:25:03Z",
+  "source": "playwright",
+  "collected_at": "2026-11-26T15:31:23Z",
   "visits": [
    {
-    "id": "de-produkte-sage-active",
-    "url": "https://www.sage.com/de-de/produkte/sage-active/",
-    "status": 200,
-    "final_url": "https://www.sage.com/de-de/produkte/sage-active/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
-    "live_sample": true,
+    "id": "de-cp-payroll-standard-shopping",
+    "url": "https://www.sage.com/de-de/cp/payroll-standard-shopping/",
+    "type": "pricing",
     "click_ids": {
      "gclid": "TEST_MON_20261126",
      "msclkid": "TEST_MON_20261126",
      "fbclid": "TEST_MON_20261126"
     },
-    "pre": {
-     "title": "Sage Active - Online Buchhaltung | Sage Deutschland",
-     "requests": [
-      {
-       "url": "https://widget.trustpilot.com/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://api.sageimagine.com/",
-       "type": "xmlhttprequest"
-      }
-     ],
-     "cookies": {
-      "sage_utm_preservation": "",
-      "shell#lang": "",
-      "SitecoreVisitorId": "",
-      "AWSALBTG": "",
-      "AWSALBTGCORS": "",
-      "AWSALB": "",
-      "AWSALBCORS": "",
-      "utag_main_v_id": "",
-      "utag_main__sn": "",
-      "utag_main_ses_id": "",
-      "utag_main__pn": "",
-      "utag_main__ss": "",
-      "utag_main__se": "",
-      "utag_main__st": "",
-      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
-     },
-     "banner": true,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
-     "utag": {
-      "present": true,
-      "utid": "sage/de-de/202611190912",
-      "version": "ut4.53.202611190912",
-      "page_type": "article",
-      "language": "de-de",
-      "country": "de",
-      "data_keys": 134
-     }
-    },
-    "post": {
-     "title": "Sage Active - Online Buchhaltung | Sage Deutschland",
-     "requests": [
-      {
-       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/collect?pid=58294",
-       "type": "img"
-      },
-      {
-       "url": "https://connect.facebook.net/signals/config/499565794547363",
-       "type": "script"
-      },
-      {
-       "url": "https://js.zi-scripts.com/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "beacon"
-      },
-      {
-       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "img"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/",
-       "type": "img"
-      },
-      {
-       "url": "https://lux.speedcurve.com/",
-       "type": "img"
-      },
-      {
-       "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/970123043/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://c.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ipv6.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
-       "type": "beacon"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel",
-       "type": "beacon"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel/act",
-       "type": "beacon"
-      },
-      {
-       "url": "https://csxd.contentsquare.net/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://api-cdn.mypurecloud.ie/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://apps.mypurecloud.ie/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://c.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://k-aeu1.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
-       "type": "iframe"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/de-de/produkte/sage-active/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://cdn.segment.com/v1/projects/oG2jCj9scr1uz5Ke9wSECTyRxsJapDEJ/settings",
-       "type": "fetch"
-      },
-      {
-       "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygvhSH91QA6V.json",
-       "type": "fetch"
-      },
-      {
-       "url": "https://logx.optimizely.com/v1/events",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/de-de/*",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://secure.adnxs.com/getuidj",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/de-de/produkte/sage-active/*",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
-       "type": "img"
-      },
-      {
-       "url": "https://epsilon.6sense.com/v3/company/details",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://sagegmbh.sjv.io/xur/27498",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
-       "type": "img"
-      },
-      {
-       "url": "https://events.eu1.segmentapis.com/v1/p",
-       "type": "fetch"
-      },
-      {
-       "url": "https://events.eu1.segmentapis.com/v1/i",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.ojrq.net/p/",
-       "type": "img"
-      },
-      {
-       "url": "https://bzr.openai.com/v1/sdk/events?pid=KKEia5xXwqygvhSH91QA6V",
-       "type": "fetch"
-      }
-     ],
-     "cookies": {
-      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
-      "OptanonAlertBoxClosed": "",
-      "_ga": "",
-      "_fbp": "",
-      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
-      "_gcl_au": "1.1.1555904567.1795702542",
-      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126",
-      "_ttp": ""
-     },
-     "banner": false,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
-     "utag": {
-      "present": true,
-      "utid": "sage/de-de/202611190912",
-      "version": "ut4.53.202611190912",
-      "page_type": "article",
-      "language": "de-de",
-      "country": "de",
-      "data_keys": 134
-     },
-     "accepted": true
-    },
-    "blocked": false
+    "live_sample": false,
+    "status": 403,
+    "final_url": "https://www.sage.com/de-de/cp/payroll-standard-shopping/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": true,
+    "pre": null,
+    "post": null
+   },
+   {
+    "id": "de-cp-lohnabrechnung-mobile",
+    "url": "https://www.sage.com/de-de/cp/lohnabrechnung-mobile/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-payroll-essentials-shopping",
+    "url": "https://www.sage.com/de-de/cp/payroll-essentials-shopping/",
+    "type": "pricing",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-lohnabrechnungv6",
+    "url": "https://www.sage.com/de-de/cp/lohnabrechnungv6/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-payroll-premium-shopping",
+    "url": "https://www.sage.com/de-de/cp/payroll-premium-shopping/",
+    "type": "pricing",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-unternehmen-ueber-sage",
+    "url": "https://www.sage.com/de-de/unternehmen/ueber-sage/",
+    "type": "content",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-recruiting",
+    "url": "https://www.sage.com/de-de/cp/hr/recruiting/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-dienstplanung",
+    "url": "https://www.sage.com/de-de/cp/hr/dienstplanung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-zeiterfassung",
+    "url": "https://www.sage.com/de-de/cp/hr/zeiterfassung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-hr-payroll",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-payroll/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-people-analytics",
+    "url": "https://www.sage.com/de-de/cp/hr/people-analytics/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-hr-suite-personal-software-persona",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/personalabrechnung/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-ausgabenmanagement",
+    "url": "https://www.sage.com/de-de/cp/hr/ausgabenmanagement/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-performance-management",
+    "url": "https://www.sage.com/de-de/cp/hr/performance-management/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-hr-software-personalkostenplanung",
+    "url": "https://www.sage.com/de-de/hr-software/personalkostenplanung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-personalmanagement",
+    "url": "https://www.sage.com/de-de/cp/hr/personalmanagement/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-digitale-personalakte",
+    "url": "https://www.sage.com/de-de/cp/hr/digitale-personalakte/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-abwesenheitsmanagement",
+    "url": "https://www.sage.com/de-de/cp/hr/abwesenheitsmanagement/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-personalabrechnung",
+    "url": "https://www.sage.com/de-de/cp/hr/personalabrechnung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-hr-software-entgelttransparenzgesetz",
+    "url": "https://www.sage.com/de-de/hr-software/entgelttransparenzgesetz/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-hr-software-personaleinsatzplanung-software",
+    "url": "https://www.sage.com/de-de/hr-software/personaleinsatzplanung-software/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-hr-funktionen-mitarbeiter-app",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/hr/funktionen/mitarbeiter-app/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-hr-suite-personal-software",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-hr-suite-personal-software-zeitwir",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/zeitwirtschaft/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-hr-suite-personal-software-reiseko",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/reisekosten/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-hr-suite-personal-software-bewerbe",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/bewerbermanagement-software/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-hr-suite-personal-software-persona-2",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/personalmanagement/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-people-talent-management",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/talent-management/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-people-personaldaten-analyse",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/personaldaten-analyse/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-people",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/people/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-people-mitarbeitererfahrung-management",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/mitarbeitererfahrung-management/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-people-personal-management",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/personal-management/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-people-lohngestaltung",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/people/produktmerkmale/lohngestaltung/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-hr",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/hr/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-zeiterfassungv2",
+    "url": "https://www.sage.com/de-de/cp/hr/zeiterfassungv2/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-hr-hr-software",
+    "url": "https://www.sage.com/de-de/cp/hr/hr-software/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-vertrauen-sicherheit",
+    "url": "https://www.sage.com/de-de/vertrauen-sicherheit/",
+    "type": "content",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-hr-software-mitarbeiterportal",
+    "url": "https://www.sage.com/de-de/hr-software/mitarbeiterportal/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-hr-software-zeiterfassung",
+    "url": "https://www.sage.com/de-de/hr-software/zeiterfassung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-hr-software",
+    "url": "https://www.sage.com/de-de/hr-software/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-intacct",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-erp-cashflow",
+    "url": "https://www.sage.com/de-de/cp/erp/cashflow/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-intacct-produktfunktionen",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/produktfunktionen/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-intacct-pf-kernfunktionen",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/produktfunktionen/kernfunktionen/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-intacct-pricing",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/pricing/",
+    "type": "pricing",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-erp-finanzmanagement-loesung",
+    "url": "https://www.sage.com/de-de/cp/erp/finanzmanagement-loesung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
    },
    {
     "id": "de-cp-sage-intacct",
     "url": "https://www.sage.com/de-de/cp/sage-intacct/",
-    "status": 200,
-    "final_url": "https://www.sage.com/de-de/cp/sage-intacct/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
-    "live_sample": false,
-    "click_ids": {
-     "gclid": "TEST_MON_20261126",
-     "msclkid": "TEST_MON_20261126",
-     "fbclid": "TEST_MON_20261126"
-    },
-    "pre": {
-     "title": "Sage Intacct Finanzmanagement-Software | Sage Intacct DE",
-     "requests": [],
-     "cookies": {
-      "sage_utm_preservation": "",
-      "shell#lang": "",
-      "AWSALBTG": "",
-      "AWSALBTGCORS": "",
-      "AWSALB": "",
-      "AWSALBCORS": "",
-      "utag_main_v_id": "",
-      "utag_main__sn": "",
-      "utag_main__se": "",
-      "utag_main__ss": "",
-      "utag_main__st": "",
-      "utag_main_ses_id": "",
-      "utag_main__pn": "",
-      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
-     },
-     "banner": true,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
-     "utag": {
-      "present": true,
-      "utid": "sage/de-de/202611190912",
-      "version": "ut4.53.202611190912",
-      "page_type": "article",
-      "language": "de-de",
-      "country": "de",
-      "data_keys": 137
-     }
-    },
-    "post": {
-     "title": "Sage Intacct Finanzmanagement-Software | Sage Intacct DE",
-     "requests": [
-      {
-       "url": "https://collect.tealiumiq.com/sage/en-gb/2/i.gif",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/collect?pid=58294",
-       "type": "img"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=DC-5195550&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://ad.doubleclick.net/activity;src=5195550;type=sageg0;cat=dynam0;gclaw=TEST_MON_20261126;gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/rmkt/collect/970123043/?en=gtag.config&gclaw=TEST_MON_20261126",
-       "type": "fetch"
-      },
-      {
-       "url": "https://www.google.com/ccm/collect?tid=AW-970123043&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://js.zi-scripts.com/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://connect.facebook.net/signals/config/499565794547363",
-       "type": "script"
-      },
-      {
-       "url": "https://lux.speedcurve.com/",
-       "type": "img"
-      },
-      {
-       "url": "https://c.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ipv6.6sc.co/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://px.ads.linkedin.com/wa/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "fetch"
-      },
-      {
-       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "beacon"
-      },
-      {
-       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
-       "type": "img"
-      },
-      {
-       "url": "https://61518.global.siteimproveanalytics.io/",
-       "type": "img"
-      },
-      {
-       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/970123043/?en=gtag.config",
-       "type": "img"
-      },
-      {
-       "url": "https://csxd.contentsquare.net/",
-       "type": "iframe"
-      },
-      {
-       "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
-       "type": "beacon"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel",
-       "type": "beacon"
-      },
-      {
-       "url": "https://analytics.tiktok.com/api/v2/pixel/act",
-       "type": "beacon"
-      },
-      {
-       "url": "https://c.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://k-aeu1.contentsquare.net/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
-       "type": "iframe"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/de-de/cp/sage-intacct/",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://cdn.segment.com/v1/projects/oG2jCj9scr1uz5Ke9wSECTyRxsJapDEJ/settings",
-       "type": "fetch"
-      },
-      {
-       "url": "https://bzrcdn.openai.com/pixel-config/v1/KKEia5xXwqygvhSH91QA6V.json",
-       "type": "fetch"
-      },
-      {
-       "url": "https://secure.adnxs.com/getuidj",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://logx.optimizely.com/v1/events",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/de-de/*",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
-       "type": "img"
-      },
-      {
-       "url": "https://epsilon.6sense.com/v3/company/details",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
-       "type": "img"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
-       "type": "img"
-      },
-      {
-       "url": "https://bzr.openai.com/v1/sdk/events?pid=KKEia5xXwqygvhSH91QA6V",
-       "type": "fetch"
-      },
-      {
-       "url": "https://sagegmbh.sjv.io/xur/27498",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/de-de/cp/sage-intacct/*",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
-       "type": "img"
-      },
-      {
-       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/de-de/cp/*",
-       "type": "xmlhttprequest"
-      },
-      {
-       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
-       "type": "fetch"
-      },
-      {
-       "url": "https://events.eu1.segmentapis.com/v1/p",
-       "type": "fetch"
-      },
-      {
-       "url": "https://events.eu1.segmentapis.com/v1/i",
-       "type": "fetch"
-      }
-     ],
-     "cookies": {
-      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
-      "OptanonAlertBoxClosed": "",
-      "_ga": "",
-      "_fbp": "",
-      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
-      "_gcl_au": "1.1.1555904567.1795702542",
-      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126",
-      "_ttp": ""
-     },
-     "banner": false,
-     "consent_tool": "onetrust",
-     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
-     "utag": {
-      "present": true,
-      "utid": "sage/de-de/202611190912",
-      "version": "ut4.53.202611190912",
-      "page_type": "article",
-      "language": "de-de",
-      "country": "de",
-      "data_keys": 137
-     },
-     "accepted": true
-    },
-    "blocked": false
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-intacct-pf-plattform",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/produktfunktionen/plattform/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-erp-controlling-planung",
+    "url": "https://www.sage.com/de-de/cp/erp/controlling-planung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-erp-billing-debitoren-kreditoren",
+    "url": "https://www.sage.com/de-de/cp/erp/billing-debitoren-kreditoren/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-erp-globales-finanzmanagement",
+    "url": "https://www.sage.com/de-de/cp/erp/globales-finanzmanagement/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-erp-buchhaltung",
+    "url": "https://www.sage.com/de-de/cp/erp/buchhaltung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-metallbauer-und-schlosser",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/metallbauer-und-schlosser/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-buchhaltung-software-online",
+    "url": "https://www.sage.com/de-de/buchhaltung-software/online/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-active",
+    "url": "https://www.sage.com/de-de/produkte/sage-active/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-50-handwerk",
+    "url": "https://www.sage.com/de-de/produkte/sage-50-handwerk/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-hoch-und-tiefbau",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/hoch-und-tiefbau/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-active-essentials-shoppingv2",
+    "url": "https://www.sage.com/de-de/cp/active-essentials-shoppingv2/",
+    "type": "pricing",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-active-starter-shopping",
+    "url": "https://www.sage.com/de-de/cp/active-starter-shopping/",
+    "type": "pricing",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-buchhaltung-software",
+    "url": "https://www.sage.com/de-de/buchhaltung-software/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-tischler-und-schreiner",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/tischler-und-schreiner/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-dachdecker-und-zimmerer",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/dachdecker-und-zimmerer/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-maler-lackierer-und-trockenbau",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/maler-lackierer-und-trockenbau/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-50connected",
+    "url": "https://www.sage.com/de-de/produkte/sage-50connected/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-elektriker",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/elektriker/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-raumausstatter",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/raumausstatter/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-unternehmensgroessen-kleinunternehmen",
+    "url": "https://www.sage.com/de-de/unternehmensgroessen/kleinunternehmen/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-50-handwerk-gewerke",
+    "url": "https://www.sage.com/de-de/produkte/sage-50-handwerk/gewerke/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-boden-und-fliesenleger",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/boden-und-fliesenleger/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-50connected-v2",
+    "url": "https://www.sage.com/de-de/produkte/sage-50connected-v2/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handwerk-garten-und-landschaftsbau",
+    "url": "https://www.sage.com/de-de/branchen/handwerk/garten-und-landschaftsbau/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-sage-active-mobile",
+    "url": "https://www.sage.com/de-de/cp/sage-active-mobile/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-buchhaltung-software-mac",
+    "url": "https://www.sage.com/de-de/buchhaltung-software/mac/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-ecommerce",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/ecommerce/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100-crm",
+    "url": "https://www.sage.com/de-de/produkte/sage-100-crm/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-fertigung",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/fertigung/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100cloud",
+    "url": "https://www.sage.com/de-de/produkte/sage-100cloud/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100-erp",
+    "url": "https://www.sage.com/de-de/produkte/sage-100-erp/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-handel",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/handel/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-warenwirtsch",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/warenwirtschaft/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-sales-management",
+    "url": "https://www.sage.com/de-de/produkte/sage-sales-management/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100cloud-online-shop",
+    "url": "https://www.sage.com/de-de/produkte/sage-100cloud/online-shop/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100-warenwirtschaft",
+    "url": "https://www.sage.com/de-de/produkte/sage-100/warenwirtschaft/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100-rechnungswesen",
+    "url": "https://www.sage.com/de-de/produkte/sage-100/rechnungswesen/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-beschaffung",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/beschaffung/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100cloud-produktion",
+    "url": "https://www.sage.com/de-de/produkte/sage-100cloud/produktion/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-technischer",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/technischer-grosshandel/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-kmu",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/kmu/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100cloud-cloud",
+    "url": "https://www.sage.com/de-de/produkte/sage-100cloud/cloud/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100cloud-xrm",
+    "url": "https://www.sage.com/de-de/produkte/sage-100cloud/xrm/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100cloud-rechnungswesen",
+    "url": "https://www.sage.com/de-de/produkte/sage-100cloud/rechnungswesen/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-operations-einsatzbereiche-lagerverwalt",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/einsatzbereiche/lagerverwaltung/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte-sage-100cloud-warenwirtschaft",
+    "url": "https://www.sage.com/de-de/produkte/sage-100cloud/warenwirtschaft/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-sage-operations-mobile",
+    "url": "https://www.sage.com/de-de/cp/sage-operations-mobile/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3-produkttour",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/produkttour/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-webinar-sage-x3",
+    "url": "https://www.sage.com/de-de/cp/webinar-sage-x3/",
+    "type": "form",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3-industrie-chemikalien",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/chemikalien/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-erp-software-produktionsplanung",
+    "url": "https://www.sage.com/de-de/erp-software/produktionsplanung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3-industrie-lebensmittel",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/lebensmittel/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3-industrie-produktion",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/produktion/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3-industrie-distribution",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/distribution/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3-industrie",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-dienstleistungsbranche",
+    "url": "https://www.sage.com/de-de/branchen/dienstleistungsbranche/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-erfolgsgeschichten",
+    "url": "https://www.sage.com/de-de/erfolgsgeschichten/",
+    "type": "content",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-sage-x3-industrie-prozessfertigung",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/industrie/prozessfertigung/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-cp-wechsel-zu-sage-x3",
+    "url": "https://www.sage.com/de-de/cp/wechsel-zu-sage-x3/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-branchen-handel",
+    "url": "https://www.sage.com/de-de/branchen/handel/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-produkte",
+    "url": "https://www.sage.com/de-de/produkte/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-home",
+    "url": "https://www.sage.com/de-de/",
+    "type": "content",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-unternehmensgroessen-mittlere-unternehmen",
+    "url": "https://www.sage.com/de-de/unternehmensgroessen/mittlere-unternehmen/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sage-ai",
+    "url": "https://www.sage.com/de-de/sage-ai/",
+    "type": "content",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-warum-sich-kunden-fuer-sage-entscheiden",
+    "url": "https://www.sage.com/de-de/warum-sich-kunden-fuer-sage-entscheiden/",
+    "type": "content",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-intacct-resources-white-papers-erfolgscode",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/resources/white-papers/erfolgscode/",
+    "type": "form",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "de-sbc-intacct-resources-die-neue-oekonomie-der-ki",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/resources/die-neue-oekonomie-der-ki-im-finanzwesen/",
+    "type": "form",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-produkte-sage-hr-suite-personal-software-produkt",
+    "url": "https://www.sage.com/de-de/produkte/sage-hr-suite-personal-software/produkttour/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-hr-hr-produkttour",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/hr/hr-produkttour/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-people-interaktive-produktto",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/people/interaktive-produkttour/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-hr-sage-hr-produkttour",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/hr/sage-hr-produkttour/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-intacct-material-produkttour",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/material/produkttours/ueberblick/start/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-intacct-ressourcen-produktto",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/intacct/ressourcen/produkttours/ueberblick/start/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-produkte-sage-active-sage-active-produkttour",
+    "url": "https://www.sage.com/de-de/produkte/sage-active/sage-active-produkttour/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-produkte-sage-50connected-ihre-testversion",
+    "url": "https://www.sage.com/de-de/produkte/sage-50connected/ihre-testversion/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-sage-operations-produkttour",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-operations/produkttour/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-sage-x3-produkt-tour",
+    "url": "https://www.sage.com/de-de/sage-business-cloud/sage-x3/produkt-tour",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
    }
   ],
-  "journeys": []
+  "journeys": [
+   {
+    "id": "de-j-active-trial",
+    "name": "Sage Active -> trial/buy checkout entry (no submit)",
+    "blocked": true,
+    "steps": []
+   }
+  ]
  }
 }

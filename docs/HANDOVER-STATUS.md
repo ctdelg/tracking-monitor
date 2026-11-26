@@ -1,30 +1,34 @@
 # Handover status – EU Tracking Monitor
 
-Status as of 2026-11-17. Owner today: Marius Kübler. Future operator: Carolina Torres.
+Status as of 2026-11-26. Owner today: Marius Kübler. Future operator: Carolina Torres.
 The step-by-step set-up guide is in [HANDOVER.md](HANDOVER.md). This page says where we are and what is left.
 
 ## Where we are
 
 | Area | Status |
 |---|---|
-| Checker (Python, `monitor/`) | Built and tested. Runs locally for all five markets (DE, AT, FR, ES, PT). |
-| Market configuration | DE 116 paid landing pages and 136 lead forms. FR 34 URLs and 49 forms. AT 6 pages and 2 form journeys on www.sagedpw.at. ES and PT have smaller lists. |
-| Findings | DE tag 98 (Floodlight form submit) does not fire for web-shop trials and purchases. FR tag 129 has the same rule. The same purchase check fails in DE, FR and ES. AT has no active Floodlight / Google Ads conversion tags. |
-| GitHub repository | `github.com/kbnho/tracking-monitor`, private, in Marius' personal account. Workflow "Daily tracking check" is active but **has never run in GitHub yet**. All results so far were produced on Marius' laptop. |
-| Dashboard | Published as a Claude artifact in **Marius'** account. Carolina will publish her own copy on her first routine run. |
-| Bot protection on www.sage.com | Automated page loads get HTTP 403 / 429. The allowlist request (`docs/allowlist-request.md`) is drafted but **not sent**. Until it is granted, the daily run only checks Tealium and load rules for sage.com markets. AT (www.sagedpw.at) is fully checked. |
-| Baselines | Proposals for all five markets are in `baseline/_pending/`. **None is confirmed yet**, so pages show yellow ("baseline pending"). |
-| Daily Claude routine | Prompt is ready (`routine/daily-prompt.md`). Not set up yet. |
-| Email alerts | **Not built yet.** Only planned (Phase 2). |
+| Checker (Python, `monitor/`) | Built and tested (9 regression tests pass). Covers DE, AT, FR, ES and PT. |
+| Market configuration | DE 116 paid landing pages and 136 lead forms. FR 34 URLs and 49 forms. ES 11 and PT 6 URLs. AT 6 pages and 2 form journeys on www.sagedpw.at. |
+| GitHub Actions | **Working since 2026-11-26.** Runs Mon–Fri at 04:17 UTC and commits its results. Before that, every scheduled run failed at the commit step (fixed). |
+| Baselines | Adopted automatically from the current state (17 Nov 2026). New pages learn for 3 run days. Nothing to confirm by hand. |
+| Bot protection on www.sage.com | Automated page loads from GitHub get HTTP 403 / 429. The allowlist request (`docs/allowlist-request.md`) is **not sent yet**. Until it is granted, the daily run checks only Tealium and load rules for DE, FR, ES and PT. AT (www.sagedpw.at) is fully checked. Marius has run page checks by hand on sample pages (16, 18, 19, 23 Nov). |
+| Dashboard | Published as a Claude artifact in **Marius'** account. Carolina publishes her own copy on her first routine run. |
+| Daily Claude routine | Prompt ready (`routine/daily-prompt.md`). **Not set up yet.** Until it is, nobody writes the daily explanation and the dashboard is not updated. |
+| Email alerts | **Not built yet** (Phase 2). |
+| Repository access | `github.com/kbnho/tracking-monitor`, private, in Marius' personal account. **Carolina is not a collaborator yet.** |
+
+### Current findings (sample-page runs up to 23 Nov)
+- **DE:** tag 98 (Floodlight form submit for web-shop trials and purchases) is **fixed** by a Tealium publish on 19 Nov. **Microsoft UET** sends no page view since 18 Nov: bat.js loads but never initialises (Sage Active, and on 23 Nov also Intacct). Owner: MarTech.
+- **FR, ES:** web-shop purchases do not fire Floodlight (FR tag 129, ES tag 36). Same rule change as the DE fix would solve it. Owner: MarTech.
+- **AT:** form conversion `sage_012` needs a button ID in the GTM trigger. AT has no Floodlight / Google Ads conversion tags.
+- **FR (www.ciel.com):** no cookie banner.
+- **PT:** green.
 
 ## What Marius does before handing over
 
-1. **Add Carolina to the repository** with Write access (Settings → Collaborators).
-   Better: transfer the repository to a Sage GitHub organisation or to Carolina's account, so it does not depend on a personal account.
-2. **Run the workflow once by hand** (Actions → Daily tracking check → Run workflow) and check that it finishes green and commits `results/<day>.json`.
-3. **Settle the open DE question:** should Microsoft UET fire on the DE payroll and HR landing pages (`/cp/payroll-*-shopping/`, `/cp/hr/*`)? Then confirm the DE baseline.
-4. **Walk Carolina through the dashboard and one finding** (the DE tag 98 story is the best example).
-5. **Agree the email set-up** with Carolina and, if needed, IT (see "Email alerts" below).
+1. **Add Carolina to the repository** with Write access (Settings → Collaborators). Better: transfer it to a Sage GitHub organisation or to her account, so it does not depend on a personal account.
+2. **Walk Carolina through the dashboard and one finding** (DE tag 98: broken in August, found by the monitor, fixed on 19 Nov).
+3. **Agree the email set-up** with Carolina and, if needed, IT (see "Email alerts" below).
 
 ## What Carolina does
 
@@ -39,25 +43,25 @@ The step-by-step set-up guide is in [HANDOVER.md](HANDOVER.md). This page says w
 4. **Set up the routine** (A or B): Mon–Fri 06:45 Europe/London, prompt = everything below the line in `routine/daily-prompt.md`.
 5. **Run the routine once by hand.** It publishes the dashboard as an artifact in her account. Paste that URL into `routine/daily-prompt.md` and into the routine prompt, so later runs update the same page.
 6. **Share the dashboard** with Marius, the market managers and MarTech. People who should acknowledge findings need at least "Contributor" access.
-7. **Confirm the baselines** with the market owners, one market at a time. In Claude Code inside the repository: "Show me the pending baseline for FR", then "Confirm the FR baseline".
 
 ### Every working day (about 10 minutes)
-- 05:00 UTC GitHub runs the checks. 06:45 the routine writes the explanation and updates the dashboard. Ready before 08:00.
+- 04:17 UTC GitHub runs the checks. 06:45 the routine writes the explanation and updates the dashboard. Ready before 08:00.
 - Look at **red** first, then **new yellow**.
 - Red: forward Claude's diagnosis to the owner it names (usually MarTech) and acknowledge the finding with the ticket reference.
 - Yellow because of a Tealium publish: check with MarTech that a changed conversion tag was intended.
 - "Blocked" or system notices are not tracking problems. They usually mean the allowlist header is missing or expired.
 
 ### When something changes
-In Claude Code inside the repository, in plain English: "Add <URL> to FR as landing page", "Remove fr-xyz from FR", "Run the check now for DE", "Why is AT yellow?".
+In Claude Code inside the repository, in plain English: "Add <URL> to FR as landing page", "Remove fr-xyz from FR", "Run the check now for DE", "Why is AT yellow?", "Re-learn the baseline for FR" (only after an intended tag change).
 
 ## What to watch out for
 
-- **Without the allowlist, the daily run is only half useful for DE, FR, ES and PT.** It still catches Tealium rule changes (like tag 98), but not what happens on the page (cookie banner, click IDs, tags firing).
+- **Without the allowlist, the daily run is only half useful for DE, FR, ES and PT.** It still catches Tealium rule changes (like tag 98), but not what happens on the page (cookie banner, click IDs, tags firing, UET).
 - **Do not work around the bot protection** (other IP addresses, faked browsers). The request asks for an official exception.
-- **The rules engine decides colours, Claude only explains them.** If a colour looks wrong, fix the configuration or the baseline, not the diagnosis text.
+- **The rules engine decides colours, Claude only explains them.** If a colour looks wrong, fix the configuration, not the diagnosis text. Never re-learn a baseline just to make a finding go away; acknowledge it instead.
 - **Acknowledgements expire.** A finding comes back on the date chosen. Use 7 or 14 days, not "forever".
-- **GitHub schedules can start up to about an hour late.** If the routine finds no result for today, it says so and shows the last run. Check the Actions tab.
+- **Check the GitHub Actions tab once a week.** A red run there means no fresh results. GitHub emails the repository owner when a scheduled run fails.
+- **GitHub may start schedules late.** If the routine finds no result for today, it says so and shows the last run.
 - **The checker never submits forms or checkouts** and blocks its own tracking hits, so it does not pollute reporting.
 - **Do not put the allowlist header or other secrets into files or prompts.** Only in GitHub secrets.
 
@@ -80,11 +84,11 @@ Nothing is built yet. Three things are needed:
 
 ## Open items checklist
 
+- [x] GitHub Actions runs green and commits results (fixed 2026-11-26).
+- [x] Baselines in place for all markets (adopted 17 Nov, new pages learn automatically).
 - [ ] Marius: add Carolina to the repository (or transfer it).
-- [ ] Marius: first manual GitHub Actions run, green.
-- [ ] Marius: decide UET on DE payroll / HR pages, confirm DE baseline.
 - [ ] Carolina: send the allowlist request; add `MONITOR_AUTH_HEADER` when granted.
 - [ ] Carolina: check Claude account (variant A / B / C), set up the routine, publish and share her dashboard.
-- [ ] Market owners: review URL lists, add paid-only landing pages; confirm AT, FR, ES, PT baselines.
+- [ ] Market owners: review URL lists, add paid-only landing pages.
 - [ ] Carolina + IT: choose the email channel; then build and test email alerts.
-- [ ] MarTech: fix DE tag 98 and FR tag 129 load rules; confirm the AT conversion set-up.
+- [ ] MarTech: fix DE Microsoft UET, FR tag 129 and ES tag 36 load rules, AT GTM trigger `sage_012`, cookie banner on www.ciel.com.

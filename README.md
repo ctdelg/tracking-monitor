@@ -74,7 +74,7 @@ the baseline** and reports every change from then on:
 
 ## How a daily run works
 
-1. **05:00 UTC, Monday to Friday:** a scheduled job on GitHub runs the checks above for all five markets.
+1. **04:17 UTC, Monday to Friday:** a scheduled job on GitHub runs the checks above for all five markets.
    It saves the results in this repository.
 2. **About 06:45:** a Claude routine reads the results. It writes a short explanation of what is wrong, why
    it is likely wrong and who should fix it, then updates the dashboard.

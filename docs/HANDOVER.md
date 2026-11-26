@@ -5,7 +5,7 @@ Estimated set-up time: 30–45 minutes, with one sitting together.
 
 ## What you get
 - A private GitHub repository with the checker, its configuration and all results so far.
-- A GitHub Actions workflow that runs the checks every working day at 05:00 UTC.
+- A GitHub Actions workflow that runs the checks every working day at 04:17 UTC.
 - A Claude routine prompt (`routine/daily-prompt.md`) that explains results and publishes the dashboard.
 - A Claude skill (`.claude/skills/tracking-monitor/`) for day-to-day operation in plain English.
 
@@ -65,7 +65,7 @@ of them. To see what was learned: "Show me the baseline for DE". After an intend
    - "Run the check now for FR"
    - "Why is AT yellow?"
 5. **Daily rhythm (5 min):**
-   - The check runs at 05:00 UTC and the routine at 06:45.
+   - The check runs at 04:17 UTC and the routine at 06:45.
    - The dashboard is ready before 08:00.
    - Look at red first, then new yellow. Acknowledge what is being handled.
 6. **Questions (3 min).**
@@ -78,9 +78,5 @@ of them. To see what was learned: "Show me the baseline for DE". After an intend
 - **Site down:** check the page in a browser. If it is gone on purpose, remove it ("Remove fr-xyz from FR").
 - **Blocked / system notices:** not a tracking problem. Check the allowlist header secret.
 
-## Open items at handover (2026-11-14)
-- [ ] Carolina Torres sends the allowlist request (`docs/allowlist-request.md`, not sent yet) to the sage.com IT / web security team; once granted, set `MONITOR_AUTH_HEADER`.
-- [ ] Market owners review the URL lists and add paid-only landing pages.
-- [ ] Decide the email channel (Phase 2): Claude mail connector or SMTP from GitHub Actions.
-- [ ] Check with MarTech: AT has no active Floodlight / Google Ads conversion tags (they are limited to
-      en-ZA style profiles); FR, ES and PT ecom checkouts (if used) do not fire the Floodlight form tag either.
+## Open items at handover
+The current list of open items is kept in [HANDOVER-STATUS.md](HANDOVER-STATUS.md).

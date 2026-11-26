@@ -1,6 +1,6 @@
 # Claude routine: tracking-monitor-daily
 
-Schedule: Mon–Fri, 06:45 Europe/London (about 45 minutes after the GitHub Actions run at 05:00 UTC).
+Schedule: Mon–Fri, 06:45 Europe/London (about two hours after the GitHub Actions run at 04:17 UTC, which GitHub may start late).
 Repository: the tracking-monitor GitHub repo (connected to Claude).
 Dashboard artifact: <paste the dashboard artifact URL here after the first run>
 

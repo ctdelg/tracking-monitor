@@ -490,12 +490,12 @@ footer { color: var(--faint); font-size: 12.5px; padding: 4px 10px; }
   }
   function nextRun(now) {
     const today = zoned(now).day;
-    for (let i = 0; i < 8; i++) { const d = addDays(today, i); if (isWorkday(d) && atLocal(d, 6) > now) return atLocal(d, 6); }
+    for (let i = 0; i < 8; i++) { const d = addDays(today, i); if (isWorkday(d) && atLocal(d, 8) > now) return atLocal(d, 8); }
     return null;
   }
-  function expectedRunDay(now) {   // the latest workday whose run should be in by 08:00
+  function expectedRunDay(now) {   // the latest workday whose run should be in by 10:00 (routine publishes ~08:00)
     const today = zoned(now).day;
-    for (let i = 0; i < 8; i++) { const d = addDays(today, -i); if (isWorkday(d) && atLocal(d, 8) <= now) return d; }
+    for (let i = 0; i < 8; i++) { const d = addDays(today, -i); if (isWorkday(d) && atLocal(d, 10) <= now) return d; }
     return null;
   }
   function ago(t, now) {
@@ -607,7 +607,7 @@ footer { color: var(--faint); font-size: 12.5px; padding: 4px 10px; }
       isAll() ? null : el("span", {}, el("button", {class: "crumb", type: "button", onclick: () => select(ALL)}, "All markets"), " / ", el("b", {}, name(selected))),
       el("span", {}, "Run ", el("b", {}, fmtDay(R.day))),
       el("span", {title: "Generated " + R.generated_at.replace("T", " ").slice(0, 16) + " UTC"}, latest ? "Updated " + ago(gen, now) : "Generated " + shortDay(zoned(gen).day)),
-      latest && nr ? el("span", {}, "Next run " + new Date(nr).toLocaleString("en-GB", {weekday: "short", hour: "2-digit", minute: "2-digit", timeZone: TZ}) + " CET") : null,
+      latest && nr ? el("span", {}, "Next update " + new Date(nr).toLocaleString("en-GB", {weekday: "short", hour: "2-digit", minute: "2-digit", timeZone: TZ}) + " CET") : null,
       el("span", {}, opened.length ? "Pages opened" + (isAll() ? " in " + list(opened) : "") + (srcs.length ? " via " + srcs.map(s => srcLabel[s] || s).join(", ") : "") : "Tealium CDN only"),
       isAll() ? pill(g.status, "Overall " + g.status) : pill(r.down ? "down" : r.status, name(selected) + " " + (r.down ? "site down" : r.status)));
     const [lead, rest] = isAll() ? allVerdict() : marketVerdict(selected);

@@ -9,11 +9,18 @@ Estimated set-up time: 30–45 minutes, with one sitting together.
 - A Claude routine prompt (`routine/daily-prompt.md`) that explains results and publishes the dashboard.
 - A Claude skill (`.claude/skills/tracking-monitor/`) for day-to-day operation in plain English.
 
-## 1. Access (Marius)
-1. Invite the colleague to the GitHub repository as a collaborator with **Write** access
-   (Settings → Collaborators → Add people).
-2. Optional later: transfer the repository to the colleague or a Sage GitHub organisation
-   (Settings → Danger zone → Transfer). Secrets and workflow history move with it.
+## 1. Move the repository to Carolina (Marius + Carolina)
+Transfer the repository; do not fork it and do not upload files by hand. A transfer keeps the full history,
+the workflow and its run history, and the old URL redirects to the new one.
+1. Carolina creates a GitHub account if she has none (a Sage GitHub organisation works the same way) and tells
+   Marius her username. She must not already have a repository called `tracking-monitor`.
+2. Marius: repository → **Settings** → bottom of the page, **Danger Zone** → **Transfer ownership** →
+   enter Carolina's username and confirm with the repository name.
+3. Carolina accepts the transfer from the email GitHub sends her. The link is valid for one day.
+4. Carolina adds Marius back as a collaborator (Settings → Collaborators → Add people) if he should keep access.
+5. Carolina opens **Actions** and checks that "Daily tracking check" is enabled. If GitHub shows
+   "Workflows aren't being run on this repository", click to enable them.
+6. Marius points his local copy to the new address: `git remote set-url origin https://github.com/<carolina>/tracking-monitor.git`.
 
 ## 2. GitHub settings (once)
 1. **Actions → General → Workflow permissions:** "Read and write permissions". The workflow commits results.

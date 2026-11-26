@@ -14,7 +14,7 @@ The step-by-step set-up guide is in [HANDOVER.md](HANDOVER.md). This page says w
 | Bot protection on www.sage.com | Automated page loads from GitHub get HTTP 403 / 429. The allowlist request (`docs/allowlist-request.md`) is **not sent yet**. Until it is granted, the daily run checks only Tealium and load rules for DE, FR, ES and PT. AT (www.sagedpw.at) is fully checked. Marius has run page checks by hand on sample pages (16, 18, 19, 23 Nov). |
 | Dashboard | Published as a Claude artifact in **Marius'** account. Carolina publishes her own copy on her first routine run. |
 | Daily Claude routine | Prompt ready (`routine/daily-prompt.md`). **Not set up yet.** Until it is, nobody writes the daily explanation and the dashboard is not updated. |
-| Email alerts | **Not built yet** (Phase 2). |
+| Email alerts | **Out of scope for the start** (decided 2026-11-26). People look at the dashboard instead. |
 | Repository access | `github.com/kbnho/tracking-monitor`, private, in Marius' personal account. **Carolina is not a collaborator yet.** |
 
 ### Current findings (sample-page runs up to 23 Nov)
@@ -24,16 +24,23 @@ The step-by-step set-up guide is in [HANDOVER.md](HANDOVER.md). This page says w
 - **FR (www.ciel.com):** no cookie banner.
 - **PT:** green.
 
+## Goal for the start
+
+1. Everyone who needs it can open the dashboard.
+2. The dashboard shows reliable data that updates automatically every working morning.
+3. Each market's paid media manager reads the issues for their market and briefs MarTech to fix them.
+
+Email alerts come later, if at all.
+
 ## What Marius does before handing over
 
-1. **Add Carolina to the repository** with Write access (Settings → Collaborators). Better: transfer it to a Sage GitHub organisation or to her account, so it does not depend on a personal account.
+1. **Transfer the repository to Carolina** (see [HANDOVER.md](HANDOVER.md), section 1).
 2. **Walk Carolina through the dashboard and one finding** (DE tag 98: broken in August, found by the monitor, fixed on 19 Nov).
-3. **Agree the email set-up** with Carolina and, if needed, IT (see "Email alerts" below).
 
 ## What Carolina does
 
 ### Once
-1. Accept the GitHub invitation.
+1. Accept the repository transfer and check that the workflow is enabled (HANDOVER.md, section 1).
 2. **Send the allowlist request** (`docs/allowlist-request.md`) to the sage.com IT / web security team, cc MarTech.
    When they agree a header, add it in GitHub: Settings → Secrets and variables → Actions → New secret `MONITOR_AUTH_HEADER` (format `Header-Name: secret-value`).
 3. **Check what her Claude account offers.** This decides how the daily routine runs:
@@ -42,14 +49,20 @@ The step-by-step set-up guide is in [HANDOVER.md](HANDOVER.md). This page says w
    - **C:** neither. GitHub Actions still runs every day; use the static report attached to each run and ask Claude for explanations when needed.
 4. **Set up the routine** (A or B): Mon–Fri 06:45 Europe/London, prompt = everything below the line in `routine/daily-prompt.md`.
 5. **Run the routine once by hand.** It publishes the dashboard as an artifact in her account. Paste that URL into `routine/daily-prompt.md` and into the routine prompt, so later runs update the same page.
-6. **Share the dashboard** with Marius, the market managers and MarTech. People who should acknowledge findings need at least "Contributor" access.
+6. **Share the dashboard** with Marius, the paid media managers of all five markets and MarTech. The market managers need at least "Contributor" access, so they can acknowledge a finding once they have briefed MarTech. Check with one market manager that the link opens for them.
 
 ### Every working day (about 10 minutes)
-- 04:17 UTC GitHub runs the checks. 06:45 the routine writes the explanation and updates the dashboard. Ready before 08:00.
+- 04:17 UTC GitHub runs the checks. 06:45 (London) the routine writes the explanation and updates the dashboard. Ready by about 08:00 CET. If no new run is in by 10:00 CET, the dashboard shows a warning.
 - Look at **red** first, then **new yellow**.
 - Red: forward Claude's diagnosis to the owner it names (usually MarTech) and acknowledge the finding with the ticket reference.
 - Yellow because of a Tealium publish: check with MarTech that a changed conversion tag was intended.
 - "Blocked" or system notices are not tracking problems. They usually mean the allowlist header is missing or expired.
+
+### What the market managers do
+- Open the dashboard, select their market and read "Why it is red" and the findings. Each finding names the likely cause and the owner.
+- Brief MarTech with the finding text and the affected page. The dashboard is the evidence.
+- Acknowledge the finding with the ticket reference and 7 or 14 days, so the market turns back to its real colour and nobody briefs it twice.
+- Check the date at the top. If the dashboard says "No run since …", tell Carolina; the data is out of date.
 
 ### When something changes
 In Claude Code inside the repository, in plain English: "Add <URL> to FR as landing page", "Remove fr-xyz from FR", "Run the check now for DE", "Why is AT yellow?", "Re-learn the baseline for FR" (only after an intended tag change).
@@ -65,30 +78,17 @@ In Claude Code inside the repository, in plain English: "Add <URL> to FR as land
 - **The checker never submits forms or checkouts** and blocks its own tracking hits, so it does not pollute reporting.
 - **Do not put the allowlist header or other secrets into files or prompts.** Only in GitHub secrets.
 
-## Email alerts (Phase 2) – what is needed
+## Email alerts (later)
 
-Goal: an email to the right people when a market turns red or gets a new yellow that nobody has acknowledged.
-
-Nothing is built yet. Three things are needed:
-1. **Decide the sending channel** (with IT if needed):
-
-   | Option | How | Needs | Comment |
-   |---|---|---|---|
-   | 1. Claude routine sends it | Step 6 of the routine prompt uses an Outlook / Microsoft 365 connector in Carolina's Claude account | The connector must be available and allowed for unattended use | Easiest if the connector exists. Emails come from Carolina's mailbox. Only works if the routine runs. |
-   | 2. Power Automate flow | GitHub Actions calls a Power Automate HTTP trigger after the run; the flow sends the email from Outlook | Power Automate with the HTTP trigger (premium connector licence) | Fits the Sage Microsoft 365 set-up. Independent of Claude. |
-   | 3. SMTP from GitHub Actions | The workflow sends the email itself with a service mailbox | A service mailbox with SMTP sending allowed by IT (often switched off in Microsoft 365) | Most technical; depends on IT approval. |
-
-   **Recommendation:** option 1 if Carolina's Claude account has an Outlook connector, otherwise option 2.
-2. **Define who gets what**, in `config/markets.yaml` under `settings.email`: recipients per market (market manager, MarTech), plus a summary recipient (Carolina). Default rule: only new red or new yellow, not acknowledged, at most one email per market per day, with a link to the dashboard.
-3. **Build and test it** (about half a day with Claude Code): the email text, the trigger logic based on `new_failures` and acknowledgements, and one test email to Carolina before switching on for everyone.
+Not part of the start. Options if needed later: an Outlook connector in the Claude routine, a Power Automate flow called by GitHub Actions, or SMTP from GitHub Actions. Recipients would go into `config/markets.yaml` under `settings.email`.
 
 ## Open items checklist
 
 - [x] GitHub Actions runs green and commits results (fixed 2026-11-26).
 - [x] Baselines in place for all markets (adopted 17 Nov, new pages learn automatically).
-- [ ] Marius: add Carolina to the repository (or transfer it).
+- [ ] Marius: transfer the repository to Carolina.
 - [ ] Carolina: send the allowlist request; add `MONITOR_AUTH_HEADER` when granted.
 - [ ] Carolina: check Claude account (variant A / B / C), set up the routine, publish and share her dashboard.
 - [ ] Market owners: review URL lists, add paid-only landing pages.
-- [ ] Carolina + IT: choose the email channel; then build and test email alerts.
+- [ ] Carolina: share the dashboard with the five market managers and MarTech; one market manager confirms access.
 - [ ] MarTech: fix DE Microsoft UET, FR tag 129 and ES tag 36 load rules, AT GTM trigger `sage_012`, cookie banner on www.ciel.com.

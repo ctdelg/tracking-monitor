@@ -2,8 +2,9 @@ name: Daily tracking check
 
 on:
   schedule:
-    # 05:00 UTC Mon-Fri = 06:00 CET (07:00 CEST in summer)
-    - cron: "0 5 * * 1-5"
+    # 04:17 UTC Mon-Fri. Off the full hour on purpose: GitHub delays top-of-hour schedules by hours
+    # (the 05:00 slot started between 13:43 and 15:46 UTC in Nov 2026).
+    - cron: "17 4 * * 1-5"
   workflow_dispatch:
     inputs:
       market:
@@ -66,7 +67,8 @@ jobs:
         run: |
           git config user.name "tracking-monitor[bot]"
           git config user.email "tracking-monitor@users.noreply.github.com"
-          git add results report
+          # baseline/ learns new pages and config/forms/ holds the form inventory: both change on every run
+          git add results report baseline config/forms
           git commit -m "Results $(date -u +%F)" || echo "No changes"
           git pull --rebase
           git push

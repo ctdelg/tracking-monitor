@@ -4525,8 +4525,8 @@
   }
  },
  "browser": {
-  "source": "playwright",
-  "collected_at": "2026-11-26T14:00:12Z",
+  "source": "claude-browser",
+  "collected_at": "2026-11-26T14:25:03Z",
   "visits": [
    {
     "id": "fr-ciel-compta",
@@ -6211,302 +6211,602 @@
     }
    },
    {
-    "id": "fr-home",
-    "url": "https://www.sage.com/fr-fr/",
-    "type": "content",
+    "id": "fr-produits-sage-50cloud",
+    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
+    "status": 200,
+    "final_url": "https://www.sage.com/fr-fr/produits/sage-50cloud/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
+    "live_sample": true,
     "click_ids": {
      "gclid": "TEST_MON_20261126",
      "msclkid": "TEST_MON_20261126",
      "fbclid": "TEST_MON_20261126"
     },
-    "live_sample": false,
-    "status": 403,
-    "final_url": "https://www.sage.com/fr-fr/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
-    "error": null,
-    "blocked": true,
-    "pre": null,
-    "post": null
-   },
-   {
-    "id": "fr-cp-50100jemaitrise",
-    "url": "https://www.sage.com/fr-fr/cp/50100jemaitrise/",
-    "type": "landing_page",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-dematerialisation-facture-electronique",
-    "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/",
-    "type": "landing_page",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-experts-comptables",
-    "url": "https://www.sage.com/fr-fr/experts-comptables/",
-    "type": "landing_page",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-experts-comptables-produits-sage-generation-exp",
-    "url": "https://www.sage.com/fr-fr/experts-comptables/produits/sage-generation-experts-connect/",
-    "type": "landing_page",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-experts-comptables-saisie-comptable-automatique",
-    "url": "https://www.sage.com/fr-fr/experts-comptables/saisie-comptable-automatique/",
-    "type": "landing_page",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-100",
-    "url": "https://www.sage.com/fr-fr/produits/sage-100/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-100-comptabilite",
-    "url": "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-100-gestion-commerciale",
-    "url": "https://www.sage.com/fr-fr/produits/sage-100/gestion-commerciale/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-100-sage-automatisation-comptable",
-    "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-automatisation-comptable/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-100-sage-recouvrement-creances",
-    "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-recouvrement-creances/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-50cloud",
-    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-50cloud-test-gratuit",
-    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/",
-    "type": "trial",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-active",
-    "url": "https://www.sage.com/fr-fr/produits/sage-active/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-bi-reporting",
-    "url": "https://www.sage.com/fr-fr/produits/sage-bi-reporting/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-business-reporting",
-    "url": "https://www.sage.com/fr-fr/produits/sage-business-reporting/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-data-clean-and-control",
-    "url": "https://www.sage.com/fr-fr/produits/sage-data-clean-and-control/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-frp-1000",
-    "url": "https://www.sage.com/fr-fr/produits/sage-frp-1000/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-sales-management",
-    "url": "https://www.sage.com/fr-fr/produits/sage-sales-management/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-produits-sage-xrt-advanced",
-    "url": "https://www.sage.com/fr-fr/produits/sage-xrt-advanced/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
+    "pre": {
+     "title": "Sage 50 - Comptabilité et Gestion commerciale | Sage France",
+     "requests": [],
+     "cookies": {
+      "AWSALBTG": "",
+      "AWSALBTGCORS": "",
+      "AWSALB": "",
+      "AWSALBCORS": "",
+      "sage_utm_preservation": "",
+      "shell#lang": "",
+      "utag_main_v_id": "",
+      "utag_main__sn": "",
+      "utag_main__se": "",
+      "utag_main__ss": "",
+      "utag_main__st": "",
+      "utag_main_ses_id": "",
+      "utag_main__pn": "",
+      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
+     },
+     "banner": true,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "utag": {
+      "present": true,
+      "utid": "sage/fr-fr/202611190923",
+      "version": "ut4.53.202611190923",
+      "page_type": "article",
+      "language": "fr-fr",
+      "country": "fr",
+      "data_keys": 134
+     }
+    },
+    "post": {
+     "title": "Sage 50 - Comptabilité et Gestion commerciale | Sage France",
+     "requests": [
+      {
+       "url": "https://js.zi-scripts.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://lux.speedcurve.com/",
+       "type": "img"
+      },
+      {
+       "url": "https://c.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ipv6.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://collect-eu-west-1.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/",
+       "type": "img"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://csxd.contentsquare.net/",
+       "type": "iframe"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/activity;src=5201003;type=non_conv;cat=sage_0;gclaw=TEST_MON_20261126;gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://5201003.fls.doubleclick.net/activityi;src=5201003;type=non_conv;cat=sage_0;gclaw=TEST_MON_20261126;gcs=G111",
+       "type": "iframe"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/990362824/?en=gtag.config&gclaw=TEST_MON_20261126",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://c.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://api-cdn.mypurecloud.ie/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://k-aeu1.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
+       "type": "beacon"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.com/pagead/1p-user-list/990362824/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.de/pagead/1p-user-list/990362824/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/",
+       "type": "iframe"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
+       "type": "img"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+       "type": "beacon"
+      },
+      {
+       "url": "https://srm.ba.contentsquare.net/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
+       "type": "iframe"
+      },
+      {
+       "url": "https://sagefr.solution.weborama.fr/fcgi-bin/dispatch.fcgi",
+       "type": "iframe"
+      },
+      {
+       "url": "https://prebid.smilewanted.com/track/post_click.php",
+       "type": "img"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/fr-fr/produits/sage-50cloud/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://logx.optimizely.com/v1/events",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
+       "type": "img"
+      },
+      {
+       "url": "https://epsilon.6sense.com/v3/company/details",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
+       "type": "img"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
+       "type": "img"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/1741c1VrTs1u4KcUA6o1RQ.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://sagefr.pxf.io/xc/7320767/3382126/44908",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://pixel-config.reddit.com/pixels/a2_jcwvn8khk1j0/config",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://alb.reddit.com/rp?id=a2_jcwvn8khk1j0&event=PageVisit",
+       "type": "fetch"
+      },
+      {
+       "url": "https://cdn.segment.com/v1/projects/8pB0u0DoFwbi0VKKjzFhWaMbF8JblpoJ/settings",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ads-engagement.presage.io/v2/pv/img.gif",
+       "type": "img"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
+       "type": "img"
+      },
+      {
+       "url": "https://bzr.openai.com/v1/sdk/events?pid=1741c1VrTs1u4KcUA6o1RQ",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ojrq.net/p/",
+       "type": "img"
+      },
+      {
+       "url": "https://ws.zoominfo.com/pixel/654e77cd8ec2360c5a6693e1/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://p1.outbrain.com/v2/p/js/63878/PAGE_VIEW/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://tr.capterra.com/events/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://events.eu1.segmentapis.com/v1/p",
+       "type": "fetch"
+      },
+      {
+       "url": "https://events.eu1.segmentapis.com/v1/i",
+       "type": "fetch"
+      }
+     ],
+     "cookies": {
+      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
+      "OptanonAlertBoxClosed": "",
+      "_ga": "",
+      "_fbp": "",
+      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
+      "_gcl_au": "1.1.1555904567.1795702542",
+      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126",
+      "_ttp": ""
+     },
+     "banner": false,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "utag": {
+      "present": true,
+      "utid": "sage/fr-fr/202611190923",
+      "version": "ut4.53.202611190923",
+      "page_type": "article",
+      "language": "fr-fr",
+      "country": "fr",
+      "data_keys": 134
+     },
+     "accepted": true
+    },
+    "blocked": false
    },
    {
     "id": "fr-sbc-intacct",
     "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-intacct-bon-commandes",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/bon-commandes/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-intacct-compte-crediteur",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-crediteur/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-intacct-compte-debiteur",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-debiteur/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-intacct-multi-societes",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/multi-societes/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-intacct-consolidation-comptable",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/extended-capabilities/consolidation-comptable/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-logiciels-gestionnaire-de-paie",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/logiciels/gestionnaire-de-paie/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-sage-x3",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-sage-x3-gestion-de-la-production",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/fonctionnalites-produit/gestion-de-la-production/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-sage-x3-secteurs-agroalimentaire",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/agroalimentaire/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-sbc-sage-x3-secteurs-construction",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/construction/",
-    "type": "product",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "fr-cp-logiciel-comptabilite",
-    "url": "https://www.sage.com/fr-fr/cp/logiciel-comptabilite/",
-    "type": "landing_page",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "tour-sage-business-cloud-intacct-ressources-visites-p",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/ressources/visites-produits/general/video/",
-    "type": "form_target",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "tour-sage-business-cloud-intacct-resources-product-to",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/resources/product-tours/general/brochure-mobile/",
-    "type": "form_target",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
-   },
-   {
-    "id": "tour-sage-business-cloud-sage-x3-visite-guidee-du-pro",
-    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/visite-guidee-du-produit/",
-    "type": "form_target",
-    "blocked": true,
-    "status": 403,
-    "skipped": true
+    "status": 200,
+    "final_url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/?gclid=TEST_MON_20261126&msclkid=TEST_MON_20261126&fbclid=TEST_MON_20261126&utm_source=tracking-monitor&utm_medium=monitoring",
+    "live_sample": false,
+    "click_ids": {
+     "gclid": "TEST_MON_20261126",
+     "msclkid": "TEST_MON_20261126",
+     "fbclid": "TEST_MON_20261126"
+    },
+    "pre": {
+     "title": "Sage Intacct - Logiciel de gestion financière | Sage France",
+     "requests": [
+      {
+       "url": "https://view.ceros.com/",
+       "type": "iframe"
+      },
+      {
+       "url": "https://widget.trustpilot.com/",
+       "type": "iframe"
+      },
+      {
+       "url": "https://csxd.contentsquare.net/",
+       "type": "iframe"
+      },
+      {
+       "url": "https://c.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://k-aeu1.contentsquare.net/",
+       "type": "xmlhttprequest"
+      }
+     ],
+     "cookies": {
+      "AWSALBTG": "",
+      "AWSALBTGCORS": "",
+      "AWSALB": "",
+      "AWSALBCORS": "",
+      "sage_utm_preservation": "",
+      "shell#lang": "",
+      "_cs_c": "",
+      "_cs_id": "",
+      "_hjHasCachedUserAttributes": "",
+      "_cs_s": "",
+      "utag_main_v_id": "",
+      "utag_main__sn": "",
+      "utag_main_ses_id": "",
+      "utag_main__pn": "",
+      "_cs_mk": "",
+      "utag_main__ss": "",
+      "utag_main__se": "",
+      "utag_main__st": "",
+      "OptanonConsent": "groups=C0001:1,C0002:0,C0003:0,C0004:0"
+     },
+     "banner": true,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:0,C0003:0,C0004:0",
+     "utag": {
+      "present": true,
+      "utid": "sage/fr-fr/202611190923",
+      "version": "ut4.53.202611190923",
+      "page_type": "article",
+      "language": "fr-fr",
+      "country": "fr",
+      "data_keys": 147
+     }
+    },
+    "post": {
+     "title": "Sage Intacct - Logiciel de gestion financière | Sage France",
+     "requests": [
+      {
+       "url": "https://c.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://k-aeu1.contentsquare.net/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://region1.analytics.google.com/g/collect?tid=G-PE4Z9JJWVN&gcs=G111&en=page_view",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "beacon"
+      },
+      {
+       "url": "https://www.google.de/ads/ga-audiences?tid=G-PE4Z9JJWVN&gcs=G111",
+       "type": "img"
+      },
+      {
+       "url": "https://js.zi-scripts.com/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://collect-eu-west-1.tealiumiq.com/sage/en-gb/2/i.gif",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://lux.speedcurve.com/",
+       "type": "img"
+      },
+      {
+       "url": "https://c.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://ipv6.6sc.co/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?pid=58294",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.com/rmkt/collect/990362824/?en=gtag.config&gclaw=TEST_MON_20261126",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?tid=AW-990362824&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261126",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?tid=DC-5201003&en=page_view&gclid=TEST_MON_20261126&gclaw=TEST_MON_20261126&gcs=G111",
+       "type": "fetch"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/",
+       "type": "img"
+      },
+      {
+       "url": "https://connect.facebook.net/signals/config/499565794547363",
+       "type": "script"
+      },
+      {
+       "url": "https://pixel.quantserve.com/cs?a=p-E6KY6asqFcmVm",
+       "type": "fetch"
+      },
+      {
+       "url": "https://analytics-ipv6.tiktokw.us/ipv6/enrich_ipv6",
+       "type": "beacon"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel",
+       "type": "beacon"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://api-cdn.mypurecloud.ie/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://www.google.com/pagead/1p-user-list/990362824/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://www.google.de/pagead/1p-user-list/990362824/?en=gtag.config",
+       "type": "img"
+      },
+      {
+       "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+       "type": "beacon"
+      },
+      {
+       "url": "https://beacon.speedcurve.com/",
+       "type": "beacon"
+      },
+      {
+       "url": "https://pixel.quantserve.com/pixel;event=rule;a=p-E6KY6asqFcmVm",
+       "type": "img"
+      },
+      {
+       "url": "https://a26973811017.cdn.optimizely.com/client_storage/a26973811017.html",
+       "type": "iframe"
+      },
+      {
+       "url": "https://sagefr.solution.weborama.fr/fcgi-bin/dispatch.fcgi",
+       "type": "iframe"
+      },
+      {
+       "url": "https://prebid.smilewanted.com/track/post_click.php",
+       "type": "img"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://pixel-config.reddit.com/pixels/a2_jcwvn8khk1j0/config",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://alb.reddit.com/rp?id=a2_jcwvn8khk1j0&event=PageVisit",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ads-engagement.presage.io/v2/pv/img.gif",
+       "type": "img"
+      },
+      {
+       "url": "https://p1.outbrain.com/v2/p/js/63878/PAGE_VIEW/",
+       "type": "fetch"
+      },
+      {
+       "url": "https://logx.optimizely.com/v1/events",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://secure.adnxs.com/getuidj",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://cdn.segment.com/v1/projects/8pB0u0DoFwbi0VKKjzFhWaMbF8JblpoJ/settings",
+       "type": "fetch"
+      },
+      {
+       "url": "https://bzrcdn.openai.com/pixel-config/v1/1741c1VrTs1u4KcUA6o1RQ.json",
+       "type": "fetch"
+      },
+      {
+       "url": "https://sagefr.pxf.io/xc/7320767/3382126/44908",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=a_pageload",
+       "type": "img"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ni:asyncSettingsAudit",
+       "type": "img"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=ipv6",
+       "type": "img"
+      },
+      {
+       "url": "https://epsilon.6sense.com/v3/company/details",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://tr.capterra.com/events/",
+       "type": "xmlhttprequest"
+      },
+      {
+       "url": "https://b.6sc.co/v1/beacon/img.gif?event=active_time_track",
+       "type": "img"
+      }
+     ],
+     "cookies": {
+      "OptanonConsent": "groups=C0001:1,C0002:1,C0003:1,C0004:1",
+      "OptanonAlertBoxClosed": "",
+      "_ga": "",
+      "_fbp": "",
+      "_fbc": "fb.2.1795702541336.TEST_MON_20261126",
+      "_gcl_au": "1.1.1555904567.1795702542",
+      "_gcl_aw": "GCL.1795702544.TEST_MON_20261126",
+      "_ttp": ""
+     },
+     "banner": false,
+     "consent_tool": "onetrust",
+     "consent_groups": "C0001:1,C0002:1,C0003:1,C0004:1",
+     "utag": {
+      "present": true,
+      "utid": "sage/fr-fr/202611190923",
+      "version": "ut4.53.202611190923",
+      "page_type": "article",
+      "language": "fr-fr",
+      "country": "fr",
+      "data_keys": 147
+     },
+     "accepted": true
+    },
+    "blocked": false
    }
   ],
-  "journeys": [
-   {
-    "id": "fr-j-sage50-trial",
-    "name": "Sage 50 product page -> free trial page",
-    "blocked": true,
-    "steps": []
-   }
-  ]
+  "journeys": []
  }
 }

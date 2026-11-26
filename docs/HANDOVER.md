@@ -9,18 +9,25 @@ Estimated set-up time: 30–45 minutes, with one sitting together.
 - A Claude routine prompt (`routine/daily-prompt.md`) that explains results and publishes the dashboard.
 - A Claude skill (`.claude/skills/tracking-monitor/`) for day-to-day operation in plain English.
 
-## 1. Move the repository to Carolina (Marius + Carolina)
-Transfer the repository; do not fork it and do not upload files by hand. A transfer keeps the full history,
-the workflow and its run history, and the old URL redirects to the new one.
-1. Carolina creates a GitHub account if she has none (a Sage GitHub organisation works the same way) and tells
-   Marius her username. She must not already have a repository called `tracking-monitor`.
-2. Marius: repository → **Settings** → bottom of the page, **Danger Zone** → **Transfer ownership** →
-   enter Carolina's username and confirm with the repository name.
-3. Carolina accepts the transfer from the email GitHub sends her. The link is valid for one day.
-4. Carolina adds Marius back as a collaborator (Settings → Collaborators → Add people) if he should keep access.
-5. Carolina opens **Actions** and checks that "Daily tracking check" is enabled. If GitHub shows
-   "Workflows aren't being run on this repository", click to enable them.
-6. Marius points his local copy to the new address: `git remote set-url origin https://github.com/<carolina>/tracking-monitor.git`.
+## 1. Give Carolina her own copy of the repository (Marius + Carolina)
+Marius keeps his repository. Carolina gets an independent copy with the full history, and all future changes
+happen in her copy. Do not fork (a fork stays linked to the original) and do not upload files by hand (that loses
+the history and the workflow).
+1. **Carolina:** create a GitHub account if she has none. Then **New repository** → name `tracking-monitor`,
+   **Private**, and do **not** add a README, .gitignore or licence (the repository must be empty).
+2. **Carolina:** Settings → Collaborators → **Add people** → Marius' GitHub user, so he can push the copy once.
+3. **Marius:** in a terminal, push a complete copy:
+   ```bash
+   git clone --bare https://github.com/kbnho/tracking-monitor.git tm-copy.git
+   cd tm-copy.git
+   git push --mirror https://github.com/<carolina>/tracking-monitor.git
+   cd .. && rm -rf tm-copy.git
+   ```
+4. **Carolina:** open **Actions** in her repository. If GitHub asks, click "I understand my workflows, go ahead and
+   enable them". Then **Daily tracking check → Run workflow** once and check that it ends green.
+5. **Carolina:** remove Marius as a collaborator again if she wants (Settings → Collaborators).
+6. **Marius:** once Carolina's run is green, switch off the schedule in his own repository, so the sites are not
+   checked twice a day: `gh workflow disable daily.yml --repo kbnho/tracking-monitor`.
 
 ## 2. GitHub settings (once)
 1. **Actions → General → Workflow permissions:** "Read and write permissions". The workflow commits results.

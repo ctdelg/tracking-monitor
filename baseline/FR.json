@@ -52,14 +52,20 @@
     "other:speedcurve.com": [],
     "other:tiktokw.us": [],
     "other:zi-scripts.com": [],
-    "tealium_collect": []
+    "tealium_collect": [],
+    "other:quantserve.com": [],
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
+    ]
    },
    "days": [
     "2026-11-19",
-    "2026-11-23"
+    "2026-11-23",
+    "2026-11-26"
    ],
-   "status": "learning",
-   "since": "2026-11-19"
+   "status": "confirmed",
+   "since": "2026-11-19",
+   "confirmed_at": "2026-11-26"
   },
   "fr-sbc-intacct": {
    "post": {
@@ -111,14 +117,19 @@
     "tealium_collect": [],
     "zoominfo": [
      "654e77cd8ec2360c5a6693e1"
+    ],
+    "quantcast": [
+     "p-E6KY6asqFcmVm"
     ]
    },
    "days": [
     "2026-11-19",
-    "2026-11-23"
+    "2026-11-23",
+    "2026-11-26"
    ],
-   "status": "learning",
-   "since": "2026-11-19"
+   "status": "confirmed",
+   "since": "2026-11-19",
+   "confirmed_at": "2026-11-26"
   },
   "fr-produits-sage-100": {
    "post": {
@@ -1116,9 +1127,13 @@
   "zoominfo": {
    "pages": 3,
    "of": 3
+  },
+  "quantcast": {
+   "pages": 3,
+   "of": 3
   }
  },
- "updated_at": "2026-11-26T14:00:28Z",
+ "updated_at": "2026-11-26T14:28:20Z",
  "confirmed_at": "2026-11-17T13:28:19Z",
  "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

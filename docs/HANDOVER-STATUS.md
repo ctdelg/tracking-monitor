@@ -1,6 +1,6 @@
 # Handover status – EU Tracking Monitor
 
-Status as of 2026-11-26. Owner today: Marius Kübler. Future operator: Carolina Torres.
+Status as of 2026-11-26 (afternoon). Owner today: Marius Kübler. Future operator: Carolina Torres.
 The step-by-step set-up guide is in [HANDOVER.md](HANDOVER.md). This page says where we are and what is left.
 
 ## Where we are
@@ -11,14 +11,14 @@ The step-by-step set-up guide is in [HANDOVER.md](HANDOVER.md). This page says w
 | Market configuration | DE 116 paid landing pages and 136 lead forms. FR 34 URLs and 49 forms. ES 11 and PT 6 URLs. AT 6 pages and 2 form journeys on www.sagedpw.at. |
 | GitHub Actions | **Working since 2026-11-26.** Runs Mon–Fri at 04:17 UTC and commits its results. Before that, every scheduled run failed at the commit step (fixed). |
 | Baselines | Adopted automatically from the current state (17 Nov 2026). New pages learn for 3 run days. Nothing to confirm by hand. |
-| Bot protection on www.sage.com | Automated page loads from GitHub get HTTP 403 / 429. The allowlist request (`docs/allowlist-request.md`) is **not sent yet**. Until it is granted, the daily run checks only Tealium and load rules for DE, FR, ES and PT. AT (www.sagedpw.at) is fully checked. Marius has run page checks by hand on sample pages (16, 18, 19, 23 Nov). |
+| Bot protection | Automated page loads from GitHub get HTTP 403 on www.sage.com **and, since at least 25 Nov, on www.sagedpw.at (AT)**. From a laptop the AT checks still work. The allowlist request (`docs/allowlist-request.md`) is **not sent yet** and must cover both sites. Until it is granted, the daily run checks only Tealium, GTM and load rules; page checks are done by hand on sample pages (16, 18, 19, 23 and 26 Nov). |
 | Dashboard | Published as a Claude artifact in **Marius'** account. Carolina publishes her own copy on her first routine run. |
 | Daily Claude routine | Prompt ready (`routine/daily-prompt.md`). **Not set up yet.** Until it is, nobody writes the daily explanation and the dashboard is not updated. |
 | Email alerts | **Out of scope for the start** (decided 2026-11-26). People look at the dashboard instead. |
-| Repository access | `github.com/kbnho/tracking-monitor`, private, in Marius' personal account. **Carolina is not a collaborator yet.** |
+| Repository | `github.com/kbnho/tracking-monitor`, private, Marius' account. Carolina gets her own copy (decided 2026-11-26); it is not made yet. |
 
-### Current findings (sample-page runs up to 23 Nov)
-- **DE:** tag 98 (Floodlight form submit for web-shop trials and purchases) is **fixed** by a Tealium publish on 19 Nov. **Microsoft UET** sends no page view since 18 Nov: bat.js loads but never initialises (Sage Active, and on 23 Nov also Intacct). Owner: MarTech.
+### Current findings (sample-page run of 26 Nov)
+- **DE:** tag 98 (Floodlight form submit for web-shop trials and purchases) is **fixed** by a Tealium publish on 19 Nov. **Microsoft UET** sends no page view since 18 Nov: bat.js loads but never initialises on every DE page checked. Quantcast is missing in DE as well (23 and 26 Nov). Owner: MarTech.
 - **FR, ES:** web-shop purchases do not fire Floodlight (FR tag 129, ES tag 36). Same rule change as the DE fix would solve it. Owner: MarTech.
 - **AT:** form conversion `sage_012` needs a button ID in the GTM trigger. AT has no Floodlight / Google Ads conversion tags.
 - **FR (www.ciel.com):** no cookie banner.
@@ -34,13 +34,13 @@ Email alerts come later, if at all.
 
 ## What Marius does before handing over
 
-1. **Transfer the repository to Carolina** (see [HANDOVER.md](HANDOVER.md), section 1).
+1. **Give Carolina her own copy of the repository** (see [HANDOVER.md](HANDOVER.md), section 1). Marius keeps his repository; future changes happen only in Carolina's copy. After her first green run, Marius switches off the schedule in his repository.
 2. **Walk Carolina through the dashboard and one finding** (DE tag 98: broken in August, found by the monitor, fixed on 19 Nov).
 
 ## What Carolina does
 
 ### Once
-1. Accept the repository transfer and check that the workflow is enabled (HANDOVER.md, section 1).
+1. Create the empty repository, let Marius push the copy, enable Actions and run the workflow once (HANDOVER.md, section 1).
 2. **Send the allowlist request** (`docs/allowlist-request.md`) to the sage.com IT / web security team, cc MarTech.
    When they agree a header, add it in GitHub: Settings → Secrets and variables → Actions → New secret `MONITOR_AUTH_HEADER` (format `Header-Name: secret-value`).
 3. **Check what her Claude account offers.** This decides how the daily routine runs:
@@ -86,7 +86,7 @@ Not part of the start. Options if needed later: an Outlook connector in the Clau
 
 - [x] GitHub Actions runs green and commits results (fixed 2026-11-26).
 - [x] Baselines in place for all markets (adopted 17 Nov, new pages learn automatically).
-- [ ] Marius: transfer the repository to Carolina.
+- [ ] Marius + Carolina: copy the repository to Carolina's account; Marius then disables the schedule in his repository.
 - [ ] Carolina: send the allowlist request; add `MONITOR_AUTH_HEADER` when granted.
 - [ ] Carolina: check Claude account (variant A / B / C), set up the routine, publish and share her dashboard.
 - [ ] Market owners: review URL lists, add paid-only landing pages.

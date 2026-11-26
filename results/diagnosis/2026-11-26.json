@@ -1,0 +1,99 @@
+{
+ "day": "2026-11-26",
+ "written_by": "Claude (2 sample pages per sage.com market in the built-in browser, 15 s wait after consent; AT pages and ciel.com with the automated browser)",
+ "summary": "Four markets are red, PT is green. No Tealium publish since 19 Nov and no GTM change, so nothing new broke today. Every red finding was already known on 23 Nov.\nDE: Microsoft UET still sends nothing after consent on both sample pages, and no msclkid is stored. This is the third check in a row (18, 23 and 26 Nov). Quantcast is also missing in DE for the second check in a row, while it works in FR, ES and PT.\nFR and ES: web-shop purchases still do not fire Floodlight (FR 129, ES 36). www.ciel.com still has no cookie banner, and Google and LinkedIn fire before consent there.\nAT: form submits cannot fire Floodlight sage_012 because the GTM trigger waits for a button ID that does not exist.\nCoverage: the GitHub run is now blocked by bot protection on www.sagedpw.at as well (HTTP 403 since at least 25 Nov). Today's AT result comes from a manual run. The allowlist request must cover www.sagedpw.at too.",
+ "incidents": {},
+ "markets": {
+  "DE": {
+   "summary": "Conversions work (Floodlight 98 incl. web shop); Microsoft UET and Quantcast send nothing on the checked pages.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+      {"text": "Microsoft UET sends no page view and stores no msclkid (Sage Active and Intacct).", "action": "MarTech: check the UET tags in Tealium.", "check": "TAG:microsoft_uet|de-produkte-sage-active"},
+      {"text": "Microsoft Ads clicks cannot be matched to conversions while this lasts.", "check": "CLID-02|de-produkte-sage-active"}
+    ]},
+    {"tone": "yellow", "title": "To review", "items": [
+      {"text": "Quantcast sent no hit on either page, second check in a row.", "action": "MarTech: check the Quantcast tag for de-de.", "check": "TAG:quantcast|de-produkte-sage-active"},
+      {"text": "One HR form name starts with a space, so Floodlight 389 cannot fire for it.", "check": "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung"}
+    ]},
+    {"tone": "green", "title": "Working", "items": [
+      "Web-shop trials, purchases and all lead forms fire Floodlight 98.",
+      "Consent, Floodlight, Google Ads, GA4, LinkedIn, Meta, TikTok; gclid and fbclid stored."
+    ]}
+   ],
+   "findings": {
+    "TAG:microsoft_uet|de-produkte-sage-active": {"text": "After 'Accept all' no bat.bing.com/action hit is sent within 15 s. Same on 18 and 23 Nov (on 23 Nov window.uetq was still a plain queue after 25 s, so the UET library never initialises). No Tealium publish since 19 Nov. Worked on 16 Nov.", "owner": "MarTech"},
+    "CLID-02|de-produkte-sage-active": {"text": "Same cause as the UET finding: without a UET hit the _uetmsclkid cookie is never written.", "owner": "MarTech"},
+    "TAG:microsoft_uet|de-cp-sage-intacct": {"text": "Same as on Sage Active. UET is down on every DE page checked since 23 Nov, which points to a general de-de problem (UET consent hand-over or bat.js initialisation), not a single page.", "owner": "MarTech"},
+    "CLID-02|de-cp-sage-intacct": {"text": "Same cause as the UET finding on this page.", "owner": "MarTech"},
+    "TAG:quantcast|de-produkte-sage-active": {"text": "No request to pixel.quantserve.com after consent on either DE page, on 23 Nov and again today. The same Quantcast account (p-E6KY6asqFcmVm) fires in FR, ES and PT today, and fired in DE on 19 Nov. No publish in between, so check the de-de Quantcast tag and its load rule.", "owner": "MarTech"},
+    "TAG:quantcast|de-cp-sage-intacct": {"text": "Same as on Sage Active.", "owner": "MarTech"},
+    "FORM-02|form:HCM_2701_NCA_DE_HRReadyNCABeratung": {"text": "The form's lastContentName starts with a space (' CL_HCM_DE_MED_CON_BOFU_HRReadyNCABeratung'). Load rule 331 checks the start of the name, so Floodlight 389 never fires for this form. Fix: remove the space in the Gated Content gate.", "owner": "Web team"}
+   }
+  },
+  "AT": {
+   "summary": "Pages, consent and page-view tags work on sagedpw.at, but form submits cannot fire the Floodlight conversion.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+      {"text": "Floodlight sage_012 waits for a click on a button with 'Submit' in its ID; the form buttons have no ID.", "action": "Fix the GTM trigger or the buttons.", "check": "GTM-07|conversion:sage_012"}
+    ]},
+    {"tone": "yellow", "title": "To review", "items": [
+      {"text": "Floodlight sage_013 waits for a click on the DPW to GO order PDF; no checked page links to it.", "check": "GTM-07|conversion:sage_013"}
+    ]},
+    {"tone": "", "title": "Coverage", "items": [
+      {"text": "The daily GitHub run is blocked on www.sagedpw.at (HTTP 403). Today's AT result is from a manual run.", "action": "Add www.sagedpw.at to the allowlist request."}
+    ]}
+   ],
+   "findings": {
+    "GTM-07|conversion:sage_012": {"text": "GTM-PS6MXC (unchanged): sageg0/sage_012 fires on gtm.click where Click ID contains 'Submit'. The submit inputs on /kontaktformular/ and /kostenloses-infopaket/ have no id, so the trigger never matches. Fix: trigger on the form's success event or thank-you page, or give the buttons an id containing 'Submit'.", "owner": "GTM owner"},
+    "CONV-01:gated_contact|market": {"text": "Same as GTM-07 for sage_012.", "owner": "GTM owner"},
+    "GTM-07|conversion:sage_013": {"text": "sageg0/sage_013 fires on a click on a link to uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf. None of the paid landing pages or form pages link to it. Check whether the PDF is still offered; if not, the tag is obsolete.", "owner": "GTM owner"}
+   }
+  },
+  "FR": {
+   "summary": "sage.com pages are clean; web-shop purchases are not counted, and ciel.com has no cookie banner.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+      {"text": "www.ciel.com has no cookie banner; Google and LinkedIn tags fire before consent.", "action": "Raise with the privacy / web team.", "check": "CONS-01|fr-ciel-compta"},
+      {"text": "Web-shop purchases do not fire Floodlight 129.", "action": "MarTech: same rule change as the DE fix of 19 Nov.", "check": "CONV-01:ecom_buy|market"}
+    ]},
+    {"tone": "yellow", "title": "To review", "items": [
+      {"text": "ZoomInfo did not fire on the Intacct page (it does on Sage 50).", "check": "TAG:zoominfo|fr-sbc-intacct"}
+    ]},
+    {"tone": "green", "title": "Working", "items": [
+      "On www.sage.com: banner, nothing before consent, Floodlight, Google Ads, GA4, LinkedIn, Meta, Quantcast, TikTok, Reddit, Outbrain; gclid and fbclid stored."
+    ]}
+   ],
+   "findings": {
+    "CONV-01:ecom_buy|market": {"text": "The fr-fr load rule on Floodlight tag 129 only accepts gated-content form submits, so the web-shop event action=form_submit_success with customer_lead_type=ecom_buy never fires it. DE had the same rule until the publish of 19 Nov fixed it. Fix: apply the same load-rule change in fr-fr.", "owner": "MarTech"},
+    "CONS-01|fr-ciel-compta": {"text": "www.ciel.com shows no consent banner on the first visit. Google (gcs not denied) and LinkedIn hits are sent and _gcl_au / _gcl_aw are set before any consent. Unchanged since the first check.", "owner": "Privacy / web team"},
+    "CONS-01|fr-ciel-gestion-commerciale": {"text": "Same as on the ciel.com accounting page.", "owner": "Privacy / web team"},
+    "TAG:zoominfo|fr-sbc-intacct": {"text": "No ws.zoominfo.com pixel on the Intacct page within 15 s, while it fired on Sage 50 in the same run. ZoomInfo is not a conversion tag; re-check on the next run before raising it.", "owner": "MarTech"}
+   }
+  },
+  "ES": {
+   "summary": "Landing pages are clean; web-shop purchases are not counted.",
+   "brief": [
+    {"tone": "red", "title": "Why it is red", "items": [
+      {"text": "Web-shop purchases do not fire Floodlight 36.", "action": "MarTech: same rule change as the DE fix of 19 Nov.", "check": "CONV-01:ecom_buy|market"}
+    ]},
+    {"tone": "green", "title": "Working", "items": [
+      "Banner, nothing before consent, Floodlight, Google Ads, GA4, LinkedIn, Meta, Quantcast, 6sense, ZoomInfo; gclid and fbclid stored."
+    ]}
+   ],
+   "findings": {
+    "CONV-01:ecom_buy|market": {"text": "The es-es load rule on Floodlight tag 36 does not accept the web-shop event (customer_lead_type=ecom_buy). DE had the same rule until the publish of 19 Nov fixed it. Fix: apply the same load-rule change in es-es.", "owner": "MarTech"},
+    "CONS-05|es-productos-sage-active": {"text": "The Brightcove video player loads before consent. It is not an ad tag; check with the privacy team whether that is acceptable.", "owner": "Privacy team"}
+   }
+  },
+  "PT": {
+   "summary": "Everything checked works.",
+   "brief": [
+    {"tone": "green", "title": "Working", "items": [
+      "Banner, nothing before consent, Floodlight 6144405, Google Ads, GA4, LinkedIn, Meta, Quantcast; gclid and fbclid stored."
+    ]}
+   ],
+   "findings": {}
+  }
+ },
+ "publish": {}
+}

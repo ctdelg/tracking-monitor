@@ -18,7 +18,7 @@ On **www.sage.com** the bot protection answers these page loads with **HTTP 403*
 network. After a burst of requests it also answers **HTTP 429** (rate limit). We are asking for a **targeted
 exception for this monitor only**. We do not want to work around the bot protection.
 
-The Austrian market is not affected: its campaigns link to www.sagedpw.at, which the monitor can already check.
+The Austrian campaigns link to **www.sagedpw.at**. Since at least 25 Nov 2026 its bot protection also answers the monitor's daily run with HTTP 403. Please include www.sagedpw.at in the exception, or forward this request to the team that runs that site.
 
 ## Why we need it
 - Paid media spend depends on conversion tracking. When it breaks, campaigns keep spending but the ad
@@ -31,7 +31,7 @@ The Austrian market is not affected: its campaigns link to www.sagedpw.at, which
 ## What the monitor does (and does not do)
 | | |
 |---|---|
-| **Site and paths** | www.sage.com, only under `/de-de/`, `/fr-fr/`, `/es-es/` and `/pt-pt/` |
+| **Sites and paths** | www.sage.com, only under `/de-de/`, `/fr-fr/`, `/es-es/` and `/pt-pt/`; www.sagedpw.at (6 landing pages and 2 form pages) |
 | **Pages** | About 200 pages in total: 116 paid landing pages and 10 product tour pages in DE, plus about 20–25 landing pages each in FR, ES and PT |
 | **Frequency** | Once per working day (Mon–Fri), starting about 05:00 UTC. Occasional manual re-runs. |
 | **Volume** | About 200 page loads per run, plus a few short click paths (landing page → form page). Each page is loaded once. In addition, light `HEAD` requests check that product tour pages and download files behind forms still exist. |

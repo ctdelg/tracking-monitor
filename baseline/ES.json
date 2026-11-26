@@ -146,10 +146,12 @@
    },
    "days": [
     "2026-11-19",
-    "2026-11-23"
+    "2026-11-23",
+    "2026-11-26"
    ],
-   "status": "learning",
-   "since": "2026-11-19"
+   "status": "confirmed",
+   "since": "2026-11-19",
+   "confirmed_at": "2026-11-26"
   },
   "es-productos-sage-200": {
    "post": {
@@ -800,7 +802,7 @@
    "of": 4
   }
  },
- "updated_at": "2026-11-26T14:00:28Z",
+ "updated_at": "2026-11-26T14:28:20Z",
  "confirmed_at": "2026-11-17T13:28:20Z",
  "confirmed_by": "as-is baseline (Paid Media decision, 2026-11-17)"
 }

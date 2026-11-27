@@ -1,0 +1,6546 @@
+{
+ "market": "FR",
+ "day": "2026-11-27",
+ "tealium": {
+  "fetch": {
+   "url": "https://tags.tiqcdn.com/utag/sage/fr-fr/prod/utag.js",
+   "status": 200,
+   "last_modified": "Thu, 19 Nov 2026 09:23:34 GMT",
+   "error": null
+  },
+  "parsed": {
+   "publish_version": "202611190923",
+   "sha256": "6c0a5d0c6394bbc4399da1eb1e8be88cf336d50d74a45778e31ccdeb00ef78fe",
+   "tags": {
+    "467": {
+     "load": "4",
+     "send": "((utag.cond[344]))",
+     "v": "202403181015",
+     "tid": "7143"
+    },
+    "527": {
+     "load": "1",
+     "send": "1",
+     "v": "202507231442",
+     "tid": "20067"
+    },
+    "500": {
+     "load": "(((utag.cond[322]||utag.cond[338]||utag.cond[339]||utag.cond[323]||utag.cond[337]||utag.cond[376]||utag.cond[285]||utag.cond[353]||utag.cond[354]||utag.cond[317]||utag.cond[364]||utag.cond[372]||utag.cond[253])&&(utag.cond[55]||utag.cond[284]||utag.cond[349]||utag.cond[366])))",
+     "send": "1",
+     "v": "202604091134",
+     "tid": "12047"
+    },
+    "648": {
+     "load": "((utag.cond[55]||utag.cond[284]||utag.cond[366]))",
+     "send": "1",
+     "v": "202611051052",
+     "tid": "12047"
+    },
+    "61": {
+     "load": "utag.cond[121]",
+     "send": "1",
+     "v": "202106211219",
+     "tid": "19116"
+    },
+    "131": {
+     "load": "((utag.cond[55]))",
+     "send": "1",
+     "v": "202512101547",
+     "tid": "7132"
+    },
+    "128": {
+     "load": "((utag.cond[55]))",
+     "send": "1",
+     "v": "202602181050",
+     "tid": "4049"
+    },
+    "129": {
+     "load": "(((utag.cond[347]||utag.cond[392])&&(utag.cond[359])))",
+     "send": "1",
+     "v": "202601121214",
+     "tid": "4049"
+    },
+    "201": {
+     "load": "(((utag.cond[121])&&!(utag.cond[379])))",
+     "send": "1",
+     "v": "202508060847",
+     "tid": "20010"
+    },
+    "246": {
+     "load": "utag.cond[64]",
+     "send": "1",
+     "v": "202207271053",
+     "tid": "7132"
+    },
+    "339": {
+     "load": "(((utag.cond[267]||utag.cond[196])&&!(utag.cond[277]||utag.cond[294])))",
+     "send": "1",
+     "v": "202610121252",
+     "tid": "7142"
+    },
+    "402": {
+     "load": "1",
+     "send": "1",
+     "v": "202211221619",
+     "tid": "20067"
+    },
+    "405": {
+     "load": "((utag.cond[278]))",
+     "send": "1",
+     "v": "202402270939",
+     "tid": "20011"
+    },
+    "424": {
+     "load": "(((utag.cond[267]||utag.cond[196])&&(utag.cond[292]||utag.cond[293])))",
+     "send": "1",
+     "v": "202307250945",
+     "tid": "7142"
+    },
+    "433": {
+     "load": "1",
+     "send": "1",
+     "v": "202409091420",
+     "tid": "23013"
+    },
+    "436": {
+     "load": "1",
+     "send": "1",
+     "v": "202310021423",
+     "tid": "20067"
+    },
+    "449": {
+     "load": "((utag.cond[337]||utag.cond[338]||utag.cond[339]||utag.cond[253]||utag.cond[322]||utag.cond[285]))",
+     "send": "1",
+     "v": "202407301008",
+     "tid": "14037"
+    },
+    "464": {
+     "load": "((utag.cond[349]))",
+     "send": "1",
+     "v": "202611051052",
+     "tid": "4049"
+    },
+    "470": {
+     "load": "(((utag.cond[338]||utag.cond[339]||utag.cond[322]||utag.cond[323]||utag.cond[324]||utag.cond[325]||utag.cond[285]||utag.cond[317]||utag.cond[353]||utag.cond[354]||utag.cond[253])&&(utag.cond[345])))",
+     "send": "1",
+     "v": "202601191556",
+     "tid": "20067"
+    },
+    "471": {
+     "load": "(((utag.cond[347])&&(utag.cond[348])))",
+     "send": "1",
+     "v": "202409091420",
+     "tid": "23013"
+    },
+    "475": {
+     "load": "1",
+     "send": "1",
+     "v": "202403280832",
+     "tid": "20010"
+    },
+    "476": {
+     "load": "1",
+     "send": "1",
+     "v": "202604091134",
+     "tid": "9043"
+    },
+    "477": {
+     "load": "(((utag.cond[347]||utag.cond[392])&&(utag.cond[348])))",
+     "send": "1",
+     "v": "202604091134",
+     "tid": "9043"
+    },
+    "478": {
+     "load": "((utag.cond[343]))",
+     "send": "1",
+     "v": "202604091134",
+     "tid": "9043"
+    },
+    "489": {
+     "load": "(((utag.cond[322]||utag.cond[285]||utag.cond[376])&&(utag.cond[349])))",
+     "send": "1",
+     "v": "202501201423",
+     "tid": "14037"
+    },
+    "507": {
+     "load": "((utag.cond[285]||utag.cond[376]||utag.cond[337]||utag.cond[317]||utag.cond[253]||utag.cond[323]||utag.cond[322]||utag.cond[390]))",
+     "send": "1",
+     "v": "202606091435",
+     "tid": "20119"
+    },
+    "517": {
+     "load": "(((utag.cond[55])&&(utag.cond[357])))",
+     "send": "1",
+     "v": "202603051526",
+     "tid": "4049"
+    },
+    "518": {
+     "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[357])))",
+     "send": "1",
+     "v": "202601121138",
+     "tid": "4049"
+    },
+    "520": {
+     "load": "1",
+     "send": "1",
+     "v": "202409051436",
+     "tid": "20010"
+    },
+    "523": {
+     "load": "((utag.cond[349]))",
+     "send": "1",
+     "v": "202409091420",
+     "tid": "23013"
+    },
+    "540": {
+     "load": "(((utag.cond[284])&&(utag.cond[364])))",
+     "send": "1",
+     "v": "202410141422",
+     "tid": "12047"
+    },
+    "550": {
+     "load": "(((utag.cond[253]||utag.cond[354]||utag.cond[353]||utag.cond[376]||utag.cond[322]||utag.cond[323]||utag.cond[338]||utag.cond[339]||utag.cond[337]||utag.cond[285]||utag.cond[317])&&(utag.cond[55]||utag.cond[369]||utag.cond[349]||utag.cond[284]||utag.cond[366])))",
+     "send": "1",
+     "v": "202606091435",
+     "tid": "6037"
+    },
+    "557": {
+     "load": "1",
+     "send": "1",
+     "v": "202503041257",
+     "tid": "3131"
+    },
+    "578": {
+     "load": "(((utag.cond[55])&&(utag.cond[285]||utag.cond[376]||utag.cond[337]||utag.cond[390]||utag.cond[338]||utag.cond[339]||utag.cond[372]||utag.cond[322]||utag.cond[323]||utag.cond[391])))",
+     "send": "1",
+     "v": "202503061721",
+     "tid": "17001"
+    },
+    "579": {
+     "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[360])&&(utag.cond[285]||utag.cond[376]||utag.cond[337]||utag.cond[390]||utag.cond[338]||utag.cond[339]||utag.cond[372]||utag.cond[322]||utag.cond[323]||utag.cond[391])))",
+     "send": "1",
+     "v": "202503061721",
+     "tid": "17001"
+    },
+    "580": {
+     "load": "(((utag.cond[349])&&(utag.cond[285]||utag.cond[376]||utag.cond[389]||utag.cond[337]||utag.cond[390]||utag.cond[338]||utag.cond[339]||utag.cond[372]||utag.cond[322]||utag.cond[323]||utag.cond[391])))",
+     "send": "1",
+     "v": "202503061721",
+     "tid": "17001"
+    },
+    "581": {
+     "load": "(((utag.cond[347])&&(utag.cond[348])))",
+     "send": "1",
+     "v": "202503061957",
+     "tid": "20119"
+    },
+    "582": {
+     "load": "((utag.cond[349]))",
+     "send": "1",
+     "v": "202503061957",
+     "tid": "20119"
+    },
+    "583": {
+     "load": "((utag.cond[393]||utag.cond[394]||utag.cond[55]||utag.cond[395]||utag.cond[396]||utag.cond[284]))",
+     "send": "1",
+     "v": "202506181452",
+     "tid": "20064"
+    },
+    "595": {
+     "load": "(((utag.cond[284])&&(utag.cond[402])&&(utag.cond[403])))",
+     "send": "1",
+     "v": "202604091134",
+     "tid": "4049"
+    },
+    "608": {
+     "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[407])))",
+     "send": "1",
+     "v": "202601131605",
+     "tid": "4049"
+    },
+    "609": {
+     "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[408])))",
+     "send": "1",
+     "v": "202601131605",
+     "tid": "4049"
+    },
+    "610": {
+     "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[409]||utag.cond[410])))",
+     "send": "1",
+     "v": "202601131605",
+     "tid": "4049"
+    },
+    "607": {
+     "load": "1",
+     "send": "1",
+     "v": "202508270927",
+     "tid": "20067"
+    },
+    "633": {
+     "load": "((utag.cond[285]||utag.cond[354]||utag.cond[353]||utag.cond[323]||utag.cond[253]))",
+     "send": "1",
+     "v": "202610211129",
+     "tid": "18048"
+    },
+    "635": {
+     "load": "((utag.cond[55]))",
+     "send": "1",
+     "v": "202603091538",
+     "tid": "20010"
+    },
+    "646": {
+     "load": "(((utag.cond[284]||utag.cond[366])&&(utag.cond[359])))",
+     "send": "1",
+     "v": "202608271333",
+     "tid": "18048"
+    },
+    "647": {
+     "load": "((utag.cond[349]))",
+     "send": "1",
+     "v": "202608271333",
+     "tid": "18048"
+    },
+    "656": {
+     "load": "(((utag.cond[55]||utag.cond[284]||utag.cond[349])&&(utag.cond[354]||utag.cond[285]||utag.cond[253]||utag.cond[323]||utag.cond[339]||utag.cond[322])))",
+     "send": "1",
+     "v": "202611190923",
+     "tid": "15038"
+    },
+    "657": {
+     "load": "(!(utag.cond[411]))",
+     "send": "1",
+     "v": "202611190923",
+     "tid": "20067"
+    },
+    "658": {
+     "load": "((utag.cond[55]||utag.cond[284]||utag.cond[349]))",
+     "send": "1",
+     "v": "202611190923",
+     "tid": "15038"
+    },
+    "664": {
+     "load": "((utag.cond[354]||utag.cond[253]||utag.cond[323]||utag.cond[418]||utag.cond[372]||utag.cond[419]))",
+     "send": "1",
+     "v": "202611190923",
+     "tid": "3095"
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion": {
+   "ok": true,
+   "results": [
+    {
+     "name": "ecom_try",
+     "fired": [
+      "61",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "475",
+      "476",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "583",
+      "607",
+      "633",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "true_rules": [
+      "121",
+      "196",
+      "267",
+      "284",
+      "323",
+      "344",
+      "345",
+      "347"
+     ],
+     "derived": {
+      "platform": "",
+      "ut.event": "link",
+      "tealium_session_event_number": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "not_offered": true,
+     "conversion_tags_fired": []
+    },
+    {
+     "name": "ecom_buy",
+     "fired": [
+      "61",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "475",
+      "476",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "583",
+      "607",
+      "633",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "true_rules": [
+      "121",
+      "196",
+      "267",
+      "284",
+      "323",
+      "344",
+      "345",
+      "347"
+     ],
+     "derived": {
+      "platform": "",
+      "ut.event": "link",
+      "tealium_session_event_number": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "129"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": []
+    },
+    {
+     "name": "gated_trial",
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "true_rules": [
+      "121",
+      "196",
+      "267",
+      "284",
+      "323",
+      "344",
+      "345",
+      "347",
+      "348",
+      "359",
+      "360",
+      "366",
+      "392",
+      "402",
+      "403",
+      "407"
+     ],
+     "derived": {
+      "platform": "",
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "ga4_customer_lead_type": "trial_demo",
+      "facebook_form_submission_type": "StartTrial",
+      "chatgpt_form_submission_type_local": "appointment_scheduled"
+     },
+     "errors": [],
+     "expected_tags": [
+      "129"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ]
+    },
+    {
+     "name": "gated_contact",
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "true_rules": [
+      "121",
+      "196",
+      "267",
+      "284",
+      "323",
+      "344",
+      "345",
+      "347",
+      "348",
+      "359",
+      "360",
+      "366",
+      "392",
+      "402",
+      "403",
+      "408"
+     ],
+     "derived": {
+      "platform": "",
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "ga4_customer_lead_type": "contact",
+      "facebook_form_submission_type": "Contact",
+      "chatgpt_form_submission_type_local": ""
+     },
+     "errors": [],
+     "expected_tags": [
+      "129"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "609"
+     ]
+    },
+    {
+     "name": "purchase",
+     "fired": [
+      "61",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "464",
+      "467",
+      "470",
+      "475",
+      "476",
+      "478",
+      "500",
+      "507",
+      "520",
+      "523",
+      "527",
+      "550",
+      "557",
+      "580",
+      "582",
+      "607",
+      "633",
+      "647",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "true_rules": [
+      "121",
+      "196",
+      "323",
+      "343",
+      "344",
+      "345",
+      "349"
+     ],
+     "derived": {
+      "platform": "",
+      "ut.event": "link",
+      "tealium_session_event_number": null
+     },
+     "errors": [],
+     "expected_tags": [
+      "464"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "464"
+     ]
+    }
+   ]
+  }
+ },
+ "forms": {
+  "event_script": {
+   "ok": true,
+   "missing": [],
+   "script_len": 2168
+  },
+  "gates": {
+   "beebeee9-9bc0-4fa7-93bb-44f8b2035f1d": {
+    "ok": true,
+    "gate_id": "beebeee9-9bc0-4fa7-93bb-44f8b2035f1d",
+    "gate_name": "INT_24Q1_NCA_FR_WatchPageCerosProductTourForm",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_FR_MED_DEM_TOFU_AskDemoCerosWatch",
+    "campaign_id": "70106000000vyDIAAY",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/ressources/visites-produits/general/video/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-26T14:18:44.000Z",
+    "pages": [
+     "fr-home",
+     "fr-sbc-intacct"
+    ],
+    "ctas": [
+     "Visite interactive de Sage Intacct"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "771a9269-f882-4a2d-8d76-ab5aad04947b": {
+    "ok": true,
+    "gate_id": "771a9269-f882-4a2d-8d76-ab5aad04947b",
+    "gate_name": "ACS_19Q3_NCM_FR_DGWW_AC0680_webformcontactLP5010",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_CON_webformcontact_COM|BOT|GNRC",
+    "campaign_id": "7011o000000tp6UAAQ",
+    "score": "High Score",
+    "product": "Sage 50",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:25:21.000Z",
+    "pages": [
+     "fr-cp-50100jemaitrise"
+    ],
+    "ctas": [
+     "Echangez avec un conseiller"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "613188c1-964d-4488-ac99-d64ff4382b21": {
+    "ok": true,
+    "gate_id": "613188c1-964d-4488-ac99-d64ff4382b21",
+    "gate_name": "NPS_24Q2_NCA_FR_FactureElectroniqueTPE",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_NPS_FR_SMA_PDF_TOFU_FElectroniqueTPE",
+    "campaign_id": "70106000001AzAoAAK",
+    "score": "Low Score",
+    "product": "Sage 50cloud - FR",
+    "redirect_url": "",
+    "download_url": "https://images.go.sage.com/Web/SageGlobalInstance/{5760766c-f89c-4ae9-9f87-90e2f89aea59}_SAGE_Nvelle_charte_-_LB_FE_TPE_-_JAN_2026.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-02-02T14:42:43.000Z",
+    "pages": [
+     "fr-cp-50100jemaitrise",
+     "fr-dematerialisation-facture-electronique"
+    ],
+    "ctas": [
+     "Téléchargez"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "3f85b4de-2cc3-4ae1-a0e4-6ca80204bbf2": {
+    "ok": true,
+    "gate_id": "3f85b4de-2cc3-4ae1-a0e4-6ca80204bbf2",
+    "gate_name": "NPS_24Q2_NCA_FR_FactureElectroniquePME",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_NPS_FR_MED_PDF_TOFU_FElectroniquePMEBlog",
+    "campaign_id": "70106000001AzXyAAK",
+    "score": "Low Score",
+    "product": "Non Product Line Specific",
+    "redirect_url": "",
+    "download_url": "https://images.go.sage.com/Web/SageGlobalInstance/%7Ba4402bb9-e775-4046-811d-ad969addc664%7D_SAGE_Nvelle_charte_-_LB_FE_PME_-_JAN_2026.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-02-02T14:39:25.000Z",
+    "pages": [
+     "fr-cp-50100jemaitrise",
+     "fr-dematerialisation-facture-electronique"
+    ],
+    "ctas": [
+     "Téléchargez"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "957858fc-31b7-4821-ba78-3427c27097d3": {
+    "ok": true,
+    "gate_id": "957858fc-31b7-4821-ba78-3427c27097d3",
+    "gate_name": "NPS_24Q2_NCA_FR_FactureElectroniqueETI",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_NPS_FR_MED_PDF_TOFU_FElectroniqueETI",
+    "campaign_id": "70106000001AzA5AAK",
+    "score": "Low Score",
+    "product": "Non Product Line Specific",
+    "redirect_url": "",
+    "download_url": "https://images.go.sage.com/Web/SageGlobalInstance/%7Bd029563e-bba4-4f92-b634-59ab96a79858%7D_SAGE_Nvelle_charte_-_LB_FE_ETI_OK_-_JAN_2026.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-02-02T14:35:34.000Z",
+    "pages": [
+     "fr-cp-50100jemaitrise",
+     "fr-dematerialisation-facture-electronique"
+    ],
+    "ctas": [
+     "Téléchargez"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "ce79bd06-1c2c-4b87-818c-b46f259530de": {
+    "ok": true,
+    "gate_id": "ce79bd06-1c2c-4b87-818c-b46f259530de",
+    "gate_name": "ACS_23Q1_C4L_FR_ConferenceFE",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_FR_SMA_PDF_NFS_SupportConférenceFE",
+    "campaign_id": "70106000001dMfMAAU",
+    "score": "Low Score",
+    "product": "Production",
+    "redirect_url": "",
+    "download_url": "https://images.go.sage.com/Web/SageGlobalInstance/{fdce3ada-c835-420d-b0aa-01ef14396073}_SAGE_Nvelle_charte_-_LB_FE_ExC_-_JAN_2026.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-02-02T14:46:35.000Z",
+    "pages": [
+     "fr-cp-50100jemaitrise",
+     "fr-dematerialisation-facture-electronique",
+     "fr-experts-comptables-produits-sage-generation-exp"
+    ],
+    "ctas": [
+     "Téléchargez"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "dc7de96c-9947-4ae3-bf65-d2d08b1e4b4c": {
+    "ok": true,
+    "gate_id": "dc7de96c-9947-4ae3-bf65-d2d08b1e4b4c",
+    "gate_name": "NPS_2412_OT_FR_FactureElectroniqueDemandeDeContact",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_NPS_FR_NSS_CON_TOFU_FactureElectroniqueContact",
+    "campaign_id": "701Of00000EbwxqIAB",
+    "score": "High Score",
+    "product": "Non Product Line Specific",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-26T16:31:09.000Z",
+    "pages": [
+     "fr-dematerialisation-facture-electronique"
+    ],
+    "ctas": [
+     "Demandez un rappel",
+     "Etre contacté(e)"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "7f6f4f80-8cab-46fc-b48c-7776cbd9d922": {
+    "ok": true,
+    "gate_id": "7f6f4f80-8cab-46fc-b48c-7776cbd9d922",
+    "gate_name": "ACS_19Q1_NCM_FR_DGWW_NPS_ExpertComptable",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_FR_CON_ExpertComptable_COM|TOP|GNRC",
+    "campaign_id": "7011o000000dICsAAM",
+    "score": "High Score",
+    "product": "Production",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:28.000Z",
+    "pages": [
+     "fr-experts-comptables",
+     "fr-experts-comptables-produits-sage-generation-exp",
+     "fr-experts-comptables-saisie-comptable-automatique"
+    ],
+    "ctas": [
+     "Demandez un rappel",
+     "Nous contacter"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "1b61611f-e15b-4ff1-a730-383ece79c756": {
+    "ok": true,
+    "gate_id": "1b61611f-e15b-4ff1-a730-383ece79c756",
+    "gate_name": "ACS_23Q4_NCA_GB_ADSfAPricingGuideExitIntent",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_GB_SMA_PDF_MOFU_SfAProductPricingGuide",
+    "campaign_id": "70106000000iPMxAAM",
+    "score": "Low Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/en-gb/-/media/files/sagedotcom/master/gated-assets/marketing-automation/fy25/gb/CL_ACS_GB_SMA_PDF_MOFU_SfAProductPricingGuide2.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:25:37.000Z",
+    "pages": [
+     "fr-experts-comptables"
+    ],
+    "ctas": [],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "ba235c11-d040-45c1-8658-790d08184423": {
+    "ok": true,
+    "gate_id": "ba235c11-d040-45c1-8658-790d08184423",
+    "gate_name": "ACS_19Q1_NCM_FR_DGWW_AY0090_DemosGenerationExpertsConnect",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_FR_CON_WebFormGEConnect_COM|BOT|GNRC",
+    "campaign_id": "7011o000000dKaDAAU",
+    "score": "High Score",
+    "product": "Production",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:28.000Z",
+    "pages": [
+     "fr-experts-comptables-produits-sage-generation-exp"
+    ],
+    "ctas": [
+     "Demandez une démo",
+     "Demandez une démo Sage Génération Expert"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "6cf25285-c105-43cc-b0c9-d4abd715e2e5": {
+    "ok": true,
+    "gate_id": "6cf25285-c105-43cc-b0c9-d4abd715e2e5",
+    "gate_name": "ACS_18Q1_OT_FR_DGWW_ER0460_Sage100cFR",
+    "gate_type": "chilipiper",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_DEM_Sage100c_FR",
+    "campaign_id": "70124000000GpwQAAS",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-06T16:55:20.000Z",
+    "pages": [
+     "fr-produits-sage-100"
+    ],
+    "ctas": [
+     "Demandez une démo",
+     "Réservez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "27371fff-7142-4f1b-94ca-2d5b7d3b6659": {
+    "ok": true,
+    "gate_id": "27371fff-7142-4f1b-94ca-2d5b7d3b6659",
+    "gate_name": "ACS_18Q1_OT_FR_DGWW_ER0460_Sage100cComptaFR",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_MED_DEM_BOFU_Sage100Compta",
+    "campaign_id": "70124000000GiaHAAS",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-05T14:31:37.000Z",
+    "pages": [
+     "fr-produits-sage-100",
+     "fr-produits-sage-100-comptabilite"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "2750fbf2-3892-458d-9b18-16207476ebc5": {
+    "ok": true,
+    "gate_id": "2750fbf2-3892-458d-9b18-16207476ebc5",
+    "gate_name": "ACS_18Q1_OT_FR_DGWW_ER0460_Sage100cGescomFR",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_DEM_Sage100cGescom_FR",
+    "campaign_id": "70124000000GiaRAAS",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-05T13:13:42.000Z",
+    "pages": [
+     "fr-produits-sage-100",
+     "fr-produits-sage-100-gestion-commerciale"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "88c9430a-f78c-4399-9321-10d7a538e998": {
+    "ok": true,
+    "gate_id": "88c9430a-f78c-4399-9321-10d7a538e998",
+    "gate_name": "ACG_18Q1_OT_FR_DGWW_ER0460_Sage100cFR",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_MED_DEM_BOFU_Sage100Enterprise",
+    "campaign_id": "70124000000GibZAAS",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-05T14:37:32.000Z",
+    "pages": [
+     "fr-produits-sage-100"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "47f605fa-a40d-4214-8f4d-a726ec58ab8e": {
+    "ok": true,
+    "gate_id": "47f605fa-a40d-4214-8f4d-a726ec58ab8e",
+    "gate_name": "INT_23Q2_NCA_FR_DownloadProductBrochureIntacctWebPage",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_FR_MED_PDF_BOFU_PDF_Guide_Intacct",
+    "campaign_id": "70106000001dOl7AAE",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/master/gated-assets/marketing-automation/fy24/fr/sage-intacct-brochure-maj-mai-2024.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-12-05T15:18:05.000Z",
+    "pages": [
+     "fr-produits-sage-100",
+     "fr-produits-sage-100-comptabilite",
+     "fr-produits-sage-100-gestion-commerciale",
+     "fr-sbc-intacct"
+    ],
+    "ctas": [
+     "Form Intacct"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "6ca8e97a-04c5-4344-b274-b85f2b91a9fc": {
+    "ok": true,
+    "gate_id": "6ca8e97a-04c5-4344-b274-b85f2b91a9fc",
+    "gate_name": "ACG_20Q3_NCA_FR_DGWW_ER0460_formcontacta",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_DEM_contactform_COM|BOT|GNRC",
+    "campaign_id": "7011o000000qdh6AAA",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:26.000Z",
+    "pages": [
+     "fr-produits-sage-100-sage-automatisation-comptable"
+    ],
+    "ctas": [
+     "Demandez une démo",
+     "Echangez avec un expert"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "30e29714-df8c-4695-a1cd-36758937a59f": {
+    "ok": true,
+    "gate_id": "30e29714-df8c-4695-a1cd-36758937a59f",
+    "gate_name": "ACG_19Q3_NCM_FR_DGEE_ER0460_webformcontactrecouvrementcreances",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_DEM_webformrecouvrement_COM|BOT|GNRC",
+    "campaign_id": "7011o000000mOFSAA2",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:25:19.000Z",
+    "pages": [
+     "fr-produits-sage-100-sage-recouvrement-creances"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "70cdf0a5-4f16-4671-922a-7dfd9a7999a0": {
+    "ok": true,
+    "gate_id": "70cdf0a5-4f16-4671-922a-7dfd9a7999a0",
+    "gate_name": "ACG_19Q3_NCM_FR_DGEE_ER0460_webformrecouvrementcreanceslivreblanc",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_PDF_webformrecouvrementc_COM|TOP|GNRC",
+    "campaign_id": "7011o000000mOzLAAU",
+    "score": "Medium Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "https://img06.en25.com/Web/SageGlobalInstance/{b4118e66-bd38-41df-af11-4ef3de862144}_Livre_blanc_Sage_Recouvrement_Créances_VD.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:25:19.000Z",
+    "pages": [
+     "fr-produits-sage-100-sage-recouvrement-creances"
+    ],
+    "ctas": [
+     "Téléchargez le livre blanc"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "da18d790-e59e-4396-94bd-2140dbf8d90b": {
+    "ok": true,
+    "gate_id": "da18d790-e59e-4396-94bd-2140dbf8d90b",
+    "gate_name": "ACG_21Q3_NCA_FR_infographierecouvrerpayer",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_MED_INF_MOFU_infographierecouvrer",
+    "campaign_id": "70106000001ET11AAG",
+    "score": "Low Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/France/documents/PDF/Sage%20Recouvrer_Payer.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:27.000Z",
+    "pages": [
+     "fr-produits-sage-100-sage-recouvrement-creances"
+    ],
+    "ctas": [
+     "Téléchargez l’infographie"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "0a047f42-2b28-4134-9741-c5ae19ce7f0c": {
+    "ok": true,
+    "gate_id": "0a047f42-2b28-4134-9741-c5ae19ce7f0c",
+    "gate_name": "ACG_20Q2_NCM_FR_EVON_AC3010_Webdemo50cNBSitecore",
+    "gate_type": "webinar",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_S50_FR_SMA_DEM_BOFU_Webdemo50Prospects",
+    "campaign_id": "7011o000000v6DaAAI",
+    "score": "High Score",
+    "product": "Sage 50cloud - FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-09-30T17:30:23.000Z",
+    "pages": [
+     "fr-produits-sage-50cloud",
+     "fr-produits-sage-50cloud-test-gratuit",
+     "fr-produits-sage-sales-management"
+    ],
+    "ctas": [
+     "Demandez une démo",
+     "Démo en ligne"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "50580884-5634-4dfe-aa42-9615ee3a287a": {
+    "ok": true,
+    "gate_id": "50580884-5634-4dfe-aa42-9615ee3a287a",
+    "gate_name": "ACG_18Q2_NCM_FR_DGWW_AC3010_CLACGFRDEMSage50cFR",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_S50_FR_SMA_CON_MOFU_Rappel-Sage50",
+    "campaign_id": "70124000000GhdKAAS",
+    "score": "High Score",
+    "product": "Sage 50cloud - FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:25:22.000Z",
+    "pages": [
+     "fr-produits-sage-50cloud"
+    ],
+    "ctas": [
+     "Demandez un rappel"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "694e9742-7868-4061-8a29-8df61ba4fdc2": {
+    "ok": true,
+    "gate_id": "694e9742-7868-4061-8a29-8df61ba4fdc2",
+    "gate_name": "BMS_23Q1_NCA_FR_SageActiveWebform",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_SMA_DEM_MOFU_WebdemoSageactive",
+    "campaign_id": "70106000001hUZlAAM",
+    "score": "High Score",
+    "product": "Sage Active",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:34.000Z",
+    "pages": [
+     "fr-produits-sage-active"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "cebce4b8-7cdf-4293-864b-71d5cba251ea": {
+    "ok": true,
+    "gate_id": "cebce4b8-7cdf-4293-864b-71d5cba251ea",
+    "gate_name": "OTH_24Q1_NCA_FR_Activev2",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_SMA_DEM_MOFU_WebdemoSageactive",
+    "campaign_id": "70106000001AvHvAAK",
+    "score": "High Score",
+    "product": "Sage Active",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:42.000Z",
+    "pages": [
+     "fr-produits-sage-active"
+    ],
+    "ctas": [
+     "Hidden gate"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "1fdbf787-e9b8-40bc-85f2-dea2247b47b4": {
+    "ok": true,
+    "gate_id": "1fdbf787-e9b8-40bc-85f2-dea2247b47b4",
+    "gate_name": "ACG_18Q2_NCM_FR_DGWW_ER0460_Sage100cBIReportingFR",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_DEM_Sage100cBIReporting_FR",
+    "campaign_id": "70124000000Gic3AAC",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:25:23.000Z",
+    "pages": [
+     "fr-produits-sage-bi-reporting"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "3b8bfb83-e66f-46bd-9495-a832c4a23361": {
+    "ok": true,
+    "gate_id": "3b8bfb83-e66f-46bd-9495-a832c4a23361",
+    "gate_name": "ACG_21Q3_NCA_FR_infographieanticiperpiloter",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_MED_INF_MOFU_infographieanticiper",
+    "campaign_id": "70106000001ET16AAG",
+    "score": "Low Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/France/documents/PDF/Sage%20anticiper_piloter.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:27.000Z",
+    "pages": [
+     "fr-produits-sage-bi-reporting"
+    ],
+    "ctas": [
+     "Téléchargez l'infographie"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "c0d6bd79-1553-40aa-b255-d322305b37d7": {
+    "ok": true,
+    "gate_id": "c0d6bd79-1553-40aa-b255-d322305b37d7",
+    "gate_name": "BMS_23Q4_OT_FR_PAGESBI",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_MED_DEM_MOFU_SBIDEMOFORM",
+    "campaign_id": "70106000000iNMbAAM",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:34.000Z",
+    "pages": [
+     "fr-produits-sage-business-reporting"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "db32bf53-3d23-4002-956f-ff89dc3ed336": {
+    "ok": true,
+    "gate_id": "db32bf53-3d23-4002-956f-ff89dc3ed336",
+    "gate_name": "BMS_24Q1_NCA_FR_DemandeDemoDCC100",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_MED_DEM_MOFU_DCC100demo",
+    "campaign_id": "70106000000vxc1AAA",
+    "score": "High Score",
+    "product": "Sage 100 FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-07-15T12:57:59.000Z",
+    "pages": [
+     "fr-produits-sage-data-clean-and-control"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "6759c388-4fe6-4bbe-b2fa-126db07cb1d0": {
+    "ok": true,
+    "gate_id": "6759c388-4fe6-4bbe-b2fa-126db07cb1d0",
+    "gate_name": "BMS_24Q1_NCA_FR_FormSDCCfrp1000",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_MED_CON_MOFU_CallBackDCCfrp1000",
+    "campaign_id": "70106000000vxRGAAY",
+    "score": "High Score",
+    "product": "Sage 1000 (FR)",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-07-15T12:59:22.000Z",
+    "pages": [
+     "fr-produits-sage-data-clean-and-control"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "94cf276e-8105-4c63-9b8c-f13354e90138": {
+    "ok": true,
+    "gate_id": "94cf276e-8105-4c63-9b8c-f13354e90138",
+    "gate_name": "BMS_18Q1_OT_FR_DGWW_ER0020_SageFRP1000FR",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_DEM_SageFRP1000_FR",
+    "campaign_id": "70124000000Gl2oAAC",
+    "score": "High Score",
+    "product": "Sage 1000 (FR)",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-03T11:58:43.000Z",
+    "pages": [
+     "fr-produits-sage-frp-1000"
+    ],
+    "ctas": [
+     "Contactez-nous pour en savoir plus",
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "f80611e7-760f-4392-b029-769795288175": {
+    "ok": true,
+    "gate_id": "f80611e7-760f-4392-b029-769795288175",
+    "gate_name": "SX3_22Q2_NCA_FR_WebFormFRP1000GuideTemoignagesClients",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_FR_MED_PDF_TOFU_GuideTémoignagesFRP",
+    "campaign_id": "70106000001Ear2AAC",
+    "score": "Medium Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/France/documents/PDF/cp/x3/guide_temoignages_clients_frp1000.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:47.000Z",
+    "pages": [
+     "fr-produits-sage-frp-1000"
+    ],
+    "ctas": [
+     "Téléchargez le guide clients Sage FRP 10"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "b8bba13c-b114-425f-b142-70f7a0301b7d": {
+    "ok": true,
+    "gate_id": "b8bba13c-b114-425f-b142-70f7a0301b7d",
+    "gate_name": "BMS_2509_NCA_FR_Sage100DemoSSMproduct",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_MED_DEM_MOFU_Sage100SSMDemandeDemo",
+    "campaign_id": "701Of00000ULY5TIAX",
+    "score": "High Score",
+    "product": "Sage 100",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-05T14:35:31.000Z",
+    "pages": [
+     "fr-produits-sage-sales-management"
+    ],
+    "ctas": [
+     "Demandez une démo",
+     "Demandez une démo personnalisée"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "177259a6-e27e-4aa6-8989-e9fa5b596c7e": {
+    "ok": true,
+    "gate_id": "177259a6-e27e-4aa6-8989-e9fa5b596c7e",
+    "gate_name": "S50_2504_C4L_FR_LANCEMENTSSSMFORMPAGEPRODUIT",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_S50_FR_SMA_DEM_MOFU_Demandewebdemossm_Pagepdt",
+    "campaign_id": "701Of00000LSHmfIAH",
+    "score": "High Score",
+    "product": "Sage 50cloud - FR",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:45.000Z",
+    "pages": [
+     "fr-produits-sage-sales-management"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "3c360e8d-998f-415d-9e4e-148988125f09": {
+    "ok": true,
+    "gate_id": "3c360e8d-998f-415d-9e4e-148988125f09",
+    "gate_name": "ACS_18Q1_NCM_FR_DGWW_AC0570_SageApiCommerceDetaiFR",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACG_FR_DEM_SageXRTTreasury_FR",
+    "campaign_id": "70124000000GiloAAC",
+    "score": "High Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-08-05T14:45:49.000Z",
+    "pages": [
+     "fr-produits-sage-xrt-advanced"
+    ],
+    "ctas": [
+     "Contactez-nous",
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "cb6b885e-aceb-4f58-96eb-832e4366206a": {
+    "ok": true,
+    "gate_id": "cb6b885e-aceb-4f58-96eb-832e4366206a",
+    "gate_name": "INT_23Q2_NCA_FR_DemandeDemoOverviewPageProduitIntacct",
+    "gate_type": "chilipiper",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_FR_MED_DEM_TOFU_DemandeDemoIntacct",
+    "campaign_id": "70106000001dObCAAU",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-09-23T08:55:48.000Z",
+    "pages": [
+     "fr-sbc-intacct",
+     "fr-sbc-intacct-bon-commandes",
+     "fr-sbc-intacct-compte-crediteur",
+     "fr-sbc-intacct-compte-debiteur",
+     "fr-sbc-intacct-multi-societes",
+     "fr-sbc-intacct-consolidation-comptable"
+    ],
+    "ctas": [
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "2baa8cef-2395-40a4-bf72-b898f3fe0a35": {
+    "ok": true,
+    "gate_id": "2baa8cef-2395-40a4-bf72-b898f3fe0a35",
+    "gate_name": "INT_2608_NCA_FR_DownloadProductBrochureIntacctMobile",
+    "gate_type": "redirect",
+    "form_type": "SimpleGate",
+    "last_content_name": "CL_INT_FR_MED_TOO_MOFU_BrochureIntacctMobile",
+    "campaign_id": "701W700000db0IkIAI",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/resources/product-tours/general/brochure-mobile/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-07-15T14:03:41.000Z",
+    "pages": [
+     "fr-sbc-intacct",
+     "fr-sbc-intacct-bon-commandes",
+     "fr-sbc-intacct-compte-crediteur",
+     "fr-sbc-intacct-compte-debiteur"
+    ],
+    "ctas": [
+     "Product Tour",
+     "Visite interactive de Sage Intacct"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "aed21b28-c9cc-43cd-afc9-7395f5ce63cb": {
+    "ok": true,
+    "gate_id": "aed21b28-c9cc-43cd-afc9-7395f5ce63cb",
+    "gate_name": "INT_24Q1_NCA_FR_CerosProductTourCallBack",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_FR_MED_CON_MOFU_CallBackCerosTour",
+    "campaign_id": "70106000000vxRaAAI",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-10-22T15:31:20.000Z",
+    "pages": [
+     "fr-sbc-intacct",
+     "fr-sbc-intacct-bon-commandes",
+     "fr-sbc-intacct-compte-debiteur",
+     "fr-sbc-intacct-multi-societes",
+     "fr-sbc-intacct-consolidation-comptable"
+    ],
+    "ctas": [
+     "Exchangez avec nos experts"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "6cfae0e2-b56e-4884-ab44-d05a3a1f19e8": {
+    "ok": true,
+    "gate_id": "6cfae0e2-b56e-4884-ab44-d05a3a1f19e8",
+    "gate_name": "INT_2606_NCA_FR_RequestPricingProductCard",
+    "gate_type": "chilipiper",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_FR_MED_QUO_TOFU_RequestPriceProductCardPP",
+    "campaign_id": "701W700000cBNeeIAG",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-09-23T08:59:25.000Z",
+    "pages": [
+     "fr-sbc-intacct"
+    ],
+    "ctas": [
+     "Demandez un devis personnalisé"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "3a490cb7-2156-4631-b295-376194596eb9": {
+    "ok": true,
+    "gate_id": "3a490cb7-2156-4631-b295-376194596eb9",
+    "gate_name": "INT_2410_NCA_FR_Q4FY24RequestPricingForm",
+    "gate_type": "chilipiper",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_FR_MED_QUO_MOFU_RequestPrice",
+    "campaign_id": "701Of00000AbXSQIA3",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-09-23T09:06:29.000Z",
+    "pages": [
+     "fr-sbc-intacct"
+    ],
+    "ctas": [
+     "Demandez un devis",
+     "veuillez contacter notre équipe"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "a292f503-1b8f-401d-a70b-12842d5c63c7": {
+    "ok": true,
+    "gate_id": "a292f503-1b8f-401d-a70b-12842d5c63c7",
+    "gate_name": "INT_22Q3_NCA_US_TalktoExpert",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_US_MED_CON_BOFU_Requestacall",
+    "campaign_id": "70106000001hTUbAAM",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-01-21T13:01:33.000Z",
+    "pages": [
+     "fr-sbc-intacct-bon-commandes"
+    ],
+    "ctas": [
+     "Contactez-nous"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "571b0e5a-0c90-4902-ab27-c2061c0d90cd": {
+    "ok": true,
+    "gate_id": "571b0e5a-0c90-4902-ab27-c2061c0d90cd",
+    "gate_name": "INT_22Q3_NCA_US_0009ContactUs",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_INT_US_MED_CON_BOFU_Requestacall",
+    "campaign_id": "70106000001hTUaAAM",
+    "score": "High Score",
+    "product": "Sage Intacct",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-12-04T15:59:23.000Z",
+    "pages": [
+     "fr-sbc-intacct-compte-crediteur",
+     "fr-sbc-intacct-compte-debiteur"
+    ],
+    "ctas": [
+     "Contactez-nous"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "a0ac38e1-3e04-4267-80fd-0ef5806bf0fd": {
+    "ok": true,
+    "gate_id": "a0ac38e1-3e04-4267-80fd-0ef5806bf0fd",
+    "gate_name": "PRL_2612_NCA_FR_SagePaieRHDemandeDemo",
+    "gate_type": "webinar",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_PRL_FR_SMA_CON_BOFU_SBCcallbackDemoSBCP",
+    "campaign_id": "70106000001ET61AAG",
+    "score": "High Score",
+    "product": "Sage Business Cloud Payroll",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-11-25T14:41:34.000Z",
+    "pages": [
+     "fr-sbc-logiciels-gestionnaire-de-paie"
+    ],
+    "ctas": [
+     "Demandez une demo",
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "609",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "609"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "3f9f23aa-9eed-4c80-a16d-0e7c52937b14": {
+    "ok": true,
+    "gate_id": "3f9f23aa-9eed-4c80-a16d-0e7c52937b14",
+    "gate_name": "SX3_18Q1_NCA_FR_DemandeDemo",
+    "gate_type": "chilipiper",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_FR_MED_YTB_TOFU_DemandeDemo",
+    "campaign_id": "70124000000U6SUAA0",
+    "score": "High Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-10-09T12:28:06.000Z",
+    "pages": [
+     "fr-sbc-sage-x3",
+     "fr-sbc-sage-x3-gestion-de-la-production",
+     "fr-sbc-sage-x3-secteurs-agroalimentaire",
+     "fr-sbc-sage-x3-secteurs-construction"
+    ],
+    "ctas": [
+     "Demander une démo",
+     "Demandez une démo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "c9faf818-5e3d-43b8-bae5-5acbd42da1cb": {
+    "ok": true,
+    "gate_id": "c9faf818-5e3d-43b8-bae5-5acbd42da1cb",
+    "gate_name": "SX3_2512_NCA_FR_ProductTourX3",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_FR_MED_TOO_MOFU_ProductTourX32025",
+    "campaign_id": "701W700000TAkVXIA1",
+    "score": "High Score",
+    "product": "Sage X3",
+    "redirect_url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/visite-guidee-du-produit/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-07-15T12:41:15.000Z",
+    "pages": [
+     "fr-sbc-sage-x3",
+     "fr-sbc-sage-x3-gestion-de-la-production",
+     "fr-sbc-sage-x3-secteurs-agroalimentaire",
+     "fr-sbc-sage-x3-secteurs-construction"
+    ],
+    "ctas": [
+     "Visite guidée du produit",
+     "Visite interactive de Sage X3"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "595",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "595",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "4b0df4e2-2ff4-4ed4-918b-be13078987d2": {
+    "ok": true,
+    "gate_id": "4b0df4e2-2ff4-4ed4-918b-be13078987d2",
+    "gate_name": "SX3_21Q1_NCA_FR_WebNewPageProduitX3_Form9",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_FR_MED_PDF_NFS_AvenirIndusManuf40",
+    "campaign_id": "70106000000mk9PAAQ",
+    "score": "Low Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/pdf/cp/webnewpageproduitx3/f9-future-manuf--cl-sx3-fr-med-pdf-nfs-avenirindusmanuf40.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:46.000Z",
+    "pages": [
+     "fr-sbc-sage-x3-gestion-de-la-production",
+     "fr-sbc-sage-x3-secteurs-agroalimentaire",
+     "fr-sbc-sage-x3-secteurs-construction"
+    ],
+    "ctas": [
+     "Téléchargez le guide"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "7898f9d7-6bc6-4f81-8167-ec0d536b704a": {
+    "ok": true,
+    "gate_id": "7898f9d7-6bc6-4f81-8167-ec0d536b704a",
+    "gate_name": "SX3_21Q1_NCA_FR_WebNewPageProduitX3_Form18",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_FR_MED_PDF_NFS_PreparerMondeDemain",
+    "campaign_id": "70106000000mk9PAAQ",
+    "score": "Low Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/pdf/cp/webnewpageproduitx3/f18-guide-lavenir-dirinfo-industrie--cl-sx3-fr-med-pdf-nfs-preparermondedemain.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:46.000Z",
+    "pages": [
+     "fr-sbc-sage-x3-gestion-de-la-production",
+     "fr-sbc-sage-x3-secteurs-agroalimentaire"
+    ],
+    "ctas": [
+     "Téléchargez le guide"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "4c9599f8-4806-4cac-8714-c9c3d955e0b8": {
+    "ok": true,
+    "gate_id": "4c9599f8-4806-4cac-8714-c9c3d955e0b8",
+    "gate_name": "SX3_21Q1_NCA_FR_WebNewPageProduitX3_Form12",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_FR_MED_PDF_NFS_ERPdemainPlusQunERP",
+    "campaign_id": "70106000000mk9PAAQ",
+    "score": "Low Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/pdf/cp/webnewpageproduitx3/f12-lb-lerp-de-demain-bien-plus-quun-erp--cl-sx3-fr-med-pdf-nfs-erpdemainplusqunerp.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:46.000Z",
+    "pages": [
+     "fr-sbc-sage-x3-gestion-de-la-production"
+    ],
+    "ctas": [
+     "Téléchargez le guide"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "d4e0ecec-e201-4907-95f2-1e24cb6de5ea": {
+    "ok": true,
+    "gate_id": "d4e0ecec-e201-4907-95f2-1e24cb6de5ea",
+    "gate_name": "X3_20Q3_NCA_FR_DGEO_X3_TryBuyFormOnSageX3ProductPage",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_X3_FR_TRL_TryBuySageX3_COM|BOT|GNRC",
+    "campaign_id": "7011o000000qdBeAAI",
+    "score": "High Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:49.000Z",
+    "pages": [
+     "fr-sbc-sage-x3-gestion-de-la-production",
+     "fr-sbc-sage-x3-secteurs-agroalimentaire",
+     "fr-sbc-sage-x3-secteurs-construction"
+    ],
+    "ctas": [
+     "Essayez X3"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "c7be1ca6-e451-47b9-92c9-b1af98e8c2eb": {
+    "ok": true,
+    "gate_id": "c7be1ca6-e451-47b9-92c9-b1af98e8c2eb",
+    "gate_name": "X3.comFRProductTour_Industry",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_BMS_FR_TOOL_ProductTourIndustry_COM|BOT|UC10",
+    "campaign_id": "70124000000U6SZ",
+    "score": "Medium Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://produkte.sage.de/enterprise-management-tour-2018/en/index.html?autoplay=true",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2022-04-21T08:57:18.000Z",
+    "pages": [
+     "fr-sbc-sage-x3-secteurs-agroalimentaire"
+    ],
+    "ctas": [
+     "Découvrez"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "608",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "608"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   },
+   "93e25d36-20ff-4fa9-9184-81af4faede7d": {
+    "ok": true,
+    "gate_id": "93e25d36-20ff-4fa9-9184-81af4faede7d",
+    "gate_name": "SX3_21Q1_NCA_FR_WebNewPageProduitX3_Form17",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_FR_MED_PDF_NFS_ChecklistTechno",
+    "campaign_id": "70106000000mk9PAAQ",
+    "score": "Low Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/pdf/cp/webnewpageproduitx3/f17-checklist-techno--cl-sx3-fr-med-pdf-nfs-checklisttechno.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:17:46.000Z",
+    "pages": [
+     "fr-sbc-sage-x3-secteurs-agroalimentaire"
+    ],
+    "ctas": [
+     "Téléchargez le guide"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "61",
+      "129",
+      "201",
+      "339",
+      "402",
+      "433",
+      "436",
+      "467",
+      "470",
+      "471",
+      "475",
+      "476",
+      "477",
+      "500",
+      "507",
+      "520",
+      "527",
+      "550",
+      "557",
+      "579",
+      "581",
+      "583",
+      "607",
+      "610",
+      "633",
+      "646",
+      "648",
+      "656",
+      "657",
+      "658",
+      "664"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "129",
+      "610"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "linkedin",
+      "meta",
+      "openai",
+      "quantcast",
+      "reddit",
+      "sixsense",
+      "tiktok"
+     ]
+    }
+   }
+  },
+  "inventory_pages": [
+   "fr-ciel-compta",
+   "fr-ciel-gestion-commerciale",
+   "fr-cp-50100jemaitrise",
+   "fr-dematerialisation-facture-electronique",
+   "fr-experts-comptables",
+   "fr-experts-comptables-produits-sage-generation-exp",
+   "fr-experts-comptables-saisie-comptable-automatique",
+   "fr-home",
+   "fr-produits-sage-100",
+   "fr-produits-sage-100-comptabilite",
+   "fr-produits-sage-100-gestion-commerciale",
+   "fr-produits-sage-100-sage-automatisation-comptable",
+   "fr-produits-sage-100-sage-recouvrement-creances",
+   "fr-produits-sage-50cloud",
+   "fr-produits-sage-50cloud-test-gratuit",
+   "fr-produits-sage-active",
+   "fr-produits-sage-bi-reporting",
+   "fr-produits-sage-business-reporting",
+   "fr-produits-sage-data-clean-and-control",
+   "fr-produits-sage-frp-1000",
+   "fr-produits-sage-sales-management",
+   "fr-produits-sage-xrt-advanced",
+   "fr-sbc-intacct",
+   "fr-sbc-intacct-bon-commandes",
+   "fr-sbc-intacct-compte-crediteur",
+   "fr-sbc-intacct-compte-debiteur",
+   "fr-sbc-intacct-consolidation-comptable",
+   "fr-sbc-intacct-multi-societes",
+   "fr-sbc-logiciels-gestionnaire-de-paie",
+   "fr-sbc-sage-x3",
+   "fr-sbc-sage-x3-gestion-de-la-production",
+   "fr-sbc-sage-x3-secteurs-agroalimentaire",
+   "fr-sbc-sage-x3-secteurs-construction"
+  ]
+ },
+ "tealium_extra": {
+  "ciel": {
+   "fetch": {
+    "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+    "status": 200,
+    "last_modified": "Wed, 18 Nov 2026 10:17:37 GMT",
+    "error": null
+   },
+   "parsed": {
+    "publish_version": "202611181017",
+    "sha256": "e1aae93dae61637a2f3718ea00645d370dbcc9e234aef074b7e99a165031e124",
+    "tags": {
+     "4": {
+      "load": "1",
+      "send": "1",
+      "v": "202402200908",
+      "tid": "7142"
+     },
+     "9": {
+      "load": "((utag.cond[4]))",
+      "send": "1",
+      "v": "202602181412",
+      "tid": "4049"
+     },
+     "17": {
+      "load": "(((utag.cond[4])  &&  (utag.cond[8])))",
+      "send": "1",
+      "v": "202611181017",
+      "tid": "4049"
+     },
+     "10": {
+      "load": "((utag.cond[5]))",
+      "send": "1",
+      "v": "202602181412",
+      "tid": "4049"
+     },
+     "13": {
+      "load": "((utag.cond[6] || utag.cond[7] || utag.cond[4] || utag.cond[9] || utag.cond[10]))",
+      "send": "1",
+      "v": "202509081715",
+      "tid": "20064"
+     }
+    }
+   },
+   "diff": {
+    "changed": false,
+    "items": [],
+    "conversion_relevant": false
+   },
+   "conversion": {
+    "ok": true,
+    "results": [
+     {
+      "name": "purchase",
+      "fired": [
+       "4",
+       "9",
+       "13",
+       "17"
+      ],
+      "true_rules": [
+       "4",
+       "8"
+      ],
+      "derived": {
+       "ut.event": "link",
+       "tealium_session_event_number": "1"
+      },
+      "errors": [],
+      "expected_tags": [
+       "9"
+      ],
+      "not_offered": false,
+      "conversion_tags_fired": [
+       "9",
+       "17"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "browser": {
+  "source": "playwright",
+  "collected_at": "2026-11-27T05:28:08Z",
+  "visits": [
+   {
+    "id": "fr-ciel-compta",
+    "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx",
+    "type": "product",
+    "click_ids": {
+     "gclid": "TEST_MON_20261127",
+     "msclkid": "TEST_MON_20261127",
+     "fbclid": "TEST_MON_20261127"
+    },
+    "live_sample": false,
+    "status": 200,
+    "final_url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": false,
+    "pre": {
+     "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+     "title": "Sage 50 Compta (anciennement Ciel Compta)",
+     "requests": [
+      {
+       "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+       "type": "document"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/ciel.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://code.jquery.com/jquery-3.6.0.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZBi5dHMyVcwxYdvSy4KhboDDEB9EXPBQgI5bMnVjrk6m9cnRlcLY6h-7vt0yoA77mg2&t=638628279619783110",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvvZgB1RltiGoXquUyx9ZzQHag6aykr3cE1maFZaw7f8-8_sRi0q9abh4Ahi_1oqXbFnwIzMfAvH1frJ4gqKl7AVzXrj0VlvB2DXLhpGHFZpfzw4ujRGjlYf6MB3z7wAi02JqKs5O2KSRnPf5BC9GF2Y1&t=2a9d95e3",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OPi9_EL9u4MZrFpRcJ7dLgRthpcnGTI6CHDUqgHYkGyYEiFKGx_F8tgBZoUDsqSUw9YtTqvkEnQznkuqCbB7ekFha8gxQaKwB_4HMpTjQKsAX_K5ZcBLH5fC3lB1tQkHqpA5m94-3N8wE62tqZywCa81&t=2a9d95e3",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/sage_50_compta.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/sage_50_compta_mobile.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/init.js?v=20260505a",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/zoom.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/youtube.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/libraries/ciel.js?x123",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/funnelback.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-THQ38J",
+       "type": "script"
+      },
+      {
+       "url": "https://d.impactradius-event.com/A1382897-bebb-4360-8200-824fe2a7eeaf1.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/tealium/tealiumStuff.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/tools.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/ServerExchange.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-8EYWV34H9Z&cx=c&gtm=4e6bh1",
+       "type": "script"
+      },
+      {
+       "url": "https://www.google-analytics.com/analytics.js",
+       "type": "script"
+      },
+      {
+       "url": "https://siteimproveanalytics.com/js/siteanalyze_61518.js",
+       "type": "script"
+      },
+      {
+       "url": "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://static.hotjar.com/c/hotjar-1254226.js?sv=6",
+       "type": "script"
+      },
+      {
+       "url": "https://webchathub.sage.com/genesys/build-v1.0.1/webmessenger.es5.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&ae=g&auid=2065416823.1795757211&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1569646766.1795757211&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~119404697~120385422~120469145~120469153~121246026~121246034~123785233&tft=1795757210579&tfd=933&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=15&frm=0&apvc=1&ae=g&auid=2065416823.1795757211&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261127&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1569646766.1795757211&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~119404697~120385422~120469145~120469153~121246026~121246034~123785233&tft=1795757210579&tfd=933&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261127&auid=2065416823.1795757211&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&ae=g&auid=2065416823.1795757211&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1569646766.1795757211&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~119404697~120385422~120469145~120469153~121246026~121246034~123785233&tft=1795757210579&tfd=933&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=15&frm=0&apvc=1&ae=g&auid=2065416823.1795757211&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&gclid=TEST_MON_20261127&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1569646766.1795757211&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~119404697~120385422~120469145~120469153~121246026~121246034~123785233&tft=1795757210579&tfd=933&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261127&auid=2065416823.1795757211&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=608234794&t=pageview&_s=1&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&ul=fr-fr&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&sr=1366x900&vp=1366x900&_u=YGBAiEABBAAAgCAEK~&jid=218428296&gjid=1375334560&cid=1420009111.1795757211&tid=UA-53356708-1&_gid=1238296814.1795757211&_slc=1&gtm=45He6bh1n71THQ38Jv71004762za200zd71004762xf1&cd3=1795757210566.4puf09u9&cd4=2026-11-27T05%3A26%3A50.566%2B00%3A00&cd9=Prospect&cd10=Client%20Abonn%C3%A9s&cd11=Not%20Available&cd12=Not%20Available&cd13=0.27826912387712965_1795757210569&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~119404697~120385422~120469145~120469153~121246026~121246034~123785233&cd2=1420009111.1795757211&z=1072520738",
+       "type": "xhr"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j102&tid=UA-53356708-1&cid=1420009111.1795757211&jid=218428296&gjid=1375334560&_gid=1238296814.1795757211&_u=YGBAiEABBAAAgGAEK~&z=2030685221",
+       "type": "xhr"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795757210650&li_adsId=b18b4eff-0b5a-4234-be39-9daebbac55a1&pageLoadId=13532f30-260c-4f04-87b1-446a7213bee4&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/insight_tag_errors.gif?v=2&pid=58294&error=version%3A%201000050%20%7C%20WebsiteActions-1000050-TypeError%3A%20Failed%20to%20fetch%3B%20ErrorData%3A%20%7B%22domain%22%3A%22ciel.com%22%2C%22requestFetcher%22%3A%22fetch-keepalive%22%2C%22body%22%3A%22H4sIAAAAAAAAA3VQ22rcMBT8leU8lBasrCTf1oKlhJCGhbQpXZOXEBZdjh2xkuxaMm0J%2Bffi3W2f2seZYeacmVcYrYkgnsoNb4rnDKKe7JgecYp2CCAYpZSWNINkPYJgdVPWZc0ZrcoyAzN4aQMI0BbdlR48ZDBPDgS8pDRGsV7%2FEdZu6O0CSJQ9kpJqN8yGnBg9%2BDHJKxnHnx977azZtrf79vD54cuBU14xxut3Pmp3%2FKfSqf9Y5uQPcZgnjds0SX20oSd%2BCDYN00nzaOzstxfKhh4y%2BIEq2oR72wfpvuH3GWPamaWgpo1hdU14XlWk2FQFaXjJCKVKdRVvqMYaMhhlj%2FeDNCcPy8ucdzklvKKaFB0tyKZWjBRFJWvOcoVYQAY2tpMM0cmEBkQnXcQMnP0kz5dhAXdWhnQG3kYN4hXGqPZJJgRBircl5d6GI5pduB7HvzHLP61NDkHAXva4Kunq5jT36r0M2mII6DGk1Y1Fd1E%2BQAYv6EGE2bkM4mmL9te4ZHy9vrs9PO72u%2FZSdhdikkHjeaRO1UhlThqpOMGN3hBmEIlWCqnkVdNIhLffhGPm1XMCAAA%3D%22%7D&href=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g",
+       "type": "ping"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795757210389&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=1420009111.1795757211&frm=0&lps=1&pscdl=noapi&rcb=6&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~120213116~120385422~120469145~120469153~121246026~121246034&sid=1795757210&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&tfd=1095",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=1420009111.1795757211&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&rcb=6&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938465~115938469~120213116~120385422~120469145~120469153~121246026~121246034",
+       "type": "ping"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/basket.aspx/GetNbCurrentBasketItems",
+       "type": "xhr"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/softwares/sage50.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/proofs.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/support30.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/support.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/supportInfinite.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/user.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/bank.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/chevron.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/folder-share.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/selected.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/tick.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/info.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/double-tick.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Bold.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Medium.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Headline-Black.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Regular.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/illustrations/facture-electronique.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795757210389&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=1420009111.1795757211&frm=0&lps=1&pscdl=noapi&rcb=6&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115616986~115938465~115938469~120213116~120385422~120469145~120469153~121246026~121246034&sid=1795757210&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&tfd=1095",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/plateform.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/reassurances.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/cross.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/events.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/DOMs.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/catalog.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/page.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/loader.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/modalPanel.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/commons.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/testimonies/Sage_50_temoignage_shop_racing.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/svg/play.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/component-success-story-with-quotation-and-large-picture/quote.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/svg/social-media-icons.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+       "type": "script"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/image.aspx?url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&title=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&res=1366x900&accountid=61518&rt=1172&luid=7e68b07e-b5d4-c830-3d5c-dcab1542b2c5&prev=a0c471cc-83e5-156c-8e35-1dab83e7a1f1&rnd=44999",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&ae=g&auid=2065416823.1795757211&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=structured_data&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1569646766.1795757211&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgQ29tcHRhIiwiYiI6IlNhZ2UiLCJvIjpbeyJwIjoiMTkiLCJjdSI6IkVVUiJ9XX1d&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~119404697~120385422~120469145~120469153~121246026~121246034~123785233&tft=1795757210860&tfd=1214&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&ae=g&auid=2065416823.1795757211&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=structured_data&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=1569646766.1795757211&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgQ29tcHRhIiwiYiI6IlNhZ2UiLCJvIjpbeyJwIjoiMTkiLCJjdSI6IkVVUiJ9XX1d&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~119404697~120385422~120469145~120469153~121246026~121246034~123785233&tft=1795757210860&tfd=1214&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageEvents.js",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN&cx=c&gtm=4e6bh1",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN",
+       "type": "script"
+      },
+      {
+       "url": "https://collect.tealiumiq.com/sage/ciel/2/i.gif",
+       "type": "xhr"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795757210963",
+       "type": "script"
+      },
+      {
+       "url": "https://visitor-service.tealiumiq.com/sage/ciel/01a21b787d220002ed5d27ba88f40008800b8080008f2?callback=utag.ut%5B%22writevaciel%22%5D&rnd=1795757210967",
+       "type": "script"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795757210389&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=1420009111.1795757211&frm=0&lps=1&pscdl=noapi&rcb=10&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938465~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034&sid=1795757211&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=1420009111.1795757211&ep.epoch_timestamp=1795759010915&tfd=1474",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=1420009111.1795757211&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&rcb=10&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034",
+       "type": "ping"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795757210389&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=1420009111.1795757211&frm=0&lps=1&pscdl=noapi&rcb=10&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938465~115938468~120213116~120385422~120469145~120469153~121049589~121246026~121246034&sid=1795757211&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=1420009111.1795757211&ep.epoch_timestamp=1795759010915&tfd=1474",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/page.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/helper.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/modelConfigurator.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/serverExchange.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageDOMs.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/catalogConfigurator.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/libraries/tools.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/offers.aspx/gettarifs",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/offers.aspx/gettarifs",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/offers.aspx/gettarifs",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/bazaarvoice.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a60eb860bbbee99a",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/h/g/jsd/oneshot/b9d4778be3d9/0.4366085475913749:1795753530:EUkPBvxqNuDoLDrKx9fAhyYspfe29ryrjoaivFW8Anc/a60eb860bbbee99a",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/deployments/ciel-fr/main_site/production/fr_FR/bv.js",
+       "type": "script"
+      },
+      {
+       "url": "https://api.bazaarvoice.com/data/batch.json?passKey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&apiversion=5.5&displaycode=13939-fr_fr&resource.q0=products&limit.q0=1",
+       "type": "fetch"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/apps/api/api-0.8.2.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/deployments/ciel-fr/main_site/production/fr_FR/api-config.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/apps/rating_summary/rating_summary-2.63.12.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/deployments/ciel-fr/main_site/production/fr_FR/rating_summary-config.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/analytics/bv-analytics.js",
+       "type": "script"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=b419b0602c16c3ae9d9&BVBRANDID=81c78eb9-64c9-4195-8df6-237baa1d9da1&BVBRANDSID=3f918f2d-02a6-4263-80ae-e11ba2d2b971&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:bv-loader,bvProductVersion:%2713.19.3%27,cl:Diagnostic,deploymentZone:main_site,elapsedMs:%271.3000%27,endTime:%272632.6000%27,locale:fr_FR,name:timeToRunScout,startTime:%272631.3000%27,type:Performance))&_=fug6ej",
+       "type": "image"
+      },
+      {
+       "url": "https://api.bazaarvoice.com/data/display/0.2alpha/product/summary?PassKey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&productid=S50cCompta&contentType=reviews,questions&reviewDistribution=primaryRating,recommended&rev=0&contentlocale=fr*,fr_FR",
+       "type": "xhr"
+      },
+      {
+       "url": "https://api.bazaarvoice.com/data/products.json?passkey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&locale=fr_FR&allowMissing=true&apiVersion=5.4&filter=id:S50cCompta",
+       "type": "xhr"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=PageView&loadId=b419b0602c16c3ae9d9&type=Embedded&BVBRANDID=81c78eb9-64c9-4195-8df6-237baa1d9da1&BVBRANDSID=3f918f2d-02a6-4263-80ae-e11ba2d2b971&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&href=https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&res=1366x900&lang=fr-fr&charset=UTF-8&geo=1&cookies=1&r_t=(con:22,dns:38,load:-1795757210374,req:435,res:227,tot:-1795757209646)&_=8we5nu&ref=",
+       "type": "image"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=b419b0602c16c3ae9d9&BVBRANDID=81c78eb9-64c9-4195-8df6-237baa1d9da1&BVBRANDSID=3f918f2d-02a6-4263-80ae-e11ba2d2b971&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&detail1=&detail2=&_=4920k1",
+       "type": "image"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=b419b0602c16c3ae9d9&BVBRANDID=81c78eb9-64c9-4195-8df6-237baa1d9da1&BVBRANDSID=3f918f2d-02a6-4263-80ae-e11ba2d2b971&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cCompta&detail1=&detail2=&_=azhfyc",
+       "type": "image"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx",
+       "type": "xhr"
+      },
+      {
+       "url": "https://js-agent.newrelic.com/nr-spa-1.324.1.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://bam.nr-data.net/browser/connect/2/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&s=59ccd5cca4d641f7",
+       "type": "xhr"
+      },
+      {
+       "url": "https://bam.nr-data.net/jserrors/1/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&to=MVBQYBBSCxEEBk1dWggac2cyHBUDAgBNUVgWWVNAB0BKEgQCXFdaCEFTXQxWF0wEFklM&rst=2821&s=59ccd5cca4d641f7&ref=https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx&ptid=f2d2c7625c3e0da8",
+       "type": "xhr"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.ciel.com/*",
+       "type": "xhr"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=b419b0602c16c3ae9d9&BVBRANDID=81c78eb9-64c9-4195-8df6-237baa1d9da1&BVBRANDSID=3f918f2d-02a6-4263-80ae-e11ba2d2b971&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:RatingSummary,bvProductVersion:%272.63.12%27,cl:Diagnostic,deploymentZone:main_site,displaySegment:baseline,elapsedMs:0.40000000000873115,locale:fr_FR,name:bv_rating_summary_render_time,productId:S50cCompta,startTime:2717.300000000003,type:Performance))&_=ueh6cv",
+       "type": "image"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://api-cdn.mypurecloud.ie/webdeployments/v1/deployments/29241946-1de9-4783-aed1-0ace46f53936/domains.json",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html",
+       "type": "document"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/thirdpartyplugins.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://js-agent.newrelic.com/nr-spa-1.318.0.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://bam.eu01.nr-data.net/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=99&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=5fc14eb52b1ac6c9&af=err,spa,xhr,stn,ins&be=17&fe=59&dc=9&perf=%7B%22timing%22:%7B%22of%22:1795757212837,%22n%22:0,%22f%22:1,%22dn%22:1,%22dne%22:1,%22c%22:1,%22s%22:1,%22ce%22:1,%22rq%22:6,%22rp%22:17,%22rpe%22:19,%22di%22:26,%22ds%22:26,%22de%22:26,%22dc%22:75,%22l%22:75,%22le%22:76%7D,%22navigation%22:%7B%7D%7D",
+       "type": "xhr"
+      },
+      {
+       "url": "https://bam.eu01.nr-data.net/jserrors/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=103&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=5fc14eb52b1ac6c9",
+       "type": "xhr"
+      },
+      {
+       "url": "https://api-cdn.mypurecloud.ie/webdeployments/v1/deployments/29241946-1de9-4783-aed1-0ace46f53936/config.json",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/journey/messenger-plugins/offersHelper.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger.html",
+       "type": "document"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger-renderer.html",
+       "type": "document"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/main.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messagingMiddleware.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/muiVendor.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/defaultVendors.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/main.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/engage.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/broadcast.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messagingMiddleware.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/muiVendor.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/defaultVendors.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/fr.json",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/vendors/date-fr.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/vendors/date-fr.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795757210389&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=1420009111.1795757211&frm=0&lps=1&pscdl=noapi&rcb=6&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=2&tag_exp=115616986~115938465~115938469~120213116~120385422~120469145~120469153~121246026~121246034&sid=1795757210&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=scroll&epn.percent_scrolled=90&_et=11&tfd=6108",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795757210389&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=1420009111.1795757211&frm=0&lps=1&pscdl=noapi&rcb=6&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=2&tag_exp=115616986~115938465~115938469~120213116~120385422~120469145~120469153~121246026~121246034&sid=1795757210&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-compta.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Compta%20(anciennement%20Ciel%20Compta)&en=scroll&epn.percent_scrolled=90&_et=11&tfd=6108",
+       "type": "fetch"
+      }
+     ],
+     "cookies": {
+      "CodeT": "",
+      "ParrainageID": "",
+      "TemporyUserId": "0ab86491-9d91-4af6-bb66-8a4846ff2fa7",
+      "IDUser": "",
+      "Visitor": "",
+      "_gcl_au": "1.1.2065416823.1795757211",
+      "_gcl_aw": "GCL.1795757211.TEST_MON_20261127",
+      "_cs_mk": "0.27826912387712965_1795757210569",
+      "_gid": "GA1.2.1238296814.1795757211",
+      "_gac_UA-53356708-1": "1.1795757211.TEST_MON_20261127",
+      "_dc_gtm_UA-53356708-1": "1",
+      "_ga": "GA1.1.1420009111.1795757211",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795757210$o1$g0$t1795757210$j60$l0$h0",
+      "nmstat": "a0c471cc-83e5-156c-8e35-1dab83e7a1f1",
+      "utag_main": "v_id:01a21b787d220002ed5d27ba88f40008800b8080008f2$_sn:1$_se:1$_ss:1$_st:1795759010915$ses_id:1795757210915%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795757211$o1$g0$t1795757211$j60$l0$h0",
+      "BVBRANDID": "81c78eb9-64c9-4195-8df6-237baa1d9da1",
+      "BVBRANDSID": "3f918f2d-02a6-4263-80ae-e11ba2d2b971",
+      "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
+      "swm_messenger_instance": "fr_wm_plus_cb"
+     },
+     "banner": false,
+     "consent_tool": null,
+     "consent_groups": null,
+     "utag": {
+      "present": true,
+      "scripts": [
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795757210963"
+      ],
+      "utid": "sage/ciel/202611181017",
+      "version": "ut4.49.202611181017",
+      "path": "//tags.tiqcdn.com/utag/sage/ciel/prod/",
+      "data_keys": 82,
+      "page_type": null,
+      "language": null,
+      "country": null,
+      "page_name": null
+     },
+     "gtm": {
+      "containers": [
+       "GTM-THQ38J"
+      ],
+      "data_layer_events": [
+       "gtm.js",
+       "gtm.scrollDepth",
+       "gtm.dom",
+       "gtm.load",
+       "gtm.scrollDepth"
+      ]
+     },
+     "has_form": false,
+     "gates": [],
+     "submit_controls": [
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": "Facture électronique"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Comptabilité"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Gestion Commerciale"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Paie"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      }
+     ],
+     "doc_links": [
+      "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
+     ],
+     "collected_at": "2026-11-27T05:26:57.413Z"
+    },
+    "post": {
+     "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-compta.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+     "title": "Sage 50 Compta (anciennement Ciel Compta)",
+     "requests": [],
+     "cookies": {
+      "CodeT": "",
+      "ParrainageID": "",
+      "TemporyUserId": "0ab86491-9d91-4af6-bb66-8a4846ff2fa7",
+      "IDUser": "",
+      "Visitor": "",
+      "_gcl_au": "1.1.2065416823.1795757211",
+      "_gcl_aw": "GCL.1795757211.TEST_MON_20261127",
+      "_cs_mk": "0.27826912387712965_1795757210569",
+      "_gid": "GA1.2.1238296814.1795757211",
+      "_gac_UA-53356708-1": "1.1795757211.TEST_MON_20261127",
+      "_dc_gtm_UA-53356708-1": "1",
+      "_ga": "GA1.1.1420009111.1795757211",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795757210$o1$g0$t1795757210$j60$l0$h0",
+      "nmstat": "a0c471cc-83e5-156c-8e35-1dab83e7a1f1",
+      "utag_main": "v_id:01a21b787d220002ed5d27ba88f40008800b8080008f2$_sn:1$_se:1$_ss:1$_st:1795759010915$ses_id:1795757210915%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795757211$o1$g0$t1795757211$j60$l0$h0",
+      "BVBRANDID": "81c78eb9-64c9-4195-8df6-237baa1d9da1",
+      "BVBRANDSID": "3f918f2d-02a6-4263-80ae-e11ba2d2b971",
+      "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
+      "swm_messenger_instance": "fr_wm_plus_cb"
+     },
+     "banner": false,
+     "consent_tool": null,
+     "consent_groups": null,
+     "utag": {
+      "present": true,
+      "scripts": [
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795757210963"
+      ],
+      "utid": "sage/ciel/202611181017",
+      "version": "ut4.49.202611181017",
+      "path": "//tags.tiqcdn.com/utag/sage/ciel/prod/",
+      "data_keys": 82,
+      "page_type": null,
+      "language": null,
+      "country": null,
+      "page_name": null
+     },
+     "gtm": {
+      "containers": [
+       "GTM-THQ38J"
+      ],
+      "data_layer_events": [
+       "gtm.js",
+       "gtm.scrollDepth",
+       "gtm.dom",
+       "gtm.load",
+       "gtm.scrollDepth"
+      ]
+     },
+     "has_form": false,
+     "gates": [],
+     "submit_controls": [
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": "Facture électronique"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Comptabilité"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Gestion Commerciale"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Paie"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      }
+     ],
+     "doc_links": [
+      "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
+     ],
+     "collected_at": "2026-11-27T05:27:27.433Z",
+     "accepted": false
+    }
+   },
+   {
+    "id": "fr-ciel-gestion-commerciale",
+    "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx",
+    "type": "product",
+    "click_ids": {
+     "gclid": "TEST_MON_20261127",
+     "msclkid": "TEST_MON_20261127",
+     "fbclid": "TEST_MON_20261127"
+    },
+    "live_sample": false,
+    "status": 200,
+    "final_url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": false,
+    "pre": {
+     "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+     "title": "Sage 50 Gestion Commerciale (anciennement Ciel Gestion commerciale)",
+     "requests": [
+      {
+       "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+       "type": "document"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/ciel.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://code.jquery.com/jquery-3.6.0.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZBi5dHMyVcwxYdvSy4KhboDDEB9EXPBQgI5bMnVjrk6m9cnRlcLY6h-7vt0yoA77mg2&t=638628279619783110",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvvZgB1RltiGoXquUyx9ZzQHag6aykr3cE1maFZaw7f8-8_sRi0q9abh4Ahi_1oqXbFnwIzMfAvH1frJ4gqKl7AVzXrj0VlvB2DXLhpGHFZpfzw4ujRGjlYf6MB3z7wAi02JqKs5O2KSRnPf5BC9GF2Y1&t=2a9d95e3",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OPi9_EL9u4MZrFpRcJ7dLgRthpcnGTI6CHDUqgHYkGyYEiFKGx_F8tgBZoUDsqSUw9YtTqvkEnQznkuqCbB7ekFha8gxQaKwB_4HMpTjQKsAX_K5ZcBLH5fC3lB1tQkHqpA5m94-3N8wE62tqZywCa81&t=2a9d95e3",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-THQ38J",
+       "type": "script"
+      },
+      {
+       "url": "https://d.impactradius-event.com/A1382897-bebb-4360-8200-824fe2a7eeaf1.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/tealium/tealiumStuff.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/sage_50_gestion.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/sage_50_gestion_mobile.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/Sage_50_factures_personnalises.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/Sage_50_relances_automatise.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/Sage_50_gestion_relation_client.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/Sage_50_gestion_stocks.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/products/sage50/Sage_50_saisie_kilometre.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/init.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/zoom.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/youtube.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/libraries/ciel.js?x123",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/funnelback.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/tools.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/ServerExchange.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-8EYWV34H9Z&cx=c&gtm=4e6bh1",
+       "type": "script"
+      },
+      {
+       "url": "https://www.google-analytics.com/analytics.js",
+       "type": "script"
+      },
+      {
+       "url": "https://siteimproveanalytics.com/js/siteanalyze_61518.js",
+       "type": "script"
+      },
+      {
+       "url": "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://static.hotjar.com/c/hotjar-1254226.js?sv=6",
+       "type": "script"
+      },
+      {
+       "url": "https://webchathub.sage.com/genesys/build-v1.0.1/webmessenger.es5.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&ae=g&auid=451049511.1795757250&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=557593193.1795757250&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034&tft=1795757249880&tfd=884&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=17&frm=0&apvc=1&ae=g&auid=451049511.1795757250&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261127&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=557593193.1795757250&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034&tft=1795757249880&tfd=884&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261127&auid=451049511.1795757250&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&ae=g&auid=451049511.1795757250&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=557593193.1795757250&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034&tft=1795757249880&tfd=884&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.googleadservices.com/pagead/set_partitioned_cookie?rcb=17&frm=0&apvc=1&ae=g&auid=451049511.1795757250&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&gclid=TEST_MON_20261127&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=557593193.1795757250&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034&tft=1795757249880&tfd=884&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://ad.doubleclick.net/ccm/s/collect?gclid=TEST_MON_20261127&auid=451049511.1795757250&gtm=45He6bh1v71004762za200zd71004762xeaxf1&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1886623025&t=pageview&_s=1&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&ul=fr-fr&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&sr=1366x900&vp=1366x900&_u=YGBAiEABBAAAgCAEK~&jid=2067773953&gjid=143489225&cid=2039150262.1795757250&tid=UA-53356708-1&_gid=1631494577.1795757250&_slc=1&gtm=45He6bh1n71THQ38Jv71004762za200zd71004762xf1&cd3=1795757249867.loxg2tqu&cd4=2026-11-27T05%3A27%3A29.867%2B00%3A00&cd9=Prospect&cd10=Client%20Abonn%C3%A9s&cd11=Not%20Available&cd12=Not%20Available&cd13=0.9836120131445789_1795757249870&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034&cd2=2039150262.1795757250&z=877634046",
+       "type": "xhr"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j102&tid=UA-53356708-1&cid=2039150262.1795757250&jid=2067773953&gjid=143489225&_gid=1631494577.1795757250&_u=YGBAiEABBAAAgGAEK~&z=253074195",
+       "type": "xhr"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=58294&time=1795757249959&li_adsId=363199d1-f2ae-464e-a8fb-7340f094a905&pageLoadId=1c974faf-e590-492f-b8bc-bf2769f90976&url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+       "type": "fetch"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/insight_tag_errors.gif?v=2&pid=58294&error=version%3A%201000050%20%7C%20WebsiteActions-1000050-TypeError%3A%20Failed%20to%20fetch%3B%20ErrorData%3A%20%7B%22domain%22%3A%22ciel.com%22%2C%22requestFetcher%22%3A%22fetch-keepalive%22%2C%22body%22%3A%22H4sIAAAAAAAAA3VR22rbQBD9FTMPpQVtrLu0C6aEkBpDeqEWeSnF7GWkDN5dqdoVbQn592I7TfvQPp45c87MnHmEiUwA8aVqc15%2BTSDomaZ4j3Og0YPI0jRNqzSBSA5BZA2vmqrJS87rOgEzOkkeBGhCe6VHBwksswUBDzFOQazXv4m1HQc6ARbkgKxKtR0Xw86VAUOk0TM9OoezJmnxSobpx9tBWzKb7nbfHd5%2F%2FHDI07zOsrx55YK2x38yvfqPZInuEMZl1riJs9RH8gNzo6c4zmfOoaHFbZ5L5AdI4DuqQBH3NHhpP%2BO3BUPcGRDQlrVURmnWF4Vhqsk1y3QlWdsUWJnaVLLVkMAkB7wbpTlrMs2bspc9w4qnrOR5z1SrNFN93tS85ylvakiAQjdLH6yMaED00gZMwNI7eZkMJ7Al6eMFOAoaxCNMQe2jjAiClU8nlzvyRzQ7fz1NLzanfTqKFkHAXg64qtLV9pL96uZP9qvX0mtC79Ghj6sbQvvS9teL3kACD%2BhA%2BMXaBMI5pe7ndHL%2FdL29Pdzv9rvuOYadD1F6jecjalm0StU9y0vTMizyknGT1UwVimNm2kLLBp5%2BAbukDcyaAgAA%22%7D&href=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring",
+       "type": "image"
+      },
+      {
+       "url": "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=g",
+       "type": "ping"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795757249671&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=2039150262.1795757250&frm=0&lps=1&pscdl=noapi&rcb=16&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034&sid=1795757250&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&tfd=1058",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-8EYWV34H9Z&cid=2039150262.1795757250&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&rcb=16&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034",
+       "type": "ping"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20ozb71004762zd71004762xf1&_p=1795757249671&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=2039150262.1795757250&frm=0&lps=1&pscdl=noapi&rcb=16&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034&sid=1795757250&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&tfd=1058",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/basket.aspx/GetNbCurrentBasketItems",
+       "type": "xhr"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/softwares/sage50.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Bold.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Regular.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Text-Medium.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/proofs.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/support30.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/support.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/supportInfinite.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/user.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/chevron.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/plateform.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/reassurances.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/cross.svg",
+       "type": "other"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/svg/selected.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/tick.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/info.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/double-tick.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/testimonies/Sage_50_temoignage_garage_salva.webp",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/svg/play.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/component-success-story-with-quotation-and-large-picture/quote.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/images/svg/social-media-icons.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/fonts/Sage_Headline-Black.woff2",
+       "type": "font"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/images/illustrations/facture-electronique.svg",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/events.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/DOMs.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/catalog.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/sage50/page.js?v=2",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/loader.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/modalPanel.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCommons/js/libraries/commons.js",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&ae=g&auid=451049511.1795757250&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=structured_data&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=557593193.1795757250&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgR2VzdGlvbiBDb21tZXJjaWFsZSIsImIiOiJTYWdlIiwibyI6W3sicCI6IjE4IiwiY3UiOiJFVVIifV19XQ&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034&tft=1795757250193&tfd=1197&fmt=8",
+       "type": "fetch"
+      },
+      {
+       "url": "https://61518.global.siteimproveanalytics.io/image.aspx?url=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&title=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&res=1366x900&accountid=61518&rt=1209&luid=c8bf2046-2f0a-1632-299f-b5f5ed4ab987&prev=6900ad92-8960-fe39-5dda-1bb0c219a62e&rnd=29746",
+       "type": "image"
+      },
+      {
+       "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&ae=g&auid=451049511.1795757250&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=structured_data&gclid=TEST_MON_20261127&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&scrsrc=www.googletagmanager.com&lps=1&rnd=557593193.1795757250&gclaw=TEST_MON_20261127&navt=n&npa=0&ep.ads_data_redaction=0&sdm=W3sibiI6IlNhZ2UgNTAgR2VzdGlvbiBDb21tZXJjaWFsZSIsImIiOiJTYWdlIiwibyI6W3sicCI6IjE4IiwiY3UiOiJFVVIifV19XQ&gtm=45He6bh1v71004762za200zd71004762xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~120385422~120469145~120469153~121246026~121246034&tft=1795757250193&tfd=1197&fmt=3",
+       "type": "image"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageDOMs.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/pageEvents.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/page.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/helper.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/modelConfigurator.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/serverExchange.js",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "type": "script"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/libraries/tools.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/products/pages/catalogConfigurator.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN&cx=c&gtm=4e6bh1",
+       "type": "script"
+      },
+      {
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-PE4Z9JJWVN",
+       "type": "script"
+      },
+      {
+       "url": "https://collect.tealiumiq.com/sage/ciel/2/i.gif",
+       "type": "xhr"
+      },
+      {
+       "url": "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795757250359",
+       "type": "script"
+      },
+      {
+       "url": "https://visitor-service.tealiumiq.com/sage/ciel/01a21b791704001cf665e61c39e80008800c5080008f2?callback=utag.ut%5B%22writevaciel%22%5D&rnd=1795757250364",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/offers.aspx/gettarifs",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/offers.aspx/gettarifs",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/ajaxpages/offers.aspx/gettarifs",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.ciel.com/resourcesCiel/js/third-party/bazaarvoice.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a60eb9566cf40434",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/deployments/ciel-fr/main_site/production/fr_FR/bv.js",
+       "type": "script"
+      },
+      {
+       "url": "https://www.ciel.com/cdn-cgi/challenge-platform/h/g/jsd/oneshot/b9d4778be3d9/0.4366085475913749:1795753530:EUkPBvxqNuDoLDrKx9fAhyYspfe29ryrjoaivFW8Anc/a60eb9566cf40434",
+       "type": "xhr"
+      },
+      {
+       "url": "https://api.bazaarvoice.com/data/batch.json?passKey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&apiversion=5.5&displaycode=13939-fr_fr&resource.q0=products&limit.q0=1",
+       "type": "fetch"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/apps/api/api-0.8.2.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/deployments/ciel-fr/main_site/production/fr_FR/api-config.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/apps/rating_summary/rating_summary-2.63.12.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/deployments/ciel-fr/main_site/production/fr_FR/rating_summary-config.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.bazaarvoice.com/analytics/bv-analytics.js",
+       "type": "script"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795757249671&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=2039150262.1795757250&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121049589~121246026~121246034&sid=1795757250&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=2039150262.1795757250&ep.epoch_timestamp=1795759050312&tfd=1590",
+       "type": "fetch"
+      },
+      {
+       "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-PE4Z9JJWVN&cid=2039150262.1795757250&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&rcb=8&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121049589~121246026~121246034",
+       "type": "ping"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-PE4Z9JJWVN&gtm=45je6bh1v894327700za200zb71004762zd71004762xf1&_p=1795757249671&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYmQxMT&_eu=AAAAAGAC&cid=2039150262.1795757250&frm=0&lps=1&pscdl=noapi&rcb=8&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=1&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121049589~121246026~121246034&sid=1795757250&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=page_view&_fv=1&_ss=1&_ee=1&ep.tms_environment=prod&ep.tms_profile=ciel&ep.tms_version=ut4.49.202611181017&ep.ui_client_id=2039150262.1795757250&ep.epoch_timestamp=1795759050312&tfd=1590",
+       "type": "fetch"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=40e73a1bcb1e57c4e473&BVBRANDID=190baae2-7106-421d-892a-857e53269884&BVBRANDSID=001fa174-a427-44bb-8a7f-4d6954f1ea28&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:bv-loader,bvProductVersion:%2713.19.3%27,cl:Diagnostic,deploymentZone:main_site,elapsedMs:%273.6000%27,endTime:%271508.9000%27,locale:fr_FR,name:timeToRunScout,startTime:%271505.3000%27,type:Performance))&_=2r4hg5",
+       "type": "image"
+      },
+      {
+       "url": "https://api.bazaarvoice.com/data/display/0.2alpha/product/summary?PassKey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&productid=S50cFacturation&contentType=reviews,questions&reviewDistribution=primaryRating,recommended&rev=0&contentlocale=fr*,fr_FR",
+       "type": "xhr"
+      },
+      {
+       "url": "https://api.bazaarvoice.com/data/products.json?passkey=canfF87IFhYYe7hxhU8pXUuFXJB0Nz2wPNXkAvUvakI4E&locale=fr_FR&allowMissing=true&apiVersion=5.4&filter=id:S50cFacturation",
+       "type": "xhr"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=PageView&loadId=40e73a1bcb1e57c4e473&type=Embedded&BVBRANDID=190baae2-7106-421d-892a-857e53269884&BVBRANDSID=001fa174-a427-44bb-8a7f-4d6954f1ea28&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&href=https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&res=1366x900&lang=fr-fr&charset=UTF-8&geo=1&cookies=1&r_t=(con:19,dns:1,load:-1795757249683,req:434,res:228,tot:-1795757248996)&_=p8svpj&ref=",
+       "type": "image"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=40e73a1bcb1e57c4e473&BVBRANDID=190baae2-7106-421d-892a-857e53269884&BVBRANDSID=001fa174-a427-44bb-8a7f-4d6954f1ea28&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&detail1=&detail2=&_=pyb5ml",
+       "type": "image"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?cl=Error&loadId=40e73a1bcb1e57c4e473&BVBRANDID=190baae2-7106-421d-892a-857e53269884&BVBRANDSID=001fa174-a427-44bb-8a7f-4d6954f1ea28&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&locale=fr_FR&deploymentZone=main_site&displaySegment=baseline&bvProduct=RatingSummary&bvProductVersion=2.63.12&productId=S50cFacturation&detail1=&detail2=&_=7pt0i7",
+       "type": "image"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx",
+       "type": "xhr"
+      },
+      {
+       "url": "https://js-agent.newrelic.com/nr-spa-1.324.1.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://mcm.entfabric-sage.com/mapping/https://www.ciel.com/*",
+       "type": "xhr"
+      },
+      {
+       "url": "https://bam.nr-data.net/browser/connect/2/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&s=daaf63cc0a128bb2",
+       "type": "xhr"
+      },
+      {
+       "url": "https://bam.nr-data.net/jserrors/1/NRJS-359b1ed2a217330619c?a=569758212&v=1.324.1&to=MVBQYBBSCxEEBk1dWggac2cyHBUDAgBNUVgWWVNAB0BKEgQCXFdaCEFTXQxWF0wEFklM&rst=1871&s=daaf63cc0a128bb2&ref=https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx&ptid=3db4110bb5c9fff6",
+       "type": "xhr"
+      },
+      {
+       "url": "https://network-eu-a.bazaarvoice.com/a.gif?loadId=40e73a1bcb1e57c4e473&BVBRANDID=190baae2-7106-421d-892a-857e53269884&BVBRANDSID=001fa174-a427-44bb-8a7f-4d6954f1ea28&tz=0&sourceVersion=3.19.0&magpieJsVersion=3.19.0&source=bv-loader&environment=prod&client=ciel-fr&dc=13939&host=www.ciel.com&r_batch=!((bvProduct:RatingSummary,bvProductVersion:%272.63.12%27,cl:Diagnostic,deploymentZone:main_site,displaySegment:baseline,elapsedMs:0.40000000002328306,locale:fr_FR,name:bv_rating_summary_render_time,productId:S50cFacturation,startTime:1621.5999999999767,type:Performance))&_=t9qoqe",
+       "type": "image"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://api-cdn.mypurecloud.ie/webdeployments/v1/deployments/29241946-1de9-4783-aed1-0ace46f53936/domains.json",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html",
+       "type": "document"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://api-cdn.mypurecloud.ie/webdeployments/v1/deployments/29241946-1de9-4783-aed1-0ace46f53936/config.json",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/thirdpartyplugins.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/journey/messenger-plugins/offersHelper.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger.html",
+       "type": "document"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger-renderer.html",
+       "type": "document"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/main.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/cxbus/cxbus.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messagingMiddleware.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/muiVendor.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/defaultVendors.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/main.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/engage.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/broadcast.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messagingMiddleware.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/muiVendor.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/defaultVendors.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messengerrenderer.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://js-agent.newrelic.com/nr-spa-1.318.0.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://bam.eu01.nr-data.net/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=353&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=8ccf2b2f1ffe8afc&af=err,spa,xhr,stn,ins&be=16&fe=157&dc=8&perf=%7B%22timing%22:%7B%22of%22:1795757251152,%22n%22:0,%22f%22:1,%22dn%22:1,%22dne%22:1,%22c%22:1,%22s%22:1,%22ce%22:1,%22rq%22:6,%22rp%22:17,%22rpe%22:17,%22di%22:24,%22ds%22:24,%22de%22:24,%22dc%22:172,%22l%22:172,%22le%22:173%7D,%22navigation%22:%7B%7D%7D",
+       "type": "xhr"
+      },
+      {
+       "url": "https://bam.eu01.nr-data.net/jserrors/1/NRJS-63ad9662344bba3672e?a=538748657&sa=1&v=1.318.0&t=Unnamed%20Transaction&rst=360&ck=0&s=0&ref=https://apps.mypurecloud.ie/messenger/thirdparty-plugins.html&ptid=8ccf2b2f1ffe8afc",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/fr.json",
+       "type": "xhr"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/vendors/date-fr.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/i18n/vendors/date-fr.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger.css",
+       "type": "stylesheet"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messenger.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/messagingservice.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/messenger/genesyscloud-messaging-transport.mod.js",
+       "type": "script"
+      },
+      {
+       "url": "https://apps.mypurecloud.ie/genesys-bootstrap/plugins/genesysvendors.min.js",
+       "type": "script"
+      },
+      {
+       "url": "https://analytics.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795757249671&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=2039150262.1795757250&frm=0&lps=1&pscdl=noapi&rcb=16&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=2&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034&sid=1795757250&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=scroll&epn.percent_scrolled=90&_et=13&tfd=6073",
+       "type": "fetch"
+      },
+      {
+       "url": "https://www.google.com/g/collect?v=2&tid=G-8EYWV34H9Z&gtm=45je6bh1v883700838za20gzb71004762zd71004762xf1&_p=1795757249671&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=2039150262.1795757250&frm=0&lps=1&pscdl=noapi&rcb=16&sr=1366x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=3&_s=2&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034&sid=1795757250&sct=1&seg=0&dl=https%3A%2F%2Fwww.ciel.com%2Flogiciel-sage-50cloud-ciel-gestion-commerciale.aspx%3Fgclid%3DTEST_MON_20261127%26msclkid%3DTEST_MON_20261127%26fbclid%3DTEST_MON_20261127%26utm_source%3Dtracking-monitor%26utm_medium%3Dmonitoring&dt=Sage%2050%20Gestion%20Commerciale%20(anciennement%20Ciel%20Gestion%20commerciale)&en=scroll&epn.percent_scrolled=90&_et=13&tfd=6073",
+       "type": "fetch"
+      }
+     ],
+     "cookies": {
+      "CodeT": "",
+      "ParrainageID": "",
+      "TemporyUserId": "c22631e5-56f1-4e6b-ab04-0db79d8dbceb",
+      "IDUser": "",
+      "Visitor": "",
+      "_gcl_au": "1.1.451049511.1795757250",
+      "_cs_mk": "0.9836120131445789_1795757249870",
+      "_gid": "GA1.2.1631494577.1795757250",
+      "_gac_UA-53356708-1": "1.1795757250.TEST_MON_20261127",
+      "_dc_gtm_UA-53356708-1": "1",
+      "_ga": "GA1.1.2039150262.1795757250",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795757250$o1$g0$t1795757250$j60$l0$h0",
+      "nmstat": "6900ad92-8960-fe39-5dda-1bb0c219a62e",
+      "utag_main": "v_id:01a21b791704001cf665e61c39e80008800c5080008f2$_sn:1$_se:1$_ss:1$_st:1795759050312$ses_id:1795757250312%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_gcl_aw": "GCL.1795757251.TEST_MON_20261127",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795757250$o1$g0$t1795757250$j60$l0$h0",
+      "BVBRANDID": "190baae2-7106-421d-892a-857e53269884",
+      "BVBRANDSID": "001fa174-a427-44bb-8a7f-4d6954f1ea28",
+      "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
+      "swm_messenger_instance": "fr_wm_plus_cb",
+      "swm_messenger_opened": "false"
+     },
+     "banner": false,
+     "consent_tool": null,
+     "consent_groups": null,
+     "utag": {
+      "present": true,
+      "scripts": [
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795757250359"
+      ],
+      "utid": "sage/ciel/202611181017",
+      "version": "ut4.49.202611181017",
+      "path": "//tags.tiqcdn.com/utag/sage/ciel/prod/",
+      "data_keys": 83,
+      "page_type": null,
+      "language": null,
+      "country": null,
+      "page_name": null
+     },
+     "gtm": {
+      "containers": [
+       "GTM-THQ38J"
+      ],
+      "data_layer_events": [
+       "gtm.js",
+       "gtm.scrollDepth",
+       "gtm.dom",
+       "gtm.load",
+       "gtm.scrollDepth"
+      ]
+     },
+     "has_form": false,
+     "gates": [],
+     "submit_controls": [
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": "Facture électronique"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Comptabilité"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Gestion Commerciale"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Paie"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      }
+     ],
+     "doc_links": [
+      "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
+     ],
+     "collected_at": "2026-11-27T05:27:35.693Z"
+    },
+    "post": {
+     "url": "https://www.ciel.com/logiciel-sage-50cloud-ciel-gestion-commerciale.aspx?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+     "title": "Sage 50 Gestion Commerciale (anciennement Ciel Gestion commerciale)",
+     "requests": [],
+     "cookies": {
+      "CodeT": "",
+      "ParrainageID": "",
+      "TemporyUserId": "c22631e5-56f1-4e6b-ab04-0db79d8dbceb",
+      "IDUser": "",
+      "Visitor": "",
+      "_gcl_au": "1.1.451049511.1795757250",
+      "_cs_mk": "0.9836120131445789_1795757249870",
+      "_gid": "GA1.2.1631494577.1795757250",
+      "_gac_UA-53356708-1": "1.1795757250.TEST_MON_20261127",
+      "_dc_gtm_UA-53356708-1": "1",
+      "_ga": "GA1.1.2039150262.1795757250",
+      "_ga_8EYWV34H9Z": "GS2.1.s1795757250$o1$g0$t1795757250$j60$l0$h0",
+      "nmstat": "6900ad92-8960-fe39-5dda-1bb0c219a62e",
+      "utag_main": "v_id:01a21b791704001cf665e61c39e80008800c5080008f2$_sn:1$_se:1$_ss:1$_st:1795759050312$ses_id:1795757250312%3Bexp-session$_pn:1%3Bexp-session$dc_visit:1$dc_event:1%3Bexp-session",
+      "_gcl_aw": "GCL.1795757251.TEST_MON_20261127",
+      "_ga_PE4Z9JJWVN": "GS2.1.s1795757250$o1$g0$t1795757250$j60$l0$h0",
+      "BVBRANDID": "190baae2-7106-421d-892a-857e53269884",
+      "BVBRANDSID": "001fa174-a427-44bb-8a7f-4d6954f1ea28",
+      "swm_messenger_queue": "Digital_SLS_Digital_CHAT_frfr_fr",
+      "swm_messenger_instance": "fr_wm_plus_cb",
+      "swm_messenger_opened": "false"
+     },
+     "banner": false,
+     "consent_tool": null,
+     "consent_groups": null,
+     "utag": {
+      "present": true,
+      "scripts": [
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.sync.js",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.4.js?utv=ut4.49.202402200908",
+       "https://tags.tiqcdn.com/utag/sage/ciel/prod/utag.13.js?utv=ut4.49.202509081715",
+       "https://tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=sage/ciel/202611181017&cb=1795757250359"
+      ],
+      "utid": "sage/ciel/202611181017",
+      "version": "ut4.49.202611181017",
+      "path": "//tags.tiqcdn.com/utag/sage/ciel/prod/",
+      "data_keys": 83,
+      "page_type": null,
+      "language": null,
+      "country": null,
+      "page_name": null
+     },
+     "gtm": {
+      "containers": [
+       "GTM-THQ38J"
+      ],
+      "data_layer_events": [
+       "gtm.js",
+       "gtm.scrollDepth",
+       "gtm.dom",
+       "gtm.load",
+       "gtm.scrollDepth"
+      ]
+     },
+     "has_form": false,
+     "gates": [],
+     "submit_controls": [
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": ""
+      },
+      {
+       "id": "",
+       "text": "Facture électronique"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Comptabilité"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Gestion Commerciale"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      },
+      {
+       "id": "",
+       "text": "Paie"
+      },
+      {
+       "id": "",
+       "text": "Retour"
+      }
+     ],
+     "doc_links": [
+      "https://media.sage.fr/cg/cg-licence-et-maintenance-sage.pdf"
+     ],
+     "collected_at": "2026-11-27T05:28:05.708Z",
+     "accepted": false
+    }
+   },
+   {
+    "id": "fr-home",
+    "url": "https://www.sage.com/fr-fr/",
+    "type": "content",
+    "click_ids": {
+     "gclid": "TEST_MON_20261127",
+     "msclkid": "TEST_MON_20261127",
+     "fbclid": "TEST_MON_20261127"
+    },
+    "live_sample": false,
+    "status": 403,
+    "final_url": "https://www.sage.com/fr-fr/?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": true,
+    "pre": null,
+    "post": null
+   },
+   {
+    "id": "fr-cp-50100jemaitrise",
+    "url": "https://www.sage.com/fr-fr/cp/50100jemaitrise/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-dematerialisation-facture-electronique",
+    "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-experts-comptables",
+    "url": "https://www.sage.com/fr-fr/experts-comptables/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-experts-comptables-produits-sage-generation-exp",
+    "url": "https://www.sage.com/fr-fr/experts-comptables/produits/sage-generation-experts-connect/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-experts-comptables-saisie-comptable-automatique",
+    "url": "https://www.sage.com/fr-fr/experts-comptables/saisie-comptable-automatique/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-comptabilite",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/comptabilite/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-gestion-commerciale",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/gestion-commerciale/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-sage-automatisation-comptable",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-automatisation-comptable/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-100-sage-recouvrement-creances",
+    "url": "https://www.sage.com/fr-fr/produits/sage-100/sage-recouvrement-creances/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-50cloud",
+    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-50cloud-test-gratuit",
+    "url": "https://www.sage.com/fr-fr/produits/sage-50cloud/test-gratuit/",
+    "type": "trial",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-active",
+    "url": "https://www.sage.com/fr-fr/produits/sage-active/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-bi-reporting",
+    "url": "https://www.sage.com/fr-fr/produits/sage-bi-reporting/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-business-reporting",
+    "url": "https://www.sage.com/fr-fr/produits/sage-business-reporting/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-data-clean-and-control",
+    "url": "https://www.sage.com/fr-fr/produits/sage-data-clean-and-control/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-frp-1000",
+    "url": "https://www.sage.com/fr-fr/produits/sage-frp-1000/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-sales-management",
+    "url": "https://www.sage.com/fr-fr/produits/sage-sales-management/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-produits-sage-xrt-advanced",
+    "url": "https://www.sage.com/fr-fr/produits/sage-xrt-advanced/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-bon-commandes",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/bon-commandes/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-compte-crediteur",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-crediteur/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-compte-debiteur",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/compte-debiteur/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-multi-societes",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/base-finances/multi-societes/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-intacct-consolidation-comptable",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/fonctionnalites-produit/extended-capabilities/consolidation-comptable/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-logiciels-gestionnaire-de-paie",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/logiciels/gestionnaire-de-paie/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3-gestion-de-la-production",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/fonctionnalites-produit/gestion-de-la-production/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3-secteurs-agroalimentaire",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/agroalimentaire/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-sbc-sage-x3-secteurs-construction",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/secteurs/construction/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "fr-cp-logiciel-comptabilite",
+    "url": "https://www.sage.com/fr-fr/cp/logiciel-comptabilite/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-intacct-ressources-visites-p",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/ressources/visites-produits/general/video/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-intacct-resources-product-to",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/intacct/resources/product-tours/general/brochure-mobile/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-sage-x3-visite-guidee-du-pro",
+    "url": "https://www.sage.com/fr-fr/sage-business-cloud/sage-x3/visite-guidee-du-produit/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   }
+  ],
+  "journeys": [
+   {
+    "id": "fr-j-sage50-trial",
+    "name": "Sage 50 product page -> free trial page",
+    "blocked": true,
+    "steps": []
+   }
+  ]
+ }
+}

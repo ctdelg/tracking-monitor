@@ -1,0 +1,2025 @@
+{
+ "market": "PT",
+ "day": "2026-11-27",
+ "tealium": {
+  "fetch": {
+   "url": "https://tags.tiqcdn.com/utag/sage/pt-pt/prod/utag.js",
+   "status": 200,
+   "last_modified": "Thu, 19 Nov 2026 09:38:55 GMT",
+   "error": null
+  },
+  "parsed": {
+   "publish_version": "202611190938",
+   "sha256": "6b2c70822ed9d5a678e2ced3ac3f0bcece4a471b5702d5956431163e0c20b742",
+   "tags": {
+    "445": {
+     "load": "4",
+     "send": "1",
+     "v": "202402271350",
+     "tid": "7143"
+    },
+    "492": {
+     "load": "1",
+     "send": "1",
+     "v": "202507231507",
+     "tid": "20067"
+    },
+    "458": {
+     "load": "(((utag.cond[188]||utag.cond[201]||utag.cond[202]||utag.cond[189]||utag.cond[200]||utag.cond[228]||utag.cond[164]||utag.cond[214]||utag.cond[215]||utag.cond[187]||utag.cond[224]||utag.cond[227]||utag.cond[80])&&(utag.cond[14]||utag.cond[163]||utag.cond[213]||utag.cond[225])))",
+     "send": "1",
+     "v": "202604091215",
+     "tid": "12047"
+    },
+    "618": {
+     "load": "((utag.cond[14]||utag.cond[163]||utag.cond[225]))",
+     "send": "1",
+     "v": "202611050958",
+     "tid": "12047"
+    },
+    "151": {
+     "load": "((utag.cond[160]))",
+     "send": "1",
+     "v": "202610191552",
+     "tid": "4049"
+    },
+    "5": {
+     "load": "utag.cond[2]",
+     "send": "1",
+     "v": "202106211124",
+     "tid": "19116"
+    },
+    "190": {
+     "load": "(((utag.cond[30])&&!(utag.cond[229])))",
+     "send": "1",
+     "v": "202508060907",
+     "tid": "20010"
+    },
+    "196": {
+     "load": "utag.cond[19]",
+     "send": "1",
+     "v": "202207181056",
+     "tid": "7132"
+    },
+    "222": {
+     "load": "utag.cond[10]",
+     "send": "1",
+     "v": "202512101428",
+     "tid": "7132"
+    },
+    "223": {
+     "load": "(((utag.cond[163])&&(utag.cond[27])))",
+     "send": "1",
+     "v": "202512101440",
+     "tid": "7132"
+    },
+    "324": {
+     "load": "(((utag.cond[155]||utag.cond[53])&&!(utag.cond[161]||utag.cond[170])))",
+     "send": "1",
+     "v": "202610121339",
+     "tid": "7142"
+    },
+    "402": {
+     "load": "((((utag.cond[210]||utag.cond[225])&&(utag.cond[220]))&&!(utag.cond[169])))",
+     "send": "1",
+     "v": "202610191528",
+     "tid": "4049"
+    },
+    "589": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[243])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "590": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[239])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "591": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[240]||utag.cond[241])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "429": {
+     "load": "((utag.cond[200]||utag.cond[201]||utag.cond[202]||utag.cond[80]||utag.cond[188]||utag.cond[164]))",
+     "send": "1",
+     "v": "202407301118",
+     "tid": "14037"
+    },
+    "448": {
+     "load": "(((utag.cond[201]||utag.cond[202]||utag.cond[188]||utag.cond[189]||utag.cond[190]||utag.cond[191]||utag.cond[164]||utag.cond[187]||utag.cond[214]||utag.cond[215]||utag.cond[80])&&(utag.cond[209])))",
+     "send": "1",
+     "v": "202601191537",
+     "tid": "20067"
+    },
+    "455": {
+     "load": "(((utag.cond[188]||utag.cond[164]||utag.cond[228])&&(utag.cond[213])))",
+     "send": "1",
+     "v": "202501201450",
+     "tid": "14037"
+    },
+    "472": {
+     "load": "((utag.cond[164]||utag.cond[228]||utag.cond[200]||utag.cond[187]||utag.cond[80]||utag.cond[189]||utag.cond[188]||utag.cond[231]))",
+     "send": "1",
+     "v": "202606091454",
+     "tid": "20119"
+    },
+    "485": {
+     "load": "(((utag.cond[14])&&(utag.cond[218])))",
+     "send": "1",
+     "v": "202603051509",
+     "tid": "4049"
+    },
+    "486": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[218])))",
+     "send": "1",
+     "v": "202601131610",
+     "tid": "4049"
+    },
+    "489": {
+     "load": "1",
+     "send": "1",
+     "v": "202409051532",
+     "tid": "20010"
+    },
+    "496": {
+     "load": "(((utag.cond[163])&&(utag.cond[224])))",
+     "send": "1",
+     "v": "202410020931",
+     "tid": "12047"
+    },
+    "502": {
+     "load": "(((utag.cond[80]||utag.cond[215]||utag.cond[214]||utag.cond[228]||utag.cond[188]||utag.cond[189]||utag.cond[201]||utag.cond[202]||utag.cond[200]||utag.cond[164]||utag.cond[187])&&(utag.cond[14]||utag.cond[226]||utag.cond[213]||utag.cond[163]||utag.cond[225])))",
+     "send": "1",
+     "v": "202606091454",
+     "tid": "6037"
+    },
+    "516": {
+     "load": "1",
+     "send": "1",
+     "v": "202503041311",
+     "tid": "3131"
+    },
+    "544": {
+     "load": "(((utag.cond[14])&&(utag.cond[164]||utag.cond[228]||utag.cond[200]||utag.cond[231]||utag.cond[201]||utag.cond[202]||utag.cond[227]||utag.cond[188]||utag.cond[189]||utag.cond[232])))",
+     "send": "1",
+     "v": "202503061731",
+     "tid": "17001"
+    },
+    "545": {
+     "load": "(((utag.cond[163]||utag.cond[225])&&(utag.cond[223])&&(utag.cond[164]||utag.cond[228]||utag.cond[200]||utag.cond[231]||utag.cond[201]||utag.cond[202]||utag.cond[227]||utag.cond[188]||utag.cond[189]||utag.cond[232])))",
+     "send": "1",
+     "v": "202503061731",
+     "tid": "17001"
+    },
+    "546": {
+     "load": "(((utag.cond[213])&&(utag.cond[164]||utag.cond[228]||utag.cond[230]||utag.cond[200]||utag.cond[231]||utag.cond[201]||utag.cond[202]||utag.cond[227]||utag.cond[188]||utag.cond[189]||utag.cond[232])))",
+     "send": "1",
+     "v": "202503061731",
+     "tid": "17001"
+    },
+    "588": {
+     "load": "1",
+     "send": "1",
+     "v": "202508271005",
+     "tid": "20067"
+    },
+    "610": {
+     "load": "((utag.cond[164]||utag.cond[215]||utag.cond[214]||utag.cond[189]||utag.cond[80]))",
+     "send": "1",
+     "v": "202610211201",
+     "tid": "18048"
+    },
+    "613": {
+     "load": "1",
+     "send": "1",
+     "v": "202607230933",
+     "tid": "9043"
+    },
+    "614": {
+     "load": "(((utag.cond[210]||utag.cond[225])&&(utag.cond[211])))",
+     "send": "1",
+     "v": "202607230933",
+     "tid": "9043"
+    },
+    "615": {
+     "load": "((utag.cond[213]))",
+     "send": "1",
+     "v": "202607230933",
+     "tid": "9043"
+    },
+    "616": {
+     "load": "(((utag.cond[163]||utag.cond[244])&&(utag.cond[245])))",
+     "send": "1",
+     "v": "202611050958",
+     "tid": "7132"
+    },
+    "617": {
+     "load": "((utag.cond[247]))",
+     "send": "1",
+     "v": "202608260918",
+     "tid": "7132"
+    },
+    "621": {
+     "load": "((utag.cond[248]||utag.cond[14]||utag.cond[249]||utag.cond[163]))",
+     "send": "1",
+     "v": "202610211201",
+     "tid": "20064"
+    },
+    "627": {
+     "load": "(((utag.cond[14]||utag.cond[163]||utag.cond[213])&&(utag.cond[215]||utag.cond[164]||utag.cond[80]||utag.cond[189]||utag.cond[202]||utag.cond[188])))",
+     "send": "1",
+     "v": "202611190938",
+     "tid": "15038"
+    },
+    "628": {
+     "load": "(!(utag.cond[251]))",
+     "send": "1",
+     "v": "202611190938",
+     "tid": "20067"
+    },
+    "640": {
+     "load": "((utag.cond[215]||utag.cond[80]||utag.cond[189]||utag.cond[256]||utag.cond[227]||utag.cond[257]))",
+     "send": "1",
+     "v": "202611190938",
+     "tid": "3095"
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion": {
+   "ok": true,
+   "results": [
+    {
+     "name": "ecom_try",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "588",
+      "613",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "not_offered": true,
+     "conversion_tags_fired": [
+      "223"
+     ]
+    },
+    {
+     "name": "ecom_buy",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "588",
+      "613",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "not_offered": true,
+     "conversion_tags_fired": [
+      "223"
+     ]
+    },
+    {
+     "name": "gated_trial",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "589",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210",
+      "211",
+      "220",
+      "223",
+      "225",
+      "243",
+      "244"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "trial_demo",
+      "facebook_form_submission_type": "StartTrial"
+     },
+     "errors": [],
+     "expected_tags": [
+      "402"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "589"
+     ]
+    },
+    {
+     "name": "gated_contact",
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "155",
+      "163",
+      "201",
+      "209",
+      "210",
+      "211",
+      "220",
+      "223",
+      "225",
+      "239",
+      "244"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_event": "view",
+      "tealium_session_event_number": null,
+      "platform": null,
+      "ga4_customer_lead_type": "contact",
+      "facebook_form_submission_type": "Contact"
+     },
+     "errors": [],
+     "expected_tags": [
+      "402"
+     ],
+     "not_offered": false,
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ]
+    },
+    {
+     "name": "purchase",
+     "fired": [
+      "5",
+      "190",
+      "324",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "546",
+      "588",
+      "613",
+      "615",
+      "628"
+     ],
+     "true_rules": [
+      "2",
+      "27",
+      "30",
+      "53",
+      "201",
+      "209",
+      "213"
+     ],
+     "derived": {
+      "ut.event": "link",
+      "tealium_session_event_number": null,
+      "platform": null
+     },
+     "errors": [],
+     "expected_tags": [],
+     "not_offered": true,
+     "conversion_tags_fired": []
+    }
+   ]
+  }
+ },
+ "forms": {
+  "event_script": {
+   "ok": true,
+   "missing": [],
+   "script_len": 2168
+  },
+  "gates": {
+   "ce38dd33-82af-40fa-aa50-5d147be0cc35": {
+    "ok": true,
+    "gate_id": "ce38dd33-82af-40fa-aa50-5d147be0cc35",
+    "gate_name": "ACG_20Q3_NCM_PT_DGWW_AC3010_Sage50cloudFaturacaoendpage",
+    "gate_type": "general",
+    "form_type": "StandardGate",
+    "last_content_name": "CL_ACG_PT_CON_Requestmoreinformati_COM|BOT|GNRC",
+    "campaign_id": "7011o000000qcY3AAI",
+    "score": "High Score",
+    "product": "Sage 50cloud - PT",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:15.000Z",
+    "pages": [
+     "pt-produtos-sage-50cloud"
+    ],
+    "ctas": [
+     "Contacte-nos para subscrever",
+     "Saiba mais"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "168b667e-f8dc-4d9f-a001-889224d1212e": {
+    "ok": true,
+    "gate_id": "168b667e-f8dc-4d9f-a001-889224d1212e",
+    "gate_name": "S50_2509_NCA_PT_FormStartAnual",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_S50_PT_SMA_CON_BOFU_FormStartAnual",
+    "campaign_id": "701Of00000UCL93IAH",
+    "score": "High Score",
+    "product": "Sage 50cloud - PT",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:21.000Z",
+    "pages": [
+     "pt-produtos-sage-50cloud"
+    ],
+    "ctas": [
+     "Peça mais informações"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "27f27919-3393-40d6-bd99-b58fff832a58": {
+    "ok": true,
+    "gate_id": "27f27919-3393-40d6-bd99-b58fff832a58",
+    "gate_name": "S50_2508_NCA_PT_FormAnual",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_S50_PT_SMA_CON_BOFU_FormAnual",
+    "campaign_id": "701Of00000Tz8uTIAR",
+    "score": "High Score",
+    "product": "Sage 50cloud - PT",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:21.000Z",
+    "pages": [
+     "pt-produtos-sage-50cloud"
+    ],
+    "ctas": [
+     "Peça uma demo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "8703023a-0cd6-4472-98b2-aecb71ba646f": {
+    "ok": true,
+    "gate_id": "8703023a-0cd6-4472-98b2-aecb71ba646f",
+    "gate_name": "ACG_19Q3_NCM_PT_DGWW_AC3010_Sage50cloudFaturacao",
+    "gate_type": "general",
+    "form_type": "StandardGate",
+    "last_content_name": "CL_ACG_PT_CON_Requestmoreinformati_COM|BOT|GNRC",
+    "campaign_id": "7011o000000mNsQAAU",
+    "score": "High Score",
+    "product": "Sage 50cloud - PT",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:30:41.000Z",
+    "pages": [
+     "pt-produtos-sage-50cloud"
+    ],
+    "ctas": [
+     "Peça mais informações"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "2a03c43e-fe20-417c-9b7e-13f2f2f13546": {
+    "ok": true,
+    "gate_id": "2a03c43e-fe20-417c-9b7e-13f2f2f13546",
+    "gate_name": "ACS_19Q3_NCM_PT_DGWW_GLACCT_SageforAccountants",
+    "gate_type": "general",
+    "form_type": "CallMe",
+    "last_content_name": "CL_ACS_PT_DEM_Requestademo_COM|BOT|GNRC",
+    "campaign_id": "7011o000000mOLLAA2",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:30:42.000Z",
+    "pages": [
+     "pt-contabilistas-sage-for-accountants"
+    ],
+    "ctas": [
+     "Peça mais informações"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "589",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "589"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "8fd0797b-c0c9-408b-abe9-01c6718e3323": {
+    "ok": true,
+    "gate_id": "8fd0797b-c0c9-408b-abe9-01c6718e3323",
+    "gate_name": "ACS_2607_NCA_PT_ProductTourSFA",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_PT_SMA_TOO_MOFU_0000ProductTourSFA",
+    "campaign_id": "701W700000dv45IIAQ",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/sfa-product-tour/",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-04-27T13:55:22.000Z",
+    "pages": [
+     "pt-contabilistas-sage-for-accountants"
+    ],
+    "ctas": [
+     "Fazer uma visita ao produto"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "589",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "589"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "da319b00-75ec-42c8-9d53-0e8c63984f67": {
+    "ok": true,
+    "gate_id": "da319b00-75ec-42c8-9d53-0e8c63984f67",
+    "gate_name": "ACS_19Q3_NCM_PT_DGWW_GLACCT_SageforAccountantsPayperUse",
+    "gate_type": "general",
+    "form_type": "CallMe",
+    "last_content_name": "CL_ACS_PT_DEM_Requestademo_COM|BOT|GNRC",
+    "campaign_id": "7011o000000mOLQAA2",
+    "score": "High Score",
+    "product": "Accountants",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:30:42.000Z",
+    "pages": [
+     "pt-contabilistas-sage-for-accountants"
+    ],
+    "ctas": [
+     "Nós ligamos"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "589",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "589"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "6fc5204b-94fc-4bf1-a56c-b683762699f3": {
+    "ok": true,
+    "gate_id": "6fc5204b-94fc-4bf1-a56c-b683762699f3",
+    "gate_name": "ACS_19Q3_NCM_PT_DGWW_GLACCT_SageforAccountantsExpert",
+    "gate_type": "general",
+    "form_type": "CallMe",
+    "last_content_name": "CL_ACS_PT_CON_Requestacallback_COM|BOT|GNRC",
+    "campaign_id": "7011o000000mOLVAA2",
+    "score": "High Score",
+    "product": "Accountants",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:30:42.000Z",
+    "pages": [
+     "pt-contabilistas-sage-for-accountants"
+    ],
+    "ctas": [
+     "Nós ligamos"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "a5b7d3b7-f394-427d-9f18-02eac773cce2": {
+    "ok": true,
+    "gate_id": "a5b7d3b7-f394-427d-9f18-02eac773cce2",
+    "gate_name": "ACS_24Q2_NCA_PT_FormPPUCloud",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_ACS_PT_NSS_CON_MOFU_PPUCloud",
+    "campaign_id": "70106000001AwKUAA0",
+    "score": "High Score",
+    "product": "Sage for Accountants",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-12-03T13:04:16.000Z",
+    "pages": [
+     "pt-contabilistas-sage-for-accountants"
+    ],
+    "ctas": [
+     "Peça mais informações"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "6e6f462e-a56b-4f04-b1a5-6b2736f6f85f": {
+    "ok": true,
+    "gate_id": "6e6f462e-a56b-4f04-b1a5-6b2736f6f85f",
+    "gate_name": "ACG_19Q3_NCM_PT_DGWW_AC3010_sage50cloudcontabilidade",
+    "gate_type": "general",
+    "form_type": "StandardGate",
+    "last_content_name": "CL_ACG_PT_CON_contactus_COM|BOT|GNRC",
+    "campaign_id": "7011o000000tpnsAAA",
+    "score": "High Score",
+    "product": "Sage 50cloud - PT",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:30:42.000Z",
+    "pages": [
+     "pt-produtos-sage-50cloud-contabilidade"
+    ],
+    "ctas": [
+     "Experimente já"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "a650fc0b-81df-4f26-90b3-11780d0e856e": {
+    "ok": true,
+    "gate_id": "a650fc0b-81df-4f26-90b3-11780d0e856e",
+    "gate_name": "S50_22Q1_NCA_PT_Sage50cloudContabilidade",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_S50_PT_SMA_CON_NFS_Sage50cloudContabil",
+    "campaign_id": "70106000001EZE9AAO",
+    "score": "High Score",
+    "product": "Sage 50",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2022-03-09T10:58:39.000Z",
+    "pages": [
+     "pt-produtos-sage-50cloud-contabilidade"
+    ],
+    "ctas": [
+     "Peça mais informações"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "2d7fb4d8-36ca-43c8-b5e0-d8998c67f428": {
+    "ok": true,
+    "gate_id": "2d7fb4d8-36ca-43c8-b5e0-d8998c67f428",
+    "gate_name": "HCM_2503_NCA_PT_SHRDemoRequest",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_HCM_PT_SMA_DEM_MOFU_Shrgeneral",
+    "campaign_id": "701Of00000JwsOXIAZ",
+    "score": "High Score",
+    "product": "Sage HR Suite",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:17.000Z",
+    "pages": [
+     "pt-sbc-hr"
+    ],
+    "ctas": [
+     "Agende uma demonstração"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "589",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "589"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "e6cc2d2b-0638-4976-8a1d-e1a7bdbae0b5": {
+    "ok": true,
+    "gate_id": "e6cc2d2b-0638-4976-8a1d-e1a7bdbae0b5",
+    "gate_name": "HCM_2509_NCA_PT_SHRProductTour",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_HCM_PT_SMA_TOO_BOFU_SHR",
+    "campaign_id": "701Of00000Jx3yEIAR",
+    "score": "High Score",
+    "product": "Sage HR Suite",
+    "redirect_url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/hr-apresentacao-produto/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:18.000Z",
+    "pages": [
+     "pt-sbc-hr"
+    ],
+    "ctas": [
+     "Assista a uma apresentação do produto",
+     "Fazer uma visita ao produto"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "589",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "589"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "02f515fc-13bb-4fa3-b6a2-ba1f9f2c37d7": {
+    "ok": true,
+    "gate_id": "02f515fc-13bb-4fa3-b6a2-ba1f9f2c37d7",
+    "gate_name": "SX3_23Q3_NCA_PT_SageX3Test",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_PT_MED_CON_MOFU_SageX3Test",
+    "campaign_id": "70106000001Zkc0AAC",
+    "score": "High Score",
+    "product": "X3",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:21.000Z",
+    "pages": [
+     "pt-sbc-sage-x3"
+    ],
+    "ctas": [
+     "Peça uma demo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "150f8e74-55ec-4bc8-9a2a-cbebb304a6b7": {
+    "ok": true,
+    "gate_id": "150f8e74-55ec-4bc8-9a2a-cbebb304a6b7",
+    "gate_name": "SX3_2410_NCA_PT_ProductTour",
+    "gate_type": "redirect",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_SX3_PT_MED_VID_BOFU_ProductTour",
+    "campaign_id": "701Of00000AI5gEIAT",
+    "score": "High Score",
+    "product": "Sage X3",
+    "redirect_url": "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/tour-do-produto/",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:21.000Z",
+    "pages": [
+     "pt-sbc-sage-x3"
+    ],
+    "ctas": [
+     "Veja uma apresentação do produto"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "591",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "591"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "dc449d1c-61e4-4604-afd3-6149a0902b8f": {
+    "ok": true,
+    "gate_id": "dc449d1c-61e4-4604-afd3-6149a0902b8f",
+    "gate_name": "FIN_19Q3_NCM_PT_DGWW_ER0090_Multipleguidedownloads_ERP-BMS",
+    "gate_type": "download",
+    "form_type": "StandardGate",
+    "last_content_name": "CL_FIN_PT_PDF_ERPtoBMS_COM|NA|GNRC",
+    "campaign_id": "7011o000000mOhvAAE",
+    "score": "Low Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://img06.en25.com/Web/SageGlobalInstance/%7B651f1f42-3706-4cb3-9364-e0e67710882b%7D_Changing_ERP_to_BMS.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:30:41.000Z",
+    "pages": [
+     "pt-sbc-sage-x3"
+    ],
+    "ctas": [
+     "Faça download"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "591",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "591"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "ede24abf-a4ed-46fe-abb5-812d0d58bd83": {
+    "ok": true,
+    "gate_id": "ede24abf-a4ed-46fe-abb5-812d0d58bd83",
+    "gate_name": "FIN_19Q3_NCM_PT_DGWW_ER0090_Multipleguidedownloads_ProcessManu",
+    "gate_type": "download",
+    "form_type": "StandardGate",
+    "last_content_name": "CL_FIN_PT_PDF_ProcessManu_COM|NA|GNRC",
+    "campaign_id": "7011o000000mOhvAAE",
+    "score": "Low Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://img06.en25.com/Web/SageGlobalInstance/%7B36a91426-b2e0-4198-a5af-ec56d78f46d4%7D_Process_Manufacturing_Worldwide_Customer_Insights.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T11:30:41.000Z",
+    "pages": [
+     "pt-sbc-sage-x3"
+    ],
+    "ctas": [
+     "Faça download"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "591",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "591"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "fe54e74c-3fce-4d39-bb38-e2ea5f6e5606": {
+    "ok": true,
+    "gate_id": "fe54e74c-3fce-4d39-bb38-e2ea5f6e5606",
+    "gate_name": "FIN_19Q3_NCM_PT_DGWW_ER0090_Multipleguidedownloads_x3implemenguide",
+    "gate_type": "download",
+    "form_type": "StandardGate",
+    "last_content_name": "CL_FIN_PT_PDF_X3Guide_COM|NA|GNRC",
+    "campaign_id": "7011o000000mOhvAAE",
+    "score": "Low Score",
+    "product": "Sage X3",
+    "redirect_url": "",
+    "download_url": "https://img06.en25.com/Web/SageGlobalInstance/%7Bf2a24be1-1f8b-457a-9290-9c774bcfaf7d%7D_Sage_X3_Implementation_Guide.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:54:05.000Z",
+    "pages": [
+     "pt-sbc-sage-x3"
+    ],
+    "ctas": [
+     "Faça download"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "591",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "591"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "b35e7125-a89e-485b-a103-9023ec508939": {
+    "ok": true,
+    "gate_id": "b35e7125-a89e-485b-a103-9023ec508939",
+    "gate_name": "XRT_23Q2_NCA_PT_XRTAdvanced",
+    "gate_type": "general",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_PT_MED_CON_NFS_xrtadvanced",
+    "campaign_id": "70106000001dNmiAAE",
+    "score": "High Score",
+    "product": "XRT",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:22.000Z",
+    "pages": [
+     "pt-produtos-sage-xrt-advanced"
+    ],
+    "ctas": [
+     "Solicite uma demonstração"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "590",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "590"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "aa154eb7-b97b-48e5-9107-8342e9a05932": {
+    "ok": true,
+    "gate_id": "aa154eb7-b97b-48e5-9107-8342e9a05932",
+    "gate_name": "XRT_2508_NCA_PT_CONTROLODEPAGAMENTOS *Other",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_PT_MED_GDE_TOFU_Controlodepagamentos",
+    "campaign_id": "701Of00000Ts1BKIAZ",
+    "score": "Low Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/pt-pt/-/media/Files/SageDotCom/Master/gated-assets/marketing-automation/FY25/pt/SAGE_Guia_Controlo_de_pagamentos_Sage_XRT.pdf",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:22.000Z",
+    "pages": [
+     "pt-produtos-sage-xrt-advanced"
+    ],
+    "ctas": [
+     "Baixe o guia"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "591",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "591"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "c893fa63-73ea-439c-bad4-967bc298c2aa": {
+    "ok": true,
+    "gate_id": "c893fa63-73ea-439c-bad4-967bc298c2aa",
+    "gate_name": "XRT_2508_NCA_PT_8ideiasfuncaofinanceira",
+    "gate_type": "download",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_PT_MED_GDE_TOFU_8ideiasfuncaofinanceira",
+    "campaign_id": "701Of00000Tra3EIAR",
+    "score": "Low Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "https://www.sage.com/pt-pt/-/media/Files/SageDotCom/Master/gated-assets/marketing-automation/FY25/pt/SAGE_Guia_Ideias_Funcao_Financeira_SageXRT_LOW.PDF",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2025-11-26T10:43:22.000Z",
+    "pages": [
+     "pt-produtos-sage-xrt-advanced"
+    ],
+    "ctas": [
+     "Baixe o guia"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "591",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "591"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   },
+   "c6a22385-35e7-486b-800a-97b3b31520c0": {
+    "ok": true,
+    "gate_id": "c6a22385-35e7-486b-800a-97b3b31520c0",
+    "gate_name": "XRT_2508_NCA_PT_FirmaElectronica",
+    "gate_type": "youtube",
+    "form_type": "MultiStepGate",
+    "last_content_name": "CL_XRT_PT_MED_VID_BOFU_FirmaElectronica",
+    "campaign_id": "701Of00000SIrp1IAD",
+    "score": "Low Score",
+    "product": "Sage XRT Universe",
+    "redirect_url": "",
+    "download_url": "",
+    "inactive": false,
+    "schedule_active": false,
+    "schedule_end": "",
+    "updated_at": "2026-05-19T13:22:17.000Z",
+    "pages": [
+     "pt-produtos-sage-xrt-advanced"
+    ],
+    "ctas": [
+     "Acesse a demo"
+    ],
+    "conversion": {
+     "evaluated": true,
+     "fired": [
+      "5",
+      "190",
+      "223",
+      "324",
+      "402",
+      "429",
+      "445",
+      "448",
+      "458",
+      "489",
+      "492",
+      "502",
+      "516",
+      "545",
+      "588",
+      "591",
+      "613",
+      "614",
+      "618",
+      "621",
+      "628"
+     ],
+     "errors": [],
+     "conversion_tags_fired": [
+      "223",
+      "402",
+      "591"
+     ],
+     "vendors_fired": [
+      "eloqua",
+      "floodlight",
+      "google_ads",
+      "linkedin",
+      "meta",
+      "quantcast",
+      "sixsense"
+     ]
+    }
+   }
+  },
+  "inventory_pages": [
+   "pt-contabilistas-sage-for-accountants",
+   "pt-produtos-sage-50cloud",
+   "pt-produtos-sage-50cloud-contabilidade",
+   "pt-produtos-sage-xrt-advanced",
+   "pt-sbc-hr",
+   "pt-sbc-sage-x3"
+  ]
+ },
+ "browser": {
+  "source": "playwright",
+  "collected_at": "2026-11-27T05:28:20Z",
+  "visits": [
+   {
+    "id": "pt-produtos-sage-50cloud",
+    "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/",
+    "type": "product",
+    "click_ids": {
+     "gclid": "TEST_MON_20261127",
+     "msclkid": "TEST_MON_20261127",
+     "fbclid": "TEST_MON_20261127"
+    },
+    "live_sample": true,
+    "status": 403,
+    "final_url": "https://www.sage.com/pt-pt/produtos/sage-50cloud/?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": true,
+    "pre": null,
+    "post": null
+   },
+   {
+    "id": "pt-contabilistas-sage-for-accountants",
+    "url": "https://www.sage.com/pt-pt/contabilistas/sage-for-accountants/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "pt-produtos-sage-50cloud-contabilidade",
+    "url": "https://www.sage.com/pt-pt/produtos/sage-50cloud-contabilidade/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "pt-sbc-hr",
+    "url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "pt-sbc-sage-x3",
+    "url": "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "pt-produtos-sage-xrt-advanced",
+    "url": "https://www.sage.com/pt-pt/produtos/sage-xrt-advanced/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-hr-hr-apresentacao-produto",
+    "url": "https://www.sage.com/pt-pt/sage-business-cloud/hr/hr-apresentacao-produto/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "tour-sage-business-cloud-sage-x3-tour-do-produto",
+    "url": "https://www.sage.com/pt-pt/sage-business-cloud/sage-x3/tour-do-produto/",
+    "type": "form_target",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   }
+  ],
+  "journeys": [
+   {
+    "id": "pt-j-sage50-pricing",
+    "name": "Sage 50 product page -> pricing",
+    "blocked": true,
+    "steps": []
+   }
+  ]
+ }
+}

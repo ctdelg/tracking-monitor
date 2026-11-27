@@ -1,0 +1,114 @@
+{
+ "version": "13",
+ "sha256": "d76b138f8ba71baa8cfa0eb091629569c8eb7950fed54316ca3fee708f47ebd3",
+ "tags": {
+  "1": {
+   "function": "__paused:ua",
+   "ids": {}
+  },
+  "2": {
+   "function": "__flc",
+   "ids": {
+    "advertiserId": "5195550",
+    "groupTag": "sageg0",
+    "activityTag": "sage_013"
+   }
+  },
+  "3": {
+   "function": "__flc",
+   "ids": {
+    "advertiserId": "5195550",
+    "groupTag": "sageg0",
+    "activityTag": "sage_012"
+   }
+  },
+  "25": {
+   "function": "__googtag",
+   "ids": {
+    "tagId": "G-M4HF0CKEGQ"
+   }
+  },
+  "26": {
+   "function": "__cl",
+   "ids": {}
+  },
+  "27": {
+   "function": "__cl",
+   "ids": {}
+  },
+  "28": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "29": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "31": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "32": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "33": {
+   "function": "__tg",
+   "ids": {}
+  },
+  "35": {
+   "function": "__tg",
+   "ids": {}
+  }
+ },
+ "triggers": {
+  "sage_013": [
+   [
+    {
+     "fn": "_cn",
+     "var": "DoubleClick Floodlight",
+     "value": "true"
+    },
+    {
+     "fn": "_re",
+     "var": "__e",
+     "value": "(consents_initialized)|(consent_changed.*)"
+    },
+    {
+     "fn": "_cn",
+     "var": "URL",
+     "value": "uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf"
+    },
+    {
+     "fn": "_eq",
+     "var": "__e",
+     "value": "gtm.click"
+    }
+   ]
+  ],
+  "sage_012": [
+   [
+    {
+     "fn": "_cn",
+     "var": "DoubleClick Floodlight",
+     "value": "true"
+    },
+    {
+     "fn": "_re",
+     "var": "__e",
+     "value": "(consents_initialized)|(consent_changed.*)"
+    },
+    {
+     "fn": "_eq",
+     "var": "__e",
+     "value": "gtm.click"
+    },
+    {
+     "fn": "_cn",
+     "var": "ID",
+     "value": "Submit"
+    }
+   ]
+  ]
+ }
+}

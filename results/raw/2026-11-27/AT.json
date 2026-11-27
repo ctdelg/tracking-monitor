@@ -1,0 +1,216 @@
+{
+ "market": "AT",
+ "day": "2026-11-27",
+ "gtm": {
+  "container": "GTM-PS6MXC",
+  "fetch": {
+   "url": "https://www.googletagmanager.com/gtm.js?id=GTM-PS6MXC",
+   "status": 200,
+   "error": null
+  },
+  "parsed": {
+   "version": "13",
+   "sha256": "d76b138f8ba71baa8cfa0eb091629569c8eb7950fed54316ca3fee708f47ebd3",
+   "tags": {
+    "1": {
+     "function": "__paused:ua",
+     "ids": {}
+    },
+    "2": {
+     "function": "__flc",
+     "ids": {
+      "advertiserId": "5195550",
+      "groupTag": "sageg0",
+      "activityTag": "sage_013"
+     }
+    },
+    "3": {
+     "function": "__flc",
+     "ids": {
+      "advertiserId": "5195550",
+      "groupTag": "sageg0",
+      "activityTag": "sage_012"
+     }
+    },
+    "25": {
+     "function": "__googtag",
+     "ids": {
+      "tagId": "G-M4HF0CKEGQ"
+     }
+    },
+    "26": {
+     "function": "__cl",
+     "ids": {}
+    },
+    "27": {
+     "function": "__cl",
+     "ids": {}
+    },
+    "28": {
+     "function": "__tg",
+     "ids": {}
+    },
+    "29": {
+     "function": "__tg",
+     "ids": {}
+    },
+    "31": {
+     "function": "__tg",
+     "ids": {}
+    },
+    "32": {
+     "function": "__tg",
+     "ids": {}
+    },
+    "33": {
+     "function": "__tg",
+     "ids": {}
+    },
+    "35": {
+     "function": "__tg",
+     "ids": {}
+    }
+   }
+  },
+  "diff": {
+   "changed": false,
+   "items": [],
+   "conversion_relevant": false
+  },
+  "conversion_tags": {
+   "2": "Floodlight counter 5195550/sageg0/sage_013",
+   "3": "Floodlight counter 5195550/sageg0/sage_012",
+   "26": "Conversion Linker",
+   "27": "Conversion Linker"
+  },
+  "triggers": {
+   "sage_013": [
+    [
+     {
+      "fn": "_cn",
+      "var": "DoubleClick Floodlight",
+      "value": "true"
+     },
+     {
+      "fn": "_re",
+      "var": "__e",
+      "value": "(consents_initialized)|(consent_changed.*)"
+     },
+     {
+      "fn": "_cn",
+      "var": "URL",
+      "value": "uploads/SageDPWtoGO_Bestellformular_neu_3503_DE.pdf"
+     },
+     {
+      "fn": "_eq",
+      "var": "__e",
+      "value": "gtm.click"
+     }
+    ]
+   ],
+   "sage_012": [
+    [
+     {
+      "fn": "_cn",
+      "var": "DoubleClick Floodlight",
+      "value": "true"
+     },
+     {
+      "fn": "_re",
+      "var": "__e",
+      "value": "(consents_initialized)|(consent_changed.*)"
+     },
+     {
+      "fn": "_eq",
+      "var": "__e",
+      "value": "gtm.click"
+     },
+     {
+      "fn": "_cn",
+      "var": "ID",
+      "value": "Submit"
+     }
+    ]
+   ]
+  }
+ },
+ "tealium": {},
+ "forms": {},
+ "browser": {
+  "source": "playwright",
+  "collected_at": "2026-11-27T05:26:44Z",
+  "visits": [
+   {
+    "id": "at-dpw-sage-dpw",
+    "url": "https://www.sagedpw.at/loesungen/sage-dpw/",
+    "type": "product",
+    "click_ids": {
+     "gclid": "TEST_MON_20261127",
+     "msclkid": "TEST_MON_20261127",
+     "fbclid": "TEST_MON_20261127"
+    },
+    "live_sample": true,
+    "status": 403,
+    "final_url": "https://www.sagedpw.at/loesungen/sage-dpw/?gclid=TEST_MON_20261127&msclkid=TEST_MON_20261127&fbclid=TEST_MON_20261127&utm_source=tracking-monitor&utm_medium=monitoring",
+    "error": null,
+    "blocked": true,
+    "pre": null,
+    "post": null
+   },
+   {
+    "id": "at-dpw-zeiterfassung",
+    "url": "https://www.sagedpw.at/hr-software/zeiterfassung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "at-dpw-lohn-outsourcing",
+    "url": "https://www.sagedpw.at/loesungen/sage-dpw-lohn-outsourcing/",
+    "type": "product",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "at-dpw-lohnverrechnung",
+    "url": "https://www.sagedpw.at/hr-software/lohnverrechnung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "at-dpw-reisekostenabrechnung",
+    "url": "https://www.sagedpw.at/hr-software/reisekostenabrechnung/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   },
+   {
+    "id": "at-dpw-fairpay",
+    "url": "https://www.sagedpw.at/hr-software/fairpay/",
+    "type": "landing_page",
+    "blocked": true,
+    "status": 403,
+    "skipped": true
+   }
+  ],
+  "journeys": [
+   {
+    "id": "at-j-infopaket",
+    "name": "Zeiterfassung -> Infopaket download form",
+    "blocked": true,
+    "steps": []
+   },
+   {
+    "id": "at-j-kontakt",
+    "name": "Zeiterfassung -> contact form",
+    "blocked": true,
+    "steps": []
+   }
+  ]
+ }
+}
